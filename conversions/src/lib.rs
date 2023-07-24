@@ -13,3 +13,5 @@
 
 mod binary_to_decimal;
 pub use binary_to_decimal::binary_to_decimal;
+
+pub mod error;

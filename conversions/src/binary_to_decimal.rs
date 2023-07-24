@@ -2,11 +2,7 @@
 // Use of this source is governed by General Public License that can be found
 // in the LICENSE file.
 
-#[derive(Debug, Clone, Copy, Eq, PartialEq)]
-pub enum BinaryError {
-    OutOfRange,
-    NonBinaryValue,
-}
+use crate::error::BinaryError;
 
 /// Converts a number from [Binary to Decimal](https://en.wikipedia.org/wiki/Binary-coded_decimal).
 ///
@@ -15,23 +11,23 @@ pub enum BinaryError {
 ///
 /// # Errors
 /// Returns error if number is negative or contains non-binary digits.
-pub const fn binary_to_decimal(mut number: i64) -> Result<i32, BinaryError> {
-    if number < 0 {
+pub const fn binary_to_decimal(mut binary: i64) -> Result<i32, BinaryError> {
+    if binary < 0 {
         return Err(BinaryError::OutOfRange);
     }
 
-    let mut decimal_number = 0;
+    let mut decimal = 0;
     let mut i = 0;
-    while number > 0 {
-        let digit = (number % 10) as i32;
-        if digit > 1 {
+    while binary > 0 {
+        let remainder = (binary % 10) as i32;
+        if remainder > 1 {
             return Err(BinaryError::NonBinaryValue);
         }
-        decimal_number += digit * 2_i32.pow(i);
-        number /= 10;
+        decimal += remainder * 2_i32.pow(i);
+        binary /= 10;
         i += 1;
     }
-    Ok(decimal_number)
+    Ok(decimal)
 }
 
 #[cfg(test)]
