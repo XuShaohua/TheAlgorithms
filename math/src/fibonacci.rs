@@ -18,24 +18,20 @@ pub const MAX_INDEX: u8 = 93;
 /// # Errors
 /// Returns error if `num` is not a possitive integer.
 pub fn fib(num: u8) -> Result<u64, FibError> {
-    if num > MAX_INDEX {
-        return Err(FibError::IllegalIndex);
+    let mut a = 0;
+    let mut b = 1;
+    match num {
+        0 => Ok(0),
+        num if num > MAX_INDEX => Err(FibError::IllegalIndex),
+        _ => {
+            for _ in 1..num {
+                let c = a + b;
+                a = b;
+                b = c;
+            }
+            Ok(b)
+        }
     }
-    if num == 0 {
-        return Ok(0);
-    }
-    if num == 1 {
-        return Ok(1);
-    }
-
-    let num = num as usize;
-    let mut buf: Vec<u64> = vec![0; num + 1];
-    buf[0] = 0;
-    buf[1] = 1;
-    for i in 2..=num {
-        buf[i] = buf[i - 1] + buf[i - 2];
-    }
-    Ok(buf[num])
 }
 
 #[cfg(test)]
