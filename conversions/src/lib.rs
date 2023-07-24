@@ -15,5 +15,7 @@ mod binary_to_decimal;
 pub use binary_to_decimal::binary_to_decimal;
 mod binary_to_hexadecimal;
 pub use binary_to_hexadecimal::binary_to_hexadecimal;
+mod binary_to_octal;
+pub use binary_to_octal::binary_to_octal;
 
 pub mod error;
