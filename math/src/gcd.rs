@@ -69,9 +69,25 @@ pub fn get_factors(mut n: u64) -> Counter {
     factors
 }
 
+/// Get gcd by factors.
+#[must_use]
+#[allow(clippy::cast_possible_truncation)]
+pub fn by_factors(x: u64, y: u64) -> u64 {
+    let x_factors = get_factors(x);
+    let y_factors = get_factors(y);
+    let mut gcd = 1;
+    for (x_factor, x_count) in &x_factors {
+        if y_factors.contains_key(x_factor) {
+            let count = y_factors[x_factor].min(*x_count) as u32;
+            gcd *= x_factor.pow(count);
+        }
+    }
+    gcd
+}
+
 #[cfg(test)]
 mod tests {
-    use super::{euclidean_iterative, euclidean_recursive, get_factors, Counter};
+    use super::{by_factors, euclidean_iterative, euclidean_recursive, get_factors, Counter};
 
     const PAIRS: &[(u64, u64, u64)] = &[
         (120, 7, 1),
@@ -79,6 +95,7 @@ mod tests {
         (289, 204, 17),
         (1071, 462, 21),
         (147, 462, 21),
+        (2520, 8350, 10),
     ];
 
     #[test]
@@ -102,5 +119,12 @@ mod tests {
             get_factors(2520),
             Counter::from([(2, 3), (3, 2), (5, 1), (7, 1)])
         );
+    }
+
+    #[test]
+    fn test_by_factors() {
+        for (x, y, z) in PAIRS {
+            assert_eq!(by_factors(*x, *y), *z);
+        }
     }
 }
