@@ -11,4 +11,5 @@
 )]
 
 pub mod fibonacci;
+pub mod floor;
 pub mod gcd;
