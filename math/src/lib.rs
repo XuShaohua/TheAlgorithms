@@ -11,3 +11,4 @@
 )]
 
 pub mod fibonacci;
+pub mod gcd;
