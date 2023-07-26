@@ -19,4 +19,4 @@ pub mod floor;
 pub mod gcd;
 pub mod ipv4;
 pub mod num_of_digits;
-//pub mod remove_digit;
+pub mod remove_digit;
