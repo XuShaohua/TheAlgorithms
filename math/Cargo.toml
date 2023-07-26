@@ -12,3 +12,7 @@ criterion = "0.5.1"
 [[bench]]
 name = "fibonacci"
 harness = false
+
+[[bench]]
+name = "num_of_digits"
+harness = false
