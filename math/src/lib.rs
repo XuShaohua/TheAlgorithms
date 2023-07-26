@@ -10,6 +10,7 @@
     clippy::pedantic
 )]
 
+pub mod factorial;
 pub mod factors;
 pub mod fibonacci;
 pub mod floor;
