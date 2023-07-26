@@ -42,10 +42,13 @@ pub fn get_factors(mut n: u64) -> Counter {
     factors
 }
 
+/// Returns prime factors of num as a list.
 #[must_use]
 pub fn get_prime_factors(mut num: u64) -> Vec<u64> {
-    debug_assert!(num > 0);
     let mut pf = Vec::new();
+    if num == 0 {
+        return pf;
+    }
     while num % 2 == 0 {
         pf.push(2);
         num /= 2;
@@ -61,6 +64,28 @@ pub fn get_prime_factors(mut num: u64) -> Vec<u64> {
         pf.push(num);
     }
     pf
+}
+
+/// Returns prime factors of num as a list.
+#[must_use]
+pub fn get_prime_factors2(mut num: u64) -> Vec<u64> {
+    let mut factors = vec![];
+    if num == 0 {
+        return factors;
+    }
+    let mut i = 2;
+    while i * i <= num {
+        if num % i == 0 {
+            num /= i;
+            factors.push(i);
+        } else {
+            i += 1;
+        }
+    }
+    if num > 2 {
+        factors.push(num);
+    }
+    factors
 }
 
 /// Returns all available factors/divisors of a possitive integer.
@@ -121,7 +146,8 @@ pub fn euler_phi(num: u64) -> u64 {
 #[cfg(test)]
 mod tests {
     use super::{
-        euler_phi, get_factor_list, get_factors, get_prime_factors, num_of_divisors, Counter,
+        euler_phi, get_factor_list, get_factors, get_prime_factors, get_prime_factors2,
+        num_of_divisors, Counter,
     };
 
     #[test]
@@ -147,7 +173,16 @@ mod tests {
 
     #[test]
     fn test_get_prime_factors() {
+        assert_eq!(get_prime_factors(0), vec![]);
         assert_eq!(get_prime_factors(100), vec![2, 2, 5, 5]);
+        assert_eq!(get_prime_factors(2560), vec![2, 2, 2, 2, 2, 2, 2, 2, 2, 5]);
+    }
+
+    #[test]
+    fn test_get_prime_factors2() {
+        assert_eq!(get_prime_factors2(0), vec![]);
+        assert_eq!(get_prime_factors2(100), vec![2, 2, 5, 5]);
+        assert_eq!(get_prime_factors2(2560), vec![2, 2, 2, 2, 2, 2, 2, 2, 2, 5]);
     }
 
     #[test]
