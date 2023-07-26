@@ -3,6 +3,9 @@
 // in the LICENSE file.
 
 #![allow(clippy::module_name_repetitions)]
+#![allow(clippy::cast_possible_truncation)]
+#![allow(clippy::cast_precision_loss)]
+#![allow(clippy::cast_sign_loss)]
 
 use std::collections::HashMap;
 
@@ -39,11 +42,30 @@ pub fn get_factors(mut n: u64) -> Counter {
     factors
 }
 
-/// Returns all available factors of a possitive integer.
 #[must_use]
-#[allow(clippy::cast_possible_truncation)]
-#[allow(clippy::cast_precision_loss)]
-#[allow(clippy::cast_sign_loss)]
+pub fn get_prime_factors(mut num: u64) -> Vec<u64> {
+    debug_assert!(num > 0);
+    let mut pf = Vec::new();
+    while num % 2 == 0 {
+        pf.push(2);
+        num /= 2;
+    }
+
+    for i in (3..=((num as f64).sqrt() as u64)).skip(2) {
+        while num % i == 0 {
+            pf.push(i);
+            num /= i;
+        }
+    }
+    if num > 2 {
+        pf.push(num);
+    }
+    eprintln!("pf: {pf:#?}");
+    pf
+}
+
+/// Returns all available factors/divisors of a possitive integer.
+#[must_use]
 pub fn get_factor_list(num: u64) -> Vec<u64> {
     let mut factors = Vec::new();
     if num < 1 {
@@ -72,9 +94,21 @@ pub fn get_factor_list(num: u64) -> Vec<u64> {
     factors
 }
 
+/// Calculate Number of Divisors of an Integer.
+#[must_use]
+pub fn num_of_divisors(num: u64) -> usize {
+    get_factor_list(num).len()
+}
+
+/// Calculate Sum of Divisors.
+#[must_use]
+pub fn sum_of_divisors(num: u64) -> u64 {
+    get_factor_list(num).iter().sum()
+}
+
 #[cfg(test)]
 mod tests {
-    use super::{get_factor_list, get_factors, Counter};
+    use super::{get_factor_list, get_factors, get_prime_factors, num_of_divisors, Counter};
 
     #[test]
     fn test_get_factors() {
@@ -90,5 +124,15 @@ mod tests {
         assert_eq!(get_factor_list(1), vec![1]);
         assert_eq!(get_factor_list(5), vec![1, 5]);
         assert_eq!(get_factor_list(24), vec![1, 2, 3, 4, 6, 8, 12, 24]);
+    }
+
+    #[test]
+    fn test_num_of_divisors() {
+        assert_eq!(num_of_divisors(100), 9);
+    }
+
+    #[test]
+    fn test_get_prime_factors() {
+        assert_eq!(get_prime_factors(100), vec![2, 2, 5, 5]);
     }
 }
