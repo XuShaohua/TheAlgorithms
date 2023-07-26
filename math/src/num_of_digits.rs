@@ -2,6 +2,12 @@
 // Use of this source is governed by General Public License that can be found
 // in the LICENSE file.
 
+#![allow(
+    clippy::cast_possible_truncation,
+    clippy::cast_precision_loss,
+    clippy::cast_sign_loss
+)]
+
 /// Find the number of digits in a number.
 #[must_use]
 pub const fn num_digits(num: i64) -> usize {
@@ -17,15 +23,36 @@ pub const fn num_digits(num: i64) -> usize {
     digits
 }
 
+/// Find the number of digits in a number.
+///
+/// abs() is used as logarithm for negative numbers is not defined.
+#[must_use]
+pub fn num_digits_fast(num: i64) -> usize {
+    if num == 0 {
+        1
+    } else {
+        let num = num.abs() as f64;
+        (num.log10() + 1.0).floor() as usize
+    }
+}
+
 #[cfg(test)]
 mod tests {
-    use super::num_digits;
+    use super::{num_digits, num_digits_fast};
+
+    const PAIRS: &[(i64, usize)] = &[(12345, 5), (123, 3), (0, 1), (-1, 1), (-123456, 6)];
 
     #[test]
     fn test_num_digits() {
-        const PAIRS: &[(i64, usize)] = &[(12345, 5), (123, 3), (0, 1), (-1, 1), (-123456, 6)];
         for (num, digits) in PAIRS {
             assert_eq!(num_digits(*num), *digits);
+        }
+    }
+
+    #[test]
+    fn test_num_digits_fast() {
+        for (num, digits) in PAIRS {
+            assert_eq!(num_digits_fast(*num), *digits);
         }
     }
 }
