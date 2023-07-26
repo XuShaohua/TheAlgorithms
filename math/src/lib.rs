@@ -11,6 +11,7 @@
 )]
 
 pub mod abs;
+pub mod digits;
 pub mod factorial;
 pub mod factors;
 pub mod fibonacci;
@@ -19,4 +20,3 @@ pub mod gcd;
 pub mod ipv4;
 pub mod num_of_digits;
 //pub mod remove_digit;
-pub mod digits;
