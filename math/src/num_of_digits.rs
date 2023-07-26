@@ -36,9 +36,17 @@ pub fn num_digits_fast(num: i64) -> usize {
     }
 }
 
+/// Find the number of digits in a number.
+///
+/// abs() is used for negative numbers
+#[must_use]
+pub fn num_digits_faster(num: i64) -> usize {
+    num.abs().to_string().len()
+}
+
 #[cfg(test)]
 mod tests {
-    use super::{num_digits, num_digits_fast};
+    use super::{num_digits, num_digits_fast, num_digits_faster};
 
     const PAIRS: &[(i64, usize)] = &[(12345, 5), (123, 3), (0, 1), (-1, 1), (-123456, 6)];
 
@@ -53,6 +61,13 @@ mod tests {
     fn test_num_digits_fast() {
         for (num, digits) in PAIRS {
             assert_eq!(num_digits_fast(*num), *digits);
+        }
+    }
+
+    #[test]
+    fn test_num_digits_faster() {
+        for (num, digits) in PAIRS {
+            assert_eq!(num_digits_faster(*num), *digits);
         }
     }
 }
