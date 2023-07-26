@@ -60,7 +60,6 @@ pub fn get_prime_factors(mut num: u64) -> Vec<u64> {
     if num > 2 {
         pf.push(num);
     }
-    eprintln!("pf: {pf:#?}");
     pf
 }
 
@@ -106,9 +105,24 @@ pub fn sum_of_divisors(num: u64) -> u64 {
     get_factor_list(num).iter().sum()
 }
 
+/// Calculate Euler's Phi Function.
+#[must_use]
+pub fn euler_phi(num: u64) -> u64 {
+    let mut pf = get_prime_factors(num);
+    pf.dedup();
+    let mut s = num as f64;
+    for x in &pf {
+        s *= (x - 1) as f64 / *x as f64;
+    }
+
+    s as u64
+}
+
 #[cfg(test)]
 mod tests {
-    use super::{get_factor_list, get_factors, get_prime_factors, num_of_divisors, Counter};
+    use super::{
+        euler_phi, get_factor_list, get_factors, get_prime_factors, num_of_divisors, Counter,
+    };
 
     #[test]
     fn test_get_factors() {
@@ -134,5 +148,10 @@ mod tests {
     #[test]
     fn test_get_prime_factors() {
         assert_eq!(get_prime_factors(100), vec![2, 2, 5, 5]);
+    }
+
+    #[test]
+    fn test_euler_phi() {
+        assert_eq!(euler_phi(100), 40);
     }
 }
