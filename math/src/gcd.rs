@@ -4,9 +4,7 @@
 
 //! Greatest Common Devisor ([GCD](https://en.wikipedia.org/wiki/Greatest_common_divisor))
 
-#![allow(clippy::module_name_repetitions)]
-
-use std::collections::HashMap;
+use crate::factors::get_factors;
 
 /// [Euclidean algorithm](https://en.wikipedia.org/wiki/Euclidean_algorithm) is
 /// an effective method for computing GCD.
@@ -36,39 +34,6 @@ pub const fn euclidean_iterative(x: u64, y: u64) -> u64 {
     previous_remainder
 }
 
-pub type Counter = HashMap<u64, usize>;
-
-#[must_use]
-pub fn get_factors(mut n: u64) -> Counter {
-    let mut factors = Counter::new();
-    if n == 1 {
-        //factors.insert(1, 1);
-        return factors;
-    }
-
-    let mut factor = 2;
-    if n == factor {
-        factors.insert(factor, 1);
-        return factors;
-    }
-
-    while n > 1 {
-        debug_assert!(n >= factor);
-
-        let mut count = 0;
-        while n % factor == 0 {
-            n /= factor;
-            count += 1;
-        }
-        if count > 0 {
-            factors.insert(factor, count);
-        }
-        factor += 1;
-    }
-
-    factors
-}
-
 /// Get gcd by factors.
 #[must_use]
 #[allow(clippy::cast_possible_truncation)]
@@ -87,7 +52,7 @@ pub fn by_factors(x: u64, y: u64) -> u64 {
 
 #[cfg(test)]
 mod tests {
-    use super::{by_factors, euclidean_iterative, euclidean_recursive, get_factors, Counter};
+    use super::{by_factors, euclidean_iterative, euclidean_recursive};
 
     const PAIRS: &[(u64, u64, u64)] = &[
         (120, 7, 1),
@@ -110,15 +75,6 @@ mod tests {
         for (x, y, z) in PAIRS {
             assert_eq!(euclidean_iterative(*x, *y), *z);
         }
-    }
-
-    #[test]
-    fn test_get_factors() {
-        assert_eq!(get_factors(45), Counter::from([(3, 2), (5, 1)]));
-        assert_eq!(
-            get_factors(2520),
-            Counter::from([(2, 3), (3, 2), (5, 1), (7, 1)])
-        );
     }
 
     #[test]
