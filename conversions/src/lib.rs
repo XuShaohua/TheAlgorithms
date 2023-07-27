@@ -21,6 +21,7 @@ pub use excel_title_to_column::excel_title_to_column;
 pub mod energy;
 pub mod length;
 pub mod molecular_chemistry;
+pub mod pressure;
 pub mod roman_numerals;
 pub mod speed;
 pub mod volume;
