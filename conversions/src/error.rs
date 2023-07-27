@@ -9,3 +9,10 @@ pub enum BinaryError {
     OutOfRange,
     NonBinaryValue,
 }
+
+#[derive(Debug, Clone, Copy, Eq, PartialEq)]
+pub enum HexError {
+    InvalidValue,
+    NonAscii,
+    Empty,
+}
