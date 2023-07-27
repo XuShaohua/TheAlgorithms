@@ -26,5 +26,6 @@ pub mod pressure;
 pub mod roman_numerals;
 pub mod speed;
 pub mod volume;
+pub mod weight;
 
 pub mod error;
