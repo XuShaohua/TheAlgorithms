@@ -20,6 +20,7 @@ mod excel_title_to_column;
 pub use excel_title_to_column::excel_title_to_column;
 pub mod energy;
 pub mod molecular_chemistry;
+pub mod roman_numerals;
 pub mod speed;
 pub mod volume;
 
