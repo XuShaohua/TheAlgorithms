@@ -19,6 +19,7 @@ pub use binary_to_octal::binary_to_octal;
 mod excel_title_to_column;
 pub use excel_title_to_column::excel_title_to_column;
 pub mod molecular_chemistry;
+pub mod speed;
 pub mod volume;
 
 pub mod error;
