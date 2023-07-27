@@ -25,6 +25,7 @@ pub mod molecular_chemistry;
 pub mod pressure;
 pub mod roman_numerals;
 pub mod speed;
+pub mod temperature;
 pub mod volume;
 pub mod weight;
 
