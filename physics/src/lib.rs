@@ -9,3 +9,5 @@
     clippy::nursery,
     clippy::pedantic
 )]
+
+pub mod speed_of_sound;
