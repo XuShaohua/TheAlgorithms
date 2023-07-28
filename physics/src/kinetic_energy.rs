@@ -11,7 +11,7 @@
 /// The kinetic energy of a non-rotating object of mass m traveling at a speed v is ½mv²
 #[must_use]
 pub fn kinetic_energy(mass: f64, velocity: f64) -> f64 {
-    debug_assert!(mass > 0.0);
+    debug_assert!(mass >= 0.0);
     0.5 * mass * velocity.abs() * velocity.abs()
 }
 

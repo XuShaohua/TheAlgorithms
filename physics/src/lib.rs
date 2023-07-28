@@ -11,6 +11,7 @@
 )]
 
 pub mod casimir_effect;
+pub mod centripetal_force;
 pub mod ideal_gas_law;
 pub mod kinetic_energy;
 pub mod malus_law;
