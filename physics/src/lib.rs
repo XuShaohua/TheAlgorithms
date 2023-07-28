@@ -10,4 +10,5 @@
     clippy::pedantic
 )]
 
+pub mod shear_stress;
 pub mod speed_of_sound;
