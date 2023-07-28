@@ -11,6 +11,7 @@
 )]
 
 pub mod kinetic_energy;
+pub mod malus_law;
 pub mod potential_energy;
 pub mod shear_stress;
 pub mod speed_of_sound;
