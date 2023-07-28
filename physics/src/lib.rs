@@ -16,5 +16,6 @@ pub mod ideal_gas_law;
 pub mod kinetic_energy;
 pub mod malus_law;
 pub mod potential_energy;
+pub mod rms_speed_of_molecule;
 pub mod shear_stress;
 pub mod speed_of_sound;
