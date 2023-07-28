@@ -10,6 +10,7 @@
     clippy::pedantic
 )]
 
+pub mod casimir_effect;
 pub mod ideal_gas_law;
 pub mod kinetic_energy;
 pub mod malus_law;
