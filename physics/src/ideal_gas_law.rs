@@ -11,17 +11,17 @@ const UNIVERSAL_GAS_CONSTANT: f64 = 8.314_462;
 
 #[must_use]
 pub fn pressure_of_gas_system(moles: f64, kelvin: f64, volume: f64) -> f64 {
-    debug_assert!(moles >= 0.0);
-    debug_assert!(kelvin >= 0.0);
-    debug_assert!(volume >= 0.0);
+    debug_assert!(moles > 0.0);
+    debug_assert!(kelvin > 0.0);
+    debug_assert!(volume > 0.0);
     moles * kelvin * UNIVERSAL_GAS_CONSTANT / volume
 }
 
 #[must_use]
 pub fn volume_of_gas_system(moles: f64, kelvin: f64, pressure: f64) -> f64 {
-    debug_assert!(moles >= 0.0);
-    debug_assert!(kelvin >= 0.0);
-    debug_assert!(pressure >= 0.0);
+    debug_assert!(moles > 0.0);
+    debug_assert!(kelvin > 0.0);
+    debug_assert!(pressure > 0.0);
     moles * kelvin * UNIVERSAL_GAS_CONSTANT / pressure
 }
 
