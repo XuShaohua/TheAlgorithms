@@ -10,6 +10,7 @@
     clippy::pedantic
 )]
 
+pub mod kinetic_energy;
 pub mod potential_energy;
 pub mod shear_stress;
 pub mod speed_of_sound;
