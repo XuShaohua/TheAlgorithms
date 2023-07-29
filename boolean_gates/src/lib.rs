@@ -2,6 +2,13 @@
 // Use of this source is governed by General Public License that can be found
 // in the LICENSE file.
 
+//! Boolean algebra
+//!
+//! [Logic gate](https://en.wikipedia.org/wiki/Logic_gate)
+//! [Boolean algebra](https://en.wikipedia.org/wiki/Boolean_algebra)
+//! [Math of boolean algebra](https://plato.stanford.edu/entries/boolalg-math/)
+//! [Logic gates in python](https://www.geeksforgeeks.org/logic-gates-in-python/)
+
 #![deny(
     warnings,
     clippy::all,
@@ -9,3 +16,5 @@
     clippy::nursery,
     clippy::pedantic
 )]
+
+pub mod and_gate;
