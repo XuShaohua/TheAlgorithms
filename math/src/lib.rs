@@ -11,6 +11,7 @@
 )]
 
 pub mod abs;
+pub mod catalan_number;
 pub mod digits;
 pub mod factorial;
 pub mod factors;
