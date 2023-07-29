@@ -1,6 +1,7 @@
 
 [workspace]
 members = [
+  "boolean_gates",
   "conversions",
   "math",
   "physics",
