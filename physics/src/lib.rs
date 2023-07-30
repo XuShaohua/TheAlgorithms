@@ -10,6 +10,7 @@
     clippy::pedantic
 )]
 
+pub mod archimedes_principle;
 pub mod casimir_effect;
 pub mod centripetal_force;
 pub mod ideal_gas_law;
