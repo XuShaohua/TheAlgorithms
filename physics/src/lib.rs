@@ -16,6 +16,7 @@ pub mod centripetal_force;
 pub mod grahams_law;
 pub mod ideal_gas_law;
 pub mod kinetic_energy;
+pub mod lorentz_transformation_four_vector;
 pub mod malus_law;
 pub mod potential_energy;
 pub mod rms_speed_of_molecule;
