@@ -17,6 +17,7 @@ pub mod digits;
 pub mod factorial;
 pub mod factors;
 pub mod fibonacci;
+pub mod find_max_recursion;
 pub mod find_min_recursion;
 pub mod floor;
 pub mod gcd;
