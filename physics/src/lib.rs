@@ -14,6 +14,7 @@ pub mod archimedes_principle;
 pub mod casimir_effect;
 pub mod centripetal_force;
 pub mod grahams_law;
+pub mod horizontal_projectile_motion;
 pub mod hubble_parameter;
 pub mod ideal_gas_law;
 pub mod kinetic_energy;
