@@ -10,4 +10,6 @@
     clippy::pedantic
 )]
 
+//pub mod apparent_power;
 pub mod electric_power;
+pub mod ohms_law;
