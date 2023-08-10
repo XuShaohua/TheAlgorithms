@@ -3,6 +3,7 @@
 members = [
   "boolean_gates",
   "conversions",
+  "financial",
   "math",
   "physics",
 ]
