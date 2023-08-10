@@ -4,6 +4,7 @@ members = [
   "boolean_gates",
   "conversions",
   "financial",
+  "geodesy",
   "math",
   "physics",
 ]
