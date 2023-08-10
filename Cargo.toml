@@ -3,6 +3,7 @@
 members = [
   "boolean_gates",
   "conversions",
+  "electronics",
   "financial",
   "geodesy",
   "math",
