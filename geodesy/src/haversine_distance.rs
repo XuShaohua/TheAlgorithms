@@ -32,7 +32,6 @@ pub const RADIUS: f64 = 6_378_137.0;
 /// [CONSTANTS per WGS84](https://en.wikipedia.org/wiki/World_Geodetic_System)
 /// [Haversine Formulation Equation](https://en.wikipedia.org/wiki/Haversine_formula#Formulation)
 #[must_use]
-#[allow(clippy::suboptimal_flops)]
 pub fn haversine_distance(lat1: f64, lon1: f64, lat2: f64, lon2: f64) -> f64 {
     let flattening = (AXIS_A - AXIS_B) / AXIS_A;
     let phi_1 = (1.0 - flattening) * lat1.to_radians().tan().atan();
@@ -45,7 +44,7 @@ pub fn haversine_distance(lat1: f64, lon1: f64, lat2: f64, lon2: f64) -> f64 {
     // Square both values
     let sin_sq_phi = sin_sq_phi * sin_sq_phi;
     let sin_sq_lambda = sin_sq_lambda * sin_sq_lambda;
-    let h_value = (sin_sq_phi + (phi_1.cos() * phi_2.cos() * sin_sq_lambda)).sqrt();
+    let h_value = ((phi_1.cos() * phi_2.cos()).mul_add(sin_sq_lambda, sin_sq_phi)).sqrt();
     2.0 * RADIUS * h_value.asin()
 }
 

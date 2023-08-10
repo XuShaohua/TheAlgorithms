@@ -11,3 +11,4 @@
 )]
 
 pub mod haversine_distance;
+pub mod lamberts_ellipsoidal_distance;
