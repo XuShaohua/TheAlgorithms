@@ -5,7 +5,7 @@
 //! Calculate price plus tax of a good or service given its price and a tax rate.
 
 #[must_use]
-pub fn price_plus_tax(price: f32, tax_rate: f32) -> f32 {
+pub fn price_plus_tax(price: f64, tax_rate: f64) -> f64 {
     price * (1.0 + tax_rate)
 }
 
