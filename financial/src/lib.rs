@@ -10,5 +10,6 @@
     clippy::pedantic
 )]
 
+pub mod interest;
 pub mod present_value;
 pub mod price_plus_tax;
