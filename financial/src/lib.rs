@@ -10,6 +10,7 @@
     clippy::pedantic
 )]
 
+pub mod equated_monthly_installments;
 pub mod interest;
 pub mod present_value;
 pub mod price_plus_tax;
