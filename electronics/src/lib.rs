@@ -12,6 +12,7 @@
 
 //pub mod apparent_power;
 pub mod builtin_voltage;
+pub mod carrier_concentration;
 pub mod electric_power;
 pub mod electrical_impedance;
 pub mod ohms_law;
