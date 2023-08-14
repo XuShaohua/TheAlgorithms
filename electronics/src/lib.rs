@@ -18,3 +18,4 @@ pub mod electric_power;
 pub mod electrical_impedance;
 pub mod ohms_law;
 pub mod resistor_equivalence;
+pub mod resonant_frequency;
