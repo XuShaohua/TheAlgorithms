@@ -16,6 +16,7 @@ pub mod carrier_concentration;
 pub mod electric_conductivity;
 pub mod electric_power;
 pub mod electrical_impedance;
+pub mod ind_reactance;
 pub mod ohms_law;
 pub mod resistor_equivalence;
 pub mod resonant_frequency;
