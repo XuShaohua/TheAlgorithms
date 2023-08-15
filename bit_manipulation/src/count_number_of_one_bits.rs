@@ -34,8 +34,6 @@ pub const fn builtin(number: i32) -> u32 {
     number.count_ones()
 }
 
-//for number in (25, 37, 58, 0):
-
 #[cfg(test)]
 mod tests {
     use super::{brian_kernighans_algorithm, builtin, modulo_operator};

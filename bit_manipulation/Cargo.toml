@@ -5,3 +5,10 @@ edition = "2021"
 publish = false
 
 [dependencies]
+
+[dev-dependencies]
+criterion = "0.5.1"
+
+[[bench]]
+name = "count_ones"
+harness = false
