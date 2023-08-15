@@ -4,6 +4,9 @@
 
 //! Count the number of set bits in a 32 bit integer
 
+/// Count the number of set bits in a 32 bit integer using Brian Kernighan's way.
+///
+/// [Bit Twiddling Hacks](https://graphics.stanford.edu/~seander/bithacks.html#CountBitsSetKernighan)
 #[must_use]
 pub fn brian_kernighans_algorithm(mut number: i32) -> u32 {
     debug_assert!(number >= 0);

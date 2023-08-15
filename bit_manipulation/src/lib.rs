@@ -10,6 +10,7 @@
     clippy::pedantic
 )]
 
+pub mod binary_count_trailing_zeros;
 pub mod count_number_of_one_bits;
 pub mod is_even;
 pub mod is_power_of_two;
