@@ -1,6 +1,7 @@
 
 [workspace]
 members = [
+  "bit_manipulation",
   "boolean_gates",
   "conversions",
   "electronics",

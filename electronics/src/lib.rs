@@ -13,6 +13,7 @@
 //pub mod apparent_power;
 pub mod builtin_voltage;
 pub mod carrier_concentration;
+//pub mod circular_convolution;
 pub mod coulombs_law;
 pub mod electric_conductivity;
 pub mod electric_power;
