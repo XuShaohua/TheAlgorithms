@@ -12,3 +12,7 @@ criterion = "0.5.1"
 [[bench]]
 name = "count_ones"
 harness = false
+
+[[bench]]
+name = "trailing_zeros"
+harness = false
