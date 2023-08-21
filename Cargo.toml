@@ -10,3 +10,7 @@ members = [
   "math",
   "physics",
 ]
+
+[profile.release]
+debug = true
+lto = true
