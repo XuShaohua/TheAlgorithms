@@ -8,6 +8,7 @@
 
 /// Get nth catalan number.
 #[must_use]
+#[allow(clippy::cast_possible_wrap)]
 pub fn catalan(number: usize) -> i64 {
     debug_assert!(number > 0);
     let mut current_number = 1;
