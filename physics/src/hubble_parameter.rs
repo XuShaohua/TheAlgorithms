@@ -13,7 +13,7 @@ pub fn hubble_parameter(
 ) -> f64 {
     let parameters = [redshift, radiation_density, matter_density, dark_energy];
     debug_assert!(parameters.iter().all(|val| *val >= 0.0));
-    debug_assert!(parameters.iter().skip(0).all(|val| *val <= 1.0));
+    debug_assert!(parameters.iter().skip(1).all(|val| *val <= 1.0));
     let curvature = 1.0 - (matter_density + radiation_density + dark_energy);
 
     let e_2 = radiation_density * (redshift + 1.0).powi(4)
