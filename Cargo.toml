@@ -4,6 +4,7 @@ members = [
   "bit_manipulation",
   "boolean_gates",
   "conversions",
+  "ds",
   "electronics",
   "financial",
   "geodesy",
