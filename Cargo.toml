@@ -8,8 +8,10 @@ members = [
   "electronics",
   "financial",
   "geodesy",
+  "leetcode",
   "math",
   "physics",
+  "project_euler",
 ]
 
 resolver = "2"
