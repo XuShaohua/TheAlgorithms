@@ -85,7 +85,7 @@ impl ListIterator {
 impl Iterator for ListIterator {
     type Item = String;
 
-    fn next(&mut self) -> Option<String> {
+    fn next(&mut self) -> Option<Self::Item> {
         let current = &self.current;
         let mut result = None;
         self.current = match current {
@@ -97,6 +97,22 @@ impl Iterator for ListIterator {
             None => None,
         };
 
+        result
+    }
+}
+
+impl DoubleEndedIterator for ListIterator {
+    fn next_back(&mut self) -> Option<Self::Item> {
+        let current = &self.current;
+        let mut result = None;
+        self.current = match current {
+            Some(ref current) => {
+                let current = current.borrow();
+                result = Some(current.value.clone());
+                current.previous.clone()
+            }
+            None => None,
+        };
         result
     }
 }
