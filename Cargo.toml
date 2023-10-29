@@ -11,6 +11,9 @@ members = [
   "leetcode",
   "math",
   "physics",
+]
+
+exclude = [
   "project_euler",
 ]
 
