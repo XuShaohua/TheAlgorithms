@@ -11,6 +11,7 @@ members = [
   "leetcode",
   "math",
   "physics",
+  "weiss/c02",
 ]
 
 exclude = [
