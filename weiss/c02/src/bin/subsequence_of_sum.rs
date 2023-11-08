@@ -103,6 +103,29 @@ fn method3_helper(nums: &[i32], left: usize, right: usize) -> (i32, usize, usize
     }
 }
 
+// Online algorithm
+fn method4(nums: &[i32]) -> (i32, usize, usize) {
+    let mut max_sum = 0;
+    let mut best_i = 0;
+    let mut best_j = 0;
+    let len = nums.len();
+
+    let mut this_sum = 0;
+    let mut i = 0;
+    for j in 0..len {
+        this_sum += nums[j];
+        if this_sum > max_sum {
+            max_sum = this_sum;
+            best_i = i;
+            best_j = j;
+        } else if this_sum < 0 {
+            i = j + 1;
+            this_sum = 0;
+        }
+    }
+    (max_sum, best_i, best_j)
+}
+
 fn main() {
     const NUMS: &[i32] = &[4, -3, 5, -2, -1, 2, 6, -2];
     let (r, best_i, best_j) = method1(NUMS);
@@ -110,6 +133,8 @@ fn main() {
     let (r, best_i, best_j) = method2(NUMS);
     println!("best sum: {r}, ({best_i}, {best_j})");
     let (r, best_i, best_j) = method3(NUMS);
+    println!("best sum: {r}, ({best_i}, {best_j})");
+    let (r, best_i, best_j) = method4(NUMS);
     println!("best sum: {r}, ({best_i}, {best_j})");
 }
 
