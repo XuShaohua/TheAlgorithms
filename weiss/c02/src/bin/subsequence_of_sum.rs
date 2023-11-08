@@ -11,6 +11,8 @@
 //!
 //! For input -2, 11, -4, 13, -5, -2, the answer is 20 (a 2 through a4).
 
+#![allow(clippy::needless_range_loop)]
+
 fn method1(nums: &[i32]) -> (i32, usize, usize) {
     let mut max_sum = 0;
     let mut best_i = 0;

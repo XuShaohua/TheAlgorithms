@@ -1,3 +1,4 @@
+#[allow(clippy::comparison_chain)]
 fn binary_search(nums: &[i32], target: i32) -> Option<usize> {
     let mut low = 0;
     let mut high = nums.len() - 1;
