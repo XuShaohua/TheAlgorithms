@@ -5,9 +5,11 @@ set(CMAKE_C_STANDARD 11)
 
 set(SOURCE_FILES
     src/atom.c
+    src/hash.c
     )
 set(HEADER_FILES
     include/cii/atom.h
+    include/cii/hash.h
     )
 
 add_library(cii STATIC

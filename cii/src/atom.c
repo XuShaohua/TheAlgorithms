@@ -7,6 +7,9 @@
 #include <assert.h>
 #include <limits.h>
 #include <string.h>
+#include <stdlib.h>
+
+#include "cii/hash.h"
 
 struct atom_s {
   struct atom_s* link;
@@ -16,8 +19,41 @@ struct atom_s {
 
 typedef struct atom_s atom_t;
 
-const size_t kBucketCap = 2048;
-static atom_t g_buckets[kBucketCap];
+#define ATOM_BUCKET_LEN 2048
+static atom_t* g_buckets[ATOM_BUCKET_LEN];
+
+atom_t* atom_new_node(const char* str, size_t len) {
+  const size_t total_len = sizeof(atom_t) + len + 1;
+  atom_t* p = malloc(total_len);
+  assert(p != NULL);
+  p->len = len;
+  p->str = (char*)(p + 1);
+  if (len > 0) {
+    memcpy(p->str, str, len);
+  }
+  p->str[len] = '\0';
+  return p;
+}
+
+const char* atom_new(const char* str, size_t len) {
+  assert(str != NULL);
+  size_t hash = str_hash(str, len);
+  hash %= ATOM_BUCKET_LEN;
+
+  atom_t* p;
+  for (p = g_buckets[hash]; p != NULL; p = p->link) {
+    if (len == p->len && strncmp(p->str, str, len) == 0) {
+      return p->str;
+    }
+  }
+
+  // create new entry
+  p = atom_new_node(str, len);
+  p->link = g_buckets[hash];
+  g_buckets[hash] = p;
+
+  return p->str;
+}
 
 const char* atom_string(const char* str) {
   assert(str != NULL);
