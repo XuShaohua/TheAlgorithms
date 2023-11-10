@@ -22,7 +22,7 @@ typedef struct atom_s atom_t;
 #define ATOM_BUCKET_LEN 2048
 static atom_t* g_buckets[ATOM_BUCKET_LEN];
 
-atom_t* atom_new_node(const char* str, size_t len) {
+static atom_t* atom_new_node(const char* str, size_t len) {
   const size_t total_len = sizeof(atom_t) + len + 1;
   atom_t* p = malloc(total_len);
   assert(p != NULL);
@@ -89,4 +89,17 @@ const char* atom_int(int64_t n) {
   return atom_new(s, end_buf - s);
 }
 
+size_t atom_length(const char* str) {
+  assert(str != NULL);
 
+  for (int i = 0; i < ATOM_BUCKET_LEN; ++i) {
+    for (atom_t* p = g_buckets[i]; p != NULL; p = p->link) {
+      if (p->str == str) {
+        return p->len;
+      }
+    }
+  }
+  // Atom not found.
+  assert(0);
+  return 0;
+}
