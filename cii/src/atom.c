@@ -20,6 +20,7 @@ struct atom_s {
 typedef struct atom_s atom_t;
 
 #define ATOM_BUCKET_LEN 2048
+//#define ATOM_BUCKET_LEN 2039
 static atom_t* g_buckets[ATOM_BUCKET_LEN];
 
 static atom_t* atom_new_node(const char* str, size_t len) {
@@ -42,7 +43,7 @@ const char* atom_new(const char* str, size_t len) {
 
   atom_t* p;
   for (p = g_buckets[hash]; p != NULL; p = p->link) {
-    if (len == p->len && strncmp(p->str, str, len) == 0) {
+    if (len == p->len && memcmp(p->str, str, len) == 0) {
       return p->str;
     }
   }
