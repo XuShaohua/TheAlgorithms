@@ -4,6 +4,7 @@ project(cii C)
 set(CMAKE_C_STANDARD 11)
 
 set(SOURCE_FILES
+    src/assert.c
     src/atom.c
     src/except.c
     src/hash.c

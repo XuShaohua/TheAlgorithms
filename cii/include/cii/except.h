@@ -8,7 +8,6 @@
 #include <setjmp.h>
 
 struct except_s {
-  int type;
   const char* reason;
 };
 

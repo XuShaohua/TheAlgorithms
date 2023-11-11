@@ -5,23 +5,18 @@
 #ifndef CII_ASSERT_H_
 #define CII_ASSERT_H_
 
-#include <stdlib.h>
-#include <stdio.h>
-
 #undef assert
 #ifdef NDEBUG
 #define assert(e) ((void)0)
 #else
 
+#include "cii/except.h"
+
 extern void assert(int e);
 
-#define assert(e)                                      \
-  do {                                                 \
-    if (!(e)) {                                        \
-      fprintf(stderr, "%s:%d: Assertion failed: %s\n", \
-              __FILE__, (int)__LINE__, #e);            \
-      abort();                                         \
-  } while(0)
+extern const except_t kAssertFailed;
+
+#define assert(e) ((void)((e) || (RAISE(kAssertFailed), 0)))
 
 #endif  // NDEBUG
 
