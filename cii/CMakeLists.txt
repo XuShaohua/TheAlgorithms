@@ -9,6 +9,7 @@ set(SOURCE_FILES
     src/hash.c
     )
 set(HEADER_FILES
+    include/cii/assert.h
     include/cii/atom.h
     include/cii/except.h
     include/cii/hash.h
