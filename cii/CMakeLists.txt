@@ -5,10 +5,12 @@ set(CMAKE_C_STANDARD 11)
 
 set(SOURCE_FILES
     src/atom.c
+    src/except.c
     src/hash.c
     )
 set(HEADER_FILES
     include/cii/atom.h
+    include/cii/except.h
     include/cii/hash.h
     )
 
