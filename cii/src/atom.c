@@ -4,11 +4,11 @@
 
 #include "cii/atom.h"
 
-#include <assert.h>
 #include <limits.h>
 #include <string.h>
 #include <stdlib.h>
 
+#include "cii/assert.h"
 #include "cii/hash.h"
 
 struct atom_s {
@@ -25,6 +25,7 @@ static atom_t* g_buckets[ATOM_BUCKET_LEN];
 
 static atom_t* atom_new_node(const char* str, size_t len) {
   const size_t total_len = sizeof(atom_t) + len + 1;
+  // TODO(Shaohua): Replace malloc()
   atom_t* p = malloc(total_len);
   assert(p != NULL);
   p->len = len;
