@@ -28,6 +28,7 @@ target_include_directories(cii_static
 
 add_executable(mem_test
     src/mem_test.c
+    src/mem_test.h
     )
 target_link_libraries(mem_test
     cii_static
