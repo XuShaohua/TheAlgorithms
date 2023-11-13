@@ -1,5 +1,7 @@
 
 [workspace]
+resolver = "2"
+
 members = [
   "bit_manipulation",
   "boolean_gates",
@@ -11,14 +13,13 @@ members = [
   "leetcode",
   "math",
   "physics",
-  "weiss/c02",
+  "weiss/c*",
 ]
 
 exclude = [
   "project_euler",
 ]
 
-resolver = "2"
 
 [profile.release]
 debug = true
