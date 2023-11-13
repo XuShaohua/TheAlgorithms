@@ -8,6 +8,7 @@ set(SOURCE_FILES
     src/atom.c
     src/except.c
     src/hash.c
+    src/list.c
     src/mem.c
     )
 set(HEADER_FILES
@@ -15,6 +16,7 @@ set(HEADER_FILES
     include/cii/atom.h
     include/cii/except.h
     include/cii/hash.h
+    include/cii/list.h
     include/cii/mem.h
     )
 
@@ -31,5 +33,12 @@ add_executable(mem_test
     src/mem_test.h
     )
 target_link_libraries(mem_test
+    cii_static
+    )
+
+add_executable(list_test
+    src/list_test.c
+    )
+target_link_libraries(list_test
     cii_static
     )
