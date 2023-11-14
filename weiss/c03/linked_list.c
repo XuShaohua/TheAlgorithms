@@ -5,6 +5,7 @@
 #include "linked_list.h"
 
 #include <assert.h>
+#include <stdio.h>
 #include <stdlib.h>
 
 bool list_is_empty(node_t* list) {
@@ -30,10 +31,6 @@ node_t* list_find(node_t* list, element_type value) {
 node_t* list_find_previous(node_t* list, element_type value) {
   assert(list != NULL);
 
-  if (list->value == value) {
-    return list;
-  }
-
   while (list->next != NULL) {
     if (list->next->value == value) {
       return list;
@@ -46,21 +43,23 @@ node_t* list_find_previous(node_t* list, element_type value) {
 bool list_delete(node_t** list, element_type value) {
   assert(list != NULL);
 
+  // Delete the first node.
+  if ((*list)->value == value) {
+    node_t* tmp = *list;
+    *list = tmp->next;
+    free(tmp);
+    return true;
+  }
+
   node_t* prev = list_find_previous(*list, value);
   if (prev == NULL) {
     // Not found.
     return false;
   }
 
-  if (prev == *list) {
-    // Delete the first node.
-    *list = prev->next;
-    free(prev);
-  } else {
-    node_t* tmp = prev->next;
-    prev->next = tmp->next;
-    free(tmp);
-  }
+  node_t* tmp = prev->next;
+  prev->next = tmp->next;
+  free(tmp);
   return true;
 }
 
@@ -82,7 +81,7 @@ node_t* list_insert(node_t** list, node_t* position, element_type value) {
   return new_node;
 }
 
-void list_map(node_t* list, void apply(node_t* node, void* user_data)) {
+void list_map(node_t* list, void apply(node_t* node, void* user_data), void* user_data) {
   assert(list != NULL);
   while (list != NULL) {
     apply(list, user_data);
@@ -99,4 +98,13 @@ size_t list_length(node_t* list) {
     list = list->next;
   }
   return count;
+}
+
+static void print_node(node_t* node, void*) {
+  printf("%d, ", node->value);
+}
+
+void list_debug_print(node_t* list) {
+  list_map(list, print_node, NULL);
+  printf("\n");
 }

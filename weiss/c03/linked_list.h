@@ -52,6 +52,9 @@ extern node_t* list_find(node_t* list, element_type value);
  *
  * Returns a null pointer if not found.
  *
+ * Note that if the head node is with this element value, it also returns NULL,
+ * as head node has no previous node.
+ *
  * @param list
  * @param value
  * @return
@@ -90,7 +93,8 @@ extern node_t* list_insert(node_t** list, node_t* position, element_type value);
  * @param apply
  * @return
  */
-extern void list_map(node_t* list, void apply(node_t* node, void* user_data));
+extern void list_map(node_t* list, void apply(node_t* node, void* user_data),
+                     void* user_data);
 
 /**
  * Get number of nodes in list.
@@ -99,5 +103,13 @@ extern void list_map(node_t* list, void apply(node_t* node, void* user_data));
  * @return
  */
 extern size_t list_length(node_t* list);
+
+/**
+ * Print all elements in a list.
+ *
+ * @param list
+ * @return
+ */
+extern void list_debug_print(node_t* list);
 
 #endif  // WEISS_C03_LINKED_LIST_H_
