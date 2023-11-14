@@ -121,4 +121,16 @@ fn main() {
 }
 
 #[cfg(test)]
-mod tests {}
+mod tests {
+    use super::{solution1, ListNode};
+
+    #[test]
+    fn test_solution1() {
+        let l1 = ListNode::from_slice(&[9, 9, 9, 9, 9, 9, 9]);
+        let l2 = ListNode::from_slice(&[9, 9, 9, 9]);
+        assert_eq!(
+            solution1(l1, l2),
+            ListNode::from_slice(&[8, 9, 9, 9, 0, 0, 0, 1])
+        );
+    }
+}
