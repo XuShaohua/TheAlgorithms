@@ -1,3 +1,3 @@
 
 # About
-Example code of Data structures and Algorithms in C, by Mark Allen Weiss, rewritten in Rust.
+Example code of Data structures and Algorithms in C, by Mark Allen Weiss.
