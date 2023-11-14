@@ -87,11 +87,17 @@ extern bool list_delete(node_t** list, element_type value);
 extern node_t* list_insert(node_t** list, node_t* position, element_type value);
 
 /**
+ * Delete all nodes in a list and reset it to null.
+ *
+ * @param list
+ */
+extern void list_clear(node_t** list);
+
+/**
  * Calls |apply| function for each node in list.
  *
  * @param list
  * @param apply
- * @return
  */
 extern void list_map(node_t* list, void apply(node_t* node, void* user_data),
                      void* user_data);
@@ -108,7 +114,6 @@ extern size_t list_length(node_t* list);
  * Print all elements in a list.
  *
  * @param list
- * @return
  */
 extern void list_debug_print(node_t* list);
 

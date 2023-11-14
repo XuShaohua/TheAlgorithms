@@ -81,6 +81,15 @@ node_t* list_insert(node_t** list, node_t* position, element_type value) {
   return new_node;
 }
 
+void list_clear(node_t** list) {
+  assert(list != NULL);
+  while (*list != NULL) {
+    node_t* tmp = *list;
+    *list = *list->next;
+    free(tmp);
+  }
+}
+
 void list_map(node_t* list, void apply(node_t* node, void* user_data), void* user_data) {
   assert(list != NULL);
   while (list != NULL) {
