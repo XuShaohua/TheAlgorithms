@@ -7,7 +7,7 @@
 fn solution1(nums: &[i32], target: i32) -> Option<(usize, usize)> {
     for (i, m) in nums.iter().enumerate() {
         for (j, n) in nums.iter().enumerate() {
-            if m + n == target {
+            if i != j && m + n == target {
                 return Some((i, j));
             }
         }
@@ -18,5 +18,13 @@ fn solution1(nums: &[i32], target: i32) -> Option<(usize, usize)> {
 fn main() {
     let nums = &[2, 7, 11, 15];
     let target = 9;
+    assert_eq!(solution1(nums, target), Some((0, 1)));
+
+    let nums = &[3, 2, 4];
+    let target = 6;
+    assert_eq!(solution1(nums, target), Some((1, 2)));
+
+    let nums = &[3, 3];
+    let target = 6;
     assert_eq!(solution1(nums, target), Some((0, 1)));
 }
