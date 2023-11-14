@@ -28,3 +28,19 @@ fn main() {
     let target = 6;
     assert_eq!(solution1(nums, target), Some((0, 1)));
 }
+
+#[cfg(test)]
+mod tests {
+    use super::solution1;
+
+    #[test]
+    fn test_solution1() {
+        let nums = &[0, 4, 3, 0];
+        let target = 0;
+        assert_eq!(solution1(nums, target), Some((0, 3)));
+
+        let nums = &[-3, 4, 3, 90];
+        let target = 0;
+        assert_eq!(solution1(nums, target), Some((0, 2)));
+    }
+}
