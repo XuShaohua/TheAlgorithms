@@ -85,7 +85,7 @@ void list_clear(node_t** list) {
   assert(list != NULL);
   while (*list != NULL) {
     node_t* tmp = *list;
-    *list = *list->next;
+    *list = tmp->next;
     free(tmp);
   }
 }
