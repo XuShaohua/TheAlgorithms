@@ -13,7 +13,7 @@ members = [
   "leetcode",
   "math",
   "physics",
-  "weiss/c*",
+  "weiss/c02",
 ]
 
 exclude = [
