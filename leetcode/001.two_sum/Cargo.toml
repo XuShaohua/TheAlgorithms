@@ -1,5 +1,5 @@
 [package]
-name = "two_sum"
+name = "lc_001_two_sum"
 version = "0.1.0"
 edition = "2021"
 

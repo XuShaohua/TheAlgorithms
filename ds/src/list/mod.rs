@@ -2,6 +2,5 @@
 // Use of this source is governed by General Public License that can be
 // found in the LICENSE file.
 
-pub mod arena;
 pub mod double;
 pub mod single;
