@@ -69,4 +69,35 @@ extern node_t* list_find_previous(node_t* list, element_type value);
  */
 extern bool list_delete(node_t** list, element_type value);
 
+/**
+ * Insert a new node with |value| after specific node at |position| into |list|.
+ *
+ * And returns position of that new node.
+ *
+ * If |position| is null, insert that new node to head of list.
+ *
+ * @param list
+ * @param position
+ * @param value
+ * @return
+ */
+extern node_t* list_insert(node_t** list, node_t* position, element_type value);
+
+/**
+ * Calls |apply| function for each node in list.
+ *
+ * @param list
+ * @param apply
+ * @return
+ */
+extern void list_map(node_t* list, void apply(node_t* node, void* user_data));
+
+/**
+ * Get number of nodes in list.
+ *
+ * @param list
+ * @return
+ */
+extern size_t list_length(node_t* list);
+
 #endif  // WEISS_C03_LINKED_LIST_H_

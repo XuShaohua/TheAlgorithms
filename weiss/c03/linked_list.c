@@ -63,3 +63,40 @@ bool list_delete(node_t** list, element_type value) {
   }
   return true;
 }
+
+node_t* list_insert(node_t** list, node_t* position, element_type value) {
+  assert(list != NULL);
+
+  node_t* new_node = (node_t*) malloc(sizeof(node_t));
+  assert(new_node != NULL);
+  new_node->value = value;
+
+  if (position == NULL) {
+    new_node->next = *list;
+    *list = new_node;
+  } else {
+    new_node->next = position->next;
+    position->next = new_node;
+  }
+
+  return new_node;
+}
+
+void list_map(node_t* list, void apply(node_t* node, void* user_data)) {
+  assert(list != NULL);
+  while (list != NULL) {
+    apply(list, user_data);
+    list = list->next;
+  }
+}
+
+size_t list_length(node_t* list) {
+  assert(list != NULL);
+
+  size_t count = 0;
+  while (list != NULL) {
+    count += 1;
+    list = list->next;
+  }
+  return count;
+}
