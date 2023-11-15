@@ -17,6 +17,9 @@
 /// For such applications, the cost of moving the data dominates the cost of
 /// making comparisons, and no algorithms can sort a file with substantially less
 /// data movement than selection sort.
+///
+/// 即使输入数据已经是排好序的, 该算法依然需要 N^2 次的操作.
+/// N^2 / 2 次比较以及 N 次交换.
 pub fn selection_sort(list: &mut [i32]) {
     if list.is_empty() {
         return;
@@ -42,7 +45,7 @@ mod tests {
     #[test]
     fn test_selection_sort() {
         let mut list = [0, 5, 3, 2, 2];
-        selectioin_sort(&mut list);
+        selection_sort(&mut list);
         assert_eq!(list, [0, 2, 2, 3, 5]);
 
         let mut list = [-2, -5, -45];

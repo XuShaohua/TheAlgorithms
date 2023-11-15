@@ -2,8 +2,8 @@
 // Use of this source is governed by General Public License that can be found
 // in the LICENSE file.
 
-use robert::sorting::selection_sort;
 use robert::util::{read_ints, show};
+use sorts::selection_sort;
 
 fn main() {
     let mut list = read_ints();

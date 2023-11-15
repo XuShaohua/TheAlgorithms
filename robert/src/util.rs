@@ -86,10 +86,3 @@ pub fn read_strings() -> Vec<String> {
     }
     v
 }
-
-pub fn exch_strings(list: &mut [String], i: usize, j: usize) {
-    let mut tmp = String::new();
-    std::mem::swap(&mut list[i], &mut tmp);
-    std::mem::swap(&mut list[j], &mut tmp);
-    std::mem::swap(&mut list[i], &mut tmp);
-}
