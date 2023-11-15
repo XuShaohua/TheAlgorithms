@@ -20,7 +20,10 @@
 ///
 /// 即使输入数据已经是排好序的, 该算法依然需要 N^2 次的操作.
 /// N^2 / 2 次比较以及 N 次交换.
-pub fn selection_sort(list: &mut [i32]) {
+pub fn selection_sort<T>(list: &mut [T])
+where
+    T: PartialOrd,
+{
     if list.is_empty() {
         return;
     }
