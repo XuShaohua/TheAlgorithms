@@ -1,9 +1,0 @@
-[package]
-name = "sort"
-version = "0.1.0"
-authors = ["Xu Shaohua <shaohua@biofan.org>"]
-edition = "2018"
-
-[dependencies]
-base = { path = "../base" }
-rand = "0.8.4"

@@ -1,9 +1,0 @@
-[package]
-name = "searching"
-version = "0.1.0"
-authors = ["Xu Shaohua <shaohua@biofan.org>"]
-edition = "2018"
-
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
-
-[dependencies]
