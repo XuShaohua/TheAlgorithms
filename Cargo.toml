@@ -13,6 +13,7 @@ members = [
   "leetcode/*.*",
   "math",
   "physics",
+  "robert",
   "weiss/c02",
 ]
 
