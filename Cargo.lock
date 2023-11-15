@@ -658,7 +658,7 @@ dependencies = [
 ]
 
 [[package]]
-name = "weiss_c02"
+name = "weiss"
 version = "0.1.0"
 
 [[package]]

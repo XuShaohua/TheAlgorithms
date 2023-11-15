@@ -1,0 +1,23 @@
+[package]
+name = "weiss"
+version = "0.1.0"
+edition = "2021"
+publish = false
+
+[[bin]]
+name = "weiss_gcd"
+path = "src/gcd.rs"
+
+[[bin]]
+name = "weiss_binary_search"
+path = "src/binary_search.rs"
+
+[[bin]]
+name = "weiss_pow"
+path = "src/pow.rs"
+
+[[bin]]
+name = "weiss_subsequence_of_sum"
+path = "src/subsequence_of_sum.rs"
+
+[dependencies]
