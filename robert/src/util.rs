@@ -57,36 +57,37 @@ impl<T: Copy + std::fmt::Display> Generics<T> {
     }
 }
 
+/// Read integers from stdin.
+///
+/// # Panics
+/// Raise panic if invalid integer found.
 pub fn read_ints() -> Vec<i32> {
     let mut v = vec![];
     let buffer = BufReader::new(io::stdin());
     let input_iter = buffer.lines();
-    for line in input_iter {
-        if let Ok(line) = line {
-            for word in line.trim().split_whitespace() {
-                let value = word.parse::<i32>().expect("Invalid integer");
-                v.push(value);
-            }
+    for line in input_iter.flatten() {
+        for word in line.split_whitespace() {
+            let value = word.parse::<i32>().expect("Invalid integer");
+            v.push(value);
         }
     }
     v
 }
 
+#[must_use]
 pub fn read_strings() -> Vec<String> {
-    let mut v = vec![];
     let buffer = BufReader::new(io::stdin());
     let input_iter = buffer.lines();
-    for line in input_iter {
-        if let Ok(line) = line {
-            for word in line.trim().split_whitespace() {
-                v.push(word.to_string());
-            }
+    let mut v = vec![];
+    for line in input_iter.flatten() {
+        for word in line.split_whitespace() {
+            v.push(word.to_string());
         }
     }
     v
 }
 
-pub fn exch_strings(list: &mut Vec<String>, i: usize, j: usize) {
+pub fn exch_strings(list: &mut [String], i: usize, j: usize) {
     let mut tmp = String::new();
     std::mem::swap(&mut list[i], &mut tmp);
     std::mem::swap(&mut list[j], &mut tmp);
