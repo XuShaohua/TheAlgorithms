@@ -2,6 +2,7 @@
 // Use of this source is governed by General Public License that can be found
 // in the LICENSE file.
 
+use std::fmt;
 use std::io::{self, BufRead, BufReader};
 
 pub fn exch<T>(list: &mut Vec<T>, i: usize, j: usize)
@@ -15,10 +16,15 @@ where
 
 pub fn is_sorted<T>(list: &[T]) -> bool
 where
-    T: PartialOrd,
+    T: PartialOrd + fmt::Debug,
 {
     for i in 0..(list.len() - 1) {
         if list[i] > list[i + 1] {
+            println!(
+                "Order error at: {i}, values: ({:?}, {:?})",
+                list[i],
+                list[i + 1]
+            );
             return false;
         }
     }
@@ -27,7 +33,7 @@ where
 
 pub fn show<T>(vec: &[T])
 where
-    T: std::fmt::Display,
+    T: fmt::Display,
 {
     for s in vec {
         print!("{} ", s);

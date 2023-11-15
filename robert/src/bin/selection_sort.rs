@@ -2,12 +2,18 @@
 // Use of this source is governed by General Public License that can be found
 // in the LICENSE file.
 
-use robert::util::{read_ints, show};
+use robert::util::{is_sorted, read_ints, show};
 use sorts::selection_sort;
 
 fn main() {
     let mut list = read_ints();
     selection_sort(&mut list);
+    assert!(is_sorted(&list));
     println!("RESULT:");
-    show(&list);
+    if list.len() < 128 {
+        show(&list);
+    } else {
+        show(&list[..128]);
+        println!("...\n...");
+    }
 }

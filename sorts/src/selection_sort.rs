@@ -28,12 +28,12 @@ pub fn selection_sort(list: &mut [i32]) {
     for i in 0..(len - 1) {
         let mut min_index = i;
         for j in (i + 1)..len {
-            if list[min_index] > list[j] {
+            if list[j] < list[min_index] {
                 min_index = j;
             }
-            if i != min_index {
-                list.swap(i, min_index);
-            }
+        }
+        if i != min_index {
+            list.swap(i, min_index);
         }
     }
 }
@@ -51,5 +51,18 @@ mod tests {
         let mut list = [-2, -5, -45];
         selection_sort(&mut list);
         assert_eq!(list, [-45, -5, -2]);
+
+        let mut list = [
+            -998166, -996360, -995703, -995238, -995066, -994740, -992987, -983833, -987905,
+            -980069, -977640,
+        ];
+        selection_sort(&mut list);
+        assert_eq!(
+            list,
+            [
+                -998166, -996360, -995703, -995238, -995066, -994740, -992987, -987905, -983833,
+                -980069, -977640,
+            ]
+        );
     }
 }
