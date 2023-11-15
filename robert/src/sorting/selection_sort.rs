@@ -2,7 +2,7 @@
 // Use of this source is governed by General Public License that can be found
 // in the LICENSE file.
 
-use crate::generics;
+use crate::util::{exch, show};
 
 /// 即使输入数据已经是排好序的, 该算法依然需要 N^2 次的操作.
 /// N^2 / 2 次比较以及 N 次交换.
@@ -19,8 +19,8 @@ where
             }
         }
         if i != min {
-            generics::exch(vec, i, min);
+            exch(vec, i, min);
         }
-        generics::show(&vec);
+        show(&vec);
     }
 }

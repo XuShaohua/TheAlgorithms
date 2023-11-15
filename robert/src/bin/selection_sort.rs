@@ -2,11 +2,12 @@
 // Use of this source is governed by General Public License that can be found
 // in the LICENSE file.
 
-use base::ints;
+use robert::sorting::selection_sort;
+use robert::util::{read_ints, show};
 
 fn main() {
-    let mut list = ints::read_ints();
-    sort::selection_sort(&mut list);
+    let mut list = read_ints();
+    selection_sort(&mut list);
     println!("RESULT:");
-    sort::generics::show(&list);
+    show(&list);
 }
