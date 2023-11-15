@@ -10,9 +10,14 @@ members = [
   "electronics",
   "financial",
   "geodesy",
-  "leetcode/*.*",
   "math",
   "physics",
+  "searches",
+  "sorts",
+  "graphs",
+
+# Custome
+  "leetcode/*.*",
   "robert",
   "weiss/c02",
 ]
