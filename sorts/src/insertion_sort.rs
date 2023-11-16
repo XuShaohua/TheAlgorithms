@@ -29,3 +29,71 @@ where
         }
     }
 }
+
+/// Insertion sort, no optimization.
+pub fn insertion_sort_vanilla<T>(list: &mut [T])
+where
+    T: PartialOrd,
+{
+    let len = list.len();
+    for i in 1..len {
+        for j in (1..=i).rev() {
+            if list[j - 1] > list[j] {
+                list.swap(j - 1, j);
+            }
+        }
+    }
+}
+
+#[cfg(test)]
+mod tests {
+    use super::{insertion_sort, insertion_sort_vanilla};
+
+    #[test]
+    fn test_insertion_sort() {
+        let mut list = [0, 5, 3, 2, 2];
+        insertion_sort(&mut list);
+        assert_eq!(list, [0, 2, 2, 3, 5]);
+
+        let mut list = [-2, -5, -45];
+        insertion_sort(&mut list);
+        assert_eq!(list, [-45, -5, -2]);
+
+        let mut list = [
+            -998166, -996360, -995703, -995238, -995066, -994740, -992987, -983833, -987905,
+            -980069, -977640,
+        ];
+        insertion_sort(&mut list);
+        assert_eq!(
+            list,
+            [
+                -998166, -996360, -995703, -995238, -995066, -994740, -992987, -987905, -983833,
+                -980069, -977640,
+            ]
+        );
+    }
+
+    #[test]
+    fn test_insertion_sort_vanilla() {
+        let mut list = [0, 5, 3, 2, 2];
+        insertion_sort_vanilla(&mut list);
+        assert_eq!(list, [0, 2, 2, 3, 5]);
+
+        let mut list = [-2, -5, -45];
+        insertion_sort_vanilla(&mut list);
+        assert_eq!(list, [-45, -5, -2]);
+
+        let mut list = [
+            -998166, -996360, -995703, -995238, -995066, -994740, -992987, -983833, -987905,
+            -980069, -977640,
+        ];
+        insertion_sort_vanilla(&mut list);
+        assert_eq!(
+            list,
+            [
+                -998166, -996360, -995703, -995238, -995066, -994740, -992987, -987905, -983833,
+                -980069, -977640,
+            ]
+        );
+    }
+}

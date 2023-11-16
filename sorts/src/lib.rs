@@ -11,7 +11,7 @@
 )]
 
 mod insertion_sort;
-pub use insertion_sort::insertion_sort;
+pub use insertion_sort::{insertion_sort, insertion_sort_vanilla};
 
 mod selection_sort;
 pub use selection_sort::selection_sort;
