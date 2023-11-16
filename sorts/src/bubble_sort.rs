@@ -2,16 +2,30 @@
 // Use of this source is governed by General Public License that can be
 // found in the LICENSE file.
 
+/// Like insertion sort, but moves through the right part of the array.
+///
+/// On the first pass, the minimum element is exchanged with each of elements
+/// to its left, eventually putting it into the left end of the array.
+/// On the second pass, the second smallest element will be put into position.
+/// And so forth.
+///
+/// Inadaptive sort.
 pub fn bubble_sort<T>(list: &mut [T])
 where
     T: PartialOrd,
 {
     let len = list.len();
     for i in 0..len {
+        let mut swapped = false;
         for j in (i + 1..len).rev() {
             if list[j - 1] > list[j] {
+                swapped = true;
                 list.swap(j - 1, j);
             }
+        }
+        // Stop iteration if the collection is sorted.
+        if !swapped {
+            break;
         }
     }
 }
