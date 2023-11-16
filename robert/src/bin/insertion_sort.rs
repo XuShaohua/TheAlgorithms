@@ -2,13 +2,15 @@
 // Use of this source is governed by General Public License that can be found
 // in the LICENSE file.
 
-use base::ints;
+use robert::util::{is_sorted, read_ints, show_brief};
+use sorts::insertion_sort;
 
 fn main() {
-    let mut list = ints::read_ints();
+    let mut list = read_ints();
     println!("[InsertionSort] LIST:");
-    sort::generics::show(&list);
-    sort::insertion_sort(&mut list);
+    show_brief(&list);
+    insertion_sort(&mut list);
     println!("RESULT:");
-    sort::generics::show(&list);
+    assert!(is_sorted(&list));
+    show_brief(&list);
 }

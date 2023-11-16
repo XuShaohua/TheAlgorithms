@@ -32,6 +32,18 @@ where
     println!();
 }
 
+pub fn show_brief<T>(slice: &[T])
+where
+    T: fmt::Display,
+{
+    if slice.len() < 128 {
+        show(slice);
+    } else {
+        show(&slice[..128]);
+        println!("...\n...");
+    }
+}
+
 /// Read integers from stdin.
 ///
 /// # Panics
