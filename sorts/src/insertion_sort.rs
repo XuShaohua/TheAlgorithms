@@ -31,6 +31,8 @@ where
 }
 
 /// Insertion sort, no optimization.
+///
+/// Nonadaptive sort.
 pub fn insertion_sort_vanilla<T>(list: &mut [T])
 where
     T: PartialOrd,
@@ -70,6 +72,13 @@ mod tests {
                 -998166, -996360, -995703, -995238, -995066, -994740, -992987, -987905, -983833,
                 -980069, -977640,
             ]
+        );
+
+        let mut list = "EASYQUESTION".chars().collect::<Vec<_>>();
+        insertion_sort(&mut list);
+        assert_eq!(
+            list,
+            ['A', 'E', 'E', 'I', 'N', 'O', 'Q', 'S', 'S', 'T', 'U', 'Y']
         );
     }
 

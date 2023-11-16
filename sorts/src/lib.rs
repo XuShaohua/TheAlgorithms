@@ -9,6 +9,7 @@
     clippy::nursery,
     clippy::pedantic
 )]
+#![allow(clippy::module_name_repetitions)]
 
 mod insertion_sort;
 pub use insertion_sort::{insertion_sort, insertion_sort_vanilla};
