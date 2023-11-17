@@ -2,6 +2,8 @@
 // Use of this source is governed by General Public License that can be
 // found in the LICENSE file.
 
+use crate::insertion_sort;
+
 /// Devide-and-conquer recurrence, O(NlogN).
 /// Its prime disadvantage is that it uses extra space.
 ///
@@ -30,6 +32,13 @@ where
     if low >= high {
         return;
     }
+    // Use insertion sort for small subarrays.
+    const CUTOFF: usize = 7;
+    if high <= low + CUTOFF - 1 {
+        insertion_sort(&mut arr[low..=high]);
+        return;
+    }
+
     let middle = low + (high - low) / 2;
 
     // Sort left part
