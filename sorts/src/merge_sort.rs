@@ -33,7 +33,7 @@ where
         return;
     }
     // Use insertion sort for small subarrays.
-    const CUTOFF: usize = 7;
+    const CUTOFF: usize = 24;
     if high <= low + CUTOFF - 1 {
         insertion_sort(&mut arr[low..=high]);
         return;
