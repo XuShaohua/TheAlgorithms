@@ -7,7 +7,7 @@
 ///
 pub fn merge_sort<T>(arr: &mut [T])
 where
-    T: PartialOrd + Clone,
+    T: PartialOrd + Copy,
 {
     topdown_merge_sort(arr);
 }
@@ -16,51 +16,56 @@ where
 /// sort any array of size N.
 pub fn topdown_merge_sort<T>(arr: &mut [T])
 where
-    T: PartialOrd + Clone,
+    T: PartialOrd + Copy,
 {
-    sort(arr, 0, arr.len());
+    sort(arr, 0, arr.len() - 1);
 }
 
-/// Sort `arr[low..high]`
+/// Sort `arr[low..=high]`
 fn sort<T>(arr: &mut [T], low: usize, high: usize)
 where
-    T: PartialOrd + Clone,
+    T: PartialOrd + Copy,
 {
-    if high <= low {
+    println!("low: {low}, high: {high}");
+    if low >= high {
         return;
     }
     let middle = low + (high - low) / 2;
+
     // Sort left part
     sort(arr, low, middle);
     // Sort right part
-    sort(arr, middle, high);
+    sort(arr, middle + 1, high);
+
     merge(arr, low, middle, high);
 }
 
-/// Merge arr[low..middle] and arr[middle..high]
+/// Merge arr[low..=middle] and arr[middle+1..=high]
 ///
 /// It's not inplacement merge.
+#[allow(dead_code)]
 fn merge<T>(arr: &mut [T], low: usize, middle: usize, high: usize)
 where
-    T: PartialOrd + Clone,
+    T: PartialOrd + Copy,
 {
-    let aux = arr[low..high].to_vec();
+    println!("merge: low: {low}, middle: {middle}, high: {high}");
+    let aux = arr[0..=high].to_vec();
 
     // Merge back to arr.
     let mut i = low;
-    let mut j = middle;
-    for k in low..high {
+    let mut j = middle + 1;
+    for k in low..=high {
         if i > middle {
-            arr[k] = aux[j].clone();
+            arr[k] = aux[j];
             j += 1;
         } else if j > high {
-            arr[k] = aux[i].clone();
+            arr[k] = aux[i];
             i += 1;
         } else if aux[j] < aux[i] {
-            arr[k] = aux[j].clone();
+            arr[k] = aux[j];
             j += 1;
         } else {
-            arr[k] = aux[i].clone();
+            arr[k] = aux[i];
             i += 1;
         }
     }
