@@ -17,12 +17,11 @@ where
 {
     let len = list.len();
 
-    // Calculate the first h value,
+    // Calculate the first h value, roughtly len/3.
     let mut h = 1;
     while h < len / 3 {
         h = 3 * h + 1;
     }
-    println!("h0 = {h}, len: {len}");
 
     while h >= 1 {
         // h-sort the array
@@ -36,7 +35,6 @@ where
         }
 
         h /= 3;
-        println!("h = {h}");
     }
 }
 
