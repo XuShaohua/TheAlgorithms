@@ -4,7 +4,9 @@
 
 use crate::insertion_sort;
 
-/// Devide-and-conquer recurrence, O(NlogN).
+const CUTOFF: usize = 24;
+
+/// Devide-and-conquer recurrence, `O(NlogN)`.
 /// Its prime disadvantage is that it uses extra space.
 ///
 pub fn merge_sort<T>(arr: &mut [T])
@@ -14,7 +16,7 @@ where
     topdown_merge_sort(arr);
 }
 
-/// Top-down merge sort uses at most NlgN compares and 6NlgN array accesses to
+/// Top-down merge sort uses at most `NlgN` compares and `6NlgN` array accesses to
 /// sort any array of size N.
 pub fn topdown_merge_sort<T>(arr: &mut [T])
 where
@@ -33,8 +35,7 @@ where
         return;
     }
     // Use insertion sort for small subarrays.
-    const CUTOFF: usize = 24;
-    if high <= low + CUTOFF - 1 {
+    if high < low + CUTOFF {
         insertion_sort(&mut arr[low..=high]);
         return;
     }
@@ -56,7 +57,7 @@ where
 /// Merge arr[low..=middle] and arr[middle+1..=high]
 ///
 /// It's not inplacement merge.
-#[allow(dead_code)]
+#[allow(clippy::needless_range_loop)]
 fn merge<T>(arr: &mut [T], low: usize, middle: usize, high: usize)
 where
     T: PartialOrd + Copy,

@@ -19,7 +19,7 @@ where
             return false;
         }
     }
-    return true;
+    true
 }
 
 pub fn show<T>(slice: &[T])
@@ -27,7 +27,7 @@ where
     T: fmt::Display,
 {
     for s in slice {
-        print!("{} ", s);
+        print!("{s} ");
     }
     println!();
 }
@@ -48,6 +48,7 @@ where
 ///
 /// # Panics
 /// Raise panic if invalid integer found.
+#[must_use]
 pub fn read_ints() -> Vec<i32> {
     let mut v = vec![];
     let buffer = BufReader::new(io::stdin());

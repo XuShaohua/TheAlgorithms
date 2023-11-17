@@ -12,10 +12,6 @@ pub struct ListNode {
 
 pub type ListNodeRef = Option<Box<ListNode>>;
 
-pub fn unbox<T>(value: Box<T>) -> T {
-    *value
-}
-
 impl ListNode {
     #[must_use]
     pub fn new(val: i32) -> Self {
