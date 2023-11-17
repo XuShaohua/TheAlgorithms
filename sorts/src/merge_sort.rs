@@ -46,6 +46,10 @@ where
     // Sort right part
     sort(arr, middle + 1, high);
 
+    // If is already sorted, returns immediately.
+    if arr[middle] <= arr[middle + 1] {
+        return;
+    }
     merge(arr, low, middle, high);
 }
 
