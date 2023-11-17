@@ -17,6 +17,9 @@ pub use bubble_sort::bubble_sort;
 mod insertion_sort;
 pub use insertion_sort::{insertion_sort, insertion_sort_vanilla};
 
+mod merge_sort;
+pub use merge_sort::merge_sort;
+
 mod selection_sort;
 pub use selection_sort::selection_sort;
 
