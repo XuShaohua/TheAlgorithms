@@ -2,6 +2,8 @@
 // Use of this source is governed by General Public License that can be
 // found in the LICENSE file.
 
+/// Shaker sort, or Cocktail sort, is an extension to bubble sort, by operating
+/// in two directions.
 pub fn shaker_sort<T>(list: &mut [T])
 where
     T: PartialOrd,

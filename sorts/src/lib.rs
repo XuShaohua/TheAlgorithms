@@ -22,3 +22,6 @@ pub use selection_sort::selection_sort;
 
 mod shaker_sort;
 pub use shaker_sort::shaker_sort;
+
+mod shell_sort;
+pub use shell_sort::shell_sort;
