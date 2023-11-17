@@ -5,6 +5,9 @@
 /// Shell sort is a simple extension to insertion sort that allows exchanging
 /// elements that far apart. It produces partially sorted array (h-sorted array).
 ///
+/// Shell sort is useful even for large arrays. It also performs well on arrays
+/// that are in arbitrary order.
+///
 /// 拆解成由 h 个元素隔开的序列, 依次降低h间隔的值, 直到其为1.
 /// 主要是为了减少元素交换的次数.
 /// 最差情况下 O(N^(3/2))
@@ -27,6 +30,7 @@ where
         // h-sort the array
         for i in h..len {
             // for (j = i; j >= h; j -= h)
+            // for j in (h..=i).rev().step_by(h)
             let mut j = i;
             while j >= h && list[j - h] > list[j] {
                 list.swap(j - h, j);

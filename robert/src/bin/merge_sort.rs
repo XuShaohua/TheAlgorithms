@@ -2,13 +2,15 @@
 // Use of this source is governed by General Public License that can be found
 // in the LICENSE file.
 
-use base::ints;
+use robert::util::{is_sorted, read_ints, show_brief};
+use sorts::merge_sort;
 
 fn main() {
-    let mut list = ints::read_ints();
+    let mut list = read_ints();
     println!("[MergeSort] list");
-    sort::generics::show(&list);
-    sort::merge_sort(&mut list);
+    show_brief(&list);
+    merge_sort(&mut list);
     println!("Result:");
-    sort::generics::show(&list);
+    show_brief(&list);
+    assert!(is_sorted(&list));
 }
