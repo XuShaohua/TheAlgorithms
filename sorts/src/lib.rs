@@ -19,3 +19,6 @@ pub use insertion_sort::{insertion_sort, insertion_sort_vanilla};
 
 mod selection_sort;
 pub use selection_sort::selection_sort;
+
+mod shaker_sort;
+pub use shaker_sort::shaker_sort;
