@@ -12,6 +12,7 @@
 #![allow(clippy::module_name_repetitions)]
 
 mod bubble_sort;
+mod gnome_sort;
 mod insertion_sort;
 mod merge_sort;
 mod odd_even_sort;
@@ -20,6 +21,7 @@ mod shaker_sort;
 mod shell_sort;
 
 pub use bubble_sort::bubble_sort;
+pub use gnome_sort::gnome_sort;
 pub use insertion_sort::{insertion_sort, insertion_sort_vanilla};
 pub use merge_sort::merge_sort;
 pub use odd_even_sort::odd_even_sort;
