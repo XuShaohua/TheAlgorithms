@@ -2,8 +2,8 @@
 // Use of this source is governed by GNU General Public License
 // that can be found in the LICENSE file.
 
-#ifndef CII_SRC_MEM_TEST_H_
-#define CII_SRC_MEM_TEST_H_
+#ifndef CII_TESTS_MEM_TEST_H_
+#define CII_TESTS_MEM_TEST_H_
 
 #include <stdlib.h>
 
@@ -33,4 +33,4 @@ typedef struct descriptor_s descriptor_t;
  */
 descriptor_t* find_node(const void* ptr);
 
-#endif //CII_SRC_MEM_TEST_H_
+#endif //CII_TESTS_MEM_TEST_H_
