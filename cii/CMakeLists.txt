@@ -10,6 +10,7 @@ set(SOURCE_FILES
     src/hash.c
     src/list.c
     src/mem.c
+    src/table.c
     )
 set(HEADER_FILES
     include/cii/assert.h
@@ -18,6 +19,7 @@ set(HEADER_FILES
     include/cii/hash.h
     include/cii/list.h
     include/cii/mem.h
+    include/cii/table.h
     )
 
 add_library(cii_static STATIC
