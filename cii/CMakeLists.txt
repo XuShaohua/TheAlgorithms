@@ -49,6 +49,7 @@ if (BUILD_TESTING)
       )
 
   add_executable(cii_table_test
+      tests/table_test.c
       tests/get_word.c
       tests/get_word.h
       )
