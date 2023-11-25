@@ -3,6 +3,8 @@ project(cii C)
 
 set(CMAKE_C_STANDARD 11)
 
+option(BUILD_TESTING "" ON)
+
 set(SOURCE_FILES
     src/assert.c
     src/atom.c
@@ -30,17 +32,27 @@ target_include_directories(cii_static
     PUBLIC include
     )
 
-add_executable(mem_test
-    tests/mem_test.c
-    tests/mem_test.h
-    )
-target_link_libraries(mem_test
-    cii_static
-    )
+if (BUILD_TESTING)
+  add_executable(cii_mem_test
+      tests/mem_test.c
+      tests/mem_test.h
+      )
+  target_link_libraries(cii_mem_test
+      cii_static
+      )
 
-add_executable(list_test
-    tests/list_test.c
-    )
-target_link_libraries(list_test
-    cii_static
-    )
+  add_executable(cii_list_test
+      tests/list_test.c
+      )
+  target_link_libraries(cii_list_test
+      cii_static
+      )
+
+  add_executable(cii_table_test
+      tests/get_word.c
+      tests/get_word.h
+      )
+  target_link_libraries(cii_table_test
+      cii_static
+      )
+endif (BUILD_TESTING)
