@@ -26,7 +26,7 @@ int get_word(FILE* fp, char* buf, size_t buf_size,
         buf[i] = (char)c;
         i += 1;
       }
-      
+
       c = getc(fp);
       break;
     }

@@ -52,6 +52,8 @@ if (BUILD_TESTING)
       tests/table_test.c
       tests/get_word.c
       tests/get_word.h
+      tests/wf.c
+      tests/wf.h
       )
   target_link_libraries(cii_table_test
       cii_static
