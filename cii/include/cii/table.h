@@ -8,7 +8,7 @@
 #include <stdint.h>
 #include <stddef.h>
 
-typedef struct table_s* table_t;
+typedef struct table_s table_t;
 
 /**
  * Allocate a new table.
@@ -25,7 +25,7 @@ typedef struct table_s* table_t;
  * to be atoms and the implementation of table provides a suitable hash function.
  * @return a pointer to new table.
  */
-extern table_t table_new(size_t hint,
+extern table_t* table_new(size_t hint,
                          int cmp(const void* x, const void* y),
                          size_t hash(const void* key));
 
