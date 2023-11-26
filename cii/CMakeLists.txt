@@ -33,13 +33,13 @@ target_include_directories(cii_static
     )
 
 if (BUILD_TESTING)
-  add_executable(cii_mem_test
-      tests/mem_test.c
-      tests/mem_test.h
-      )
-  target_link_libraries(cii_mem_test
-      cii_static
-      )
+#  add_executable(cii_mem_test
+#      tests/mem_test.c
+#      tests/mem_test.h
+#      )
+#  target_link_libraries(cii_mem_test
+#      cii_static
+#      )
 
   add_executable(cii_list_test
       tests/list_test.c

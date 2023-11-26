@@ -4,6 +4,8 @@
 
 #include "cii/assert.h"
 
+#include "cii/except.h"
+
 void (assert)(int e) {
   assert(e);
 }
