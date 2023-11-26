@@ -127,3 +127,60 @@ void table_map(table_t* table,
     }
   }
 }
+
+void* table_remove(table_t* table, const void* key) {
+  assert(table != NULL);
+  assert(key != NULL);
+
+  table->timestamp += 1;
+  const size_t index = (*table->hash)(key) % table->size;
+  struct binding_s** pp = NULL;
+  for (pp = &table->buckets[index]; *pp != NULL; pp = &(*pp)->link) {
+    if ((*table->cmp)(key, (*pp)->key) == 0) {
+      struct binding_s* p = *pp;
+      void* value = p->value;
+      *pp = p->link;
+      FREE(p);
+      table->length -= 1;
+      return value;
+    }
+  }
+  return NULL;
+}
+
+void** table_to_array(table_t* table, void* end) {
+  assert(table != NULL);
+  const size_t array_len = table->length * 2 + 1;
+  void** array = ALLOC(array_len * sizeof(*array));
+  assert(*array != NULL);
+  struct binding_s* p = NULL;
+  int j = 0;
+  for (size_t i = 0; i < table->size; ++i) {
+    for (p = table->buckets[i]; p != NULL; p = p->link) {
+      array[j] = (void*) p->key;
+      j += 1;
+      array[j] = p->value;
+      j += 1;
+    }
+  }
+
+  array[j] = end;
+  return array;
+}
+
+void table_free(table_t** table) {
+  assert(table != NULL);
+  assert(*table != NULL);
+  if ((*table)->length > 0) {
+    struct binding_s* p = NULL;
+    struct binding_s* q = NULL;
+    for (size_t i = 0; i < (*table)->size; ++i) {
+      for (p = (*table)->buckets[i]; p != NULL; p = q) {
+        q = p->link;
+        FREE(p);
+      }
+    }
+  }
+
+  FREE(*table);
+}

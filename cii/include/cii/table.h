@@ -36,7 +36,7 @@ extern table_t* table_new(size_t hint,
  *
  * @param table shall not be null pointer.
  */
-extern void table_free(table_t* table);
+extern void table_free(table_t** table);
 
 /**
  * Get number of key-value pairs in table.
