@@ -31,7 +31,7 @@ void wf(const char* filename, FILE* fp) {
   const size_t kBufLen = 128;
   char buf[kBufLen];
 
-  table_t* table = table_new(0, NULL, NULL);
+  table_t* table = table_new(32768, NULL, NULL);
   assert(table != NULL);
 
   while (get_word(fp, buf, kBufLen, first, rest)) {
@@ -58,9 +58,9 @@ void wf(const char* filename, FILE* fp) {
     assert(array != NULL);
     qsort(array, table_length(table), 2 * sizeof(*array), compare);
     for (int i = 0; array[i] != NULL; i += 2) {
-      printf("%d\t%s\n",
-             *(int*) array[i+1],
-             (char*) array[i]);
+      printf("%s: %d\n",
+             (char*) array[i],
+             *(int*) array[i+1]);
     }
     FREE(array);
   }
