@@ -22,8 +22,10 @@ struct binding_s {
 };
 
 struct table_s {
+  // Number of key-value pairs.
   size_t length;
-  size_t capacity;
+  // Size of buckets array.
+  size_t size;
   int64_t timestamp;
   int (*cmp)(const void* x, const void* y);
   size_t (*hash)(const void* key);
@@ -46,12 +48,12 @@ table_t* table_new(size_t hint,
   table_t* table = ALLOC(sizeof(table_t) + hint_prime * sizeof(struct binding_s));
   assert(table != NULL);
   table->length = 0;
-  table->capacity = hint_prime;
+  table->size = hint_prime;
   table->timestamp = 0;
   table->cmp = (cmp != NULL) ? cmp : cmp_atom;
   table->hash = (hash != NULL) ? hash : hash_atom;
   table->buckets = (struct binding_s**)(table + 1);
-  for (size_t i = 0; i < table->capacity; ++i) {
+  for (size_t i = 0; i < table->size; ++i) {
     table->buckets[i] = NULL;
   }
 
@@ -59,13 +61,69 @@ table_t* table_new(size_t hint,
 }
 
 size_t table_length(table_t* table) {
+  assert(table != NULL);
   return table->length;
 }
 
 void* table_put(table_t* table, const void* key, void* value) {
+  assert(table != NULL);
+  assert(key != NULL);
 
+  // Search table for key.
+  struct binding_s* p = NULL;
+  size_t index = (*table->hash)(key) % (table->size);
+  for (p = table->buckets[index]; p != NULL; p = p->link) {
+    if ((*table->cmp)(key, p->key) == 0) {
+      break;
+    }
+  }
+
+  void* prev_value = NULL;
+  if (p == NULL) {
+    // Allocate a new pair.
+    NEW(p);
+    p->key = key;
+    p->link = table->buckets[index];
+    table->buckets[index] = p;
+    table->length += 1;
+    prev_value = NULL;
+  } else {
+    prev_value = p->value;
+  }
+  p->value = value;
+  table->timestamp += 1;
+
+  return prev_value;
 }
 
 void* table_get(table_t* table, const void* key) {
-  
+  assert(table != NULL);
+  assert(key != NULL);
+
+  // Search table for key.
+  struct binding_s* p = NULL;
+  size_t index = (*table->hash)(key) % (table->size);
+  for (p = table->buckets[index]; p != NULL; p = p->link) {
+    if ((*table->cmp)(key, p->key) == 0) {
+      break;
+    }
+  }
+
+  return (p != NULL) ? p->value : NULL;
+}
+
+void table_map(table_t* table,
+               void apply(const void* key, void** value, void* user_data),
+               void* user_data) {
+  assert(table != NULL);
+  assert(apply != NULL);
+
+  int64_t timestamp = table->timestamp;
+  struct binding_s* p;
+  for (size_t i = 0; i < table->size; ++i) {
+    for (p = table->buckets[i]; p != NULL; p = p->link) {
+      apply(p->key, &p->value, user_data);
+      assert(timestamp == table->timestamp);
+    }
+  }
 }
