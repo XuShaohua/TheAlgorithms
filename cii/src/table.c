@@ -41,7 +41,7 @@ table_t* table_new(size_t hint,
     509, 509, 1021, 2053, 4093,
     8191, 16381, 32771, 65521, INT64_MAX
   };
-  size_t hint_prime = 0;
+  size_t hint_prime = 1;
   for (int i = 1; primes[i] < hint; ++i) {
     hint_prime = primes[i - 1];
   }
@@ -152,7 +152,7 @@ void** table_to_array(table_t* table, void* end) {
   assert(table != NULL);
   const size_t array_len = table->length * 2 + 1;
   void** array = ALLOC(array_len * sizeof(*array));
-  assert(*array != NULL);
+  assert(array != NULL);
   struct binding_s* p = NULL;
   int j = 0;
   for (size_t i = 0; i < table->size; ++i) {

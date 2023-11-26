@@ -57,13 +57,14 @@ void wf(const char* filename, FILE* fp) {
     void** array = table_to_array(table, NULL);
     assert(array != NULL);
     qsort(array, table_length(table), 2 * sizeof(*array), compare);
-    for (int i = 0; array[i] != NULL; i + 2) {
-      printf("%d\t%s\n",
-             *(int*) array[i+1],
-             (char*) array[i]);
-    }
+//    for (int i = 0; array[i] != NULL; i + 2) {
+//      printf("%d\t%s\n",
+//             *(int*) array[i+1],
+//             (char*) array[i]);
+//    }
     FREE(array);
   }
 
   // Deallocate the entries and the table.
+  table_free(&table);
 }
