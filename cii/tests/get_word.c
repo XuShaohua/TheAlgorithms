@@ -20,7 +20,7 @@ int get_word(FILE* fp, char* buf, size_t buf_size,
   int c = getc(fp);
   int i = 0;
   for (/* empty */; c != EOF; c = getc(fp)) {
-    if (first(c) == 0) {
+    if (first(c) != 0) {
       // store c in buffer.
       if (i < buf_size - 1) {
         buf[i] = (char)c;
@@ -31,7 +31,7 @@ int get_word(FILE* fp, char* buf, size_t buf_size,
       break;
     }
   }
-  for (/* empty */; c != EOF && rest(c) == 0; c = getc(fp)) {
+  for (/* empty */; c != EOF && rest(c) != 0; c = getc(fp)) {
     // store c in buffer.
     if (i < buf_size - 1) {
       buf[i] = (char)c;
