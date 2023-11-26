@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.20)
-project(cii C)
+project(cii C CXX)
 
 set(CMAKE_C_STANDARD 11)
 
@@ -57,5 +57,9 @@ if (BUILD_TESTING)
       )
   target_link_libraries(cii_table_test
       cii_static
+      )
+
+  add_executable(cii_table_test_cpp
+      tests/word_count.cpp
       )
 endif (BUILD_TESTING)
