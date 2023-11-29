@@ -12,6 +12,7 @@ set(SOURCE_FILES
     src/hash.c
     src/list.c
     src/mem.c
+    src/set.c
     src/table.c
     )
 set(HEADER_FILES
@@ -21,6 +22,7 @@ set(HEADER_FILES
     include/cii/hash.h
     include/cii/list.h
     include/cii/mem.h
+    include/cii/set.h
     include/cii/table.h
     )
 
