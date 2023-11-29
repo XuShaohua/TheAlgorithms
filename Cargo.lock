@@ -319,6 +319,10 @@ name = "lc_002_add_two_numbers"
 version = "0.1.0"
 
 [[package]]
+name = "lc_053_maximum_subarray"
+version = "0.1.0"
+
+[[package]]
 name = "lc_191_number_of_1_bits"
 version = "0.1.0"
 
