@@ -6,34 +6,34 @@ use rand::Rng;
 use std::time::Instant;
 
 #[derive(Debug, Clone, Copy, PartialEq, Eq)]
-enum Variant {
-    InsertionSort,
-    SelectionSort,
-    ShellSort,
+enum SortVariant {
+    Insertion,
+    Selection,
+    Shell,
 }
 
-fn time_sort(array: &mut [f64], variant: Variant) -> u128 {
+fn time_sort(array: &mut [f64], variant: SortVariant) -> u128 {
     let instance = Instant::now();
     match variant {
-        Variant::InsertionSort => sorts::insertion_sort(array),
-        Variant::SelectionSort => sorts::selection_sort(array),
-        Variant::ShellSort => sorts::shell_sort(array),
+        SortVariant::Insertion => sorts::insertion_sort(array),
+        SortVariant::Selection => sorts::selection_sort(array),
+        SortVariant::Shell => sorts::shell_sort(array),
     }
-    return instance.elapsed().as_nanos();
+    instance.elapsed().as_nanos()
 }
 
-fn time_random_input(variant: Variant, len: usize, times: i32) -> u128 {
+fn time_random_input(variant: SortVariant, len: usize, times: i32) -> u128 {
     let mut total = 0;
     let mut rng = rand::thread_rng();
     let mut array = vec![0.0; len];
     for _t in 0..times {
-        for i in 0..len {
-            array[i] = rng.gen();
+        for item in array.iter_mut() {
+            *item = rng.gen();
         }
         total += time_sort(&mut array, variant);
     }
 
-    return total;
+    total
 }
 
 fn main() {
@@ -43,9 +43,9 @@ fn main() {
     }
     let num: usize = args[1].parse().expect("Invalid total length");
     let times: i32 = args[2].parse().expect("Invalid times");
-    let t1 = time_random_input(Variant::InsertionSort, num, times);
-    let t2 = time_random_input(Variant::SelectionSort, num, times);
-    let t3 = time_random_input(Variant::ShellSort, num, times);
+    let t1 = time_random_input(SortVariant::Insertion, num, times);
+    let t2 = time_random_input(SortVariant::Selection, num, times);
+    let t3 = time_random_input(SortVariant::Shell, num, times);
 
     println!("Insertion: {t1}, Selection: {t2}, ShellSort: {t3}");
     let ratio1: f64 = (t1 as f64) / (t3 as f64);

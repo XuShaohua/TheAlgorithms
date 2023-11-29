@@ -12,7 +12,7 @@ where
 {
     let len = list.len();
 
-    for _ in 0..((len - 1) / 2 + 1) {
+    for _ in 0..=(len - 1) / 2 {
         // No need to traverse to end of list
         for i in 0..(len - 1) {
             if list[i + 1] < list[i] {
