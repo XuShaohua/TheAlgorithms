@@ -319,6 +319,10 @@ name = "lc_002_add_two_numbers"
 version = "0.1.0"
 
 [[package]]
+name = "lc_704_binary_search"
+version = "0.1.0"
+
+[[package]]
 name = "libc"
 version = "0.2.150"
 source = "registry+https://github.com/rust-lang/crates.io-index"

@@ -10,6 +10,7 @@ members = [
   "electronics",
   "financial",
   "geodesy",
+  "leetcode/*",
   "math",
   "physics",
   "searches",
