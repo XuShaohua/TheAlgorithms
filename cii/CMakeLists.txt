@@ -6,6 +6,7 @@ set(CMAKE_C_STANDARD 11)
 option(BUILD_TESTING "" ON)
 
 set(SOURCE_FILES
+    src/arith.c
     src/assert.c
     src/atom.c
     src/except.c
@@ -16,6 +17,7 @@ set(SOURCE_FILES
     src/table.c
     )
 set(HEADER_FILES
+    include/cii/arith.h
     include/cii/assert.h
     include/cii/atom.h
     include/cii/except.h
