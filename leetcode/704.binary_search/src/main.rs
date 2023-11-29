@@ -4,6 +4,8 @@
 
 //! Problem: [binary search](https://leetcode.com/problems/binary-search)
 
+use std::cmp::Ordering;
+
 pub fn solution1(nums: &[i32], target: i32) -> i32 {
     if nums.is_empty() {
         return -1;
@@ -13,13 +15,11 @@ pub fn solution1(nums: &[i32], target: i32) -> i32 {
     let mut high = nums.len() - 1;
     while low + 1 < high {
         let middle = low + (high - low) / 2;
-        println!("low: {low}, high: {high}, middle: {middle}");
-        if nums[middle] < target {
-            low = middle;
-        } else if nums[middle] == target {
-            return middle as i32;
-        } else if nums[middle] > target {
-            high = middle;
+        //println!("low: {low}, high: {high}, middle: {middle}");
+        match nums[middle].cmp(&target) {
+            Ordering::Less => low = middle,
+            Ordering::Equal => return middle as i32,
+            Ordering::Greater => high = middle,
         }
     }
     -1
