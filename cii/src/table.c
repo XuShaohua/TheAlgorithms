@@ -27,16 +27,14 @@ struct table_s {
   // Size of buckets array.
   size_t size;
   int64_t timestamp;
-  int (*cmp)(const void* x, const void* y);
-  size_t (*hash)(const void* key);
+  cmp_func cmp;
+  hash_func hash;
 
   // buckets points to an array with appropriate number of elements.
   struct binding_s** buckets;
 };
 
-table_t* table_new(size_t hint,
-                  int cmp(const void* x, const void* y),
-                  size_t hash(const void* key)) {
+table_t* table_new(size_t hint, cmp_func cmp, hash_func hash) {
   const size_t primes[] = {
     509, 509, 1021, 2053, 4093,
     8191, 16381, 32771, 65521, INT64_MAX

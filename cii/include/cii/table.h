@@ -10,6 +10,9 @@
 
 typedef struct table_s table_t;
 
+typedef int (*cmp_func)(const void* x, const void* y);
+typedef size_t (*hash_func)(const void* key);
+
 /**
  * Allocate a new table.
  *
@@ -25,9 +28,7 @@ typedef struct table_s table_t;
  * to be atoms and the implementation of table provides a suitable hash function.
  * @return a pointer to new table.
  */
-extern table_t* table_new(size_t hint,
-                         int cmp(const void* x, const void* y),
-                         size_t hash(const void* key));
+extern table_t* table_new(size_t hint, cmp_func cmp, hash_func hash);
 
 /**
  * Deallocate a table and set it to the null pointer.
