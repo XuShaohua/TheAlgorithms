@@ -33,6 +33,28 @@ static size_t hash_atom(const void* x) {
   return (unsigned long )x >> 2;
 }
 
+static void set_add_member(set_t* set, size_t hash_index, const void* member) {
+  struct member_s* p = NULL;
+  NEW(p);
+  p->member = member;
+  p->link = set->buckets[hash_index];
+  set->length += 1;
+  set->timestamp += 1;
+}
+
+static set_t* set_copy(set_t* s, size_t size_hint) {
+  assert(s != NULL);
+  set_t* set = set_new(size_hint, s->cmp, s->hash);
+  for (size_t i = 0; i < s->bucket_size; ++i) {
+    for (struct member_s* p = s->buckets[i]; p != NULL; p = p->link) {
+      const size_t hash_index = (*set->hash)(p->member) % set->bucket_size;
+      set_add_member(set, hash_index, p->member);
+    }
+  }
+
+  return set;
+}
+
 set_t* set_new(size_t size_hint, cmp_func cmp, hash_func hash) {
   const size_t kPrimes[] = {
       509, 509, 1021, 2053, 4093, 8191, 16381, 32771, 65521, INT_MAX
@@ -85,11 +107,7 @@ void set_put(set_t* set, const void* member) {
 
   if (p == NULL) {
     // Add the new member into set.
-    NEW(p);
-    p->member = member;
-    p->link = set->buckets[hash_index];
-    set->buckets[hash_index] = p;
-    set->length += 1;
+    set_add_member(set, hash_index, member);
   } else {
     p->member = member;
   }
@@ -168,4 +186,106 @@ void** set_to_array(set_t* set, void* end) {
   }
   array[index] = end;
   return array;
+}
+
+set_t* set_union(set_t* s, set_t* t) {
+  if (s == NULL) {
+    assert(t != NULL);
+    return set_copy(t, t->bucket_size);
+  } else if (t == NULL) {
+    assert(s != NULL);
+    return set_copy(s, s->bucket_size);
+  } else {
+    set_t* set = set_copy(s, arith_max(s->bucket_size, t->bucket_size));
+    assert(s->cmp == t->cmp && s->hash == t->hash);
+    // Copy members in t to set.
+    for (size_t i = 0; i < t->bucket_size; ++i) {
+      for (struct member_s* p = t->buckets[i]; p != NULL; p = p->link) {
+        set_put(set, p->member);
+      }
+    }
+    return set;
+  }
+}
+
+set_t* set_intersection(set_t* s, set_t* t) {
+  if (s == NULL) {
+    assert(t != NULL);
+    return set_new(t->bucket_size, t->cmp, t->hash);
+  } else if (t == NULL) {
+    return set_new(s->bucket_size, s->cmp, s->hash);
+  } else if (s->length < t->length) {
+    return set_intersection(t, s);
+  } else {
+    assert(s->cmp == t->cmp && s->hash == t->hash);
+    set_t* set = set_new(arith_min(s->bucket_size, t->bucket_size), s->cmp, s->hash);
+    for (size_t i = 0; i < t->bucket_size; ++i) {
+      for (struct member_s* p = t->buckets[i]; p != NULL; p = p->link) {
+        if (set_member(s, p->member)) {
+          const size_t hash_index = (*set->hash)(p->member) % set->bucket_size;
+          set_add_member(set, hash_index, p->member);
+        }
+      }
+    }
+    return set;
+  }
+}
+
+set_t* set_minus(set_t* s, set_t* t) {
+  if (t == NULL) {
+    assert(s != NULL);
+    return set_new(s->bucket_size, s->cmp, s->hash);
+  } else if (s == NULL) {
+    return set_copy(t, t->bucket_size);
+  } else {
+    assert(s->cmp == t->cmp && s->hash == t->hash);
+    set_t* set = set_new(arith_min(s->bucket_size, t->bucket_size), s->cmp, s->hash);
+    for (size_t i = 0; i < t->bucket_size; ++i) {
+      for (struct member_s* p = t->buckets[i]; p != NULL; p = p->link) {
+        if (!set_member(s, p->member)) {
+          const size_t hash_index = (*set->hash)(p->member) % set->bucket_size;
+          set_add_member(set, hash_index, p->member);
+        }
+      }
+    }
+    return set;
+  }
+}
+
+set_t* set_diff(set_t* s, set_t* t) {
+  if (s == NULL) {
+    assert(t != NULL);
+    return set_copy(t, t->bucket_size);
+  } else if (t == NULL) {
+    return set_copy(s, s->bucket_size);
+  } else {
+    assert(s->cmp == t->cmp && s->hash == t->hash);
+    set_t* set = set_new(arith_min(s->bucket_size, t->bucket_size), s->cmp, s->hash);
+
+    for (size_t i = 0; i < t->bucket_size; ++i) {
+      for (struct member_s* p = t->buckets[i]; p != NULL; p = p->link) {
+        if (!set_member(s, p->member)) {
+          const size_t hash_index = (*set->hash)(p->member) % set->bucket_size;
+          set_add_member(set, hash_index, p->member);
+        }
+      }
+    }
+
+    {
+      set_t* tmp = t;
+      t = s;
+      s = tmp;
+    }
+
+    for (size_t i = 0; i < t->bucket_size; ++i) {
+      for (struct member_s* p = t->buckets[i]; p != NULL; p = p->link) {
+        if (!set_member(s, p->member)) {
+          const size_t hash_index = (*set->hash)(p->member) % set->bucket_size;
+          set_add_member(set, hash_index, p->member);
+        }
+      }
+    }
+
+    return set;
+  }
 }
