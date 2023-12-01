@@ -1,7 +1,7 @@
 
-add_executable(ds_intro_polynomial
+add_executable(polynomial
     main.c
     )
-target_link_libraries(ds_intro_polynomial
+target_link_libraries(polynomial
     -lm
     )

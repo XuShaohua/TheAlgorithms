@@ -8,7 +8,7 @@
 #include <stdint.h>
 
 #ifdef __cplusplus
-extern "C"
+extern "C" {
 #endif
 
 typedef struct binary_tree_s binary_tree_t;
