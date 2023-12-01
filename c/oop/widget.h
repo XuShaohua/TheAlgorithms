@@ -13,7 +13,8 @@ struct ng_widget_s {
   int x; \
   int y; \
   int width; \
-  int height;
+  int height; \
+  void (*draw)(struct ng_widget_s* widget);
   NG_WIDGET_PROPS;
 };
 typedef struct ng_widget_s ng_widget_t;
@@ -28,5 +29,7 @@ extern void ng_widget_destroy(ng_object_t* obj);
 extern void ng_widget_set_size(ng_widget_t* widget, int width, int height);
 
 extern int ng_widget_get_width(ng_widget_t* widget);
+
+extern void ng_widget_draw(ng_widget_t* widget);
 
 #endif  // C_WIDGET_H_

@@ -22,4 +22,6 @@ extern void ng_button_init(ng_button_t* button);
 
 extern void ng_button_destroy(ng_object_t* obj);
 
+extern void ng_button_draw(ng_widget_t* widget);
+
 #endif  // C_BUTTON_H_

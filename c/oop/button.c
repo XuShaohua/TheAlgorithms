@@ -17,7 +17,9 @@ ng_button_t* ng_button_new() {
 
 void ng_button_init(ng_button_t* button) {
   assert(button != NULL);
+  ng_widget_init(NG_WIDGET(button));
   button->destroy = ng_button_destroy;
+  button->draw = ng_button_draw;
   button->label = "";
 }
 
@@ -25,4 +27,10 @@ void ng_button_destroy(ng_object_t* obj) {
   fprintf(stderr, "%s: %p\n", __func__, obj);
   assert(obj != NULL);
   ng_widget_destroy(NG_OBJECT(obj));
+}
+
+void ng_button_draw(ng_widget_t* widget) {
+  assert(widget != NULL);
+  fprintf(stderr, "%s draw buttons at %dx%d, size: %dx%d\n", __func__,
+      widget->x, widget->y, widget->width, widget->height);
 }
