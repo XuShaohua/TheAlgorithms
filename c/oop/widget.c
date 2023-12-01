@@ -4,6 +4,10 @@
 
 #include "widget.h"
 
+#include <assert.h>
+#include <stdlib.h>
+#include <stdio.h>
+
 ng_widget_t* ng_widget_new() {
   ng_widget_t* widget = (ng_widget_t*)malloc(sizeof(ng_widget_t));
   assert(widget != NULL);
@@ -14,7 +18,7 @@ ng_widget_t* ng_widget_new() {
 void ng_widget_init(ng_widget_t* widget) {
   assert(widget != NULL);
   ng_object_init(NG_OBJECT(widget));
-  widget->obj->destroy = ng_widget_destroy;
+  widget->destroy = ng_widget_destroy;
   widget->x = 0;
   widget->y = 0;
   widget->width = 100;
@@ -28,7 +32,7 @@ void ng_widget_destroy(ng_object_t* obj) {
   ng_object_destroy(obj);
 }
 
-void ng_wiget_set_size(ng_widget_t* widget, int width, int height) {
+void ng_widget_set_size(ng_widget_t* widget, int width, int height) {
   assert(widget != NULL);
   widget->width = width;
   widget->height = height;

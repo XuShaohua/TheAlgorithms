@@ -8,11 +8,12 @@
 #include <stddef.h>
 
 struct ng_object_s {
-#define NG_OBJECT_IMPL \
+#define NG_OBJECT_PROPS \
   size_t ref_count; \
   const char* name; \
   size_t (*hash)(struct ng_object_s* obj); \
-  void (destroy*)(struct ng_object_s* obj);
+  void (*destroy)(struct ng_object_s* obj);
+  NG_OBJECT_PROPS;
 };
 typedef struct ng_object_s ng_object_t;
 #define NG_OBJECT(obj) (ng_object_t*)(obj)

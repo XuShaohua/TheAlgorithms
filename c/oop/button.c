@@ -5,6 +5,8 @@
 #include "button.h"
 
 #include <assert.h>
+#include <stdio.h>
+#include <stdlib.h>
 
 ng_button_t* ng_button_new() {
   ng_button_t* button = (ng_button_t*)malloc(sizeof(ng_button_t));
@@ -15,12 +17,12 @@ ng_button_t* ng_button_new() {
 
 void ng_button_init(ng_button_t* button) {
   assert(button != NULL);
+  button->destroy = ng_button_destroy;
   button->label = "";
-  ng_widget_init(NG_WIDGET(button));
 }
 
 void ng_button_destroy(ng_object_t* obj) {
   fprintf(stderr, "%s: %p\n", __func__, obj);
   assert(obj != NULL);
-  ng_widget_destroy(NG_WIDGET(obj));
+  ng_widget_destroy(NG_OBJECT(obj));
 }

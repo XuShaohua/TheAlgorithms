@@ -7,6 +7,7 @@
 #include <assert.h>
 #include <stdio.h>
 #include <stddef.h>
+#include <stdlib.h>
 
 size_t ng_object_hash_address(ng_object_t* obj) {
   return (unsigned long)obj >> 1;

@@ -8,9 +8,10 @@
 #include "widget.h"
 
 struct ng_button_s {
-#define NG_BUTTON_IMPL \
-  NG_WIDGET_IMPL \
+#define NG_BUTTON_PROPS \
+  NG_WIDGET_PROPS \
   const char* label;
+  NG_BUTTON_PROPS;
 };
 typedef struct ng_button_s ng_button_t;
 #define NG_BUTTON(button) (ng_button_t*)(button)
