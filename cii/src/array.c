@@ -6,7 +6,7 @@
 
 #include <string.h>
 
-#include "cii/array_rep.h"
+#include "cii/arith.h"
 #include "cii/assert.h"
 #include "cii/mem.h"
 
@@ -44,4 +44,42 @@ size_t array_length(array_t* array) {
 size_t array_element_size(array_t* array) {
   assert(array != NULL);
   return array->element_size;
+}
+
+void* array_get(array_t* array, size_t index) {
+  assert(array != NULL);
+  assert(index < array->element_size);
+  return array->buffer + index * array->element_size;
+}
+
+void* array_put(array_t* array, size_t index, void* elem) {
+  assert(array != NULL);
+  assert(index < array->element_size);
+  assert(elem != NULL);
+  void* dest = array->buffer + index * array->element_size;
+  memcpy(dest, elem, array->element_size);
+  return elem;
+}
+
+void array_resize(array_t* array, size_t length) {
+  assert(array != NULL);
+  if (length == 0) {
+    FREE(array->buffer);
+  } else if (array->length == 0) {
+    array->buffer = CALLOC(length, array->element_size);
+  } else {
+    RESIZE(array->buffer, length * array->element_size);
+  }
+  array->length = length;
+}
+
+array_t* array_copy(array_t* array, size_t length) {
+  assert(array != NULL);
+  array_t* copy = array_new(length, array->element_size);
+  if (length > 0 && array->length > 0) {
+    const size_t min_length = arith_min(array->length, length);
+    memcpy(copy->buffer, array->buffer, min_length * array->element_size);
+  }
+
+  return copy;
 }

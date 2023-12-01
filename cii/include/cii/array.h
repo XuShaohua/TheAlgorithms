@@ -64,6 +64,7 @@ extern void* array_get(array_t* array, size_t index);
 /**
  * Override value at |index| with the new element pointed at |elem|.
  *
+ * Returns |elem|.
  * It is a runtime error if |index| is out of range.
  *
  * @param array
