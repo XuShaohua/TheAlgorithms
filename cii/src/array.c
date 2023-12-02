@@ -7,18 +7,11 @@
 #include <string.h>
 
 #include "cii/arith.h"
+#include "cii/array_rep.h"
 #include "cii/assert.h"
 #include "cii/mem.h"
 
-struct array_s {
-  size_t length;
-  size_t element_size;
-  char* buffer;
-};
-
-array_t* array_new(size_t length, size_t elem_size) {
-  array_t* array;
-  NEW(array);
+void array_rep_init(struct array_s* array, size_t length, size_t elem_size, void* arp) {
   array->length = length;
   array->element_size = elem_size;
   if (length > 0) {
@@ -26,6 +19,18 @@ array_t* array_new(size_t length, size_t elem_size) {
   } else {
     array->buffer = NULL;
   }
+}
+
+array_t* array_new(size_t length, size_t elem_size) {
+  array_t* array;
+  NEW(array);
+  void* arp = NULL;
+  if (length > 0) {
+    arp = CALLOC(length, elem_size);
+  } else {
+    arp = NULL;
+  }
+  array_rep_init(array, length, elem_size, arp);
 
   return array;
 }
