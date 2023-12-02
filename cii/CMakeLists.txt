@@ -20,6 +20,7 @@ set(SOURCE_FILES
     )
 set(HEADER_FILES
     include/cii/array.h
+    include/cii/array_rep.h
     include/cii/arith.h
     include/cii/assert.h
     include/cii/atom.h
