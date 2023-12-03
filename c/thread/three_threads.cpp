@@ -8,22 +8,16 @@
 
 std::mutex g_test_mutex;
 int g_num_count = 0;
+constexpr int kTargetNum = 100;
 
 void print_nums(int tid) {
-  bool is_running = false;
-  int local_num_count = 0;
-  {
+  while (true) {
     std::lock_guard<std::mutex> lock_guard(g_test_mutex);
-    local_num_count = g_num_count;
-    if (g_num_count < 100) {
-      g_num_count += 1;
-      is_running = true;
-      std::cout << "tid: " << tid << " +" << (local_num_count + 1)<< std::endl;
+    if (g_num_count >= kTargetNum) {
+      break;
     }
-  }
-
-  if (is_running) {
-    print_nums(tid);
+    std::cout << "tid: " << tid << " +" << (g_num_count + 1)<< std::endl;
+    g_num_count += 1;
   }
 }
 
