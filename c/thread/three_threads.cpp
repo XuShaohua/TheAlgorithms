@@ -6,19 +6,19 @@
 #include <mutex>
 #include <thread>
 
-std::mutex g_test_mutex;
-int g_num_count = 0;
-constexpr int kTargetNum = 100;
-
 void print_nums(int tid, int num_order) {
+  static std::mutex s_test_mutex;
+  static int s_num_count = 0;
+  constexpr int kTargetNum = 10000;
+
   while (true) {
-    std::lock_guard<std::mutex> lock_guard(g_test_mutex);
-    if (g_num_count >= kTargetNum) {
+    std::lock_guard<std::mutex> lock_guard(s_test_mutex);
+    if (s_num_count >= kTargetNum) {
       break;
     }
-    if (g_num_count % 3 == num_order) {
-      std::cout << "tid: " << tid << " +" << (g_num_count + 1)<< std::endl;
-      g_num_count += 1;
+    if (s_num_count % 3 == num_order) {
+      std::cout << "tid: " << tid << " +" << (s_num_count + 1)<< std::endl;
+      s_num_count += 1;
     }
   }
 }
