@@ -45,6 +45,12 @@ extern size_t binary_tree_size(binary_tree_t* tree);
  */
 extern bool binary_tree_is_empty(binary_tree_t* tree);
 
+enum tree_traverse_mode {
+  kTraverseInOrder = 0,
+  kTraversePreOrder,
+  kTraversePostOrder,
+};
+
 /**
  * Calls |apply| function for each node in binary tree.
  *
@@ -53,6 +59,7 @@ extern bool binary_tree_is_empty(binary_tree_t* tree);
  * @param user_data
  */
 extern void binary_tree_traverse(binary_tree_t* tree,
+                                 tree_traverse_mode mode,
                                  void (*apply)(void* value, void* user_data),
                                  void* user_data);
 
