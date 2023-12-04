@@ -3,7 +3,9 @@
 // found in the LICENSE file.
 
 mod with_atomic;
+mod with_mutex;
 
 fn main() {
-    with_atomic::run();
+    with_mutex::run();
+    //with_atomic::run();
 }

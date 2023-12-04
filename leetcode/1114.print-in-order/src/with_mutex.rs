@@ -4,12 +4,11 @@
 
 #![allow(dead_code)]
 
-use std::sync::atomic::{AtomicI32, Ordering};
-use std::sync::Arc;
+use std::sync::{Arc, Mutex};
 use std::thread;
 
 struct Foo {
-    counter: AtomicI32,
+    counter: Mutex<i32>,
 }
 
 fn print_first() {
@@ -28,26 +27,32 @@ impl Foo {
     #[must_use]
     pub fn new() -> Self {
         Self {
-            counter: AtomicI32::new(0),
+            counter: Mutex::new(0),
         }
     }
 
     pub fn first(&self) {
         print_first();
-        self.counter.store(1, Ordering::SeqCst);
+        *self.counter.lock().unwrap() = 1;
     }
 
     pub fn second(&self) {
-        while self.counter.load(Ordering::SeqCst) != 1 {
-            // empty
+        loop {
+            let data = self.counter.lock().unwrap();
+            if *data == 1 {
+                break;
+            }
         }
         print_second();
-        self.counter.store(2, Ordering::SeqCst);
+        *self.counter.lock().unwrap() = 2;
     }
 
     pub fn third(&self) {
-        while self.counter.load(Ordering::SeqCst) != 2 {
-            // empty
+        loop {
+            let data = self.counter.lock().unwrap();
+            if *data == 2 {
+                break;
+            }
         }
         print_third();
     }
