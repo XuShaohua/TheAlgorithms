@@ -311,23 +311,35 @@ dependencies = [
 ]
 
 [[package]]
-name = "lc_001_two_sum"
+name = "lc-0001-two-sum"
 version = "0.1.0"
 
 [[package]]
-name = "lc_002_add_two_numbers"
+name = "lc-0002-add-two-numbers"
 version = "0.1.0"
 
 [[package]]
-name = "lc_053_maximum_subarray"
+name = "lc-0053-maximum-subarray"
 version = "0.1.0"
 
 [[package]]
-name = "lc_191_number_of_1_bits"
+name = "lc-0142-linked-list-cycle-ii"
 version = "0.1.0"
 
 [[package]]
-name = "lc_704_binary_search"
+name = "lc-0191-number-of-1-bits"
+version = "0.1.0"
+
+[[package]]
+name = "lc-1114-print-in-order"
+version = "0.1.0"
+
+[[package]]
+name = "lc-1115-print-foobar-alternately"
+version = "0.1.0"
+
+[[package]]
+name = "lc-704-binary-search"
 version = "0.1.0"
 
 [[package]]
