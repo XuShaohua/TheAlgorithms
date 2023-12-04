@@ -1,0 +1,6 @@
+[package]
+name = "lc-1116-print-zero-even-odd"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]

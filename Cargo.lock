@@ -323,10 +323,6 @@ name = "lc-0053-maximum-subarray"
 version = "0.1.0"
 
 [[package]]
-name = "lc-0142-linked-list-cycle-ii"
-version = "0.1.0"
-
-[[package]]
 name = "lc-0191-number-of-1-bits"
 version = "0.1.0"
 
@@ -336,6 +332,10 @@ version = "0.1.0"
 
 [[package]]
 name = "lc-1115-print-foobar-alternately"
+version = "0.1.0"
+
+[[package]]
+name = "lc-1116-print-zero-even-odd"
 version = "0.1.0"
 
 [[package]]
