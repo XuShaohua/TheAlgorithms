@@ -2,6 +2,7 @@
 // Use of this source is governed by General Public License that can be
 // found in the LICENSE file.
 
+use std::hint;
 use std::sync::atomic::{AtomicBool, Ordering};
 use std::sync::Arc;
 use std::thread;
@@ -28,7 +29,7 @@ impl FooBar {
     pub fn foo(&self) {
         for _i in 0..self.n {
             while self.toggle.load(Ordering::SeqCst) {
-                // empty
+                hint::spin_loop();
             }
             print_foo();
             self.toggle.store(true, Ordering::SeqCst);
@@ -38,7 +39,7 @@ impl FooBar {
     pub fn bar(&self) {
         for _i in 0..self.n {
             while !self.toggle.load(Ordering::SeqCst) {
-                // empty
+                hint::spin_loop();
             }
             print_bar();
             self.toggle.store(false, Ordering::SeqCst);
