@@ -1,5 +1,5 @@
 [package]
-name = "lc_001_two_sum"
+name = "lc-0191-number-of-1-bits"
 version = "0.1.0"
 edition = "2021"
 publish = false

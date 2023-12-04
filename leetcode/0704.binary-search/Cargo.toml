@@ -1,5 +1,5 @@
 [package]
-name = "lc_053_maximum_subarray"
+name = "lc-704-binary-search"
 version = "0.1.0"
 edition = "2021"
 publish = false

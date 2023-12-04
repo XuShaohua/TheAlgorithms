@@ -1,5 +1,5 @@
 [package]
-name = "lc_191_number_of_1_bits"
+name = "lc-0002-add-two-numbers"
 version = "0.1.0"
 edition = "2021"
 publish = false

@@ -1,5 +1,5 @@
 [package]
-name = "lc_002_add_two_numbers"
+name = "lc-0053-maximum-subarray"
 version = "0.1.0"
 edition = "2021"
 publish = false

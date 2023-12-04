@@ -1,5 +1,5 @@
 [package]
-name = "lc_704_binary_search"
+name = "lc-0001-two-sum"
 version = "0.1.0"
 edition = "2021"
 publish = false
