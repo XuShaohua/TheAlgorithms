@@ -9,73 +9,111 @@ use std::thread;
 
 struct ZeroEvenOdd {
     n: i32,
-    mutex: Mutex<i32>,
-    cvar: Condvar,
+
+    zero_mutex: Mutex<bool>,
+    zero_cvar: Condvar,
+
+    even_mutex: Mutex<i32>,
+    even_cvar: Condvar,
+
+    odd_mutex: Mutex<i32>,
+    odd_cvar: Condvar,
 }
 
 fn print_number(x: i32) {
-    print!("{x}");
+    println!("{x}");
 }
 
 impl ZeroEvenOdd {
-    const ZERO: i32 = 0;
-    const ODD: i32 = 1;
-    const EVEN: i32 = 2;
-
     pub fn new(n: i32) -> Self {
         Self {
             n,
-            mutex: Mutex::new(Self::ODD),
-            cvar: Condvar::new(),
+
+            zero_mutex: Mutex::new(true),
+            zero_cvar: Condvar::new(),
+
+            even_mutex: Mutex::new(0),
+            even_cvar: Condvar::new(),
+
+            odd_mutex: Mutex::new(0),
+            odd_cvar: Condvar::new(),
         }
     }
 
     pub fn zero(&self) {
-        for i in 0..self.n {
+        for i in 0..=self.n {
             eprintln!("zero() {i}");
-            let mut counter = self.mutex.lock().unwrap();
-            while *counter != Self::ZERO {
-                eprintln!("zero counter: {}", *counter);
-                counter = self.cvar.wait(counter).unwrap();
+            let mut zero_mutex = self.zero_mutex.lock().unwrap();
+            while !*zero_mutex {
+                zero_mutex = self.zero_cvar.wait(zero_mutex).unwrap();
             }
+
+            println!("print_number(0);");
             print_number(0);
-            *counter = if i % 2 == 0 { Self::EVEN } else { Self::ODD };
-            self.cvar.notify_all();
+
+            let next_num = i + 1;
+            println!("next_num: {next_num}");
+            if next_num % 2 == 0 {
+                let mut mutex = self.even_mutex.lock().unwrap();
+                *mutex = next_num;
+                self.even_cvar.notify_one();
+            } else {
+                let mut mutex = self.odd_mutex.lock().unwrap();
+                *mutex = next_num;
+                self.odd_cvar.notify_one();
+            }
+        }
+        {
+            let mut mutex = self.even_mutex.lock().unwrap();
+            *mutex = 0;
+            self.even_cvar.notify_one();
+        }
+        {
+            let mut mutex = self.odd_mutex.lock().unwrap();
+            *mutex = 0;
+            self.odd_cvar.notify_one();
         }
     }
 
     pub fn even(&self) {
-        for i in (0..self.n).step_by(2) {
-            eprintln!("even() {i}");
-            let mut counter = self.mutex.lock().unwrap();
-            while *counter != Self::EVEN {
-                eprintln!("even counter: {}", *counter);
-                counter = self.cvar.wait(counter).unwrap();
+        loop {
+            let mut even_mutex = self.even_mutex.lock().unwrap();
+            while *even_mutex == 0 || *even_mutex % 2 == 1 {
+                eprintln!("even counter: {}", *even_mutex);
+                even_mutex = self.even_cvar.wait(even_mutex).unwrap();
             }
-            print_number(i);
-            *counter = Self::ZERO;
-            self.cvar.notify_all();
+
+            if *even_mutex == -1 {
+                break;
+            }
+            print_number(*even_mutex);
+            let mut zero_mutex = self.zero_mutex.lock().unwrap();
+            *zero_mutex = true;
+            self.zero_cvar.notify_all();
         }
     }
 
     pub fn odd(&self) {
-        for i in (1..self.n).step_by(2) {
-            eprintln!("odd() {i}");
-            let mut counter = self.mutex.lock().unwrap();
-            while *counter != Self::ODD {
-                eprintln!("odd counter: {}", *counter);
-                counter = self.cvar.wait(counter).unwrap();
+        loop {
+            let mut odd_mutex = self.odd_mutex.lock().unwrap();
+            while *odd_mutex == 0 || *odd_mutex % 2 == 0 {
+                eprintln!("odd counter: {}", *odd_mutex);
+                odd_mutex = self.odd_cvar.wait(odd_mutex).unwrap();
             }
+            if *odd_mutex == -1 {
+                break;
+            }
+            print_number(*odd_mutex);
 
-            print_number(i);
-            *counter = Self::ZERO;
-            self.cvar.notify_all();
+            let mut zero_mutex = self.zero_mutex.lock().unwrap();
+            *zero_mutex = true;
+            self.zero_cvar.notify_all();
         }
     }
 }
 
 pub fn run() {
-    let n = 1;
+    let n = 2;
     let zero_even_odd = Arc::new(ZeroEvenOdd::new(n));
     let a = {
         let zero_even_odd = Arc::clone(&zero_even_odd);

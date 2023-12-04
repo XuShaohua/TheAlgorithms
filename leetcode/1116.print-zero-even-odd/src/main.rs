@@ -6,6 +6,6 @@ mod with_atomic;
 mod with_condvar;
 
 fn main() {
-    with_atomic::run();
-    //with_condvar::run();
+    //with_atomic::run();
+    with_condvar::run();
 }
