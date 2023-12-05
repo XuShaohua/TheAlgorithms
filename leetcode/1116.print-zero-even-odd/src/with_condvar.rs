@@ -20,8 +20,8 @@ struct ZeroEvenOdd {
     odd_cvar: Condvar,
 }
 
-fn print_number(x: i32) {
-    println!("{x}");
+fn print_number(_prefix: &str, x: i32) {
+    print!("{x}");
 }
 
 impl ZeroEvenOdd {
@@ -42,78 +42,104 @@ impl ZeroEvenOdd {
 
     pub fn zero(&self) {
         for i in 0..=self.n {
-            eprintln!("zero() {i}");
-            let mut zero_mutex = self.zero_mutex.lock().unwrap();
-            while !*zero_mutex {
-                zero_mutex = self.zero_cvar.wait(zero_mutex).unwrap();
+            {
+                let mut zero_mutex = self.zero_mutex.lock().unwrap();
+                while !*zero_mutex {
+                    zero_mutex = self.zero_cvar.wait(zero_mutex).unwrap();
+                }
+                *zero_mutex = false;
+            }
+            if i == self.n {
+                break;
             }
 
-            println!("print_number(0);");
-            print_number(0);
+            print_number("zero", 0);
 
             let next_num = i + 1;
-            println!("next_num: {next_num}");
             if next_num % 2 == 0 {
-                let mut mutex = self.even_mutex.lock().unwrap();
-                *mutex = next_num;
+                let mut num_mutex = self.even_mutex.lock().unwrap();
+                *num_mutex = next_num;
                 self.even_cvar.notify_one();
             } else {
-                let mut mutex = self.odd_mutex.lock().unwrap();
-                *mutex = next_num;
+                let mut num_mutex = self.odd_mutex.lock().unwrap();
+                *num_mutex = next_num;
                 self.odd_cvar.notify_one();
             }
         }
+
         {
-            let mut mutex = self.even_mutex.lock().unwrap();
-            *mutex = 0;
+            let mut num_mutex = self.even_mutex.lock().unwrap();
+            *num_mutex = -1;
             self.even_cvar.notify_one();
         }
         {
-            let mut mutex = self.odd_mutex.lock().unwrap();
-            *mutex = 0;
+            let mut num_mutex = self.odd_mutex.lock().unwrap();
+            *num_mutex = -1;
             self.odd_cvar.notify_one();
         }
     }
 
     pub fn even(&self) {
         loop {
-            let mut even_mutex = self.even_mutex.lock().unwrap();
-            while *even_mutex == 0 || *even_mutex % 2 == 1 {
-                eprintln!("even counter: {}", *even_mutex);
-                even_mutex = self.even_cvar.wait(even_mutex).unwrap();
+            let even_num;
+            {
+                let mut num_mutex = self.even_mutex.lock().unwrap();
+                loop {
+                    if *num_mutex == -1 {
+                        return;
+                    }
+                    if *num_mutex != 0 {
+                        break;
+                    }
+                    num_mutex = self.even_cvar.wait(num_mutex).unwrap();
+                }
+
+                even_num = *num_mutex;
+                *num_mutex = 0;
             }
 
-            if *even_mutex == -1 {
-                break;
+            print_number("even", even_num);
+            {
+                let mut zero_mutex = self.zero_mutex.lock().unwrap();
+                *zero_mutex = true;
+                self.zero_cvar.notify_one();
             }
-            print_number(*even_mutex);
-            let mut zero_mutex = self.zero_mutex.lock().unwrap();
-            *zero_mutex = true;
-            self.zero_cvar.notify_all();
         }
     }
 
     pub fn odd(&self) {
         loop {
-            let mut odd_mutex = self.odd_mutex.lock().unwrap();
-            while *odd_mutex == 0 || *odd_mutex % 2 == 0 {
-                eprintln!("odd counter: {}", *odd_mutex);
-                odd_mutex = self.odd_cvar.wait(odd_mutex).unwrap();
-            }
-            if *odd_mutex == -1 {
-                break;
-            }
-            print_number(*odd_mutex);
+            let odd_num;
+            {
+                let mut num_mutex = self.odd_mutex.lock().unwrap();
+                loop {
+                    if *num_mutex == -1 {
+                        return;
+                    }
+                    if *num_mutex != 0 {
+                        break;
+                    }
+                    num_mutex = self.odd_cvar.wait(num_mutex).unwrap();
+                }
 
-            let mut zero_mutex = self.zero_mutex.lock().unwrap();
-            *zero_mutex = true;
-            self.zero_cvar.notify_all();
+                odd_num = *num_mutex;
+                *num_mutex = 0;
+            }
+
+            print_number("odd", odd_num);
+
+            {
+                let mut zero_mutex = self.zero_mutex.lock().unwrap();
+                *zero_mutex = true;
+                self.zero_cvar.notify_one();
+            }
         }
     }
 }
 
 pub fn run() {
     let n = 2;
+    let n = 5;
     let zero_even_odd = Arc::new(ZeroEvenOdd::new(n));
     let a = {
         let zero_even_odd = Arc::clone(&zero_even_odd);
