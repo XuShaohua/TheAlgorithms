@@ -327,10 +327,6 @@ name = "lc-0083-remove-duplicates-from-sorted-list"
 version = "0.1.0"
 
 [[package]]
-name = "lc-0142-linked-list-cycle-ii"
-version = "0.1.0"
-
-[[package]]
 name = "lc-0191-number-of-1-bits"
 version = "0.1.0"
 

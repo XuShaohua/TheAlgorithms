@@ -8,7 +8,7 @@ use std::sync::atomic::{AtomicI32, Ordering};
 use std::sync::Arc;
 use std::thread;
 
-struct Foo {
+struct Task {
     counter: AtomicI32,
 }
 
@@ -24,7 +24,7 @@ fn print_third() {
     print!("third");
 }
 
-impl Foo {
+impl Task {
     #[must_use]
     pub fn new() -> Self {
         Self {
@@ -54,23 +54,23 @@ impl Foo {
 }
 
 pub fn run() {
-    let foo = Arc::new(Foo::new());
+    let task = Arc::new(Task::new());
 
     let a = {
-        let foo = foo.clone();
+        let task = Arc::clone(&task);
         thread::spawn(move || {
-            foo.first();
+            task.first();
         })
     };
     let b = {
-        let foo = foo.clone();
+        let task = Arc::clone(&task);
         thread::spawn(move || {
-            foo.second();
+            task.second();
         })
     };
     let c = {
         thread::spawn(move || {
-            foo.third();
+            task.third();
         })
     };
     let _ = a.join();
