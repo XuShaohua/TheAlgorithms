@@ -319,6 +319,10 @@ name = "lc-0002-add-two-numbers"
 version = "0.1.0"
 
 [[package]]
+name = "lc-0015-3sum"
+version = "0.1.0"
+
+[[package]]
 name = "lc-0026-remove-duplicates-from-sorted-array"
 version = "0.1.0"
 
