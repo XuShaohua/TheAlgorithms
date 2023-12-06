@@ -100,4 +100,17 @@ extern void* ring_remove_low(ring_t* ring);
 
 extern void* ring_remove_high(ring_t* ring);
 
+/**
+ * Renumbers the ring by rotating it left or right.
+ *
+ * If |n| is positive, rotate to right, clockwise.
+ * Else rotate to left, counterclockwise.
+ *
+ * It is a checked runtime error if absolute of |n| is larger than length of ring.
+ *
+ * @param ring
+ * @param n
+ */
+extern void ring_rotate(ring_t* ring, int n);
+
 #endif  // CII_RING_H_
