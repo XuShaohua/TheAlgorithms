@@ -20,12 +20,12 @@ impl ListNode {
     pub fn from_slice(slice: &[i32]) -> Option<Box<Self>> {
         let mut list = None;
         for item in slice.iter().rev() {
-            list = Self::cat(list, *item);
+            list = Self::cons(list, *item);
         }
         list
     }
 
-    pub fn cat(list: Option<Box<Self>>, val: i32) -> Option<Box<Self>> {
+    pub fn cons(list: Option<Box<Self>>, val: i32) -> Option<Box<Self>> {
         Some(Box::new(Self { val, next: list }))
     }
 }
@@ -35,9 +35,9 @@ fn solution1(head: Option<Box<ListNode>>) -> Option<Box<ListNode>> {
         let val = head.val;
         if let Some(next) = head.next {
             if next.val == val {
-                ListNode::cat(solution1(next.next), val)
+                ListNode::cons(solution1(next.next), val)
             } else {
-                ListNode::cat(solution1(Some(next)), val)
+                ListNode::cons(solution1(Some(next)), val)
             }
         } else {
             Some(head)

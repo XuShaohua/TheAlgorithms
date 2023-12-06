@@ -87,7 +87,7 @@ impl H2O {
 }
 
 fn main() {
-    let s = "HOH";
+    //let s = "HOH";
     let s = "OOHHHH";
     let h2o = Arc::new(H2O::new(s));
     let a = {

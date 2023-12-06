@@ -75,7 +75,7 @@ impl ZeroEvenOdd {
 }
 
 pub fn run() {
-    let n = 2;
+    //let n = 2;
     let n = 5;
     let zero_even_odd = Arc::new(ZeroEvenOdd::new(n));
     let a = {
