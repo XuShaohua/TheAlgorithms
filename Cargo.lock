@@ -347,6 +347,10 @@ name = "lc-0027-remove-element"
 version = "0.1.0"
 
 [[package]]
+name = "lc-0035-search-insert-position"
+version = "0.1.0"
+
+[[package]]
 name = "lc-0053-maximum-subarray"
 version = "0.1.0"
 
