@@ -1,5 +1,5 @@
 [package]
-name = "lc-11-container-with-most-water"
+name = "lc-0011-container-with-most-water"
 version = "0.1.0"
 edition = "2021"
 publish = false
