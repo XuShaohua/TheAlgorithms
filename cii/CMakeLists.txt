@@ -19,6 +19,7 @@ set(SOURCE_FILES
     src/seq.c
     src/set.c
     src/table.c
+    src/xp.c
     )
 set(HEADER_FILES
     include/cii/array.h
@@ -35,6 +36,7 @@ set(HEADER_FILES
     include/cii/seq.h
     include/cii/set.h
     include/cii/table.h
+    include/cii/xp.h
     )
 
 add_library(cii_static STATIC
