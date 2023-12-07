@@ -68,31 +68,31 @@ extern bool bit_get(bit_t* set, size_t index);
 extern bool bit_put(bit_t* set, size_t index, bool value);
 
 /**
- * Clear bits in range [start, end) in a bit vector.
+ * Clear bits in range [low, high] in a bit vector.
  *
  * @param set
- * @param start
- * @param end
+ * @param low
+ * @param high
  */
-extern void bit_clear(bit_t* set, size_t start, size_t end);
+extern void bit_clear(bit_t* set, size_t low, size_t high);
 
 /**
- * Set bits in range [start, end) in a bit vector.
+ * Set bits in range [low, high] in a bit vector.
  *
  * @param set
- * @param start
- * @param end
+ * @param low
+ * @param high
  */
-extern void bit_set(bit_t* set, size_t start, size_t end);
+extern void bit_set(bit_t* set, size_t low, size_t high);
 
 /**
- * Toggle bits in range [start, end) in a bit vector.
+ * Toggle bits in range [low, high] in a bit vector.
  *
  * @param set
- * @param start
- * @param end
+ * @param low
+ * @param high
  */
-extern void bit_not(bit_t* set, size_t start, size_t end);
+extern void bit_not(bit_t* set, size_t low, size_t high);
 
 /**
  * Check whether bit vector s is less than t.
@@ -127,7 +127,7 @@ extern bool bit_less_equal(bit_t* s, bit_t* t);
  * @param apply
  * @param user_data
  */
-extern void bit_map(bit_t* s,
+extern void bit_map(bit_t* set,
                     void(*apply)(size_t index, bool is_set, void* user_data),
                     void* user_data);
 

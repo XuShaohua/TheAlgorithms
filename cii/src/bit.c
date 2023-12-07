@@ -98,14 +98,98 @@ bool bit_put(bit_t* set, size_t index, bool value) {
   return prev;
 }
 
-void bit_clear(bit_t* set, size_t start, size_t end) {
+// Most significant byte mask.
+static const uint8_t kMsbMask[] = {
+    0xFF, 0xFE, 0xFC, 0xF8,
+    0xF0, 0xE0, 0xC0, 0x80
+};
 
+// Least significant byte mask.
+static const uint8_t kLsbMask[] = {
+    0x01, 0x03, 0x07, 0x0F,
+    0x1F, 0x3F, 0x7F, 0xFF
+};
+
+void bit_clear(bit_t* set, size_t low, size_t high) {
+  assert(set != NULL);
+  assert(high < set->length);
+  assert(low <= high);
+
+  if (low / 8 < high / 8) {
+    // Set the most significant bits in byte low/8.
+    set->bytes[low / 8] &= ~kMsbMask[low % 8];
+
+    // Set all the bits in bytes low/8+1..high/8-1.
+    {
+      for (size_t i = low / 8 + 1; i < high / 8; ++i) {
+        set->bytes[i] = 0x00;
+      }
+    }
+
+    // Set the least significant bits in byte high/8.
+    set->bytes[high / 8] &= ~kLsbMask[high % 8];
+  } else {
+    // Set bits low%8..high%8 in byte low/8.
+    set->bytes[low / 8] &= ~(kMsbMask[low % 8] & kLsbMask[high % 8]);
+  }
 }
 
-void bit_set(bit_t* set, size_t start, size_t end) {
+void bit_set(bit_t* set, size_t low, size_t high) {
+  assert(set != NULL);
+  assert(high < set->length);
+  assert(low <= high);
 
+  if (low / 8 < high / 8) {
+    // Set the most significant bits in byte low/8.
+    set->bytes[low / 8] |= kMsbMask[low % 8];
+
+    // Set all the bits in bytes low/8+1..high/8-1.
+    {
+      for (size_t i = low / 8 + 1; i < high / 8; ++i) {
+        set->bytes[i] = 0xFF;
+      }
+    }
+
+    // Set the least significant bits in byte high/8.
+    set->bytes[high / 8] |= kLsbMask[high % 8];
+  } else {
+    // Set bits low%8..high%8 in byte low/8.
+    set->bytes[low / 8] |= (kMsbMask[low % 8] & kLsbMask[high % 8]);
+  }
 }
 
-void bit_not(bit_t* set, size_t start, size_t end) {
-  
+void bit_not(bit_t* set, size_t low, size_t high) {
+  assert(set != NULL);
+  assert(high < set->length);
+  assert(low <= high);
+
+  if (low / 8 < high / 8) {
+    // Set the most significant bits in byte low/8.
+    set->bytes[low / 8] ^= kMsbMask[low % 8];
+
+    // Set all the bits in bytes low/8+1..high/8-1.
+    {
+      for (size_t i = low / 8 + 1; i < high / 8; ++i) {
+        set->bytes[i] ^= 0xFF;
+      }
+    }
+
+    // Set the least significant bits in byte high/8.
+    set->bytes[high / 8] ^= kLsbMask[high % 8];
+  } else {
+    // Set bits low%8..high%8 in byte low/8.
+    set->bytes[low / 8] ^= (kMsbMask[low % 8] & kLsbMask[high % 8]);
+  }
+}
+
+void bit_map(bit_t* set,
+             void(*apply)(size_t index, bool is_set, void* user_data),
+             void* user_data) {
+  assert(set != NULL);
+  assert(apply != NULL);
+
+  for (size_t i = 0; i < set->length; ++i) {
+    const bool bit = bit_get_bit(set, i);
+    apply(i, bit, user_data);
+  }
 }
