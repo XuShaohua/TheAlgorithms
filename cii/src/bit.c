@@ -31,6 +31,11 @@ static size_t num_words(size_t length) {
   return ((length + bpw() - 1) & (~(bpw() - 1))) / bpw();
 }
 
+// Computes [length / 8].
+static size_t num_bytes(size_t length) {
+  return ((length + 8 - 1) & (~(8 - 1))) / 8;
+}
+
 bit_t* bit_new(size_t length) {
   bit_t* set;
   NEW(set);
@@ -62,7 +67,7 @@ size_t bit_count_ones(bit_t* set) {
   const uint8_t kCount[] = {
       0,1,1,2,1,2,2,3,1,2,2,3,2,3,3,4
   };
-  const size_t n_words = num_words(set->length);
+  const size_t n_words = num_bytes(set->length);
   for (size_t i = 0; i < n_words; ++i) {
     uint8_t c = set->bytes[i];
     length += kCount[c & 0x0F] + kCount[c >> 4];
@@ -192,4 +197,87 @@ void bit_map(bit_t* set,
     const bool bit = bit_get_bit(set, i);
     apply(i, bit, user_data);
   }
+}
+
+bool bit_less(bit_t* s, bit_t* t) {
+  assert(s != NULL);
+  assert(t != NULL);
+  assert(s->length == t->length);
+
+  bool is_less = false;
+  const size_t words = num_words(s->length);
+  for (size_t i = 0; i < words; ++i) {
+    if ((s->words[i] & ~t->words[i]) != 0) {
+      return false;
+    } else if (s->words[i] != t->words[i]) {
+      is_less = true;
+    }
+  }
+  return is_less;
+}
+
+bool bit_equal(bit_t* s, bit_t* t) {
+  assert(s != NULL);
+  assert(t != NULL);
+  assert(s->length == t->length);
+  const size_t words = num_words(s->length);
+  for (size_t i = 0; i < words; ++i) {
+    if (s->words[i] != t->words[i]) {
+      return false;
+    }
+  }
+  return true;
+}
+
+bool bit_less_equal(bit_t* s, bit_t* t) {
+  assert(s != NULL);
+  assert(t != NULL);
+  assert(s->length == t->length);
+  const size_t words = num_words(s->length);
+  for (size_t i = 0; i < words; ++i) {
+    if ((s->words[i] & ~t->words[i]) != 0) {
+      return false;
+    }
+  }
+  return true;
+}
+
+static bit_t* bit_copy(bit_t* t) {
+  assert(t != NULL);
+  bit_t* set = bit_new(t->length);
+  if (t->length > 0) {
+    memcpy(set->bytes, t->bytes, num_words(t->length));
+  }
+
+  return set;
+}
+
+#define set_op(sequal, snull, tnull, op) \
+  if (s == t) { assert(s); return sequal; } \
+  else if (s == NULL) { assert(t); return snull; } \
+  else if (t == NULL) { return tnull; }  \
+  else {                                 \
+    assert(s->length == t->length);      \
+    bit_t* set = bit_new(s->length);     \
+    size_t words = num_words(s->length); \
+    for (size_t i = 0; i < words; ++i) { \
+      set->words[i] = s->words[i] op t->words[i]; \
+    }                                    \
+    return set;                          \
+  }
+
+bit_t* bit_union(bit_t* s, bit_t* t) {
+  set_op(bit_copy(s), bit_copy(t), bit_copy(s), |);
+}
+
+bit_t* bit_inter(bit_t* s, bit_t* t) {
+  set_op(bit_copy(t), bit_new(t->length), bit_new(s->length), &);
+}
+
+bit_t* bit_minus(bit_t* s, bit_t* t) {
+  set_op(bit_new(s->length), bit_new(t->length), bit_copy(s), &~);
+}
+
+bit_t* bit_diff(bit_t* s, bit_t* t) {
+  set_op(bit_new(s->length), bit_copy(t), bit_copy(s), ^);
 }
