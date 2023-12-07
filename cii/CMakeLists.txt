@@ -10,6 +10,7 @@ set(SOURCE_FILES
     src/arith.c
     src/assert.c
     src/atom.c
+    src/bit.c
     src/except.c
     src/hash.c
     src/list.c
@@ -25,6 +26,7 @@ set(HEADER_FILES
     include/cii/arith.h
     include/cii/assert.h
     include/cii/atom.h
+    include/cii/bit.h
     include/cii/except.h
     include/cii/hash.h
     include/cii/list.h
