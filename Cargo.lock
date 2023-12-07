@@ -343,6 +343,10 @@ name = "lc-0026-remove-duplicates-from-sorted-array"
 version = "0.1.0"
 
 [[package]]
+name = "lc-0027-remove-element"
+version = "0.1.0"
+
+[[package]]
 name = "lc-0053-maximum-subarray"
 version = "0.1.0"
 
