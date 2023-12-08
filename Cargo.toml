@@ -19,7 +19,6 @@ members = [
 
 # Custome
   "leetcode/*.*",
-  "robert",
 ]
 
 exclude = [
