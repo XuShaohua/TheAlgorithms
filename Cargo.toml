@@ -20,7 +20,6 @@ members = [
 # Custome
   "leetcode/*.*",
   "robert",
-  "weiss",
 ]
 
 exclude = [

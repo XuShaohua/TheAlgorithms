@@ -347,7 +347,15 @@ name = "lc-0027-remove-element"
 version = "0.1.0"
 
 [[package]]
+name = "lc-0034-find-first-and-last-position-of-element-in-sorted-array"
+version = "0.1.0"
+
+[[package]]
 name = "lc-0035-search-insert-position"
+version = "0.1.0"
+
+[[package]]
+name = "lc-0036-valid-sudoku"
 version = "0.1.0"
 
 [[package]]
@@ -359,7 +367,31 @@ name = "lc-0083-remove-duplicates-from-sorted-list"
 version = "0.1.0"
 
 [[package]]
+name = "lc-0128-longest-consecutive-sequence"
+version = "0.1.0"
+
+[[package]]
+name = "lc-0136-single-number"
+version = "0.1.0"
+
+[[package]]
+name = "lc-0137-single-number-ii"
+version = "0.1.0"
+
+[[package]]
 name = "lc-0191-number-of-1-bits"
+version = "0.1.0"
+
+[[package]]
+name = "lc-0217-contains-duplicate"
+version = "0.1.0"
+
+[[package]]
+name = "lc-0219-contains-duplicate-ii"
+version = "0.1.0"
+
+[[package]]
+name = "lc-0220-contains-duplicate-iii"
 version = "0.1.0"
 
 [[package]]
