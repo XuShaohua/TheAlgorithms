@@ -27,6 +27,7 @@ pub fn search_range(nums: Vec<i32>, target: i32) -> [i32; 2] {
         return NOT_FOUND;
     }
 
+    // TODO(Shaohua): Replace with another round of binary search
     while nums[low] == target {
         low -= 1;
     }

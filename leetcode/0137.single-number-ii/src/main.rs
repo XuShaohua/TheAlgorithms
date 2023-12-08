@@ -7,8 +7,8 @@ pub type Digits = [i32; DIGIT_LEN];
 
 fn to_digits(mut num: i32) -> Digits {
     let mut digits = [0; DIGIT_LEN];
-    for i in 0..DIGIT_LEN {
-        digits[i] = num % 2;
+    for digit in digits.iter_mut() {
+        *digit = num % 2;
         num /= 2;
     }
     digits
