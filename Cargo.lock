@@ -356,6 +356,10 @@ name = "lc-0066-plus-one"
 version = "0.1.0"
 
 [[package]]
+name = "lc-0078-subsets"
+version = "0.1.0"
+
+[[package]]
 name = "lc-0083-remove-duplicates-from-sorted-list"
 version = "0.1.0"
 
