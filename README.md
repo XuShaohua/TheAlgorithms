@@ -1,3 +1,4 @@
 
 # About
-All algorithms in Rust.
+
+All data structures and algorithms in Rust.
