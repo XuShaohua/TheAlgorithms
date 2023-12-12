@@ -11,7 +11,7 @@ edition = "2021"
 
 [build]
 build-dir = "book-out"
-create-missing = false
+#create-missing = false
 
 [output.html]
 git-repository-url = "https://github.com/xushaohua/TheAlgorithms"
