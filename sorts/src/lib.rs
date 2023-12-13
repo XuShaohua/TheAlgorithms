@@ -20,6 +20,7 @@ mod odd_even_sort;
 mod selection_sort;
 mod shaker_sort;
 mod shell_sort;
+pub mod util;
 
 pub use bubble_sort::bubble_sort;
 pub use double_sort::double_sort;
