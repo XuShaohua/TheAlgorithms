@@ -2,7 +2,7 @@
 // Use of this source is governed by General Public License that can be found
 // in the LICENSE file.
 
-#![allow(clippy::cast_sign_loss, clippy::module_name_repetitions)]
+#![allow(clippy::cast_sign_loss)]
 
 /// Find the number of digits in a number.
 #[must_use]

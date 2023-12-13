@@ -9,6 +9,7 @@
     clippy::nursery,
     clippy::pedantic
 )]
+#![allow(clippy::module_name_repetitions)]
 
 pub mod abs;
 pub mod addition_without_arithmetic;

@@ -6,8 +6,6 @@
 //!
 //! See [Fibonacci sequence](https://en.wikipedia.org/wiki/Fibonacci_sequence)
 
-#![allow(clippy::module_name_repetitions)]
-
 #[derive(Debug, Clone, Copy, Eq, PartialEq)]
 pub enum FibError {
     IllegalIndex,

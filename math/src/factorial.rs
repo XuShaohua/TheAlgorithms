@@ -2,8 +2,6 @@
 // Use of this source is governed by General Public License that can be found
 // in the LICENSE file.
 
-#![allow(clippy::module_name_repetitions)]
-
 //! The [Factorial](https://en.wikipedia.org/wiki/Factorial) of a non-negative
 //! integer n, is the product of all postive integers less than or equal to n.
 

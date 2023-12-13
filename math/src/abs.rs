@@ -4,7 +4,6 @@
 
 //! Absolute value.
 
-#![allow(clippy::module_name_repetitions)]
 #![allow(clippy::suboptimal_flops)]
 
 /// Find the absolute value of a number.
