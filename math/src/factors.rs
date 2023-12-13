@@ -175,14 +175,14 @@ mod tests {
 
     #[test]
     fn test_get_prime_factors() {
-        assert_eq!(get_prime_factors(0), vec![]);
+        assert_eq!(get_prime_factors(0), Vec::<u64>::new());
         assert_eq!(get_prime_factors(100), vec![2, 2, 5, 5]);
         assert_eq!(get_prime_factors(2560), vec![2, 2, 2, 2, 2, 2, 2, 2, 2, 5]);
     }
 
     #[test]
     fn test_get_prime_factors2() {
-        assert_eq!(get_prime_factors2(0), vec![]);
+        assert_eq!(get_prime_factors2(0), Vec::<u64>::new());
         assert_eq!(get_prime_factors2(100), vec![2, 2, 5, 5]);
         assert_eq!(get_prime_factors2(2560), vec![2, 2, 2, 2, 2, 2, 2, 2, 2, 5]);
     }
