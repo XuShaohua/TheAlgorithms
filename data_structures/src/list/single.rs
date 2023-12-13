@@ -13,6 +13,7 @@ pub struct Node {
     next: SingleLink,
 }
 
+// TODO(Shaohua): Replace with SinglyLinkedList
 #[derive(Clone)]
 pub struct TransactionLog {
     length: usize,
@@ -21,13 +22,15 @@ pub struct TransactionLog {
 }
 
 impl Node {
+    #[must_use]
     pub fn new(value: String) -> Rc<RefCell<Self>> {
         Rc::new(RefCell::new(Self { value, next: None }))
     }
 }
 
 impl TransactionLog {
-    pub fn new_empty() -> Self {
+    #[must_use]
+    pub const fn new_empty() -> Self {
         Self {
             length: 0,
             head: None,
@@ -45,6 +48,8 @@ impl TransactionLog {
         self.length += 1;
     }
 
+    /// # Panics
+    /// Raise error if failed to extract node.
     pub fn pop(&mut self) -> Option<String> {
         self.head.take().map(|head: Rc<RefCell<Node>>| {
             if let Some(next) = head.borrow_mut().next.take() {

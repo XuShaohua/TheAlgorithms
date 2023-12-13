@@ -14,6 +14,7 @@ pub struct Node {
     previous: Link,
 }
 
+// TODO(Shaohua): Replace with DoublyLinkedList
 #[derive(Debug, Clone)]
 pub struct TransactionLog {
     length: usize,
@@ -26,6 +27,7 @@ pub struct ListIterator {
 }
 
 impl Node {
+    #[must_use]
     pub fn new(value: String) -> Rc<RefCell<Self>> {
         Rc::new(RefCell::new(Self {
             value,
@@ -36,7 +38,8 @@ impl Node {
 }
 
 impl TransactionLog {
-    pub fn new_empty() -> Self {
+    #[must_use]
+    pub const fn new_empty() -> Self {
         Self {
             length: 0,
             head: None,
@@ -58,6 +61,8 @@ impl TransactionLog {
         self.length += 1;
     }
 
+    /// # Panics
+    /// Raise error if failed to extract node.
     pub fn pop(&mut self) -> Option<String> {
         self.head.take().map(|head: Rc<RefCell<Node>>| {
             if let Some(next) = head.borrow_mut().next.take() {
@@ -75,7 +80,8 @@ impl TransactionLog {
 }
 
 impl ListIterator {
-    pub fn new(started_at: Link) -> Self {
+    #[must_use]
+    pub const fn new(started_at: Link) -> Self {
         Self {
             current: started_at,
         }
@@ -88,14 +94,11 @@ impl Iterator for ListIterator {
     fn next(&mut self) -> Option<Self::Item> {
         let current = &self.current;
         let mut result = None;
-        self.current = match current {
-            Some(ref current) => {
-                let current = current.borrow();
-                result = Some(current.value.clone());
-                current.next.clone()
-            }
-            None => None,
-        };
+        self.current = current.as_ref().and_then(|current| {
+            let current = current.borrow();
+            result = Some(current.value.clone());
+            current.next.clone()
+        });
 
         result
     }
@@ -105,14 +108,11 @@ impl DoubleEndedIterator for ListIterator {
     fn next_back(&mut self) -> Option<Self::Item> {
         let current = &self.current;
         let mut result = None;
-        self.current = match current {
-            Some(ref current) => {
-                let current = current.borrow();
-                result = Some(current.value.clone());
-                current.previous.clone()
-            }
-            None => None,
-        };
+        self.current = current.as_ref().and_then(|current| {
+            let current = current.borrow();
+            result = Some(current.value.clone());
+            current.previous.clone()
+        });
         result
     }
 }
