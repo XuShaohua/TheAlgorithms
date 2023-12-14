@@ -27,15 +27,16 @@ impl<T> ListNode<T> {
         Box::new(Self { value, next })
     }
 
+    /// Check wether current node is the the last one in list.
     #[must_use]
     pub const fn is_last(&self) -> bool {
-        self.next.is_some()
+        self.next.is_none()
     }
 }
 
 impl<T> LinkedListV1<T> {
     #[must_use]
-    pub const fn new_empty() -> Self {
+    pub const fn new() -> Self {
         Self {
             length: 0,
             head: None,
@@ -56,8 +57,7 @@ impl<T> LinkedListV1<T> {
 
     /// Add a new node to head of list.
     pub fn push(&mut self, value: T) {
-        let old_head: ListNodePtr<T> = self.head.take();
-        let head = ListNode::with_next(value, old_head);
+        let head = ListNode::with_next(value, self.head.take());
         self.head = Some(head);
         self.length += 1;
     }
@@ -65,29 +65,27 @@ impl<T> LinkedListV1<T> {
     /// Insert the value at specific position in list.
     ///
     /// Time is O(n).
-    pub fn insert_at(&mut self, _value: T, pos: usize) {
-        assert!(pos < self.length);
+    pub fn insert_at(&mut self, _value: &T, pos: usize) {
+        debug_assert!(pos < self.length);
     }
 
+    /// Remove the head node and return the value.
+    #[must_use]
     pub fn pop(&mut self) -> Option<T> {
-        unimplemented!()
-        /*
-        self.head.take().map(|head: Rc<RefCell<Node>>| {
-            if let Some(next) = head.borrow_mut().next.take() {
-                self.head = Some(next);
-            } else {
-                self.tail.take();
+        match self.head.take() {
+            Some(head) => {
+                let value = Some(head.value);
+                self.head = head.next;
+                self.length -= 1;
+                value
             }
-            self.length -= 1;
-            let node: Option<RefCell<Node>> = Rc::try_unwrap(head).ok();
-            node.expect("").into_inner().value
-        })
-        */
+            None => None,
+        }
     }
 
     /// Remove a node at position.
     pub fn remove_at(&mut self, pos: usize) {
-        assert!(pos < self.length);
+        debug_assert!(pos < self.length);
     }
 }
 
@@ -106,5 +104,49 @@ where
     /// Delete a node from list with same value.
     pub fn remove(&mut self, _value: &T) -> Option<usize> {
         unimplemented!()
+    }
+}
+
+#[cfg(test)]
+mod tests {
+    use super::LinkedListV1;
+
+    #[test]
+    fn test_new() {
+        let list = LinkedListV1::<i32>::new();
+        assert!(list.is_empty());
+    }
+
+    #[test]
+    fn test_push() {
+        let mut list = LinkedListV1::new();
+        list.push(2);
+        list.push(3);
+        list.push(5);
+        list.push(7);
+        list.push(11);
+        assert_eq!(list.len(), 5);
+    }
+
+    #[test]
+    fn test_pop() {
+        let mut list = LinkedListV1::new();
+        list.push(5);
+        list.push(7);
+        assert_eq!(list.pop(), Some(7));
+        assert_eq!(list.len(), 1);
+        let _ = list.pop();
+        assert!(list.is_empty());
+    }
+
+    #[test]
+    fn test_drop() {
+        // The default recursive limit rustc-v1.74 is 128.
+        // See https://doc.rust-lang.org/reference/attributes/limits.html
+        let mut list = LinkedListV1::new();
+        for i in 0..(128 * 8) {
+            list.push(i);
+        }
+        drop(list);
     }
 }
