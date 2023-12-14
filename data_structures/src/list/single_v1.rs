@@ -22,6 +22,10 @@ pub struct Iter<'a, T> {
     next: Option<&'a ListNode<T>>,
 }
 
+pub struct IterMut<'a, T> {
+    next: Option<&'a mut ListNode<T>>,
+}
+
 impl<T> ListNode<T> {
     #[must_use]
     pub fn new(value: T) -> Box<Self> {
@@ -114,6 +118,13 @@ impl<T> LinkedListV1<T> {
             next: self.head.as_deref(),
         }
     }
+
+    #[must_use]
+    pub fn iter_mut(&mut self) -> IterMut<T> {
+        IterMut {
+            next: self.head.as_deref_mut(),
+        }
+    }
 }
 
 impl<T> Drop for LinkedListV1<T> {
@@ -180,6 +191,17 @@ impl<'a, T> Iterator for Iter<'a, T> {
         self.next.map(|node| {
             self.next = node.next.as_deref();
             &node.value
+        })
+    }
+}
+
+impl<'a, T> Iterator for IterMut<'a, T> {
+    type Item = &'a mut T;
+
+    fn next(&mut self) -> Option<Self::Item> {
+        self.next.take().map(|node| {
+            self.next = node.next.as_deref_mut();
+            &mut node.value
         })
     }
 }
@@ -269,6 +291,22 @@ mod tests {
         list.push(5);
         list.push(7);
         let nums = &[7, 5, 3, 2];
+        for (val, num) in list.iter().zip(nums) {
+            assert_eq!(val, num);
+        }
+    }
+
+    #[test]
+    fn test_iter_mut() {
+        let mut list = LinkedListV1::new();
+        list.push(2);
+        list.push(3);
+        list.push(5);
+        list.push(7);
+        for val in list.iter_mut() {
+            *val *= 2;
+        }
+        let nums = &[14, 10, 6, 4];
         for (val, num) in list.iter().zip(nums) {
             assert_eq!(val, num);
         }
