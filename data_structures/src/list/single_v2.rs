@@ -20,6 +20,12 @@ struct ListNode<T> {
     next: ListNodePtr<T>,
 }
 
+impl<T: Clone> Clone for ListNode<T> {
+    fn clone(&self) -> Self {
+        unimplemented!()
+    }
+}
+
 impl<T> ListNode<T> {
     #[must_use]
     pub fn new(value: T) -> Rc<RefCell<Self>> {
@@ -46,6 +52,22 @@ impl<T> LinkedListV2<T> {
             head: None,
             tail: None,
         }
+    }
+
+    #[must_use]
+    pub fn from_vec(vec: Vec<T>) -> Self {
+        let length = vec.len();
+        let mut tail = None;
+        let mut node = None;
+        for item in vec {
+            let node_rc = ListNode::with_next(item, node);
+            if tail.is_none() {
+                tail.replace(node_rc.clone());
+            }
+            node = Some(node_rc);
+        }
+        let head = node;
+        Self { length, head, tail }
     }
 
     #[inline]
@@ -84,23 +106,20 @@ impl<T> LinkedListV2<T> {
 
     /// Remove a node from head of list.
     pub fn pop_front(&mut self) -> Option<T> {
-        match self.head.take() {
-            Some(head) => match Rc::try_unwrap(head).ok() {
-                Some(head) => {
-                    if let Some(next) = head.borrow_mut().next.take() {
-                        self.head = Some(next);
-                    } else {
-                        // Reset tail to None if head->next is None
-                        self.tail.take();
-                    }
-                    self.length -= 1;
-                    // If head has more than one strong reference, than
-                    Some(head.into_inner().value)
+        self.head
+            .take()
+            // Extract value from head if it has only one strong reference.
+            .and_then(|head: Rc<RefCell<ListNode<T>>>| Rc::try_unwrap(head).ok())
+            .map(|head| {
+                if let Some(next) = head.borrow_mut().next.take() {
+                    self.head = Some(next);
+                } else {
+                    // Reset tail to None if head->next is None
+                    self.tail.take();
                 }
-                None => None,
-            },
-            None => None,
-        }
+                self.length -= 1;
+                head.into_inner().value
+            })
     }
 
     /// Remove a node from tail of list.
