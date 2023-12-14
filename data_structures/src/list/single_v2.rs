@@ -20,6 +20,11 @@ struct ListNode<T> {
     next: ListNodePtr<T>,
 }
 
+//pub struct Iter<'a, T> {
+//    next: ListNodePtr<T>,
+//    phantom_data: PhantomData<&'a T>,
+//}
+
 impl<T: Clone> Clone for ListNode<T> {
     fn clone(&self) -> Self {
         unimplemented!()
@@ -106,6 +111,10 @@ impl<T> LinkedListV2<T> {
 
     /// Remove a node from head of list.
     pub fn pop_front(&mut self) -> Option<T> {
+        if self.length == 1 {
+            // Reset tail to None if both head and tail points to the same node.
+            self.tail.take();
+        }
         self.head
             .take()
             // Extract value from head if it has only one strong reference.
@@ -113,9 +122,6 @@ impl<T> LinkedListV2<T> {
             .map(|head| {
                 if let Some(next) = head.borrow_mut().next.take() {
                     self.head = Some(next);
-                } else {
-                    // Reset tail to None if head->next is None
-                    self.tail.take();
                 }
                 self.length -= 1;
                 head.into_inner().value
@@ -155,6 +161,14 @@ impl<T> LinkedListV2<T> {
     pub fn tail_mut(&mut self) -> Option<&mut T> {
         unimplemented!()
     }
+
+    //    #[must_use]
+    //    pub fn iter(&self) -> Iter<T> {
+    //        Iter {
+    //            next: self.head.clone(),
+    //            phantom_data: PhantomData,
+    //        }
+    //    }
 }
 
 impl<T> FromIterator<T> for LinkedListV2<T> {
@@ -165,5 +179,64 @@ impl<T> FromIterator<T> for LinkedListV2<T> {
             list.push_front(item);
         }
         list
+    }
+}
+
+impl<T> Drop for LinkedListV2<T> {
+    fn drop(&mut self) {
+        // Reset tail first.
+        self.tail.take();
+
+        let mut node = self.head.take();
+        while let Some(node_rc) = node {
+            node = Rc::try_unwrap(node_rc)
+                .ok()
+                .and_then(|node| node.borrow_mut().next.take());
+        }
+    }
+}
+
+#[cfg(test)]
+mod tests {
+    use super::LinkedListV2;
+
+    #[test]
+    fn test_new() {
+        let list = LinkedListV2::<i32>::new();
+        assert!(list.is_empty());
+    }
+
+    #[test]
+    fn test_push() {
+        let mut list = LinkedListV2::new();
+        list.push_front(2);
+        list.push_front(3);
+        list.push_front(5);
+        list.push_front(7);
+        list.push_front(11);
+        assert_eq!(list.len(), 5);
+    }
+
+    #[test]
+    fn test_pop() {
+        let mut list = LinkedListV2::new();
+        list.push_front(3);
+        list.push_front(5);
+        list.push_front(7);
+        assert_eq!(list.pop_front(), Some(7));
+        assert_eq!(list.len(), 2);
+        assert_eq!(list.pop_front(), Some(5));
+        assert_eq!(list.pop_front(), Some(3));
+        println!("len of list: {}", list.len());
+        assert!(list.is_empty());
+    }
+
+    #[test]
+    fn test_drop() {
+        let mut list = LinkedListV2::new();
+        for i in 0..(128 * 200) {
+            list.push_front(i);
+        }
+        drop(list);
     }
 }
