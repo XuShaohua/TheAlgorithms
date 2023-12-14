@@ -85,13 +85,13 @@ impl<T> LinkedListV1<T> {
     /// Insert the value at specific position in list.
     ///
     /// Time is O(n).
-    pub fn insert_at(&mut self, _value: &T, pos: usize) {
-        debug_assert!(pos < self.length);
+    pub fn insert_at(&mut self, _value: T, _pos: usize) -> Option<usize> {
+        unimplemented!()
     }
 
     /// Remove a node at position.
-    pub fn remove_at(&mut self, pos: usize) {
-        debug_assert!(pos < self.length);
+    pub fn remove_at(&mut self, _pos: usize) -> Option<T> {
+        unimplemented!()
     }
 
     /// Get head node in list.
@@ -156,8 +156,7 @@ where
     /// Returns position of value in list.
     ///
     /// Returns None if not found.
-    pub fn find(&self, _value: &T) -> &ListNodePtr<T> {
-        // TODO(Shaohua): Returns a reference
+    pub fn find(&self, _value: &T) -> Option<usize> {
         unimplemented!()
     }
 
@@ -243,7 +242,7 @@ mod tests {
         // The default recursive limit rustc-v1.74 is 128.
         // See https://doc.rust-lang.org/reference/attributes/limits.html
         let mut list = LinkedListV1::new();
-        for i in 0..(128 * 8) {
+        for i in 0..(128 * 200) {
             list.push(i);
         }
         drop(list);
