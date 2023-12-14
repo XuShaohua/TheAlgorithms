@@ -18,6 +18,10 @@ pub struct ListNode<T> {
 
 pub struct IntoIter<T>(LinkedListV1<T>);
 
+pub struct Iter<'a, T> {
+    next: Option<&'a ListNode<T>>,
+}
+
 impl<T> ListNode<T> {
     #[must_use]
     pub fn new(value: T) -> Box<Self> {
@@ -87,22 +91,28 @@ impl<T> LinkedListV1<T> {
     }
 
     /// Get head node in list.
-    pub fn head_node(&self) -> &ListNodePtr<T> {
+    #[must_use]
+    pub const fn head_node(&self) -> &ListNodePtr<T> {
         &self.head
     }
 
     /// Get reference of value in head node in list.
+    #[must_use]
     pub fn head(&self) -> Option<&T> {
         self.head.as_ref().map(|head| &head.value)
     }
 
     /// Get mutable reference of value in head node in list.
+    #[must_use]
     pub fn head_mut(&mut self) -> Option<&mut T> {
         self.head.as_mut().map(|head| &mut head.value)
     }
 
-    pub fn into_iter(self) -> IntoIter<T> {
-        IntoIter(self)
+    #[must_use]
+    pub fn iter(&self) -> Iter<T> {
+        Iter {
+            next: self.head.as_deref(),
+        }
     }
 }
 
@@ -135,7 +145,7 @@ where
     /// Returns position of value in list.
     ///
     /// Returns None if not found.
-    pub fn find(&self, _value: &T) -> ListNodePtr<T> {
+    pub fn find(&self, _value: &T) -> &ListNodePtr<T> {
         // TODO(Shaohua): Returns a reference
         unimplemented!()
     }
@@ -146,11 +156,31 @@ where
     }
 }
 
+impl<T> IntoIterator for LinkedListV1<T> {
+    type Item = T;
+    type IntoIter = IntoIter<T>;
+
+    fn into_iter(self) -> Self::IntoIter {
+        IntoIter(self)
+    }
+}
+
 impl<T> Iterator for IntoIter<T> {
     type Item = T;
 
     fn next(&mut self) -> Option<Self::Item> {
         self.0.pop()
+    }
+}
+
+impl<'a, T> Iterator for Iter<'a, T> {
+    type Item = &'a T;
+
+    fn next(&mut self) -> Option<Self::Item> {
+        self.next.map(|node| {
+            self.next = node.next.as_deref();
+            &node.value
+        })
     }
 }
 
@@ -229,5 +259,18 @@ mod tests {
         assert_eq!(iter.next(), Some(3));
         assert_eq!(iter.next(), Some(2));
         assert_eq!(iter.next(), None);
+    }
+
+    #[test]
+    fn test_iter() {
+        let mut list = LinkedListV1::new();
+        list.push(2);
+        list.push(3);
+        list.push(5);
+        list.push(7);
+        let nums = &[7, 5, 3, 2];
+        for (val, num) in list.iter().zip(nums) {
+            assert_eq!(val, num);
+        }
     }
 }
