@@ -62,6 +62,16 @@ impl<T> LinkedListV1<T> {
         self.length += 1;
     }
 
+    /// Remove the head node and return the value.
+    #[must_use]
+    pub fn pop(&mut self) -> Option<T> {
+        self.head.take().map(|head| {
+            self.head = head.next;
+            self.length -= 1;
+            head.value
+        })
+    }
+
     /// Insert the value at specific position in list.
     ///
     /// Time is O(n).
@@ -69,25 +79,32 @@ impl<T> LinkedListV1<T> {
         debug_assert!(pos < self.length);
     }
 
-    /// Remove the head node and return the value.
-    #[must_use]
-    pub fn pop(&mut self) -> Option<T> {
-        match self.head.take() {
-            Some(head) => {
-                let value = Some(head.value);
-                self.head = head.next;
-                self.length -= 1;
-                value
-            }
-            None => None,
-        }
-    }
-
     /// Remove a node at position.
     pub fn remove_at(&mut self, pos: usize) {
         debug_assert!(pos < self.length);
     }
 }
+
+impl<T> Drop for LinkedListV1<T> {
+    fn drop(&mut self) {
+        let mut node = self.head.take();
+        while let Some(mut boxed_node) = node {
+            node = boxed_node.next.take();
+            // No need to drop boxed_node explicitly.
+            //drop(boxed_node);
+        }
+    }
+}
+
+//impl<T> Drop for LinkedListV1<T> {
+//    fn drop(&mut self) {
+//        let mut node = self.head.take();
+//        while let Some(boxed_node) = node {
+//            // Partial move.
+//            node = boxed_node.next;
+//        }
+//    }
+//}
 
 impl<T> LinkedListV1<T>
 where
