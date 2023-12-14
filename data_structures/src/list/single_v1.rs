@@ -16,6 +16,8 @@ pub struct ListNode<T> {
     next: ListNodePtr<T>,
 }
 
+pub struct IntoIter<T>(LinkedListV1<T>);
+
 impl<T> ListNode<T> {
     #[must_use]
     pub fn new(value: T) -> Box<Self> {
@@ -98,6 +100,10 @@ impl<T> LinkedListV1<T> {
     pub fn head_mut(&mut self) -> Option<&mut T> {
         self.head.as_mut().map(|head| &mut head.value)
     }
+
+    pub fn into_iter(self) -> IntoIter<T> {
+        IntoIter(self)
+    }
 }
 
 impl<T> Drop for LinkedListV1<T> {
@@ -137,6 +143,14 @@ where
     /// Delete a node from list with same value.
     pub fn remove(&mut self, _value: &T) -> Option<usize> {
         unimplemented!()
+    }
+}
+
+impl<T> Iterator for IntoIter<T> {
+    type Item = T;
+
+    fn next(&mut self) -> Option<Self::Item> {
+        self.0.pop()
     }
 }
 
@@ -200,5 +214,20 @@ mod tests {
         // Option::replace() will not work, as it requires `&mut Option<T>`.
         // list.head_mut().replace(11);
         assert_eq!(list.head(), Some(&11));
+    }
+
+    #[test]
+    fn test_into_iter() {
+        let mut list = LinkedListV1::new();
+        list.push(2);
+        list.push(3);
+        list.push(5);
+        list.push(7);
+        let mut iter = list.into_iter();
+        assert_eq!(iter.next(), Some(7));
+        assert_eq!(iter.next(), Some(5));
+        assert_eq!(iter.next(), Some(3));
+        assert_eq!(iter.next(), Some(2));
+        assert_eq!(iter.next(), None);
     }
 }
