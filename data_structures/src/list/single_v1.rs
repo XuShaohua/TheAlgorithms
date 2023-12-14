@@ -11,7 +11,7 @@ pub struct LinkedListV1<T> {
     head: ListNodePtr<T>,
 }
 
-pub struct ListNode<T> {
+struct ListNode<T> {
     value: T,
     next: ListNodePtr<T>,
 }
@@ -28,11 +28,13 @@ pub struct IterMut<'a, T> {
 
 impl<T> ListNode<T> {
     #[must_use]
+    #[allow(clippy::unnecessary_box_returns)]
     pub fn new(value: T) -> Box<Self> {
         Box::new(Self { value, next: None })
     }
 
     #[must_use]
+    #[allow(clippy::unnecessary_box_returns)]
     pub fn with_next(value: T, next: ListNodePtr<T>) -> Box<Self> {
         Box::new(Self { value, next })
     }
@@ -85,19 +87,13 @@ impl<T> LinkedListV1<T> {
     /// Insert the value at specific position in list.
     ///
     /// Time is O(n).
-    pub fn insert_at(&mut self, _value: T, _pos: usize) -> Option<usize> {
+    pub fn insert_at(&mut self, _value: &T, _pos: usize) -> Option<usize> {
         unimplemented!()
     }
 
     /// Remove a node at position.
     pub fn remove_at(&mut self, _pos: usize) -> Option<T> {
         unimplemented!()
-    }
-
-    /// Get head node in list.
-    #[must_use]
-    pub const fn head_node(&self) -> &ListNodePtr<T> {
-        &self.head
     }
 
     /// Get reference of value in head node in list.

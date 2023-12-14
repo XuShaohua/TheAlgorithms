@@ -5,30 +5,27 @@
 use std::cell::RefCell;
 use std::rc::Rc;
 
-type Link = Option<Rc<RefCell<Node>>>;
+type NodePtr<T> = Option<Rc<RefCell<Node<T>>>>;
 
-#[derive(Debug, Clone)]
-pub struct Node {
-    value: String,
-    next: Link,
-    previous: Link,
+pub struct Node<T> {
+    value: T,
+    next: NodePtr<T>,
+    previous: NodePtr<T>,
 }
 
-// TODO(Shaohua): Replace with DoublyLinkedList
-#[derive(Debug, Clone)]
-pub struct TransactionLog {
+pub struct DoublyLinkedList<T> {
     length: usize,
-    head: Link,
-    tail: Link,
+    head: NodePtr<T>,
+    tail: NodePtr<T>,
 }
 
-pub struct ListIterator {
-    current: Link,
+pub struct ListIterator<'a T> {
+    current: NodePtr<'a T>,
 }
 
-impl Node {
+impl<T> Node<T> {
     #[must_use]
-    pub fn new(value: String) -> Rc<RefCell<Self>> {
+    pub fn new(value: T) -> Rc<RefCell<Self>> {
         Rc::new(RefCell::new(Self {
             value,
             next: None,
@@ -37,9 +34,9 @@ impl Node {
     }
 }
 
-impl TransactionLog {
+impl<T> DoublyLinkedList<T> {
     #[must_use]
-    pub const fn new_empty() -> Self {
+    pub const fn new() -> Self {
         Self {
             length: 0,
             head: None,
@@ -47,7 +44,7 @@ impl TransactionLog {
         }
     }
 
-    pub fn append(&mut self, value: String) {
+    pub fn append(&mut self, value: T) {
         let tail = Node::new(value);
         match self.tail.take() {
             Some(old_tail) => {
@@ -63,8 +60,8 @@ impl TransactionLog {
 
     /// # Panics
     /// Raise error if failed to extract node.
-    pub fn pop(&mut self) -> Option<String> {
-        self.head.take().map(|head: Rc<RefCell<Node>>| {
+    pub fn pop(&mut self) -> Option<T> {
+        self.head.take().map(|head: Rc<RefCell<Node<T>>>| {
             if let Some(next) = head.borrow_mut().next.take() {
                 // Reset previous pointer.
                 next.borrow_mut().previous = None;
@@ -73,30 +70,30 @@ impl TransactionLog {
                 self.tail.take();
             }
             self.length -= 1;
-            let node: Option<RefCell<Node>> = Rc::try_unwrap(head).ok();
+            let node: Option<RefCell<Node<T>>> = Rc::try_unwrap(head).ok();
             node.expect("").into_inner().value
         })
     }
 }
 
-impl ListIterator {
+impl<T> ListIterator<T> {
     #[must_use]
-    pub const fn new(started_at: Link) -> Self {
+    pub const fn new(started_at: NodePtr<T>) -> Self {
         Self {
             current: started_at,
         }
     }
 }
 
-impl Iterator for ListIterator {
-    type Item = String;
+impl<T> Iterator for ListIterator<T> {
+    type Item = &'a T;
 
     fn next(&mut self) -> Option<Self::Item> {
         let current = &self.current;
         let mut result = None;
         self.current = current.as_ref().and_then(|current| {
             let current = current.borrow();
-            result = Some(current.value.clone());
+            result = Some(&current.value);
             current.next.clone()
         });
 
@@ -104,7 +101,7 @@ impl Iterator for ListIterator {
     }
 }
 
-impl DoubleEndedIterator for ListIterator {
+impl<T> DoubleEndedIterator for ListIterator<T> {
     fn next_back(&mut self) -> Option<Self::Item> {
         let current = &self.current;
         let mut result = None;

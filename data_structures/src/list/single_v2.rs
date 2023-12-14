@@ -8,12 +8,14 @@ use std::cell::RefCell;
 use std::rc::Rc;
 
 type ListNodePtr<T> = Option<Rc<RefCell<ListNode<T>>>>;
+
 pub struct LinkedListV2<T> {
     length: usize,
     head: ListNodePtr<T>,
+    tail: ListNodePtr<T>,
 }
 
-pub struct ListNode<T> {
+struct ListNode<T> {
     value: T,
     next: ListNodePtr<T>,
 }
@@ -29,18 +31,20 @@ impl<T> ListNode<T> {
         Rc::new(RefCell::new(Self { value, next }))
     }
 
+    /// Check wether current node is the the last one in list.
     #[must_use]
     pub const fn is_last(&self) -> bool {
-        self.next.is_some()
+        self.next.is_none()
     }
 }
 
 impl<T> LinkedListV2<T> {
     #[must_use]
-    pub const fn new_empty() -> Self {
+    pub const fn new() -> Self {
         Self {
             length: 0,
             head: None,
+            tail: None,
         }
     }
 
@@ -56,57 +60,77 @@ impl<T> LinkedListV2<T> {
         self.length == 0
     }
 
-    /// Add a new node to head of list.
-    pub fn push(&mut self, value: T) {
-        let old_head: ListNodePtr<T> = self.head.take();
-        let head = ListNode::with_next(value, old_head);
-        self.head = Some(head);
+    /// Add a new node to tail of list.
+    pub fn push_back(&mut self, value: T) {
+        let node = ListNode::new(value);
+        match self.tail.take() {
+            Some(tail) => tail.borrow_mut().next = Some(node.clone()),
+            None => self.head = Some(node.clone()),
+        }
+        self.tail = Some(node);
         self.length += 1;
     }
 
-    /// Insert the value at specific position in list.
+    /// Add a new node to head of list.
+    pub fn push_front(&mut self, value: T) {
+        let node = ListNode::new(value);
+        match self.head.take() {
+            Some(head) => node.borrow_mut().next = Some(head),
+            None => self.tail = Some(node.clone()),
+        }
+        self.head = Some(node);
+        self.length += 1;
+    }
+
+    /// Remove a node from head of list.
+    pub fn pop_front(&mut self) -> Option<T> {
+        match self.head.take() {
+            Some(head) => match Rc::try_unwrap(head).ok() {
+                Some(head) => {
+                    if let Some(next) = head.borrow_mut().next.take() {
+                        self.head = Some(next);
+                    } else {
+                        // Reset tail to None if head->next is None
+                        self.tail.take();
+                    }
+                    self.length -= 1;
+                    // If head has more than one strong reference, than
+                    Some(head.into_inner().value)
+                }
+                None => None,
+            },
+            None => None,
+        }
+    }
+
+    /// Remove a node from tail of list.
     ///
     /// Time is O(n).
-    pub fn insert_at(&mut self, _value: T, pos: usize) {
-        assert!(pos < self.length);
-    }
-
-    pub fn pop(&mut self) -> Option<T> {
-        unimplemented!()
-        /*
-        self.head.take().map(|head: Rc<RefCell<Node>>| {
-            if let Some(next) = head.borrow_mut().next.take() {
-                self.head = Some(next);
-            } else {
-                self.tail.take();
-            }
-            self.length -= 1;
-            let node: Option<RefCell<Node>> = Rc::try_unwrap(head).ok();
-            node.expect("").into_inner().value
-        })
-        */
-    }
-
-    /// Remove a node at position.
-    pub fn remove_at(&mut self, pos: usize) {
-        assert!(pos < self.length);
-    }
-}
-
-impl<T> LinkedListV2<T>
-where
-    T: PartialEq,
-{
-    /// Returns position of value in list.
-    ///
-    /// Returns None if not found.
-    pub fn find(&self, _value: &T) -> ListNodePtr<T> {
-        // TODO(Shaohua): Returns a reference
+    fn pop_back() -> Option<T> {
         unimplemented!()
     }
 
-    /// Delete a node from list with same value.
-    pub fn remove(&mut self, _value: &T) -> Option<usize> {
+    /// Get reference of value in head node of list.
+    #[must_use]
+    pub fn head(&self) -> Option<&T> {
+        unimplemented!()
+    }
+
+    /// Get mutable reference of value in head node of list.
+    #[must_use]
+    pub fn head_mut(&mut self) -> Option<&mut T> {
+        unimplemented!()
+    }
+
+    /// Get reference of value in tail node of list.
+    #[must_use]
+    pub fn tail(&self) -> Option<&T> {
+        unimplemented!()
+    }
+
+    /// Get mutable reference of value in tail node of list.
+    #[must_use]
+    pub fn tail_mut(&mut self) -> Option<&mut T> {
         unimplemented!()
     }
 }
