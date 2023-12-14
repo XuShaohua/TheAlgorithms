@@ -8,4 +8,4 @@
 set -xe
 
 mdbook build
-rsync --delete -ave "ssh -p ${ZU_SERVER_PORT}" book-out/ ${ZU_SERVER}/algs
+rsync --delete -ave "ssh -p ${ZU_SERVER_PORT}" book_out/ ${ZU_SERVER}/algs

@@ -1,17 +1,25 @@
 
 [book]
 title = "数据结构与算法 Rust 语言实现"
-authors = ["Shaohua <shaohua@biofan.org>"]
 description = ""
+authors = ["Shaohua <shaohua@biofan.org>"]
 src = "book"
-language = "zh_CN"
+language = "zh-CN"
 
 [rust]
 edition = "2021"
 
 [build]
-build-dir = "book-out"
-#create-missing = false
+build-dir = "book_out"
+create-missing = false
 
 [output.html]
 git-repository-url = "https://github.com/xushaohua/TheAlgorithms"
+
+[output.html.playground]
+copy-js = true
+editable = true
+
+[output.html.fold]
+enable = true
+level = 0
