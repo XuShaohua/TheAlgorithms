@@ -129,6 +129,9 @@ impl<T> LinkedListV2<T> {
         unimplemented!()
     }
 
+    /// Reverse orders of node in list.
+    pub fn reverse(&mut self) {}
+
     /// Get reference of value in head node of list.
     #[must_use]
     pub fn head(&self) -> Option<&T> {
@@ -151,5 +154,16 @@ impl<T> LinkedListV2<T> {
     #[must_use]
     pub fn tail_mut(&mut self) -> Option<&mut T> {
         unimplemented!()
+    }
+}
+
+impl<T> FromIterator<T> for LinkedListV2<T> {
+    fn from_iter<I: IntoIterator<Item = T>>(iter: I) -> Self {
+        let iter = iter.into_iter();
+        let mut list = Self::new();
+        for item in iter {
+            list.push_front(item);
+        }
+        list
     }
 }
