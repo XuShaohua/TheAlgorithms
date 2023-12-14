@@ -83,6 +83,21 @@ impl<T> LinkedListV1<T> {
     pub fn remove_at(&mut self, pos: usize) {
         debug_assert!(pos < self.length);
     }
+
+    /// Get head node in list.
+    pub fn head_node(&self) -> &ListNodePtr<T> {
+        &self.head
+    }
+
+    /// Get reference of value in head node in list.
+    pub fn head(&self) -> Option<&T> {
+        self.head.as_ref().map(|head| &head.value)
+    }
+
+    /// Get mutable reference of value in head node in list.
+    pub fn head_mut(&mut self) -> Option<&mut T> {
+        self.head.as_mut().map(|head| &mut head.value)
+    }
 }
 
 impl<T> Drop for LinkedListV1<T> {
@@ -96,6 +111,7 @@ impl<T> Drop for LinkedListV1<T> {
     }
 }
 
+// Or use move
 //impl<T> Drop for LinkedListV1<T> {
 //    fn drop(&mut self) {
 //        let mut node = self.head.take();
@@ -165,5 +181,24 @@ mod tests {
             list.push(i);
         }
         drop(list);
+    }
+
+    #[test]
+    fn test_head() {
+        let mut list = LinkedListV1::new();
+        list.push(5);
+        list.push(7);
+        assert_eq!(list.head(), Some(&7));
+    }
+
+    #[test]
+    fn test_head_mut() {
+        let mut list = LinkedListV1::new();
+        list.push(5);
+        list.push(7);
+        list.head_mut().map(|value| *value = 11);
+        // Option::replace() will not work, as it requires `&mut Option<T>`.
+        // list.head_mut().replace(11);
+        assert_eq!(list.head(), Some(&11));
     }
 }
