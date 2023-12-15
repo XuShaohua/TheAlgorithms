@@ -2,7 +2,7 @@
 // Use of this source is governed by General Public License that can be
 // found in the LICENSE file.
 
-use std::cell::RefCell;
+use std::cell::{Ref, RefCell};
 use std::rc::Rc;
 
 type NodePtr<T> = Option<Rc<RefCell<Node<T>>>>;
@@ -19,8 +19,8 @@ pub struct DoublyLinkedList<T> {
     tail: NodePtr<T>,
 }
 
-pub struct ListIterator<'a T> {
-    current: NodePtr<'a T>,
+pub struct ListIterator<T> {
+    current: NodePtr<T>,
 }
 
 impl<T> Node<T> {
@@ -85,31 +85,35 @@ impl<T> ListIterator<T> {
     }
 }
 
-impl<T> Iterator for ListIterator<T> {
-    type Item = &'a T;
+impl<T: Clone> Iterator for ListIterator<T> {
+    type Item = T;
 
     fn next(&mut self) -> Option<Self::Item> {
-        let current = &self.current;
         let mut result = None;
-        self.current = current.as_ref().and_then(|current| {
-            let current = current.borrow();
-            result = Some(&current.value);
-            current.next.clone()
-        });
+        self.current = self
+            .current
+            .as_ref()
+            .and_then(|current: &Rc<RefCell<Node<T>>>| {
+                let current: Ref<'_, Node<T>> = current.borrow();
+                result = Some(current.value.clone());
+                current.next.clone()
+            });
 
         result
     }
 }
 
-impl<T> DoubleEndedIterator for ListIterator<T> {
+impl<T: Clone> DoubleEndedIterator for ListIterator<T> {
     fn next_back(&mut self) -> Option<Self::Item> {
-        let current = &self.current;
         let mut result = None;
-        self.current = current.as_ref().and_then(|current| {
-            let current = current.borrow();
-            result = Some(current.value.clone());
-            current.previous.clone()
-        });
+        self.current = self
+            .current
+            .as_ref()
+            .and_then(|current: &Rc<RefCell<Node<T>>>| {
+                let current: Ref<'_, Node<T>> = current.borrow();
+                result = Some(current.value.clone());
+                current.previous.clone()
+            });
         result
     }
 }
