@@ -2,7 +2,11 @@
 // Use of this source is governed by General Public License that can be
 // found in the LICENSE file.
 
+#![allow(dead_code)]
+#![allow(unused_imports)]
+
 use std::cell::{Ref, RefCell, RefMut};
+use std::marker::PhantomData;
 use std::rc::Rc;
 
 type NodePtr<T> = Option<Rc<RefCell<Node<T>>>>;
@@ -21,8 +25,11 @@ pub struct DoublyLinkedList<T> {
 
 pub struct IntoIter<T>(DoublyLinkedList<T>);
 
-pub struct ListIterator<T> {
-    current: NodePtr<T>,
+pub struct Iter<'a, T: 'a> {
+    length: usize,
+    head: NodePtr<T>,
+    tail: NodePtr<T>,
+    marker: PhantomData<&'a Node<T>>,
 }
 
 impl<T> Node<T> {
@@ -169,9 +176,21 @@ impl<T> DoublyLinkedList<T> {
             .map(|node| RefMut::map(node.borrow_mut(), |node| &mut node.value))
     }
 
+    #[inline]
     #[must_use]
     pub fn into_iter(self) -> IntoIter<T> {
         IntoIter(self)
+    }
+
+    #[inline]
+    #[must_use]
+    pub fn iter(&self) -> Iter<T> {
+        Iter {
+            length: self.length,
+            head: self.head.clone(),
+            tail: self.tail.clone(),
+            marker: PhantomData,
+        }
     }
 }
 
@@ -183,35 +202,24 @@ impl<T> Drop for DoublyLinkedList<T> {
     }
 }
 
-impl<T> ListIterator<T> {
-    #[must_use]
-    pub const fn new(started_at: NodePtr<T>) -> Self {
-        Self {
-            current: started_at,
-        }
-    }
-}
-
-impl<T: Clone> Iterator for ListIterator<T> {
-    type Item = T;
+/*
+impl<'a, T> Iterator for Iter<'a, T> {
+    type Item = Ref<'a, T>;
 
     fn next(&mut self) -> Option<Self::Item> {
-        let mut result = None;
-        self.current = self
-            .current
-            .as_ref()
-            .and_then(|current: &Rc<RefCell<Node<T>>>| {
-                // TOOD(Shaohua): Replace with try_borrow()
-                let current: Ref<'_, Node<T>> = current.borrow();
-                result = Some(current.value.clone());
-                current.next.clone()
-            });
-
-        result
+        self.head.take().map(|old_head| {
+            if let Some(new_head) = old_head.borrow_mut().next.take() {
+                self.head = Some(new_head);
+            } else {
+                self.tail.take();
+            }
+            self.length -= 1;
+            Ref::map(old_head.borrow(), |node| &node.value)
+        })
     }
 }
 
-impl<T: Clone> DoubleEndedIterator for ListIterator<T> {
+impl<T: Clone> DoubleEndedIterator for Iter<T> {
     fn next_back(&mut self) -> Option<Self::Item> {
         let mut result = None;
         self.current = self
@@ -226,6 +234,7 @@ impl<T: Clone> DoubleEndedIterator for ListIterator<T> {
         result
     }
 }
+*/
 
 impl<T> Iterator for IntoIter<T> {
     type Item = T;
