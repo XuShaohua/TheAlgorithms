@@ -85,6 +85,7 @@ impl<T> DoublyLinkedList<T> {
         self.length += 1;
     }
 
+    /// Remove one node from head of list.
     pub fn pop_front(&mut self) -> Option<T> {
         self.head.take().and_then(|old_head| {
             if let Some(new_head) = old_head.borrow_mut().next.take() {
@@ -102,6 +103,34 @@ impl<T> DoublyLinkedList<T> {
                 .ok()
                 .map(|head| head.into_inner().value)
         })
+    }
+
+    /// Remove one node from tail of list.
+    pub fn pop_back(&mut self) -> Option<T> {
+        self.tail.take().and_then(|old_tail| {
+            if let Some(new_tail) = old_tail.borrow_mut().previous.take() {
+                // Reset next pointer.
+                new_tail.borrow_mut().next = None;
+                self.tail = Some(new_tail);
+            } else {
+                // Reset head to None if both head and tail points to the same node.
+                self.head.take();
+            }
+            self.length -= 1;
+
+            // Extract value from tail if it has only one strong reference.
+            Rc::try_unwrap(old_tail)
+                .ok()
+                .map(|tail| tail.into_inner().value)
+        })
+    }
+}
+
+impl<T> Drop for DoublyLinkedList<T> {
+    fn drop(&mut self) {
+        while self.pop_front().is_some() {
+            // Empty
+        }
     }
 }
 
@@ -169,7 +198,7 @@ mod tests {
     }
 
     #[test]
-    fn test_pop() {
+    fn test_pop_front() {
         let mut list = DoublyLinkedList::new();
         list.push_front(3);
         list.push_front(5);
@@ -178,7 +207,19 @@ mod tests {
         assert_eq!(list.len(), 2);
         assert_eq!(list.pop_front(), Some(5));
         assert_eq!(list.pop_front(), Some(3));
-        println!("len of list: {}", list.len());
+        assert!(list.is_empty());
+    }
+
+    #[test]
+    fn test_pop_back() {
+        let mut list = DoublyLinkedList::new();
+        list.push_back(3);
+        list.push_back(5);
+        list.push_back(7);
+        assert_eq!(list.pop_back(), Some(7));
+        assert_eq!(list.len(), 2);
+        assert_eq!(list.pop_back(), Some(5));
+        assert_eq!(list.pop_back(), Some(3));
         assert!(list.is_empty());
     }
 
