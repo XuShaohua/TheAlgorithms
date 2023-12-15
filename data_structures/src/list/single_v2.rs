@@ -139,28 +139,29 @@ impl<T> LinkedListV2<T> {
 
     /// Get reference of value in head node of list.
     #[must_use]
-    pub fn head(&self) -> Option<&T> {
+    pub fn front(&self) -> Option<&T> {
         unimplemented!()
     }
 
     /// Get mutable reference of value in head node of list.
     #[must_use]
-    pub fn head_mut(&mut self) -> Option<&mut T> {
+    pub fn front_mut(&mut self) -> Option<&mut T> {
         unimplemented!()
     }
 
     /// Get reference of value in tail node of list.
     #[must_use]
-    pub fn tail(&self) -> Option<&T> {
+    pub fn back(&self) -> Option<&T> {
         unimplemented!()
     }
 
     /// Get mutable reference of value in tail node of list.
     #[must_use]
-    pub fn tail_mut(&mut self) -> Option<&mut T> {
+    pub fn back_mut(&mut self) -> Option<&mut T> {
         unimplemented!()
     }
 
+    // TODO(Shaohua): Impl Iter
     //    #[must_use]
     //    pub fn iter(&self) -> Iter<T> {
     //        Iter {

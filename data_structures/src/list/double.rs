@@ -2,7 +2,7 @@
 // Use of this source is governed by General Public License that can be
 // found in the LICENSE file.
 
-use std::cell::{Ref, RefCell};
+use std::cell::{Ref, RefCell, RefMut};
 use std::rc::Rc;
 
 type NodePtr<T> = Option<Rc<RefCell<Node<T>>>>;
@@ -124,6 +124,40 @@ impl<T> DoublyLinkedList<T> {
                 .map(|tail| tail.into_inner().value)
         })
     }
+
+    /// Get a reference to the front node, or `None` is the list is empty.
+    #[inline]
+    #[must_use]
+    pub fn front(&self) -> Option<&T> {
+        unsafe {
+            self.head
+                .as_ref()
+                .and_then(|node: &Rc<RefCell<Node<T>>>| node.try_borrow_unguarded().ok())
+                .map(|node| &node.value)
+        }
+    }
+
+    /// Get a mutable reference to the front node, or `None` is the list is empty.
+    #[inline]
+    #[must_use]
+    pub fn front_mut(&mut self) -> Option<&mut T> {
+        self.head
+            .as_mut()
+            .and_then(|node: &mut Rc<RefCell<Node<T>>>| node.try_borrow_mut().ok())
+            .map(|mut node| &mut node.value)
+    }
+
+    /// Get a reference to the back node, or `None` is the list is empty.
+    #[inline]
+    #[must_use]
+    pub fn back(&self) -> Option<&T> {
+        unsafe {
+            self.tail
+                .as_ref()
+                .and_then(|node| node.try_borrow_unguarded().ok())
+                .map(|node| &node.value)
+        }
+    }
 }
 
 impl<T> Drop for DoublyLinkedList<T> {
@@ -152,6 +186,7 @@ impl<T: Clone> Iterator for ListIterator<T> {
             .current
             .as_ref()
             .and_then(|current: &Rc<RefCell<Node<T>>>| {
+                // TOOD(Shaohua): Replace with try_borrow()
                 let current: Ref<'_, Node<T>> = current.borrow();
                 result = Some(current.value.clone());
                 current.next.clone()
@@ -168,6 +203,7 @@ impl<T: Clone> DoubleEndedIterator for ListIterator<T> {
             .current
             .as_ref()
             .and_then(|current: &Rc<RefCell<Node<T>>>| {
+                // TOOD(Shaohua): Replace with try_borrow()
                 let current: Ref<'_, Node<T>> = current.borrow();
                 result = Some(current.value.clone());
                 current.previous.clone()
