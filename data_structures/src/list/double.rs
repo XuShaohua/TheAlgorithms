@@ -56,23 +56,36 @@ impl<T> DoublyLinkedList<T> {
         self.length == 0
     }
 
-    pub fn append(&mut self, value: T) {
-        let tail = Node::new(value);
+    /// Add a new node to tail of list.
+    pub fn push_back(&mut self, value: T) {
+        let new_tail = Node::new(value);
         match self.tail.take() {
             Some(old_tail) => {
-                old_tail.borrow_mut().next = Some(tail.clone());
+                old_tail.borrow_mut().next = Some(new_tail.clone());
                 // Set previous pointer.
-                tail.borrow_mut().previous = Some(old_tail);
+                new_tail.borrow_mut().previous = Some(old_tail);
             }
-            None => self.head = Some(tail.clone()),
+            None => self.head = Some(new_tail.clone()),
         }
-        self.tail = Some(tail);
+        self.tail = Some(new_tail);
         self.length += 1;
     }
 
-    /// # Panics
-    /// Raise error if failed to extract node.
-    pub fn pop(&mut self) -> Option<T> {
+    /// Add a new node to head of list.
+    pub fn push_front(&mut self, value: T) {
+        let new_head = Node::new(value);
+        match self.head.take() {
+            Some(old_head) => {
+                old_head.borrow_mut().previous = Some(new_head.clone());
+                new_head.borrow_mut().next = Some(old_head);
+            }
+            None => self.tail = Some(new_head.clone()),
+        }
+        self.head = Some(new_head);
+        self.length += 1;
+    }
+
+    pub fn pop_front(&mut self) -> Option<T> {
         self.head.take().map(|head: Rc<RefCell<Node<T>>>| {
             if let Some(next) = head.borrow_mut().next.take() {
                 // Reset previous pointer.
