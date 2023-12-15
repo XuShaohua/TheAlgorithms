@@ -19,6 +19,8 @@ pub struct DoublyLinkedList<T> {
     tail: NodePtr<T>,
 }
 
+pub struct IntoIter<T>(DoublyLinkedList<T>);
+
 pub struct ListIterator<T> {
     current: NodePtr<T>,
 }
@@ -166,6 +168,11 @@ impl<T> DoublyLinkedList<T> {
             .as_ref()
             .map(|node| RefMut::map(node.borrow_mut(), |node| &mut node.value))
     }
+
+    #[must_use]
+    pub fn into_iter(self) -> IntoIter<T> {
+        IntoIter(self)
+    }
 }
 
 impl<T> Drop for DoublyLinkedList<T> {
@@ -220,6 +227,22 @@ impl<T: Clone> DoubleEndedIterator for ListIterator<T> {
     }
 }
 
+impl<T> Iterator for IntoIter<T> {
+    type Item = T;
+
+    #[inline]
+    fn next(&mut self) -> Option<T> {
+        self.0.pop_front()
+    }
+}
+
+impl<T> DoubleEndedIterator for IntoIter<T> {
+    #[inline]
+    fn next_back(&mut self) -> Option<Self::Item> {
+        self.0.pop_back()
+    }
+}
+
 #[cfg(test)]
 mod tests {
     use super::DoublyLinkedList;
@@ -268,11 +291,44 @@ mod tests {
     }
 
     #[test]
+    fn test_back() {
+        let mut list = DoublyLinkedList::new();
+        list.push_back(5);
+        list.push_back(7);
+        assert_eq!(list.back(), Some(&7));
+        assert_eq!(list.front(), Some(&5));
+    }
+
+    #[test]
+    fn test_back_mut() {
+        let mut list = DoublyLinkedList::new();
+        list.push_back(5);
+        list.push_back(7);
+        list.back_mut().map(|mut value| *value = 11);
+        assert_eq!(list.back(), Some(&11));
+    }
+
+    #[test]
     fn test_drop() {
         let mut list = DoublyLinkedList::new();
         for i in 0..(128 * 200) {
             list.push_front(i);
         }
         drop(list);
+    }
+
+    #[test]
+    fn test_into_iter() {
+        let mut list = DoublyLinkedList::new();
+        list.push_front(2);
+        list.push_front(3);
+        list.push_front(5);
+        list.push_front(7);
+        let mut iter = list.into_iter();
+        assert_eq!(iter.next(), Some(7));
+        assert_eq!(iter.next(), Some(5));
+        assert_eq!(iter.next(), Some(3));
+        assert_eq!(iter.next(), Some(2));
+        assert_eq!(iter.next(), None);
     }
 }
