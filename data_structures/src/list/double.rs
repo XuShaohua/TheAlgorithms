@@ -44,6 +44,18 @@ impl<T> DoublyLinkedList<T> {
         }
     }
 
+    #[inline]
+    #[must_use]
+    pub const fn len(&self) -> usize {
+        self.length
+    }
+
+    #[inline]
+    #[must_use]
+    pub const fn is_empty(&self) -> bool {
+        self.length == 0
+    }
+
     pub fn append(&mut self, value: T) {
         let tail = Node::new(value);
         match self.tail.take() {
@@ -115,5 +127,16 @@ impl<T: Clone> DoubleEndedIterator for ListIterator<T> {
                 current.previous.clone()
             });
         result
+    }
+}
+
+#[cfg(test)]
+mod tests {
+    use super::DoublyLinkedList;
+
+    #[test]
+    fn test_new() {
+        let list = DoublyLinkedList::<i32>::new();
+        assert!(list.is_empty());
     }
 }
