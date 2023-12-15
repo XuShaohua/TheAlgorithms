@@ -4,7 +4,7 @@
 
 #![allow(dead_code)]
 
-use std::cell::RefCell;
+use std::cell::{RefCell, RefMut};
 use std::rc::Rc;
 
 type ListNodePtr<T> = Option<Rc<RefCell<ListNode<T>>>>;
@@ -140,19 +140,29 @@ impl<T> LinkedListV2<T> {
     /// Get reference of value in head node of list.
     #[must_use]
     pub fn front(&self) -> Option<&T> {
-        unimplemented!()
+        unsafe {
+            self.head
+                .as_ref()
+                .and_then(|node: &Rc<RefCell<ListNode<T>>>| node.try_borrow_unguarded().ok())
+                .map(|node| &node.value)
+        }
     }
 
     /// Get mutable reference of value in head node of list.
     #[must_use]
-    pub fn front_mut(&mut self) -> Option<&mut T> {
+    pub fn front_mut(&mut self) -> Option<RefMut<T>> {
         unimplemented!()
     }
 
     /// Get reference of value in tail node of list.
     #[must_use]
     pub fn back(&self) -> Option<&T> {
-        unimplemented!()
+        unsafe {
+            self.tail
+                .as_ref()
+                .and_then(|node: &Rc<RefCell<ListNode<T>>>| node.try_borrow_unguarded().ok())
+                .map(|node| &node.value)
+        }
     }
 
     /// Get mutable reference of value in tail node of list.

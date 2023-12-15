@@ -125,7 +125,7 @@ impl<T> DoublyLinkedList<T> {
         })
     }
 
-    /// Get a reference to the front node, or `None` is the list is empty.
+    /// Get a reference to the front node, or `None` if the list is empty.
     #[inline]
     #[must_use]
     pub fn front(&self) -> Option<&T> {
@@ -137,17 +137,16 @@ impl<T> DoublyLinkedList<T> {
         }
     }
 
-    /// Get a mutable reference to the front node, or `None` is the list is empty.
+    /// Get a mutable reference to the front node, or `None` if the list is empty.
     #[inline]
     #[must_use]
-    pub fn front_mut(&mut self) -> Option<&mut T> {
+    pub fn front_mut(&mut self) -> Option<RefMut<T>> {
         self.head
-            .as_mut()
-            .and_then(|node: &mut Rc<RefCell<Node<T>>>| node.try_borrow_mut().ok())
-            .map(|mut node| &mut node.value)
+            .as_ref()
+            .map(|node| RefMut::map(node.borrow_mut(), |node| &mut node.value))
     }
 
-    /// Get a reference to the back node, or `None` is the list is empty.
+    /// Get a reference to the back node, or `None` if the list is empty.
     #[inline]
     #[must_use]
     pub fn back(&self) -> Option<&T> {
@@ -157,6 +156,15 @@ impl<T> DoublyLinkedList<T> {
                 .and_then(|node| node.try_borrow_unguarded().ok())
                 .map(|node| &node.value)
         }
+    }
+
+    /// Get a mutable reference to the back node, or `None` if the list is empty.
+    #[inline]
+    #[must_use]
+    pub fn back_mut(&mut self) -> Option<RefMut<T>> {
+        self.tail
+            .as_ref()
+            .map(|node| RefMut::map(node.borrow_mut(), |node| &mut node.value))
     }
 }
 
