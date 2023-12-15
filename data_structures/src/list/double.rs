@@ -86,18 +86,24 @@ impl<T> DoublyLinkedList<T> {
     }
 
     pub fn pop_front(&mut self) -> Option<T> {
-        self.head.take().map(|head: Rc<RefCell<Node<T>>>| {
-            if let Some(next) = head.borrow_mut().next.take() {
-                // Reset previous pointer.
-                next.borrow_mut().previous = None;
-                self.head = Some(next);
-            } else {
-                self.tail.take();
-            }
-            self.length -= 1;
-            let node: Option<RefCell<Node<T>>> = Rc::try_unwrap(head).ok();
-            node.expect("").into_inner().value
-        })
+        if self.length == 1 {
+            // Reset tail to None if both head and tail points to the same node.
+            self.tail.take();
+        }
+
+        self.head
+            .take()
+            // Extract value from head if it has only one strong reference.
+            .and_then(|head: Rc<RefCell<Node<T>>>| Rc::try_unwrap(head).ok())
+            .map(|head: RefCell<Node<T>>| {
+                if let Some(next) = head.borrow_mut().next.take() {
+                    // Reset previous pointer.
+                    next.borrow_mut().previous = None;
+                    self.head = Some(next);
+                }
+                self.length -= 1;
+                head.into_inner().value
+            })
     }
 }
 
