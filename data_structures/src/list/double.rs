@@ -86,24 +86,22 @@ impl<T> DoublyLinkedList<T> {
     }
 
     pub fn pop_front(&mut self) -> Option<T> {
-        if self.length == 1 {
-            // Reset tail to None if both head and tail points to the same node.
-            self.tail.take();
-        }
+        self.head.take().and_then(|old_head| {
+            if let Some(new_head) = old_head.borrow_mut().next.take() {
+                // Reset previous pointer.
+                new_head.borrow_mut().previous = None;
+                self.head = Some(new_head);
+            } else {
+                // Reset tail to None if both head and tail points to the same node.
+                self.tail.take();
+            }
+            self.length -= 1;
 
-        self.head
-            .take()
             // Extract value from head if it has only one strong reference.
-            .and_then(|head: Rc<RefCell<Node<T>>>| Rc::try_unwrap(head).ok())
-            .map(|head: RefCell<Node<T>>| {
-                if let Some(next) = head.borrow_mut().next.take() {
-                    // Reset previous pointer.
-                    next.borrow_mut().previous = None;
-                    self.head = Some(next);
-                }
-                self.length -= 1;
-                head.into_inner().value
-            })
+            Rc::try_unwrap(old_head)
+                .ok()
+                .map(|head| head.into_inner().value)
+        })
     }
 }
 
@@ -157,5 +155,39 @@ mod tests {
     fn test_new() {
         let list = DoublyLinkedList::<i32>::new();
         assert!(list.is_empty());
+    }
+
+    #[test]
+    fn test_push() {
+        let mut list = DoublyLinkedList::new();
+        list.push_front(2);
+        list.push_front(3);
+        list.push_front(5);
+        list.push_front(7);
+        list.push_front(11);
+        assert_eq!(list.len(), 5);
+    }
+
+    #[test]
+    fn test_pop() {
+        let mut list = DoublyLinkedList::new();
+        list.push_front(3);
+        list.push_front(5);
+        list.push_front(7);
+        assert_eq!(list.pop_front(), Some(7));
+        assert_eq!(list.len(), 2);
+        assert_eq!(list.pop_front(), Some(5));
+        assert_eq!(list.pop_front(), Some(3));
+        println!("len of list: {}", list.len());
+        assert!(list.is_empty());
+    }
+
+    #[test]
+    fn test_drop() {
+        let mut list = DoublyLinkedList::new();
+        for i in 0..(128 * 200) {
+            list.push_front(i);
+        }
+        drop(list);
     }
 }

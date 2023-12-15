@@ -111,21 +111,20 @@ impl<T> LinkedListV2<T> {
 
     /// Remove a node from head of list.
     pub fn pop_front(&mut self) -> Option<T> {
-        if self.length == 1 {
-            // Reset tail to None if both head and tail points to the same node.
-            self.tail.take();
-        }
-        self.head
-            .take()
+        self.head.take().and_then(|old_head| {
+            if let Some(new_head) = old_head.borrow_mut().next.take() {
+                self.head = Some(new_head);
+            } else {
+                // Reset tail to None if both head and tail points to the same node.
+                self.tail.take();
+            }
+            self.length -= 1;
+
             // Extract value from head if it has only one strong reference.
-            .and_then(|head: Rc<RefCell<ListNode<T>>>| Rc::try_unwrap(head).ok())
-            .map(|head| {
-                if let Some(next) = head.borrow_mut().next.take() {
-                    self.head = Some(next);
-                }
-                self.length -= 1;
-                head.into_inner().value
-            })
+            Rc::try_unwrap(old_head)
+                .ok()
+                .map(|head| head.into_inner().value)
+        })
     }
 
     /// Remove a node from tail of list.
