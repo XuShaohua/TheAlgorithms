@@ -25,13 +25,6 @@ pub struct DoublyLinkedList<T> {
 
 pub struct IntoIter<T>(DoublyLinkedList<T>);
 
-pub struct Iter<'a, T: 'a> {
-    length: usize,
-    head: NodePtr<T>,
-    tail: NodePtr<T>,
-    marker: PhantomData<&'a Node<T>>,
-}
-
 impl<T> Node<T> {
     #[must_use]
     pub fn new(value: T) -> Rc<RefCell<Self>> {
@@ -175,22 +168,14 @@ impl<T> DoublyLinkedList<T> {
             .as_ref()
             .map(|node| RefMut::map(node.borrow_mut(), |node| &mut node.value))
     }
+}
 
-    #[inline]
-    #[must_use]
-    pub fn into_iter(self) -> IntoIter<T> {
+impl<T> IntoIterator for DoublyLinkedList<T> {
+    type Item = T;
+    type IntoIter = IntoIter<T>;
+
+    fn into_iter(self) -> Self::IntoIter {
         IntoIter(self)
-    }
-
-    #[inline]
-    #[must_use]
-    pub fn iter(&self) -> Iter<T> {
-        Iter {
-            length: self.length,
-            head: self.head.clone(),
-            tail: self.tail.clone(),
-            marker: PhantomData,
-        }
     }
 }
 
@@ -201,40 +186,6 @@ impl<T> Drop for DoublyLinkedList<T> {
         }
     }
 }
-
-/*
-impl<'a, T> Iterator for Iter<'a, T> {
-    type Item = Ref<'a, T>;
-
-    fn next(&mut self) -> Option<Self::Item> {
-        self.head.take().map(|old_head| {
-            if let Some(new_head) = old_head.borrow_mut().next.take() {
-                self.head = Some(new_head);
-            } else {
-                self.tail.take();
-            }
-            self.length -= 1;
-            Ref::map(old_head.borrow(), |node| &node.value)
-        })
-    }
-}
-
-impl<T: Clone> DoubleEndedIterator for Iter<T> {
-    fn next_back(&mut self) -> Option<Self::Item> {
-        let mut result = None;
-        self.current = self
-            .current
-            .as_ref()
-            .and_then(|current: &Rc<RefCell<Node<T>>>| {
-                // TOOD(Shaohua): Replace with try_borrow()
-                let current: Ref<'_, Node<T>> = current.borrow();
-                result = Some(current.value.clone());
-                current.previous.clone()
-            });
-        result
-    }
-}
-*/
 
 impl<T> Iterator for IntoIter<T> {
     type Item = T;

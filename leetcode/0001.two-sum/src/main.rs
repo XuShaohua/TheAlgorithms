@@ -34,11 +34,11 @@ fn solution2(nums: Vec<i32>, target: i32) -> Vec<i32> {
 
 fn solution3(nums: Vec<i32>, target: i32) -> Vec<i32> {
     let mut visited = HashMap::with_capacity(nums.len());
-    for i in 0..nums.len() {
-        if let Some(&j) = visited.get(&(target - nums[i])) {
+    for (i, item) in nums.iter().enumerate() {
+        if let Some(&j) = visited.get(&(target - item)) {
             return vec![j as i32, i as i32];
         } else {
-            visited.insert(nums[i], i);
+            visited.insert(item, i);
         }
     }
 
