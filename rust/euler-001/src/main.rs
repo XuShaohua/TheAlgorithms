@@ -31,8 +31,8 @@ fn method1(max_num: usize) -> usize {
     }
 
     let mut sum = 0;
-    for i in 1..max_num {
-        if arr[i] {
+    for (i, item) in arr.iter().enumerate().take(max_num).skip(1) {
+        if *item {
             sum += i;
         }
     }
