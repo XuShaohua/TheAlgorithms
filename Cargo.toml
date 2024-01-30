@@ -10,18 +10,12 @@ members = [
   "electronics",
   "financial",
   "geodesy",
-  "leetcode/*.*",
   "math",
   "physics",
   "searches",
   "sorts",
   "graphs",
 ]
-
-exclude = [
-  "project_euler",
-]
-
 
 [profile.release]
 debug = true
