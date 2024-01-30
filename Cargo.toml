@@ -18,10 +18,6 @@ members = [
   "graphs",
 ]
 
-exclude = [
-  "project_euler",
-]
-
 
 [profile.release]
 debug = true
