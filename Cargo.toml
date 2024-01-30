@@ -16,9 +16,6 @@ members = [
   "searches",
   "sorts",
   "graphs",
-
-# Custome
-  "leetcode/*.*",
 ]
 
 exclude = [

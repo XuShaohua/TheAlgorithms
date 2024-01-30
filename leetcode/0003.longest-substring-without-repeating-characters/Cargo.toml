@@ -1,7 +1,0 @@
-[package]
-name = "lc-0003-longest-substring-without-repeating-characters"
-version = "0.1.0"
-edition = "2021"
-publish = false
-
-[dependencies]
