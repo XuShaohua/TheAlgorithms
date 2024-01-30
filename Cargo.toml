@@ -1,0 +1,10 @@
+[workspace]
+resolver = "2"
+
+members = [
+  "rust/euler-*",
+]
+
+exclude = [
+  "rust/deprecated",
+]
