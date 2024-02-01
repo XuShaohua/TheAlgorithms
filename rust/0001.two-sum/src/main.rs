@@ -2,8 +2,6 @@
 // Use of this source is governed by General Public License that can be
 // found in the LICENSE file.
 
-//! Problem: [two-sum](https://leetcode.com/problems/two-sum)
-
 use std::collections::HashMap;
 
 fn solution1(nums: Vec<i32>, target: i32) -> Vec<i32> {
@@ -45,70 +43,44 @@ fn solution3(nums: Vec<i32>, target: i32) -> Vec<i32> {
     Vec::new()
 }
 
-fn check_solution1() {
+pub type SolutionFn = fn(Vec<i32>, i32) -> Vec<i32>;
+
+fn check_solution(f: SolutionFn) {
     let nums = vec![2, 7, 11, 15];
     let target = 9;
-    assert_eq!(solution1(nums, target), vec![0, 1]);
+    assert_eq!(f(nums, target), vec![0, 1]);
 
     let nums = vec![3, 2, 4];
     let target = 6;
-    assert_eq!(solution1(nums, target), vec![1, 2]);
+    assert_eq!(f(nums, target), vec![1, 2]);
 
     let nums = vec![3, 3];
     let target = 6;
-    assert_eq!(solution1(nums, target), vec![0, 1]);
-}
-
-fn check_solution2() {
-    let nums = vec![2, 7, 11, 15];
-    let target = 9;
-    assert_eq!(solution2(nums, target), vec![0, 1]);
-
-    let nums = vec![3, 2, 4];
-    let target = 6;
-    assert_eq!(solution2(nums, target), vec![1, 2]);
-
-    let nums = vec![3, 3];
-    let target = 6;
-    assert_eq!(solution2(nums, target), vec![0, 1]);
-}
-
-fn check_solution3() {
-    let nums = vec![2, 7, 11, 15];
-    let target = 9;
-    assert_eq!(solution3(nums, target), vec![0, 1]);
-
-    let nums = vec![3, 2, 4];
-    let target = 6;
-    assert_eq!(solution3(nums, target), vec![1, 2]);
-
-    let nums = vec![3, 3];
-    let target = 6;
-    assert_eq!(solution3(nums, target), vec![0, 1]);
+    assert_eq!(f(nums, target), vec![0, 1]);
 }
 
 fn main() {
-    check_solution1();
-    check_solution2();
-    check_solution3();
+    check_solution(solution1);
+    check_solution(solution2);
+    check_solution(solution3);
 }
 
 #[cfg(test)]
 mod tests {
-    use super::{check_solution1, check_solution2, check_solution3};
+    use super::{check_solution, solution1, solution2, solution3};
 
     #[test]
     fn test_solution1() {
-        check_solution1();
+        check_solution(solution1);
     }
 
     #[test]
     fn test_solution2() {
-        check_solution2();
+        check_solution(solution2);
     }
 
     #[test]
     fn test_solution3() {
-        check_solution3();
+        check_solution(solution3);
     }
 }
