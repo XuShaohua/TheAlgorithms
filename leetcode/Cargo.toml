@@ -1,0 +1,11 @@
+[workspace]
+resolver = "2"
+
+members = [
+  "rust/*.*"
+]
+
+exclude = [
+  "cpp",
+  "problems",
+]
