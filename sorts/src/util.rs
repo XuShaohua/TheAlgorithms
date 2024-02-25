@@ -52,8 +52,8 @@ where
 pub fn read_ints() -> Vec<i32> {
     let mut v = vec![];
     let buffer = BufReader::new(io::stdin());
-    let input_iter = buffer.lines();
-    for line in input_iter.flatten() {
+    let mut input_iter = buffer.lines();
+    while let Some(Ok(line)) = input_iter.next() {
         for word in line.split_whitespace() {
             let value = word.parse::<i32>().expect("Invalid integer");
             v.push(value);
@@ -65,11 +65,11 @@ pub fn read_ints() -> Vec<i32> {
 #[must_use]
 pub fn read_strings() -> Vec<String> {
     let buffer = BufReader::new(io::stdin());
-    let input_iter = buffer.lines();
+    let mut input_iter = buffer.lines();
     let mut v = vec![];
-    for line in input_iter.flatten() {
+    while let Some(Ok(line)) = input_iter.next() {
         for word in line.split_whitespace() {
-            v.push(word.to_string());
+            v.push(word.to_owned());
         }
     }
     v

@@ -25,7 +25,7 @@ pub const fn num_digits(num: i64) -> usize {
 
 /// Find the number of digits in a number.
 ///
-/// abs() is used as logarithm for negative numbers is not defined.
+/// `abs()` is used as logarithm for negative numbers is not defined.
 #[must_use]
 pub fn num_digits_fast(num: i64) -> usize {
     if num == 0 {
@@ -38,7 +38,7 @@ pub fn num_digits_fast(num: i64) -> usize {
 
 /// Find the number of digits in a number.
 ///
-/// abs() is used for negative numbers
+/// `abs()` is used for negative numbers
 #[must_use]
 pub fn num_digits_faster(num: i64) -> usize {
     num.abs().to_string().len()
