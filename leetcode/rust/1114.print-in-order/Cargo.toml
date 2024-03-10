@@ -1,7 +1,0 @@
-[package]
-name = "lc-1114-print-in-order"
-version = "0.1.0"
-edition = "2021"
-publish = false
-
-[dependencies]
