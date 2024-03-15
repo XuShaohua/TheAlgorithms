@@ -46,5 +46,5 @@ where
         j -= 1;
     }
     vec.swap(i - 1, low);
-    return i - 1;
+    i - 1
 }
