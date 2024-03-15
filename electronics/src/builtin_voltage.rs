@@ -31,6 +31,6 @@ mod tests {
 
     #[test]
     fn test_builtin_voltage() {
-        assert_eq!(builtin_voltage(1e17, 1e17, 1e10), 0.833370010652644);
+        assert_eq!(builtin_voltage(1e17, 1e17, 1e10), 0.833_370_010_652_644);
     }
 }

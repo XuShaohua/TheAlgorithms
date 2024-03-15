@@ -35,16 +35,16 @@ mod tests {
     use super::{get_frequency, get_inductance, get_reactance};
     #[test]
     fn test_get_inductance() {
-        assert_eq!(get_inductance(10e3, 50.0), 0.0007957747154594767);
+        assert_eq!(get_inductance(10e3, 50.0), 0.000_795_774_715_459_476_7);
     }
 
     #[test]
     fn test_get_frequency() {
-        assert_eq!(get_frequency(35e-3, 50.0), 227.36420441699332);
+        assert_eq!(get_frequency(35e-3, 50.0), 227.364_204_416_993_32);
     }
 
     #[test]
     fn test_get_reactance() {
-        assert_eq!(get_reactance(35e-6, 1e3), 0.2199114857512855);
+        assert_eq!(get_reactance(35e-6, 1e3), 0.219_911_485_751_285_5);
     }
 }

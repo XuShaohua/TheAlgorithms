@@ -62,11 +62,11 @@ mod tests {
 
     #[test]
     fn test_get_distance() {
-        assert_eq!(get_distance(10.0, 3.0, 5.0), 116112.01488218177);
+        assert_eq!(get_distance(10.0, 3.0, 5.0), 116_112.014_882_181_77);
     }
 
     #[test]
     fn test_get_charge1() {
-        assert_eq!(get_charge1(10.0, 5.0, 2000.0), 0.0008900756564307966);
+        assert_eq!(get_charge1(10.0, 5.0, 2000.0), 0.000_890_075_656_430_796_6);
     }
 }

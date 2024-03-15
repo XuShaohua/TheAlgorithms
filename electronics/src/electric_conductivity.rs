@@ -32,7 +32,7 @@ mod tests {
 
     #[test]
     fn test_get_mobility() {
-        assert_eq!(get_mobility(25.0, 100.0), 1.5604519068722301e+18);
+        assert_eq!(get_mobility(25.0, 100.0), 1.560_451_906_872_230_1e18);
     }
 
     #[test]
@@ -42,6 +42,6 @@ mod tests {
 
     #[test]
     fn test_get_electron_conc() {
-        assert_eq!(get_electron_conc(1000.0, 1200.0), 5.201506356240767e+18);
+        assert_eq!(get_electron_conc(1000.0, 1200.0), 5.201_506_356_240_767e18);
     }
 }

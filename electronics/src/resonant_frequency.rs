@@ -29,6 +29,6 @@ mod tests {
 
     #[test]
     fn test_resonant_frequency() {
-        assert_eq!(resonant_frequency(10.0, 5.0), 0.022507907903927652);
+        assert_eq!(resonant_frequency(10.0, 5.0), 0.022_507_907_903_927_652);
     }
 }

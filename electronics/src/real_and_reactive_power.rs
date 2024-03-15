@@ -29,8 +29,8 @@ mod tests {
 
     #[test]
     fn test_reactive_power() {
-        assert_eq!(reactive_power(100.0, 0.9), 43.58898943540673);
+        assert_eq!(reactive_power(100.0, 0.9), 43.588_989_435_406_73);
         assert_eq!(reactive_power(0.0, 0.8), 0.0);
-        assert_eq!(reactive_power(100.0, -0.9), 43.58898943540673);
+        assert_eq!(reactive_power(100.0, -0.9), 43.588_989_435_406_73);
     }
 }

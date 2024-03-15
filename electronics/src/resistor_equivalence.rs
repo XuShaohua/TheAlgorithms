@@ -34,7 +34,10 @@ mod tests {
 
     #[test]
     fn test_resistor_parallel() {
-        assert_eq!(resistor_parallel(&[3.21389, 2.0, 3.0]), 0.8737571620498019);
+        assert_eq!(
+            resistor_parallel(&[3.21389, 2.0, 3.0]),
+            0.873_757_162_049_801_9
+        );
     }
 
     #[test]
