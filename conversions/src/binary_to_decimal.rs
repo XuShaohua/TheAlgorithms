@@ -40,12 +40,12 @@ mod tests {
         assert_eq!(binary_to_decimal(101), Ok(5));
         assert_eq!(binary_to_decimal(1010), Ok(10));
         assert_eq!(binary_to_decimal(1101), Ok(13));
-        assert_eq!(binary_to_decimal(100001), Ok(33));
-        assert_eq!(binary_to_decimal(10101001), Ok(169));
-        assert_eq!(binary_to_decimal(111010), Ok(58));
-        assert_eq!(binary_to_decimal(100000000), Ok(256));
-        assert_eq!(binary_to_decimal(10000000000), Ok(1024));
-        assert_eq!(binary_to_decimal(101110111), Ok(375));
+        assert_eq!(binary_to_decimal(100_001), Ok(33));
+        assert_eq!(binary_to_decimal(10_101_001), Ok(169));
+        assert_eq!(binary_to_decimal(111_010), Ok(58));
+        assert_eq!(binary_to_decimal(100_000_000), Ok(256));
+        assert_eq!(binary_to_decimal(10_000_000_000), Ok(1024));
+        assert_eq!(binary_to_decimal(101_110_111), Ok(375));
         assert_eq!(binary_to_decimal(-1010), Err(BinaryError::OutOfRange));
     }
 }

@@ -66,12 +66,12 @@ mod tests {
     fn test_pressure_conversion() {
         const PAIRS: &[(f64, Unit, Unit, f64)] = &[
             (4.0, Unit::Atm, Unit::Pascal, 405_300.0),
-            (1.0, Unit::Pascal, Unit::Psi, 0.00_014_401_981_999_999_998),
+            (1.0, Unit::Pascal, Unit::Psi, 0.000_144_019_819_999_999_98),
             (1.0, Unit::Bar, Unit::Atm, 0.986_923),
             (3.0, Unit::KiloPascal, Unit::Bar, 0.029_999_991_892_499_998),
             (2.0, Unit::MegaPascal, Unit::Psi, 290.074_434_314),
-            (4.0, Unit::Psi, Unit::Torr, 206.85_984),
-            (1.0, Unit::InHg, Unit::Atm, 0.0_334_211),
+            (4.0, Unit::Psi, Unit::Torr, 206.859_84),
+            (1.0, Unit::InHg, Unit::Atm, 0.033_421_1),
             (1.0, Unit::Torr, Unit::Psi, 0.019_336_718_261_000_002),
         ];
         for (val, from_unit, to_unit, to_val) in PAIRS {

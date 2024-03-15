@@ -46,10 +46,10 @@ mod tests {
 
     #[test]
     fn test_hex_to_bin() {
-        assert_eq!(hex_to_bin("AC"), Ok(10101100));
-        assert_eq!(hex_to_bin("9A4"), Ok(100110100100));
-        assert_eq!(hex_to_bin("   12f   "), Ok(100101111));
-        assert_eq!(hex_to_bin("FfFf"), Ok(1111111111111111));
-        assert_eq!(hex_to_bin("-fFfF"), Ok(-1111111111111111));
+        assert_eq!(hex_to_bin("AC"), Ok(10_101_100));
+        assert_eq!(hex_to_bin("9A4"), Ok(100_110_100_100));
+        assert_eq!(hex_to_bin("   12f   "), Ok(100_101_111));
+        assert_eq!(hex_to_bin("FfFf"), Ok(1_111_111_111_111_111));
+        assert_eq!(hex_to_bin("-fFfF"), Ok(-1_111_111_111_111_111));
     }
 }

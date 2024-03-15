@@ -53,12 +53,12 @@ mod tests {
     fn test_volume_conversion() {
         const PAIRS: &[(f64, Unit, Unit, f64)] = &[
             (4.0, Unit::CubicMeter, Unit::Litre, 4000.0),
-            (1.0, Unit::Litre, Unit::Gallon, 0.264172),
+            (1.0, Unit::Litre, Unit::Gallon, 0.264_172),
             (1.0, Unit::KiloLitre, Unit::CubicMeter, 1.0),
-            (3.0, Unit::Gallon, Unit::CubicYard, 0.017814279),
+            (3.0, Unit::Gallon, Unit::CubicYard, 0.017_814_279),
             (2.0, Unit::CubicYard, Unit::Litre, 1529.1),
             (4.0, Unit::CubicFoot, Unit::Cup, 473.396),
-            (1.0, Unit::Cup, Unit::KiloLitre, 0.000236588),
+            (1.0, Unit::Cup, Unit::KiloLitre, 0.000_236_588),
         ];
         for (value, from_type, to_type, to_value) in PAIRS {
             assert_eq!(volume_conversion(*value, *from_type, *to_type), *to_value);

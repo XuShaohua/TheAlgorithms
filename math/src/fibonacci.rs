@@ -41,7 +41,7 @@ mod tests {
         assert_eq!(fib(5), Ok(5));
         assert_eq!(fib(2), Ok(1));
         assert_eq!(fib(9), Ok(34));
-        assert_eq!(fib(47), Ok(2971215073));
+        assert_eq!(fib(47), Ok(2_971_215_073));
         assert_eq!(fib(94), Err(FibError::IllegalIndex));
     }
 }

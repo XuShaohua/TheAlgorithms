@@ -48,7 +48,7 @@ pub fn num_digits_faster(num: i64) -> usize {
 mod tests {
     use super::{num_digits, num_digits_fast, num_digits_faster};
 
-    const PAIRS: &[(i64, usize)] = &[(12345, 5), (123, 3), (0, 1), (-1, 1), (-123456, 6)];
+    const PAIRS: &[(i64, usize)] = &[(12345, 5), (123, 3), (0, 1), (-1, 1), (-123_456, 6)];
 
     #[test]
     fn test_num_digits() {

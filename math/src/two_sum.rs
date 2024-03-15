@@ -29,7 +29,7 @@ mod tests {
         assert_eq!(two_sum(&[7, 15, 11, 2], 18), Some((0, 2)));
         assert_eq!(two_sum(&[2, 7, 11, 15], 26), Some((2, 3)));
         assert_eq!(two_sum(&[2, 7, 11, 15], 8), None);
-        let nums = (0..=10).into_iter().map(|i| i * 3).collect::<Vec<_>>();
+        let nums = (0..=10).map(|i| i * 3).collect::<Vec<_>>();
         assert_eq!(two_sum(&nums, 19), None);
     }
 }
