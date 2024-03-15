@@ -43,11 +43,11 @@ mod tests {
     fn test_equated_monthly_installments() {
         assert_eq!(
             equated_monthly_installments(25000.0, 0.12, 3),
-            830.35774532127930
+            830.357_745_321_279_3
         );
         assert_eq!(
             equated_monthly_installments(25000.0, 0.12, 10),
-            358.6773710064682
+            358.677_371_006_468_2
         );
     }
 }

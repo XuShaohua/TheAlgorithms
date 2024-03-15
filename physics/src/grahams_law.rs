@@ -68,29 +68,32 @@ mod tests {
 
     #[test]
     fn test_effusion_ratio() {
-        assert_eq!(effusion_ratio(2.016, 4.002).round6(), 1.408943);
+        assert_eq!(effusion_ratio(2.016, 4.002).round6(), 1.408_943);
     }
 
     #[test]
     fn test_first_effusion_rate() {
-        assert_eq!(first_effusion_rate(1.0, 2.016, 4.002).round6(), 1.408943);
+        assert_eq!(first_effusion_rate(1.0, 2.016, 4.002).round6(), 1.408_943);
     }
 
     #[test]
     fn test_second_effusion_rate() {
-        assert_eq!(second_effusion_rate(1.0, 2.016, 4.002).round6(), 0.709752);
+        assert_eq!(second_effusion_rate(1.0, 2.016, 4.002).round6(), 0.709_752);
     }
 
     #[test]
     fn test_first_molar_mass() {
-        assert_eq!(first_molar_mass(2.0, 1.408943, 0.709752).round6(), 0.507524);
+        assert_eq!(
+            first_molar_mass(2.0, 1.408_943, 0.709_752).round6(),
+            0.507_524
+        );
     }
 
     #[test]
     fn test_second_molar_mass() {
         assert_eq!(
-            second_molar_mass(2.0, 1.408943, 0.709752).round6(),
-            1.970351
+            second_molar_mass(2.0, 1.408_943, 0.709_752).round6(),
+            1.970_351
         );
     }
 }

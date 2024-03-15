@@ -316,7 +316,7 @@ mod tests {
         list.push(3);
         list.push(5);
         list.push(7);
-        for val in list.iter_mut() {
+        for val in &mut list {
             *val *= 2;
         }
         let nums = &[14, 10, 6, 4];

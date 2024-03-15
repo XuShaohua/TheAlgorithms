@@ -25,6 +25,6 @@ mod tests {
     #[test]
     fn test_archimedes_principle() {
         assert_eq!(archimedes_principle(997.0, 0.5, 9.8), 4885.3);
-        assert_eq!(archimedes_principle(997.0, 0.7, G), 6844.061035);
+        assert_eq!(archimedes_principle(997.0, 0.7, G), 6_844.061_035);
     }
 }

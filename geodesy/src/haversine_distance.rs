@@ -54,7 +54,7 @@ mod tests {
 
     #[test]
     fn test_haversine_distance() {
-        let distance = haversine_distance(37.774856, -122.424227, 37.864742, -119.537521);
-        assert_eq!(distance, 254466.4022952546);
+        let distance = haversine_distance(37.774_856, -122.424_227, 37.864_742, -119.537_521);
+        assert_eq!(distance, 254_466.402_295_254_6);
     }
 }

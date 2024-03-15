@@ -20,7 +20,7 @@ mod tests {
 
     #[test]
     fn test_rms_speed_of_molecule() {
-        assert_eq!(rms_speed_of_molecule(100.0, 2.0), 35.315279554323226);
-        assert_eq!(rms_speed_of_molecule(273.0, 12.0), 23.821458421977443);
+        assert_eq!(rms_speed_of_molecule(100.0, 2.0), 35.315_279_554_323_226);
+        assert_eq!(rms_speed_of_molecule(273.0, 12.0), 23.821_458_421_977_443);
     }
 }

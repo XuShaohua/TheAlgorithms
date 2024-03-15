@@ -65,15 +65,21 @@ mod tests {
 
     #[test]
     fn test_compound_interest() {
-        assert_eq!(compound_interest(10000.0, 0.05, 3.0), 1576.2500000000014);
-        assert_eq!(compound_interest(10000.0, 0.05, 1.0), 500.00000000000045);
-        assert_eq!(compound_interest(0.5, 0.05, 3.0), 0.07881250000000006);
+        assert_eq!(
+            compound_interest(10000.0, 0.05, 3.0),
+            1_576.250_000_000_001_4
+        );
+        assert_eq!(
+            compound_interest(10000.0, 0.05, 1.0),
+            500.000_000_000_000_45
+        );
+        assert_eq!(compound_interest(0.5, 0.05, 3.0), 0.078_812_500_000_000_06);
     }
 
     #[test]
     fn test_apr_interest() {
-        assert_eq!(apr_interest(10000.0, 0.05, 3.0), 1618.223072263547);
-        assert_eq!(apr_interest(10000.0, 0.05, 1.0), 512.6749646744732);
-        assert_eq!(apr_interest(0.5, 0.05, 3.0), 0.08091115361317736);
+        assert_eq!(apr_interest(10000.0, 0.05, 3.0), 1_618.223_072_263_547);
+        assert_eq!(apr_interest(10000.0, 0.05, 1.0), 512.674_964_674_473_2);
+        assert_eq!(apr_interest(0.5, 0.05, 3.0), 0.080_911_153_613_177_36);
     }
 }

@@ -73,10 +73,10 @@ mod tests {
 
     #[test]
     fn test_lamberts_ellipsoidal_distance_helper() {
-        const SAN_FRANCISCO: Point2D = (37.774856, -122.424227);
-        const YOSEMITE: Point2D = (37.864742, -119.537521);
-        const NEW_YORK: Point2D = (40.713019, -74.012647);
-        const VENICE: Point2D = (45.443012, 12.313071);
+        const SAN_FRANCISCO: Point2D = (37.774_856, -122.424_227);
+        const YOSEMITE: Point2D = (37.864_742, -119.537_521);
+        const NEW_YORK: Point2D = (40.713_019, -74.012_647);
+        const VENICE: Point2D = (45.443_012, 12.313_071);
         assert_eq!(
             lamberts_ellipsoidal_distance_helper(SAN_FRANCISCO, YOSEMITE),
             254_351

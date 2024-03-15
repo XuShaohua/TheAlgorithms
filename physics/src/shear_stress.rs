@@ -43,6 +43,6 @@ mod tests {
 
     #[test]
     fn test_get_tangential_force() {
-        assert_eq!(get_tangential_force(1200.0, 1000.0), 1200000.0);
+        assert_eq!(get_tangential_force(1200.0, 1000.0), 1_200_000.0);
     }
 }

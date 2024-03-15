@@ -44,16 +44,16 @@ mod tests {
 
     #[test]
     fn test_get_area() {
-        assert_eq!(get_area(0.0023746, 2737e-21,), 0.06688838837354052);
+        assert_eq!(get_area(0.002_374_6, 2737e-21,), 0.066_888_388_373_540_52);
     }
 
     #[test]
     fn test_get_distance() {
-        assert_eq!(get_distance(0.0023, 2635e-13), 1.0323056015031114e-05);
+        assert_eq!(get_distance(0.0023, 2635e-13), 1.032_305_601_503_111_4e-5);
     }
 
     #[test]
     fn test_get_force() {
-        assert_eq!(get_force(4.0, 0.03), 6.42481891748642e-21);
+        assert_eq!(get_force(4.0, 0.03), 6.424_818_917_486_42e-21);
     }
 }
