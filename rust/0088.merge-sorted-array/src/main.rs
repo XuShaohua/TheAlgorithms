@@ -2,7 +2,7 @@
 // Use of this source is governed by General Public License that can be
 // found in the LICENSE file.
 
-pub fn merge(nums1: &mut Vec<i32>, m: i32, nums2: &[i32], n: i32) {
+pub fn merge(nums1: &mut [i32], m: i32, nums2: &[i32], n: i32) {
     let m = m as usize;
     let n = n as usize;
     assert_eq!(nums1.len(), m + n);
