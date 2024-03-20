@@ -2,6 +2,7 @@
 cmake_minimum_required(VERSION 3.10)
 project(leetcode-cpp)
 
+add_subdirectory(0001.two-sum)
 add_subdirectory(0002.add-two-numbers)
 add_subdirectory(0003.longest-substring-without-repeating-characters)
 add_subdirectory(0005.longest-palindromic-substring)
