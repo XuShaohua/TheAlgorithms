@@ -2,6 +2,8 @@
 // Use of this source is governed by General Public License that can be
 // found in the LICENSE file.
 
+use std::cmp::Ordering;
+
 /// Solve with two-pointers method.
 pub fn three_sum(nums: Vec<i32>) -> Vec<Vec<i32>> {
     let mut nums = nums;
@@ -25,22 +27,22 @@ pub fn three_sum(nums: Vec<i32>) -> Vec<Vec<i32>> {
 
         while left < right {
             let sum = nums[left] + nums[right];
-            if sum < target {
-                left += 1;
-            } else if sum > target {
-                right -= 1;
-            } else {
-                result.push(vec![nums[i], nums[left], nums[right]]);
-                // Remove duplicates
-                while left < right && nums[left] == nums[left + 1] {
+            match sum.cmp(&target) {
+                Ordering::Less => left += 1,
+                Ordering::Greater => right -= 1,
+                Ordering::Equal => {
+                    result.push(vec![nums[i], nums[left], nums[right]]);
+                    // Remove duplicates
+                    while left < right && nums[left] == nums[left + 1] {
+                        left += 1;
+                    }
+                    while left < right && nums[right] == nums[right - 1] {
+                        right -= 1;
+                    }
+
                     left += 1;
-                }
-                while left < right && nums[right] == nums[right - 1] {
                     right -= 1;
                 }
-
-                left += 1;
-                right -= 1;
             }
         }
     }
