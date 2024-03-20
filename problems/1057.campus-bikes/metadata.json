@@ -1,0 +1,44 @@
+{
+  "titleSlug": "campus-bikes",
+  "acRate": 58.556502249542675,
+  "content": null,
+  "difficulty": "Medium",
+  "freqBar": null,
+  "frontendQuestionId": "1057",
+  "hasSolution": true,
+  "hasVideoSolution": false,
+  "hints": [
+    "<p>Sort the elements by distance. In case of a tie, sort them by the index of the worker. After that, if there are still ties, sort them by the index of the bike.</p>\r\n\r\n<p>Can you do this in less than O(nlogn) time, where n is the total number of pairs between workers and bikes?</p>",
+    "Loop the sorted elements and match each pair of worker and bike if the given worker and bike where not used."
+  ],
+  "isFavor": false,
+  "paidOnly": true,
+  "similarQuestionList": [
+    {
+      "difficulty": "Medium",
+      "titleSlug": "campus-bikes-ii",
+      "title": "Campus Bikes II",
+      "translatedTitle": null,
+      "isPaidOnly": true
+    }
+  ],
+  "status": null,
+  "title": "Campus Bikes",
+  "topicTags": [
+    {
+      "name": "Array",
+      "id": "VG9waWNUYWdOb2RlOjU=",
+      "slug": "array"
+    },
+    {
+      "name": "Greedy",
+      "id": "VG9waWNUYWdOb2RlOjE3",
+      "slug": "greedy"
+    },
+    {
+      "name": "Sorting",
+      "id": "VG9waWNUYWdOb2RlOjYxMDQ5",
+      "slug": "sorting"
+    }
+  ]
+}

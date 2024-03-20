@@ -1,0 +1,40 @@
+{
+  "titleSlug": "index-pairs-of-a-string",
+  "acRate": 67.19552029864676,
+  "content": null,
+  "difficulty": "Easy",
+  "freqBar": null,
+  "frontendQuestionId": "1065",
+  "hasSolution": true,
+  "hasVideoSolution": false,
+  "hints": [
+    "For each string of the set, look for matches and store those matches indices."
+  ],
+  "isFavor": false,
+  "paidOnly": true,
+  "similarQuestionList": [],
+  "status": null,
+  "title": "Index Pairs of a String",
+  "topicTags": [
+    {
+      "name": "Array",
+      "id": "VG9waWNUYWdOb2RlOjU=",
+      "slug": "array"
+    },
+    {
+      "name": "String",
+      "id": "VG9waWNUYWdOb2RlOjEw",
+      "slug": "string"
+    },
+    {
+      "name": "Trie",
+      "id": "VG9waWNUYWdOb2RlOjI3",
+      "slug": "trie"
+    },
+    {
+      "name": "Sorting",
+      "id": "VG9waWNUYWdOb2RlOjYxMDQ5",
+      "slug": "sorting"
+    }
+  ]
+}

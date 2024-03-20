@@ -1,0 +1,32 @@
+{
+  "titleSlug": "all-paths-from-source-lead-to-destination",
+  "acRate": 37.72460874605526,
+  "content": null,
+  "difficulty": "Medium",
+  "freqBar": null,
+  "frontendQuestionId": "1059",
+  "hasSolution": true,
+  "hasVideoSolution": true,
+  "hints": [
+    "What if we can reach to a cycle from the source node?",
+    "Then the answer will be false, because we eventually get trapped in the cycle forever.",
+    "What if the we can't reach to a cycle from the source node? Then we need to ensure that from all visited nodes from source the unique node with indegree = 0 is the destination node."
+  ],
+  "isFavor": false,
+  "paidOnly": true,
+  "similarQuestionList": [],
+  "status": null,
+  "title": "All Paths from Source Lead to Destination",
+  "topicTags": [
+    {
+      "name": "Depth-First Search",
+      "id": "VG9waWNUYWdOb2RlOjIx",
+      "slug": "depth-first-search"
+    },
+    {
+      "name": "Graph",
+      "id": "VG9waWNUYWdOb2RlOjI0",
+      "slug": "graph"
+    }
+  ]
+}

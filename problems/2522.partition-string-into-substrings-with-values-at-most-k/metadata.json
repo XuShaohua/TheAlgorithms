@@ -1,0 +1,33 @@
+{
+  "titleSlug": "partition-string-into-substrings-with-values-at-most-k",
+  "acRate": 46.017617911543404,
+  "content": "<p>You are given a string <code>s</code> consisting of digits from <code>1</code> to <code>9</code> and an integer <code>k</code>.</p>\n\n<p>A partition of a string <code>s</code> is called <strong>good</strong> if:</p>\n\n<ul>\n\t<li>Each digit of <code>s</code> is part of <strong>exactly</strong> one substring.</li>\n\t<li>The value of each substring is less than or equal to <code>k</code>.</li>\n</ul>\n\n<p>Return <em>the <strong>minimum</strong> number of substrings in a <strong>good</strong> partition of</em> <code>s</code>. If no <strong>good</strong> partition of <code>s</code> exists, return <code>-1</code>.</p>\n\n<p><b>Note</b> that:</p>\n\n<ul>\n\t<li>The <strong>value</strong> of a string is its result when interpreted as an integer. For example, the value of <code>&quot;123&quot;</code> is <code>123</code> and the value of <code>&quot;1&quot;</code> is <code>1</code>.</li>\n\t<li>A <strong>substring</strong> is a contiguous sequence of characters within a string.</li>\n</ul>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> s = &quot;165462&quot;, k = 60\n<strong>Output:</strong> 4\n<strong>Explanation:</strong> We can partition the string into substrings &quot;16&quot;, &quot;54&quot;, &quot;6&quot;, and &quot;2&quot;. Each substring has a value less than or equal to k = 60.\nIt can be shown that we cannot partition the string into less than 4 substrings.\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> s = &quot;238182&quot;, k = 5\n<strong>Output:</strong> -1\n<strong>Explanation:</strong> There is no good partition for this string.\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= s.length &lt;= 10<sup>5</sup></code></li>\n\t<li><code>s[i]</code> is a digit from <code>&#39;1&#39;</code> to <code>&#39;9&#39;</code>.</li>\n\t<li><code>1 &lt;= k &lt;= 10<sup>9</sup></code></li>\n</ul>\n\n<p>&nbsp;</p>\n<style type=\"text/css\">.spoilerbutton {display:block; border:dashed; padding: 0px 0px; margin:10px 0px; font-size:150%; font-weight: bold; color:#000000; background-color:cyan; outline:0; \n}\n.spoiler {overflow:hidden;}\n.spoiler > div {-webkit-transition: all 0s ease;-moz-transition: margin 0s ease;-o-transition: all 0s ease;transition: margin 0s ease;}\n.spoilerbutton[value=\"Show Message\"] + .spoiler > div {margin-top:-500%;}\n.spoilerbutton[value=\"Hide Message\"] + .spoiler {padding:5px;}\n</style>\n",
+  "difficulty": "Medium",
+  "freqBar": null,
+  "frontendQuestionId": "2522",
+  "hasSolution": false,
+  "hasVideoSolution": false,
+  "hints": [],
+  "isFavor": false,
+  "paidOnly": false,
+  "similarQuestionList": [],
+  "status": null,
+  "title": "Partition String Into Substrings With Values at Most K",
+  "topicTags": [
+    {
+      "name": "String",
+      "id": "VG9waWNUYWdOb2RlOjEw",
+      "slug": "string"
+    },
+    {
+      "name": "Dynamic Programming",
+      "id": "VG9waWNUYWdOb2RlOjEz",
+      "slug": "dynamic-programming"
+    },
+    {
+      "name": "Greedy",
+      "id": "VG9waWNUYWdOb2RlOjE3",
+      "slug": "greedy"
+    }
+  ]
+}

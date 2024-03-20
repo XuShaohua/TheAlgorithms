@@ -1,0 +1,23 @@
+{
+  "titleSlug": "fix-names-in-a-table",
+  "acRate": 61.90298745143002,
+  "content": "<p>Table: <code>Users</code></p>\n\n<pre>\n+----------------+---------+\n| Column Name    | Type    |\n+----------------+---------+\n| user_id        | int     |\n| name           | varchar |\n+----------------+---------+\nuser_id is the primary key (column with unique values) for this table.\nThis table contains the ID and the name of the user. The name consists of only lowercase and uppercase characters.\n</pre>\n\n<p>&nbsp;</p>\n\n<p>Write a solution to fix the names so that only the first character is uppercase and the rest are lowercase.</p>\n\n<p>Return the result table ordered by <code>user_id</code>.</p>\n\n<p>The result format is in the following example.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> \nUsers table:\n+---------+-------+\n| user_id | name  |\n+---------+-------+\n| 1       | aLice |\n| 2       | bOB   |\n+---------+-------+\n<strong>Output:</strong> \n+---------+-------+\n| user_id | name  |\n+---------+-------+\n| 1       | Alice |\n| 2       | Bob   |\n+---------+-------+\n</pre>\n",
+  "difficulty": "Easy",
+  "freqBar": null,
+  "frontendQuestionId": "1667",
+  "hasSolution": true,
+  "hasVideoSolution": false,
+  "hints": [],
+  "isFavor": false,
+  "paidOnly": false,
+  "similarQuestionList": [],
+  "status": null,
+  "title": "Fix Names in a Table",
+  "topicTags": [
+    {
+      "name": "Database",
+      "id": "VG9waWNUYWdOb2RlOjYxMDQz",
+      "slug": "database"
+    }
+  ]
+}

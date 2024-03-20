@@ -1,0 +1,50 @@
+{
+  "titleSlug": "beautiful-pairs",
+  "acRate": 44.642857142857146,
+  "content": null,
+  "difficulty": "Hard",
+  "freqBar": null,
+  "frontendQuestionId": "2613",
+  "hasSolution": false,
+  "hasVideoSolution": false,
+  "hints": [
+    "Use Range Queries Data Structures to optimize the algorithm"
+  ],
+  "isFavor": false,
+  "paidOnly": true,
+  "similarQuestionList": [],
+  "status": null,
+  "title": "Beautiful Pairs",
+  "topicTags": [
+    {
+      "name": "Array",
+      "id": "VG9waWNUYWdOb2RlOjU=",
+      "slug": "array"
+    },
+    {
+      "name": "Math",
+      "id": "VG9waWNUYWdOb2RlOjg=",
+      "slug": "math"
+    },
+    {
+      "name": "Divide and Conquer",
+      "id": "VG9waWNUYWdOb2RlOjEy",
+      "slug": "divide-and-conquer"
+    },
+    {
+      "name": "Geometry",
+      "id": "VG9waWNUYWdOb2RlOjM4",
+      "slug": "geometry"
+    },
+    {
+      "name": "Sorting",
+      "id": "VG9waWNUYWdOb2RlOjYxMDQ5",
+      "slug": "sorting"
+    },
+    {
+      "name": "Ordered Set",
+      "id": "VG9waWNUYWdOb2RlOjYxMDcw",
+      "slug": "ordered-set"
+    }
+  ]
+}

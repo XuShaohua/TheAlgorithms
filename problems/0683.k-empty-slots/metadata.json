@@ -1,0 +1,38 @@
+{
+  "titleSlug": "k-empty-slots",
+  "acRate": 37.03672059514583,
+  "content": null,
+  "difficulty": "Hard",
+  "freqBar": null,
+  "frontendQuestionId": "683",
+  "hasSolution": true,
+  "hasVideoSolution": false,
+  "hints": [],
+  "isFavor": false,
+  "paidOnly": true,
+  "similarQuestionList": [],
+  "status": null,
+  "title": "K Empty Slots",
+  "topicTags": [
+    {
+      "name": "Array",
+      "id": "VG9waWNUYWdOb2RlOjU=",
+      "slug": "array"
+    },
+    {
+      "name": "Binary Indexed Tree",
+      "id": "VG9waWNUYWdOb2RlOjI4",
+      "slug": "binary-indexed-tree"
+    },
+    {
+      "name": "Sliding Window",
+      "id": "VG9waWNUYWdOb2RlOjU1ODIx",
+      "slug": "sliding-window"
+    },
+    {
+      "name": "Ordered Set",
+      "id": "VG9waWNUYWdOb2RlOjYxMDcw",
+      "slug": "ordered-set"
+    }
+  ]
+}

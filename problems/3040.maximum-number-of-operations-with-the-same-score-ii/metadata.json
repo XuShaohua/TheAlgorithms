@@ -1,0 +1,36 @@
+{
+  "titleSlug": "maximum-number-of-operations-with-the-same-score-ii",
+  "acRate": 31.173077323559422,
+  "content": "<p>Given an array of integers called <code>nums</code>, you can perform <strong>any</strong> of the following operation while <code>nums</code> contains <strong>at least</strong> <code>2</code> elements:</p>\n\n<ul>\n\t<li>Choose the first two elements of <code>nums</code> and delete them.</li>\n\t<li>Choose the last two elements of <code>nums</code> and delete them.</li>\n\t<li>Choose the first and the last elements of <code>nums</code> and delete them.</li>\n</ul>\n\n<p>The<strong> score</strong> of the operation is the sum of the deleted elements.</p>\n\n<p>Your task is to find the <strong>maximum</strong> number of operations that can be performed, such that <strong>all operations have the same score</strong>.</p>\n\n<p>Return <em>the <strong>maximum</strong> number of operations possible that satisfy the condition mentioned above</em>.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [3,2,1,2,3,4]\n<strong>Output:</strong> 3\n<strong>Explanation:</strong> We perform the following operations:\n- Delete the first two elements, with score 3 + 2 = 5, nums = [1,2,3,4].\n- Delete the first and the last elements, with score 1 + 4 = 5, nums = [2,3].\n- Delete the first and the last elements, with score 2 + 3 = 5, nums = [].\nWe are unable to perform any more operations as nums is empty.\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [3,2,6,1,4]\n<strong>Output:</strong> 2\n<strong>Explanation:</strong> We perform the following operations:\n- Delete the first two elements, with score 3 + 2 = 5, nums = [6,1,4].\n- Delete the last two elements, with score 1 + 4 = 5, nums = [6].\nIt can be proven that we can perform at most 2 operations.\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>2 &lt;= nums.length &lt;= 2000</code></li>\n\t<li><code>1 &lt;= nums[i] &lt;= 1000</code></li>\n</ul>\n",
+  "difficulty": "Medium",
+  "freqBar": null,
+  "frontendQuestionId": "3040",
+  "hasSolution": false,
+  "hasVideoSolution": false,
+  "hints": [
+    "After the first operation, the score of other operations is fixed.",
+    "For the fixed score use dynamic programming <code>dp[l][r]</code> to find a maximum number of operations on the subarray <code>nums[l..r]</code>."
+  ],
+  "isFavor": false,
+  "paidOnly": false,
+  "similarQuestionList": [],
+  "status": null,
+  "title": "Maximum Number of Operations With the Same Score II",
+  "topicTags": [
+    {
+      "name": "Array",
+      "id": "VG9waWNUYWdOb2RlOjU=",
+      "slug": "array"
+    },
+    {
+      "name": "Dynamic Programming",
+      "id": "VG9waWNUYWdOb2RlOjEz",
+      "slug": "dynamic-programming"
+    },
+    {
+      "name": "Memoization",
+      "id": "VG9waWNUYWdOb2RlOjMz",
+      "slug": "memoization"
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "titleSlug": "remove-interval",
+  "acRate": 65.83456698741674,
+  "content": null,
+  "difficulty": "Medium",
+  "freqBar": null,
+  "frontendQuestionId": "1272",
+  "hasSolution": true,
+  "hasVideoSolution": true,
+  "hints": [
+    "Solve the problem for every interval alone.",
+    "Divide the problem into cases according to the position of the two intervals."
+  ],
+  "isFavor": false,
+  "paidOnly": true,
+  "similarQuestionList": [],
+  "status": null,
+  "title": "Remove Interval",
+  "topicTags": [
+    {
+      "name": "Array",
+      "id": "VG9waWNUYWdOb2RlOjU=",
+      "slug": "array"
+    }
+  ]
+}

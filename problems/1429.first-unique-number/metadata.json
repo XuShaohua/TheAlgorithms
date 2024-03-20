@@ -1,0 +1,47 @@
+{
+  "titleSlug": "first-unique-number",
+  "acRate": 53.55417220574701,
+  "content": null,
+  "difficulty": "Medium",
+  "freqBar": null,
+  "frontendQuestionId": "1429",
+  "hasSolution": true,
+  "hasVideoSolution": false,
+  "hints": [
+    "Use doubly Linked list with hashmap of pointers to linked list nodes. add unique number to the linked list. When add is called check if the added number is unique then it have to be added to the linked list and if it is repeated remove it from the linked list if exists. When showFirstUnique is called retrieve the head of the linked list.",
+    "Use queue and check that first element of the queue is always unique.",
+    "Use set or heap to make running time of each function O(logn)."
+  ],
+  "isFavor": false,
+  "paidOnly": true,
+  "similarQuestionList": [],
+  "status": null,
+  "title": "First Unique Number",
+  "topicTags": [
+    {
+      "name": "Array",
+      "id": "VG9waWNUYWdOb2RlOjU=",
+      "slug": "array"
+    },
+    {
+      "name": "Hash Table",
+      "id": "VG9waWNUYWdOb2RlOjY=",
+      "slug": "hash-table"
+    },
+    {
+      "name": "Design",
+      "id": "VG9waWNUYWdOb2RlOjI1",
+      "slug": "design"
+    },
+    {
+      "name": "Queue",
+      "id": "VG9waWNUYWdOb2RlOjM0",
+      "slug": "queue"
+    },
+    {
+      "name": "Data Stream",
+      "id": "VG9waWNUYWdOb2RlOjYxMDYz",
+      "slug": "data-stream"
+    }
+  ]
+}

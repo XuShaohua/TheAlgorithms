@@ -1,0 +1,63 @@
+{
+  "titleSlug": "divide-array-into-equal-pairs",
+  "acRate": 73.37129706125339,
+  "content": "<p>You are given an integer array <code>nums</code> consisting of <code>2 * n</code> integers.</p>\n\n<p>You need to divide <code>nums</code> into <code>n</code> pairs such that:</p>\n\n<ul>\n\t<li>Each element belongs to <strong>exactly one</strong> pair.</li>\n\t<li>The elements present in a pair are <strong>equal</strong>.</li>\n</ul>\n\n<p>Return <code>true</code> <em>if nums can be divided into</em> <code>n</code> <em>pairs, otherwise return</em> <code>false</code>.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [3,2,3,2,2,2]\n<strong>Output:</strong> true\n<strong>Explanation:</strong> \nThere are 6 elements in nums, so they should be divided into 6 / 2 = 3 pairs.\nIf nums is divided into the pairs (2, 2), (3, 3), and (2, 2), it will satisfy all the conditions.\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [1,2,3,4]\n<strong>Output:</strong> false\n<strong>Explanation:</strong> \nThere is no way to divide nums into 4 / 2 = 2 pairs such that the pairs satisfy every condition.\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>nums.length == 2 * n</code></li>\n\t<li><code>1 &lt;= n &lt;= 500</code></li>\n\t<li><code>1 &lt;= nums[i] &lt;= 500</code></li>\n</ul>\n",
+  "difficulty": "Easy",
+  "freqBar": null,
+  "frontendQuestionId": "2206",
+  "hasSolution": false,
+  "hasVideoSolution": false,
+  "hints": [
+    "For any number x in the range [1, 500], count the number of elements in nums whose values are equal to x.",
+    "The elements with equal value can be divided completely into pairs if and only if their count is even."
+  ],
+  "isFavor": false,
+  "paidOnly": false,
+  "similarQuestionList": [
+    {
+      "difficulty": "Easy",
+      "titleSlug": "sort-array-by-increasing-frequency",
+      "title": "Sort Array by Increasing Frequency",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    },
+    {
+      "difficulty": "Easy",
+      "titleSlug": "distribute-elements-into-two-arrays-i",
+      "title": "Distribute Elements Into Two Arrays I",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    },
+    {
+      "difficulty": "Hard",
+      "titleSlug": "distribute-elements-into-two-arrays-ii",
+      "title": "Distribute Elements Into Two Arrays II",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    }
+  ],
+  "status": null,
+  "title": "Divide Array Into Equal Pairs",
+  "topicTags": [
+    {
+      "name": "Array",
+      "id": "VG9waWNUYWdOb2RlOjU=",
+      "slug": "array"
+    },
+    {
+      "name": "Hash Table",
+      "id": "VG9waWNUYWdOb2RlOjY=",
+      "slug": "hash-table"
+    },
+    {
+      "name": "Bit Manipulation",
+      "id": "VG9waWNUYWdOb2RlOjE5",
+      "slug": "bit-manipulation"
+    },
+    {
+      "name": "Counting",
+      "id": "VG9waWNUYWdOb2RlOjYxMDYy",
+      "slug": "counting"
+    }
+  ]
+}

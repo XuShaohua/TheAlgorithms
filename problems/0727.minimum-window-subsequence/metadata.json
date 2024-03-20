@@ -1,0 +1,50 @@
+{
+  "titleSlug": "minimum-window-subsequence",
+  "acRate": 43.34602229908601,
+  "content": null,
+  "difficulty": "Hard",
+  "freqBar": null,
+  "frontendQuestionId": "727",
+  "hasSolution": false,
+  "hasVideoSolution": false,
+  "hints": [
+    "Let dp[j][e] = s be the largest index for which S[s:e+1] has T[:j] as a substring."
+  ],
+  "isFavor": false,
+  "paidOnly": true,
+  "similarQuestionList": [
+    {
+      "difficulty": "Hard",
+      "titleSlug": "minimum-window-substring",
+      "title": "Minimum Window Substring",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    },
+    {
+      "difficulty": "Easy",
+      "titleSlug": "longest-continuous-increasing-subsequence",
+      "title": "Longest Continuous Increasing Subsequence",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    }
+  ],
+  "status": null,
+  "title": "Minimum Window Subsequence",
+  "topicTags": [
+    {
+      "name": "String",
+      "id": "VG9waWNUYWdOb2RlOjEw",
+      "slug": "string"
+    },
+    {
+      "name": "Dynamic Programming",
+      "id": "VG9waWNUYWdOb2RlOjEz",
+      "slug": "dynamic-programming"
+    },
+    {
+      "name": "Sliding Window",
+      "id": "VG9waWNUYWdOb2RlOjU1ODIx",
+      "slug": "sliding-window"
+    }
+  ]
+}

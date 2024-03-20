@@ -1,0 +1,52 @@
+{
+  "titleSlug": "matrix-block-sum",
+  "acRate": 75.41544863185062,
+  "content": "<p>Given a <code>m x n</code> matrix <code>mat</code> and an integer <code>k</code>, return <em>a matrix</em> <code>answer</code> <em>where each</em> <code>answer[i][j]</code> <em>is the sum of all elements</em> <code>mat[r][c]</code> <em>for</em>:</p>\n\n<ul>\n\t<li><code>i - k &lt;= r &lt;= i + k,</code></li>\n\t<li><code>j - k &lt;= c &lt;= j + k</code>, and</li>\n\t<li><code>(r, c)</code> is a valid position in the matrix.</li>\n</ul>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> mat = [[1,2,3],[4,5,6],[7,8,9]], k = 1\n<strong>Output:</strong> [[12,21,16],[27,45,33],[24,39,28]]\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> mat = [[1,2,3],[4,5,6],[7,8,9]], k = 2\n<strong>Output:</strong> [[45,45,45],[45,45,45],[45,45,45]]\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>m ==&nbsp;mat.length</code></li>\n\t<li><code>n ==&nbsp;mat[i].length</code></li>\n\t<li><code>1 &lt;= m, n, k &lt;= 100</code></li>\n\t<li><code>1 &lt;= mat[i][j] &lt;= 100</code></li>\n</ul>\n",
+  "difficulty": "Medium",
+  "freqBar": null,
+  "frontendQuestionId": "1314",
+  "hasSolution": false,
+  "hasVideoSolution": false,
+  "hints": [
+    "How to calculate the required sum for a cell (i,j) fast ?",
+    "Use the concept of cumulative sum array.",
+    "Create a cumulative sum matrix where dp[i][j] is the sum of all cells in the rectangle from (0,0) to (i,j), use inclusion-exclusion idea."
+  ],
+  "isFavor": false,
+  "paidOnly": false,
+  "similarQuestionList": [
+    {
+      "difficulty": "Hard",
+      "titleSlug": "stamping-the-grid",
+      "title": "Stamping the Grid",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    },
+    {
+      "difficulty": "Medium",
+      "titleSlug": "maximum-sum-of-an-hourglass",
+      "title": "Maximum Sum of an Hourglass",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    }
+  ],
+  "status": null,
+  "title": "Matrix Block Sum",
+  "topicTags": [
+    {
+      "name": "Array",
+      "id": "VG9waWNUYWdOb2RlOjU=",
+      "slug": "array"
+    },
+    {
+      "name": "Matrix",
+      "id": "VG9waWNUYWdOb2RlOjYxMDUz",
+      "slug": "matrix"
+    },
+    {
+      "name": "Prefix Sum",
+      "id": "VG9waWNUYWdOb2RlOjYxMDY4",
+      "slug": "prefix-sum"
+    }
+  ]
+}

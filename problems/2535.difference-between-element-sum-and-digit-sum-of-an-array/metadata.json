@@ -1,0 +1,46 @@
+{
+  "titleSlug": "difference-between-element-sum-and-digit-sum-of-an-array",
+  "acRate": 84.00362429189255,
+  "content": "<p>You are given a positive integer array <code>nums</code>.</p>\n\n<ul>\n\t<li>The <strong>element sum</strong> is the sum of all the elements in <code>nums</code>.</li>\n\t<li>The <strong>digit sum</strong> is the sum of all the digits (not necessarily distinct) that appear in <code>nums</code>.</li>\n</ul>\n\n<p>Return <em>the <strong>absolute</strong> difference between the <strong>element sum</strong> and <strong>digit sum</strong> of </em><code>nums</code>.</p>\n\n<p><strong>Note</strong> that the absolute difference between two integers <code>x</code> and <code>y</code> is defined as <code>|x - y|</code>.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [1,15,6,3]\n<strong>Output:</strong> 9\n<strong>Explanation:</strong> \nThe element sum of nums is 1 + 15 + 6 + 3 = 25.\nThe digit sum of nums is 1 + 1 + 5 + 6 + 3 = 16.\nThe absolute difference between the element sum and digit sum is |25 - 16| = 9.\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [1,2,3,4]\n<strong>Output:</strong> 0\n<strong>Explanation:</strong>\nThe element sum of nums is 1 + 2 + 3 + 4 = 10.\nThe digit sum of nums is 1 + 2 + 3 + 4 = 10.\nThe absolute difference between the element sum and digit sum is |10 - 10| = 0.\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= nums.length &lt;= 2000</code></li>\n\t<li><code>1 &lt;= nums[i] &lt;= 2000</code></li>\n</ul>\n",
+  "difficulty": "Easy",
+  "freqBar": null,
+  "frontendQuestionId": "2535",
+  "hasSolution": false,
+  "hasVideoSolution": false,
+  "hints": [
+    "Use a simple for loop to iterate each number.",
+    "How you can get the digit for each number?"
+  ],
+  "isFavor": false,
+  "paidOnly": false,
+  "similarQuestionList": [
+    {
+      "difficulty": "Easy",
+      "titleSlug": "add-digits",
+      "title": "Add Digits",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    },
+    {
+      "difficulty": "Easy",
+      "titleSlug": "minimum-sum-of-four-digit-number-after-splitting-digits",
+      "title": "Minimum Sum of Four Digit Number After Splitting Digits",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    }
+  ],
+  "status": null,
+  "title": "Difference Between Element Sum and Digit Sum of an Array",
+  "topicTags": [
+    {
+      "name": "Array",
+      "id": "VG9waWNUYWdOb2RlOjU=",
+      "slug": "array"
+    },
+    {
+      "name": "Math",
+      "id": "VG9waWNUYWdOb2RlOjg=",
+      "slug": "math"
+    }
+  ]
+}

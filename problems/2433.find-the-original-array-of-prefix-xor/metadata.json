@@ -1,0 +1,53 @@
+{
+  "titleSlug": "find-the-original-array-of-prefix-xor",
+  "acRate": 88.15624777062216,
+  "content": "<p>You are given an <strong>integer</strong> array <code>pref</code> of size <code>n</code>. Find and return <em>the array </em><code>arr</code><em> of size </em><code>n</code><em> that satisfies</em>:</p>\n\n<ul>\n\t<li><code>pref[i] = arr[0] ^ arr[1] ^ ... ^ arr[i]</code>.</li>\n</ul>\n\n<p>Note that <code>^</code> denotes the <strong>bitwise-xor</strong> operation.</p>\n\n<p>It can be proven that the answer is <strong>unique</strong>.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> pref = [5,2,0,3,1]\n<strong>Output:</strong> [5,7,2,3,2]\n<strong>Explanation:</strong> From the array [5,7,2,3,2] we have the following:\n- pref[0] = 5.\n- pref[1] = 5 ^ 7 = 2.\n- pref[2] = 5 ^ 7 ^ 2 = 0.\n- pref[3] = 5 ^ 7 ^ 2 ^ 3 = 3.\n- pref[4] = 5 ^ 7 ^ 2 ^ 3 ^ 2 = 1.\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> pref = [13]\n<strong>Output:</strong> [13]\n<strong>Explanation:</strong> We have pref[0] = arr[0] = 13.\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= pref.length &lt;= 10<sup>5</sup></code></li>\n\t<li><code>0 &lt;= pref[i] &lt;= 10<sup>6</sup></code></li>\n</ul>\n",
+  "difficulty": "Medium",
+  "freqBar": null,
+  "frontendQuestionId": "2433",
+  "hasSolution": true,
+  "hasVideoSolution": false,
+  "hints": [
+    "Consider the following equation: x ^ a = b. How can you find x?",
+    "Notice that arr[i] ^ pref[i-1] = pref[i]. This is the same as the previous equation."
+  ],
+  "isFavor": false,
+  "paidOnly": false,
+  "similarQuestionList": [
+    {
+      "difficulty": "Medium",
+      "titleSlug": "single-number-iii",
+      "title": "Single Number III",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    },
+    {
+      "difficulty": "Medium",
+      "titleSlug": "count-triplets-that-can-form-two-arrays-of-equal-xor",
+      "title": "Count Triplets That Can Form Two Arrays of Equal XOR",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    },
+    {
+      "difficulty": "Easy",
+      "titleSlug": "decode-xored-array",
+      "title": "Decode XORed Array",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    }
+  ],
+  "status": null,
+  "title": "Find The Original Array of Prefix Xor",
+  "topicTags": [
+    {
+      "name": "Array",
+      "id": "VG9waWNUYWdOb2RlOjU=",
+      "slug": "array"
+    },
+    {
+      "name": "Bit Manipulation",
+      "id": "VG9waWNUYWdOb2RlOjE5",
+      "slug": "bit-manipulation"
+    }
+  ]
+}

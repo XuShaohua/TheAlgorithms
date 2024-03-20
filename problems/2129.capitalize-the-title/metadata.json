@@ -1,0 +1,41 @@
+{
+  "titleSlug": "capitalize-the-title",
+  "acRate": 63.81562516966176,
+  "content": "<p>You are given a string <code>title</code> consisting of one or more words separated by a single space, where each word consists of English letters. <strong>Capitalize</strong> the string by changing the capitalization of each word such that:</p>\n\n<ul>\n\t<li>If the length of the word is <code>1</code> or <code>2</code> letters, change all letters to lowercase.</li>\n\t<li>Otherwise, change the first letter to uppercase and the remaining letters to lowercase.</li>\n</ul>\n\n<p>Return <em>the <strong>capitalized</strong> </em><code>title</code>.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> title = &quot;capiTalIze tHe titLe&quot;\n<strong>Output:</strong> &quot;Capitalize The Title&quot;\n<strong>Explanation:</strong>\nSince all the words have a length of at least 3, the first letter of each word is uppercase, and the remaining letters are lowercase.\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> title = &quot;First leTTeR of EACH Word&quot;\n<strong>Output:</strong> &quot;First Letter of Each Word&quot;\n<strong>Explanation:</strong>\nThe word &quot;of&quot; has length 2, so it is all lowercase.\nThe remaining words have a length of at least 3, so the first letter of each remaining word is uppercase, and the remaining letters are lowercase.\n</pre>\n\n<p><strong class=\"example\">Example 3:</strong></p>\n\n<pre>\n<strong>Input:</strong> title = &quot;i lOve leetcode&quot;\n<strong>Output:</strong> &quot;i Love Leetcode&quot;\n<strong>Explanation:</strong>\nThe word &quot;i&quot; has length 1, so it is lowercase.\nThe remaining words have a length of at least 3, so the first letter of each remaining word is uppercase, and the remaining letters are lowercase.\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= title.length &lt;= 100</code></li>\n\t<li><code>title</code> consists of words separated by a single space without any leading or trailing spaces.</li>\n\t<li>Each word consists of uppercase and lowercase English letters and is <strong>non-empty</strong>.</li>\n</ul>\n",
+  "difficulty": "Easy",
+  "freqBar": null,
+  "frontendQuestionId": "2129",
+  "hasSolution": false,
+  "hasVideoSolution": false,
+  "hints": [
+    "Firstly, try to find all the words present in the string.",
+    "On the basis of each word's lengths, simulate the process explained in Problem."
+  ],
+  "isFavor": false,
+  "paidOnly": false,
+  "similarQuestionList": [
+    {
+      "difficulty": "Easy",
+      "titleSlug": "detect-capital",
+      "title": "Detect Capital",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    },
+    {
+      "difficulty": "Easy",
+      "titleSlug": "to-lower-case",
+      "title": "To Lower Case",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    }
+  ],
+  "status": null,
+  "title": "Capitalize the Title",
+  "topicTags": [
+    {
+      "name": "String",
+      "id": "VG9waWNUYWdOb2RlOjEw",
+      "slug": "string"
+    }
+  ]
+}

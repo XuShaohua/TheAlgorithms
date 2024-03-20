@@ -1,0 +1,46 @@
+{
+  "titleSlug": "all-elements-in-two-binary-search-trees",
+  "acRate": 79.80672643369108,
+  "content": "<p>Given two binary search trees <code>root1</code> and <code>root2</code>, return <em>a list containing all the integers from both trees sorted in <strong>ascending</strong> order</em>.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n<img alt=\"\" src=\"https://assets.leetcode.com/uploads/2019/12/18/q2-e1.png\" style=\"width: 457px; height: 207px;\" />\n<pre>\n<strong>Input:</strong> root1 = [2,1,4], root2 = [1,0,3]\n<strong>Output:</strong> [0,1,1,2,3,4]\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n<img alt=\"\" src=\"https://assets.leetcode.com/uploads/2019/12/18/q2-e5-.png\" style=\"width: 352px; height: 197px;\" />\n<pre>\n<strong>Input:</strong> root1 = [1,null,8], root2 = [8,1]\n<strong>Output:</strong> [1,1,8,8]\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li>The number of nodes in each tree is in the range <code>[0, 5000]</code>.</li>\n\t<li><code>-10<sup>5</sup> &lt;= Node.val &lt;= 10<sup>5</sup></code></li>\n</ul>\n",
+  "difficulty": "Medium",
+  "freqBar": null,
+  "frontendQuestionId": "1305",
+  "hasSolution": true,
+  "hasVideoSolution": false,
+  "hints": [
+    "Traverse the first tree in list1 and the second tree in list2.",
+    "Merge the two trees in one list and sort it."
+  ],
+  "isFavor": false,
+  "paidOnly": false,
+  "similarQuestionList": [],
+  "status": null,
+  "title": "All Elements in Two Binary Search Trees",
+  "topicTags": [
+    {
+      "name": "Tree",
+      "id": "VG9waWNUYWdOb2RlOjIw",
+      "slug": "tree"
+    },
+    {
+      "name": "Depth-First Search",
+      "id": "VG9waWNUYWdOb2RlOjIx",
+      "slug": "depth-first-search"
+    },
+    {
+      "name": "Binary Search Tree",
+      "id": "VG9waWNUYWdOb2RlOjMw",
+      "slug": "binary-search-tree"
+    },
+    {
+      "name": "Sorting",
+      "id": "VG9waWNUYWdOb2RlOjYxMDQ5",
+      "slug": "sorting"
+    },
+    {
+      "name": "Binary Tree",
+      "id": "VG9waWNUYWdOb2RlOjYxMDU3",
+      "slug": "binary-tree"
+    }
+  ]
+}

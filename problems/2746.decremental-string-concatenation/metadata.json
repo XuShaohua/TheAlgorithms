@@ -1,0 +1,45 @@
+{
+  "titleSlug": "decremental-string-concatenation",
+  "acRate": 26.084347979530616,
+  "content": "<p>You are given a <strong>0-indexed</strong> array <code>words</code> containing <code>n</code> strings.</p>\n\n<p>Let&#39;s define a <strong>join</strong> operation <code>join(x, y)</code> between two strings <code>x</code> and <code>y</code> as concatenating them into <code>xy</code>. However, if the last character of <code>x</code> is equal to the first character of <code>y</code>, one of them is <strong>deleted</strong>.</p>\n\n<p>For example <code>join(&quot;ab&quot;, &quot;ba&quot;) = &quot;aba&quot;</code> and <code>join(&quot;ab&quot;, &quot;cde&quot;) = &quot;abcde&quot;</code>.</p>\n\n<p>You are to perform <code>n - 1</code> <strong>join</strong> operations. Let <code>str<sub>0</sub> = words[0]</code>. Starting from <code>i = 1</code> up to <code>i = n - 1</code>, for the <code>i<sup>th</sup></code> operation, you can do one of the following:</p>\n\n<ul>\n\t<li>Make <code>str<sub>i</sub> = join(str<sub>i - 1</sub>, words[i])</code></li>\n\t<li>Make <code>str<sub>i</sub> = join(words[i], str<sub>i - 1</sub>)</code></li>\n</ul>\n\n<p>Your task is to <strong>minimize</strong> the length of <code>str<sub>n - 1</sub></code>.</p>\n\n<p>Return <em>an integer denoting the minimum possible length of</em> <code>str<sub>n - 1</sub></code>.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> words = [&quot;aa&quot;,&quot;ab&quot;,&quot;bc&quot;]\n<strong>Output:</strong> 4\n<strong>Explanation: </strong>In this example, we can perform join operations in the following order to minimize the length of str<sub>2</sub>: \nstr<sub>0</sub> = &quot;aa&quot;\nstr<sub>1</sub> = join(str<sub>0</sub>, &quot;ab&quot;) = &quot;aab&quot;\nstr<sub>2</sub> = join(str<sub>1</sub>, &quot;bc&quot;) = &quot;aabc&quot; \nIt can be shown that the minimum possible length of str<sub>2</sub> is 4.</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> words = [&quot;ab&quot;,&quot;b&quot;]\n<strong>Output:</strong> 2\n<strong>Explanation:</strong> In this example, str<sub>0</sub> = &quot;ab&quot;, there are two ways to get str<sub>1</sub>: \njoin(str<sub>0</sub>, &quot;b&quot;) = &quot;ab&quot; or join(&quot;b&quot;, str<sub>0</sub>) = &quot;bab&quot;. \nThe first string, &quot;ab&quot;, has the minimum length. Hence, the answer is 2.\n</pre>\n\n<p><strong class=\"example\">Example 3:</strong></p>\n\n<pre>\n<strong>Input:</strong> words = [&quot;aaa&quot;,&quot;c&quot;,&quot;aba&quot;]\n<strong>Output:</strong> 6\n<strong>Explanation:</strong> In this example, we can perform join operations in the following order to minimize the length of str<sub>2</sub>: \nstr<sub>0</sub> = &quot;aaa&quot;\nstr<sub>1</sub> = join(str<sub>0</sub>, &quot;c&quot;) = &quot;aaac&quot;\nstr<sub>2</sub> = join(&quot;aba&quot;, str<sub>1</sub>) = &quot;abaaac&quot;\nIt can be shown that the minimum possible length of str<sub>2</sub> is 6.\n</pre>\n\n<div class=\"notranslate\" style=\"all: initial;\">&nbsp;</div>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= words.length &lt;= 1000</code></li>\n\t<li><code>1 &lt;= words[i].length &lt;= 50</code></li>\n\t<li>Each character in <code>words[i]</code> is an English lowercase letter</li>\n</ul>\n",
+  "difficulty": "Medium",
+  "freqBar": null,
+  "frontendQuestionId": "2746",
+  "hasSolution": false,
+  "hasVideoSolution": false,
+  "hints": [
+    "Use dynamic programming with memoization.",
+    "Notice that the first and last characters of a string are sufficient to determine the length of its concatenation with any other string.",
+    "Define dp[i][first][last] as the shortest concatenation length of the first i words starting with a character first and ending with a character last. Convert characters to their ASCII codes if your programming language cannot implicitly convert them to array indices."
+  ],
+  "isFavor": false,
+  "paidOnly": false,
+  "similarQuestionList": [
+    {
+      "difficulty": "Medium",
+      "titleSlug": "largest-merge-of-two-strings",
+      "title": "Largest Merge Of Two Strings",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    }
+  ],
+  "status": null,
+  "title": "Decremental String Concatenation",
+  "topicTags": [
+    {
+      "name": "Array",
+      "id": "VG9waWNUYWdOb2RlOjU=",
+      "slug": "array"
+    },
+    {
+      "name": "String",
+      "id": "VG9waWNUYWdOb2RlOjEw",
+      "slug": "string"
+    },
+    {
+      "name": "Dynamic Programming",
+      "id": "VG9waWNUYWdOb2RlOjEz",
+      "slug": "dynamic-programming"
+    }
+  ]
+}

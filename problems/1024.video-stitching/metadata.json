@@ -1,0 +1,36 @@
+{
+  "titleSlug": "video-stitching",
+  "acRate": 51.317999103350274,
+  "content": "<p>You are given a series of video clips from a sporting event that lasted <code>time</code> seconds. These video clips can be overlapping with each other and have varying lengths.</p>\n\n<p>Each video clip is described by an array <code>clips</code> where <code>clips[i] = [start<sub>i</sub>, end<sub>i</sub>]</code> indicates that the ith clip started at <code>start<sub>i</sub></code> and ended at <code>end<sub>i</sub></code>.</p>\n\n<p>We can cut these clips into segments freely.</p>\n\n<ul>\n\t<li>For example, a clip <code>[0, 7]</code> can be cut into segments <code>[0, 1] + [1, 3] + [3, 7]</code>.</li>\n</ul>\n\n<p>Return <em>the minimum number of clips needed so that we can cut the clips into segments that cover the entire sporting event</em> <code>[0, time]</code>. If the task is impossible, return <code>-1</code>.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> clips = [[0,2],[4,6],[8,10],[1,9],[1,5],[5,9]], time = 10\n<strong>Output:</strong> 3\n<strong>Explanation:</strong> We take the clips [0,2], [8,10], [1,9]; a total of 3 clips.\nThen, we can reconstruct the sporting event as follows:\nWe cut [1,9] into segments [1,2] + [2,8] + [8,9].\nNow we have segments [0,2] + [2,8] + [8,10] which cover the sporting event [0, 10].\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> clips = [[0,1],[1,2]], time = 5\n<strong>Output:</strong> -1\n<strong>Explanation:</strong> We cannot cover [0,5] with only [0,1] and [1,2].\n</pre>\n\n<p><strong class=\"example\">Example 3:</strong></p>\n\n<pre>\n<strong>Input:</strong> clips = [[0,1],[6,8],[0,2],[5,6],[0,4],[0,3],[6,7],[1,3],[4,7],[1,4],[2,5],[2,6],[3,4],[4,5],[5,7],[6,9]], time = 9\n<strong>Output:</strong> 3\n<strong>Explanation:</strong> We can take clips [0,4], [4,7], and [6,9].\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= clips.length &lt;= 100</code></li>\n\t<li><code>0 &lt;= start<sub>i</sub> &lt;= end<sub>i</sub> &lt;= 100</code></li>\n\t<li><code>1 &lt;= time &lt;= 100</code></li>\n</ul>\n",
+  "difficulty": "Medium",
+  "freqBar": null,
+  "frontendQuestionId": "1024",
+  "hasSolution": false,
+  "hasVideoSolution": false,
+  "hints": [
+    "What if we sort the intervals?  Considering the sorted intervals, how can we solve the problem with dynamic programming?",
+    "Let's consider a DP(pos, limit) where pos represents the position of the current interval we are gonna take the decision and limit is the current covered area from [0 - limit]. This DP returns the minimum number of taken intervals or infinite if it's not possible to cover the [0 - T] section."
+  ],
+  "isFavor": false,
+  "paidOnly": false,
+  "similarQuestionList": [],
+  "status": null,
+  "title": "Video Stitching",
+  "topicTags": [
+    {
+      "name": "Array",
+      "id": "VG9waWNUYWdOb2RlOjU=",
+      "slug": "array"
+    },
+    {
+      "name": "Dynamic Programming",
+      "id": "VG9waWNUYWdOb2RlOjEz",
+      "slug": "dynamic-programming"
+    },
+    {
+      "name": "Greedy",
+      "id": "VG9waWNUYWdOb2RlOjE3",
+      "slug": "greedy"
+    }
+  ]
+}

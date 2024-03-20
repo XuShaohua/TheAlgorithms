@@ -1,0 +1,38 @@
+{
+  "titleSlug": "rabbits-in-forest",
+  "acRate": 53.427393939393944,
+  "content": "<p>There is a forest with an unknown number of rabbits. We asked n rabbits <strong>&quot;How many rabbits have the same color as you?&quot;</strong> and collected the answers in an integer array <code>answers</code> where <code>answers[i]</code> is the answer of the <code>i<sup>th</sup></code> rabbit.</p>\n\n<p>Given the array <code>answers</code>, return <em>the minimum number of rabbits that could be in the forest</em>.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> answers = [1,1,2]\n<strong>Output:</strong> 5\n<strong>Explanation:</strong>\nThe two rabbits that answered &quot;1&quot; could both be the same color, say red.\nThe rabbit that answered &quot;2&quot; can&#39;t be red or the answers would be inconsistent.\nSay the rabbit that answered &quot;2&quot; was blue.\nThen there should be 2 other blue rabbits in the forest that didn&#39;t answer into the array.\nThe smallest possible number of rabbits in the forest is therefore 5: 3 that answered plus 2 that didn&#39;t.\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> answers = [10,10,10]\n<strong>Output:</strong> 11\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= answers.length &lt;= 1000</code></li>\n\t<li><code>0 &lt;= answers[i] &lt; 1000</code></li>\n</ul>\n",
+  "difficulty": "Medium",
+  "freqBar": null,
+  "frontendQuestionId": "781",
+  "hasSolution": false,
+  "hasVideoSolution": false,
+  "hints": [],
+  "isFavor": false,
+  "paidOnly": false,
+  "similarQuestionList": [],
+  "status": null,
+  "title": "Rabbits in Forest",
+  "topicTags": [
+    {
+      "name": "Array",
+      "id": "VG9waWNUYWdOb2RlOjU=",
+      "slug": "array"
+    },
+    {
+      "name": "Hash Table",
+      "id": "VG9waWNUYWdOb2RlOjY=",
+      "slug": "hash-table"
+    },
+    {
+      "name": "Math",
+      "id": "VG9waWNUYWdOb2RlOjg=",
+      "slug": "math"
+    },
+    {
+      "name": "Greedy",
+      "id": "VG9waWNUYWdOb2RlOjE3",
+      "slug": "greedy"
+    }
+  ]
+}

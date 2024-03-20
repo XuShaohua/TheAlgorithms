@@ -1,0 +1,27 @@
+{
+  "titleSlug": "get-highest-answer-rate-question",
+  "acRate": 40.35407407407408,
+  "content": null,
+  "difficulty": "Medium",
+  "freqBar": null,
+  "frontendQuestionId": "578",
+  "hasSolution": true,
+  "hasVideoSolution": false,
+  "hints": [
+    "Try to find all question ids by group",
+    "Try to find each group answer number and show number.",
+    "Rank all the rates (answer/(answer+show)) and return the max one"
+  ],
+  "isFavor": false,
+  "paidOnly": true,
+  "similarQuestionList": [],
+  "status": null,
+  "title": "Get Highest Answer Rate Question",
+  "topicTags": [
+    {
+      "name": "Database",
+      "id": "VG9waWNUYWdOb2RlOjYxMDQz",
+      "slug": "database"
+    }
+  ]
+}

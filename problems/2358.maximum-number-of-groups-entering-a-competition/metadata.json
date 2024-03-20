@@ -1,0 +1,51 @@
+{
+  "titleSlug": "maximum-number-of-groups-entering-a-competition",
+  "acRate": 67.76300840718018,
+  "content": "<p>You are given a positive integer array <code>grades</code> which represents the grades of students in a university. You would like to enter <strong>all</strong> these students into a competition in <strong>ordered</strong> non-empty groups, such that the ordering meets the following conditions:</p>\n\n<ul>\n\t<li>The sum of the grades of students in the <code>i<sup>th</sup></code> group is <strong>less than</strong> the sum of the grades of students in the <code>(i + 1)<sup>th</sup></code> group, for all groups (except the last).</li>\n\t<li>The total number of students in the <code>i<sup>th</sup></code> group is <strong>less than</strong> the total number of students in the <code>(i + 1)<sup>th</sup></code> group, for all groups (except the last).</li>\n</ul>\n\n<p>Return <em>the <strong>maximum</strong> number of groups that can be formed</em>.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> grades = [10,6,12,7,3,5]\n<strong>Output:</strong> 3\n<strong>Explanation:</strong> The following is a possible way to form 3 groups of students:\n- 1<sup>st</sup> group has the students with grades = [12]. Sum of grades: 12. Student count: 1\n- 2<sup>nd</sup> group has the students with grades = [6,7]. Sum of grades: 6 + 7 = 13. Student count: 2\n- 3<sup>rd</sup> group has the students with grades = [10,3,5]. Sum of grades: 10 + 3 + 5 = 18. Student count: 3\nIt can be shown that it is not possible to form more than 3 groups.\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> grades = [8,8]\n<strong>Output:</strong> 1\n<strong>Explanation:</strong> We can only form 1 group, since forming 2 groups would lead to an equal number of students in both groups.\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= grades.length &lt;= 10<sup>5</sup></code></li>\n\t<li><code>1 &lt;= grades[i] &lt;= 10<sup>5</sup></code></li>\n</ul>\n",
+  "difficulty": "Medium",
+  "freqBar": null,
+  "frontendQuestionId": "2358",
+  "hasSolution": false,
+  "hasVideoSolution": false,
+  "hints": [
+    "Would it be easier to place the students into valid groups after sorting them based on their grades in ascending order?",
+    "Notice that, after sorting, we can separate them into groups of sizes 1, 2, 3, and so on.",
+    "If the last group is invalid, we can merge it with the previous group.",
+    "This creates the maximum number of groups because we always greedily form the smallest possible group."
+  ],
+  "isFavor": false,
+  "paidOnly": false,
+  "similarQuestionList": [
+    {
+      "difficulty": "Hard",
+      "titleSlug": "maximum-height-by-stacking-cuboids",
+      "title": "Maximum Height by Stacking Cuboids ",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    }
+  ],
+  "status": null,
+  "title": "Maximum Number of Groups Entering a Competition",
+  "topicTags": [
+    {
+      "name": "Array",
+      "id": "VG9waWNUYWdOb2RlOjU=",
+      "slug": "array"
+    },
+    {
+      "name": "Math",
+      "id": "VG9waWNUYWdOb2RlOjg=",
+      "slug": "math"
+    },
+    {
+      "name": "Binary Search",
+      "id": "VG9waWNUYWdOb2RlOjEx",
+      "slug": "binary-search"
+    },
+    {
+      "name": "Greedy",
+      "id": "VG9waWNUYWdOb2RlOjE3",
+      "slug": "greedy"
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "titleSlug": "find-first-palindromic-string-in-the-array",
+  "acRate": 83.96174819695202,
+  "content": "<p>Given an array of strings <code>words</code>, return <em>the first <strong>palindromic</strong> string in the array</em>. If there is no such string, return <em>an <strong>empty string</strong> </em><code>&quot;&quot;</code>.</p>\n\n<p>A string is <strong>palindromic</strong> if it reads the same forward and backward.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> words = [&quot;abc&quot;,&quot;car&quot;,&quot;ada&quot;,&quot;racecar&quot;,&quot;cool&quot;]\n<strong>Output:</strong> &quot;ada&quot;\n<strong>Explanation:</strong> The first string that is palindromic is &quot;ada&quot;.\nNote that &quot;racecar&quot; is also palindromic, but it is not the first.\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> words = [&quot;notapalindrome&quot;,&quot;racecar&quot;]\n<strong>Output:</strong> &quot;racecar&quot;\n<strong>Explanation:</strong> The first and only string that is palindromic is &quot;racecar&quot;.\n</pre>\n\n<p><strong class=\"example\">Example 3:</strong></p>\n\n<pre>\n<strong>Input:</strong> words = [&quot;def&quot;,&quot;ghi&quot;]\n<strong>Output:</strong> &quot;&quot;\n<strong>Explanation:</strong> There are no palindromic strings, so the empty string is returned.\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= words.length &lt;= 100</code></li>\n\t<li><code>1 &lt;= words[i].length &lt;= 100</code></li>\n\t<li><code>words[i]</code> consists only of lowercase English letters.</li>\n</ul>\n",
+  "difficulty": "Easy",
+  "freqBar": null,
+  "frontendQuestionId": "2108",
+  "hasSolution": true,
+  "hasVideoSolution": false,
+  "hints": [
+    "Iterate through the elements in order. As soon as the current element is a palindrome, return it.",
+    "To check if an element is a palindrome, can you reverse the string?"
+  ],
+  "isFavor": false,
+  "paidOnly": false,
+  "similarQuestionList": [
+    {
+      "difficulty": "Easy",
+      "titleSlug": "valid-palindrome",
+      "title": "Valid Palindrome",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    }
+  ],
+  "status": null,
+  "title": "Find First Palindromic String in the Array",
+  "topicTags": [
+    {
+      "name": "Array",
+      "id": "VG9waWNUYWdOb2RlOjU=",
+      "slug": "array"
+    },
+    {
+      "name": "Two Pointers",
+      "id": "VG9waWNUYWdOb2RlOjk=",
+      "slug": "two-pointers"
+    },
+    {
+      "name": "String",
+      "id": "VG9waWNUYWdOb2RlOjEw",
+      "slug": "string"
+    }
+  ]
+}

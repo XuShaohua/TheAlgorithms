@@ -1,0 +1,41 @@
+{
+  "titleSlug": "check-if-point-is-reachable",
+  "acRate": 41.87409341456339,
+  "content": "<p>There exists an infinitely large grid. You are currently at point <code>(1, 1)</code>, and you need to reach the point <code>(targetX, targetY)</code> using a finite number of steps.</p>\n\n<p>In one <strong>step</strong>, you can move from point <code>(x, y)</code> to any one of the following points:</p>\n\n<ul>\n\t<li><code>(x, y - x)</code></li>\n\t<li><code>(x - y, y)</code></li>\n\t<li><code>(2 * x, y)</code></li>\n\t<li><code>(x, 2 * y)</code></li>\n</ul>\n\n<p>Given two integers <code>targetX</code> and <code>targetY</code> representing the X-coordinate and Y-coordinate of your final position, return <code>true</code> <em>if you can reach the point from</em> <code>(1, 1)</code> <em>using some number of steps, and </em><code>false</code><em> otherwise</em>.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> targetX = 6, targetY = 9\n<strong>Output:</strong> false\n<strong>Explanation:</strong> It is impossible to reach (6,9) from (1,1) using any sequence of moves, so false is returned.\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> targetX = 4, targetY = 7\n<strong>Output:</strong> true\n<strong>Explanation:</strong> You can follow the path (1,1) -&gt; (1,2) -&gt; (1,4) -&gt; (1,8) -&gt; (1,7) -&gt; (2,7) -&gt; (4,7).\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= targetX, targetY&nbsp;&lt;= 10<sup>9</sup></code></li>\n</ul>\n",
+  "difficulty": "Hard",
+  "freqBar": null,
+  "frontendQuestionId": "2543",
+  "hasSolution": false,
+  "hasVideoSolution": false,
+  "hints": [
+    "Let’s go in reverse order, from (targetX, targetY) to (1, 1). So, now we can move from (x, y) to (x+y, y), (x, y+x), (x/2, y) if x is even, and (x, y/2) if y is even.",
+    "When is it optimal to use the third and fourth operations?",
+    "Think how GCD of (x, y) is affected if we apply the first two operations.",
+    "How can we check if we can reach (1, 1) using the GCD value calculate above?"
+  ],
+  "isFavor": false,
+  "paidOnly": false,
+  "similarQuestionList": [
+    {
+      "difficulty": "Hard",
+      "titleSlug": "reaching-points",
+      "title": "Reaching Points",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    }
+  ],
+  "status": null,
+  "title": "Check if Point Is Reachable",
+  "topicTags": [
+    {
+      "name": "Math",
+      "id": "VG9waWNUYWdOb2RlOjg=",
+      "slug": "math"
+    },
+    {
+      "name": "Number Theory",
+      "id": "VG9waWNUYWdOb2RlOjYxMDY3",
+      "slug": "number-theory"
+    }
+  ]
+}

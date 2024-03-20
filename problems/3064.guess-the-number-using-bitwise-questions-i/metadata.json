@@ -1,0 +1,31 @@
+{
+  "titleSlug": "guess-the-number-using-bitwise-questions-i",
+  "acRate": 94.8076923076923,
+  "content": null,
+  "difficulty": "Medium",
+  "freqBar": null,
+  "frontendQuestionId": "3064",
+  "hasSolution": false,
+  "hasVideoSolution": false,
+  "hints": [
+    "Ask <code>2<sup>i</sup></code> for <code>0 <= i < 30</code>.",
+    "If the result is greater than zero for some <code>i</code>, this bit is a set bit in Alice’s number."
+  ],
+  "isFavor": false,
+  "paidOnly": true,
+  "similarQuestionList": [],
+  "status": null,
+  "title": "Guess the Number Using Bitwise Questions I",
+  "topicTags": [
+    {
+      "name": "Bit Manipulation",
+      "id": "VG9waWNUYWdOb2RlOjE5",
+      "slug": "bit-manipulation"
+    },
+    {
+      "name": "Interactive",
+      "id": "VG9waWNUYWdOb2RlOjYxMDU5",
+      "slug": "interactive"
+    }
+  ]
+}

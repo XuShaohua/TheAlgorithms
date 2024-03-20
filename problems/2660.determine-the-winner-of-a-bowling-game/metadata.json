@@ -1,0 +1,39 @@
+{
+  "titleSlug": "determine-the-winner-of-a-bowling-game",
+  "acRate": 34.11707841031149,
+  "content": "<p>You are given two <strong>0-indexed</strong> integer arrays <code><font face=\"monospace\">player1</font></code> and <code>player2</code>, that represent the number of pins that player 1 and player 2 hit in a bowling game, respectively.</p>\n\n<p>The bowling game consists of <code>n</code> turns, and the number of pins in each turn is exactly <code>10</code>.</p>\n\n<p>Assume a player hit <code>x<sub>i</sub></code> pins in the <code>i<sup>th</sup></code> turn. The value of the <code>i<sup>th</sup></code> turn for the player is:</p>\n\n<ul>\n\t<li><code>2x<sub>i</sub></code> if the player hit <code>10</code> pins in any of the previous two turns.</li>\n\t<li>Otherwise, It is <code>x<sub>i</sub></code>.</li>\n</ul>\n\n<p>The score of the player is the sum of the values of their <code>n</code> turns.</p>\n\n<p>Return</p>\n\n<ul>\n\t<li><code>1</code> <em>if the score of player 1 is more than the score of player 2,</em></li>\n\t<li><code>2</code> <em>if the score of player 2 is more than the score of player 1, and</em></li>\n\t<li><code>0</code> <em>in case of a draw.</em></li>\n</ul>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> player1 = [4,10,7,9], player2 = [6,5,2,3]\n<strong>Output:</strong> 1\n<strong>Explanation:</strong> The score of player1 is 4 + 10 + 2*7 + 2*9 = 46.\nThe score of player2 is 6 + 5 + 2 + 3 = 16.\nScore of player1 is more than the score of player2, so, player1 is the winner, and the answer is 1.\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> player1 = [3,5,7,6], player2 = [8,10,10,2]\n<strong>Output:</strong> 2\n<strong>Explanation:</strong> The score of player1 is 3 + 5 + 7 + 6 = 21.\nThe score of player2 is 8 + 10 + 2*10 + 2*2 = 42.\nScore of player2 is more than the score of player1, so, player2 is the winner, and the answer is 2.\n</pre>\n\n<p><strong class=\"example\">Example 3:</strong></p>\n\n<pre>\n<strong>Input:</strong> player1 = [2,3], player2 = [4,1]\n<strong>Output:</strong> 0\n<strong>Explanation:</strong> The score of player1 is 2 + 3 = 5\nThe score of player2 is 4 + 1 = 5\nThe score of player1 equals to the score of player2, so, there is a draw, and the answer is 0.\n\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>n == player1.length == player2.length</code></li>\n\t<li><code>1 &lt;= n &lt;= 1000</code></li>\n\t<li><code>0 &lt;= player1[i], player2[i] &lt;= 10</code></li>\n</ul>\n",
+  "difficulty": "Easy",
+  "freqBar": null,
+  "frontendQuestionId": "2660",
+  "hasSolution": false,
+  "hasVideoSolution": false,
+  "hints": [
+    "Think about simulating the process to calculate the answer.",
+    "Iterate over each element and check the previous two elements. See if one of them is 10 and can affect the score."
+  ],
+  "isFavor": false,
+  "paidOnly": false,
+  "similarQuestionList": [
+    {
+      "difficulty": "Easy",
+      "titleSlug": "high-five",
+      "title": "High Five",
+      "translatedTitle": null,
+      "isPaidOnly": true
+    }
+  ],
+  "status": null,
+  "title": "Determine the Winner of a Bowling Game",
+  "topicTags": [
+    {
+      "name": "Array",
+      "id": "VG9waWNUYWdOb2RlOjU=",
+      "slug": "array"
+    },
+    {
+      "name": "Simulation",
+      "id": "VG9waWNUYWdOb2RlOjYxMDU1",
+      "slug": "simulation"
+    }
+  ]
+}

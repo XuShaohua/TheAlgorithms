@@ -1,0 +1,17 @@
+{
+  "titleSlug": "election-results",
+  "acRate": 64.1259698767686,
+  "content": null,
+  "difficulty": "Medium",
+  "freqBar": null,
+  "frontendQuestionId": "2820",
+  "hasSolution": false,
+  "hasVideoSolution": false,
+  "hints": [],
+  "isFavor": false,
+  "paidOnly": true,
+  "similarQuestionList": [],
+  "status": null,
+  "title": "Election Results",
+  "topicTags": []
+}

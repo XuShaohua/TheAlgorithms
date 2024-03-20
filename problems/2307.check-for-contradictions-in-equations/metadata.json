@@ -1,0 +1,50 @@
+{
+  "titleSlug": "check-for-contradictions-in-equations",
+  "acRate": 42.65027782454959,
+  "content": null,
+  "difficulty": "Hard",
+  "freqBar": null,
+  "frontendQuestionId": "2307",
+  "hasSolution": false,
+  "hasVideoSolution": false,
+  "hints": [
+    "Try treating this as a graph problem.",
+    "Each variable is a node, and each equation is an edge.",
+    "Try performing DFS multiple times to find contradictions."
+  ],
+  "isFavor": false,
+  "paidOnly": true,
+  "similarQuestionList": [
+    {
+      "difficulty": "Medium",
+      "titleSlug": "evaluate-division",
+      "title": "Evaluate Division",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    }
+  ],
+  "status": null,
+  "title": "Check for Contradictions in Equations",
+  "topicTags": [
+    {
+      "name": "Array",
+      "id": "VG9waWNUYWdOb2RlOjU=",
+      "slug": "array"
+    },
+    {
+      "name": "Depth-First Search",
+      "id": "VG9waWNUYWdOb2RlOjIx",
+      "slug": "depth-first-search"
+    },
+    {
+      "name": "Union Find",
+      "id": "VG9waWNUYWdOb2RlOjIz",
+      "slug": "union-find"
+    },
+    {
+      "name": "Graph",
+      "id": "VG9waWNUYWdOb2RlOjI0",
+      "slug": "graph"
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "titleSlug": "convert-callback-based-function-to-promise-based-function",
+  "acRate": 91.21863799283155,
+  "content": null,
+  "difficulty": "Medium",
+  "freqBar": null,
+  "frontendQuestionId": "2776",
+  "hasSolution": true,
+  "hasVideoSolution": false,
+  "hints": [],
+  "isFavor": false,
+  "paidOnly": true,
+  "similarQuestionList": [],
+  "status": null,
+  "title": "Convert Callback Based Function to Promise Based Function",
+  "topicTags": []
+}

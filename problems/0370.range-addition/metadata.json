@@ -1,0 +1,55 @@
+{
+  "titleSlug": "range-addition",
+  "acRate": 71.52861869760052,
+  "content": null,
+  "difficulty": "Medium",
+  "freqBar": null,
+  "frontendQuestionId": "370",
+  "hasSolution": true,
+  "hasVideoSolution": false,
+  "hints": [
+    "Thinking of using advanced data structures? You are thinking it too complicated.",
+    "For each update operation, do you really need to update all elements between i and j?",
+    "Update only the first and end element is sufficient.",
+    "The optimal time complexity is O(<b><i>k</i></b> + <b><i>n</i></b>) and uses O(1) extra space."
+  ],
+  "isFavor": false,
+  "paidOnly": true,
+  "similarQuestionList": [
+    {
+      "difficulty": "Easy",
+      "titleSlug": "range-addition-ii",
+      "title": "Range Addition II",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    },
+    {
+      "difficulty": "Medium",
+      "titleSlug": "count-positions-on-street-with-required-brightness",
+      "title": "Count Positions on Street With Required Brightness",
+      "translatedTitle": null,
+      "isPaidOnly": true
+    },
+    {
+      "difficulty": "Medium",
+      "titleSlug": "shifting-letters-ii",
+      "title": "Shifting Letters II",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    }
+  ],
+  "status": null,
+  "title": "Range Addition",
+  "topicTags": [
+    {
+      "name": "Array",
+      "id": "VG9waWNUYWdOb2RlOjU=",
+      "slug": "array"
+    },
+    {
+      "name": "Prefix Sum",
+      "id": "VG9waWNUYWdOb2RlOjYxMDY4",
+      "slug": "prefix-sum"
+    }
+  ]
+}

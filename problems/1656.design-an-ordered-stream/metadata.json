@@ -1,0 +1,50 @@
+{
+  "titleSlug": "design-an-ordered-stream",
+  "acRate": 84.26296825620484,
+  "content": "<p>There is a stream of <code>n</code> <code>(idKey, value)</code> pairs arriving in an <strong>arbitrary</strong> order, where <code>idKey</code> is an integer between <code>1</code> and <code>n</code> and <code>value</code> is a string. No two pairs have the same <code>id</code>.</p>\n\n<p>Design a stream that returns the values in <strong>increasing order of their IDs</strong> by returning a <strong>chunk</strong> (list) of values after each insertion. The concatenation of all the <strong>chunks</strong> should result in a list of the sorted values.</p>\n\n<p>Implement the <code>OrderedStream</code> class:</p>\n\n<ul>\n\t<li><code>OrderedStream(int n)</code> Constructs the stream to take <code>n</code> values.</li>\n\t<li><code>String[] insert(int idKey, String value)</code> Inserts the pair <code>(idKey, value)</code> into the stream, then returns the <strong>largest possible chunk</strong> of currently inserted values that appear next in the order.</li>\n</ul>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example:</strong></p>\n\n<p><strong><img alt=\"\" src=\"https://assets.leetcode.com/uploads/2020/11/10/q1.gif\" style=\"width: 682px; height: 240px;\" /></strong></p>\n\n<pre>\n<strong>Input</strong>\n[&quot;OrderedStream&quot;, &quot;insert&quot;, &quot;insert&quot;, &quot;insert&quot;, &quot;insert&quot;, &quot;insert&quot;]\n[[5], [3, &quot;ccccc&quot;], [1, &quot;aaaaa&quot;], [2, &quot;bbbbb&quot;], [5, &quot;eeeee&quot;], [4, &quot;ddddd&quot;]]\n<strong>Output</strong>\n[null, [], [&quot;aaaaa&quot;], [&quot;bbbbb&quot;, &quot;ccccc&quot;], [], [&quot;ddddd&quot;, &quot;eeeee&quot;]]\n\n<strong>Explanation</strong>\n// Note that the values ordered by ID is [&quot;aaaaa&quot;, &quot;bbbbb&quot;, &quot;ccccc&quot;, &quot;ddddd&quot;, &quot;eeeee&quot;].\nOrderedStream os = new OrderedStream(5);\nos.insert(3, &quot;ccccc&quot;); // Inserts (3, &quot;ccccc&quot;), returns [].\nos.insert(1, &quot;aaaaa&quot;); // Inserts (1, &quot;aaaaa&quot;), returns [&quot;aaaaa&quot;].\nos.insert(2, &quot;bbbbb&quot;); // Inserts (2, &quot;bbbbb&quot;), returns [&quot;bbbbb&quot;, &quot;ccccc&quot;].\nos.insert(5, &quot;eeeee&quot;); // Inserts (5, &quot;eeeee&quot;), returns [].\nos.insert(4, &quot;ddddd&quot;); // Inserts (4, &quot;ddddd&quot;), returns [&quot;ddddd&quot;, &quot;eeeee&quot;].\n// Concatentating all the chunks returned:\n// [] + [&quot;aaaaa&quot;] + [&quot;bbbbb&quot;, &quot;ccccc&quot;] + [] + [&quot;ddddd&quot;, &quot;eeeee&quot;] = [&quot;aaaaa&quot;, &quot;bbbbb&quot;, &quot;ccccc&quot;, &quot;ddddd&quot;, &quot;eeeee&quot;]\n// The resulting order is the same as the order above.\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= n &lt;= 1000</code></li>\n\t<li><code>1 &lt;= id &lt;= n</code></li>\n\t<li><code>value.length == 5</code></li>\n\t<li><code>value</code>&nbsp;consists only of lowercase letters.</li>\n\t<li>Each call to <code>insert</code>&nbsp;will have a unique <code>id.</code></li>\n\t<li>Exactly <code>n</code> calls will be made to <code>insert</code>.</li>\n</ul>\n",
+  "difficulty": "Easy",
+  "freqBar": null,
+  "frontendQuestionId": "1656",
+  "hasSolution": false,
+  "hasVideoSolution": false,
+  "hints": [
+    "Maintain the next id that should be outputted.",
+    "Maintain the ids that were inserted in the stream.",
+    "Per each insert, make a loop where you check if the id that has the turn has been inserted, and if so increment the id that has the turn and continue the loop, else break."
+  ],
+  "isFavor": false,
+  "paidOnly": false,
+  "similarQuestionList": [
+    {
+      "difficulty": "Medium",
+      "titleSlug": "longest-uploaded-prefix",
+      "title": "Longest Uploaded Prefix",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    }
+  ],
+  "status": null,
+  "title": "Design an Ordered Stream",
+  "topicTags": [
+    {
+      "name": "Array",
+      "id": "VG9waWNUYWdOb2RlOjU=",
+      "slug": "array"
+    },
+    {
+      "name": "Hash Table",
+      "id": "VG9waWNUYWdOb2RlOjY=",
+      "slug": "hash-table"
+    },
+    {
+      "name": "Design",
+      "id": "VG9waWNUYWdOb2RlOjI1",
+      "slug": "design"
+    },
+    {
+      "name": "Data Stream",
+      "id": "VG9waWNUYWdOb2RlOjYxMDYz",
+      "slug": "data-stream"
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "titleSlug": "largest-subarray-length-k",
+  "acRate": 64.48394137823512,
+  "content": null,
+  "difficulty": "Easy",
+  "freqBar": null,
+  "frontendQuestionId": "1708",
+  "hasSolution": false,
+  "hasVideoSolution": false,
+  "hints": [
+    "Search for the largest integer in the range [0, n - k]",
+    "This integer is the first element in the subarray. You should take it with the k - 1 elements after it."
+  ],
+  "isFavor": false,
+  "paidOnly": true,
+  "similarQuestionList": [],
+  "status": null,
+  "title": "Largest Subarray Length K",
+  "topicTags": [
+    {
+      "name": "Array",
+      "id": "VG9waWNUYWdOb2RlOjU=",
+      "slug": "array"
+    },
+    {
+      "name": "Greedy",
+      "id": "VG9waWNUYWdOb2RlOjE3",
+      "slug": "greedy"
+    }
+  ]
+}

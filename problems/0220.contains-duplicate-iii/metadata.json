@@ -1,0 +1,61 @@
+{
+  "titleSlug": "contains-duplicate-iii",
+  "acRate": 22.69121087537629,
+  "content": "<p>You are given an integer array <code>nums</code> and two integers <code>indexDiff</code> and <code>valueDiff</code>.</p>\n\n<p>Find a pair of indices <code>(i, j)</code> such that:</p>\n\n<ul>\n\t<li><code>i != j</code>,</li>\n\t<li><code>abs(i - j) &lt;= indexDiff</code>.</li>\n\t<li><code>abs(nums[i] - nums[j]) &lt;= valueDiff</code>, and</li>\n</ul>\n\n<p>Return <code>true</code><em> if such pair exists or </em><code>false</code><em> otherwise</em>.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [1,2,3,1], indexDiff = 3, valueDiff = 0\n<strong>Output:</strong> true\n<strong>Explanation:</strong> We can choose (i, j) = (0, 3).\nWe satisfy the three conditions:\ni != j --&gt; 0 != 3\nabs(i - j) &lt;= indexDiff --&gt; abs(0 - 3) &lt;= 3\nabs(nums[i] - nums[j]) &lt;= valueDiff --&gt; abs(1 - 1) &lt;= 0\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [1,5,9,1,5,9], indexDiff = 2, valueDiff = 3\n<strong>Output:</strong> false\n<strong>Explanation:</strong> After trying all the possible pairs (i, j), we cannot satisfy the three conditions, so we return false.\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>2 &lt;= nums.length &lt;= 10<sup>5</sup></code></li>\n\t<li><code>-10<sup>9</sup> &lt;= nums[i] &lt;= 10<sup>9</sup></code></li>\n\t<li><code>1 &lt;= indexDiff &lt;= nums.length</code></li>\n\t<li><code>0 &lt;= valueDiff &lt;= 10<sup>9</sup></code></li>\n</ul>\n",
+  "difficulty": "Hard",
+  "freqBar": null,
+  "frontendQuestionId": "220",
+  "hasSolution": true,
+  "hasVideoSolution": false,
+  "hints": [
+    "Time complexity O(n logk)  - This will give an indication that sorting is involved for k elements.",
+    "Use already existing state to evaluate next state  -  Like, a set of k sorted numbers are only needed to be tracked. When we are processing the next number in array, then we can utilize the existing sorted state and it is not necessary to sort next overlapping set of k numbers again."
+  ],
+  "isFavor": false,
+  "paidOnly": false,
+  "similarQuestionList": [
+    {
+      "difficulty": "Easy",
+      "titleSlug": "contains-duplicate",
+      "title": "Contains Duplicate",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    },
+    {
+      "difficulty": "Easy",
+      "titleSlug": "contains-duplicate-ii",
+      "title": "Contains Duplicate II",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    }
+  ],
+  "status": null,
+  "title": "Contains Duplicate III",
+  "topicTags": [
+    {
+      "name": "Array",
+      "id": "VG9waWNUYWdOb2RlOjU=",
+      "slug": "array"
+    },
+    {
+      "name": "Sliding Window",
+      "id": "VG9waWNUYWdOb2RlOjU1ODIx",
+      "slug": "sliding-window"
+    },
+    {
+      "name": "Sorting",
+      "id": "VG9waWNUYWdOb2RlOjYxMDQ5",
+      "slug": "sorting"
+    },
+    {
+      "name": "Bucket Sort",
+      "id": "VG9waWNUYWdOb2RlOjYxMDYw",
+      "slug": "bucket-sort"
+    },
+    {
+      "name": "Ordered Set",
+      "id": "VG9waWNUYWdOb2RlOjYxMDcw",
+      "slug": "ordered-set"
+    }
+  ]
+}

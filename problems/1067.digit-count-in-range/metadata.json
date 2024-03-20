@@ -1,0 +1,46 @@
+{
+  "titleSlug": "digit-count-in-range",
+  "acRate": 46.41301856520742,
+  "content": null,
+  "difficulty": "Hard",
+  "freqBar": null,
+  "frontendQuestionId": "1067",
+  "hasSolution": false,
+  "hasVideoSolution": false,
+  "hints": [
+    "Define a function f(x) to get the requested sum from 1 to x. So the answer will be f(hi) - f(lo - 1)",
+    "In order to solve f(x) we need to do a DP over digits approach."
+  ],
+  "isFavor": false,
+  "paidOnly": true,
+  "similarQuestionList": [
+    {
+      "difficulty": "Hard",
+      "titleSlug": "number-of-digit-one",
+      "title": "Number of Digit One",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    },
+    {
+      "difficulty": "Medium",
+      "titleSlug": "sum-of-numbers-with-units-digit-k",
+      "title": "Sum of Numbers With Units Digit K",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    }
+  ],
+  "status": null,
+  "title": "Digit Count in Range",
+  "topicTags": [
+    {
+      "name": "Math",
+      "id": "VG9waWNUYWdOb2RlOjg=",
+      "slug": "math"
+    },
+    {
+      "name": "Dynamic Programming",
+      "id": "VG9waWNUYWdOb2RlOjEz",
+      "slug": "dynamic-programming"
+    }
+  ]
+}

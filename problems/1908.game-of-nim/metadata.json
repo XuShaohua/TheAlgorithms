@@ -1,0 +1,58 @@
+{
+  "titleSlug": "game-of-nim",
+  "acRate": 63.370332996972756,
+  "content": null,
+  "difficulty": "Medium",
+  "freqBar": null,
+  "frontendQuestionId": "1908",
+  "hasSolution": true,
+  "hasVideoSolution": false,
+  "hints": [
+    "Simulate the game and try all possible moves for each player."
+  ],
+  "isFavor": false,
+  "paidOnly": true,
+  "similarQuestionList": [
+    {
+      "difficulty": "Hard",
+      "titleSlug": "subtree-removal-game-with-fibonacci-tree",
+      "title": "Subtree Removal Game with Fibonacci Tree",
+      "translatedTitle": null,
+      "isPaidOnly": true
+    }
+  ],
+  "status": null,
+  "title": "Game of Nim",
+  "topicTags": [
+    {
+      "name": "Array",
+      "id": "VG9waWNUYWdOb2RlOjU=",
+      "slug": "array"
+    },
+    {
+      "name": "Math",
+      "id": "VG9waWNUYWdOb2RlOjg=",
+      "slug": "math"
+    },
+    {
+      "name": "Dynamic Programming",
+      "id": "VG9waWNUYWdOb2RlOjEz",
+      "slug": "dynamic-programming"
+    },
+    {
+      "name": "Bit Manipulation",
+      "id": "VG9waWNUYWdOb2RlOjE5",
+      "slug": "bit-manipulation"
+    },
+    {
+      "name": "Brainteaser",
+      "id": "VG9waWNUYWdOb2RlOjMy",
+      "slug": "brainteaser"
+    },
+    {
+      "name": "Game Theory",
+      "id": "VG9waWNUYWdOb2RlOjYxMDcz",
+      "slug": "game-theory"
+    }
+  ]
+}

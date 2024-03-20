@@ -1,0 +1,46 @@
+{
+  "titleSlug": "cutting-ribbons",
+  "acRate": 49.31186914603891,
+  "content": null,
+  "difficulty": "Medium",
+  "freqBar": null,
+  "frontendQuestionId": "1891",
+  "hasSolution": false,
+  "hasVideoSolution": false,
+  "hints": [
+    "Use binary search on the answer.",
+    "You can get l/m branches of length m from a branch with length l."
+  ],
+  "isFavor": false,
+  "paidOnly": true,
+  "similarQuestionList": [
+    {
+      "difficulty": "Medium",
+      "titleSlug": "capacity-to-ship-packages-within-d-days",
+      "title": "Capacity To Ship Packages Within D Days",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    },
+    {
+      "difficulty": "Medium",
+      "titleSlug": "add-minimum-number-of-rungs",
+      "title": "Add Minimum Number of Rungs",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    }
+  ],
+  "status": null,
+  "title": "Cutting Ribbons",
+  "topicTags": [
+    {
+      "name": "Array",
+      "id": "VG9waWNUYWdOb2RlOjU=",
+      "slug": "array"
+    },
+    {
+      "name": "Binary Search",
+      "id": "VG9waWNUYWdOb2RlOjEx",
+      "slug": "binary-search"
+    }
+  ]
+}

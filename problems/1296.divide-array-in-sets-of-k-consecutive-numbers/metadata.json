@@ -1,0 +1,57 @@
+{
+  "titleSlug": "divide-array-in-sets-of-k-consecutive-numbers",
+  "acRate": 56.6199669210135,
+  "content": "<p>Given an array of integers <code>nums</code> and a positive integer <code>k</code>, check whether it is possible to divide this array into sets of <code>k</code> consecutive numbers.</p>\n\n<p>Return <code>true</code> <em>if it is possible</em>.<strong> </strong>Otherwise, return <code>false</code>.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [1,2,3,3,4,4,5,6], k = 4\n<strong>Output:</strong> true\n<strong>Explanation:</strong> Array can be divided into [1,2,3,4] and [3,4,5,6].\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [3,2,1,2,3,4,3,4,5,9,10,11], k = 3\n<strong>Output:</strong> true\n<strong>Explanation:</strong> Array can be divided into [1,2,3] , [2,3,4] , [3,4,5] and [9,10,11].\n</pre>\n\n<p><strong class=\"example\">Example 3:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [1,2,3,4], k = 3\n<strong>Output:</strong> false\n<strong>Explanation:</strong> Each array should be divided in subarrays of size 3.\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= k &lt;= nums.length &lt;= 10<sup>5</sup></code></li>\n\t<li><code>1 &lt;= nums[i] &lt;= 10<sup>9</sup></code></li>\n</ul>\n\n<p>&nbsp;</p>\n<strong>Note:</strong> This question is the same as&nbsp;846:&nbsp;<a href=\"https://leetcode.com/problems/hand-of-straights/\" target=\"_blank\">https://leetcode.com/problems/hand-of-straights/</a>",
+  "difficulty": "Medium",
+  "freqBar": null,
+  "frontendQuestionId": "1296",
+  "hasSolution": false,
+  "hasVideoSolution": false,
+  "hints": [
+    "If the smallest number in the possible-to-split array is V, then numbers V+1, V+2, ... V+k-1 must contain there as well.",
+    "You can iteratively find k sets and remove them from array until it becomes empty.",
+    "Failure to do so would mean that array is unsplittable."
+  ],
+  "isFavor": false,
+  "paidOnly": false,
+  "similarQuestionList": [
+    {
+      "difficulty": "Medium",
+      "titleSlug": "split-array-into-consecutive-subsequences",
+      "title": "Split Array into Consecutive Subsequences",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    },
+    {
+      "difficulty": "Medium",
+      "titleSlug": "all-divisions-with-the-highest-score-of-a-binary-array",
+      "title": "All Divisions With the Highest Score of a Binary Array",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    }
+  ],
+  "status": null,
+  "title": "Divide Array in Sets of K Consecutive Numbers",
+  "topicTags": [
+    {
+      "name": "Array",
+      "id": "VG9waWNUYWdOb2RlOjU=",
+      "slug": "array"
+    },
+    {
+      "name": "Hash Table",
+      "id": "VG9waWNUYWdOb2RlOjY=",
+      "slug": "hash-table"
+    },
+    {
+      "name": "Greedy",
+      "id": "VG9waWNUYWdOb2RlOjE3",
+      "slug": "greedy"
+    },
+    {
+      "name": "Sorting",
+      "id": "VG9waWNUYWdOb2RlOjYxMDQ5",
+      "slug": "sorting"
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "titleSlug": "super-palindromes",
+  "acRate": 38.86748906983926,
+  "content": "<p>Let&#39;s say a positive integer is a <strong>super-palindrome</strong> if it is a palindrome, and it is also the square of a palindrome.</p>\n\n<p>Given two positive integers <code>left</code> and <code>right</code> represented as strings, return <em>the number of <strong>super-palindromes</strong> integers in the inclusive range</em> <code>[left, right]</code>.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> left = &quot;4&quot;, right = &quot;1000&quot;\n<strong>Output:</strong> 4\n<strong>Explanation</strong>: 4, 9, 121, and 484 are superpalindromes.\nNote that 676 is not a superpalindrome: 26 * 26 = 676, but 26 is not a palindrome.\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> left = &quot;1&quot;, right = &quot;2&quot;\n<strong>Output:</strong> 1\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= left.length, right.length &lt;= 18</code></li>\n\t<li><code>left</code> and <code>right</code> consist of only digits.</li>\n\t<li><code>left</code> and <code>right</code> cannot have leading zeros.</li>\n\t<li><code>left</code> and <code>right</code> represent integers in the range <code>[1, 10<sup>18</sup> - 1]</code>.</li>\n\t<li><code>left</code> is less than or equal to <code>right</code>.</li>\n</ul>\n",
+  "difficulty": "Hard",
+  "freqBar": null,
+  "frontendQuestionId": "906",
+  "hasSolution": true,
+  "hasVideoSolution": false,
+  "hints": [],
+  "isFavor": false,
+  "paidOnly": false,
+  "similarQuestionList": [],
+  "status": null,
+  "title": "Super Palindromes",
+  "topicTags": [
+    {
+      "name": "Math",
+      "id": "VG9waWNUYWdOb2RlOjg=",
+      "slug": "math"
+    },
+    {
+      "name": "Enumeration",
+      "id": "VG9waWNUYWdOb2RlOjYxMDY2",
+      "slug": "enumeration"
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "titleSlug": "meeting-scheduler",
+  "acRate": 55.078007693517705,
+  "content": null,
+  "difficulty": "Medium",
+  "freqBar": null,
+  "frontendQuestionId": "1229",
+  "hasSolution": true,
+  "hasVideoSolution": false,
+  "hints": [
+    "Assume that in the solution, the selected slot from slotsA is bigger than the respectively selected slot from slotsB.",
+    "Use two pointers in order to try all the possible intersections, and check the length.",
+    "Do the same in step N° 1 but now assume that the selected slot from slotsB is bigger, return the minimum of the two options."
+  ],
+  "isFavor": false,
+  "paidOnly": true,
+  "similarQuestionList": [
+    {
+      "difficulty": "Easy",
+      "titleSlug": "merge-two-2d-arrays-by-summing-values",
+      "title": "Merge Two 2D Arrays by Summing Values",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    }
+  ],
+  "status": null,
+  "title": "Meeting Scheduler",
+  "topicTags": [
+    {
+      "name": "Array",
+      "id": "VG9waWNUYWdOb2RlOjU=",
+      "slug": "array"
+    },
+    {
+      "name": "Two Pointers",
+      "id": "VG9waWNUYWdOb2RlOjk=",
+      "slug": "two-pointers"
+    },
+    {
+      "name": "Sorting",
+      "id": "VG9waWNUYWdOb2RlOjYxMDQ5",
+      "slug": "sorting"
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "titleSlug": "minimum-split-into-subarrays-with-gcd-greater-than-one",
+  "acRate": 72.66848196051737,
+  "content": null,
+  "difficulty": "Medium",
+  "freqBar": null,
+  "frontendQuestionId": "2436",
+  "hasSolution": false,
+  "hasVideoSolution": false,
+  "hints": [
+    "How does the GCD of an array change when you add more elements to a subarray?",
+    "The GCD will always decrease when increasing the size of the subarray,",
+    "Keep adding elements to a subarray and if adding a new element will make the GCD = 1, add a new split and a new subarray."
+  ],
+  "isFavor": false,
+  "paidOnly": true,
+  "similarQuestionList": [
+    {
+      "difficulty": "Medium",
+      "titleSlug": "minimum-subarrays-in-a-valid-split",
+      "title": "Minimum Subarrays in a Valid Split",
+      "translatedTitle": null,
+      "isPaidOnly": true
+    }
+  ],
+  "status": null,
+  "title": "Minimum Split Into Subarrays With GCD Greater Than One",
+  "topicTags": [
+    {
+      "name": "Array",
+      "id": "VG9waWNUYWdOb2RlOjU=",
+      "slug": "array"
+    },
+    {
+      "name": "Math",
+      "id": "VG9waWNUYWdOb2RlOjg=",
+      "slug": "math"
+    },
+    {
+      "name": "Dynamic Programming",
+      "id": "VG9waWNUYWdOb2RlOjEz",
+      "slug": "dynamic-programming"
+    },
+    {
+      "name": "Greedy",
+      "id": "VG9waWNUYWdOb2RlOjE3",
+      "slug": "greedy"
+    },
+    {
+      "name": "Number Theory",
+      "id": "VG9waWNUYWdOb2RlOjYxMDY3",
+      "slug": "number-theory"
+    }
+  ]
+}

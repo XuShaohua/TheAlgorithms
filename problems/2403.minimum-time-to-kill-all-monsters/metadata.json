@@ -1,0 +1,64 @@
+{
+  "titleSlug": "minimum-time-to-kill-all-monsters",
+  "acRate": 55.90951061865189,
+  "content": null,
+  "difficulty": "Hard",
+  "freqBar": null,
+  "frontendQuestionId": "2403",
+  "hasSolution": false,
+  "hasVideoSolution": false,
+  "hints": [
+    "Each monster can only have two states. They are either alive or dead.",
+    "We can use bitmasks to represent every possible combination of alive and dead monsters.",
+    "Let dp[mask] represent the minimum number of days needed to reach the state mask."
+  ],
+  "isFavor": false,
+  "paidOnly": true,
+  "similarQuestionList": [
+    {
+      "difficulty": "Hard",
+      "titleSlug": "closest-room",
+      "title": "Closest Room",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    },
+    {
+      "difficulty": "Medium",
+      "titleSlug": "eliminate-maximum-number-of-monsters",
+      "title": "Eliminate Maximum Number of Monsters",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    },
+    {
+      "difficulty": "Medium",
+      "titleSlug": "number-of-ways-to-build-sturdy-brick-wall",
+      "title": "Number of Ways to Build Sturdy Brick Wall",
+      "translatedTitle": null,
+      "isPaidOnly": true
+    }
+  ],
+  "status": null,
+  "title": "Minimum Time to Kill All Monsters",
+  "topicTags": [
+    {
+      "name": "Array",
+      "id": "VG9waWNUYWdOb2RlOjU=",
+      "slug": "array"
+    },
+    {
+      "name": "Dynamic Programming",
+      "id": "VG9waWNUYWdOb2RlOjEz",
+      "slug": "dynamic-programming"
+    },
+    {
+      "name": "Bit Manipulation",
+      "id": "VG9waWNUYWdOb2RlOjE5",
+      "slug": "bit-manipulation"
+    },
+    {
+      "name": "Bitmask",
+      "id": "VG9waWNUYWdOb2RlOjYxMDc4",
+      "slug": "bitmask"
+    }
+  ]
+}

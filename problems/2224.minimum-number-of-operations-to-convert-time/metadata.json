@@ -1,0 +1,53 @@
+{
+  "titleSlug": "minimum-number-of-operations-to-convert-time",
+  "acRate": 64.98913061244505,
+  "content": "<p>You are given two strings <code>current</code> and <code>correct</code> representing two <strong>24-hour times</strong>.</p>\n\n<p>24-hour times are formatted as <code>&quot;HH:MM&quot;</code>, where <code>HH</code> is between <code>00</code> and <code>23</code>, and <code>MM</code> is between <code>00</code> and <code>59</code>. The earliest 24-hour time is <code>00:00</code>, and the latest is <code>23:59</code>.</p>\n\n<p>In one operation you can increase the time <code>current</code> by <code>1</code>, <code>5</code>, <code>15</code>, or <code>60</code> minutes. You can perform this operation <strong>any</strong> number of times.</p>\n\n<p>Return <em>the <strong>minimum number of operations</strong> needed to convert </em><code>current</code><em> to </em><code>correct</code>.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> current = &quot;02:30&quot;, correct = &quot;04:35&quot;\n<strong>Output:</strong> 3\n<strong>Explanation:\n</strong>We can convert current to correct in 3 operations as follows:\n- Add 60 minutes to current. current becomes &quot;03:30&quot;.\n- Add 60 minutes to current. current becomes &quot;04:30&quot;.\n- Add 5 minutes to current. current becomes &quot;04:35&quot;.\nIt can be proven that it is not possible to convert current to correct in fewer than 3 operations.</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> current = &quot;11:00&quot;, correct = &quot;11:01&quot;\n<strong>Output:</strong> 1\n<strong>Explanation:</strong> We only have to add one minute to current, so the minimum number of operations needed is 1.\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>current</code> and <code>correct</code> are in the format <code>&quot;HH:MM&quot;</code></li>\n\t<li><code>current &lt;= correct</code></li>\n</ul>\n",
+  "difficulty": "Easy",
+  "freqBar": null,
+  "frontendQuestionId": "2224",
+  "hasSolution": false,
+  "hasVideoSolution": false,
+  "hints": [
+    "Convert the times to minutes.",
+    "Use the operation with the biggest value possible at each step."
+  ],
+  "isFavor": false,
+  "paidOnly": false,
+  "similarQuestionList": [
+    {
+      "difficulty": "Medium",
+      "titleSlug": "coin-change",
+      "title": "Coin Change",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    },
+    {
+      "difficulty": "Medium",
+      "titleSlug": "design-an-atm-machine",
+      "title": "Design an ATM Machine",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    },
+    {
+      "difficulty": "Easy",
+      "titleSlug": "count-days-spent-together",
+      "title": "Count Days Spent Together",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    }
+  ],
+  "status": null,
+  "title": "Minimum Number of Operations to Convert Time",
+  "topicTags": [
+    {
+      "name": "String",
+      "id": "VG9waWNUYWdOb2RlOjEw",
+      "slug": "string"
+    },
+    {
+      "name": "Greedy",
+      "id": "VG9waWNUYWdOb2RlOjE3",
+      "slug": "greedy"
+    }
+  ]
+}

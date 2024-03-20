@@ -1,0 +1,63 @@
+{
+  "titleSlug": "count-common-words-with-one-occurrence",
+  "acRate": 70.0422368643352,
+  "content": "<p>Given two string arrays <code>words1</code> and <code>words2</code>, return <em>the number of strings that appear <strong>exactly once</strong> in <b>each</b>&nbsp;of the two arrays.</em></p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> words1 = [&quot;leetcode&quot;,&quot;is&quot;,&quot;amazing&quot;,&quot;as&quot;,&quot;is&quot;], words2 = [&quot;amazing&quot;,&quot;leetcode&quot;,&quot;is&quot;]\n<strong>Output:</strong> 2\n<strong>Explanation:</strong>\n- &quot;leetcode&quot; appears exactly once in each of the two arrays. We count this string.\n- &quot;amazing&quot; appears exactly once in each of the two arrays. We count this string.\n- &quot;is&quot; appears in each of the two arrays, but there are 2 occurrences of it in words1. We do not count this string.\n- &quot;as&quot; appears once in words1, but does not appear in words2. We do not count this string.\nThus, there are 2 strings that appear exactly once in each of the two arrays.\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> words1 = [&quot;b&quot;,&quot;bb&quot;,&quot;bbb&quot;], words2 = [&quot;a&quot;,&quot;aa&quot;,&quot;aaa&quot;]\n<strong>Output:</strong> 0\n<strong>Explanation:</strong> There are no strings that appear in each of the two arrays.\n</pre>\n\n<p><strong class=\"example\">Example 3:</strong></p>\n\n<pre>\n<strong>Input:</strong> words1 = [&quot;a&quot;,&quot;ab&quot;], words2 = [&quot;a&quot;,&quot;a&quot;,&quot;a&quot;,&quot;ab&quot;]\n<strong>Output:</strong> 1\n<strong>Explanation:</strong> The only string that appears exactly once in each of the two arrays is &quot;ab&quot;.\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= words1.length, words2.length &lt;= 1000</code></li>\n\t<li><code>1 &lt;= words1[i].length, words2[j].length &lt;= 30</code></li>\n\t<li><code>words1[i]</code> and <code>words2[j]</code> consists only of lowercase English letters.</li>\n</ul>\n",
+  "difficulty": "Easy",
+  "freqBar": null,
+  "frontendQuestionId": "2085",
+  "hasSolution": false,
+  "hasVideoSolution": false,
+  "hints": [
+    "Could you try every word?",
+    "Could you use a hash map to achieve a good complexity?"
+  ],
+  "isFavor": false,
+  "paidOnly": false,
+  "similarQuestionList": [
+    {
+      "difficulty": "Easy",
+      "titleSlug": "intersection-of-two-arrays",
+      "title": "Intersection of Two Arrays",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    },
+    {
+      "difficulty": "Easy",
+      "titleSlug": "uncommon-words-from-two-sentences",
+      "title": "Uncommon Words from Two Sentences",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    },
+    {
+      "difficulty": "Easy",
+      "titleSlug": "kth-distinct-string-in-an-array",
+      "title": "Kth Distinct String in an Array",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    }
+  ],
+  "status": null,
+  "title": "Count Common Words With One Occurrence",
+  "topicTags": [
+    {
+      "name": "Array",
+      "id": "VG9waWNUYWdOb2RlOjU=",
+      "slug": "array"
+    },
+    {
+      "name": "Hash Table",
+      "id": "VG9waWNUYWdOb2RlOjY=",
+      "slug": "hash-table"
+    },
+    {
+      "name": "String",
+      "id": "VG9waWNUYWdOb2RlOjEw",
+      "slug": "string"
+    },
+    {
+      "name": "Counting",
+      "id": "VG9waWNUYWdOb2RlOjYxMDYy",
+      "slug": "counting"
+    }
+  ]
+}

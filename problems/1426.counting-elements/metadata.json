@@ -1,0 +1,31 @@
+{
+  "titleSlug": "counting-elements",
+  "acRate": 60.09373536941298,
+  "content": null,
+  "difficulty": "Easy",
+  "freqBar": null,
+  "frontendQuestionId": "1426",
+  "hasSolution": true,
+  "hasVideoSolution": false,
+  "hints": [
+    "Use hashset to store all elements.",
+    "Loop again to count all valid elements."
+  ],
+  "isFavor": false,
+  "paidOnly": true,
+  "similarQuestionList": [],
+  "status": null,
+  "title": "Counting Elements",
+  "topicTags": [
+    {
+      "name": "Array",
+      "id": "VG9waWNUYWdOb2RlOjU=",
+      "slug": "array"
+    },
+    {
+      "name": "Hash Table",
+      "id": "VG9waWNUYWdOb2RlOjY=",
+      "slug": "hash-table"
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "titleSlug": "longest-repeating-substring",
+  "acRate": 60.434259977784876,
+  "content": null,
+  "difficulty": "Medium",
+  "freqBar": null,
+  "frontendQuestionId": "1062",
+  "hasSolution": true,
+  "hasVideoSolution": false,
+  "hints": [
+    "Generate all substrings in O(N^2) time with hashing.",
+    "Choose those hashing of strings with the largest length."
+  ],
+  "isFavor": false,
+  "paidOnly": true,
+  "similarQuestionList": [],
+  "status": null,
+  "title": "Longest Repeating Substring",
+  "topicTags": [
+    {
+      "name": "String",
+      "id": "VG9waWNUYWdOb2RlOjEw",
+      "slug": "string"
+    },
+    {
+      "name": "Binary Search",
+      "id": "VG9waWNUYWdOb2RlOjEx",
+      "slug": "binary-search"
+    },
+    {
+      "name": "Dynamic Programming",
+      "id": "VG9waWNUYWdOb2RlOjEz",
+      "slug": "dynamic-programming"
+    },
+    {
+      "name": "Rolling Hash",
+      "id": "VG9waWNUYWdOb2RlOjU2NTk4",
+      "slug": "rolling-hash"
+    },
+    {
+      "name": "Suffix Array",
+      "id": "VG9waWNUYWdOb2RlOjU2Njk4",
+      "slug": "suffix-array"
+    },
+    {
+      "name": "Hash Function",
+      "id": "VG9waWNUYWdOb2RlOjYxMDY1",
+      "slug": "hash-function"
+    }
+  ]
+}

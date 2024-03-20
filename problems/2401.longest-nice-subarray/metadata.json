@@ -1,0 +1,107 @@
+{
+  "titleSlug": "longest-nice-subarray",
+  "acRate": 50.64424509022894,
+  "content": "<p>You are given an array <code>nums</code> consisting of <strong>positive</strong> integers.</p>\n\n<p>We call a subarray of <code>nums</code> <strong>nice</strong> if the bitwise <strong>AND</strong> of every pair of elements that are in <strong>different</strong> positions in the subarray is equal to <code>0</code>.</p>\n\n<p>Return <em>the length of the <strong>longest</strong> nice subarray</em>.</p>\n\n<p>A <strong>subarray</strong> is a <strong>contiguous</strong> part of an array.</p>\n\n<p><strong>Note</strong> that subarrays of length <code>1</code> are always considered nice.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [1,3,8,48,10]\n<strong>Output:</strong> 3\n<strong>Explanation:</strong> The longest nice subarray is [3,8,48]. This subarray satisfies the conditions:\n- 3 AND 8 = 0.\n- 3 AND 48 = 0.\n- 8 AND 48 = 0.\nIt can be proven that no longer nice subarray can be obtained, so we return 3.</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [3,1,5,11,13]\n<strong>Output:</strong> 1\n<strong>Explanation:</strong> The length of the longest nice subarray is 1. Any subarray of length 1 can be chosen.\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= nums.length &lt;= 10<sup>5</sup></code></li>\n\t<li><code>1 &lt;= nums[i] &lt;= 10<sup>9</sup></code></li>\n</ul>\n",
+  "difficulty": "Medium",
+  "freqBar": null,
+  "frontendQuestionId": "2401",
+  "hasSolution": false,
+  "hasVideoSolution": false,
+  "hints": [
+    "What is the maximum possible length of a nice subarray?",
+    "The length of the longest nice subarray cannot exceed 30. Why is that?"
+  ],
+  "isFavor": false,
+  "paidOnly": false,
+  "similarQuestionList": [
+    {
+      "difficulty": "Medium",
+      "titleSlug": "longest-substring-without-repeating-characters",
+      "title": "Longest Substring Without Repeating Characters",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    },
+    {
+      "difficulty": "Medium",
+      "titleSlug": "bitwise-and-of-numbers-range",
+      "title": "Bitwise AND of Numbers Range",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    },
+    {
+      "difficulty": "Medium",
+      "titleSlug": "bitwise-ors-of-subarrays",
+      "title": "Bitwise ORs of Subarrays",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    },
+    {
+      "difficulty": "Medium",
+      "titleSlug": "fruit-into-baskets",
+      "title": "Fruit Into Baskets",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    },
+    {
+      "difficulty": "Medium",
+      "titleSlug": "max-consecutive-ones-iii",
+      "title": "Max Consecutive Ones III",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    },
+    {
+      "difficulty": "Medium",
+      "titleSlug": "get-equal-substrings-within-budget",
+      "title": "Get Equal Substrings Within Budget",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    },
+    {
+      "difficulty": "Medium",
+      "titleSlug": "frequency-of-the-most-frequent-element",
+      "title": "Frequency of the Most Frequent Element",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    },
+    {
+      "difficulty": "Medium",
+      "titleSlug": "longest-substring-of-all-vowels-in-order",
+      "title": "Longest Substring Of All Vowels in Order",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    },
+    {
+      "difficulty": "Medium",
+      "titleSlug": "maximize-the-confusion-of-an-exam",
+      "title": "Maximize the Confusion of an Exam",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    },
+    {
+      "difficulty": "Medium",
+      "titleSlug": "maximum-sum-of-distinct-subarrays-with-length-k",
+      "title": "Maximum Sum of Distinct Subarrays With Length K",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    }
+  ],
+  "status": null,
+  "title": "Longest Nice Subarray",
+  "topicTags": [
+    {
+      "name": "Array",
+      "id": "VG9waWNUYWdOb2RlOjU=",
+      "slug": "array"
+    },
+    {
+      "name": "Bit Manipulation",
+      "id": "VG9waWNUYWdOb2RlOjE5",
+      "slug": "bit-manipulation"
+    },
+    {
+      "name": "Sliding Window",
+      "id": "VG9waWNUYWdOb2RlOjU1ODIx",
+      "slug": "sliding-window"
+    }
+  ]
+}

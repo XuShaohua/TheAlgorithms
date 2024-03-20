@@ -1,0 +1,38 @@
+{
+  "titleSlug": "maximize-distance-to-closest-person",
+  "acRate": 48.04500605399248,
+  "content": "<p>You are given an array representing a row of <code>seats</code> where <code>seats[i] = 1</code> represents a person sitting in the <code>i<sup>th</sup></code> seat, and <code>seats[i] = 0</code> represents that the <code>i<sup>th</sup></code> seat is empty <strong>(0-indexed)</strong>.</p>\n\n<p>There is at least one empty seat, and at least one person sitting.</p>\n\n<p>Alex wants to sit in the seat such that the distance between him and the closest person to him is maximized.&nbsp;</p>\n\n<p>Return <em>that maximum distance to the closest person</em>.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n<img alt=\"\" src=\"https://assets.leetcode.com/uploads/2020/09/10/distance.jpg\" style=\"width: 650px; height: 257px;\" />\n<pre>\n<strong>Input:</strong> seats = [1,0,0,0,1,0,1]\n<strong>Output:</strong> 2\n<strong>Explanation: </strong>\nIf Alex sits in the second open seat (i.e. seats[2]), then the closest person has distance 2.\nIf Alex sits in any other open seat, the closest person has distance 1.\nThus, the maximum distance to the closest person is 2.\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> seats = [1,0,0,0]\n<strong>Output:</strong> 3\n<strong>Explanation: </strong>\nIf Alex sits in the last seat (i.e. seats[3]), the closest person is 3 seats away.\nThis is the maximum distance possible, so the answer is 3.\n</pre>\n\n<p><strong class=\"example\">Example 3:</strong></p>\n\n<pre>\n<strong>Input:</strong> seats = [0,1]\n<strong>Output:</strong> 1\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>2 &lt;= seats.length &lt;= 2 * 10<sup>4</sup></code></li>\n\t<li><code>seats[i]</code>&nbsp;is <code>0</code> or&nbsp;<code>1</code>.</li>\n\t<li>At least one seat is <strong>empty</strong>.</li>\n\t<li>At least one seat is <strong>occupied</strong>.</li>\n</ul>\n",
+  "difficulty": "Medium",
+  "freqBar": null,
+  "frontendQuestionId": "849",
+  "hasSolution": true,
+  "hasVideoSolution": false,
+  "hints": [],
+  "isFavor": false,
+  "paidOnly": false,
+  "similarQuestionList": [
+    {
+      "difficulty": "Medium",
+      "titleSlug": "exam-room",
+      "title": "Exam Room",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    },
+    {
+      "difficulty": "Medium",
+      "titleSlug": "task-scheduler-ii",
+      "title": "Task Scheduler II",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    }
+  ],
+  "status": null,
+  "title": "Maximize Distance to Closest Person",
+  "topicTags": [
+    {
+      "name": "Array",
+      "id": "VG9waWNUYWdOb2RlOjU=",
+      "slug": "array"
+    }
+  ]
+}

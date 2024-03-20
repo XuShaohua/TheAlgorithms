@@ -1,0 +1,44 @@
+{
+  "titleSlug": "time-taken-to-cross-the-door",
+  "acRate": 50.55939293705614,
+  "content": null,
+  "difficulty": "Hard",
+  "freqBar": null,
+  "frontendQuestionId": "2534",
+  "hasSolution": false,
+  "hasVideoSolution": false,
+  "hints": [
+    "Use a queue to store the people who want to enter or exit and their corresponding times.",
+    "Simulate the process described in the statement and apply the 4 rules to the people crossing the door."
+  ],
+  "isFavor": false,
+  "paidOnly": true,
+  "similarQuestionList": [
+    {
+      "difficulty": "Medium",
+      "titleSlug": "the-latest-time-to-catch-a-bus",
+      "title": "The Latest Time to Catch a Bus",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    }
+  ],
+  "status": null,
+  "title": "Time Taken to Cross the Door",
+  "topicTags": [
+    {
+      "name": "Array",
+      "id": "VG9waWNUYWdOb2RlOjU=",
+      "slug": "array"
+    },
+    {
+      "name": "Queue",
+      "id": "VG9waWNUYWdOb2RlOjM0",
+      "slug": "queue"
+    },
+    {
+      "name": "Simulation",
+      "id": "VG9waWNUYWdOb2RlOjYxMDU1",
+      "slug": "simulation"
+    }
+  ]
+}

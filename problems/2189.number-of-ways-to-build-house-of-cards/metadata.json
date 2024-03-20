@@ -1,0 +1,39 @@
+{
+  "titleSlug": "number-of-ways-to-build-house-of-cards",
+  "acRate": 63.449823661429946,
+  "content": null,
+  "difficulty": "Medium",
+  "freqBar": null,
+  "frontendQuestionId": "2189",
+  "hasSolution": false,
+  "hasVideoSolution": false,
+  "hints": [
+    "If a row has k triangles, how many cards does it take to build that row? It takes 3 * k - 1 cards.",
+    "If you still have i cards left, and on the previous row there were k triangles, what are the possible ways to build the current row? You can start at 1 triangle and continue adding more until you run out of cards or reach k - 1 triangles."
+  ],
+  "isFavor": false,
+  "paidOnly": true,
+  "similarQuestionList": [
+    {
+      "difficulty": "Medium",
+      "titleSlug": "champagne-tower",
+      "title": "Champagne Tower",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    }
+  ],
+  "status": null,
+  "title": "Number of Ways to Build House of Cards",
+  "topicTags": [
+    {
+      "name": "Math",
+      "id": "VG9waWNUYWdOb2RlOjg=",
+      "slug": "math"
+    },
+    {
+      "name": "Dynamic Programming",
+      "id": "VG9waWNUYWdOb2RlOjEz",
+      "slug": "dynamic-programming"
+    }
+  ]
+}

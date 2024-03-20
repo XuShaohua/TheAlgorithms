@@ -1,0 +1,32 @@
+{
+  "titleSlug": "faulty-sensor",
+  "acRate": 49.96492048643592,
+  "content": null,
+  "difficulty": "Easy",
+  "freqBar": null,
+  "frontendQuestionId": "1826",
+  "hasSolution": false,
+  "hasVideoSolution": false,
+  "hints": [
+    "Check for a common prefix of the two arrays.",
+    "After this common prefix, there should be one array similar to the other but shifted by one.",
+    "If both arrays can be shifted, return -1."
+  ],
+  "isFavor": false,
+  "paidOnly": true,
+  "similarQuestionList": [],
+  "status": null,
+  "title": "Faulty Sensor",
+  "topicTags": [
+    {
+      "name": "Array",
+      "id": "VG9waWNUYWdOb2RlOjU=",
+      "slug": "array"
+    },
+    {
+      "name": "Two Pointers",
+      "id": "VG9waWNUYWdOb2RlOjk=",
+      "slug": "two-pointers"
+    }
+  ]
+}

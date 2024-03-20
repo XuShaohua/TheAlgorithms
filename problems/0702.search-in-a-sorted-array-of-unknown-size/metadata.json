@@ -1,0 +1,48 @@
+{
+  "titleSlug": "search-in-a-sorted-array-of-unknown-size",
+  "acRate": 72.01577761081893,
+  "content": null,
+  "difficulty": "Medium",
+  "freqBar": null,
+  "frontendQuestionId": "702",
+  "hasSolution": true,
+  "hasVideoSolution": false,
+  "hints": [],
+  "isFavor": false,
+  "paidOnly": true,
+  "similarQuestionList": [
+    {
+      "difficulty": "Easy",
+      "titleSlug": "binary-search",
+      "title": "Binary Search",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    },
+    {
+      "difficulty": "Medium",
+      "titleSlug": "find-the-index-of-the-large-integer",
+      "title": "Find the Index of the Large Integer",
+      "translatedTitle": null,
+      "isPaidOnly": true
+    }
+  ],
+  "status": null,
+  "title": "Search in a Sorted Array of Unknown Size",
+  "topicTags": [
+    {
+      "name": "Array",
+      "id": "VG9waWNUYWdOb2RlOjU=",
+      "slug": "array"
+    },
+    {
+      "name": "Binary Search",
+      "id": "VG9waWNUYWdOb2RlOjEx",
+      "slug": "binary-search"
+    },
+    {
+      "name": "Interactive",
+      "id": "VG9waWNUYWdOb2RlOjYxMDU5",
+      "slug": "interactive"
+    }
+  ]
+}

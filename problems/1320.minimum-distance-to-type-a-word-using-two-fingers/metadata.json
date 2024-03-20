@@ -1,0 +1,39 @@
+{
+  "titleSlug": "minimum-distance-to-type-a-word-using-two-fingers",
+  "acRate": 59.16535311983392,
+  "content": "<img alt=\"\" src=\"https://assets.leetcode.com/uploads/2020/01/02/leetcode_keyboard.png\" style=\"width: 349px; height: 209px;\" />\n<p>You have a keyboard layout as shown above in the <strong>X-Y</strong> plane, where each English uppercase letter is located at some coordinate.</p>\n\n<ul>\n\t<li>For example, the letter <code>&#39;A&#39;</code> is located at coordinate <code>(0, 0)</code>, the letter <code>&#39;B&#39;</code> is located at coordinate <code>(0, 1)</code>, the letter <code>&#39;P&#39;</code> is located at coordinate <code>(2, 3)</code> and the letter <code>&#39;Z&#39;</code> is located at coordinate <code>(4, 1)</code>.</li>\n</ul>\n\n<p>Given the string <code>word</code>, return <em>the minimum total <strong>distance</strong> to type such string using only two fingers</em>.</p>\n\n<p>The <strong>distance</strong> between coordinates <code>(x<sub>1</sub>, y<sub>1</sub>)</code> and <code>(x<sub>2</sub>, y<sub>2</sub>)</code> is <code>|x<sub>1</sub> - x<sub>2</sub>| + |y<sub>1</sub> - y<sub>2</sub>|</code>.</p>\n\n<p><strong>Note</strong> that the initial positions of your two fingers are considered free so do not count towards your total distance, also your two fingers do not have to start at the first letter or the first two letters.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> word = &quot;CAKE&quot;\n<strong>Output:</strong> 3\n<strong>Explanation:</strong> Using two fingers, one optimal way to type &quot;CAKE&quot; is: \nFinger 1 on letter &#39;C&#39; -&gt; cost = 0 \nFinger 1 on letter &#39;A&#39; -&gt; cost = Distance from letter &#39;C&#39; to letter &#39;A&#39; = 2 \nFinger 2 on letter &#39;K&#39; -&gt; cost = 0 \nFinger 2 on letter &#39;E&#39; -&gt; cost = Distance from letter &#39;K&#39; to letter &#39;E&#39; = 1 \nTotal distance = 3\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> word = &quot;HAPPY&quot;\n<strong>Output:</strong> 6\n<strong>Explanation:</strong> Using two fingers, one optimal way to type &quot;HAPPY&quot; is:\nFinger 1 on letter &#39;H&#39; -&gt; cost = 0\nFinger 1 on letter &#39;A&#39; -&gt; cost = Distance from letter &#39;H&#39; to letter &#39;A&#39; = 2\nFinger 2 on letter &#39;P&#39; -&gt; cost = 0\nFinger 2 on letter &#39;P&#39; -&gt; cost = Distance from letter &#39;P&#39; to letter &#39;P&#39; = 0\nFinger 1 on letter &#39;Y&#39; -&gt; cost = Distance from letter &#39;A&#39; to letter &#39;Y&#39; = 4\nTotal distance = 6\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>2 &lt;= word.length &lt;= 300</code></li>\n\t<li><code>word</code> consists of uppercase English letters.</li>\n</ul>\n",
+  "difficulty": "Hard",
+  "freqBar": null,
+  "frontendQuestionId": "1320",
+  "hasSolution": false,
+  "hasVideoSolution": false,
+  "hints": [
+    "Use dynamic programming.",
+    "dp[i][j][k]: smallest movements when you have one finger on i-th char and the other one on j-th char already having written k first characters from word."
+  ],
+  "isFavor": false,
+  "paidOnly": false,
+  "similarQuestionList": [
+    {
+      "difficulty": "Easy",
+      "titleSlug": "minimum-time-to-type-word-using-special-typewriter",
+      "title": "Minimum Time to Type Word Using Special Typewriter",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    }
+  ],
+  "status": null,
+  "title": "Minimum Distance to Type a Word Using Two Fingers",
+  "topicTags": [
+    {
+      "name": "String",
+      "id": "VG9waWNUYWdOb2RlOjEw",
+      "slug": "string"
+    },
+    {
+      "name": "Dynamic Programming",
+      "id": "VG9waWNUYWdOb2RlOjEz",
+      "slug": "dynamic-programming"
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "titleSlug": "valid-palindrome-iii",
+  "acRate": 49.920804464191434,
+  "content": null,
+  "difficulty": "Hard",
+  "freqBar": null,
+  "frontendQuestionId": "1216",
+  "hasSolution": true,
+  "hasVideoSolution": false,
+  "hints": [
+    "Can you reduce this problem to a classic problem?",
+    "The problem is equivalent to finding any palindromic subsequence of length at least N-K where N is the length of the string.",
+    "Try to find the longest palindromic subsequence.",
+    "Use DP to do that."
+  ],
+  "isFavor": false,
+  "paidOnly": true,
+  "similarQuestionList": [
+    {
+      "difficulty": "Easy",
+      "titleSlug": "valid-palindrome-ii",
+      "title": "Valid Palindrome II",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    },
+    {
+      "difficulty": "Medium",
+      "titleSlug": "valid-palindrome-iv",
+      "title": "Valid Palindrome IV",
+      "translatedTitle": null,
+      "isPaidOnly": true
+    }
+  ],
+  "status": null,
+  "title": "Valid Palindrome III",
+  "topicTags": [
+    {
+      "name": "String",
+      "id": "VG9waWNUYWdOb2RlOjEw",
+      "slug": "string"
+    },
+    {
+      "name": "Dynamic Programming",
+      "id": "VG9waWNUYWdOb2RlOjEz",
+      "slug": "dynamic-programming"
+    }
+  ]
+}

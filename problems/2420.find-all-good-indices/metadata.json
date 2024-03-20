@@ -1,0 +1,58 @@
+{
+  "titleSlug": "find-all-good-indices",
+  "acRate": 38.41304198447056,
+  "content": "<p>You are given a <strong>0-indexed</strong> integer array <code>nums</code> of size <code>n</code> and a positive integer <code>k</code>.</p>\n\n<p>We call an index <code>i</code> in the range <code>k &lt;= i &lt; n - k</code> <strong>good</strong> if the following conditions are satisfied:</p>\n\n<ul>\n\t<li>The <code>k</code> elements that are just <strong>before</strong> the index <code>i</code> are in <strong>non-increasing</strong> order.</li>\n\t<li>The <code>k</code> elements that are just <strong>after</strong> the index <code>i</code> are in <strong>non-decreasing</strong> order.</li>\n</ul>\n\n<p>Return <em>an array of all good indices sorted in <strong>increasing</strong> order</em>.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [2,1,1,1,3,4,1], k = 2\n<strong>Output:</strong> [2,3]\n<strong>Explanation:</strong> There are two good indices in the array:\n- Index 2. The subarray [2,1] is in non-increasing order, and the subarray [1,3] is in non-decreasing order.\n- Index 3. The subarray [1,1] is in non-increasing order, and the subarray [3,4] is in non-decreasing order.\nNote that the index 4 is not good because [4,1] is not non-decreasing.</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [2,1,1,2], k = 2\n<strong>Output:</strong> []\n<strong>Explanation:</strong> There are no good indices in this array.\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>n == nums.length</code></li>\n\t<li><code>3 &lt;= n &lt;= 10<sup>5</sup></code></li>\n\t<li><code>1 &lt;= nums[i] &lt;= 10<sup>6</sup></code></li>\n\t<li><code>1 &lt;= k &lt;= n / 2</code></li>\n</ul>\n",
+  "difficulty": "Medium",
+  "freqBar": null,
+  "frontendQuestionId": "2420",
+  "hasSolution": false,
+  "hasVideoSolution": false,
+  "hints": [
+    "Iterate over all indices i. How do you quickly check the two conditions?",
+    "Precompute for each index whether the conditions are satisfied on the left and the right of the index. You can do that with two iterations, from left to right and right to left."
+  ],
+  "isFavor": false,
+  "paidOnly": false,
+  "similarQuestionList": [
+    {
+      "difficulty": "Medium",
+      "titleSlug": "find-good-days-to-rob-the-bank",
+      "title": "Find Good Days to Rob the Bank",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    },
+    {
+      "difficulty": "Hard",
+      "titleSlug": "abbreviating-the-product-of-a-range",
+      "title": "Abbreviating the Product of a Range",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    },
+    {
+      "difficulty": "Hard",
+      "titleSlug": "count-the-number-of-k-big-indices",
+      "title": "Count the Number of K-Big Indices",
+      "translatedTitle": null,
+      "isPaidOnly": true
+    }
+  ],
+  "status": null,
+  "title": "Find All Good Indices",
+  "topicTags": [
+    {
+      "name": "Array",
+      "id": "VG9waWNUYWdOb2RlOjU=",
+      "slug": "array"
+    },
+    {
+      "name": "Dynamic Programming",
+      "id": "VG9waWNUYWdOb2RlOjEz",
+      "slug": "dynamic-programming"
+    },
+    {
+      "name": "Prefix Sum",
+      "id": "VG9waWNUYWdOb2RlOjYxMDY4",
+      "slug": "prefix-sum"
+    }
+  ]
+}

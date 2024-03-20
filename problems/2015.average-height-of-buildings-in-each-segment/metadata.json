@@ -1,0 +1,72 @@
+{
+  "titleSlug": "average-height-of-buildings-in-each-segment",
+  "acRate": 59.15233415233415,
+  "content": null,
+  "difficulty": "Medium",
+  "freqBar": null,
+  "frontendQuestionId": "2015",
+  "hasSolution": false,
+  "hasVideoSolution": false,
+  "hints": [
+    "Try sorting the start and end points of each building.",
+    "The naive solution is to go through each position on the street and keep track of the sum of all the buildings at that position and the number of buildings at that position.",
+    "How could we optimize that solution to pass?",
+    "We don't need to go through every position, just the ones where a building starts or a building ends."
+  ],
+  "isFavor": false,
+  "paidOnly": true,
+  "similarQuestionList": [
+    {
+      "difficulty": "Medium",
+      "titleSlug": "average-waiting-time",
+      "title": "Average Waiting Time",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    },
+    {
+      "difficulty": "Medium",
+      "titleSlug": "describe-the-painting",
+      "title": "Describe the Painting",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    },
+    {
+      "difficulty": "Hard",
+      "titleSlug": "amount-of-new-area-painted-each-day",
+      "title": "Amount of New Area Painted Each Day",
+      "translatedTitle": null,
+      "isPaidOnly": true
+    },
+    {
+      "difficulty": "Medium",
+      "titleSlug": "divide-intervals-into-minimum-number-of-groups",
+      "title": "Divide Intervals Into Minimum Number of Groups",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    }
+  ],
+  "status": null,
+  "title": "Average Height of Buildings in Each Segment",
+  "topicTags": [
+    {
+      "name": "Array",
+      "id": "VG9waWNUYWdOb2RlOjU=",
+      "slug": "array"
+    },
+    {
+      "name": "Greedy",
+      "id": "VG9waWNUYWdOb2RlOjE3",
+      "slug": "greedy"
+    },
+    {
+      "name": "Sorting",
+      "id": "VG9waWNUYWdOb2RlOjYxMDQ5",
+      "slug": "sorting"
+    },
+    {
+      "name": "Heap (Priority Queue)",
+      "id": "VG9waWNUYWdOb2RlOjYxMDUw",
+      "slug": "heap-priority-queue"
+    }
+  ]
+}

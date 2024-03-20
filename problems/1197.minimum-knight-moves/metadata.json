@@ -1,0 +1,35 @@
+{
+  "titleSlug": "minimum-knight-moves",
+  "acRate": 40.350872520401424,
+  "content": null,
+  "difficulty": "Medium",
+  "freqBar": null,
+  "frontendQuestionId": "1197",
+  "hasSolution": true,
+  "hasVideoSolution": false,
+  "hints": [
+    "You can simulate the movements since the limits are low.",
+    "Is there a search algorithm applicable to this problem?",
+    "Since we want the minimum number of moves, we can use Breadth First Search."
+  ],
+  "isFavor": false,
+  "paidOnly": true,
+  "similarQuestionList": [
+    {
+      "difficulty": "Medium",
+      "titleSlug": "check-knight-tour-configuration",
+      "title": "Check Knight Tour Configuration",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    }
+  ],
+  "status": null,
+  "title": "Minimum Knight Moves",
+  "topicTags": [
+    {
+      "name": "Breadth-First Search",
+      "id": "VG9waWNUYWdOb2RlOjIy",
+      "slug": "breadth-first-search"
+    }
+  ]
+}

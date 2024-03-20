@@ -1,0 +1,38 @@
+{
+  "titleSlug": "fraction-to-recurring-decimal",
+  "acRate": 24.909666795621195,
+  "content": "<p>Given two integers representing the <code>numerator</code> and <code>denominator</code> of a fraction, return <em>the fraction in string format</em>.</p>\n\n<p>If the fractional part is repeating, enclose the repeating part in parentheses.</p>\n\n<p>If multiple answers are possible, return <strong>any of them</strong>.</p>\n\n<p>It is <strong>guaranteed</strong> that the length of the answer string is less than <code>10<sup>4</sup></code> for all the given inputs.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> numerator = 1, denominator = 2\n<strong>Output:</strong> &quot;0.5&quot;\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> numerator = 2, denominator = 1\n<strong>Output:</strong> &quot;2&quot;\n</pre>\n\n<p><strong class=\"example\">Example 3:</strong></p>\n\n<pre>\n<strong>Input:</strong> numerator = 4, denominator = 333\n<strong>Output:</strong> &quot;0.(012)&quot;\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>-2<sup>31</sup> &lt;=&nbsp;numerator, denominator &lt;= 2<sup>31</sup> - 1</code></li>\n\t<li><code>denominator != 0</code></li>\n</ul>\n",
+  "difficulty": "Medium",
+  "freqBar": null,
+  "frontendQuestionId": "166",
+  "hasSolution": true,
+  "hasVideoSolution": false,
+  "hints": [
+    "No scary math, just apply elementary math knowledge. Still remember how to perform a <i>long division</i>?",
+    "Try a long division on 4/9, the repeating part is obvious. Now try 4/333. Do you see a pattern?",
+    "Notice that once the remainder starts repeating, so does the divided result.",
+    "Be wary of edge cases! List out as many test cases as you can think of and test your code thoroughly."
+  ],
+  "isFavor": false,
+  "paidOnly": false,
+  "similarQuestionList": [],
+  "status": null,
+  "title": "Fraction to Recurring Decimal",
+  "topicTags": [
+    {
+      "name": "Hash Table",
+      "id": "VG9waWNUYWdOb2RlOjY=",
+      "slug": "hash-table"
+    },
+    {
+      "name": "Math",
+      "id": "VG9waWNUYWdOb2RlOjg=",
+      "slug": "math"
+    },
+    {
+      "name": "String",
+      "id": "VG9waWNUYWdOb2RlOjEw",
+      "slug": "string"
+    }
+  ]
+}

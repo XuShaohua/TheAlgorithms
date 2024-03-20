@@ -1,0 +1,33 @@
+{
+  "titleSlug": "single-row-keyboard",
+  "acRate": 87.46127778124286,
+  "content": null,
+  "difficulty": "Easy",
+  "freqBar": null,
+  "frontendQuestionId": "1165",
+  "hasSolution": true,
+  "hasVideoSolution": true,
+  "hints": [
+    "Can be the problem divided in parts, so solving each part and sum their solutions it should return the answer? Yes, you only need to divide the problem in finger jumps.",
+    "In each finger jump you need to move your finger from one character to another, you need to know its index.",
+    "Map each character to it's index.",
+    "Use a hash table to do that."
+  ],
+  "isFavor": false,
+  "paidOnly": true,
+  "similarQuestionList": [],
+  "status": null,
+  "title": "Single-Row Keyboard",
+  "topicTags": [
+    {
+      "name": "Hash Table",
+      "id": "VG9waWNUYWdOb2RlOjY=",
+      "slug": "hash-table"
+    },
+    {
+      "name": "String",
+      "id": "VG9waWNUYWdOb2RlOjEw",
+      "slug": "string"
+    }
+  ]
+}

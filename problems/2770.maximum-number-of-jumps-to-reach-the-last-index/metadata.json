@@ -1,0 +1,75 @@
+{
+  "titleSlug": "maximum-number-of-jumps-to-reach-the-last-index",
+  "acRate": 29.78149513746257,
+  "content": "<p>You are given a <strong>0-indexed</strong> array <code>nums</code> of <code>n</code> integers and an integer <code>target</code>.</p>\n\n<p>You are initially positioned at index <code>0</code>. In one step, you can jump from index <code>i</code> to any index <code>j</code> such that:</p>\n\n<ul>\n\t<li><code>0 &lt;= i &lt; j &lt; n</code></li>\n\t<li><code>-target &lt;= nums[j] - nums[i] &lt;= target</code></li>\n</ul>\n\n<p>Return <em>the <strong>maximum number of jumps</strong> you can make to reach index</em> <code>n - 1</code>.</p>\n\n<p>If there is no way to reach index <code>n - 1</code>, return <code>-1</code>.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [1,3,6,4,1,2], target = 2\n<strong>Output:</strong> 3\n<strong>Explanation:</strong> To go from index 0 to index n - 1 with the maximum number of jumps, you can perform the following jumping sequence:\n- Jump from index 0 to index 1. \n- Jump from index 1 to index 3.\n- Jump from index 3 to index 5.\nIt can be proven that there is no other jumping sequence that goes from 0 to n - 1 with more than 3 jumps. Hence, the answer is 3. </pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [1,3,6,4,1,2], target = 3\n<strong>Output:</strong> 5\n<strong>Explanation:</strong> To go from index 0 to index n - 1 with the maximum number of jumps, you can perform the following jumping sequence:\n- Jump from index 0 to index 1.\n- Jump from index 1 to index 2.\n- Jump from index 2 to index 3.\n- Jump from index 3 to index 4.\n- Jump from index 4 to index 5.\nIt can be proven that there is no other jumping sequence that goes from 0 to n - 1 with more than 5 jumps. Hence, the answer is 5. </pre>\n\n<p><strong class=\"example\">Example 3:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [1,3,6,4,1,2], target = 0\n<strong>Output:</strong> -1\n<strong>Explanation:</strong> It can be proven that there is no jumping sequence that goes from 0 to n - 1. Hence, the answer is -1. \n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>2 &lt;= nums.length == n &lt;= 1000</code></li>\n\t<li><code>-10<sup>9</sup>&nbsp;&lt;= nums[i]&nbsp;&lt;= 10<sup>9</sup></code></li>\n\t<li><code>0 &lt;= target &lt;= 2 * 10<sup>9</sup></code></li>\n</ul>\n",
+  "difficulty": "Medium",
+  "freqBar": null,
+  "frontendQuestionId": "2770",
+  "hasSolution": false,
+  "hasVideoSolution": false,
+  "hints": [
+    "Use a dynamic programming approach.",
+    "Define a dynamic programming array dp of size n, where dp[i] represents the maximum number of jumps from index 0 to index i.",
+    "For each j iterate over all i < j. Set dp[j] = max(dp[j], dp[i] + 1) if -target <= nums[j] - nums[i] <= target."
+  ],
+  "isFavor": false,
+  "paidOnly": false,
+  "similarQuestionList": [
+    {
+      "difficulty": "Medium",
+      "titleSlug": "jump-game-ii",
+      "title": "Jump Game II",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    },
+    {
+      "difficulty": "Hard",
+      "titleSlug": "frog-jump",
+      "title": "Frog Jump",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    },
+    {
+      "difficulty": "Medium",
+      "titleSlug": "jump-game-iii",
+      "title": "Jump Game III",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    },
+    {
+      "difficulty": "Hard",
+      "titleSlug": "jump-game-iv",
+      "title": "Jump Game IV",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    },
+    {
+      "difficulty": "Medium",
+      "titleSlug": "minimum-jumps-to-reach-home",
+      "title": "Minimum Jumps to Reach Home",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    },
+    {
+      "difficulty": "Medium",
+      "titleSlug": "jump-game-vii",
+      "title": "Jump Game VII",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    }
+  ],
+  "status": null,
+  "title": "Maximum Number of Jumps to Reach the Last Index",
+  "topicTags": [
+    {
+      "name": "Array",
+      "id": "VG9waWNUYWdOb2RlOjU=",
+      "slug": "array"
+    },
+    {
+      "name": "Dynamic Programming",
+      "id": "VG9waWNUYWdOb2RlOjEz",
+      "slug": "dynamic-programming"
+    }
+  ]
+}

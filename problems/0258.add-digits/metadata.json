@@ -1,0 +1,88 @@
+{
+  "titleSlug": "add-digits",
+  "acRate": 66.47566760602055,
+  "content": "<p>Given an integer <code>num</code>, repeatedly add all its digits until the result has only one digit, and return it.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> num = 38\n<strong>Output:</strong> 2\n<strong>Explanation:</strong> The process is\n38 --&gt; 3 + 8 --&gt; 11\n11 --&gt; 1 + 1 --&gt; 2 \nSince 2 has only one digit, return it.\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> num = 0\n<strong>Output:</strong> 0\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>0 &lt;= num &lt;= 2<sup>31</sup> - 1</code></li>\n</ul>\n\n<p>&nbsp;</p>\n<p><strong>Follow up:</strong> Could you do it without any loop/recursion in <code>O(1)</code> runtime?</p>\n",
+  "difficulty": "Easy",
+  "freqBar": null,
+  "frontendQuestionId": "258",
+  "hasSolution": true,
+  "hasVideoSolution": false,
+  "hints": [
+    "A naive implementation of the above process is trivial. Could you come up with other methods?",
+    "What are all the possible results?",
+    "How do they occur, periodically or randomly?",
+    "You may find this <a href=\"https://en.wikipedia.org/wiki/Digital_root\" target=\"_blank\">Wikipedia article</a> useful."
+  ],
+  "isFavor": false,
+  "paidOnly": false,
+  "similarQuestionList": [
+    {
+      "difficulty": "Easy",
+      "titleSlug": "happy-number",
+      "title": "Happy Number",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    },
+    {
+      "difficulty": "Easy",
+      "titleSlug": "sum-of-digits-in-the-minimum-number",
+      "title": "Sum of Digits in the Minimum Number",
+      "translatedTitle": null,
+      "isPaidOnly": true
+    },
+    {
+      "difficulty": "Easy",
+      "titleSlug": "sum-of-digits-of-string-after-convert",
+      "title": "Sum of Digits of String After Convert",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    },
+    {
+      "difficulty": "Easy",
+      "titleSlug": "minimum-sum-of-four-digit-number-after-splitting-digits",
+      "title": "Minimum Sum of Four Digit Number After Splitting Digits",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    },
+    {
+      "difficulty": "Easy",
+      "titleSlug": "calculate-digit-sum-of-a-string",
+      "title": "Calculate Digit Sum of a String",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    },
+    {
+      "difficulty": "Easy",
+      "titleSlug": "difference-between-element-sum-and-digit-sum-of-an-array",
+      "title": "Difference Between Element Sum and Digit Sum of an Array",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    },
+    {
+      "difficulty": "Easy",
+      "titleSlug": "alternating-digit-sum",
+      "title": "Alternating Digit Sum",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    }
+  ],
+  "status": null,
+  "title": "Add Digits",
+  "topicTags": [
+    {
+      "name": "Math",
+      "id": "VG9waWNUYWdOb2RlOjg=",
+      "slug": "math"
+    },
+    {
+      "name": "Simulation",
+      "id": "VG9waWNUYWdOb2RlOjYxMDU1",
+      "slug": "simulation"
+    },
+    {
+      "name": "Number Theory",
+      "id": "VG9waWNUYWdOb2RlOjYxMDY3",
+      "slug": "number-theory"
+    }
+  ]
+}

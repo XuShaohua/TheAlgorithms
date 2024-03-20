@@ -1,0 +1,33 @@
+{
+  "titleSlug": "maximum-number-of-ones",
+  "acRate": 67.93795360751388,
+  "content": null,
+  "difficulty": "Hard",
+  "freqBar": null,
+  "frontendQuestionId": "1183",
+  "hasSolution": false,
+  "hasVideoSolution": false,
+  "hints": [
+    "Think of a greedy mathematical solution.",
+    "Say you choose to set some cell (i, j) to 1, all cells (x, y) such that i % sideLength == x % sideLength and j % sideLength == y % sideLength can also be set to 1 without increasing the max number of ones in a sub-matrix.",
+    "In one move, choose to set all the cells with some modulus (i % sideLength, j % sideLength) to 1.",
+    "Choose the cells with max frequency."
+  ],
+  "isFavor": false,
+  "paidOnly": true,
+  "similarQuestionList": [],
+  "status": null,
+  "title": "Maximum Number of Ones",
+  "topicTags": [
+    {
+      "name": "Greedy",
+      "id": "VG9waWNUYWdOb2RlOjE3",
+      "slug": "greedy"
+    },
+    {
+      "name": "Heap (Priority Queue)",
+      "id": "VG9waWNUYWdOb2RlOjYxMDUw",
+      "slug": "heap-priority-queue"
+    }
+  ]
+}

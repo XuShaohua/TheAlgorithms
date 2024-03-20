@@ -1,0 +1,78 @@
+{
+  "titleSlug": "maximum-number-of-integers-to-choose-from-a-range-ii",
+  "acRate": 40.19047619047619,
+  "content": null,
+  "difficulty": "Medium",
+  "freqBar": null,
+  "frontendQuestionId": "2557",
+  "hasSolution": false,
+  "hasVideoSolution": false,
+  "hints": [
+    "It is optimal always to take the smallest possible integer you can choose.",
+    "Between every consecutive banned integers, can you find how many integers you can choose?",
+    "Think of using binary search to find that."
+  ],
+  "isFavor": false,
+  "paidOnly": true,
+  "similarQuestionList": [
+    {
+      "difficulty": "Hard",
+      "titleSlug": "first-missing-positive",
+      "title": "First Missing Positive",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    },
+    {
+      "difficulty": "Easy",
+      "titleSlug": "find-all-numbers-disappeared-in-an-array",
+      "title": "Find All Numbers Disappeared in an Array",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    },
+    {
+      "difficulty": "Medium",
+      "titleSlug": "append-k-integers-with-minimal-sum",
+      "title": "Append K Integers With Minimal Sum",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    },
+    {
+      "difficulty": "Medium",
+      "titleSlug": "replace-elements-in-an-array",
+      "title": "Replace Elements in an Array",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    },
+    {
+      "difficulty": "Medium",
+      "titleSlug": "maximum-number-of-integers-to-choose-from-a-range-i",
+      "title": "Maximum Number of Integers to Choose From a Range I",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    }
+  ],
+  "status": null,
+  "title": "Maximum Number of Integers to Choose From a Range II",
+  "topicTags": [
+    {
+      "name": "Array",
+      "id": "VG9waWNUYWdOb2RlOjU=",
+      "slug": "array"
+    },
+    {
+      "name": "Binary Search",
+      "id": "VG9waWNUYWdOb2RlOjEx",
+      "slug": "binary-search"
+    },
+    {
+      "name": "Greedy",
+      "id": "VG9waWNUYWdOb2RlOjE3",
+      "slug": "greedy"
+    },
+    {
+      "name": "Sorting",
+      "id": "VG9waWNUYWdOb2RlOjYxMDQ5",
+      "slug": "sorting"
+    }
+  ]
+}

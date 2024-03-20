@@ -1,0 +1,41 @@
+{
+  "titleSlug": "subarrays-distinct-element-sum-of-squares-ii",
+  "acRate": 18.52609255472241,
+  "content": "<p>You are given a <strong>0-indexed </strong>integer array <code>nums</code>.</p>\n\n<p>The <strong>distinct count</strong> of a subarray of <code>nums</code> is defined as:</p>\n\n<ul>\n\t<li>Let <code>nums[i..j]</code> be a subarray of <code>nums</code> consisting of all the indices from <code>i</code> to <code>j</code> such that <code>0 &lt;= i &lt;= j &lt; nums.length</code>. Then the number of distinct values in <code>nums[i..j]</code> is called the distinct count of <code>nums[i..j]</code>.</li>\n</ul>\n\n<p>Return <em>the sum of the <strong>squares</strong> of <strong>distinct counts</strong> of all subarrays of </em><code>nums</code>.</p>\n\n<p>Since the answer may be very large, return it <strong>modulo</strong> <code>10<sup>9</sup> + 7</code>.</p>\n\n<p>A subarray is a contiguous <strong>non-empty</strong> sequence of elements within an array.</p>\n\n<p>&nbsp;</p>\n<p><strong>Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [1,2,1]\n<strong>Output:</strong> 15\n<strong>Explanation:</strong> Six possible subarrays are:\n[1]: 1 distinct value\n[2]: 1 distinct value\n[1]: 1 distinct value\n[1,2]: 2 distinct values\n[2,1]: 2 distinct values\n[1,2,1]: 2 distinct values\nThe sum of the squares of the distinct counts in all subarrays is equal to 1<sup>2</sup> + 1<sup>2</sup> + 1<sup>2</sup> + 2<sup>2</sup> + 2<sup>2</sup> + 2<sup>2</sup> = 15.\n</pre>\n\n<p><strong>Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [2,2]\n<strong>Output:</strong> 3\n<strong>Explanation:</strong> Three possible subarrays are:\n[2]: 1 distinct value\n[2]: 1 distinct value\n[2,2]: 1 distinct value\nThe sum of the squares of the distinct counts in all subarrays is equal to 1<sup>2</sup> + 1<sup>2</sup> + 1<sup>2</sup> = 3.</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= nums.length &lt;= 10<sup>5</sup></code></li>\n\t<li><code>1 &lt;= nums[i] &lt;= 10<sup>5</sup></code></li>\n</ul>\n",
+  "difficulty": "Hard",
+  "freqBar": null,
+  "frontendQuestionId": "2916",
+  "hasSolution": false,
+  "hasVideoSolution": false,
+  "hints": [
+    "Consider the sum of the count of distinct values of subarrays ending with index <code>i</code>, let’s call it <code>sum</code>. Now if you need the sum of all subarrays ending with index <code>i + 1</code> think how it can be related to <code>sum</code> and what extra will be needed to add to this.",
+    "You can find that extra sum using the segment tree."
+  ],
+  "isFavor": false,
+  "paidOnly": false,
+  "similarQuestionList": [],
+  "status": null,
+  "title": "Subarrays Distinct Element Sum of Squares II",
+  "topicTags": [
+    {
+      "name": "Array",
+      "id": "VG9waWNUYWdOb2RlOjU=",
+      "slug": "array"
+    },
+    {
+      "name": "Dynamic Programming",
+      "id": "VG9waWNUYWdOb2RlOjEz",
+      "slug": "dynamic-programming"
+    },
+    {
+      "name": "Binary Indexed Tree",
+      "id": "VG9waWNUYWdOb2RlOjI4",
+      "slug": "binary-indexed-tree"
+    },
+    {
+      "name": "Segment Tree",
+      "id": "VG9waWNUYWdOb2RlOjI5",
+      "slug": "segment-tree"
+    }
+  ]
+}

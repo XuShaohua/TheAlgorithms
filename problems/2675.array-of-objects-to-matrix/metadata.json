@@ -1,0 +1,36 @@
+{
+  "titleSlug": "array-of-objects-to-matrix",
+  "acRate": 69.30138292799238,
+  "content": null,
+  "difficulty": "Hard",
+  "freqBar": null,
+  "frontendQuestionId": "2675",
+  "hasSolution": true,
+  "hasVideoSolution": false,
+  "hints": [
+    "How could you split the problem up into sub-problems?",
+    "1.) Write a function that converts a single object into a dictionary that maps the path name to values. You can solve this recursively by keeping track of current path list.",
+    "2.) Write a function that converts a list of dictionaries into a matrix. Start by creating a list of all possible paths in any of the dictionaries. This will represent the columns."
+  ],
+  "isFavor": false,
+  "paidOnly": true,
+  "similarQuestionList": [
+    {
+      "difficulty": "Medium",
+      "titleSlug": "json-deep-equal",
+      "title": "JSON Deep Equal",
+      "translatedTitle": null,
+      "isPaidOnly": true
+    },
+    {
+      "difficulty": "Medium",
+      "titleSlug": "convert-object-to-json-string",
+      "title": "Convert Object to JSON String",
+      "translatedTitle": null,
+      "isPaidOnly": true
+    }
+  ],
+  "status": null,
+  "title": "Array of Objects to Matrix",
+  "topicTags": []
+}

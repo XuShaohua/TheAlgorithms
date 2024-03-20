@@ -1,0 +1,38 @@
+{
+  "titleSlug": "find-nearest-right-node-in-binary-tree",
+  "acRate": 75.42668929034834,
+  "content": null,
+  "difficulty": "Medium",
+  "freqBar": null,
+  "frontendQuestionId": "1602",
+  "hasSolution": true,
+  "hasVideoSolution": true,
+  "hints": [
+    "Use BFS, traverse the tree level by level and always push the left node first",
+    "When you reach the target node, mark  a boolean variable true",
+    "If you meet another node in the same level after marking the boolean true, return this node.",
+    "If you did not meet new nodes in the same level and started traversing a new level, return Null"
+  ],
+  "isFavor": false,
+  "paidOnly": true,
+  "similarQuestionList": [],
+  "status": null,
+  "title": "Find Nearest Right Node in Binary Tree",
+  "topicTags": [
+    {
+      "name": "Tree",
+      "id": "VG9waWNUYWdOb2RlOjIw",
+      "slug": "tree"
+    },
+    {
+      "name": "Breadth-First Search",
+      "id": "VG9waWNUYWdOb2RlOjIy",
+      "slug": "breadth-first-search"
+    },
+    {
+      "name": "Binary Tree",
+      "id": "VG9waWNUYWdOb2RlOjYxMDU3",
+      "slug": "binary-tree"
+    }
+  ]
+}

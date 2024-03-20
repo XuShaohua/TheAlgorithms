@@ -1,0 +1,40 @@
+{
+  "titleSlug": "maximum-profitable-triplets-with-increasing-prices-i",
+  "acRate": 58.24607329842932,
+  "content": null,
+  "difficulty": "Medium",
+  "freqBar": null,
+  "frontendQuestionId": "2907",
+  "hasSolution": false,
+  "hasVideoSolution": false,
+  "hints": [
+    "Let's fix the middle chosen item.",
+    "For a fixed item with an index <code>j</code>, iterate over items with an index <code>k > j</code> such that <code>prices[k] > prices[j]</code>.",
+    "Find the maximum <code>profit[k]</code> with the above condition. Let's call this maximum value <code>max_right</code>.",
+    "Do the same for items with an index <code>i < j</code> such that <code>prices[i] < prices[j]</code> and find the maximum <code>profit[i]</code> among them. Let's call this maximum value <code>max_left</code>.",
+    "Now the profit when an item with the index <code>j</code> is the middle one would be <code>profit[j] + max_right + max_left</code>.",
+    "Finally, do the above procedure for all <code>j</code>'s and find the maximum profit among them. That would be the final answer."
+  ],
+  "isFavor": false,
+  "paidOnly": true,
+  "similarQuestionList": [],
+  "status": null,
+  "title": "Maximum Profitable Triplets With Increasing Prices I",
+  "topicTags": [
+    {
+      "name": "Array",
+      "id": "VG9waWNUYWdOb2RlOjU=",
+      "slug": "array"
+    },
+    {
+      "name": "Binary Indexed Tree",
+      "id": "VG9waWNUYWdOb2RlOjI4",
+      "slug": "binary-indexed-tree"
+    },
+    {
+      "name": "Segment Tree",
+      "id": "VG9waWNUYWdOb2RlOjI5",
+      "slug": "segment-tree"
+    }
+  ]
+}

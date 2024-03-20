@@ -1,0 +1,45 @@
+{
+  "titleSlug": "longest-arithmetic-subsequence-of-given-difference",
+  "acRate": 54.80662808715175,
+  "content": "<p>Given an integer array <code>arr</code> and an integer <code>difference</code>, return the length of the longest subsequence in <code>arr</code> which is an arithmetic sequence such that the difference between adjacent elements in the subsequence equals <code>difference</code>.</p>\n\n<p>A <strong>subsequence</strong> is a sequence that can be derived from <code>arr</code> by deleting some or no elements without changing the order of the remaining elements.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> arr = [1,2,3,4], difference = 1\n<strong>Output:</strong> 4\n<strong>Explanation: </strong>The longest arithmetic subsequence is [1,2,3,4].</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> arr = [1,3,5,7], difference = 1\n<strong>Output:</strong> 1\n<strong>Explanation: </strong>The longest arithmetic subsequence is any single element.\n</pre>\n\n<p><strong class=\"example\">Example 3:</strong></p>\n\n<pre>\n<strong>Input:</strong> arr = [1,5,7,8,5,3,4,2,1], difference = -2\n<strong>Output:</strong> 4\n<strong>Explanation: </strong>The longest arithmetic subsequence is [7,5,3,1].\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= arr.length &lt;= 10<sup>5</sup></code></li>\n\t<li><code>-10<sup>4</sup> &lt;= arr[i], difference &lt;= 10<sup>4</sup></code></li>\n</ul>\n",
+  "difficulty": "Medium",
+  "freqBar": null,
+  "frontendQuestionId": "1218",
+  "hasSolution": true,
+  "hasVideoSolution": false,
+  "hints": [
+    "Use dynamic programming.",
+    "Let dp[i] be the maximum length of a subsequence of the given difference whose last element is i.",
+    "dp[i] = 1 + dp[i-k]"
+  ],
+  "isFavor": false,
+  "paidOnly": false,
+  "similarQuestionList": [
+    {
+      "difficulty": "Medium",
+      "titleSlug": "destroy-sequential-targets",
+      "title": "Destroy Sequential Targets",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    }
+  ],
+  "status": null,
+  "title": "Longest Arithmetic Subsequence of Given Difference",
+  "topicTags": [
+    {
+      "name": "Array",
+      "id": "VG9waWNUYWdOb2RlOjU=",
+      "slug": "array"
+    },
+    {
+      "name": "Hash Table",
+      "id": "VG9waWNUYWdOb2RlOjY=",
+      "slug": "hash-table"
+    },
+    {
+      "name": "Dynamic Programming",
+      "id": "VG9waWNUYWdOb2RlOjEz",
+      "slug": "dynamic-programming"
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "titleSlug": "shortest-distance-to-target-color",
+  "acRate": 55.41979949874687,
+  "content": null,
+  "difficulty": "Medium",
+  "freqBar": null,
+  "frontendQuestionId": "1182",
+  "hasSolution": true,
+  "hasVideoSolution": false,
+  "hints": [
+    "Greedy solution is too slow because of the limits.",
+    "Can you solve this problem offline by doing some pre-processing?",
+    "Calculate the answers for all indexes moving to their left and to their right."
+  ],
+  "isFavor": false,
+  "paidOnly": true,
+  "similarQuestionList": [],
+  "status": null,
+  "title": "Shortest Distance to Target Color",
+  "topicTags": [
+    {
+      "name": "Array",
+      "id": "VG9waWNUYWdOb2RlOjU=",
+      "slug": "array"
+    },
+    {
+      "name": "Binary Search",
+      "id": "VG9waWNUYWdOb2RlOjEx",
+      "slug": "binary-search"
+    },
+    {
+      "name": "Dynamic Programming",
+      "id": "VG9waWNUYWdOb2RlOjEz",
+      "slug": "dynamic-programming"
+    }
+  ]
+}

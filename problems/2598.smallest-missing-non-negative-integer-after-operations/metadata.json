@@ -1,0 +1,50 @@
+{
+  "titleSlug": "smallest-missing-non-negative-integer-after-operations",
+  "acRate": 39.012609171838584,
+  "content": "<p>You are given a <strong>0-indexed</strong> integer array <code>nums</code> and an integer <code>value</code>.</p>\n\n<p>In one operation, you can add or subtract <code>value</code> from any element of <code>nums</code>.</p>\n\n<ul>\n\t<li>For example, if <code>nums = [1,2,3]</code> and <code>value = 2</code>, you can choose to subtract <code>value</code> from <code>nums[0]</code> to make <code>nums = [-1,2,3]</code>.</li>\n</ul>\n\n<p>The MEX (minimum excluded) of an array is the smallest missing <strong>non-negative</strong> integer in it.</p>\n\n<ul>\n\t<li>For example, the MEX of <code>[-1,2,3]</code> is <code>0</code> while the MEX of <code>[1,0,3]</code> is <code>2</code>.</li>\n</ul>\n\n<p>Return <em>the maximum MEX of </em><code>nums</code><em> after applying the mentioned operation <strong>any number of times</strong></em>.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [1,-10,7,13,6,8], value = 5\n<strong>Output:</strong> 4\n<strong>Explanation:</strong> One can achieve this result by applying the following operations:\n- Add value to nums[1] twice to make nums = [1,<strong><u>0</u></strong>,7,13,6,8]\n- Subtract value from nums[2] once to make nums = [1,0,<strong><u>2</u></strong>,13,6,8]\n- Subtract value from nums[3] twice to make nums = [1,0,2,<strong><u>3</u></strong>,6,8]\nThe MEX of nums is 4. It can be shown that 4 is the maximum MEX we can achieve.\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [1,-10,7,13,6,8], value = 7\n<strong>Output:</strong> 2\n<strong>Explanation:</strong> One can achieve this result by applying the following operation:\n- subtract value from nums[2] once to make nums = [1,-10,<u><strong>0</strong></u>,13,6,8]\nThe MEX of nums is 2. It can be shown that 2 is the maximum MEX we can achieve.\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= nums.length, value &lt;= 10<sup>5</sup></code></li>\n\t<li><code>-10<sup>9</sup> &lt;= nums[i] &lt;= 10<sup>9</sup></code></li>\n</ul>\n",
+  "difficulty": "Medium",
+  "freqBar": null,
+  "frontendQuestionId": "2598",
+  "hasSolution": false,
+  "hasVideoSolution": false,
+  "hints": [
+    "Think about using modular arithmetic.",
+    "if x = nums[i] (mod value), then we can make nums[i] equal to x  after some number of operations",
+    "How does finding the frequency of (nums[i] mod value) help?"
+  ],
+  "isFavor": false,
+  "paidOnly": false,
+  "similarQuestionList": [
+    {
+      "difficulty": "Hard",
+      "titleSlug": "first-missing-positive",
+      "title": "First Missing Positive",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    }
+  ],
+  "status": null,
+  "title": "Smallest Missing Non-negative Integer After Operations",
+  "topicTags": [
+    {
+      "name": "Array",
+      "id": "VG9waWNUYWdOb2RlOjU=",
+      "slug": "array"
+    },
+    {
+      "name": "Hash Table",
+      "id": "VG9waWNUYWdOb2RlOjY=",
+      "slug": "hash-table"
+    },
+    {
+      "name": "Math",
+      "id": "VG9waWNUYWdOb2RlOjg=",
+      "slug": "math"
+    },
+    {
+      "name": "Greedy",
+      "id": "VG9waWNUYWdOb2RlOjE3",
+      "slug": "greedy"
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "titleSlug": "maximum-vacation-days",
+  "acRate": 45.513062772014095,
+  "content": null,
+  "difficulty": "Hard",
+  "freqBar": null,
+  "frontendQuestionId": "568",
+  "hasSolution": true,
+  "hasVideoSolution": false,
+  "hints": [
+    "First try to understand the problem carefully and then take some example and solve it on a paper.",
+    "Can you interpret the given input as a graph? Which graph traversal technique is suitable here?",
+    "Can we use some space to avoid redundant function calls?"
+  ],
+  "isFavor": false,
+  "paidOnly": true,
+  "similarQuestionList": [
+    {
+      "difficulty": "Medium",
+      "titleSlug": "cheapest-flights-within-k-stops",
+      "title": "Cheapest Flights Within K Stops",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    }
+  ],
+  "status": null,
+  "title": "Maximum Vacation Days",
+  "topicTags": [
+    {
+      "name": "Array",
+      "id": "VG9waWNUYWdOb2RlOjU=",
+      "slug": "array"
+    },
+    {
+      "name": "Dynamic Programming",
+      "id": "VG9waWNUYWdOb2RlOjEz",
+      "slug": "dynamic-programming"
+    },
+    {
+      "name": "Matrix",
+      "id": "VG9waWNUYWdOb2RlOjYxMDUz",
+      "slug": "matrix"
+    }
+  ]
+}

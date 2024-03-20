@@ -1,0 +1,52 @@
+{
+  "titleSlug": "faulty-keyboard",
+  "acRate": 82.9025053906972,
+  "content": "<p>Your laptop keyboard is faulty, and whenever you type a character <code>&#39;i&#39;</code> on it, it reverses the string that you have written. Typing other characters works as expected.</p>\n\n<p>You are given a <strong>0-indexed</strong> string <code>s</code>, and you type each character of <code>s</code> using your faulty keyboard.</p>\n\n<p>Return <em>the final string that will be present on your laptop screen.</em></p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> s = &quot;string&quot;\n<strong>Output:</strong> &quot;rtsng&quot;\n<strong>Explanation:</strong> \nAfter typing first character, the text on the screen is &quot;s&quot;.\nAfter the second character, the text is &quot;st&quot;. \nAfter the third character, the text is &quot;str&quot;.\nSince the fourth character is an &#39;i&#39;, the text gets reversed and becomes &quot;rts&quot;.\nAfter the fifth character, the text is &quot;rtsn&quot;. \nAfter the sixth character, the text is &quot;rtsng&quot;. \nTherefore, we return &quot;rtsng&quot;.\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> s = &quot;poiinter&quot;\n<strong>Output:</strong> &quot;ponter&quot;\n<strong>Explanation:</strong> \nAfter the first character, the text on the screen is &quot;p&quot;.\nAfter the second character, the text is &quot;po&quot;. \nSince the third character you type is an &#39;i&#39;, the text gets reversed and becomes &quot;op&quot;. \nSince the fourth character you type is an &#39;i&#39;, the text gets reversed and becomes &quot;po&quot;.\nAfter the fifth character, the text is &quot;pon&quot;.\nAfter the sixth character, the text is &quot;pont&quot;. \nAfter the seventh character, the text is &quot;ponte&quot;. \nAfter the eighth character, the text is &quot;ponter&quot;. \nTherefore, we return &quot;ponter&quot;.</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= s.length &lt;= 100</code></li>\n\t<li><code>s</code> consists of lowercase English letters.</li>\n\t<li><code>s[0] != &#39;i&#39;</code></li>\n</ul>\n",
+  "difficulty": "Easy",
+  "freqBar": null,
+  "frontendQuestionId": "2810",
+  "hasSolution": false,
+  "hasVideoSolution": false,
+  "hints": [
+    "Try to build a new string by traversing the given string and reversing whenever you get the character ‘i’."
+  ],
+  "isFavor": false,
+  "paidOnly": false,
+  "similarQuestionList": [
+    {
+      "difficulty": "Easy",
+      "titleSlug": "reverse-vowels-of-a-string",
+      "title": "Reverse Vowels of a String",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    },
+    {
+      "difficulty": "Easy",
+      "titleSlug": "reverse-string-ii",
+      "title": "Reverse String II",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    },
+    {
+      "difficulty": "Easy",
+      "titleSlug": "reverse-only-letters",
+      "title": "Reverse Only Letters",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    }
+  ],
+  "status": null,
+  "title": "Faulty Keyboard",
+  "topicTags": [
+    {
+      "name": "String",
+      "id": "VG9waWNUYWdOb2RlOjEw",
+      "slug": "string"
+    },
+    {
+      "name": "Simulation",
+      "id": "VG9waWNUYWdOb2RlOjYxMDU1",
+      "slug": "simulation"
+    }
+  ]
+}

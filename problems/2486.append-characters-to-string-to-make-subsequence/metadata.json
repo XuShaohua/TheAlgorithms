@@ -1,0 +1,52 @@
+{
+  "titleSlug": "append-characters-to-string-to-make-subsequence",
+  "acRate": 65.64408689292563,
+  "content": "<p>You are given two strings <code>s</code> and <code>t</code> consisting of only lowercase English letters.</p>\n\n<p>Return <em>the minimum number of characters that need to be appended to the end of </em><code>s</code><em> so that </em><code>t</code><em> becomes a <strong>subsequence</strong> of </em><code>s</code>.</p>\n\n<p>A <strong>subsequence</strong> is a string that can be derived from another string by deleting some or no characters without changing the order of the remaining characters.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> s = &quot;coaching&quot;, t = &quot;coding&quot;\n<strong>Output:</strong> 4\n<strong>Explanation:</strong> Append the characters &quot;ding&quot; to the end of s so that s = &quot;coachingding&quot;.\nNow, t is a subsequence of s (&quot;<u><strong>co</strong></u>aching<u><strong>ding</strong></u>&quot;).\nIt can be shown that appending any 3 characters to the end of s will never make t a subsequence.\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> s = &quot;abcde&quot;, t = &quot;a&quot;\n<strong>Output:</strong> 0\n<strong>Explanation:</strong> t is already a subsequence of s (&quot;<u><strong>a</strong></u>bcde&quot;).\n</pre>\n\n<p><strong class=\"example\">Example 3:</strong></p>\n\n<pre>\n<strong>Input:</strong> s = &quot;z&quot;, t = &quot;abcde&quot;\n<strong>Output:</strong> 5\n<strong>Explanation:</strong> Append the characters &quot;abcde&quot; to the end of s so that s = &quot;zabcde&quot;.\nNow, t is a subsequence of s (&quot;z<u><strong>abcde</strong></u>&quot;).\nIt can be shown that appending any 4 characters to the end of s will never make t a subsequence.\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= s.length, t.length &lt;= 10<sup>5</sup></code></li>\n\t<li><code>s</code> and <code>t</code> consist only of lowercase English letters.</li>\n</ul>\n",
+  "difficulty": "Medium",
+  "freqBar": null,
+  "frontendQuestionId": "2486",
+  "hasSolution": false,
+  "hasVideoSolution": false,
+  "hints": [
+    "Find the longest prefix of t that is a subsequence of s.",
+    "Use two variables to keep track of your location in s and t. If the characters match, increment both variables. Otherwise, only increment the variable for s.",
+    "The remaining characters in t must be appended to the end of s."
+  ],
+  "isFavor": false,
+  "paidOnly": false,
+  "similarQuestionList": [
+    {
+      "difficulty": "Easy",
+      "titleSlug": "is-subsequence",
+      "title": "Is Subsequence",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    },
+    {
+      "difficulty": "Hard",
+      "titleSlug": "minimum-operations-to-make-a-subsequence",
+      "title": "Minimum Operations to Make a Subsequence",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    }
+  ],
+  "status": null,
+  "title": "Append Characters to String to Make Subsequence",
+  "topicTags": [
+    {
+      "name": "Two Pointers",
+      "id": "VG9waWNUYWdOb2RlOjk=",
+      "slug": "two-pointers"
+    },
+    {
+      "name": "String",
+      "id": "VG9waWNUYWdOb2RlOjEw",
+      "slug": "string"
+    },
+    {
+      "name": "Greedy",
+      "id": "VG9waWNUYWdOb2RlOjE3",
+      "slug": "greedy"
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "titleSlug": "report-contiguous-dates",
+  "acRate": 57.89289934472016,
+  "content": null,
+  "difficulty": "Hard",
+  "freqBar": null,
+  "frontendQuestionId": "1225",
+  "hasSolution": false,
+  "hasVideoSolution": false,
+  "hints": [],
+  "isFavor": false,
+  "paidOnly": true,
+  "similarQuestionList": [
+    {
+      "difficulty": "Medium",
+      "titleSlug": "find-the-start-and-end-number-of-continuous-ranges",
+      "title": "Find the Start and End Number of Continuous Ranges",
+      "translatedTitle": null,
+      "isPaidOnly": true
+    },
+    {
+      "difficulty": "Medium",
+      "titleSlug": "find-the-missing-ids",
+      "title": "Find the Missing IDs",
+      "translatedTitle": null,
+      "isPaidOnly": true
+    },
+    {
+      "difficulty": "Hard",
+      "titleSlug": "customers-with-strictly-increasing-purchases",
+      "title": "Customers With Strictly Increasing Purchases",
+      "translatedTitle": null,
+      "isPaidOnly": true
+    }
+  ],
+  "status": null,
+  "title": "Report Contiguous Dates",
+  "topicTags": [
+    {
+      "name": "Database",
+      "id": "VG9waWNUYWdOb2RlOjYxMDQz",
+      "slug": "database"
+    }
+  ]
+}

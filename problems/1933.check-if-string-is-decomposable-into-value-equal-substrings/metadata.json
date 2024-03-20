@@ -1,0 +1,27 @@
+{
+  "titleSlug": "check-if-string-is-decomposable-into-value-equal-substrings",
+  "acRate": 50.64256460951842,
+  "content": null,
+  "difficulty": "Easy",
+  "freqBar": null,
+  "frontendQuestionId": "1933",
+  "hasSolution": false,
+  "hasVideoSolution": false,
+  "hints": [
+    "Keep looking for 3-equals, if you find a 3-equal, keep going. If you don't find a 3-equal, check if it is a 2-equal.",
+    "Make sure that it is the only 2-equal.",
+    "If it is neither a 3-equal nor a 2-equal, then it is impossible."
+  ],
+  "isFavor": false,
+  "paidOnly": true,
+  "similarQuestionList": [],
+  "status": null,
+  "title": "Check if String Is Decomposable Into Value-Equal Substrings",
+  "topicTags": [
+    {
+      "name": "String",
+      "id": "VG9waWNUYWdOb2RlOjEw",
+      "slug": "string"
+    }
+  ]
+}

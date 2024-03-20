@@ -1,0 +1,48 @@
+{
+  "titleSlug": "minimum-costs-using-the-train-line",
+  "acRate": 78.90285161913968,
+  "content": null,
+  "difficulty": "Hard",
+  "freqBar": null,
+  "frontendQuestionId": "2361",
+  "hasSolution": true,
+  "hasVideoSolution": false,
+  "hints": [
+    "Notice and evaluate the different ways there are to move from one stop to the next.",
+    "From the express route at a previous stop, we can use either the express route or the regular route to the next stop without paying expressCost.",
+    "From the regular route at a previous stop, we can either use the express route after paying expressCost or use the regular route without paying expressCost.",
+    "Iterate through the stops and compare the above cases to obtain the minimum costs for each stop."
+  ],
+  "isFavor": false,
+  "paidOnly": true,
+  "similarQuestionList": [
+    {
+      "difficulty": "Hard",
+      "titleSlug": "bus-routes",
+      "title": "Bus Routes",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    },
+    {
+      "difficulty": "Easy",
+      "titleSlug": "distance-between-bus-stops",
+      "title": "Distance Between Bus Stops",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    }
+  ],
+  "status": null,
+  "title": "Minimum Costs Using the Train Line",
+  "topicTags": [
+    {
+      "name": "Array",
+      "id": "VG9waWNUYWdOb2RlOjU=",
+      "slug": "array"
+    },
+    {
+      "name": "Dynamic Programming",
+      "id": "VG9waWNUYWdOb2RlOjEz",
+      "slug": "dynamic-programming"
+    }
+  ]
+}

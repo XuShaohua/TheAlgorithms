@@ -1,0 +1,43 @@
+{
+  "titleSlug": "x-of-a-kind-in-a-deck-of-cards",
+  "acRate": 30.051207879545622,
+  "content": "<p>You are given an integer array <code>deck</code> where <code>deck[i]</code> represents the number written on the <code>i<sup>th</sup></code> card.</p>\n\n<p>Partition the cards into <strong>one or more groups</strong> such that:</p>\n\n<ul>\n\t<li>Each group has <strong>exactly</strong> <code>x</code> cards where <code>x &gt; 1</code>, and</li>\n\t<li>All the cards in one group have the same integer written on them.</li>\n</ul>\n\n<p>Return <code>true</code><em> if such partition is possible, or </em><code>false</code><em> otherwise</em>.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> deck = [1,2,3,4,4,3,2,1]\n<strong>Output:</strong> true\n<strong>Explanation</strong>: Possible partition [1,1],[2,2],[3,3],[4,4].\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> deck = [1,1,1,2,2,2,3,3]\n<strong>Output:</strong> false\n<strong>Explanation</strong>: No possible partition.\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= deck.length &lt;= 10<sup>4</sup></code></li>\n\t<li><code>0 &lt;= deck[i] &lt; 10<sup>4</sup></code></li>\n</ul>\n",
+  "difficulty": "Easy",
+  "freqBar": null,
+  "frontendQuestionId": "914",
+  "hasSolution": true,
+  "hasVideoSolution": false,
+  "hints": [],
+  "isFavor": false,
+  "paidOnly": false,
+  "similarQuestionList": [],
+  "status": null,
+  "title": "X of a Kind in a Deck of Cards",
+  "topicTags": [
+    {
+      "name": "Array",
+      "id": "VG9waWNUYWdOb2RlOjU=",
+      "slug": "array"
+    },
+    {
+      "name": "Hash Table",
+      "id": "VG9waWNUYWdOb2RlOjY=",
+      "slug": "hash-table"
+    },
+    {
+      "name": "Math",
+      "id": "VG9waWNUYWdOb2RlOjg=",
+      "slug": "math"
+    },
+    {
+      "name": "Counting",
+      "id": "VG9waWNUYWdOb2RlOjYxMDYy",
+      "slug": "counting"
+    },
+    {
+      "name": "Number Theory",
+      "id": "VG9waWNUYWdOb2RlOjYxMDY3",
+      "slug": "number-theory"
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "titleSlug": "line-reflection",
+  "acRate": 35.378315858511556,
+  "content": null,
+  "difficulty": "Medium",
+  "freqBar": null,
+  "frontendQuestionId": "356",
+  "hasSolution": false,
+  "hasVideoSolution": false,
+  "hints": [
+    "Find the smallest and largest x-value for all points.",
+    "If there is a line then it should be at y = (minX + maxX) / 2.",
+    "For each point, make sure that it has a reflected point in the opposite side."
+  ],
+  "isFavor": false,
+  "paidOnly": true,
+  "similarQuestionList": [
+    {
+      "difficulty": "Hard",
+      "titleSlug": "max-points-on-a-line",
+      "title": "Max Points on a Line",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    },
+    {
+      "difficulty": "Medium",
+      "titleSlug": "number-of-boomerangs",
+      "title": "Number of Boomerangs",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    }
+  ],
+  "status": null,
+  "title": "Line Reflection",
+  "topicTags": [
+    {
+      "name": "Array",
+      "id": "VG9waWNUYWdOb2RlOjU=",
+      "slug": "array"
+    },
+    {
+      "name": "Hash Table",
+      "id": "VG9waWNUYWdOb2RlOjY=",
+      "slug": "hash-table"
+    },
+    {
+      "name": "Math",
+      "id": "VG9waWNUYWdOb2RlOjg=",
+      "slug": "math"
+    }
+  ]
+}

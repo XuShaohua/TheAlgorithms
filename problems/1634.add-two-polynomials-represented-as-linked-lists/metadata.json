@@ -1,0 +1,59 @@
+{
+  "titleSlug": "add-two-polynomials-represented-as-linked-lists",
+  "acRate": 55.23911572298669,
+  "content": null,
+  "difficulty": "Medium",
+  "freqBar": null,
+  "frontendQuestionId": "1634",
+  "hasSolution": false,
+  "hasVideoSolution": false,
+  "hints": [
+    "Process both linked lists at the same time",
+    "If the current power of the two heads is equal, add this power with the sum of the coefficients to the answer list.",
+    "If one head has a larger power, add this power to the answer list and move only this head."
+  ],
+  "isFavor": false,
+  "paidOnly": true,
+  "similarQuestionList": [
+    {
+      "difficulty": "Medium",
+      "titleSlug": "add-two-numbers",
+      "title": "Add Two Numbers",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    },
+    {
+      "difficulty": "Easy",
+      "titleSlug": "merge-two-sorted-lists",
+      "title": "Merge Two Sorted Lists",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    },
+    {
+      "difficulty": "Medium",
+      "titleSlug": "add-two-numbers-ii",
+      "title": "Add Two Numbers II",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    }
+  ],
+  "status": null,
+  "title": "Add Two Polynomials Represented as Linked Lists",
+  "topicTags": [
+    {
+      "name": "Linked List",
+      "id": "VG9waWNUYWdOb2RlOjc=",
+      "slug": "linked-list"
+    },
+    {
+      "name": "Math",
+      "id": "VG9waWNUYWdOb2RlOjg=",
+      "slug": "math"
+    },
+    {
+      "name": "Two Pointers",
+      "id": "VG9waWNUYWdOb2RlOjk=",
+      "slug": "two-pointers"
+    }
+  ]
+}

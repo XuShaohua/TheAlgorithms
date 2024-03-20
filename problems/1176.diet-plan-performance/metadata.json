@@ -1,0 +1,30 @@
+{
+  "titleSlug": "diet-plan-performance",
+  "acRate": 53.29742247281515,
+  "content": null,
+  "difficulty": "Easy",
+  "freqBar": null,
+  "frontendQuestionId": "1176",
+  "hasSolution": false,
+  "hasVideoSolution": false,
+  "hints": [
+    "Use sliding window technique (aka two pointers)."
+  ],
+  "isFavor": false,
+  "paidOnly": true,
+  "similarQuestionList": [],
+  "status": null,
+  "title": "Diet Plan Performance",
+  "topicTags": [
+    {
+      "name": "Array",
+      "id": "VG9waWNUYWdOb2RlOjU=",
+      "slug": "array"
+    },
+    {
+      "name": "Sliding Window",
+      "id": "VG9waWNUYWdOb2RlOjU1ODIx",
+      "slug": "sliding-window"
+    }
+  ]
+}

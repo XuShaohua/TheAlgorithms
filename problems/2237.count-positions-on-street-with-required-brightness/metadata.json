@@ -1,0 +1,53 @@
+{
+  "titleSlug": "count-positions-on-street-with-required-brightness",
+  "acRate": 63.950398582816646,
+  "content": null,
+  "difficulty": "Medium",
+  "freqBar": null,
+  "frontendQuestionId": "2237",
+  "hasSolution": false,
+  "hasVideoSolution": false,
+  "hints": [
+    "How can we find the brightness at every position on the street?",
+    "We can use a hash table to store the change in brightness from the previous position to the current position."
+  ],
+  "isFavor": false,
+  "paidOnly": true,
+  "similarQuestionList": [
+    {
+      "difficulty": "Medium",
+      "titleSlug": "range-addition",
+      "title": "Range Addition",
+      "translatedTitle": null,
+      "isPaidOnly": true
+    },
+    {
+      "difficulty": "Medium",
+      "titleSlug": "brightest-position-on-street",
+      "title": "Brightest Position on Street",
+      "translatedTitle": null,
+      "isPaidOnly": true
+    },
+    {
+      "difficulty": "Medium",
+      "titleSlug": "increment-submatrices-by-one",
+      "title": "Increment Submatrices by One",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    }
+  ],
+  "status": null,
+  "title": "Count Positions on Street With Required Brightness",
+  "topicTags": [
+    {
+      "name": "Array",
+      "id": "VG9waWNUYWdOb2RlOjU=",
+      "slug": "array"
+    },
+    {
+      "name": "Prefix Sum",
+      "id": "VG9waWNUYWdOb2RlOjYxMDY4",
+      "slug": "prefix-sum"
+    }
+  ]
+}

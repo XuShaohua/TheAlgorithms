@@ -1,0 +1,51 @@
+{
+  "titleSlug": "number-of-people-that-can-be-seen-in-a-grid",
+  "acRate": 48.67770996803255,
+  "content": null,
+  "difficulty": "Medium",
+  "freqBar": null,
+  "frontendQuestionId": "2282",
+  "hasSolution": false,
+  "hasVideoSolution": false,
+  "hints": [
+    "Imagine you are looking to the right. The heights of the people you see form an ascending sequence.",
+    "Iterate through the row from right to left. Use a decreasing monotonic stack to keep track of the people that you can see.",
+    "Use binary search to find the number of people in the stack that are shorter than the current person.",
+    "Repeat this process for each column."
+  ],
+  "isFavor": false,
+  "paidOnly": true,
+  "similarQuestionList": [
+    {
+      "difficulty": "Hard",
+      "titleSlug": "number-of-visible-people-in-a-queue",
+      "title": "Number of Visible People in a Queue",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    }
+  ],
+  "status": null,
+  "title": "Number of People That Can Be Seen in a Grid",
+  "topicTags": [
+    {
+      "name": "Array",
+      "id": "VG9waWNUYWdOb2RlOjU=",
+      "slug": "array"
+    },
+    {
+      "name": "Stack",
+      "id": "VG9waWNUYWdOb2RlOjE1",
+      "slug": "stack"
+    },
+    {
+      "name": "Matrix",
+      "id": "VG9waWNUYWdOb2RlOjYxMDUz",
+      "slug": "matrix"
+    },
+    {
+      "name": "Monotonic Stack",
+      "id": "VG9waWNUYWdOb2RlOjYxMDU0",
+      "slug": "monotonic-stack"
+    }
+  ]
+}
