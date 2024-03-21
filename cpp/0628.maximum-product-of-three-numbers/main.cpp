@@ -33,6 +33,8 @@ class Solution {
 void checkSolution() {
   {
     std::vector<int> nums = {-100,-98,-1,2,3,4};
+    int target = Solution::maximumProduct(nums);
+    assert(target == 39200);
   }
 }
 

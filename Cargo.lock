@@ -107,6 +107,10 @@ name = "lc-0414-third-maximum-number"
 version = "0.1.0"
 
 [[package]]
+name = "lc-0628-maximum-product-of-three-numbers"
+version = "0.1.0"
+
+[[package]]
 name = "lc-1114-print-in-order"
 version = "0.1.0"
 
