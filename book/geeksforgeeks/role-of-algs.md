@@ -1,4 +1,4 @@
-# The Role of Algorithms in Computing
+# 算法在计算中的角色 The Role of Algorithms in Computing
 
 Algorithm Design Technique:
 
