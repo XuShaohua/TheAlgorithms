@@ -42,3 +42,4 @@
   - [数独](others/sodoku/index.md)
   - [内存](others/memory/index.md)
   - [任意精度算术运算](others/arbitrary-precision-arithmetic.md)
+- [参考资料](refs.md)
