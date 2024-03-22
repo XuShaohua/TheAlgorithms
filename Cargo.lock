@@ -63,6 +63,10 @@ name = "lc-0066-plus-one"
 version = "0.1.0"
 
 [[package]]
+name = "lc-0069-sqrtx"
+version = "0.1.0"
+
+[[package]]
 name = "lc-0078-subsets"
 version = "0.1.0"
 
@@ -112,6 +116,10 @@ version = "0.1.0"
 
 [[package]]
 name = "lc-0628-maximum-product-of-three-numbers"
+version = "0.1.0"
+
+[[package]]
+name = "lc-0665-non-decreasing-array"
 version = "0.1.0"
 
 [[package]]
