@@ -46,18 +46,17 @@ pub fn my_sqrt2(x: i32) -> i32 {
 }
 
 pub fn my_sqrt3(x: i32) -> i32 {
+    use std::cmp::Ordering;
+
     let mut left = 1;
     let mut right = x;
 
     while left <= right {
         let middle = left + (right - left) / 2;
-        let div = x / middle;
-        if middle > div {
-            right = middle - 1;
-        } else if middle < div {
-            left = middle + 1;
-        } else {
-            return middle;
+        match middle.cmp(&(x / middle)) {
+            Ordering::Less => left = middle + 1,
+            Ordering::Greater => right = middle - 1,
+            Ordering::Equal => return middle,
         }
     }
     right
