@@ -34,10 +34,14 @@ pub fn single_number(nums: Vec<i32>) -> i32 {
     from_digits(all_digits)
 }
 
-fn main() {
+fn check_solution() {
     let nums = vec![2, 2, 3, 2];
     assert_eq!(single_number(nums), 3);
 
     let nums = vec![0, 1, 0, 1, 0, 1, 99];
     assert_eq!(single_number(nums), 99);
+}
+
+fn main() {
+    check_solution();
 }

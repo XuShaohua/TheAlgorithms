@@ -11,7 +11,7 @@ pub fn single_number(nums: Vec<i32>) -> i32 {
     ans
 }
 
-fn main() {
+fn check_solution() {
     let nums = vec![2, 2, 1];
     assert_eq!(single_number(nums), 1);
 
@@ -20,4 +20,8 @@ fn main() {
 
     let nums = vec![1];
     assert_eq!(single_number(nums), 1);
+}
+
+fn main() {
+    check_solution();
 }
