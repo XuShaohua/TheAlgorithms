@@ -2,6 +2,8 @@
 // Use of this source is governed by General Public License that can be
 // found in the LICENSE file.
 
+pub type MergeFunc = fn(&mut [i32], i32, &[i32], i32);
+
 pub fn merge(nums1: &mut [i32], m: i32, nums2: &[i32], n: i32) {
     let m = m as usize;
     let n = n as usize;
@@ -49,13 +51,39 @@ pub fn merge(nums1: &mut [i32], m: i32, nums2: &[i32], n: i32) {
     }
 }
 
-fn main() {
+/// Two pointers
+pub fn merge2(nums1: &mut [i32], m: i32, nums2: &[i32], n: i32) {
+    let mut i = m - 1;
+    let mut new_index = nums1.len() - 1;
+    let mut j = n - 1;
+
+    while i >= 0 && j >= 0 {
+        if nums1[i as usize] > nums2[j as usize] {
+            nums1[new_index] = nums1[i as usize];
+            i -= 1;
+        } else {
+            nums1[new_index] = nums2[j as usize];
+            j -= 1;
+        }
+        new_index -= 1;
+    }
+
+    while j >= 0 {
+        nums1[new_index] = nums2[j as usize];
+        j -= 1;
+        if new_index > 0 {
+            new_index -= 1;
+        }
+    }
+}
+
+fn check_solution(func: MergeFunc) {
     let mut nums1 = vec![1, 2, 3, 0, 0, 0];
     let m = 3;
     let nums2 = vec![2, 5, 6];
     let n = 3;
     let expected_out = vec![1, 2, 2, 3, 5, 6];
-    merge(&mut nums1, m, &nums2, n);
+    func(&mut nums1, m, &nums2, n);
     assert_eq!(nums1, expected_out);
 
     let mut nums1 = vec![1];
@@ -63,7 +91,7 @@ fn main() {
     let nums2 = vec![];
     let n = 0;
     let expected_out = vec![1];
-    merge(&mut nums1, m, &nums2, n);
+    func(&mut nums1, m, &nums2, n);
     assert_eq!(nums1, expected_out);
 
     let mut nums1 = vec![0];
@@ -71,7 +99,7 @@ fn main() {
     let nums2 = vec![1];
     let n = 1;
     let expected_out = vec![1];
-    merge(&mut nums1, m, &nums2, n);
+    func(&mut nums1, m, &nums2, n);
     assert_eq!(nums1, expected_out);
 
     let mut nums1 = vec![21, 22, 23, 0, 0, 0];
@@ -79,7 +107,7 @@ fn main() {
     let nums2 = vec![2, 5, 6];
     let n = 3;
     let expected_out = vec![2, 5, 6, 21, 22, 23];
-    merge(&mut nums1, m, &nums2, n);
+    func(&mut nums1, m, &nums2, n);
     assert_eq!(nums1, expected_out);
 
     let mut nums1 = vec![21, 22, 23, 0, 0, 0];
@@ -87,6 +115,11 @@ fn main() {
     let nums2 = vec![32, 35, 36];
     let n = 3;
     let expected_out = vec![21, 22, 23, 32, 35, 36];
-    merge(&mut nums1, m, &nums2, n);
+    func(&mut nums1, m, &nums2, n);
     assert_eq!(nums1, expected_out);
+}
+
+fn main() {
+    //check_solution(merge);
+    check_solution(merge2);
 }
