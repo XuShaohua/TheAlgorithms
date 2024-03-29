@@ -5,6 +5,7 @@
 #include <assert.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include <stdbool.h>
 
 struct ListNode {
   int val;
@@ -46,6 +47,39 @@ struct ListNode* getIntersectionNode(struct ListNode* headA, struct ListNode* he
     headB = headB->next;
   }
   return NULL;
+}
+
+// Do not count length of list directly.
+// Walk through two rounds instead.
+struct ListNode* getIntersectionNode(struct ListNode* headA, struct ListNode* headB) {
+  if (headA == NULL || headB == NULL) {
+    return NULL;
+  }
+
+  struct ListNode* originHeadA = headA;
+  struct ListNode* originHeadB = headB;
+  bool is_a_end = false;
+  bool is_b_end = false;
+
+  while (headA != headB) {
+    headA = headA->next;
+    headB = headB->next;
+
+    if (headA == NULL && !is_a_end) {
+      headA = originHeadB;
+      is_a_end = true;
+    }
+
+    if (headB == NULL && !is_b_end) {
+      headB = originHeadA;
+      is_b_end = true;
+    }
+
+    if (headA == NULL || headB == NULL) {
+      return NULL;
+    }
+  }
+  return headA;
 }
 
 int main() {

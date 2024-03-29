@@ -71,9 +71,7 @@ pub fn merge2(nums1: &mut [i32], m: i32, nums2: &[i32], n: i32) {
     while j >= 0 {
         nums1[new_index] = nums2[j as usize];
         j -= 1;
-        if new_index > 0 {
-            new_index -= 1;
-        }
+        new_index = new_index.saturating_sub(1);
     }
 }
 
