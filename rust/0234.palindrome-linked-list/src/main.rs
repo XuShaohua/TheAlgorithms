@@ -31,15 +31,17 @@ impl ListNode {
     }
 }
 
-pub trait Next {
+pub trait ListLinkTrait {
     fn next(self) -> Self;
 
     fn is_empty(&self) -> bool;
 
     fn len(&self) -> usize;
+
+    fn value(&self) -> Option<i32>;
 }
 
-impl Next for Option<Box<ListNode>> {
+impl ListLinkTrait for Option<Box<ListNode>> {
     fn next(self) -> Self {
         match self {
             Some(boxed_self) => boxed_self.next,
@@ -57,8 +59,19 @@ impl Next for Option<Box<ListNode>> {
             None => 0,
         }
     }
+
+    fn value(&self) -> Option<i32> {
+        if let Some(ref head) = self {
+            Some(head.val)
+        } else {
+            None
+        }
+    }
 }
 
+pub type IsPalindromeFunc = fn(Option<Box<ListNode>>) -> bool;
+
+/// Use vector as cache, iterator through linked list and compare values.
 pub fn is_palindrome(head: Option<Box<ListNode>>) -> bool {
     let mut head = head;
     let len = head.len();
@@ -97,14 +110,57 @@ pub fn is_palindrome(head: Option<Box<ListNode>>) -> bool {
     true
 }
 
-fn check_solution() {
+/// Two pointers
+///
+/// Reverse left half of list and compare with right part.
+pub fn is_palindrome2(head: Option<Box<ListNode>>) -> bool {
+    if head.is_none() {
+        return false;
+    }
+
+    let len = head.len();
+
+    // 1. Reverse left half of list.
+    let mut head = head;
+    let mut index = 0;
+    let mut left_part = None;
+    while len / 2 != index {
+        left_part = Some(Box::new(ListNode {
+            val: head.value().unwrap(),
+            next: left_part,
+        }));
+        head = head.next();
+        index += 1;
+    }
+
+    if len % 2 == 1 {
+        head = head.next();
+    }
+
+    // 2. compare from middle
+    while head.is_some() {
+        if head.value() != left_part.value() {
+            return false;
+        }
+        head = head.next();
+        left_part = left_part.next();
+    }
+
+    true
+}
+
+fn check_solution(func: IsPalindromeFunc) {
     let l1 = ListNode::from_slice(&[1, 2, 2, 1]);
-    assert!(is_palindrome(l1));
+    assert!(func(l1));
 
     let l1 = ListNode::from_slice(&[1, 2]);
-    assert!(!is_palindrome(l1));
+    assert!(!func(l1));
+
+    let l1 = ListNode::from_slice(&[1, 2, 1]);
+    assert!(func(l1));
 }
 
 fn main() {
-    check_solution();
+    check_solution(is_palindrome);
+    check_solution(is_palindrome2);
 }
