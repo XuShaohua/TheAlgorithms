@@ -61,11 +61,7 @@ impl ListLinkTrait for Option<Box<ListNode>> {
     }
 
     fn value(&self) -> Option<i32> {
-        if let Some(ref head) = self {
-            Some(head.val)
-        } else {
-            None
-        }
+        self.as_ref().map(|head| head.val)
     }
 }
 
@@ -125,8 +121,10 @@ pub fn is_palindrome2(head: Option<Box<ListNode>>) -> bool {
     let mut index = 0;
     let mut left_part = None;
     while len / 2 != index {
+        let val = unsafe { head.value().unwrap_unchecked() };
         left_part = Some(Box::new(ListNode {
-            val: head.value().unwrap(),
+            val,
+            //val: head.value().unwrap(),
             next: left_part,
         }));
         head = head.next();
