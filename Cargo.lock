@@ -135,6 +135,10 @@ name = "lc-0665-non-decreasing-array"
 version = "0.1.0"
 
 [[package]]
+name = "lc-0925-long-pressed-name"
+version = "0.1.0"
+
+[[package]]
 name = "lc-1114-print-in-order"
 version = "0.1.0"
 
