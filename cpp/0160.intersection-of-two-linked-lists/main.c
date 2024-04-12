@@ -51,7 +51,7 @@ struct ListNode* getIntersectionNode(struct ListNode* headA, struct ListNode* he
 
 // Do not count length of list directly.
 // Walk through two rounds instead.
-struct ListNode* getIntersectionNode(struct ListNode* headA, struct ListNode* headB) {
+struct ListNode* getIntersectionNode2(struct ListNode* headA, struct ListNode* headB) {
   if (headA == NULL || headB == NULL) {
     return NULL;
   }
