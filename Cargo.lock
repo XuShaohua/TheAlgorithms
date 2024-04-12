@@ -67,6 +67,10 @@ name = "lc-0069-sqrtx"
 version = "0.1.0"
 
 [[package]]
+name = "lc-0075-sort-colors"
+version = "0.1.0"
+
+[[package]]
 name = "lc-0078-subsets"
 version = "0.1.0"
 
