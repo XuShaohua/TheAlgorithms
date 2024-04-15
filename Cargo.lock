@@ -171,5 +171,9 @@ name = "lc-1195-fizz-buzz-multithreaded"
 version = "0.1.0"
 
 [[package]]
+name = "lc-1446-consecutive-characters"
+version = "0.1.0"
+
+[[package]]
 name = "lc-704-binary-search"
 version = "0.1.0"
