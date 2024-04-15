@@ -13,13 +13,18 @@ pub fn solution1(nums: &[i32], target: i32) -> i32 {
 
     let mut low = 0;
     let mut high = nums.len() - 1;
-    while low + 1 < high {
+    while low <= high {
         let middle = low + (high - low) / 2;
-        //println!("low: {low}, high: {high}, middle: {middle}");
         match nums[middle].cmp(&target) {
-            Ordering::Less => low = middle,
+            Ordering::Less => low = middle + 1,
             Ordering::Equal => return middle as i32,
-            Ordering::Greater => high = middle,
+            Ordering::Greater => {
+                if middle < 1 {
+                    return -1;
+                } else {
+                    high = middle - 1;
+                }
+            }
         }
     }
     -1
@@ -34,6 +39,10 @@ fn main() {
     assert_eq!(solution1(nums, target), -1);
     let nums = &[];
     let target = 2;
+    assert_eq!(solution1(nums, target), -1);
+
+    let nums = &[5];
+    let target = -5;
     assert_eq!(solution1(nums, target), -1);
 }
 
