@@ -22,7 +22,6 @@ class Solution {
     int right = nums.size() - 1;
 
     while (left <= right) {
-      printf("left: %d, right: %d\n", left, right);
       int middle = left + (right - left) / 2;
       if (nums[middle] == target) {
         for (int i = middle; i >= 0 && nums[i] == target; --i) {
