@@ -19,6 +19,10 @@ name = "lc-0004-median-of-two-sorted-arrays"
 version = "0.1.0"
 
 [[package]]
+name = "lc-0005-longest-palindromic-substring"
+version = "0.1.0"
+
+[[package]]
 name = "lc-0011-container-with-most-water"
 version = "0.1.0"
 
@@ -124,6 +128,10 @@ version = "0.1.0"
 
 [[package]]
 name = "lc-0414-third-maximum-number"
+version = "0.1.0"
+
+[[package]]
+name = "lc-0485-max-consecutive-ones"
 version = "0.1.0"
 
 [[package]]
