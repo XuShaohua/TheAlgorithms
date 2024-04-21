@@ -3,14 +3,14 @@
 title = "数据结构与算法 Rust 语言实现"
 description = ""
 authors = ["Shaohua <shaohua@biofan.org>"]
-src = "book"
+src = "src"
 language = "zh-CN"
 
 [rust]
 edition = "2021"
 
 [build]
-build-dir = "book_out"
+build-dir = "book"
 create-missing = false
 
 [output.html]

@@ -29,7 +29,7 @@ pub fn selection_sort<T>(list: &mut [T])
 where
     T: PartialOrd,
 {
-    if list.is_empty() {
+    if list.len() < 2 {
         return;
     }
     let len = list.len();
