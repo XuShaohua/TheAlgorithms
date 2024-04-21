@@ -14,7 +14,7 @@ mod tests {
     use super::price_plus_tax;
     #[test]
     fn test_price_plus_tax() {
-        assert_eq!(price_plus_tax(100.0, 0.25), 125.0);
-        assert_eq!(price_plus_tax(125.50, 0.05), 131.775);
+        assert!((price_plus_tax(100.0, 0.25) - 125.0).abs() < f64::EPSILON);
+        assert!((price_plus_tax(125.50, 0.05) - 131.775).abs() < f64::EPSILON);
     }
 }

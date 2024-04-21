@@ -39,17 +39,20 @@ mod tests {
 
     #[test]
     fn test_present_value() {
-        assert_eq!(
-            present_value_round2(0.13, &[10.0, 20.70, -293.0, 297.0]),
-            4.69
+        assert!(
+            (present_value_round2(0.13, &[10.0, 20.70, -293.0, 297.0]) - 4.69).abs() < f64::EPSILON
         );
-        assert_eq!(
-            present_value_round2(0.07, &[-109_129.39, 30923.23, 15098.93, 29734.0, 39.0]),
-            -42739.63
+        assert!(
+            (present_value_round2(0.07, &[-109_129.39, 30923.23, 15098.93, 29734.0, 39.0])
+                + 42739.63)
+                .abs()
+                < f64::EPSILON
         );
-        assert_eq!(
-            present_value_round2(0.07, &[109_129.39, 30923.23, 15098.93, 29734.0, 39.0]),
-            175_519.15
+        assert!(
+            (present_value_round2(0.07, &[109_129.39, 30923.23, 15098.93, 29734.0, 39.0])
+                - 175_519.15)
+                .abs()
+                < f64::EPSILON
         );
     }
 }

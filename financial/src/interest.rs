@@ -56,30 +56,30 @@ mod tests {
 
     #[test]
     fn test_simple_interest() {
-        assert_eq!(simple_interest(18000.0, 0.06, 3.0), 3240.00);
-        assert_eq!(simple_interest(0.5, 0.06, 3.0), 0.09);
-        assert_eq!(simple_interest(18000.0, 0.01, 10.0), 1800.0);
-        assert_eq!(simple_interest(18000.0, 0.0, 3.0), 0.0);
-        assert_eq!(simple_interest(5500.0, 0.01, 100.0), 5500.0);
+        assert!((simple_interest(18000.0, 0.06, 3.0) - 3240.00).abs() < f64::EPSILON);
+        assert!((simple_interest(0.5, 0.06, 3.0) - 0.09).abs() < f64::EPSILON);
+        assert!((simple_interest(18000.0, 0.01, 10.0) - 1800.0).abs() < f64::EPSILON);
+        assert!((simple_interest(18000.0, 0.0, 3.0) - 0.0).abs() < f64::EPSILON);
+        assert!((simple_interest(5500.0, 0.01, 100.0) - 5500.0).abs() < f64::EPSILON);
     }
 
     #[test]
     fn test_compound_interest() {
-        assert_eq!(
-            compound_interest(10000.0, 0.05, 3.0),
-            1_576.250_000_000_001_4
+        assert!(
+            (compound_interest(10000.0, 0.05, 3.0) - 1_576.250_000_000_001_4).abs() < f64::EPSILON
         );
-        assert_eq!(
-            compound_interest(10000.0, 0.05, 1.0),
-            500.000_000_000_000_45
+        assert!(
+            (compound_interest(10000.0, 0.05, 1.0) - 500.000_000_000_000_45).abs() < f64::EPSILON
         );
-        assert_eq!(compound_interest(0.5, 0.05, 3.0), 0.078_812_500_000_000_06);
+        assert!(
+            (compound_interest(0.5, 0.05, 3.0) - 0.078_812_500_000_000_06).abs() < f64::EPSILON
+        );
     }
 
     #[test]
     fn test_apr_interest() {
-        assert_eq!(apr_interest(10000.0, 0.05, 3.0), 1_618.223_072_263_547);
-        assert_eq!(apr_interest(10000.0, 0.05, 1.0), 512.674_964_674_473_2);
-        assert_eq!(apr_interest(0.5, 0.05, 3.0), 0.080_911_153_613_177_36);
+        assert!((apr_interest(10000.0, 0.05, 3.0) - 1_618.223_072_263_547).abs() < f64::EPSILON);
+        assert!((apr_interest(10000.0, 0.05, 1.0) - 512.674_964_674_473_2).abs() < f64::EPSILON);
+        assert!((apr_interest(0.5, 0.05, 3.0) - 0.080_911_153_613_177_36).abs() < f64::EPSILON);
     }
 }

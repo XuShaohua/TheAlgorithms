@@ -41,13 +41,13 @@ mod tests {
 
     #[test]
     fn test_equated_monthly_installments() {
-        assert_eq!(
-            equated_monthly_installments(25000.0, 0.12, 3),
-            830.357_745_321_279_3
+        assert!(
+            (equated_monthly_installments(25000.0, 0.12, 3) - 830.357_745_321_279_3).abs()
+                < f64::EPSILON
         );
-        assert_eq!(
-            equated_monthly_installments(25000.0, 0.12, 10),
-            358.677_371_006_468_2
+        assert!(
+            (equated_monthly_installments(25000.0, 0.12, 10) - 358.677_371_006_468_2).abs()
+                < f64::EPSILON
         );
     }
 }
