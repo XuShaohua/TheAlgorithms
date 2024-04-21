@@ -33,16 +33,16 @@ mod tests {
 
     #[test]
     fn test_get_area() {
-        assert_eq!(get_area(25.0, 100.0), 4.0);
+        assert!((get_area(25.0, 100.0) - 4.0).abs() < f64::EPSILON);
     }
 
     #[test]
     fn test_get_stress() {
-        assert_eq!(get_stress(200.0, 1600.0), 8.0);
+        assert!((get_stress(200.0, 1600.0) - 8.0).abs() < f64::EPSILON);
     }
 
     #[test]
     fn test_get_tangential_force() {
-        assert_eq!(get_tangential_force(1200.0, 1000.0), 1_200_000.0);
+        assert!((get_tangential_force(1200.0, 1000.0) - 1_200_000.0).abs() < f64::EPSILON);
     }
 }

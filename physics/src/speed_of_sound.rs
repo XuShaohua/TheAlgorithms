@@ -29,13 +29,13 @@ mod tests {
 
     #[test]
     fn test_speed_in_fluid() {
-        assert_eq!(
-            speed_in_fluid(998.0, 2.15 * 10.0_f64.powi(9)),
-            1_467.756_320_795_270_5
+        assert!(
+            (speed_in_fluid(998.0, 2.15 * 10.0_f64.powi(9)) - 1_467.756_320_795_270_5).abs()
+                < f64::EPSILON
         );
-        assert_eq!(
-            speed_in_fluid(13600.0, 28.5 * 10.0_f64.powi(9)),
-            1_447.614_670_861_731
+        assert!(
+            (speed_in_fluid(13600.0, 28.5 * 10.0_f64.powi(9)) - 1_447.614_670_861_731).abs()
+                < f64::EPSILON
         );
     }
 }

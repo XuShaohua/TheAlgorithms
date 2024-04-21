@@ -32,7 +32,7 @@ mod tests {
             (20.0, 100.0, 19613.3),
         ];
         for (mass, height, result) in PAIRS {
-            assert_eq!(potential_energy(*mass, *height), *result);
+            assert!((potential_energy(*mass, *height) - result).abs() < f64::EPSILON);
         }
     }
 }

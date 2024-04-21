@@ -56,19 +56,19 @@ mod tests {
 
     #[test]
     fn test_horizontal_distance() {
-        assert_eq!(horizontal_distance(30.0, 45.0).round2(), 91.77);
-        assert_eq!(horizontal_distance(100.0, 78.0).round2(), 414.76);
+        assert!((horizontal_distance(30.0, 45.0).round2() - 91.77).abs() < f64::EPSILON);
+        assert!((horizontal_distance(100.0, 78.0).round2() - 414.76).abs() < f64::EPSILON);
     }
 
     #[test]
     fn test_max_height() {
-        assert_eq!(max_height(30.0, 45.0).round2(), 22.94);
-        assert_eq!(max_height(100.0, 78.0).round2(), 487.82);
+        assert!((max_height(30.0, 45.0).round2() - 22.94).abs() < f64::EPSILON);
+        assert!((max_height(100.0, 78.0).round2() - 487.82).abs() < f64::EPSILON);
     }
 
     #[test]
     fn test_total_time() {
-        assert_eq!(total_time(30.0, 45.0).round2(), 4.33);
-        assert_eq!(total_time(100.0, 78.0).round2(), 19.95);
+        assert!((total_time(30.0, 45.0).round2() - 4.33).abs() < f64::EPSILON);
+        assert!((total_time(100.0, 78.0).round2() - 19.95).abs() < f64::EPSILON);
     }
 }

@@ -19,7 +19,7 @@ mod tests {
 
     #[test]
     fn test_newtons_second_law_of_motion() {
-        assert_eq!(newtons_second_law_of_motion(10.0, 10.0), 100.0);
-        assert_eq!(newtons_second_law_of_motion(2.0, 1.0), 2.0);
+        assert!((newtons_second_law_of_motion(10.0, 10.0) - 100.0).abs() < f64::EPSILON);
+        assert!((newtons_second_law_of_motion(2.0, 1.0) - 2.0).abs() < f64::EPSILON);
     }
 }

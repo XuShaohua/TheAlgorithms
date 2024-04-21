@@ -59,18 +59,18 @@ mod tests {
 
     #[test]
     fn test_beta() {
-        assert_eq!(beta(C), 1.0);
-        assert_eq!(beta(199_792_458.0), 0.666_435_904_801_848);
-        assert_eq!(beta(1e5), 0.000_333_564_095_198_152_05);
+        assert!((beta(C) - 1.0).abs() < f64::EPSILON);
+        assert!((beta(199_792_458.0) - 0.666_435_904_801_848).abs() < f64::EPSILON);
+        assert!((beta(1e5) - 0.000_333_564_095_198_152_05).abs() < f64::EPSILON);
     }
 
     #[test]
     fn test_gamma() {
-        assert_eq!(gamma(4.0), 1.000_000_000_000_000_2);
-        assert_eq!(gamma(1e5), 1.000_000_055_632_507_5);
-        assert_eq!(gamma(3e7), 1.005_044_845_777_813);
-        assert_eq!(gamma(2.8e8), 2.798_559_572_231_827_7);
-        assert_eq!(gamma(299_792_451.0), 4_627.499_026_694_95);
+        assert!((gamma(4.0) - 1.000_000_000_000_000_2).abs() < f64::EPSILON);
+        assert!((gamma(1e5) - 1.000_000_055_632_507_5).abs() < f64::EPSILON);
+        assert!((gamma(3e7) - 1.005_044_845_777_813).abs() < f64::EPSILON);
+        assert!((gamma(2.8e8) - 2.798_559_572_231_827_7).abs() < f64::EPSILON);
+        assert!((gamma(299_792_451.0) - 4_627.499_026_694_95).abs() < f64::EPSILON);
     }
 
     #[test]
@@ -125,6 +125,7 @@ mod tests {
     }
 
     #[test]
+    #[allow(clippy::float_cmp)]
     fn test_transform() {
         assert_eq!(
             transform(29_979_245.0, &mut [1.0, 2.0, 3.0, 4.0]),

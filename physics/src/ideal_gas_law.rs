@@ -31,13 +31,13 @@ mod tests {
 
     #[test]
     fn test_pressure_of_gas_system() {
-        assert_eq!(pressure_of_gas_system(2.0, 100.0, 5.0), 332.57848);
-        assert_eq!(pressure_of_gas_system(0.5, 273.0, 0.004), 283_731.015_75);
+        assert!((pressure_of_gas_system(2.0, 100.0, 5.0) - 332.57848).abs() < f64::EPSILON);
+        assert!((pressure_of_gas_system(0.5, 273.0, 0.004) - 283_731.015_75).abs() < f64::EPSILON);
     }
 
     #[test]
     fn test_volume_of_gas_system() {
-        assert_eq!(volume_of_gas_system(2.0, 100.0, 5.0), 332.57848);
-        assert_eq!(volume_of_gas_system(0.5, 273.0, 0.004), 283_731.015_75);
+        assert!((volume_of_gas_system(2.0, 100.0, 5.0) - 332.57848).abs() < f64::EPSILON);
+        assert!((volume_of_gas_system(0.5, 273.0, 0.004) - 283_731.015_75).abs() < f64::EPSILON);
     }
 }

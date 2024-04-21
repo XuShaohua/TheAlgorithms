@@ -24,7 +24,7 @@ mod tests {
 
     #[test]
     fn test_archimedes_principle() {
-        assert_eq!(archimedes_principle(997.0, 0.5, 9.8), 4885.3);
-        assert_eq!(archimedes_principle(997.0, 0.7, G), 6_844.061_035);
+        assert!((archimedes_principle(997.0, 0.5, 9.8) - 4885.3).abs() < f64::EPSILON);
+        assert!((archimedes_principle(997.0, 0.7, G) - 6_844.061_035).abs() < f64::EPSILON);
     }
 }

@@ -32,7 +32,7 @@ mod tests {
         ];
 
         for (mass, velocity, result) in PAIRS {
-            assert_eq!(kinetic_energy(*mass, *velocity), *result);
+            assert!((kinetic_energy(*mass, *velocity) - result).abs() < f64::EPSILON);
         }
     }
 }

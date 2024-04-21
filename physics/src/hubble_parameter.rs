@@ -30,6 +30,6 @@ mod tests {
 
     #[test]
     fn test_hubble_parameter() {
-        assert_eq!(hubble_parameter(68.3, 1e-4, 0.3, 0.7, 0.0), 68.3);
+        assert!((hubble_parameter(68.3, 1e-4, 0.3, 0.7, 0.0) - 68.3).abs() < f64::EPSILON);
     }
 }

@@ -30,7 +30,7 @@ mod tests {
         for (initial_intensity, angle, result) in PAIRS {
             let intensity = malus_law(*initial_intensity, *angle);
             let round_intensity = (intensity * 10.0).round() / 10.0;
-            assert_eq!(round_intensity, *result);
+            assert!((round_intensity - result).abs() < f64::EPSILON);
         }
     }
 }

@@ -68,32 +68,33 @@ mod tests {
 
     #[test]
     fn test_effusion_ratio() {
-        assert_eq!(effusion_ratio(2.016, 4.002).round6(), 1.408_943);
+        assert!((effusion_ratio(2.016, 4.002).round6() - 1.408_943).abs() < f64::EPSILON);
     }
 
     #[test]
     fn test_first_effusion_rate() {
-        assert_eq!(first_effusion_rate(1.0, 2.016, 4.002).round6(), 1.408_943);
+        assert!((first_effusion_rate(1.0, 2.016, 4.002).round6() - 1.408_943).abs() < f64::EPSILON);
     }
 
     #[test]
     fn test_second_effusion_rate() {
-        assert_eq!(second_effusion_rate(1.0, 2.016, 4.002).round6(), 0.709_752);
+        assert!(
+            (second_effusion_rate(1.0, 2.016, 4.002).round6() - 0.709_752).abs() < f64::EPSILON
+        );
     }
 
     #[test]
     fn test_first_molar_mass() {
-        assert_eq!(
-            first_molar_mass(2.0, 1.408_943, 0.709_752).round6(),
-            0.507_524
+        assert!(
+            (first_molar_mass(2.0, 1.408_943, 0.709_752).round6() - 0.507_524).abs() < f64::EPSILON
         );
     }
 
     #[test]
     fn test_second_molar_mass() {
-        assert_eq!(
-            second_molar_mass(2.0, 1.408_943, 0.709_752).round6(),
-            1.970_351
+        assert!(
+            (second_molar_mass(2.0, 1.408_943, 0.709_752).round6() - 1.970_351).abs()
+                < f64::EPSILON
         );
     }
 }

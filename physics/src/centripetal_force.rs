@@ -31,7 +31,7 @@ mod tests {
         for (mass, velocity, radius, result) in PAIRS {
             let cent = centripetal(*mass, *velocity, *radius);
             let cent_rounded = (cent * 100.0).round() / 100.0;
-            assert_eq!(cent_rounded, *result);
+            assert!((cent_rounded - result).abs() < f64::EPSILON);
         }
     }
 }
