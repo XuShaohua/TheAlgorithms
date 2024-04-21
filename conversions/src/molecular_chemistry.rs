@@ -71,25 +71,25 @@ mod tests {
 
     #[test]
     fn test_molarity_to_normality() {
-        assert_eq!(molarity_to_normality(2, 3.1, 0.31), 20.0);
-        assert_eq!(molarity_to_normality(4, 11.4, 5.7), 8.0);
+        assert!((molarity_to_normality(2, 3.1, 0.31) - 20.0).abs() < f64::EPSILON);
+        assert!((molarity_to_normality(4, 11.4, 5.7) - 8.0).abs() < f64::EPSILON);
     }
 
     #[test]
     fn test_moles_to_pressure() {
-        assert_eq!(moles_to_pressure(0.82, 3.0, 300.0), 90.0);
-        assert_eq!(moles_to_pressure(8.2, 5.0, 200.0), 10.0);
+        assert!((moles_to_pressure(0.82, 3.0, 300.0) - 90.0).abs() < f64::EPSILON);
+        assert!((moles_to_pressure(8.2, 5.0, 200.0) - 10.0).abs() < f64::EPSILON);
     }
 
     #[test]
     fn test_moles_to_volume() {
-        assert_eq!(moles_to_volume(0.82, 3.0, 300.0), 90.0);
-        assert_eq!(moles_to_volume(8.2, 5.0, 200.0), 10.0);
+        assert!((moles_to_volume(0.82, 3.0, 300.0) - 90.0).abs() < f64::EPSILON);
+        assert!((moles_to_volume(8.2, 5.0, 200.0) - 10.0).abs() < f64::EPSILON);
     }
 
     #[test]
     fn test_pressure_and_volume_to_temperature() {
-        assert_eq!(pressure_and_volume_to_temperature(0.82, 1.0, 2.0), 20.0);
-        assert_eq!(pressure_and_volume_to_temperature(8.2, 5.0, 3.0), 60.0);
+        assert!((pressure_and_volume_to_temperature(0.82, 1.0, 2.0) - 20.0).abs() < f64::EPSILON);
+        assert!((pressure_and_volume_to_temperature(8.2, 5.0, 3.0) - 60.0).abs() < f64::EPSILON);
     }
 }

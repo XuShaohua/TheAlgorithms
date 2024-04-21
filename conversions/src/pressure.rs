@@ -75,7 +75,9 @@ mod tests {
             (1.0, Unit::Torr, Unit::Psi, 0.019_336_718_261_000_002),
         ];
         for (val, from_unit, to_unit, to_val) in PAIRS {
-            assert_eq!(pressure_conversion(*val, *from_unit, *to_unit), *to_val);
+            assert!(
+                (pressure_conversion(*val, *from_unit, *to_unit) - to_val).abs() < f64::EPSILON
+            );
         }
     }
 }

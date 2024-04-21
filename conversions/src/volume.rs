@@ -61,7 +61,9 @@ mod tests {
             (1.0, Unit::Cup, Unit::KiloLitre, 0.000_236_588),
         ];
         for (value, from_type, to_type, to_value) in PAIRS {
-            assert_eq!(volume_conversion(*value, *from_type, *to_type), *to_value);
+            assert!(
+                (volume_conversion(*value, *from_type, *to_type) - to_value).abs() < f64::EPSILON
+            );
         }
     }
 }

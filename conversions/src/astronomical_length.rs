@@ -78,7 +78,7 @@ mod tests {
             (1.0, Unit::Yottameter, Unit::Zettameter, 1000.0),
         ];
         for (val, from_type, to_type, to_val) in PAIRS {
-            assert_eq!(length_conversion(*val, *from_type, *to_type), *to_val);
+            assert!((length_conversion(*val, *from_type, *to_type) - to_val).abs() < f64::EPSILON);
         }
     }
 }

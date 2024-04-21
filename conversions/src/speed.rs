@@ -66,7 +66,7 @@ mod tests {
         ];
 
         for (value, unit_from, unit_to, value_to) in PAIRS {
-            assert_eq!(convert_speed(*value, *unit_from, *unit_to), *value_to);
+            assert!((convert_speed(*value, *unit_from, *unit_to) - value_to).abs() < f64::EPSILON);
         }
     }
 }

@@ -138,7 +138,9 @@ mod tests {
         ];
 
         for (value, unit_from, unit_to, to_value) in PAIRS {
-            assert_eq!(energy_conversion(*value, *unit_from, *unit_to), *to_value);
+            assert!(
+                (energy_conversion(*value, *unit_from, *unit_to) - to_value).abs() < f64::EPSILON
+            );
         }
     }
 }

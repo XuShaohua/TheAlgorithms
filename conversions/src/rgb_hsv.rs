@@ -100,6 +100,7 @@ mod tests {
     use super::{approximately_equal_hsv, hsv_to_rgb, rgb_to_hsv};
 
     #[test]
+    #[allow(clippy::type_complexity)]
     fn test_hsv_to_rgb() {
         const PAIRS: &[((f64, f64, f64), (u8, u8, u8))] = &[
             ((0.0, 0.0, 0.0), (0, 0, 0)),
@@ -119,6 +120,7 @@ mod tests {
     }
 
     #[test]
+    #[allow(clippy::type_complexity)]
     fn test_rgb_to_hsvg() {
         const PAIRS: &[((u8, u8, u8), (f64, f64, f64))] = &[
             ((0, 0, 0), (0.0, 0.0, 0.0)),

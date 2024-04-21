@@ -78,7 +78,7 @@ mod tests {
         ];
 
         for (val, from_unit, to_unit, to_val) in PAIRS {
-            assert_eq!(length_conversion(*val, *from_unit, *to_unit), *to_val);
+            assert!((length_conversion(*val, *from_unit, *to_unit) - to_val).abs() < f64::EPSILON);
         }
     }
 }

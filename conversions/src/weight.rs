@@ -76,6 +76,7 @@ mod tests {
     use super::{weight_conversion, Unit};
 
     #[test]
+    #[allow(clippy::too_many_lines)]
     fn test_weight_conversion() {
         const PAIRS: &[(Unit, Unit, f64, f64)] = &[
             (Unit::Kilogram, Unit::Kilogram, 4.0, 4.0),
@@ -256,7 +257,7 @@ mod tests {
             ),
         ];
         for (from_type, to_type, val, to_val) in PAIRS {
-            assert_eq!(weight_conversion(*val, *from_type, *to_type), *to_val);
+            assert!((weight_conversion(*val, *from_type, *to_type) - to_val).abs() < f64::EPSILON);
         }
     }
 }
