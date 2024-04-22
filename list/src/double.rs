@@ -264,7 +264,9 @@ mod tests {
         let mut list = DoublyLinkedList::new();
         list.push_back(5);
         list.push_back(7);
-        list.back_mut().map(|mut value| *value = 11);
+        if let Some(mut value) = list.back_mut() {
+            *value = 11;
+        }
         assert_eq!(list.back(), Some(&11));
     }
 

@@ -275,7 +275,9 @@ mod tests {
         let mut list = LinkedListV1::new();
         list.push(5);
         list.push(7);
-        list.head_mut().map(|value| *value = 11);
+        if let Some(value) = list.head_mut() {
+            *value = 11;
+        }
         // Option::replace() will not work, as it requires `&mut Option<T>`.
         // list.head_mut().replace(11);
         assert_eq!(list.head(), Some(&11));
