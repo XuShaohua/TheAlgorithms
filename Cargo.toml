@@ -8,8 +8,6 @@ members = [
   "conversions",
   "data_structures",
   "electronics",
-  "financial",
-  "geodesy",
   "math",
   "physics",
   "searches",
