@@ -3,7 +3,7 @@
 resolver = "2"
 
 members = [
-  "bit_manipulation",
+  "bitwise",
   "conversions",
   "deque",
   "graph",

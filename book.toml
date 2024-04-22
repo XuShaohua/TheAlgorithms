@@ -1,6 +1,6 @@
 
 [book]
-title = "数据结构与算法 Rust 语言实现"
+title = "数据结构与算法 - Rust 语言实现"
 description = ""
 authors = ["Shaohua <shaohua@biofan.org>"]
 src = "src"
@@ -19,6 +19,7 @@ git-repository-url = "https://github.com/xushaohua/TheAlgorithms"
 [output.html.playground]
 copy-js = true
 editable = true
+line-numbers = true
 
 [output.html.fold]
 enable = true

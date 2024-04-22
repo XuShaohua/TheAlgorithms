@@ -2,9 +2,7 @@
 // Use of this source is governed by General Public License that can be found
 // in the LICENSE file.
 
-use bit_manipulation::count_number_of_one_bits::{
-    brian_kernighans_algorithm, builtin, modulo_operator,
-};
+use bitwise::count_number_of_one_bits::{brian_kernighans_algorithm, builtin, modulo_operator};
 use criterion::{black_box, criterion_group, criterion_main, Criterion};
 
 pub fn brian_bench(c: &mut Criterion) {

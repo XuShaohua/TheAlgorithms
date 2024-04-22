@@ -2,7 +2,7 @@
 // Use of this source is governed by General Public License that can be found
 // in the LICENSE file.
 
-use bit_manipulation::binary_count_trailing_zeros::{builtin, count_trailing_zeros};
+use bitwise::binary_count_trailing_zeros::{builtin, count_trailing_zeros};
 use criterion::{black_box, criterion_group, criterion_main, Criterion};
 
 pub fn brute_force_bench(c: &mut Criterion) {
