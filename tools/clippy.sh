@@ -3,14 +3,4 @@
 # Use of this source is governed by General Public License that can be found
 # in the LICENSE file.
 
-# Make sure each commit is linted
-# Install this script to `.git/hooks/pre-commit`
-
-set -xe
-
-
-cargo clippy --all-targets
-#cargo fmt --all
-
-mdbook build
-#mdbook test
+cargo clippy --all-targets --all-features --fix --allow-dirty --allow-staged
