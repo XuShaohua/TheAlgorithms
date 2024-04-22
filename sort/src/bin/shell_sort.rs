@@ -2,15 +2,15 @@
 // Use of this source is governed by General Public License that can be found
 // in the LICENSE file.
 
-use sorts::merge_sort;
-use sorts::util::{is_sorted, read_ints, show_brief};
+use sort::shell_sort;
+use sort::util::{is_sorted, read_ints, show_brief};
 
 fn main() {
     let mut list = read_ints();
-    println!("[MergeSort] list");
+    println!("[ShellSort] LIST:");
     show_brief(&list);
-    merge_sort(&mut list);
-    println!("Result:");
-    show_brief(&list);
+    shell_sort(&mut list);
+    println!("RESULT:");
     assert!(is_sorted(&list));
+    show_brief(&list);
 }

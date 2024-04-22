@@ -15,9 +15,9 @@ enum SortVariant {
 fn time_sort(array: &mut [f64], variant: SortVariant) -> u128 {
     let instance = Instant::now();
     match variant {
-        SortVariant::Insertion => sorts::insertion_sort(array),
-        SortVariant::Selection => sorts::selection_sort(array),
-        SortVariant::Shell => sorts::shell_sort(array),
+        SortVariant::Insertion => sort::insertion_sort(array),
+        SortVariant::Selection => sort::selection_sort(array),
+        SortVariant::Shell => sort::shell_sort(array),
     }
     instance.elapsed().as_nanos()
 }

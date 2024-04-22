@@ -5,10 +5,18 @@ resolver = "2"
 members = [
   "bit_manipulation",
   "conversions",
-  "data_structures",
-  "searches",
-  "sorts",
-  "graphs",
+  "deque",
+  "graph",
+  "hash_table",
+  "list",
+  "priority_queue",
+  "queue",
+  "search",
+  "sort",
+  "stack",
+  "string",
+  "tree",
+  "vector",
 ]
 
 [profile.release]
