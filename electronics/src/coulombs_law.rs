@@ -57,16 +57,18 @@ mod tests {
 
     #[test]
     fn test_get_force() {
-        assert_eq!(get_force(3.0, 5.0, 2000.0), 33705.0);
+        assert!((get_force(3.0, 5.0, 2000.0) - 33705.0).abs() < f64::EPSILON);
     }
 
     #[test]
     fn test_get_distance() {
-        assert_eq!(get_distance(10.0, 3.0, 5.0), 116_112.014_882_181_77);
+        assert!((get_distance(10.0, 3.0, 5.0) - 116_112.014_882_181_77).abs() < f64::EPSILON);
     }
 
     #[test]
     fn test_get_charge1() {
-        assert_eq!(get_charge1(10.0, 5.0, 2000.0), 0.000_890_075_656_430_796_6);
+        assert!(
+            (get_charge1(10.0, 5.0, 2000.0) - 0.000_890_075_656_430_796_6).abs() < f64::EPSILON
+        );
     }
 }

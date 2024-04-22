@@ -36,16 +36,16 @@ mod tests {
 
     #[test]
     fn test_get_electron_conc() {
-        assert_eq!(get_electron_conc(1600.0, 200.0), 25.0);
+        assert!((get_electron_conc(1600.0, 200.0) - 25.0).abs() < f64::EPSILON);
     }
 
     #[test]
     fn test_get_hole_conc() {
-        assert_eq!(get_hole_conc(1000.0, 1200.0), 1440.0);
+        assert!((get_hole_conc(1000.0, 1200.0) - 1440.0).abs() < f64::EPSILON);
     }
 
     #[test]
     fn test_get_intrinsic_conc() {
-        assert_eq!(get_intrinsic_conc(25.0, 100.0), 50.0);
+        assert!((get_intrinsic_conc(25.0, 100.0) - 50.0).abs() < f64::EPSILON);
     }
 }

@@ -29,16 +29,16 @@ mod tests {
 
     #[test]
     fn test_get_resistance() {
-        assert_eq!(get_resistance(4.0, 5.0), 3.0);
+        assert!((get_resistance(4.0, 5.0) - 3.0).abs() < f64::EPSILON);
     }
 
     #[test]
     fn test_get_reactance() {
-        assert_eq!(get_reactance(4.0, 5.0), 3.0);
+        assert!((get_reactance(4.0, 5.0) - 3.0).abs() < f64::EPSILON);
     }
 
     #[test]
     fn test_get_impedance() {
-        assert_eq!(get_impedance(3.0, 4.0), 5.0);
+        assert!((get_impedance(3.0, 4.0) - 5.0).abs() < f64::EPSILON);
     }
 }
