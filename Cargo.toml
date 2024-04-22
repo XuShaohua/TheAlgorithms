@@ -7,7 +7,6 @@ members = [
   "boolean_gates",
   "conversions",
   "data_structures",
-  "electronics",
   "math",
   "physics",
   "searches",
