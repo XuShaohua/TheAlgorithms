@@ -4,11 +4,8 @@ resolver = "2"
 
 members = [
   "bit_manipulation",
-  "boolean_gates",
   "conversions",
   "data_structures",
-  "math",
-  "physics",
   "searches",
   "sorts",
   "graphs",
