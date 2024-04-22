@@ -1,7 +1,4 @@
 
-# About
+# 第三部分: 所有问题的列表
 
-List all problems of leetcode.
-
-## Related projects
-- [Leetcode solutions](https://leetcode.ca/)
+开出所有 leetcode 问题.
