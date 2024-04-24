@@ -12,6 +12,7 @@ edition = "2021"
 [build]
 build-dir = "book"
 create-missing = false
+extra-watch-dirs = []
 
 [output.html]
 git-repository-url = "https://github.com/xushaohua/leetcode"
