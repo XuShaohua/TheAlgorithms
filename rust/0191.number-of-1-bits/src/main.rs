@@ -15,48 +15,54 @@ fn solution1(n: u32) -> i32 {
 }
 
 fn solution2(n: u32) -> i32 {
+    let mut count = 0;
+    for i in 0..32 {
+        if n >> i & 1 == 1 {
+            count += 1;
+        }
+    }
+    count
+}
+
+fn solution3(n: u32) -> i32 {
     n.count_ones() as i32
 }
 
-fn main() {
+type SolutionFn = fn(u32) -> i32;
+
+fn check_solution(func: SolutionFn) {
     let n = 0b00000000000000000000000000001011;
-    assert_eq!(solution1(n), 3);
+    assert_eq!(func(n), 3);
 
     let n = 0b00000000000000000000000010000000;
-    assert_eq!(solution1(n), 1);
+    assert_eq!(func(n), 1);
 
     let n = 0b11111111111111111111111111111101;
-    assert_eq!(solution1(n), 31);
+    assert_eq!(func(n), 31);
+}
 
-    let n = 0b11111111111111111111111111111101;
-    assert_eq!(solution2(n), 31);
+fn main() {
+    check_solution(solution1);
+    check_solution(solution2);
+    check_solution(solution3);
 }
 
 #[cfg(test)]
 mod tests {
-    use super::{solution1, solution2};
+    use super::{check_solution, solution1, solution2, solution3};
 
     #[test]
     fn test_solution1() {
-        let n = 0b00000000000000000000000000001011;
-        assert_eq!(solution1(n), 3);
-
-        let n = 0b00000000000000000000000010000000;
-        assert_eq!(solution1(n), 1);
-
-        let n = 0b11111111111111111111111111111101;
-        assert_eq!(solution1(n), 31);
+        check_solution(solution1);
     }
 
     #[test]
     fn test_solution2() {
-        let n = 0b00000000000000000000000000001011;
-        assert_eq!(solution2(n), 3);
+        check_solution(solution2);
+    }
 
-        let n = 0b00000000000000000000000010000000;
-        assert_eq!(solution2(n), 1);
-
-        let n = 0b11111111111111111111111111111101;
-        assert_eq!(solution2(n), 31);
+    #[test]
+    fn test_solution3() {
+        check_solution(solution3);
     }
 }

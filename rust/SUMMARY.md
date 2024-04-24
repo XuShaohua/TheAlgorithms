@@ -4,7 +4,7 @@
 
 - [第一部分: 问题分类与标签](tags/index.md)
 - [数组 Array](tags/array.md)
-- [回溯算法 Backtrack](tags/backtrack.md)
+- [回溯算法 Backtracking](tags/backtracking.md)
 - [二分查找 Binary Search](tags/binary-search.md)
 - [位操作 Bit Manipulation](tags/bit-manipulation.md)
 - [深度优先搜寻与广度优先搜索](tags/dfs-bfs.md)
@@ -18,8 +18,4 @@
 - [树 Tree](tags/tree.md)
 - [双指针 Two Pointers](tags/two-pointers.md)
 - [第二部分: 所有问题的答案](solutions.md)
-    - [0001. Two Sum](0001.two-sum/README.md)
-    - [0191. Number of 1 Bits](0191.number-of-1-bits/README.md)
 - [第三部分: 所有问题](problems/README.md)
-    - [0001. Two Sum](problems/0001.two-sum/content.html)
-    - [0191. Number of 1 Bits](problems/0191.number-of-1-bits/content.html)

@@ -25,6 +25,5 @@
 
 ## 中级
 
-- [11. 盛最多水的容器](https://leetcode.com/problems/container-with-most-water)
 - [1423. 可获得的最大点数](https://leetcode.com/problems/maximum-points-you-can-obtain-from-cards)
 - [1497.检查数组对是否可以被 k 整除](https://leetcode.com/problems/check-if-array-pairs-are-divisible-by-k)
