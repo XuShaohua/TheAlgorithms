@@ -2,10 +2,8 @@
 // Use of this source is governed by General Public License that can be
 // found in the LICENSE file.
 
-//! Problem: [Number of 1 bits](https://leetcode.com/problems/number-of-1-bits)
-
-fn solution1(n: u32) -> i32 {
-    let mut n = n;
+pub fn solution1(n: i32) -> i32 {
+    let mut n = n as u32;
     let mut count = 0;
     while n != 0 {
         count += n % 2;
@@ -14,7 +12,7 @@ fn solution1(n: u32) -> i32 {
     count as i32
 }
 
-fn solution2(n: u32) -> i32 {
+pub fn solution2(n: i32) -> i32 {
     let mut count = 0;
     for i in 0..32 {
         if n >> i & 1 == 1 {
@@ -24,12 +22,25 @@ fn solution2(n: u32) -> i32 {
     count
 }
 
-fn solution3(n: u32) -> i32 {
+pub fn solution3(n: i32) -> i32 {
+    let mut count = 0;
+    for i in 0..32 {
+        count += n >> i & 1;
+    }
+    count
+}
+
+pub fn solution4(n: i32) -> i32 {
+    (0..32).map(|i| n >> i & 1).sum()
+}
+
+pub fn solution_best(n: i32) -> i32 {
     n.count_ones() as i32
 }
 
-type SolutionFn = fn(u32) -> i32;
+type SolutionFn = fn(i32) -> i32;
 
+#[allow(overflowing_literals)]
 fn check_solution(func: SolutionFn) {
     let n = 0b00000000000000000000000000001011;
     assert_eq!(func(n), 3);
@@ -45,6 +56,8 @@ fn main() {
     check_solution(solution1);
     check_solution(solution2);
     check_solution(solution3);
+    check_solution(solution4);
+    check_solution(solution_best);
 }
 
 #[cfg(test)]
