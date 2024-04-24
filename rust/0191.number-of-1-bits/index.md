@@ -19,19 +19,11 @@
 想明白了上面的过程, 代码就比较容易了.
 
 ```rust
-pub fn solution3(n: u32) -> i32 {
-    let mut count = 0;
-    for i in 0..32 {
-        count += n >> i & 1;
-    }
-    count as i32
-}
+{{#include src/main.rs:25:31 }}
 ```
 
 或者使用函数式风格的写法:
 
 ```rust
-pub fn solution4(n: u32) -> i32 {
-    (0..32).map(|i| n >> i & 1).sum::<u32>() as i32
-}
+{{#include src/main.rs:33:35 }}
 ```

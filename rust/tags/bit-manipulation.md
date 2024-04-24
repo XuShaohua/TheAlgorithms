@@ -2,7 +2,7 @@
 
 ## 简单
 
-- [0191. Number of 1 Bits](../0191.number-of-1-bits/README.md)
+- [0191. Number of 1 Bits](../0191.number-of-1-bits/index.md)
 
 ## 中等
 

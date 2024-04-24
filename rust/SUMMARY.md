@@ -18,4 +18,6 @@
 - [树 Tree](tags/tree.md)
 - [双指针 Two Pointers](tags/two-pointers.md)
 - [第二部分: 所有问题的答案](solutions.md)
-- [第三部分: 所有问题](problems/README.md)
+    - [0001. Two Sum](0001.two-sum/index.md)
+    - [0191. Number of 1 Bits](0191.number-of-1-bits/index.md)
+- [第三部分: 所有问题](problems/index.md)
