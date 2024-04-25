@@ -1,5 +1,7 @@
 # 0191. Number of 1 Bits
 
+[问题描述](../problems/0191.number-of-1-bits/content.html)
+
 这个题目考察位操作的.
 
 先考虑比特位操作的函数表:
