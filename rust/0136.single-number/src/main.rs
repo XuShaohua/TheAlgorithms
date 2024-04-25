@@ -11,6 +11,17 @@ pub fn single_number(nums: Vec<i32>) -> i32 {
     ans
 }
 
+pub fn single_number2(nums: Vec<i32>) -> i32 {
+    const DIGIT_LEN: usize = 32;
+
+    let mut ans = 0;
+    for i in 0..DIGIT_LEN {
+        let sum = nums.iter().map(|num| num >> i & 1).sum::<i32>();
+        ans |= (sum % 2) << i;
+    }
+    ans
+}
+
 pub type SolutionFn = fn(Vec<i32>) -> i32;
 
 fn check_solution(func: SolutionFn) {
@@ -26,14 +37,20 @@ fn check_solution(func: SolutionFn) {
 
 fn main() {
     check_solution(single_number);
+    check_solution(single_number2);
 }
 
 #[cfg(test)]
 mod tests {
-    use super::{check_solution, single_number};
+    use super::{check_solution, single_number, single_number2};
 
     #[test]
     fn test_single_number1() {
         check_solution(single_number);
+    }
+
+    #[test]
+    fn test_single_number2() {
+        check_solution(single_number2);
     }
 }
