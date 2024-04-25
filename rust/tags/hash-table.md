@@ -2,6 +2,7 @@
 
 ## 容易
 
+- [0001. 两数之和 Two Sum](../0001.two-sum/index.md)
 - [202.快乐数](https://leetcode.com/problems/happy-number)
 - [204. 计数质数](https://leetcode.com/problems/count-primes)
 - [205. 同构字符串](https://leetcode.com/problems/isomorphic-strings)
