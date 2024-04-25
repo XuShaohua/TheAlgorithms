@@ -22,6 +22,7 @@ pub fn contains_duplicate(nums: Vec<i32>) -> bool {
 pub fn contains_duplicate2(nums: Vec<i32>) -> bool {
     assert!(!nums.is_empty());
     let mut nums = nums;
+    // 先排序
     nums.sort();
     let len = nums.len();
     for i in 0..(len - 1) {
@@ -37,21 +38,18 @@ pub fn contains_duplicate3(nums: Vec<i32>) -> bool {
     if nums.len() < 2 {
         return false;
     }
-    let mut cache = HashSet::new();
+    let mut cache = HashSet::with_capacity(nums.len());
     for &num in nums.iter() {
-        if cache.contains(&num) {
+        // 如果 insert() 返回 false, 就说明 cache 之前已经包含 num 了; 说明 num 是重复的元素.
+        if !cache.insert(num) {
             return true;
         }
-        cache.insert(num);
     }
     false
 }
 
-// 使用 Hash Set 存放数组中的所有元素, 最后只比较两者长度是否相同.
+// 使用 Hash Set 存放数组中的所有元素, 最后只比较两者中元素的个数是否相同.
 pub fn contains_duplicate4(nums: Vec<i32>) -> bool {
-    if nums.len() < 2 {
-        return false;
-    }
     let set = nums.iter().collect::<HashSet<_>>();
     set.len() != nums.len()
 }
