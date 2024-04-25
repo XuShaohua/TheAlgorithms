@@ -23,6 +23,10 @@ name = "lc-0005-longest-palindromic-substring"
 version = "0.1.0"
 
 [[package]]
+name = "lc-0007-reverse-integer"
+version = "0.1.0"
+
+[[package]]
 name = "lc-0011-container-with-most-water"
 version = "0.1.0"
 
