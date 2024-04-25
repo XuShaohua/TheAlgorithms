@@ -11,17 +11,29 @@ pub fn single_number(nums: Vec<i32>) -> i32 {
     ans
 }
 
-fn check_solution() {
+pub type SolutionFn = fn(Vec<i32>) -> i32;
+
+fn check_solution(func: SolutionFn) {
     let nums = vec![2, 2, 1];
-    assert_eq!(single_number(nums), 1);
+    assert_eq!(func(nums), 1);
 
     let nums = vec![4, 1, 2, 1, 2];
-    assert_eq!(single_number(nums), 4);
+    assert_eq!(func(nums), 4);
 
     let nums = vec![1];
-    assert_eq!(single_number(nums), 1);
+    assert_eq!(func(nums), 1);
 }
 
 fn main() {
-    check_solution();
+    check_solution(single_number);
+}
+
+#[cfg(test)]
+mod tests {
+    use super::{check_solution, single_number};
+
+    #[test]
+    fn test_single_number1() {
+        check_solution(single_number);
+    }
 }

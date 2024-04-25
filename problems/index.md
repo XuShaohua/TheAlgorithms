@@ -4,4 +4,5 @@
 
 - [0001. Two Sum](0001.two-sum/content.html)
 - [0067. Add Binary](0067.add-binary/content.html)
+- [0136. Single Number](0136.single-number/content.html)
 - [0191. Number of 1 Bits](0191.number-of-1-bits/content.html)
