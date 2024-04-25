@@ -1,4 +1,4 @@
-# 0067. Add Binary
+# 0067. 二进制求和 Add Binary
 
 [问题描述](../problems/0067.add-binary/content.html)
 
