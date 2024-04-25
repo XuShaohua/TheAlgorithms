@@ -2,6 +2,16 @@
 
 [问题描述](../problems/0137.single-number-ii/content.html)
 
+## 第一种思路, 使用字典来计数
+
+很直接的想法, 用字典来统计所有数值出现的次数, 然后遍历该字典, 找到次数为1的那个数值.
+
+```rust
+{{#include src/main.rs:5:20 }}
+```
+
+## 第二种思路, 使用 BitVector
+
 这个题目, 因为是奇数次重复的数, 所以不能再使用 [0136. Single Number](../0136.single-number/index.md) 里面的方法.
 
 这个需要一个新的思路, 那就是 BitVector.
@@ -20,5 +30,5 @@
 具体的代码如下:
 
 ```rust
-{{#include src/main.rs:5:15 }}
+{{#include src/main.rs:22:36 }}
 ```

@@ -2,8 +2,25 @@
 // Use of this source is governed by General Public License that can be
 // found in the LICENSE file.
 
+// map, brute force
+pub fn single_number1(nums: Vec<i32>) -> i32 {
+    use std::collections::HashMap;
+    // 使用字典来统计数值出现的次数
+    let mut count = HashMap::<i32, i32>::new();
+    for num in &nums {
+        count.entry(*num).and_modify(|value| *value += 1)
+            .or_insert(1);
+    }
+    for (key, value) in count {
+        if value == 1 {
+            return key;
+        }
+    }
+    -1
+}
+
 // bit vector
-pub fn single_number(nums: Vec<i32>) -> i32 {
+pub fn single_number2(nums: Vec<i32>) -> i32 {
     const DIGIT_LEN: usize = 32;
 
     let mut ans = 0;
@@ -29,15 +46,21 @@ fn check_solution(func: SolutionFn) {
 }
 
 fn main() {
-    check_solution(single_number);
+    check_solution(single_number1);
+    check_solution(single_number2);
 }
 
 #[cfg(test)]
 mod tests {
-    use super::{check_solution, single_number};
+    use super::{check_solution, single_number1, single_number2};
 
     #[test]
-    fn test_single_number() {
-        check_solution(single_number);
+    fn test_single_number1() {
+        check_solution(single_number1);
+    }
+
+    #[test]
+    fn test_single_number2() {
+        check_solution(single_number2);
     }
 }
