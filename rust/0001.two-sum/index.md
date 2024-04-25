@@ -21,6 +21,8 @@
 
 但对于从哈稀表中查找, 我们可以进行一下优化, 即, 查找与当前元素之和为 `target` 的值, 如果找到, 就可以返回了.
 
+![hash-table](assets/hash-table.svg)
+
 这个方法的时间复杂度是 `O(nlogn)`.
 
 ```rust

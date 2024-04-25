@@ -35,4 +35,4 @@
 
 ## 第三种思路
 
-TODO(Shaohua):
+TODO(Shaohua): Use `ones` and `twos` to record.
