@@ -13,6 +13,7 @@
 /// assert_eq!(a, 42);
 /// assert_eq!(b, 3);
 /// ```
+#[allow(clippy::manual_swap)]
 pub fn swap_number(a: &mut i32, b: &mut i32) {
     *a ^= *b;
     *b ^= *a;
