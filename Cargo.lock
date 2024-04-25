@@ -67,6 +67,10 @@ name = "lc-0066-plus-one"
 version = "0.1.0"
 
 [[package]]
+name = "lc-0067-add-binary"
+version = "0.1.0"
+
+[[package]]
 name = "lc-0069-sqrtx"
 version = "0.1.0"
 
