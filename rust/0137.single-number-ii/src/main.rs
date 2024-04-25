@@ -8,7 +8,9 @@ pub fn single_number1(nums: Vec<i32>) -> i32 {
     // 使用字典来统计数值出现的次数
     let mut count = HashMap::<i32, i32>::new();
     for num in &nums {
-        count.entry(*num).and_modify(|value| *value += 1)
+        count
+            .entry(*num)
+            .and_modify(|value| *value += 1)
             .or_insert(1);
     }
     for (key, value) in count {
@@ -35,6 +37,17 @@ pub fn single_number2(nums: Vec<i32>) -> i32 {
     ans
 }
 
+pub fn single_number3(nums: Vec<i32>) -> i32 {
+    let mut ones = 0;
+    let mut twos = 0;
+    for num in &nums {
+        ones ^= num & (!twos);
+        twos ^= num & (!ones);
+    }
+
+    ones
+}
+
 pub type SolutionFn = fn(Vec<i32>) -> i32;
 
 fn check_solution(func: SolutionFn) {
@@ -48,11 +61,12 @@ fn check_solution(func: SolutionFn) {
 fn main() {
     check_solution(single_number1);
     check_solution(single_number2);
+    check_solution(single_number3);
 }
 
 #[cfg(test)]
 mod tests {
-    use super::{check_solution, single_number1, single_number2};
+    use super::{check_solution, single_number1, single_number2, single_number3};
 
     #[test]
     fn test_single_number1() {
@@ -62,5 +76,10 @@ mod tests {
     #[test]
     fn test_single_number2() {
         check_solution(single_number2);
+    }
+
+    #[test]
+    fn test_single_number3() {
+        check_solution(single_number3);
     }
 }

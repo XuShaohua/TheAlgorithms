@@ -32,3 +32,7 @@
 ```rust
 {{#include src/main.rs:22:36 }}
 ```
+
+## 第三种思路
+
+TODO(Shaohua):
