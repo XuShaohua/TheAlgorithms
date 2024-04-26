@@ -203,6 +203,10 @@ name = "lc-1518-water-bottles"
 version = "0.1.0"
 
 [[package]]
+name = "lc-1780-check-if-number-is-a-sum-of-powers-of-three"
+version = "0.1.0"
+
+[[package]]
 name = "lc-2119-a-number-after-a-double-reversal"
 version = "0.1.0"
 
