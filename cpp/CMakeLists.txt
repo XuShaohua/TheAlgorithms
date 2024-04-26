@@ -8,7 +8,6 @@ if (CMAKE_BUILD_TYPE STREQUAL "Debug")
         )
 endif()
 
-add_subdirectory(0002.add-two-numbers)
 add_subdirectory(0003.longest-substring-without-repeating-characters)
 add_subdirectory(0005.longest-palindromic-substring)
 add_subdirectory(0008.string-to-integer-atoi)
