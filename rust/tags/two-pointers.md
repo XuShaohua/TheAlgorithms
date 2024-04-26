@@ -2,6 +2,8 @@
 
 ## 容易
 
+- [0026. 删除有序数组中的重复项 Remove Duplicates from Sorted Array](../0026.remove-duplicates-from-sorted-array/index.md)
+
 - [88. 合并两个有序数组](https://leetcode.com/problems/merge-sorted-array)
 - [160. 相交链表](https://leetcode.com/problems/intersection-of-two-linked-lists)
 - [234. 回文链表](https://leetcode.com/problems/palindrome-linked-list)

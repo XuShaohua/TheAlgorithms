@@ -62,11 +62,12 @@ fn check_solution(func: SolutionFn) {
 fn main() {
     check_solution(remove_duplicates1);
     check_solution(remove_duplicates2);
+    check_solution(remove_duplicates3);
 }
 
 #[cfg(test)]
 mod tests {
-    use super::{check_solution, remove_duplicates1, remove_duplicates2};
+    use super::{check_solution, remove_duplicates1, remove_duplicates2, remove_duplicates3};
 
     #[test]
     fn test_remove_duplicates1() {
@@ -76,5 +77,10 @@ mod tests {
     #[test]
     fn test_remove_duplicates2() {
         check_solution(remove_duplicates2);
+    }
+
+    #[test]
+    fn test_remove_duplicates3() {
+        check_solution(remove_duplicates3);
     }
 }
