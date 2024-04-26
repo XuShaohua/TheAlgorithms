@@ -6,10 +6,14 @@
 pub fn reverse(x: i32) -> i32 {
     let mut x = x;
     let mut rev = 0;
+
+    // x == 0 时, 表示它的所有整数进位值都被提取完了.
     while x != 0 {
+        // 检查 rev 在添加新的个位值后是否会溢出
         if rev > i32::MAX / 10 || rev < i32::MIN / 10 {
             return 0;
         }
+        // 从 x 中提取出个位的值, 然后作为新的个位数值, 添加到 rev 上.
         rev = rev * 10 + x % 10;
         x /= 10;
     }

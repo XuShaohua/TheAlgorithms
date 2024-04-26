@@ -6,4 +6,4 @@
 
 ## 中等
 
-- [0007. 整数反转 Reverse Integer](https://leetcode.com/problems/reverse-integer)
+- [0007. 整数反转 Reverse Integer](../0007.reverse-integer/index.md)

@@ -20,6 +20,7 @@
 - [双指针 Two Pointers](tags/two-pointers.md)
 - [第二部分: 所有问题的答案](solutions.md)
     - [0001. 两数之和 Two Sum](0001.two-sum/index.md)
+    - [0007. 整数反转 Reverse Integer](0007.reverse-integer/index.md)
     - [0067. 二进制求和 Add Binary](0067.add-binary/index.md)
     - [0136. 只出现一次的数字 Single Number](0136.single-number/index.md)
     - [0137. 只出现一次的数字II Single Number II](0137.single-number-ii/index.md)
