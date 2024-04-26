@@ -123,6 +123,10 @@ name = "lc-0220-contains-duplicate-iii"
 version = "0.1.0"
 
 [[package]]
+name = "lc-0231-power-of-two"
+version = "0.1.0"
+
+[[package]]
 name = "lc-0234-palindrome-linked-list"
 version = "0.1.0"
 
