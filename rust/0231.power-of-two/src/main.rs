@@ -49,7 +49,7 @@ fn check_solution(func: SolutionFn) {
 fn main() {
     for i in 0..31 {
         let num: i32 = 1 << i;
-        println!("{num:011} = 0b{num:0b}");
+        println!("{num:11} = 0b{num:0b}");
     }
 
     check_solution(is_power_of_two1);
