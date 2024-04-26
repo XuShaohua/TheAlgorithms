@@ -1,0 +1,24 @@
+
+[workspace]
+resolver = "2"
+
+members = [
+  "bitwise",
+  "conversions",
+  "deque",
+  "graph",
+  "hash_table",
+  "list",
+  "priority_queue",
+  "queue",
+  "search",
+  "sort",
+  "stack",
+  "string",
+  "tree",
+  "vector",
+]
+
+[profile.release]
+debug = true
+lto = true
