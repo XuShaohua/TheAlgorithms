@@ -1,4 +1,4 @@
-# 0231. 2 的幂 Power of Two
+# 0231. 2的幂 Power of Two
 
 [问题描述](../problems/0231.power-of-two/content.html)
 
@@ -57,3 +57,8 @@
 ```rust
 {{#include src/main.rs:24:30 }}
 ```
+
+## 相关问题
+
+- [0326. 3的幂 Power of Three](../0326.power-of-three/index.md)
+- [0342. 4的幂 Power of Four](../0342.power-of-four/index.md)

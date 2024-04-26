@@ -63,24 +63,25 @@ pub fn is_power_of_three4(n: i32) -> bool {
         return false;
     }
 
-    // 找到 i32 中最大的 3 的次幂
-    const fn max_power_of_prime_number(prime_number: i32) -> i32 {
+    // 找到 i32 中 3 的最大次幂
+    const fn max_exp_of_prime_number(prime_number: i32) -> i32 {
         // debug_assert!(is_prime(prime_number));
-        let mut power: i32 = 1;
+        let mut exp: i32 = 1;
         loop {
-            let (new_power, is_overflow) = power.overflowing_mul(prime_number);
+            let (next_exp, is_overflow) = exp.overflowing_mul(prime_number);
             if is_overflow {
                 break;
             }
-            power = new_power;
+            exp = next_exp;
         }
-        power
+        exp
     }
 
-    let max_power = max_power_of_prime_number(3);
-    max_power % n == 0
+    let max_exp = max_exp_of_prime_number(3);
+    max_exp % n == 0
 }
 
+// 指数-对数法
 // 利用公式 3 ^ log3(n) == n 来计算
 pub fn is_power_of_three5(n: i32) -> bool {
     if n <= 0 {
