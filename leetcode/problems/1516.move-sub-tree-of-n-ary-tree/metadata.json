@@ -1,0 +1,40 @@
+{
+  "titleSlug": "move-sub-tree-of-n-ary-tree",
+  "acRate": 62.75725965604736,
+  "content": null,
+  "difficulty": "Hard",
+  "freqBar": null,
+  "frontendQuestionId": "1516",
+  "hasSolution": false,
+  "hasVideoSolution": false,
+  "hints": [
+    "Disconnect node p from its parent and append it to the children list of node q.",
+    "If q was in the sub-tree of node p (case 1), get the parent node of p and replace p in its children list with q.",
+    "If p was the root of the tree, make q the root of the tree."
+  ],
+  "isFavor": false,
+  "paidOnly": true,
+  "similarQuestionList": [
+    {
+      "difficulty": "Medium",
+      "titleSlug": "find-root-of-n-ary-tree",
+      "title": "Find Root of N-Ary Tree",
+      "translatedTitle": null,
+      "isPaidOnly": true
+    }
+  ],
+  "status": null,
+  "title": "Move Sub-Tree of N-Ary Tree",
+  "topicTags": [
+    {
+      "name": "Tree",
+      "id": "VG9waWNUYWdOb2RlOjIw",
+      "slug": "tree"
+    },
+    {
+      "name": "Depth-First Search",
+      "id": "VG9waWNUYWdOb2RlOjIx",
+      "slug": "depth-first-search"
+    }
+  ]
+}

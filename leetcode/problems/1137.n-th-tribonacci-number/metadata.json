@@ -1,0 +1,51 @@
+{
+  "titleSlug": "n-th-tribonacci-number",
+  "acRate": 63.43097256642801,
+  "content": "<p>The Tribonacci sequence T<sub>n</sub> is defined as follows:&nbsp;</p>\r\n\r\n<p>T<sub>0</sub> = 0, T<sub>1</sub> = 1, T<sub>2</sub> = 1, and T<sub>n+3</sub> = T<sub>n</sub> + T<sub>n+1</sub> + T<sub>n+2</sub> for n &gt;= 0.</p>\r\n\r\n<p>Given <code>n</code>, return the value of T<sub>n</sub>.</p>\r\n\r\n<p>&nbsp;</p>\r\n<p><strong class=\"example\">Example 1:</strong></p>\r\n\r\n<pre>\r\n<strong>Input:</strong> n = 4\r\n<strong>Output:</strong> 4\r\n<strong>Explanation:</strong>\r\nT_3 = 0 + 1 + 1 = 2\r\nT_4 = 1 + 1 + 2 = 4\r\n</pre>\r\n\r\n<p><strong class=\"example\">Example 2:</strong></p>\r\n\r\n<pre>\r\n<strong>Input:</strong> n = 25\r\n<strong>Output:</strong> 1389537\r\n</pre>\r\n\r\n<p>&nbsp;</p>\r\n<p><strong>Constraints:</strong></p>\r\n\r\n<ul>\r\n\t<li><code>0 &lt;= n &lt;= 37</code></li>\r\n\t<li>The answer is guaranteed to fit within a 32-bit integer, ie. <code>answer &lt;= 2^31 - 1</code>.</li>\r\n</ul>",
+  "difficulty": "Easy",
+  "freqBar": null,
+  "frontendQuestionId": "1137",
+  "hasSolution": true,
+  "hasVideoSolution": false,
+  "hints": [
+    "Make an array F of length 38, and set F[0] = 0, F[1] = F[2] = 1.",
+    "Now write a loop where you set F[n+3] = F[n] + F[n+1] + F[n+2], and return F[n]."
+  ],
+  "isFavor": false,
+  "paidOnly": false,
+  "similarQuestionList": [
+    {
+      "difficulty": "Easy",
+      "titleSlug": "climbing-stairs",
+      "title": "Climbing Stairs",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    },
+    {
+      "difficulty": "Easy",
+      "titleSlug": "fibonacci-number",
+      "title": "Fibonacci Number",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    }
+  ],
+  "status": null,
+  "title": "N-th Tribonacci Number",
+  "topicTags": [
+    {
+      "name": "Math",
+      "id": "VG9waWNUYWdOb2RlOjg=",
+      "slug": "math"
+    },
+    {
+      "name": "Dynamic Programming",
+      "id": "VG9waWNUYWdOb2RlOjEz",
+      "slug": "dynamic-programming"
+    },
+    {
+      "name": "Memoization",
+      "id": "VG9waWNUYWdOb2RlOjMz",
+      "slug": "memoization"
+    }
+  ]
+}

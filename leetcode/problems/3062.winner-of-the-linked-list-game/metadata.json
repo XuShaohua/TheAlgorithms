@@ -1,0 +1,27 @@
+{
+  "titleSlug": "winner-of-the-linked-list-game",
+  "acRate": 82.57088846880907,
+  "content": null,
+  "difficulty": "Easy",
+  "freqBar": null,
+  "frontendQuestionId": "3062",
+  "hasSolution": true,
+  "hasVideoSolution": false,
+  "hints": [
+    "Traverse linked list and try to find pairs.",
+    "For each team, keep the number of its winning games in a variable.",
+    "Compare the winning variables and find the answer."
+  ],
+  "isFavor": false,
+  "paidOnly": true,
+  "similarQuestionList": [],
+  "status": null,
+  "title": "Winner of the Linked List Game",
+  "topicTags": [
+    {
+      "name": "Linked List",
+      "id": "VG9waWNUYWdOb2RlOjc=",
+      "slug": "linked-list"
+    }
+  ]
+}

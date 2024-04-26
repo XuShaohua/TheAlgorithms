@@ -1,0 +1,43 @@
+{
+  "titleSlug": "all-possible-full-binary-trees",
+  "acRate": 82.70802299842687,
+  "content": "<p>Given an integer <code>n</code>, return <em>a list of all possible <strong>full binary trees</strong> with</em> <code>n</code> <em>nodes</em>. Each node of each tree in the answer must have <code>Node.val == 0</code>.</p>\n\n<p>Each element of the answer is the root node of one possible tree. You may return the final list of trees in <strong>any order</strong>.</p>\n\n<p>A <strong>full binary tree</strong> is a binary tree where each node has exactly <code>0</code> or <code>2</code> children.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n<img alt=\"\" src=\"https://s3-lc-upload.s3.amazonaws.com/uploads/2018/08/22/fivetrees.png\" style=\"width: 700px; height: 400px;\" />\n<pre>\n<strong>Input:</strong> n = 7\n<strong>Output:</strong> [[0,0,0,null,null,0,0,null,null,0,0],[0,0,0,null,null,0,0,0,0],[0,0,0,0,0,0,0],[0,0,0,0,0,null,null,null,null,0,0],[0,0,0,0,0,null,null,0,0]]\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> n = 3\n<strong>Output:</strong> [[0,0,0]]\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= n &lt;= 20</code></li>\n</ul>\n",
+  "difficulty": "Medium",
+  "freqBar": null,
+  "frontendQuestionId": "894",
+  "hasSolution": true,
+  "hasVideoSolution": false,
+  "hints": [],
+  "isFavor": false,
+  "paidOnly": false,
+  "similarQuestionList": [],
+  "status": null,
+  "title": "All Possible Full Binary Trees",
+  "topicTags": [
+    {
+      "name": "Dynamic Programming",
+      "id": "VG9waWNUYWdOb2RlOjEz",
+      "slug": "dynamic-programming"
+    },
+    {
+      "name": "Tree",
+      "id": "VG9waWNUYWdOb2RlOjIw",
+      "slug": "tree"
+    },
+    {
+      "name": "Recursion",
+      "id": "VG9waWNUYWdOb2RlOjMx",
+      "slug": "recursion"
+    },
+    {
+      "name": "Memoization",
+      "id": "VG9waWNUYWdOb2RlOjMz",
+      "slug": "memoization"
+    },
+    {
+      "name": "Binary Tree",
+      "id": "VG9waWNUYWdOb2RlOjYxMDU3",
+      "slug": "binary-tree"
+    }
+  ]
+}

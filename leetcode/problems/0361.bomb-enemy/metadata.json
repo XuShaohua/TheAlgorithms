@@ -1,0 +1,62 @@
+{
+  "titleSlug": "bomb-enemy",
+  "acRate": 51.68405802906795,
+  "content": null,
+  "difficulty": "Medium",
+  "freqBar": null,
+  "frontendQuestionId": "361",
+  "hasSolution": true,
+  "hasVideoSolution": false,
+  "hints": [],
+  "isFavor": false,
+  "paidOnly": true,
+  "similarQuestionList": [
+    {
+      "difficulty": "Medium",
+      "titleSlug": "minimum-cost-homecoming-of-a-robot-in-a-grid",
+      "title": "Minimum Cost Homecoming of a Robot in a Grid",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    },
+    {
+      "difficulty": "Hard",
+      "titleSlug": "stamping-the-grid",
+      "title": "Stamping the Grid",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    },
+    {
+      "difficulty": "Medium",
+      "titleSlug": "count-unguarded-cells-in-the-grid",
+      "title": "Count Unguarded Cells in the Grid",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    },
+    {
+      "difficulty": "Medium",
+      "titleSlug": "maximum-trailing-zeros-in-a-cornered-path",
+      "title": "Maximum Trailing Zeros in a Cornered Path",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    }
+  ],
+  "status": null,
+  "title": "Bomb Enemy",
+  "topicTags": [
+    {
+      "name": "Array",
+      "id": "VG9waWNUYWdOb2RlOjU=",
+      "slug": "array"
+    },
+    {
+      "name": "Dynamic Programming",
+      "id": "VG9waWNUYWdOb2RlOjEz",
+      "slug": "dynamic-programming"
+    },
+    {
+      "name": "Matrix",
+      "id": "VG9waWNUYWdOb2RlOjYxMDUz",
+      "slug": "matrix"
+    }
+  ]
+}

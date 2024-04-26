@@ -1,0 +1,100 @@
+{
+  "titleSlug": "kth-largest-element-in-an-array",
+  "acRate": 66.77710848821414,
+  "content": "<p>Given an integer array <code>nums</code> and an integer <code>k</code>, return <em>the</em> <code>k<sup>th</sup></code> <em>largest element in the array</em>.</p>\n\n<p>Note that it is the <code>k<sup>th</sup></code> largest element in the sorted order, not the <code>k<sup>th</sup></code> distinct element.</p>\n\n<p>Can you solve it without sorting?</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n<pre><strong>Input:</strong> nums = [3,2,1,5,6,4], k = 2\n<strong>Output:</strong> 5\n</pre><p><strong class=\"example\">Example 2:</strong></p>\n<pre><strong>Input:</strong> nums = [3,2,3,1,2,4,5,5,6], k = 4\n<strong>Output:</strong> 4\n</pre>\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= k &lt;= nums.length &lt;= 10<sup>5</sup></code></li>\n\t<li><code>-10<sup>4</sup> &lt;= nums[i] &lt;= 10<sup>4</sup></code></li>\n</ul>\n",
+  "difficulty": "Medium",
+  "freqBar": null,
+  "frontendQuestionId": "215",
+  "hasSolution": true,
+  "hasVideoSolution": true,
+  "hints": [],
+  "isFavor": false,
+  "paidOnly": false,
+  "similarQuestionList": [
+    {
+      "difficulty": "Medium",
+      "titleSlug": "wiggle-sort-ii",
+      "title": "Wiggle Sort II",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    },
+    {
+      "difficulty": "Medium",
+      "titleSlug": "top-k-frequent-elements",
+      "title": "Top K Frequent Elements",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    },
+    {
+      "difficulty": "Easy",
+      "titleSlug": "third-maximum-number",
+      "title": "Third Maximum Number",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    },
+    {
+      "difficulty": "Easy",
+      "titleSlug": "kth-largest-element-in-a-stream",
+      "title": "Kth Largest Element in a Stream",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    },
+    {
+      "difficulty": "Medium",
+      "titleSlug": "k-closest-points-to-origin",
+      "title": "K Closest Points to Origin",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    },
+    {
+      "difficulty": "Medium",
+      "titleSlug": "find-the-kth-largest-integer-in-the-array",
+      "title": "Find the Kth Largest Integer in the Array",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    },
+    {
+      "difficulty": "Easy",
+      "titleSlug": "find-subsequence-of-length-k-with-the-largest-sum",
+      "title": "Find Subsequence of Length K With the Largest Sum",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    },
+    {
+      "difficulty": "Medium",
+      "titleSlug": "k-highest-ranked-items-within-a-price-range",
+      "title": "K Highest Ranked Items Within a Price Range",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    }
+  ],
+  "status": null,
+  "title": "Kth Largest Element in an Array",
+  "topicTags": [
+    {
+      "name": "Array",
+      "id": "VG9waWNUYWdOb2RlOjU=",
+      "slug": "array"
+    },
+    {
+      "name": "Divide and Conquer",
+      "id": "VG9waWNUYWdOb2RlOjEy",
+      "slug": "divide-and-conquer"
+    },
+    {
+      "name": "Sorting",
+      "id": "VG9waWNUYWdOb2RlOjYxMDQ5",
+      "slug": "sorting"
+    },
+    {
+      "name": "Heap (Priority Queue)",
+      "id": "VG9waWNUYWdOb2RlOjYxMDUw",
+      "slug": "heap-priority-queue"
+    },
+    {
+      "name": "Quickselect",
+      "id": "VG9waWNUYWdOb2RlOjYxMDY5",
+      "slug": "quickselect"
+    }
+  ]
+}

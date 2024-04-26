@@ -1,0 +1,47 @@
+{
+  "titleSlug": "minimum-operations-to-collect-elements",
+  "acRate": 59.32935723913806,
+  "content": "<p>You are given an array <code>nums</code> of positive integers and an integer <code>k</code>.</p>\n\n<p>In one operation, you can remove the last element of the array and add it to your collection.</p>\n\n<p>Return <em>the <strong>minimum number of operations</strong> needed to collect elements</em> <code>1, 2, ..., k</code>.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [3,1,5,4,2], k = 2\n<strong>Output:</strong> 4\n<strong>Explanation:</strong> After 4 operations, we collect elements 2, 4, 5, and 1, in this order. Our collection contains elements 1 and 2. Hence, the answer is 4.\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [3,1,5,4,2], k = 5\n<strong>Output:</strong> 5\n<strong>Explanation:</strong> After 5 operations, we collect elements 2, 4, 5, 1, and 3, in this order. Our collection contains elements 1 through 5. Hence, the answer is 5.\n</pre>\n\n<p><strong class=\"example\">Example 3:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [3,2,5,3,1], k = 3\n<strong>Output:</strong> 4\n<strong>Explanation:</strong> After 4 operations, we collect elements 1, 3, 5, and 2, in this order. Our collection contains elements 1 through 3. Hence, the answer is 4.\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= nums.length &lt;= 50</code></li>\n\t<li><code>1 &lt;= nums[i] &lt;= nums.length</code></li>\n\t<li><code>1 &lt;= k &lt;= nums.length</code></li>\n\t<li>The input is generated such that you can collect elements <code>1, 2, ..., k</code>.</li>\n</ul>\n",
+  "difficulty": "Easy",
+  "freqBar": null,
+  "frontendQuestionId": "2869",
+  "hasSolution": false,
+  "hasVideoSolution": false,
+  "hints": [
+    "Use an occurrence array.",
+    "Iterate over the elements in reverse order.",
+    "If the current element <code>nums[i]</code> is not marked in the occurrence array and <code>nums[i] &lt;= k</code>, mark <code>nums[i]</code>.",
+    "Keep track of how many integers you have marked.",
+    "Return the current index as soon as the number of marked integers becomes equal to <code>k</code>."
+  ],
+  "isFavor": false,
+  "paidOnly": false,
+  "similarQuestionList": [
+    {
+      "difficulty": "Medium",
+      "titleSlug": "build-an-array-with-stack-operations",
+      "title": "Build an Array With Stack Operations",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    }
+  ],
+  "status": null,
+  "title": "Minimum Operations to Collect Elements",
+  "topicTags": [
+    {
+      "name": "Array",
+      "id": "VG9waWNUYWdOb2RlOjU=",
+      "slug": "array"
+    },
+    {
+      "name": "Hash Table",
+      "id": "VG9waWNUYWdOb2RlOjY=",
+      "slug": "hash-table"
+    },
+    {
+      "name": "Bit Manipulation",
+      "id": "VG9waWNUYWdOb2RlOjE5",
+      "slug": "bit-manipulation"
+    }
+  ]
+}

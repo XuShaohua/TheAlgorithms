@@ -1,0 +1,34 @@
+{
+  "titleSlug": "number-of-valid-words-in-a-sentence",
+  "acRate": 28.959634615585145,
+  "content": "<p>A sentence consists of lowercase letters (<code>&#39;a&#39;</code> to <code>&#39;z&#39;</code>), digits (<code>&#39;0&#39;</code> to <code>&#39;9&#39;</code>), hyphens (<code>&#39;-&#39;</code>), punctuation marks (<code>&#39;!&#39;</code>, <code>&#39;.&#39;</code>, and <code>&#39;,&#39;</code>), and spaces (<code>&#39; &#39;</code>) only. Each sentence can be broken down into <strong>one or more tokens</strong> separated by one or more spaces <code>&#39; &#39;</code>.</p>\n\n<p>A token is a valid word if <strong>all three</strong> of the following are true:</p>\n\n<ul>\n\t<li>It only contains lowercase letters, hyphens, and/or punctuation (<strong>no</strong> digits).</li>\n\t<li>There is <strong>at most one</strong> hyphen <code>&#39;-&#39;</code>. If present, it <strong>must</strong> be surrounded by lowercase characters (<code>&quot;a-b&quot;</code> is valid, but <code>&quot;-ab&quot;</code> and <code>&quot;ab-&quot;</code> are not valid).</li>\n\t<li>There is <strong>at most one</strong> punctuation mark. If present, it <strong>must</strong> be at the <strong>end</strong> of the token (<code>&quot;ab,&quot;</code>, <code>&quot;cd!&quot;</code>, and <code>&quot;.&quot;</code> are valid, but <code>&quot;a!b&quot;</code> and <code>&quot;c.,&quot;</code> are not valid).</li>\n</ul>\n\n<p>Examples of valid words include <code>&quot;a-b.&quot;</code>, <code>&quot;afad&quot;</code>, <code>&quot;ba-c&quot;</code>, <code>&quot;a!&quot;</code>, and <code>&quot;!&quot;</code>.</p>\n\n<p>Given a string <code>sentence</code>, return <em>the <strong>number</strong> of valid words in </em><code>sentence</code>.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> sentence = &quot;<u>cat</u> <u>and</u>  <u>dog</u>&quot;\n<strong>Output:</strong> 3\n<strong>Explanation:</strong> The valid words in the sentence are &quot;cat&quot;, &quot;and&quot;, and &quot;dog&quot;.\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> sentence = &quot;!this  1-s b8d!&quot;\n<strong>Output:</strong> 0\n<strong>Explanation:</strong> There are no valid words in the sentence.\n&quot;!this&quot; is invalid because it starts with a punctuation mark.\n&quot;1-s&quot; and &quot;b8d&quot; are invalid because they contain digits.\n</pre>\n\n<p><strong class=\"example\">Example 3:</strong></p>\n\n<pre>\n<strong>Input:</strong> sentence = &quot;<u>alice</u> <u>and</u>  <u>bob</u> <u>are</u> <u>playing</u> stone-game10&quot;\n<strong>Output:</strong> 5\n<strong>Explanation:</strong> The valid words in the sentence are &quot;alice&quot;, &quot;and&quot;, &quot;bob&quot;, &quot;are&quot;, and &quot;playing&quot;.\n&quot;stone-game10&quot; is invalid because it contains digits.\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= sentence.length &lt;= 1000</code></li>\n\t<li><code>sentence</code> only contains lowercase English letters, digits, <code>&#39; &#39;</code>, <code>&#39;-&#39;</code>, <code>&#39;!&#39;</code>, <code>&#39;.&#39;</code>, and <code>&#39;,&#39;</code>.</li>\n\t<li>There will be at least&nbsp;<code>1</code> token.</li>\n</ul>\n",
+  "difficulty": "Easy",
+  "freqBar": null,
+  "frontendQuestionId": "2047",
+  "hasSolution": false,
+  "hasVideoSolution": false,
+  "hints": [
+    "Iterate through the string to split it by spaces.",
+    "Count the number of characters of each type (letters, numbers, hyphens, and punctuations)."
+  ],
+  "isFavor": false,
+  "paidOnly": false,
+  "similarQuestionList": [
+    {
+      "difficulty": "Easy",
+      "titleSlug": "maximum-number-of-words-found-in-sentences",
+      "title": "Maximum Number of Words Found in Sentences",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    }
+  ],
+  "status": null,
+  "title": "Number of Valid Words in a Sentence",
+  "topicTags": [
+    {
+      "name": "String",
+      "id": "VG9waWNUYWdOb2RlOjEw",
+      "slug": "string"
+    }
+  ]
+}

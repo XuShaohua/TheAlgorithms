@@ -1,0 +1,33 @@
+{
+  "titleSlug": "check-if-array-is-sorted-and-rotated",
+  "acRate": 50.924847736846345,
+  "content": "<p>Given an array <code>nums</code>, return <code>true</code><em> if the array was originally sorted in non-decreasing order, then rotated <strong>some</strong> number of positions (including zero)</em>. Otherwise, return <code>false</code>.</p>\n\n<p>There may be <strong>duplicates</strong> in the original array.</p>\n\n<p><strong>Note:</strong> An array <code>A</code> rotated by <code>x</code> positions results in an array <code>B</code> of the same length such that <code>A[i] == B[(i+x) % A.length]</code>, where <code>%</code> is the modulo operation.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [3,4,5,1,2]\n<strong>Output:</strong> true\n<strong>Explanation:</strong> [1,2,3,4,5] is the original sorted array.\nYou can rotate the array by x = 3 positions to begin on the the element of value 3: [3,4,5,1,2].\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [2,1,3,4]\n<strong>Output:</strong> false\n<strong>Explanation:</strong> There is no sorted array once rotated that can make nums.\n</pre>\n\n<p><strong class=\"example\">Example 3:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [1,2,3]\n<strong>Output:</strong> true\n<strong>Explanation:</strong> [1,2,3] is the original sorted array.\nYou can rotate the array by x = 0 positions (i.e. no rotation) to make nums.\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= nums.length &lt;= 100</code></li>\n\t<li><code>1 &lt;= nums[i] &lt;= 100</code></li>\n</ul>\n",
+  "difficulty": "Easy",
+  "freqBar": null,
+  "frontendQuestionId": "1752",
+  "hasSolution": false,
+  "hasVideoSolution": false,
+  "hints": [
+    "Brute force and check if it is possible for a sorted array to start from each position."
+  ],
+  "isFavor": false,
+  "paidOnly": false,
+  "similarQuestionList": [
+    {
+      "difficulty": "Easy",
+      "titleSlug": "check-if-all-as-appears-before-all-bs",
+      "title": "Check if All A's Appears Before All B's",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    }
+  ],
+  "status": null,
+  "title": "Check if Array Is Sorted and Rotated",
+  "topicTags": [
+    {
+      "name": "Array",
+      "id": "VG9waWNUYWdOb2RlOjU=",
+      "slug": "array"
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "titleSlug": "sequential-digits",
+  "acRate": 65.36979525214232,
+  "content": "<p>An&nbsp;integer has <em>sequential digits</em> if and only if each digit in the number is one more than the previous digit.</p>\n\n<p>Return a <strong>sorted</strong> list of all the integers&nbsp;in the range <code>[low, high]</code>&nbsp;inclusive that have sequential digits.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n<pre><strong>Input:</strong> low = 100, high = 300\n<strong>Output:</strong> [123,234]\n</pre><p><strong class=\"example\">Example 2:</strong></p>\n<pre><strong>Input:</strong> low = 1000, high = 13000\n<strong>Output:</strong> [1234,2345,3456,4567,5678,6789,12345]\n</pre>\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>10 &lt;= low &lt;= high &lt;= 10^9</code></li>\n</ul>\n",
+  "difficulty": "Medium",
+  "freqBar": null,
+  "frontendQuestionId": "1291",
+  "hasSolution": true,
+  "hasVideoSolution": false,
+  "hints": [
+    "Generate all numbers with sequential digits and check if they are in the given range.",
+    "Fix the starting digit then do a recursion that tries to append all valid digits."
+  ],
+  "isFavor": false,
+  "paidOnly": false,
+  "similarQuestionList": [],
+  "status": null,
+  "title": "Sequential Digits",
+  "topicTags": [
+    {
+      "name": "Enumeration",
+      "id": "VG9waWNUYWdOb2RlOjYxMDY2",
+      "slug": "enumeration"
+    }
+  ]
+}

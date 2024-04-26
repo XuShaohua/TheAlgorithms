@@ -1,0 +1,67 @@
+{
+  "titleSlug": "add-binary",
+  "acRate": 53.35578638907996,
+  "content": "<p>Given two binary strings <code>a</code> and <code>b</code>, return <em>their sum as a binary string</em>.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n<pre><strong>Input:</strong> a = \"11\", b = \"1\"\n<strong>Output:</strong> \"100\"\n</pre><p><strong class=\"example\">Example 2:</strong></p>\n<pre><strong>Input:</strong> a = \"1010\", b = \"1011\"\n<strong>Output:</strong> \"10101\"\n</pre>\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= a.length, b.length &lt;= 10<sup>4</sup></code></li>\n\t<li><code>a</code> and <code>b</code> consist&nbsp;only of <code>&#39;0&#39;</code> or <code>&#39;1&#39;</code> characters.</li>\n\t<li>Each string does not contain leading zeros except for the zero itself.</li>\n</ul>\n",
+  "difficulty": "Easy",
+  "freqBar": null,
+  "frontendQuestionId": "67",
+  "hasSolution": true,
+  "hasVideoSolution": false,
+  "hints": [],
+  "isFavor": false,
+  "paidOnly": false,
+  "similarQuestionList": [
+    {
+      "difficulty": "Medium",
+      "titleSlug": "add-two-numbers",
+      "title": "Add Two Numbers",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    },
+    {
+      "difficulty": "Medium",
+      "titleSlug": "multiply-strings",
+      "title": "Multiply Strings",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    },
+    {
+      "difficulty": "Easy",
+      "titleSlug": "plus-one",
+      "title": "Plus One",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    },
+    {
+      "difficulty": "Easy",
+      "titleSlug": "add-to-array-form-of-integer",
+      "title": "Add to Array-Form of Integer",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    }
+  ],
+  "status": null,
+  "title": "Add Binary",
+  "topicTags": [
+    {
+      "name": "Math",
+      "id": "VG9waWNUYWdOb2RlOjg=",
+      "slug": "math"
+    },
+    {
+      "name": "String",
+      "id": "VG9waWNUYWdOb2RlOjEw",
+      "slug": "string"
+    },
+    {
+      "name": "Bit Manipulation",
+      "id": "VG9waWNUYWdOb2RlOjE5",
+      "slug": "bit-manipulation"
+    },
+    {
+      "name": "Simulation",
+      "id": "VG9waWNUYWdOb2RlOjYxMDU1",
+      "slug": "simulation"
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "titleSlug": "reverse-words-in-a-string",
+  "acRate": 41.29040718334315,
+  "content": "<p>Given an input string <code>s</code>, reverse the order of the <strong>words</strong>.</p>\n\n<p>A <strong>word</strong> is defined as a sequence of non-space characters. The <strong>words</strong> in <code>s</code> will be separated by at least one space.</p>\n\n<p>Return <em>a string of the words in reverse order concatenated by a single space.</em></p>\n\n<p><b>Note</b> that <code>s</code> may contain leading or trailing spaces or multiple spaces between two words. The returned string should only have a single space separating the words. Do not include any extra spaces.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> s = &quot;the sky is blue&quot;\n<strong>Output:</strong> &quot;blue is sky the&quot;\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> s = &quot;  hello world  &quot;\n<strong>Output:</strong> &quot;world hello&quot;\n<strong>Explanation:</strong> Your reversed string should not contain leading or trailing spaces.\n</pre>\n\n<p><strong class=\"example\">Example 3:</strong></p>\n\n<pre>\n<strong>Input:</strong> s = &quot;a good   example&quot;\n<strong>Output:</strong> &quot;example good a&quot;\n<strong>Explanation:</strong> You need to reduce multiple spaces between two words to a single space in the reversed string.\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= s.length &lt;= 10<sup>4</sup></code></li>\n\t<li><code>s</code> contains English letters (upper-case and lower-case), digits, and spaces <code>&#39; &#39;</code>.</li>\n\t<li>There is <strong>at least one</strong> word in <code>s</code>.</li>\n</ul>\n\n<p>&nbsp;</p>\n<p><b data-stringify-type=\"bold\">Follow-up:&nbsp;</b>If the string data type is mutable in your language, can&nbsp;you solve it&nbsp;<b data-stringify-type=\"bold\">in-place</b>&nbsp;with&nbsp;<code data-stringify-type=\"code\">O(1)</code>&nbsp;extra space?</p>\n",
+  "difficulty": "Medium",
+  "freqBar": null,
+  "frontendQuestionId": "151",
+  "hasSolution": true,
+  "hasVideoSolution": false,
+  "hints": [],
+  "isFavor": false,
+  "paidOnly": false,
+  "similarQuestionList": [
+    {
+      "difficulty": "Medium",
+      "titleSlug": "reverse-words-in-a-string-ii",
+      "title": "Reverse Words in a String II",
+      "translatedTitle": null,
+      "isPaidOnly": true
+    }
+  ],
+  "status": null,
+  "title": "Reverse Words in a String",
+  "topicTags": [
+    {
+      "name": "Two Pointers",
+      "id": "VG9waWNUYWdOb2RlOjk=",
+      "slug": "two-pointers"
+    },
+    {
+      "name": "String",
+      "id": "VG9waWNUYWdOb2RlOjEw",
+      "slug": "string"
+    }
+  ]
+}

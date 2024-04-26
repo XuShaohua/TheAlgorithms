@@ -1,0 +1,48 @@
+{
+  "titleSlug": "letter-case-permutation",
+  "acRate": 74.13775822149165,
+  "content": "<p>Given a string <code>s</code>, you&nbsp;can transform every letter individually to be lowercase or uppercase to create another string.</p>\n\n<p>Return <em>a list of all possible strings we could create</em>. Return the output in <strong>any order</strong>.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> s = &quot;a1b2&quot;\n<strong>Output:</strong> [&quot;a1b2&quot;,&quot;a1B2&quot;,&quot;A1b2&quot;,&quot;A1B2&quot;]\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> s = &quot;3z4&quot;\n<strong>Output:</strong> [&quot;3z4&quot;,&quot;3Z4&quot;]\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= s.length &lt;= 12</code></li>\n\t<li><code>s</code> consists of lowercase English letters, uppercase English letters, and digits.</li>\n</ul>\n",
+  "difficulty": "Medium",
+  "freqBar": null,
+  "frontendQuestionId": "784",
+  "hasSolution": true,
+  "hasVideoSolution": false,
+  "hints": [],
+  "isFavor": false,
+  "paidOnly": false,
+  "similarQuestionList": [
+    {
+      "difficulty": "Medium",
+      "titleSlug": "subsets",
+      "title": "Subsets",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    },
+    {
+      "difficulty": "Medium",
+      "titleSlug": "brace-expansion",
+      "title": "Brace Expansion",
+      "translatedTitle": null,
+      "isPaidOnly": true
+    }
+  ],
+  "status": null,
+  "title": "Letter Case Permutation",
+  "topicTags": [
+    {
+      "name": "String",
+      "id": "VG9waWNUYWdOb2RlOjEw",
+      "slug": "string"
+    },
+    {
+      "name": "Backtracking",
+      "id": "VG9waWNUYWdOb2RlOjE0",
+      "slug": "backtracking"
+    },
+    {
+      "name": "Bit Manipulation",
+      "id": "VG9waWNUYWdOb2RlOjE5",
+      "slug": "bit-manipulation"
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "titleSlug": "similar-rgb-color",
+  "acRate": 67.35407337575616,
+  "content": null,
+  "difficulty": "Easy",
+  "freqBar": null,
+  "frontendQuestionId": "800",
+  "hasSolution": true,
+  "hasVideoSolution": false,
+  "hints": [],
+  "isFavor": false,
+  "paidOnly": true,
+  "similarQuestionList": [],
+  "status": null,
+  "title": "Similar RGB Color",
+  "topicTags": [
+    {
+      "name": "Math",
+      "id": "VG9waWNUYWdOb2RlOjg=",
+      "slug": "math"
+    },
+    {
+      "name": "String",
+      "id": "VG9waWNUYWdOb2RlOjEw",
+      "slug": "string"
+    },
+    {
+      "name": "Enumeration",
+      "id": "VG9waWNUYWdOb2RlOjYxMDY2",
+      "slug": "enumeration"
+    }
+  ]
+}

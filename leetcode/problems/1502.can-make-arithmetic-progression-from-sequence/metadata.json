@@ -1,0 +1,39 @@
+{
+  "titleSlug": "can-make-arithmetic-progression-from-sequence",
+  "acRate": 69.61053526109804,
+  "content": "<p>A sequence of numbers is called an <strong>arithmetic progression</strong> if the difference between any two consecutive elements is the same.</p>\n\n<p>Given an array of numbers <code>arr</code>, return <code>true</code> <em>if the array can be rearranged to form an <strong>arithmetic progression</strong>. Otherwise, return</em> <code>false</code>.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> arr = [3,5,1]\n<strong>Output:</strong> true\n<strong>Explanation: </strong>We can reorder the elements as [1,3,5] or [5,3,1] with differences 2 and -2 respectively, between each consecutive elements.\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> arr = [1,2,4]\n<strong>Output:</strong> false\n<strong>Explanation: </strong>There is no way to reorder the elements to obtain an arithmetic progression.\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>2 &lt;= arr.length &lt;= 1000</code></li>\n\t<li><code>-10<sup>6</sup> &lt;= arr[i] &lt;= 10<sup>6</sup></code></li>\n</ul>\n",
+  "difficulty": "Easy",
+  "freqBar": null,
+  "frontendQuestionId": "1502",
+  "hasSolution": true,
+  "hasVideoSolution": false,
+  "hints": [
+    "Consider that any valid arithmetic progression will be in sorted order.",
+    "Sort the array, then check if the differences of all consecutive elements are equal."
+  ],
+  "isFavor": false,
+  "paidOnly": false,
+  "similarQuestionList": [
+    {
+      "difficulty": "Medium",
+      "titleSlug": "arithmetic-subarrays",
+      "title": "Arithmetic Subarrays",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    }
+  ],
+  "status": null,
+  "title": "Can Make Arithmetic Progression From Sequence",
+  "topicTags": [
+    {
+      "name": "Array",
+      "id": "VG9waWNUYWdOb2RlOjU=",
+      "slug": "array"
+    },
+    {
+      "name": "Sorting",
+      "id": "VG9waWNUYWdOb2RlOjYxMDQ5",
+      "slug": "sorting"
+    }
+  ]
+}

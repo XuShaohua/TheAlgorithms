@@ -1,0 +1,23 @@
+{
+  "titleSlug": "change-null-values-in-a-table-to-the-previous-value",
+  "acRate": 49.993416721527325,
+  "content": null,
+  "difficulty": "Medium",
+  "freqBar": null,
+  "frontendQuestionId": "2388",
+  "hasSolution": false,
+  "hasVideoSolution": false,
+  "hints": [],
+  "isFavor": false,
+  "paidOnly": true,
+  "similarQuestionList": [],
+  "status": null,
+  "title": "Change Null Values in a Table to the Previous Value",
+  "topicTags": [
+    {
+      "name": "Database",
+      "id": "VG9waWNUYWdOb2RlOjYxMDQz",
+      "slug": "database"
+    }
+  ]
+}

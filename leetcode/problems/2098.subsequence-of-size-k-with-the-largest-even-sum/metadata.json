@@ -1,0 +1,59 @@
+{
+  "titleSlug": "subsequence-of-size-k-with-the-largest-even-sum",
+  "acRate": 36.86456633613656,
+  "content": null,
+  "difficulty": "Medium",
+  "freqBar": null,
+  "frontendQuestionId": "2098",
+  "hasSolution": false,
+  "hasVideoSolution": false,
+  "hints": [
+    "Is the sum of two even numbers even or odd? How about two odd numbers? One odd number and one even number?",
+    "If there is an even number of odd numbers, the sum will be even and vice versa.",
+    "Create an integer array to store all the even numbers in nums and another array to store all the odd numbers in nums. Sort both arrays."
+  ],
+  "isFavor": false,
+  "paidOnly": true,
+  "similarQuestionList": [
+    {
+      "difficulty": "Hard",
+      "titleSlug": "split-array-largest-sum",
+      "title": "Split Array Largest Sum",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    },
+    {
+      "difficulty": "Medium",
+      "titleSlug": "partition-array-for-maximum-sum",
+      "title": "Partition Array for Maximum Sum",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    },
+    {
+      "difficulty": "Medium",
+      "titleSlug": "number-of-sub-arrays-with-odd-sum",
+      "title": "Number of Sub-arrays With Odd Sum",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    }
+  ],
+  "status": null,
+  "title": "Subsequence of Size K With the Largest Even Sum",
+  "topicTags": [
+    {
+      "name": "Array",
+      "id": "VG9waWNUYWdOb2RlOjU=",
+      "slug": "array"
+    },
+    {
+      "name": "Greedy",
+      "id": "VG9waWNUYWdOb2RlOjE3",
+      "slug": "greedy"
+    },
+    {
+      "name": "Sorting",
+      "id": "VG9waWNUYWdOb2RlOjYxMDQ5",
+      "slug": "sorting"
+    }
+  ]
+}

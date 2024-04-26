@@ -1,0 +1,48 @@
+{
+  "titleSlug": "power-of-four",
+  "acRate": 47.887231059696674,
+  "content": "<p>Given an integer <code>n</code>, return <em><code>true</code> if it is a power of four. Otherwise, return <code>false</code></em>.</p>\n\n<p>An integer <code>n</code> is a power of four, if there exists an integer <code>x</code> such that <code>n == 4<sup>x</sup></code>.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n<pre><strong>Input:</strong> n = 16\n<strong>Output:</strong> true\n</pre><p><strong class=\"example\">Example 2:</strong></p>\n<pre><strong>Input:</strong> n = 5\n<strong>Output:</strong> false\n</pre><p><strong class=\"example\">Example 3:</strong></p>\n<pre><strong>Input:</strong> n = 1\n<strong>Output:</strong> true\n</pre>\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>-2<sup>31</sup> &lt;= n &lt;= 2<sup>31</sup> - 1</code></li>\n</ul>\n\n<p>&nbsp;</p>\n<strong>Follow up:</strong> Could you solve it without loops/recursion?",
+  "difficulty": "Easy",
+  "freqBar": null,
+  "frontendQuestionId": "342",
+  "hasSolution": true,
+  "hasVideoSolution": false,
+  "hints": [],
+  "isFavor": false,
+  "paidOnly": false,
+  "similarQuestionList": [
+    {
+      "difficulty": "Easy",
+      "titleSlug": "power-of-two",
+      "title": "Power of Two",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    },
+    {
+      "difficulty": "Easy",
+      "titleSlug": "power-of-three",
+      "title": "Power of Three",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    }
+  ],
+  "status": null,
+  "title": "Power of Four",
+  "topicTags": [
+    {
+      "name": "Math",
+      "id": "VG9waWNUYWdOb2RlOjg=",
+      "slug": "math"
+    },
+    {
+      "name": "Bit Manipulation",
+      "id": "VG9waWNUYWdOb2RlOjE5",
+      "slug": "bit-manipulation"
+    },
+    {
+      "name": "Recursion",
+      "id": "VG9waWNUYWdOb2RlOjMx",
+      "slug": "recursion"
+    }
+  ]
+}

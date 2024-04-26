@@ -1,0 +1,41 @@
+{
+  "titleSlug": "number-of-days-between-two-dates",
+  "acRate": 49.49696969696969,
+  "content": "<p>Write a program to count the number of days between two dates.</p>\n\n<p>The two dates are given as strings, their format is <code>YYYY-MM-DD</code>&nbsp;as shown in the examples.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n<pre><strong>Input:</strong> date1 = \"2019-06-29\", date2 = \"2019-06-30\"\n<strong>Output:</strong> 1\n</pre><p><strong class=\"example\">Example 2:</strong></p>\n<pre><strong>Input:</strong> date1 = \"2020-01-15\", date2 = \"2019-12-31\"\n<strong>Output:</strong> 15\n</pre>\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li>The given dates are valid&nbsp;dates between the years <code>1971</code> and <code>2100</code>.</li>\n</ul>\n",
+  "difficulty": "Easy",
+  "freqBar": null,
+  "frontendQuestionId": "1360",
+  "hasSolution": false,
+  "hasVideoSolution": false,
+  "hints": [
+    "Create a function f(date) that counts the number of days from 1900-01-01 to date. How can we calculate the answer ?",
+    "The answer is just |f(date1) - f(date2)|.",
+    "How to construct f(date) ?",
+    "For each year from 1900 to year - 1 sum up 365 or 366 in case of leap years. Then sum up for each month the number of days, consider the case when the current year is leap, finally sum up the days."
+  ],
+  "isFavor": false,
+  "paidOnly": false,
+  "similarQuestionList": [
+    {
+      "difficulty": "Easy",
+      "titleSlug": "count-days-spent-together",
+      "title": "Count Days Spent Together",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    }
+  ],
+  "status": null,
+  "title": "Number of Days Between Two Dates",
+  "topicTags": [
+    {
+      "name": "Math",
+      "id": "VG9waWNUYWdOb2RlOjg=",
+      "slug": "math"
+    },
+    {
+      "name": "String",
+      "id": "VG9waWNUYWdOb2RlOjEw",
+      "slug": "string"
+    }
+  ]
+}

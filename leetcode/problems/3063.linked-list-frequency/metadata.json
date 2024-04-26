@@ -1,0 +1,43 @@
+{
+  "titleSlug": "linked-list-frequency",
+  "acRate": 87.96377814111432,
+  "content": null,
+  "difficulty": "Easy",
+  "freqBar": null,
+  "frontendQuestionId": "3063",
+  "hasSolution": true,
+  "hasVideoSolution": false,
+  "hints": [
+    "Traverse the linked list and keep the number of occurrences of values using a HashMap."
+  ],
+  "isFavor": false,
+  "paidOnly": true,
+  "similarQuestionList": [
+    {
+      "difficulty": "Medium",
+      "titleSlug": "top-k-frequent-elements",
+      "title": "Top K Frequent Elements",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    }
+  ],
+  "status": null,
+  "title": "Linked List Frequency",
+  "topicTags": [
+    {
+      "name": "Hash Table",
+      "id": "VG9waWNUYWdOb2RlOjY=",
+      "slug": "hash-table"
+    },
+    {
+      "name": "Linked List",
+      "id": "VG9waWNUYWdOb2RlOjc=",
+      "slug": "linked-list"
+    },
+    {
+      "name": "Counting",
+      "id": "VG9waWNUYWdOb2RlOjYxMDYy",
+      "slug": "counting"
+    }
+  ]
+}

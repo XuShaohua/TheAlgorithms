@@ -1,0 +1,43 @@
+{
+  "titleSlug": "filter-elements-from-array",
+  "acRate": 84.10171721463126,
+  "content": "<p>Given an integer array <code>arr</code> and a filtering function <code>fn</code>, return a filtered array <code>filteredArr</code>.</p>\n\n<p>The <code>fn</code> function takes one or two arguments:</p>\n\n<ul>\n\t<li><code>arr[i]</code> - number&nbsp;from&nbsp;the <code>arr</code></li>\n\t<li><code>i</code>&nbsp;- index of <code>arr[i]</code></li>\n</ul>\n\n<p><code>filteredArr</code> should only contain the elements from the&nbsp;<code>arr</code> for which the expression <code>fn(arr[i], i)</code> evaluates to a <strong>truthy</strong> value. A&nbsp;<strong>truthy</strong>&nbsp;value is a value where&nbsp;<code>Boolean(value)</code>&nbsp;returns&nbsp;<code>true</code>.</p>\n\n<p>Please solve it without the built-in <code>Array.filter</code> method.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> arr = [0,10,20,30], fn = function greaterThan10(n) { return n &gt; 10; }\n<strong>Output:</strong> [20,30]\n<strong>Explanation:</strong>\nconst newArray = filter(arr, fn); // [20, 30]\nThe function filters out values that are not greater than 10</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> arr = [1,2,3], fn = function firstIndex(n, i) { return i === 0; }\n<strong>Output:</strong> [1]\n<strong>Explanation:</strong>\nfn can also accept the index of each element\nIn this case, the function removes elements not at index 0\n</pre>\n\n<p><strong class=\"example\">Example 3:</strong></p>\n\n<pre>\n<strong>Input:</strong> arr = [-2,-1,0,1,2], fn = function plusOne(n) { return n + 1 }\n<strong>Output:</strong> [-2,0,1,2]\n<strong>Explanation:</strong>\nFalsey values such as 0 should be filtered out\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>0 &lt;= arr.length &lt;= 1000</code></li>\n\t<li><code>-10<sup>9</sup>&nbsp;&lt;= arr[i] &lt;= 10<sup>9</sup></code></li>\n</ul>\n",
+  "difficulty": "Easy",
+  "freqBar": null,
+  "frontendQuestionId": "2634",
+  "hasSolution": true,
+  "hasVideoSolution": false,
+  "hints": [
+    "Start by declaring a new array which will eventually be returned.",
+    "In Javascript, there is the concept of \"truthiness\" and \"falsiness\". Values such as 0, undefined, null, and false are falsy. Most values are truthy: 1, {}, [], true, etc. In Javascript, the contents of if-statements don't need to be booleans. You can say \"if ([1,2,3]) {}\", and it's equivalent to saying 'if (true) {}\".",
+    "Loop over each element in the array. If fn(arr[i]) is truthy, push it to the array."
+  ],
+  "isFavor": false,
+  "paidOnly": false,
+  "similarQuestionList": [
+    {
+      "difficulty": "Medium",
+      "titleSlug": "group-by",
+      "title": "Group By",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    },
+    {
+      "difficulty": "Easy",
+      "titleSlug": "apply-transform-over-each-element-in-array",
+      "title": "Apply Transform Over Each Element in Array",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    },
+    {
+      "difficulty": "Easy",
+      "titleSlug": "array-reduce-transformation",
+      "title": "Array Reduce Transformation",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    }
+  ],
+  "status": null,
+  "title": "Filter Elements from Array",
+  "topicTags": []
+}

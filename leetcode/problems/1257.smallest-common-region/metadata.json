@@ -1,0 +1,67 @@
+{
+  "titleSlug": "smallest-common-region",
+  "acRate": 65.06581287797937,
+  "content": null,
+  "difficulty": "Medium",
+  "freqBar": null,
+  "frontendQuestionId": "1257",
+  "hasSolution": false,
+  "hasVideoSolution": false,
+  "hints": [
+    "Try to model the problem as a graph problem.",
+    "The given graph is a tree.",
+    "The problem is reduced to finding the lowest common ancestor of two nodes in a tree."
+  ],
+  "isFavor": false,
+  "paidOnly": true,
+  "similarQuestionList": [
+    {
+      "difficulty": "Medium",
+      "titleSlug": "lowest-common-ancestor-of-a-binary-search-tree",
+      "title": "Lowest Common Ancestor of a Binary Search Tree",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    },
+    {
+      "difficulty": "Medium",
+      "titleSlug": "lowest-common-ancestor-of-a-binary-tree",
+      "title": "Lowest Common Ancestor of a Binary Tree",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    }
+  ],
+  "status": null,
+  "title": "Smallest Common Region",
+  "topicTags": [
+    {
+      "name": "Array",
+      "id": "VG9waWNUYWdOb2RlOjU=",
+      "slug": "array"
+    },
+    {
+      "name": "Hash Table",
+      "id": "VG9waWNUYWdOb2RlOjY=",
+      "slug": "hash-table"
+    },
+    {
+      "name": "String",
+      "id": "VG9waWNUYWdOb2RlOjEw",
+      "slug": "string"
+    },
+    {
+      "name": "Tree",
+      "id": "VG9waWNUYWdOb2RlOjIw",
+      "slug": "tree"
+    },
+    {
+      "name": "Depth-First Search",
+      "id": "VG9waWNUYWdOb2RlOjIx",
+      "slug": "depth-first-search"
+    },
+    {
+      "name": "Breadth-First Search",
+      "id": "VG9waWNUYWdOb2RlOjIy",
+      "slug": "breadth-first-search"
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "titleSlug": "sum-of-digits-in-the-minimum-number",
+  "acRate": 76.47701703632272,
+  "content": null,
+  "difficulty": "Easy",
+  "freqBar": null,
+  "frontendQuestionId": "1085",
+  "hasSolution": false,
+  "hasVideoSolution": false,
+  "hints": [
+    "How to find the minimum number in an array?",
+    "Loop over the array and compare each one of the numbers.",
+    "How to find the sum of digits?",
+    "Divide the number consecutively and get their remainder modulus 10. Sum those remainders and return the answer as the problem asks."
+  ],
+  "isFavor": false,
+  "paidOnly": true,
+  "similarQuestionList": [
+    {
+      "difficulty": "Easy",
+      "titleSlug": "add-digits",
+      "title": "Add Digits",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    }
+  ],
+  "status": null,
+  "title": "Sum of Digits in the Minimum Number",
+  "topicTags": [
+    {
+      "name": "Array",
+      "id": "VG9waWNUYWdOb2RlOjU=",
+      "slug": "array"
+    },
+    {
+      "name": "Math",
+      "id": "VG9waWNUYWdOb2RlOjg=",
+      "slug": "math"
+    }
+  ]
+}

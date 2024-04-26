@@ -1,0 +1,46 @@
+{
+  "titleSlug": "visit-array-positions-to-maximize-score",
+  "acRate": 35.54817928271202,
+  "content": "<p>You are given a <strong>0-indexed</strong> integer array <code>nums</code> and a positive integer <code>x</code>.</p>\n\n<p>You are <strong>initially</strong> at position <code>0</code> in the array and you can visit other positions according to the following rules:</p>\n\n<ul>\n\t<li>If you are currently in position <code>i</code>, then you can move to <strong>any</strong> position <code>j</code> such that <code>i &lt; j</code>.</li>\n\t<li>For each position <code>i</code> that you visit, you get a score of <code>nums[i]</code>.</li>\n\t<li>If you move from a position <code>i</code> to a position <code>j</code> and the <strong>parities</strong> of <code>nums[i]</code> and <code>nums[j]</code> differ, then you lose a score of <code>x</code>.</li>\n</ul>\n\n<p>Return <em>the <strong>maximum</strong> total score you can get</em>.</p>\n\n<p><strong>Note</strong> that initially you have <code>nums[0]</code> points.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [2,3,6,1,9,2], x = 5\n<strong>Output:</strong> 13\n<strong>Explanation:</strong> We can visit the following positions in the array: 0 -&gt; 2 -&gt; 3 -&gt; 4.\nThe corresponding values are 2, 6, 1 and 9. Since the integers 6 and 1 have different parities, the move 2 -&gt; 3 will make you lose a score of x = 5.\nThe total score will be: 2 + 6 + 1 + 9 - 5 = 13.\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [2,4,6,8], x = 3\n<strong>Output:</strong> 20\n<strong>Explanation:</strong> All the integers in the array have the same parities, so we can visit all of them without losing any score.\nThe total score is: 2 + 4 + 6 + 8 = 20.\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>2 &lt;= nums.length &lt;= 10<sup>5</sup></code></li>\n\t<li><code>1 &lt;= nums[i], x &lt;= 10<sup>6</sup></code></li>\n</ul>\n",
+  "difficulty": "Medium",
+  "freqBar": null,
+  "frontendQuestionId": "2786",
+  "hasSolution": false,
+  "hasVideoSolution": false,
+  "hints": [
+    "How can we use dynamic programming to solve the problem?",
+    "Let dp[i] be the answer to the subarray nums[0…i]. What are the transitions of this dp?"
+  ],
+  "isFavor": false,
+  "paidOnly": false,
+  "similarQuestionList": [
+    {
+      "difficulty": "Medium",
+      "titleSlug": "jump-game-ii",
+      "title": "Jump Game II",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    },
+    {
+      "difficulty": "Medium",
+      "titleSlug": "stone-game",
+      "title": "Stone Game",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    }
+  ],
+  "status": null,
+  "title": "Visit Array Positions to Maximize Score",
+  "topicTags": [
+    {
+      "name": "Array",
+      "id": "VG9waWNUYWdOb2RlOjU=",
+      "slug": "array"
+    },
+    {
+      "name": "Dynamic Programming",
+      "id": "VG9waWNUYWdOb2RlOjEz",
+      "slug": "dynamic-programming"
+    }
+  ]
+}

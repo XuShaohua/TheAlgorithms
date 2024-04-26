@@ -1,0 +1,37 @@
+{
+  "titleSlug": "number-of-ships-in-a-rectangle",
+  "acRate": 68.64190462558744,
+  "content": null,
+  "difficulty": "Hard",
+  "freqBar": null,
+  "frontendQuestionId": "1274",
+  "hasSolution": true,
+  "hasVideoSolution": false,
+  "hints": [
+    "Use divide and conquer technique.",
+    "Divide the query rectangle into 4 rectangles.",
+    "Use recursion to continue with the rectangles that has ships only."
+  ],
+  "isFavor": false,
+  "paidOnly": true,
+  "similarQuestionList": [],
+  "status": null,
+  "title": "Number of Ships in a Rectangle",
+  "topicTags": [
+    {
+      "name": "Array",
+      "id": "VG9waWNUYWdOb2RlOjU=",
+      "slug": "array"
+    },
+    {
+      "name": "Divide and Conquer",
+      "id": "VG9waWNUYWdOb2RlOjEy",
+      "slug": "divide-and-conquer"
+    },
+    {
+      "name": "Interactive",
+      "id": "VG9waWNUYWdOb2RlOjYxMDU5",
+      "slug": "interactive"
+    }
+  ]
+}

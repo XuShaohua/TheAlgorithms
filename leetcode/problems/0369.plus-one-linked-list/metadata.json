@@ -1,0 +1,43 @@
+{
+  "titleSlug": "plus-one-linked-list",
+  "acRate": 61.00196994862684,
+  "content": null,
+  "difficulty": "Medium",
+  "freqBar": null,
+  "frontendQuestionId": "369",
+  "hasSolution": true,
+  "hasVideoSolution": true,
+  "hints": [],
+  "isFavor": false,
+  "paidOnly": true,
+  "similarQuestionList": [
+    {
+      "difficulty": "Easy",
+      "titleSlug": "plus-one",
+      "title": "Plus One",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    },
+    {
+      "difficulty": "Medium",
+      "titleSlug": "double-a-number-represented-as-a-linked-list",
+      "title": "Double a Number Represented as a Linked List",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    }
+  ],
+  "status": null,
+  "title": "Plus One Linked List",
+  "topicTags": [
+    {
+      "name": "Linked List",
+      "id": "VG9waWNUYWdOb2RlOjc=",
+      "slug": "linked-list"
+    },
+    {
+      "name": "Math",
+      "id": "VG9waWNUYWdOb2RlOjg=",
+      "slug": "math"
+    }
+  ]
+}

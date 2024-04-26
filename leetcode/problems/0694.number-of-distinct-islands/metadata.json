@@ -1,0 +1,65 @@
+{
+  "titleSlug": "number-of-distinct-islands",
+  "acRate": 61.15927613062203,
+  "content": null,
+  "difficulty": "Medium",
+  "freqBar": null,
+  "frontendQuestionId": "694",
+  "hasSolution": true,
+  "hasVideoSolution": true,
+  "hints": [],
+  "isFavor": false,
+  "paidOnly": true,
+  "similarQuestionList": [
+    {
+      "difficulty": "Medium",
+      "titleSlug": "number-of-islands",
+      "title": "Number of Islands",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    },
+    {
+      "difficulty": "Hard",
+      "titleSlug": "number-of-distinct-islands-ii",
+      "title": "Number of Distinct Islands II",
+      "translatedTitle": null,
+      "isPaidOnly": true
+    },
+    {
+      "difficulty": "Medium",
+      "titleSlug": "count-sub-islands",
+      "title": "Count Sub Islands",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    }
+  ],
+  "status": null,
+  "title": "Number of Distinct Islands",
+  "topicTags": [
+    {
+      "name": "Hash Table",
+      "id": "VG9waWNUYWdOb2RlOjY=",
+      "slug": "hash-table"
+    },
+    {
+      "name": "Depth-First Search",
+      "id": "VG9waWNUYWdOb2RlOjIx",
+      "slug": "depth-first-search"
+    },
+    {
+      "name": "Breadth-First Search",
+      "id": "VG9waWNUYWdOb2RlOjIy",
+      "slug": "breadth-first-search"
+    },
+    {
+      "name": "Union Find",
+      "id": "VG9waWNUYWdOb2RlOjIz",
+      "slug": "union-find"
+    },
+    {
+      "name": "Hash Function",
+      "id": "VG9waWNUYWdOb2RlOjYxMDY1",
+      "slug": "hash-function"
+    }
+  ]
+}

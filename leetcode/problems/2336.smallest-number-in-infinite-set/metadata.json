@@ -1,0 +1,44 @@
+{
+  "titleSlug": "smallest-number-in-infinite-set",
+  "acRate": 72.09393166517314,
+  "content": "<p>You have a set which contains all positive integers <code>[1, 2, 3, 4, 5, ...]</code>.</p>\n\n<p>Implement the <code>SmallestInfiniteSet</code> class:</p>\n\n<ul>\n\t<li><code>SmallestInfiniteSet()</code> Initializes the <strong>SmallestInfiniteSet</strong> object to contain <strong>all</strong> positive integers.</li>\n\t<li><code>int popSmallest()</code> <strong>Removes</strong> and returns the smallest integer contained in the infinite set.</li>\n\t<li><code>void addBack(int num)</code> <strong>Adds</strong> a positive integer <code>num</code> back into the infinite set, if it is <strong>not</strong> already in the infinite set.</li>\n</ul>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input</strong>\n[&quot;SmallestInfiniteSet&quot;, &quot;addBack&quot;, &quot;popSmallest&quot;, &quot;popSmallest&quot;, &quot;popSmallest&quot;, &quot;addBack&quot;, &quot;popSmallest&quot;, &quot;popSmallest&quot;, &quot;popSmallest&quot;]\n[[], [2], [], [], [], [1], [], [], []]\n<strong>Output</strong>\n[null, null, 1, 2, 3, null, 1, 4, 5]\n\n<strong>Explanation</strong>\nSmallestInfiniteSet smallestInfiniteSet = new SmallestInfiniteSet();\nsmallestInfiniteSet.addBack(2);    // 2 is already in the set, so no change is made.\nsmallestInfiniteSet.popSmallest(); // return 1, since 1 is the smallest number, and remove it from the set.\nsmallestInfiniteSet.popSmallest(); // return 2, and remove it from the set.\nsmallestInfiniteSet.popSmallest(); // return 3, and remove it from the set.\nsmallestInfiniteSet.addBack(1);    // 1 is added back to the set.\nsmallestInfiniteSet.popSmallest(); // return 1, since 1 was added back to the set and\n                                   // is the smallest number, and remove it from the set.\nsmallestInfiniteSet.popSmallest(); // return 4, and remove it from the set.\nsmallestInfiniteSet.popSmallest(); // return 5, and remove it from the set.\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= num &lt;= 1000</code></li>\n\t<li>At most <code>1000</code> calls will be made <strong>in total</strong> to <code>popSmallest</code> and <code>addBack</code>.</li>\n</ul>\n",
+  "difficulty": "Medium",
+  "freqBar": null,
+  "frontendQuestionId": "2336",
+  "hasSolution": true,
+  "hasVideoSolution": false,
+  "hints": [
+    "Based on the constraints, what is the maximum element that can possibly be popped?",
+    "Maintain whether elements are in or not in the set. How many elements do we consider?"
+  ],
+  "isFavor": false,
+  "paidOnly": false,
+  "similarQuestionList": [
+    {
+      "difficulty": "Hard",
+      "titleSlug": "first-missing-positive",
+      "title": "First Missing Positive",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    }
+  ],
+  "status": null,
+  "title": "Smallest Number in Infinite Set",
+  "topicTags": [
+    {
+      "name": "Hash Table",
+      "id": "VG9waWNUYWdOb2RlOjY=",
+      "slug": "hash-table"
+    },
+    {
+      "name": "Design",
+      "id": "VG9waWNUYWdOb2RlOjI1",
+      "slug": "design"
+    },
+    {
+      "name": "Heap (Priority Queue)",
+      "id": "VG9waWNUYWdOb2RlOjYxMDUw",
+      "slug": "heap-priority-queue"
+    }
+  ]
+}

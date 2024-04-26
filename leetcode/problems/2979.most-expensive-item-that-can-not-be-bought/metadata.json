@@ -1,0 +1,60 @@
+{
+  "titleSlug": "most-expensive-item-that-can-not-be-bought",
+  "acRate": 79.36636880584891,
+  "content": null,
+  "difficulty": "Medium",
+  "freqBar": null,
+  "frontendQuestionId": "2979",
+  "hasSolution": false,
+  "hasVideoSolution": false,
+  "hints": [
+    "Write out a few cases. It can be seen that all items greater than <code>primeOne * primeTwo</code> can always be bought.",
+    "If we can buy items with cost <code>i</code>, we can also buy items with price <code>i + primeOne</code> and <code>i + primeTwo</code>.",
+    "Use dynamic programming.",
+    "There is an O(1) solution: Use the Chicken McNugget Theorem."
+  ],
+  "isFavor": false,
+  "paidOnly": true,
+  "similarQuestionList": [
+    {
+      "difficulty": "Medium",
+      "titleSlug": "coin-change",
+      "title": "Coin Change",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    },
+    {
+      "difficulty": "Medium",
+      "titleSlug": "minimum-cost-for-tickets",
+      "title": "Minimum Cost For Tickets",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    },
+    {
+      "difficulty": "Medium",
+      "titleSlug": "minimum-number-of-coins-to-be-added",
+      "title": "Minimum Number of Coins to be Added",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    }
+  ],
+  "status": null,
+  "title": "Most Expensive Item That Can Not Be Bought",
+  "topicTags": [
+    {
+      "name": "Math",
+      "id": "VG9waWNUYWdOb2RlOjg=",
+      "slug": "math"
+    },
+    {
+      "name": "Dynamic Programming",
+      "id": "VG9waWNUYWdOb2RlOjEz",
+      "slug": "dynamic-programming"
+    },
+    {
+      "name": "Number Theory",
+      "id": "VG9waWNUYWdOb2RlOjYxMDY3",
+      "slug": "number-theory"
+    }
+  ]
+}

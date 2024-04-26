@@ -1,0 +1,23 @@
+{
+  "titleSlug": "fix-product-name-format",
+  "acRate": 59.619093539054965,
+  "content": null,
+  "difficulty": "Easy",
+  "freqBar": null,
+  "frontendQuestionId": "1543",
+  "hasSolution": false,
+  "hasVideoSolution": false,
+  "hints": [],
+  "isFavor": false,
+  "paidOnly": true,
+  "similarQuestionList": [],
+  "status": null,
+  "title": "Fix Product Name Format",
+  "topicTags": [
+    {
+      "name": "Database",
+      "id": "VG9waWNUYWdOb2RlOjYxMDQz",
+      "slug": "database"
+    }
+  ]
+}

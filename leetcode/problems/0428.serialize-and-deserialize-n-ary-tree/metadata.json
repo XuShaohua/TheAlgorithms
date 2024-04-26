@@ -1,0 +1,60 @@
+{
+  "titleSlug": "serialize-and-deserialize-n-ary-tree",
+  "acRate": 66.82572875066822,
+  "content": null,
+  "difficulty": "Hard",
+  "freqBar": null,
+  "frontendQuestionId": "428",
+  "hasSolution": true,
+  "hasVideoSolution": false,
+  "hints": [],
+  "isFavor": false,
+  "paidOnly": true,
+  "similarQuestionList": [
+    {
+      "difficulty": "Hard",
+      "titleSlug": "serialize-and-deserialize-binary-tree",
+      "title": "Serialize and Deserialize Binary Tree",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    },
+    {
+      "difficulty": "Medium",
+      "titleSlug": "serialize-and-deserialize-bst",
+      "title": "Serialize and Deserialize BST",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    },
+    {
+      "difficulty": "Hard",
+      "titleSlug": "encode-n-ary-tree-to-binary-tree",
+      "title": "Encode N-ary Tree to Binary Tree",
+      "translatedTitle": null,
+      "isPaidOnly": true
+    }
+  ],
+  "status": null,
+  "title": "Serialize and Deserialize N-ary Tree",
+  "topicTags": [
+    {
+      "name": "String",
+      "id": "VG9waWNUYWdOb2RlOjEw",
+      "slug": "string"
+    },
+    {
+      "name": "Tree",
+      "id": "VG9waWNUYWdOb2RlOjIw",
+      "slug": "tree"
+    },
+    {
+      "name": "Depth-First Search",
+      "id": "VG9waWNUYWdOb2RlOjIx",
+      "slug": "depth-first-search"
+    },
+    {
+      "name": "Breadth-First Search",
+      "id": "VG9waWNUYWdOb2RlOjIy",
+      "slug": "breadth-first-search"
+    }
+  ]
+}

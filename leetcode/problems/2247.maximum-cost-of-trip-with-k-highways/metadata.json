@@ -1,0 +1,57 @@
+{
+  "titleSlug": "maximum-cost-of-trip-with-k-highways",
+  "acRate": 49.29187192118227,
+  "content": null,
+  "difficulty": "Hard",
+  "freqBar": null,
+  "frontendQuestionId": "2247",
+  "hasSolution": false,
+  "hasVideoSolution": false,
+  "hints": [
+    "Are there any computations being repeated?",
+    "The same path can be visited multiple times. Could we reuse the previously calculated result?",
+    "Store the nodes seen on the current path and the last node on the current path as a dynamic programming state."
+  ],
+  "isFavor": false,
+  "paidOnly": true,
+  "similarQuestionList": [
+    {
+      "difficulty": "Hard",
+      "titleSlug": "minimum-cost-to-reach-destination-in-time",
+      "title": "Minimum Cost to Reach Destination in Time",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    },
+    {
+      "difficulty": "Medium",
+      "titleSlug": "minimum-cost-to-reach-city-with-discounts",
+      "title": "Minimum Cost to Reach City With Discounts",
+      "translatedTitle": null,
+      "isPaidOnly": true
+    }
+  ],
+  "status": null,
+  "title": "Maximum Cost of Trip With K Highways",
+  "topicTags": [
+    {
+      "name": "Dynamic Programming",
+      "id": "VG9waWNUYWdOb2RlOjEz",
+      "slug": "dynamic-programming"
+    },
+    {
+      "name": "Bit Manipulation",
+      "id": "VG9waWNUYWdOb2RlOjE5",
+      "slug": "bit-manipulation"
+    },
+    {
+      "name": "Graph",
+      "id": "VG9waWNUYWdOb2RlOjI0",
+      "slug": "graph"
+    },
+    {
+      "name": "Bitmask",
+      "id": "VG9waWNUYWdOb2RlOjYxMDc4",
+      "slug": "bitmask"
+    }
+  ]
+}

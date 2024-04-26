@@ -1,0 +1,55 @@
+{
+  "titleSlug": "consecutive-characters",
+  "acRate": 60.43512872119919,
+  "content": "<p>The <strong>power</strong> of the string is the maximum length of a non-empty substring that contains only one unique character.</p>\n\n<p>Given a string <code>s</code>, return <em>the <strong>power</strong> of</em> <code>s</code>.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> s = &quot;leetcode&quot;\n<strong>Output:</strong> 2\n<strong>Explanation:</strong> The substring &quot;ee&quot; is of length 2 with the character &#39;e&#39; only.\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> s = &quot;abbcccddddeeeeedcba&quot;\n<strong>Output:</strong> 5\n<strong>Explanation:</strong> The substring &quot;eeeee&quot; is of length 5 with the character &#39;e&#39; only.\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= s.length &lt;= 500</code></li>\n\t<li><code>s</code> consists of only lowercase English letters.</li>\n</ul>\n",
+  "difficulty": "Easy",
+  "freqBar": null,
+  "frontendQuestionId": "1446",
+  "hasSolution": true,
+  "hasVideoSolution": false,
+  "hints": [
+    "Keep an array power where power[i] is the maximum power of the i-th character.",
+    "The answer is max(power[i])."
+  ],
+  "isFavor": false,
+  "paidOnly": false,
+  "similarQuestionList": [
+    {
+      "difficulty": "Easy",
+      "titleSlug": "max-consecutive-ones",
+      "title": "Max Consecutive Ones",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    },
+    {
+      "difficulty": "Easy",
+      "titleSlug": "check-if-an-array-is-consecutive",
+      "title": "Check if an Array Is Consecutive",
+      "translatedTitle": null,
+      "isPaidOnly": true
+    },
+    {
+      "difficulty": "Medium",
+      "titleSlug": "count-number-of-homogenous-substrings",
+      "title": "Count Number of Homogenous Substrings",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    },
+    {
+      "difficulty": "Hard",
+      "titleSlug": "longest-substring-of-one-repeating-character",
+      "title": "Longest Substring of One Repeating Character",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    }
+  ],
+  "status": null,
+  "title": "Consecutive Characters",
+  "topicTags": [
+    {
+      "name": "String",
+      "id": "VG9waWNUYWdOb2RlOjEw",
+      "slug": "string"
+    }
+  ]
+}

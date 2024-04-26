@@ -1,0 +1,55 @@
+{
+  "titleSlug": "valid-palindrome-ii",
+  "acRate": 40.448120210599306,
+  "content": "<p>Given a string <code>s</code>, return <code>true</code> <em>if the </em><code>s</code><em> can be palindrome after deleting <strong>at most one</strong> character from it</em>.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> s = &quot;aba&quot;\n<strong>Output:</strong> true\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> s = &quot;abca&quot;\n<strong>Output:</strong> true\n<strong>Explanation:</strong> You could delete the character &#39;c&#39;.\n</pre>\n\n<p><strong class=\"example\">Example 3:</strong></p>\n\n<pre>\n<strong>Input:</strong> s = &quot;abc&quot;\n<strong>Output:</strong> false\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= s.length &lt;= 10<sup>5</sup></code></li>\n\t<li><code>s</code> consists of lowercase English letters.</li>\n</ul>\n",
+  "difficulty": "Easy",
+  "freqBar": null,
+  "frontendQuestionId": "680",
+  "hasSolution": true,
+  "hasVideoSolution": false,
+  "hints": [],
+  "isFavor": false,
+  "paidOnly": false,
+  "similarQuestionList": [
+    {
+      "difficulty": "Easy",
+      "titleSlug": "valid-palindrome",
+      "title": "Valid Palindrome",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    },
+    {
+      "difficulty": "Hard",
+      "titleSlug": "valid-palindrome-iii",
+      "title": "Valid Palindrome III",
+      "translatedTitle": null,
+      "isPaidOnly": true
+    },
+    {
+      "difficulty": "Medium",
+      "titleSlug": "valid-palindrome-iv",
+      "title": "Valid Palindrome IV",
+      "translatedTitle": null,
+      "isPaidOnly": true
+    }
+  ],
+  "status": null,
+  "title": "Valid Palindrome II",
+  "topicTags": [
+    {
+      "name": "Two Pointers",
+      "id": "VG9waWNUYWdOb2RlOjk=",
+      "slug": "two-pointers"
+    },
+    {
+      "name": "String",
+      "id": "VG9waWNUYWdOb2RlOjEw",
+      "slug": "string"
+    },
+    {
+      "name": "Greedy",
+      "id": "VG9waWNUYWdOb2RlOjE3",
+      "slug": "greedy"
+    }
+  ]
+}

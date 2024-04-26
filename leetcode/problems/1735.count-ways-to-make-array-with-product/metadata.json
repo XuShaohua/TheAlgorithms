@@ -1,0 +1,68 @@
+{
+  "titleSlug": "count-ways-to-make-array-with-product",
+  "acRate": 50.62619983545113,
+  "content": "<p>You are given a 2D integer array, <code>queries</code>. For each <code>queries[i]</code>, where <code>queries[i] = [n<sub>i</sub>, k<sub>i</sub>]</code>, find the number of different ways you can place positive integers into an array of size <code>n<sub>i</sub></code> such that the product of the integers is <code>k<sub>i</sub></code>. As the number of ways may be too large, the answer to the <code>i<sup>th</sup></code> query is the number of ways <strong>modulo</strong> <code>10<sup>9</sup> + 7</code>.</p>\n\n<p>Return <em>an integer array </em><code>answer</code><em> where </em><code>answer.length == queries.length</code><em>, and </em><code>answer[i]</code><em> is the answer to the </em><code>i<sup>th</sup></code><em> query.</em></p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> queries = [[2,6],[5,1],[73,660]]\n<strong>Output:</strong> [4,1,50734910]\n<strong>Explanation:</strong>&nbsp;Each query is independent.\n[2,6]: There are 4 ways to fill an array of size 2 that multiply to 6: [1,6], [2,3], [3,2], [6,1].\n[5,1]: There is 1 way to fill an array of size 5 that multiply to 1: [1,1,1,1,1].\n[73,660]: There are 1050734917 ways to fill an array of size 73 that multiply to 660. 1050734917 modulo 10<sup>9</sup> + 7 = 50734910.\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> queries = [[1,1],[2,2],[3,3],[4,4],[5,5]]\n<strong>Output:</strong> [1,2,3,10,5]\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= queries.length &lt;= 10<sup>4</sup> </code></li>\n\t<li><code>1 &lt;= n<sub>i</sub>, k<sub>i</sub> &lt;= 10<sup>4</sup></code></li>\n</ul>\n",
+  "difficulty": "Hard",
+  "freqBar": null,
+  "frontendQuestionId": "1735",
+  "hasSolution": false,
+  "hasVideoSolution": false,
+  "hints": [
+    "Prime-factorize ki and count how many ways you can distribute the primes among the ni positions.",
+    "After prime factorizing ki, suppose there are x amount of prime factor. There are (x + n - 1) choose (n - 1) ways to distribute the x prime factors into k positions, allowing repetitions."
+  ],
+  "isFavor": false,
+  "paidOnly": false,
+  "similarQuestionList": [
+    {
+      "difficulty": "Hard",
+      "titleSlug": "count-the-number-of-ideal-arrays",
+      "title": "Count the Number of Ideal Arrays",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    },
+    {
+      "difficulty": "Medium",
+      "titleSlug": "smallest-value-after-replacing-with-sum-of-prime-factors",
+      "title": "Smallest Value After Replacing With Sum of Prime Factors",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    },
+    {
+      "difficulty": "Medium",
+      "titleSlug": "closest-prime-numbers-in-range",
+      "title": "Closest Prime Numbers in Range",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    }
+  ],
+  "status": null,
+  "title": "Count Ways to Make Array With Product",
+  "topicTags": [
+    {
+      "name": "Array",
+      "id": "VG9waWNUYWdOb2RlOjU=",
+      "slug": "array"
+    },
+    {
+      "name": "Math",
+      "id": "VG9waWNUYWdOb2RlOjg=",
+      "slug": "math"
+    },
+    {
+      "name": "Dynamic Programming",
+      "id": "VG9waWNUYWdOb2RlOjEz",
+      "slug": "dynamic-programming"
+    },
+    {
+      "name": "Combinatorics",
+      "id": "VG9waWNUYWdOb2RlOjYxMDU2",
+      "slug": "combinatorics"
+    },
+    {
+      "name": "Number Theory",
+      "id": "VG9waWNUYWdOb2RlOjYxMDY3",
+      "slug": "number-theory"
+    }
+  ]
+}

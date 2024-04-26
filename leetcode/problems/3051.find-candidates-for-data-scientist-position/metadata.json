@@ -1,0 +1,23 @@
+{
+  "titleSlug": "find-candidates-for-data-scientist-position",
+  "acRate": 75.0,
+  "content": null,
+  "difficulty": "Easy",
+  "freqBar": null,
+  "frontendQuestionId": "3051",
+  "hasSolution": false,
+  "hasVideoSolution": false,
+  "hints": [],
+  "isFavor": false,
+  "paidOnly": true,
+  "similarQuestionList": [],
+  "status": null,
+  "title": "Find Candidates for Data Scientist Position",
+  "topicTags": [
+    {
+      "name": "Database",
+      "id": "VG9waWNUYWdOb2RlOjYxMDQz",
+      "slug": "database"
+    }
+  ]
+}

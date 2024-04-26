@@ -1,0 +1,38 @@
+{
+  "titleSlug": "all-oone-data-structure",
+  "acRate": 36.656805710861676,
+  "content": "<p>Design a data structure to store the strings&#39; count with the ability to return the strings with minimum and maximum counts.</p>\n\n<p>Implement the <code>AllOne</code> class:</p>\n\n<ul>\n\t<li><code>AllOne()</code> Initializes the object of the data structure.</li>\n\t<li><code>inc(String key)</code> Increments the count of the string <code>key</code> by <code>1</code>. If <code>key</code> does not exist in the data structure, insert it with count <code>1</code>.</li>\n\t<li><code>dec(String key)</code> Decrements the count of the string <code>key</code> by <code>1</code>. If the count of <code>key</code> is <code>0</code> after the decrement, remove it from the data structure. It is guaranteed that <code>key</code> exists in the data structure before the decrement.</li>\n\t<li><code>getMaxKey()</code> Returns one of the keys with the maximal count. If no element exists, return an empty string <code>&quot;&quot;</code>.</li>\n\t<li><code>getMinKey()</code> Returns one of the keys with the minimum count. If no element exists, return an empty string <code>&quot;&quot;</code>.</li>\n</ul>\n\n<p><strong>Note</strong> that each function must run in <code>O(1)</code> average time complexity.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input</strong>\n[&quot;AllOne&quot;, &quot;inc&quot;, &quot;inc&quot;, &quot;getMaxKey&quot;, &quot;getMinKey&quot;, &quot;inc&quot;, &quot;getMaxKey&quot;, &quot;getMinKey&quot;]\n[[], [&quot;hello&quot;], [&quot;hello&quot;], [], [], [&quot;leet&quot;], [], []]\n<strong>Output</strong>\n[null, null, null, &quot;hello&quot;, &quot;hello&quot;, null, &quot;hello&quot;, &quot;leet&quot;]\n\n<strong>Explanation</strong>\nAllOne allOne = new AllOne();\nallOne.inc(&quot;hello&quot;);\nallOne.inc(&quot;hello&quot;);\nallOne.getMaxKey(); // return &quot;hello&quot;\nallOne.getMinKey(); // return &quot;hello&quot;\nallOne.inc(&quot;leet&quot;);\nallOne.getMaxKey(); // return &quot;hello&quot;\nallOne.getMinKey(); // return &quot;leet&quot;\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= key.length &lt;= 10</code></li>\n\t<li><code>key</code> consists of lowercase English letters.</li>\n\t<li>It is guaranteed that for each call to <code>dec</code>, <code>key</code> is existing in the data structure.</li>\n\t<li>At most <code>5 * 10<sup>4</sup></code>&nbsp;calls will be made to <code>inc</code>, <code>dec</code>, <code>getMaxKey</code>, and <code>getMinKey</code>.</li>\n</ul>\n",
+  "difficulty": "Hard",
+  "freqBar": null,
+  "frontendQuestionId": "432",
+  "hasSolution": false,
+  "hasVideoSolution": false,
+  "hints": [],
+  "isFavor": false,
+  "paidOnly": false,
+  "similarQuestionList": [],
+  "status": null,
+  "title": "All O`one Data Structure",
+  "topicTags": [
+    {
+      "name": "Hash Table",
+      "id": "VG9waWNUYWdOb2RlOjY=",
+      "slug": "hash-table"
+    },
+    {
+      "name": "Linked List",
+      "id": "VG9waWNUYWdOb2RlOjc=",
+      "slug": "linked-list"
+    },
+    {
+      "name": "Design",
+      "id": "VG9waWNUYWdOb2RlOjI1",
+      "slug": "design"
+    },
+    {
+      "name": "Doubly-Linked List",
+      "id": "VG9waWNUYWdOb2RlOjYxMDU4",
+      "slug": "doubly-linked-list"
+    }
+  ]
+}

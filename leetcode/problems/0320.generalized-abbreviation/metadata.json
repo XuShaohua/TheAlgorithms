@@ -1,0 +1,55 @@
+{
+  "titleSlug": "generalized-abbreviation",
+  "acRate": 58.312597401479216,
+  "content": null,
+  "difficulty": "Medium",
+  "freqBar": null,
+  "frontendQuestionId": "320",
+  "hasSolution": true,
+  "hasVideoSolution": false,
+  "hints": [],
+  "isFavor": false,
+  "paidOnly": true,
+  "similarQuestionList": [
+    {
+      "difficulty": "Medium",
+      "titleSlug": "subsets",
+      "title": "Subsets",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    },
+    {
+      "difficulty": "Medium",
+      "titleSlug": "unique-word-abbreviation",
+      "title": "Unique Word Abbreviation",
+      "translatedTitle": null,
+      "isPaidOnly": true
+    },
+    {
+      "difficulty": "Hard",
+      "titleSlug": "minimum-unique-word-abbreviation",
+      "title": "Minimum Unique Word Abbreviation",
+      "translatedTitle": null,
+      "isPaidOnly": true
+    }
+  ],
+  "status": null,
+  "title": "Generalized Abbreviation",
+  "topicTags": [
+    {
+      "name": "String",
+      "id": "VG9waWNUYWdOb2RlOjEw",
+      "slug": "string"
+    },
+    {
+      "name": "Backtracking",
+      "id": "VG9waWNUYWdOb2RlOjE0",
+      "slug": "backtracking"
+    },
+    {
+      "name": "Bit Manipulation",
+      "id": "VG9waWNUYWdOb2RlOjE5",
+      "slug": "bit-manipulation"
+    }
+  ]
+}

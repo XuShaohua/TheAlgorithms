@@ -1,0 +1,23 @@
+{
+  "titleSlug": "top-percentile-fraud",
+  "acRate": 60.96345514950167,
+  "content": null,
+  "difficulty": "Medium",
+  "freqBar": null,
+  "frontendQuestionId": "3055",
+  "hasSolution": false,
+  "hasVideoSolution": false,
+  "hints": [],
+  "isFavor": false,
+  "paidOnly": true,
+  "similarQuestionList": [],
+  "status": null,
+  "title": "Top Percentile Fraud",
+  "topicTags": [
+    {
+      "name": "Database",
+      "id": "VG9waWNUYWdOb2RlOjYxMDQz",
+      "slug": "database"
+    }
+  ]
+}

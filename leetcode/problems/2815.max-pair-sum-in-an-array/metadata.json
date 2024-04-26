@@ -1,0 +1,30 @@
+{
+  "titleSlug": "max-pair-sum-in-an-array",
+  "acRate": 57.49084122485657,
+  "content": "<p>You are given a <strong>0-indexed</strong> integer array <code>nums</code>. You have to find the <strong>maximum</strong> sum of a pair of numbers from <code>nums</code> such that the maximum <strong>digit </strong>in both numbers are equal.</p>\n\n<p>Return <em>the maximum sum or</em> <code>-1</code><em> if no such pair exists</em>.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [51,71,17,24,42]\n<strong>Output:</strong> 88\n<strong>Explanation:</strong> \nFor i = 1 and j = 2, nums[i] and nums[j] have equal maximum digits with a pair sum of 71 + 17 = 88. \nFor i = 3 and j = 4, nums[i] and nums[j] have equal maximum digits with a pair sum of 24 + 42 = 66.\nIt can be shown that there are no other pairs with equal maximum digits, so the answer is 88.</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [1,2,3,4]\n<strong>Output:</strong> -1\n<strong>Explanation:</strong> No pair exists in nums with equal maximum digits.\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>2 &lt;= nums.length &lt;= 100</code></li>\n\t<li><code>1 &lt;= nums[i] &lt;= 10<sup>4</sup></code></li>\n</ul>\n",
+  "difficulty": "Easy",
+  "freqBar": null,
+  "frontendQuestionId": "2815",
+  "hasSolution": false,
+  "hasVideoSolution": false,
+  "hints": [
+    "Find the largest and second largest element with maximum digits equal to x where 1<=x<=9."
+  ],
+  "isFavor": false,
+  "paidOnly": false,
+  "similarQuestionList": [],
+  "status": null,
+  "title": "Max Pair Sum in an Array",
+  "topicTags": [
+    {
+      "name": "Array",
+      "id": "VG9waWNUYWdOb2RlOjU=",
+      "slug": "array"
+    },
+    {
+      "name": "Hash Table",
+      "id": "VG9waWNUYWdOb2RlOjY=",
+      "slug": "hash-table"
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "titleSlug": "max-chunks-to-make-sorted-ii",
+  "acRate": 53.148843405595244,
+  "content": "<p>You are given an integer array <code>arr</code>.</p>\n\n<p>We split <code>arr</code> into some number of <strong>chunks</strong> (i.e., partitions), and individually sort each chunk. After concatenating them, the result should equal the sorted array.</p>\n\n<p>Return <em>the largest number of chunks we can make to sort the array</em>.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> arr = [5,4,3,2,1]\n<strong>Output:</strong> 1\n<strong>Explanation:</strong>\nSplitting into two or more chunks will not return the required result.\nFor example, splitting into [5, 4], [3, 2, 1] will result in [4, 5, 1, 2, 3], which isn&#39;t sorted.\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> arr = [2,1,3,4,4]\n<strong>Output:</strong> 4\n<strong>Explanation:</strong>\nWe can split into two chunks, such as [2, 1], [3, 4, 4].\nHowever, splitting into [2, 1], [3], [4], [4] is the highest number of chunks possible.\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= arr.length &lt;= 2000</code></li>\n\t<li><code>0 &lt;= arr[i] &lt;= 10<sup>8</sup></code></li>\n</ul>\n",
+  "difficulty": "Hard",
+  "freqBar": null,
+  "frontendQuestionId": "768",
+  "hasSolution": false,
+  "hasVideoSolution": false,
+  "hints": [
+    "Each k for which some permutation of arr[:k] is equal to sorted(arr)[:k] is where we should cut each chunk."
+  ],
+  "isFavor": false,
+  "paidOnly": false,
+  "similarQuestionList": [
+    {
+      "difficulty": "Medium",
+      "titleSlug": "max-chunks-to-make-sorted",
+      "title": "Max Chunks To Make Sorted",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    }
+  ],
+  "status": null,
+  "title": "Max Chunks To Make Sorted II",
+  "topicTags": [
+    {
+      "name": "Array",
+      "id": "VG9waWNUYWdOb2RlOjU=",
+      "slug": "array"
+    },
+    {
+      "name": "Stack",
+      "id": "VG9waWNUYWdOb2RlOjE1",
+      "slug": "stack"
+    },
+    {
+      "name": "Greedy",
+      "id": "VG9waWNUYWdOb2RlOjE3",
+      "slug": "greedy"
+    },
+    {
+      "name": "Sorting",
+      "id": "VG9waWNUYWdOb2RlOjYxMDQ5",
+      "slug": "sorting"
+    },
+    {
+      "name": "Monotonic Stack",
+      "id": "VG9waWNUYWdOb2RlOjYxMDU0",
+      "slug": "monotonic-stack"
+    }
+  ]
+}

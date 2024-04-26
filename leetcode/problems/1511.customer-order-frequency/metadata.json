@@ -1,0 +1,23 @@
+{
+  "titleSlug": "customer-order-frequency",
+  "acRate": 68.409622733624,
+  "content": null,
+  "difficulty": "Easy",
+  "freqBar": null,
+  "frontendQuestionId": "1511",
+  "hasSolution": true,
+  "hasVideoSolution": false,
+  "hints": [],
+  "isFavor": false,
+  "paidOnly": true,
+  "similarQuestionList": [],
+  "status": null,
+  "title": "Customer Order Frequency",
+  "topicTags": [
+    {
+      "name": "Database",
+      "id": "VG9waWNUYWdOb2RlOjYxMDQz",
+      "slug": "database"
+    }
+  ]
+}

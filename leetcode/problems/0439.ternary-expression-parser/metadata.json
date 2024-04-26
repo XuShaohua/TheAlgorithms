@@ -1,0 +1,55 @@
+{
+  "titleSlug": "ternary-expression-parser",
+  "acRate": 60.70264669869078,
+  "content": null,
+  "difficulty": "Medium",
+  "freqBar": null,
+  "frontendQuestionId": "439",
+  "hasSolution": true,
+  "hasVideoSolution": false,
+  "hints": [],
+  "isFavor": false,
+  "paidOnly": true,
+  "similarQuestionList": [
+    {
+      "difficulty": "Medium",
+      "titleSlug": "mini-parser",
+      "title": "Mini Parser",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    },
+    {
+      "difficulty": "Medium",
+      "titleSlug": "remove-comments",
+      "title": "Remove Comments",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    },
+    {
+      "difficulty": "Hard",
+      "titleSlug": "parse-lisp-expression",
+      "title": "Parse Lisp Expression",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    }
+  ],
+  "status": null,
+  "title": "Ternary Expression Parser",
+  "topicTags": [
+    {
+      "name": "String",
+      "id": "VG9waWNUYWdOb2RlOjEw",
+      "slug": "string"
+    },
+    {
+      "name": "Stack",
+      "id": "VG9waWNUYWdOb2RlOjE1",
+      "slug": "stack"
+    },
+    {
+      "name": "Recursion",
+      "id": "VG9waWNUYWdOb2RlOjMx",
+      "slug": "recursion"
+    }
+  ]
+}

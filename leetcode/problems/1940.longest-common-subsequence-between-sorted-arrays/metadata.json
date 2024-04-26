@@ -1,0 +1,45 @@
+{
+  "titleSlug": "longest-common-subsequence-between-sorted-arrays",
+  "acRate": 78.57956703380175,
+  "content": null,
+  "difficulty": "Medium",
+  "freqBar": null,
+  "frontendQuestionId": "1940",
+  "hasSolution": false,
+  "hasVideoSolution": false,
+  "hints": [
+    "Fix one array.",
+    "Choose the next array and get the common elements.",
+    "Use the common elements as the new fixed array and keep merging with the rest of the arrays."
+  ],
+  "isFavor": false,
+  "paidOnly": true,
+  "similarQuestionList": [
+    {
+      "difficulty": "Easy",
+      "titleSlug": "merge-two-sorted-lists",
+      "title": "Merge Two Sorted Lists",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    }
+  ],
+  "status": null,
+  "title": "Longest Common Subsequence Between Sorted Arrays",
+  "topicTags": [
+    {
+      "name": "Array",
+      "id": "VG9waWNUYWdOb2RlOjU=",
+      "slug": "array"
+    },
+    {
+      "name": "Hash Table",
+      "id": "VG9waWNUYWdOb2RlOjY=",
+      "slug": "hash-table"
+    },
+    {
+      "name": "Counting",
+      "id": "VG9waWNUYWdOb2RlOjYxMDYy",
+      "slug": "counting"
+    }
+  ]
+}

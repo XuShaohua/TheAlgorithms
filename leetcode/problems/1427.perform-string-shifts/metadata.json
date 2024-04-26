@@ -1,0 +1,36 @@
+{
+  "titleSlug": "perform-string-shifts",
+  "acRate": 54.65879581476405,
+  "content": null,
+  "difficulty": "Easy",
+  "freqBar": null,
+  "frontendQuestionId": "1427",
+  "hasSolution": true,
+  "hasVideoSolution": false,
+  "hints": [
+    "Intuitively performing all shift operations is acceptable due to the constraints.",
+    "You may notice that left shift cancels the right shift, so count the total left shift times (may be negative if the final result is right shift), and perform it once."
+  ],
+  "isFavor": false,
+  "paidOnly": true,
+  "similarQuestionList": [],
+  "status": null,
+  "title": "Perform String Shifts",
+  "topicTags": [
+    {
+      "name": "Array",
+      "id": "VG9waWNUYWdOb2RlOjU=",
+      "slug": "array"
+    },
+    {
+      "name": "Math",
+      "id": "VG9waWNUYWdOb2RlOjg=",
+      "slug": "math"
+    },
+    {
+      "name": "String",
+      "id": "VG9waWNUYWdOb2RlOjEw",
+      "slug": "string"
+    }
+  ]
+}

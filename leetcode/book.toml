@@ -1,0 +1,28 @@
+
+[book]
+title = "LeetCode问题及解法 - Rust实现"
+description = ""
+authors = ["Shaohua <shaohua@biofan.org>"]
+src = "rust"
+language = "zh-CN"
+
+[rust]
+edition = "2021"
+
+[build]
+build-dir = "book"
+create-missing = false
+extra-watch-dirs = []
+
+[output.html]
+git-repository-url = "https://github.com/xushaohua/leetcode"
+mathjax-support = true
+
+[output.html.playground]
+copy-js = true
+editable = true
+line-numbers = true
+
+[output.html.fold]
+enable = true
+level = 0

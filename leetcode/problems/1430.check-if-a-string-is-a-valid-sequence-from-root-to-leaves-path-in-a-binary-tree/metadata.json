@@ -1,0 +1,41 @@
+{
+  "titleSlug": "check-if-a-string-is-a-valid-sequence-from-root-to-leaves-path-in-a-binary-tree",
+  "acRate": 46.78288027024443,
+  "content": null,
+  "difficulty": "Medium",
+  "freqBar": null,
+  "frontendQuestionId": "1430",
+  "hasSolution": false,
+  "hasVideoSolution": false,
+  "hints": [
+    "Depth-first search (DFS) with the parameters: current node in the binary tree and current position in the array of integers.",
+    "When reaching at final position check if it is a leaf node."
+  ],
+  "isFavor": false,
+  "paidOnly": true,
+  "similarQuestionList": [],
+  "status": null,
+  "title": "Check If a String Is a Valid Sequence from Root to Leaves Path in a Binary Tree",
+  "topicTags": [
+    {
+      "name": "Tree",
+      "id": "VG9waWNUYWdOb2RlOjIw",
+      "slug": "tree"
+    },
+    {
+      "name": "Depth-First Search",
+      "id": "VG9waWNUYWdOb2RlOjIx",
+      "slug": "depth-first-search"
+    },
+    {
+      "name": "Breadth-First Search",
+      "id": "VG9waWNUYWdOb2RlOjIy",
+      "slug": "breadth-first-search"
+    },
+    {
+      "name": "Binary Tree",
+      "id": "VG9waWNUYWdOb2RlOjYxMDU3",
+      "slug": "binary-tree"
+    }
+  ]
+}

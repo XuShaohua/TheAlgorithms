@@ -1,0 +1,33 @@
+{
+  "titleSlug": "complex-number-multiplication",
+  "acRate": 71.70492078384707,
+  "content": "<p>A <a href=\"https://en.wikipedia.org/wiki/Complex_number\" target=\"_blank\">complex number</a> can be represented as a string on the form <code>&quot;<strong>real</strong>+<strong>imaginary</strong>i&quot;</code> where:</p>\n\n<ul>\n\t<li><code>real</code> is the real part and is an integer in the range <code>[-100, 100]</code>.</li>\n\t<li><code>imaginary</code> is the imaginary part and is an integer in the range <code>[-100, 100]</code>.</li>\n\t<li><code>i<sup>2</sup> == -1</code>.</li>\n</ul>\n\n<p>Given two complex numbers <code>num1</code> and <code>num2</code> as strings, return <em>a string of the complex number that represents their multiplications</em>.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> num1 = &quot;1+1i&quot;, num2 = &quot;1+1i&quot;\n<strong>Output:</strong> &quot;0+2i&quot;\n<strong>Explanation:</strong> (1 + i) * (1 + i) = 1 + i2 + 2 * i = 2i, and you need convert it to the form of 0+2i.\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> num1 = &quot;1+-1i&quot;, num2 = &quot;1+-1i&quot;\n<strong>Output:</strong> &quot;0+-2i&quot;\n<strong>Explanation:</strong> (1 - i) * (1 - i) = 1 + i2 - 2 * i = -2i, and you need convert it to the form of 0+-2i.\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>num1</code> and <code>num2</code> are valid complex numbers.</li>\n</ul>\n",
+  "difficulty": "Medium",
+  "freqBar": null,
+  "frontendQuestionId": "537",
+  "hasSolution": true,
+  "hasVideoSolution": false,
+  "hints": [],
+  "isFavor": false,
+  "paidOnly": false,
+  "similarQuestionList": [],
+  "status": null,
+  "title": "Complex Number Multiplication",
+  "topicTags": [
+    {
+      "name": "Math",
+      "id": "VG9waWNUYWdOb2RlOjg=",
+      "slug": "math"
+    },
+    {
+      "name": "String",
+      "id": "VG9waWNUYWdOb2RlOjEw",
+      "slug": "string"
+    },
+    {
+      "name": "Simulation",
+      "id": "VG9waWNUYWdOb2RlOjYxMDU1",
+      "slug": "simulation"
+    }
+  ]
+}

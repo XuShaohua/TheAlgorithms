@@ -1,0 +1,38 @@
+{
+  "titleSlug": "analyze-user-website-visit-pattern",
+  "acRate": 42.84907635241837,
+  "content": null,
+  "difficulty": "Medium",
+  "freqBar": null,
+  "frontendQuestionId": "1152",
+  "hasSolution": false,
+  "hasVideoSolution": false,
+  "hints": [
+    "Let's find for every user separately the websites he visited.",
+    "Consider all possible 3-sequences, find the number of distinct users who visited each of them.",
+    "How to check if some user visited some 3-sequence ?",
+    "Store for every user all the 3-sequence he visited."
+  ],
+  "isFavor": false,
+  "paidOnly": true,
+  "similarQuestionList": [],
+  "status": null,
+  "title": "Analyze User Website Visit Pattern",
+  "topicTags": [
+    {
+      "name": "Array",
+      "id": "VG9waWNUYWdOb2RlOjU=",
+      "slug": "array"
+    },
+    {
+      "name": "Hash Table",
+      "id": "VG9waWNUYWdOb2RlOjY=",
+      "slug": "hash-table"
+    },
+    {
+      "name": "Sorting",
+      "id": "VG9waWNUYWdOb2RlOjYxMDQ5",
+      "slug": "sorting"
+    }
+  ]
+}

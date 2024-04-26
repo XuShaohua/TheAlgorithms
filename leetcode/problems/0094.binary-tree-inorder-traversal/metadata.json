@@ -1,0 +1,102 @@
+{
+  "titleSlug": "binary-tree-inorder-traversal",
+  "acRate": 75.91660339060438,
+  "content": "<p>Given the <code>root</code> of a binary tree, return <em>the inorder traversal of its nodes&#39; values</em>.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n<img alt=\"\" src=\"https://assets.leetcode.com/uploads/2020/09/15/inorder_1.jpg\" style=\"width: 125px; height: 200px;\" />\n<pre>\n<strong>Input:</strong> root = [1,null,2,3]\n<strong>Output:</strong> [1,3,2]\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> root = []\n<strong>Output:</strong> []\n</pre>\n\n<p><strong class=\"example\">Example 3:</strong></p>\n\n<pre>\n<strong>Input:</strong> root = [1]\n<strong>Output:</strong> [1]\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li>The number of nodes in the tree is in the range <code>[0, 100]</code>.</li>\n\t<li><code>-100 &lt;= Node.val &lt;= 100</code></li>\n</ul>\n\n<p>&nbsp;</p>\n<strong>Follow up:</strong> Recursive solution is trivial, could you do it iteratively?",
+  "difficulty": "Easy",
+  "freqBar": null,
+  "frontendQuestionId": "94",
+  "hasSolution": true,
+  "hasVideoSolution": false,
+  "hints": [],
+  "isFavor": false,
+  "paidOnly": false,
+  "similarQuestionList": [
+    {
+      "difficulty": "Medium",
+      "titleSlug": "validate-binary-search-tree",
+      "title": "Validate Binary Search Tree",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    },
+    {
+      "difficulty": "Easy",
+      "titleSlug": "binary-tree-preorder-traversal",
+      "title": "Binary Tree Preorder Traversal",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    },
+    {
+      "difficulty": "Easy",
+      "titleSlug": "binary-tree-postorder-traversal",
+      "title": "Binary Tree Postorder Traversal",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    },
+    {
+      "difficulty": "Medium",
+      "titleSlug": "binary-search-tree-iterator",
+      "title": "Binary Search Tree Iterator",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    },
+    {
+      "difficulty": "Medium",
+      "titleSlug": "kth-smallest-element-in-a-bst",
+      "title": "Kth Smallest Element in a BST",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    },
+    {
+      "difficulty": "Hard",
+      "titleSlug": "closest-binary-search-tree-value-ii",
+      "title": "Closest Binary Search Tree Value II",
+      "translatedTitle": null,
+      "isPaidOnly": true
+    },
+    {
+      "difficulty": "Medium",
+      "titleSlug": "inorder-successor-in-bst",
+      "title": "Inorder Successor in BST",
+      "translatedTitle": null,
+      "isPaidOnly": true
+    },
+    {
+      "difficulty": "Medium",
+      "titleSlug": "convert-binary-search-tree-to-sorted-doubly-linked-list",
+      "title": "Convert Binary Search Tree to Sorted Doubly Linked List",
+      "translatedTitle": null,
+      "isPaidOnly": true
+    },
+    {
+      "difficulty": "Easy",
+      "titleSlug": "minimum-distance-between-bst-nodes",
+      "title": "Minimum Distance Between BST Nodes",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    }
+  ],
+  "status": null,
+  "title": "Binary Tree Inorder Traversal",
+  "topicTags": [
+    {
+      "name": "Stack",
+      "id": "VG9waWNUYWdOb2RlOjE1",
+      "slug": "stack"
+    },
+    {
+      "name": "Tree",
+      "id": "VG9waWNUYWdOb2RlOjIw",
+      "slug": "tree"
+    },
+    {
+      "name": "Depth-First Search",
+      "id": "VG9waWNUYWdOb2RlOjIx",
+      "slug": "depth-first-search"
+    },
+    {
+      "name": "Binary Tree",
+      "id": "VG9waWNUYWdOb2RlOjYxMDU3",
+      "slug": "binary-tree"
+    }
+  ]
+}

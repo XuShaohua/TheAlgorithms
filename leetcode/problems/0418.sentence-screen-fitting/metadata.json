@@ -1,0 +1,48 @@
+{
+  "titleSlug": "sentence-screen-fitting",
+  "acRate": 36.06839829654432,
+  "content": null,
+  "difficulty": "Medium",
+  "freqBar": null,
+  "frontendQuestionId": "418",
+  "hasSolution": false,
+  "hasVideoSolution": false,
+  "hints": [],
+  "isFavor": false,
+  "paidOnly": true,
+  "similarQuestionList": [
+    {
+      "difficulty": "Medium",
+      "titleSlug": "minimum-cost-to-separate-sentence-into-rows",
+      "title": "Minimum Cost to Separate Sentence Into Rows",
+      "translatedTitle": null,
+      "isPaidOnly": true
+    },
+    {
+      "difficulty": "Hard",
+      "titleSlug": "split-message-based-on-limit",
+      "title": "Split Message Based on Limit",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    }
+  ],
+  "status": null,
+  "title": "Sentence Screen Fitting",
+  "topicTags": [
+    {
+      "name": "String",
+      "id": "VG9waWNUYWdOb2RlOjEw",
+      "slug": "string"
+    },
+    {
+      "name": "Dynamic Programming",
+      "id": "VG9waWNUYWdOb2RlOjEz",
+      "slug": "dynamic-programming"
+    },
+    {
+      "name": "Simulation",
+      "id": "VG9waWNUYWdOb2RlOjYxMDU1",
+      "slug": "simulation"
+    }
+  ]
+}

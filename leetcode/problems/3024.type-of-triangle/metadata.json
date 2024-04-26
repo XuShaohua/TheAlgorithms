@@ -1,0 +1,36 @@
+{
+  "titleSlug": "type-of-triangle",
+  "acRate": 38.34682196118375,
+  "content": "<p>You are given a <strong>0-indexed</strong> integer array <code>nums</code> of size <code>3</code> which can form the sides of a triangle.</p>\n\n<ul>\n\t<li>A triangle is called <strong>equilateral</strong> if it has all sides of equal length.</li>\n\t<li>A triangle is called <strong>isosceles</strong> if it has exactly two sides of equal length.</li>\n\t<li>A triangle is called <strong>scalene</strong> if all its sides are of different lengths.</li>\n</ul>\n\n<p>Return <em>a string representing</em> <em>the type of triangle that can be formed </em><em>or </em><code>&quot;none&quot;</code><em> if it <strong>cannot</strong> form a triangle.</em></p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [3,3,3]\n<strong>Output:</strong> &quot;equilateral&quot;\n<strong>Explanation:</strong> Since all the sides are of equal length, therefore, it will form an equilateral triangle.\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [3,4,5]\n<strong>Output:</strong> &quot;scalene&quot;\n<strong>Explanation:</strong> \nnums[0] + nums[1] = 3 + 4 = 7, which is greater than nums[2] = 5.\nnums[0] + nums[2] = 3 + 5 = 8, which is greater than nums[1] = 4.\nnums[1] + nums[2] = 4 + 5 = 9, which is greater than nums[0] = 3. \nSince the sum of the two sides is greater than the third side for all three cases, therefore, it can form a triangle.\nAs all the sides are of different lengths, it will form a scalene triangle.\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>nums.length == 3</code></li>\n\t<li><code>1 &lt;= nums[i] &lt;= 100</code></li>\n</ul>\n",
+  "difficulty": "Easy",
+  "freqBar": null,
+  "frontendQuestionId": "3024",
+  "hasSolution": false,
+  "hasVideoSolution": false,
+  "hints": [
+    "The condition for a valid triangle is that for any two sides, the sum of their lengths must be greater than the third side.",
+    "Simply count the number of unique edge lengths after checking it’s a valid triangle."
+  ],
+  "isFavor": false,
+  "paidOnly": false,
+  "similarQuestionList": [],
+  "status": null,
+  "title": "Type of Triangle",
+  "topicTags": [
+    {
+      "name": "Array",
+      "id": "VG9waWNUYWdOb2RlOjU=",
+      "slug": "array"
+    },
+    {
+      "name": "Math",
+      "id": "VG9waWNUYWdOb2RlOjg=",
+      "slug": "math"
+    },
+    {
+      "name": "Sorting",
+      "id": "VG9waWNUYWdOb2RlOjYxMDQ5",
+      "slug": "sorting"
+    }
+  ]
+}

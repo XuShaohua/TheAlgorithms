@@ -1,0 +1,72 @@
+{
+  "titleSlug": "maximum-number-of-books-you-can-take",
+  "acRate": 41.06979832351232,
+  "content": null,
+  "difficulty": "Hard",
+  "freqBar": null,
+  "frontendQuestionId": "2355",
+  "hasSolution": true,
+  "hasVideoSolution": false,
+  "hints": [
+    "Create a dp array where dp[i] is the maximum number of books you can take if you can only take books from bookshelves 0 to i and you must take books from bookshelf i.",
+    "Keep taking as many books as you can (i.e. starting from bookshelf i and going backwards, you take arr[i], arr[i] - 1, arr[i] - 2, … books).",
+    "You may reach an index j where arr[j] < arr[i] - (i - j). Have we already found the maximum number of books you can take from bookshelves 0 to j? How do we quickly find such an index j?",
+    "Keep a stack of possible indices for j. If x is the number at the top of the stack, keep popping from the stack while arr[x] ≥ arr[i] - (i - x). This is because if the inequality mentioned before is true, x will never be an index j as index i will run out of items first."
+  ],
+  "isFavor": false,
+  "paidOnly": true,
+  "similarQuestionList": [
+    {
+      "difficulty": "Medium",
+      "titleSlug": "longest-increasing-subsequence",
+      "title": "Longest Increasing Subsequence",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    },
+    {
+      "difficulty": "Easy",
+      "titleSlug": "maximum-ascending-subarray-sum",
+      "title": "Maximum Ascending Subarray Sum",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    },
+    {
+      "difficulty": "Medium",
+      "titleSlug": "beautiful-towers-ii",
+      "title": "Beautiful Towers II",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    },
+    {
+      "difficulty": "Medium",
+      "titleSlug": "beautiful-towers-i",
+      "title": "Beautiful Towers I",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    }
+  ],
+  "status": null,
+  "title": "Maximum Number of Books You Can Take",
+  "topicTags": [
+    {
+      "name": "Array",
+      "id": "VG9waWNUYWdOb2RlOjU=",
+      "slug": "array"
+    },
+    {
+      "name": "Dynamic Programming",
+      "id": "VG9waWNUYWdOb2RlOjEz",
+      "slug": "dynamic-programming"
+    },
+    {
+      "name": "Stack",
+      "id": "VG9waWNUYWdOb2RlOjE1",
+      "slug": "stack"
+    },
+    {
+      "name": "Monotonic Stack",
+      "id": "VG9waWNUYWdOb2RlOjYxMDU0",
+      "slug": "monotonic-stack"
+    }
+  ]
+}

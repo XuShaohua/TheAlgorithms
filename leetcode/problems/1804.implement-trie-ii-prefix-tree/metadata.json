@@ -1,0 +1,57 @@
+{
+  "titleSlug": "implement-trie-ii-prefix-tree",
+  "acRate": 61.3645048111995,
+  "content": null,
+  "difficulty": "Medium",
+  "freqBar": null,
+  "frontendQuestionId": "1804",
+  "hasSolution": true,
+  "hasVideoSolution": false,
+  "hints": [
+    "Try to solve the first version first and reuse your code.",
+    "To implement the delete function, you should delete the trie nodes of the word if they are not shared with other words.",
+    "You should keep for each trie node a counter of how many words share this node."
+  ],
+  "isFavor": false,
+  "paidOnly": true,
+  "similarQuestionList": [
+    {
+      "difficulty": "Medium",
+      "titleSlug": "implement-trie-prefix-tree",
+      "title": "Implement Trie (Prefix Tree)",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    },
+    {
+      "difficulty": "Hard",
+      "titleSlug": "encrypt-and-decrypt-strings",
+      "title": "Encrypt and Decrypt Strings",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    }
+  ],
+  "status": null,
+  "title": "Implement Trie II (Prefix Tree)",
+  "topicTags": [
+    {
+      "name": "Hash Table",
+      "id": "VG9waWNUYWdOb2RlOjY=",
+      "slug": "hash-table"
+    },
+    {
+      "name": "String",
+      "id": "VG9waWNUYWdOb2RlOjEw",
+      "slug": "string"
+    },
+    {
+      "name": "Design",
+      "id": "VG9waWNUYWdOb2RlOjI1",
+      "slug": "design"
+    },
+    {
+      "name": "Trie",
+      "id": "VG9waWNUYWdOb2RlOjI3",
+      "slug": "trie"
+    }
+  ]
+}

@@ -1,0 +1,71 @@
+{
+  "titleSlug": "minimum-number-of-swaps-to-make-the-string-balanced",
+  "acRate": 71.1625741882928,
+  "content": "<p>You are given a <strong>0-indexed</strong> string <code>s</code> of <strong>even</strong> length <code>n</code>. The string consists of <strong>exactly</strong> <code>n / 2</code> opening brackets <code>&#39;[&#39;</code> and <code>n / 2</code> closing brackets <code>&#39;]&#39;</code>.</p>\n\n<p>A string is called <strong>balanced</strong> if and only if:</p>\n\n<ul>\n\t<li>It is the empty string, or</li>\n\t<li>It can be written as <code>AB</code>, where both <code>A</code> and <code>B</code> are <strong>balanced</strong> strings, or</li>\n\t<li>It can be written as <code>[C]</code>, where <code>C</code> is a <strong>balanced</strong> string.</li>\n</ul>\n\n<p>You may swap the brackets at <strong>any</strong> two indices <strong>any</strong> number of times.</p>\n\n<p>Return <em>the <strong>minimum</strong> number of swaps to make </em><code>s</code> <em><strong>balanced</strong></em>.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> s = &quot;][][&quot;\n<strong>Output:</strong> 1\n<strong>Explanation:</strong> You can make the string balanced by swapping index 0 with index 3.\nThe resulting string is &quot;[[]]&quot;.\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> s = &quot;]]][[[&quot;\n<strong>Output:</strong> 2\n<strong>Explanation:</strong> You can do the following to make the string balanced:\n- Swap index 0 with index 4. s = &quot;[]][][&quot;.\n- Swap index 1 with index 5. s = &quot;[[][]]&quot;.\nThe resulting string is &quot;[[][]]&quot;.\n</pre>\n\n<p><strong class=\"example\">Example 3:</strong></p>\n\n<pre>\n<strong>Input:</strong> s = &quot;[]&quot;\n<strong>Output:</strong> 0\n<strong>Explanation:</strong> The string is already balanced.\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>n == s.length</code></li>\n\t<li><code>2 &lt;= n &lt;= 10<sup>6</sup></code></li>\n\t<li><code>n</code> is even.</li>\n\t<li><code>s[i]</code> is either <code>&#39;[&#39; </code>or <code>&#39;]&#39;</code>.</li>\n\t<li>The number of opening brackets <code>&#39;[&#39;</code> equals <code>n / 2</code>, and the number of closing brackets <code>&#39;]&#39;</code> equals <code>n / 2</code>.</li>\n</ul>\n",
+  "difficulty": "Medium",
+  "freqBar": null,
+  "frontendQuestionId": "1963",
+  "hasSolution": false,
+  "hasVideoSolution": false,
+  "hints": [
+    "Iterate over the string and keep track of the number of opening and closing brackets on each step.",
+    "If the number of closing brackets is ever larger, you need to make a swap.",
+    "Swap it with the opening bracket closest to the end of s."
+  ],
+  "isFavor": false,
+  "paidOnly": false,
+  "similarQuestionList": [
+    {
+      "difficulty": "Hard",
+      "titleSlug": "remove-invalid-parentheses",
+      "title": "Remove Invalid Parentheses",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    },
+    {
+      "difficulty": "Medium",
+      "titleSlug": "minimum-add-to-make-parentheses-valid",
+      "title": "Minimum Add to Make Parentheses Valid",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    },
+    {
+      "difficulty": "Medium",
+      "titleSlug": "minimum-remove-to-make-valid-parentheses",
+      "title": "Minimum Remove to Make Valid Parentheses",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    },
+    {
+      "difficulty": "Medium",
+      "titleSlug": "minimum-insertions-to-balance-a-parentheses-string",
+      "title": "Minimum Insertions to Balance a Parentheses String",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    }
+  ],
+  "status": null,
+  "title": "Minimum Number of Swaps to Make the String Balanced",
+  "topicTags": [
+    {
+      "name": "Two Pointers",
+      "id": "VG9waWNUYWdOb2RlOjk=",
+      "slug": "two-pointers"
+    },
+    {
+      "name": "String",
+      "id": "VG9waWNUYWdOb2RlOjEw",
+      "slug": "string"
+    },
+    {
+      "name": "Stack",
+      "id": "VG9waWNUYWdOb2RlOjE1",
+      "slug": "stack"
+    },
+    {
+      "name": "Greedy",
+      "id": "VG9waWNUYWdOb2RlOjE3",
+      "slug": "greedy"
+    }
+  ]
+}

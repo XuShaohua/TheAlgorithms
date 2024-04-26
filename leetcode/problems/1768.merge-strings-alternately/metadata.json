@@ -1,0 +1,45 @@
+{
+  "titleSlug": "merge-strings-alternately",
+  "acRate": 79.55263392187997,
+  "content": "<p>You are given two strings <code>word1</code> and <code>word2</code>. Merge the strings by adding letters in alternating order, starting with <code>word1</code>. If a string is longer than the other, append the additional letters onto the end of the merged string.</p>\r\n\r\n<p>Return <em>the merged string.</em></p>\r\n\r\n<p>&nbsp;</p>\r\n<p><strong class=\"example\">Example 1:</strong></p>\r\n\r\n<pre>\r\n<strong>Input:</strong> word1 = &quot;abc&quot;, word2 = &quot;pqr&quot;\r\n<strong>Output:</strong> &quot;apbqcr&quot;\r\n<strong>Explanation:</strong>&nbsp;The merged string will be merged as so:\r\nword1:  a   b   c\r\nword2:    p   q   r\r\nmerged: a p b q c r\r\n</pre>\r\n\r\n<p><strong class=\"example\">Example 2:</strong></p>\r\n\r\n<pre>\r\n<strong>Input:</strong> word1 = &quot;ab&quot;, word2 = &quot;pqrs&quot;\r\n<strong>Output:</strong> &quot;apbqrs&quot;\r\n<strong>Explanation:</strong>&nbsp;Notice that as word2 is longer, &quot;rs&quot; is appended to the end.\r\nword1:  a   b \r\nword2:    p   q   r   s\r\nmerged: a p b q   r   s\r\n</pre>\r\n\r\n<p><strong class=\"example\">Example 3:</strong></p>\r\n\r\n<pre>\r\n<strong>Input:</strong> word1 = &quot;abcd&quot;, word2 = &quot;pq&quot;\r\n<strong>Output:</strong> &quot;apbqcd&quot;\r\n<strong>Explanation:</strong>&nbsp;Notice that as word1 is longer, &quot;cd&quot; is appended to the end.\r\nword1:  a   b   c   d\r\nword2:    p   q \r\nmerged: a p b q c   d\r\n</pre>\r\n\r\n<p>&nbsp;</p>\r\n<p><strong>Constraints:</strong></p>\r\n\r\n<ul>\r\n\t<li><code>1 &lt;= word1.length, word2.length &lt;= 100</code></li>\r\n\t<li><code>word1</code> and <code>word2</code> consist of lowercase English letters.</li>\r\n</ul>",
+  "difficulty": "Easy",
+  "freqBar": null,
+  "frontendQuestionId": "1768",
+  "hasSolution": true,
+  "hasVideoSolution": true,
+  "hints": [
+    "Use two pointers, one pointer for each string. Alternately choose the character from each pointer, and move the pointer upwards."
+  ],
+  "isFavor": false,
+  "paidOnly": false,
+  "similarQuestionList": [
+    {
+      "difficulty": "Medium",
+      "titleSlug": "zigzag-iterator",
+      "title": "Zigzag Iterator",
+      "translatedTitle": null,
+      "isPaidOnly": true
+    },
+    {
+      "difficulty": "Medium",
+      "titleSlug": "minimum-additions-to-make-valid-string",
+      "title": "Minimum Additions to Make Valid String",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    }
+  ],
+  "status": null,
+  "title": "Merge Strings Alternately",
+  "topicTags": [
+    {
+      "name": "Two Pointers",
+      "id": "VG9waWNUYWdOb2RlOjk=",
+      "slug": "two-pointers"
+    },
+    {
+      "name": "String",
+      "id": "VG9waWNUYWdOb2RlOjEw",
+      "slug": "string"
+    }
+  ]
+}

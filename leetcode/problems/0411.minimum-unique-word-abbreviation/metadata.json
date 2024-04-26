@@ -1,0 +1,55 @@
+{
+  "titleSlug": "minimum-unique-word-abbreviation",
+  "acRate": 39.70216581972336,
+  "content": null,
+  "difficulty": "Hard",
+  "freqBar": null,
+  "frontendQuestionId": "411",
+  "hasSolution": false,
+  "hasVideoSolution": false,
+  "hints": [],
+  "isFavor": false,
+  "paidOnly": true,
+  "similarQuestionList": [
+    {
+      "difficulty": "Medium",
+      "titleSlug": "generalized-abbreviation",
+      "title": "Generalized Abbreviation",
+      "translatedTitle": null,
+      "isPaidOnly": true
+    },
+    {
+      "difficulty": "Easy",
+      "titleSlug": "valid-word-abbreviation",
+      "title": "Valid Word Abbreviation",
+      "translatedTitle": null,
+      "isPaidOnly": true
+    },
+    {
+      "difficulty": "Hard",
+      "titleSlug": "word-abbreviation",
+      "title": "Word Abbreviation",
+      "translatedTitle": null,
+      "isPaidOnly": true
+    }
+  ],
+  "status": null,
+  "title": "Minimum Unique Word Abbreviation",
+  "topicTags": [
+    {
+      "name": "String",
+      "id": "VG9waWNUYWdOb2RlOjEw",
+      "slug": "string"
+    },
+    {
+      "name": "Backtracking",
+      "id": "VG9waWNUYWdOb2RlOjE0",
+      "slug": "backtracking"
+    },
+    {
+      "name": "Bit Manipulation",
+      "id": "VG9waWNUYWdOb2RlOjE5",
+      "slug": "bit-manipulation"
+    }
+  ]
+}

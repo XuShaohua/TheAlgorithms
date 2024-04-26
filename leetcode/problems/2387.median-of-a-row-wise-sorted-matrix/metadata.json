@@ -1,0 +1,44 @@
+{
+  "titleSlug": "median-of-a-row-wise-sorted-matrix",
+  "acRate": 70.56594239514907,
+  "content": null,
+  "difficulty": "Medium",
+  "freqBar": null,
+  "frontendQuestionId": "2387",
+  "hasSolution": false,
+  "hasVideoSolution": false,
+  "hints": [
+    "How can you use the fact that the rows are sorted in non-decreasing order to solve the problem efficiently?",
+    "Try to binary search the answer."
+  ],
+  "isFavor": false,
+  "paidOnly": true,
+  "similarQuestionList": [
+    {
+      "difficulty": "Hard",
+      "titleSlug": "median-of-two-sorted-arrays",
+      "title": "Median of Two Sorted Arrays",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    }
+  ],
+  "status": null,
+  "title": "Median of a Row Wise Sorted Matrix",
+  "topicTags": [
+    {
+      "name": "Array",
+      "id": "VG9waWNUYWdOb2RlOjU=",
+      "slug": "array"
+    },
+    {
+      "name": "Binary Search",
+      "id": "VG9waWNUYWdOb2RlOjEx",
+      "slug": "binary-search"
+    },
+    {
+      "name": "Matrix",
+      "id": "VG9waWNUYWdOb2RlOjYxMDUz",
+      "slug": "matrix"
+    }
+  ]
+}

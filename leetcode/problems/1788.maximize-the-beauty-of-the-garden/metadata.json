@@ -1,0 +1,36 @@
+{
+  "titleSlug": "maximize-the-beauty-of-the-garden",
+  "acRate": 67.64797995615409,
+  "content": null,
+  "difficulty": "Hard",
+  "freqBar": null,
+  "frontendQuestionId": "1788",
+  "hasSolution": false,
+  "hasVideoSolution": false,
+  "hints": [
+    "Consider every possible beauty and its first and last index in flowers.",
+    "Remove all flowers with negative beauties within those indices."
+  ],
+  "isFavor": false,
+  "paidOnly": true,
+  "similarQuestionList": [],
+  "status": null,
+  "title": "Maximize the Beauty of the Garden",
+  "topicTags": [
+    {
+      "name": "Array",
+      "id": "VG9waWNUYWdOb2RlOjU=",
+      "slug": "array"
+    },
+    {
+      "name": "Greedy",
+      "id": "VG9waWNUYWdOb2RlOjE3",
+      "slug": "greedy"
+    },
+    {
+      "name": "Prefix Sum",
+      "id": "VG9waWNUYWdOb2RlOjYxMDY4",
+      "slug": "prefix-sum"
+    }
+  ]
+}

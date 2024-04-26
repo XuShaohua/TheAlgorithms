@@ -1,0 +1,61 @@
+{
+  "titleSlug": "choose-numbers-from-two-arrays-in-range",
+  "acRate": 50.28453181583031,
+  "content": null,
+  "difficulty": "Hard",
+  "freqBar": null,
+  "frontendQuestionId": "2143",
+  "hasSolution": false,
+  "hasVideoSolution": false,
+  "hints": [
+    "If you know the possible sums you can get for a range [l, r], how can you use this information to calculate the possible sums you can get for a range [l, r + 1]?",
+    "For the range [l, r], if it is possible to choose elements such that the sum of elements you picked from nums1 is x and the sum of elements you picked from nums2 is y, then (x + nums1[r + 1], y) and (x, y + nums2[r + 1]) are possible sums you can get in the range [l, r + 1].",
+    "How can we save the possible sums obtainable at a given index so that we can reuse this information later?"
+  ],
+  "isFavor": false,
+  "paidOnly": true,
+  "similarQuestionList": [
+    {
+      "difficulty": "Easy",
+      "titleSlug": "intersection-of-two-arrays",
+      "title": "Intersection of Two Arrays",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    },
+    {
+      "difficulty": "Easy",
+      "titleSlug": "intersection-of-two-arrays-ii",
+      "title": "Intersection of Two Arrays II",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    },
+    {
+      "difficulty": "Hard",
+      "titleSlug": "minimum-xor-sum-of-two-arrays",
+      "title": "Minimum XOR Sum of Two Arrays",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    },
+    {
+      "difficulty": "Medium",
+      "titleSlug": "minimize-product-sum-of-two-arrays",
+      "title": "Minimize Product Sum of Two Arrays",
+      "translatedTitle": null,
+      "isPaidOnly": true
+    }
+  ],
+  "status": null,
+  "title": "Choose Numbers From Two Arrays in Range",
+  "topicTags": [
+    {
+      "name": "Array",
+      "id": "VG9waWNUYWdOb2RlOjU=",
+      "slug": "array"
+    },
+    {
+      "name": "Dynamic Programming",
+      "id": "VG9waWNUYWdOb2RlOjEz",
+      "slug": "dynamic-programming"
+    }
+  ]
+}

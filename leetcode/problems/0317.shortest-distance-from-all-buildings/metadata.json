@@ -1,0 +1,55 @@
+{
+  "titleSlug": "shortest-distance-from-all-buildings",
+  "acRate": 43.05425024503443,
+  "content": null,
+  "difficulty": "Hard",
+  "freqBar": null,
+  "frontendQuestionId": "317",
+  "hasSolution": true,
+  "hasVideoSolution": false,
+  "hints": [],
+  "isFavor": false,
+  "paidOnly": true,
+  "similarQuestionList": [
+    {
+      "difficulty": "Medium",
+      "titleSlug": "walls-and-gates",
+      "title": "Walls and Gates",
+      "translatedTitle": null,
+      "isPaidOnly": true
+    },
+    {
+      "difficulty": "Hard",
+      "titleSlug": "best-meeting-point",
+      "title": "Best Meeting Point",
+      "translatedTitle": null,
+      "isPaidOnly": true
+    },
+    {
+      "difficulty": "Medium",
+      "titleSlug": "as-far-from-land-as-possible",
+      "title": "As Far from Land as Possible",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    }
+  ],
+  "status": null,
+  "title": "Shortest Distance from All Buildings",
+  "topicTags": [
+    {
+      "name": "Array",
+      "id": "VG9waWNUYWdOb2RlOjU=",
+      "slug": "array"
+    },
+    {
+      "name": "Breadth-First Search",
+      "id": "VG9waWNUYWdOb2RlOjIy",
+      "slug": "breadth-first-search"
+    },
+    {
+      "name": "Matrix",
+      "id": "VG9waWNUYWdOb2RlOjYxMDUz",
+      "slug": "matrix"
+    }
+  ]
+}

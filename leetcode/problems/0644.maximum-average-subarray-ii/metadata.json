@@ -1,0 +1,41 @@
+{
+  "titleSlug": "maximum-average-subarray-ii",
+  "acRate": 36.57118985778375,
+  "content": null,
+  "difficulty": "Hard",
+  "freqBar": null,
+  "frontendQuestionId": "644",
+  "hasSolution": true,
+  "hasVideoSolution": true,
+  "hints": [],
+  "isFavor": false,
+  "paidOnly": true,
+  "similarQuestionList": [
+    {
+      "difficulty": "Easy",
+      "titleSlug": "maximum-average-subarray-i",
+      "title": "Maximum Average Subarray I",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    }
+  ],
+  "status": null,
+  "title": "Maximum Average Subarray II",
+  "topicTags": [
+    {
+      "name": "Array",
+      "id": "VG9waWNUYWdOb2RlOjU=",
+      "slug": "array"
+    },
+    {
+      "name": "Binary Search",
+      "id": "VG9waWNUYWdOb2RlOjEx",
+      "slug": "binary-search"
+    },
+    {
+      "name": "Prefix Sum",
+      "id": "VG9waWNUYWdOb2RlOjYxMDY4",
+      "slug": "prefix-sum"
+    }
+  ]
+}

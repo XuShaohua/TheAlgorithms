@@ -1,0 +1,57 @@
+{
+  "titleSlug": "meeting-rooms",
+  "acRate": 57.969022415013946,
+  "content": null,
+  "difficulty": "Easy",
+  "freqBar": null,
+  "frontendQuestionId": "252",
+  "hasSolution": true,
+  "hasVideoSolution": true,
+  "hints": [],
+  "isFavor": false,
+  "paidOnly": true,
+  "similarQuestionList": [
+    {
+      "difficulty": "Medium",
+      "titleSlug": "merge-intervals",
+      "title": "Merge Intervals",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    },
+    {
+      "difficulty": "Medium",
+      "titleSlug": "meeting-rooms-ii",
+      "title": "Meeting Rooms II",
+      "translatedTitle": null,
+      "isPaidOnly": true
+    },
+    {
+      "difficulty": "Hard",
+      "titleSlug": "meeting-rooms-iii",
+      "title": "Meeting Rooms III",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    },
+    {
+      "difficulty": "Easy",
+      "titleSlug": "points-that-intersect-with-cars",
+      "title": "Points That Intersect With Cars",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    }
+  ],
+  "status": null,
+  "title": "Meeting Rooms",
+  "topicTags": [
+    {
+      "name": "Array",
+      "id": "VG9waWNUYWdOb2RlOjU=",
+      "slug": "array"
+    },
+    {
+      "name": "Sorting",
+      "id": "VG9waWNUYWdOb2RlOjYxMDQ5",
+      "slug": "sorting"
+    }
+  ]
+}

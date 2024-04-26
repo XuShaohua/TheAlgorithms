@@ -1,0 +1,78 @@
+{
+  "titleSlug": "substrings-that-begin-and-end-with-the-same-letter",
+  "acRate": 68.09050772626931,
+  "content": null,
+  "difficulty": "Medium",
+  "freqBar": null,
+  "frontendQuestionId": "2083",
+  "hasSolution": false,
+  "hasVideoSolution": false,
+  "hints": [
+    "In the string \"abacad\", the letter \"a\" appears 3 times. How many substrings begin with the first \"a\" and end with any \"a\"?",
+    "There are 3 substrings (\"a\", \"aba\", and \"abaca\"). How many substrings begin with the second \"a\" and end with any \"a\"? How about the third?",
+    "2 substrings begin with the second \"a\" (\"a\", and \"aca\") and 1 substring begins with the third \"a\" (\"a\").",
+    "There is a total of 3 + 2 + 1 = 6 substrings that begin and end with \"a\".",
+    "If a character appears i times in the string, there are i * (i + 1) / 2 substrings that begin and end with that character."
+  ],
+  "isFavor": false,
+  "paidOnly": true,
+  "similarQuestionList": [
+    {
+      "difficulty": "Easy",
+      "titleSlug": "number-of-good-pairs",
+      "title": "Number of Good Pairs",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    },
+    {
+      "difficulty": "Medium",
+      "titleSlug": "sum-of-beauty-of-all-substrings",
+      "title": "Sum of Beauty of All Substrings",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    },
+    {
+      "difficulty": "Medium",
+      "titleSlug": "count-pairs-in-two-arrays",
+      "title": "Count Pairs in Two Arrays",
+      "translatedTitle": null,
+      "isPaidOnly": true
+    },
+    {
+      "difficulty": "Medium",
+      "titleSlug": "unique-substrings-with-equal-digit-frequency",
+      "title": "Unique Substrings With Equal Digit Frequency",
+      "translatedTitle": null,
+      "isPaidOnly": true
+    }
+  ],
+  "status": null,
+  "title": "Substrings That Begin and End With the Same Letter",
+  "topicTags": [
+    {
+      "name": "Hash Table",
+      "id": "VG9waWNUYWdOb2RlOjY=",
+      "slug": "hash-table"
+    },
+    {
+      "name": "Math",
+      "id": "VG9waWNUYWdOb2RlOjg=",
+      "slug": "math"
+    },
+    {
+      "name": "String",
+      "id": "VG9waWNUYWdOb2RlOjEw",
+      "slug": "string"
+    },
+    {
+      "name": "Counting",
+      "id": "VG9waWNUYWdOb2RlOjYxMDYy",
+      "slug": "counting"
+    },
+    {
+      "name": "Prefix Sum",
+      "id": "VG9waWNUYWdOb2RlOjYxMDY4",
+      "slug": "prefix-sum"
+    }
+  ]
+}

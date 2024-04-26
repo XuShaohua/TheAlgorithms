@@ -1,0 +1,60 @@
+{
+  "titleSlug": "number-of-equal-count-substrings",
+  "acRate": 47.444120505345,
+  "content": null,
+  "difficulty": "Medium",
+  "freqBar": null,
+  "frontendQuestionId": "2067",
+  "hasSolution": false,
+  "hasVideoSolution": false,
+  "hints": [
+    "The brute force solution is to check every substring, which would TLE. How can we improve this solution?",
+    "In an equal count substring, the first character appears count times, the second character appears count times, and so on.",
+    "The length of an equal count substring is the number of unique characters multiplied by count.",
+    "The length of all equal count substrings are multiples of count."
+  ],
+  "isFavor": false,
+  "paidOnly": true,
+  "similarQuestionList": [
+    {
+      "difficulty": "Medium",
+      "titleSlug": "longest-substring-without-repeating-characters",
+      "title": "Longest Substring Without Repeating Characters",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    },
+    {
+      "difficulty": "Medium",
+      "titleSlug": "longest-substring-with-at-least-k-repeating-characters",
+      "title": "Longest Substring with At Least K Repeating Characters",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    },
+    {
+      "difficulty": "Medium",
+      "titleSlug": "unique-substrings-with-equal-digit-frequency",
+      "title": "Unique Substrings With Equal Digit Frequency",
+      "translatedTitle": null,
+      "isPaidOnly": true
+    }
+  ],
+  "status": null,
+  "title": "Number of Equal Count Substrings",
+  "topicTags": [
+    {
+      "name": "String",
+      "id": "VG9waWNUYWdOb2RlOjEw",
+      "slug": "string"
+    },
+    {
+      "name": "Counting",
+      "id": "VG9waWNUYWdOb2RlOjYxMDYy",
+      "slug": "counting"
+    },
+    {
+      "name": "Prefix Sum",
+      "id": "VG9waWNUYWdOb2RlOjYxMDY4",
+      "slug": "prefix-sum"
+    }
+  ]
+}

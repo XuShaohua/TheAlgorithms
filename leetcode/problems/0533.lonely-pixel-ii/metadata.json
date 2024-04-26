@@ -1,0 +1,41 @@
+{
+  "titleSlug": "lonely-pixel-ii",
+  "acRate": 48.61029411764706,
+  "content": null,
+  "difficulty": "Medium",
+  "freqBar": null,
+  "frontendQuestionId": "533",
+  "hasSolution": false,
+  "hasVideoSolution": false,
+  "hints": [],
+  "isFavor": false,
+  "paidOnly": true,
+  "similarQuestionList": [
+    {
+      "difficulty": "Medium",
+      "titleSlug": "lonely-pixel-i",
+      "title": "Lonely Pixel I",
+      "translatedTitle": null,
+      "isPaidOnly": true
+    }
+  ],
+  "status": null,
+  "title": "Lonely Pixel II",
+  "topicTags": [
+    {
+      "name": "Array",
+      "id": "VG9waWNUYWdOb2RlOjU=",
+      "slug": "array"
+    },
+    {
+      "name": "Hash Table",
+      "id": "VG9waWNUYWdOb2RlOjY=",
+      "slug": "hash-table"
+    },
+    {
+      "name": "Matrix",
+      "id": "VG9waWNUYWdOb2RlOjYxMDUz",
+      "slug": "matrix"
+    }
+  ]
+}

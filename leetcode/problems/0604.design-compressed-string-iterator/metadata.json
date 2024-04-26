@@ -1,0 +1,53 @@
+{
+  "titleSlug": "design-compressed-string-iterator",
+  "acRate": 39.726244261237014,
+  "content": null,
+  "difficulty": "Easy",
+  "freqBar": null,
+  "frontendQuestionId": "604",
+  "hasSolution": true,
+  "hasVideoSolution": false,
+  "hints": [],
+  "isFavor": false,
+  "paidOnly": true,
+  "similarQuestionList": [
+    {
+      "difficulty": "Medium",
+      "titleSlug": "lru-cache",
+      "title": "LRU Cache",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    },
+    {
+      "difficulty": "Medium",
+      "titleSlug": "string-compression",
+      "title": "String Compression",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    }
+  ],
+  "status": null,
+  "title": "Design Compressed String Iterator",
+  "topicTags": [
+    {
+      "name": "Array",
+      "id": "VG9waWNUYWdOb2RlOjU=",
+      "slug": "array"
+    },
+    {
+      "name": "String",
+      "id": "VG9waWNUYWdOb2RlOjEw",
+      "slug": "string"
+    },
+    {
+      "name": "Design",
+      "id": "VG9waWNUYWdOb2RlOjI1",
+      "slug": "design"
+    },
+    {
+      "name": "Iterator",
+      "id": "VG9waWNUYWdOb2RlOjYxMDY0",
+      "slug": "iterator"
+    }
+  ]
+}

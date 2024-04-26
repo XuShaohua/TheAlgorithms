@@ -1,0 +1,39 @@
+{
+  "titleSlug": "diameter-of-n-ary-tree",
+  "acRate": 74.15940718173307,
+  "content": null,
+  "difficulty": "Medium",
+  "freqBar": null,
+  "frontendQuestionId": "1522",
+  "hasSolution": true,
+  "hasVideoSolution": false,
+  "hints": [
+    "For the node i, calculate the height of each of its children and keep the first and second maximum heights (max1_i , max2_i).",
+    "Check all nodes and return max( 2 + max1_i  +  max2_i )."
+  ],
+  "isFavor": false,
+  "paidOnly": true,
+  "similarQuestionList": [
+    {
+      "difficulty": "Easy",
+      "titleSlug": "diameter-of-binary-tree",
+      "title": "Diameter of Binary Tree",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    }
+  ],
+  "status": null,
+  "title": "Diameter of N-Ary Tree",
+  "topicTags": [
+    {
+      "name": "Tree",
+      "id": "VG9waWNUYWdOb2RlOjIw",
+      "slug": "tree"
+    },
+    {
+      "name": "Depth-First Search",
+      "id": "VG9waWNUYWdOb2RlOjIx",
+      "slug": "depth-first-search"
+    }
+  ]
+}

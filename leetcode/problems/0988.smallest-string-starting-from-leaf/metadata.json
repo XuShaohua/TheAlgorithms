@@ -1,0 +1,53 @@
+{
+  "titleSlug": "smallest-string-starting-from-leaf",
+  "acRate": 51.08337998170474,
+  "content": "<p>You are given the <code>root</code> of a binary tree where each node has a value in the range <code>[0, 25]</code> representing the letters <code>&#39;a&#39;</code> to <code>&#39;z&#39;</code>.</p>\n\n<p>Return <em>the <strong>lexicographically smallest</strong> string that starts at a leaf of this tree and ends at the root</em>.</p>\n\n<p>As a reminder, any shorter prefix of a string is <strong>lexicographically smaller</strong>.</p>\n\n<ul>\n\t<li>For example, <code>&quot;ab&quot;</code> is lexicographically smaller than <code>&quot;aba&quot;</code>.</li>\n</ul>\n\n<p>A leaf of a node is a node that has no children.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n<img alt=\"\" src=\"https://assets.leetcode.com/uploads/2019/01/30/tree1.png\" style=\"width: 534px; height: 358px;\" />\n<pre>\n<strong>Input:</strong> root = [0,1,2,3,4,3,4]\n<strong>Output:</strong> &quot;dba&quot;\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n<img alt=\"\" src=\"https://assets.leetcode.com/uploads/2019/01/30/tree2.png\" style=\"width: 534px; height: 358px;\" />\n<pre>\n<strong>Input:</strong> root = [25,1,3,1,3,0,2]\n<strong>Output:</strong> &quot;adz&quot;\n</pre>\n\n<p><strong class=\"example\">Example 3:</strong></p>\n<img alt=\"\" src=\"https://assets.leetcode.com/uploads/2019/02/01/tree3.png\" style=\"height: 490px; width: 468px;\" />\n<pre>\n<strong>Input:</strong> root = [2,2,1,null,1,0,null,0]\n<strong>Output:</strong> &quot;abc&quot;\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li>The number of nodes in the tree is in the range <code>[1, 8500]</code>.</li>\n\t<li><code>0 &lt;= Node.val &lt;= 25</code></li>\n</ul>\n",
+  "difficulty": "Medium",
+  "freqBar": null,
+  "frontendQuestionId": "988",
+  "hasSolution": false,
+  "hasVideoSolution": false,
+  "hints": [],
+  "isFavor": false,
+  "paidOnly": false,
+  "similarQuestionList": [
+    {
+      "difficulty": "Medium",
+      "titleSlug": "sum-root-to-leaf-numbers",
+      "title": "Sum Root to Leaf Numbers",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    },
+    {
+      "difficulty": "Easy",
+      "titleSlug": "binary-tree-paths",
+      "title": "Binary Tree Paths",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    }
+  ],
+  "status": null,
+  "title": "Smallest String Starting From Leaf",
+  "topicTags": [
+    {
+      "name": "String",
+      "id": "VG9waWNUYWdOb2RlOjEw",
+      "slug": "string"
+    },
+    {
+      "name": "Tree",
+      "id": "VG9waWNUYWdOb2RlOjIw",
+      "slug": "tree"
+    },
+    {
+      "name": "Depth-First Search",
+      "id": "VG9waWNUYWdOb2RlOjIx",
+      "slug": "depth-first-search"
+    },
+    {
+      "name": "Binary Tree",
+      "id": "VG9waWNUYWdOb2RlOjYxMDU3",
+      "slug": "binary-tree"
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "titleSlug": "maximum-sum-score-of-array",
+  "acRate": 62.13998390989541,
+  "content": null,
+  "difficulty": "Medium",
+  "freqBar": null,
+  "frontendQuestionId": "2219",
+  "hasSolution": false,
+  "hasVideoSolution": false,
+  "hints": [
+    "How can we use precalculation to efficiently calculate the average difference at an index?",
+    "Create a prefix and/or suffix sum array."
+  ],
+  "isFavor": false,
+  "paidOnly": true,
+  "similarQuestionList": [
+    {
+      "difficulty": "Medium",
+      "titleSlug": "subarray-sum-equals-k",
+      "title": "Subarray Sum Equals K",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    },
+    {
+      "difficulty": "Easy",
+      "titleSlug": "find-pivot-index",
+      "title": "Find Pivot Index",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    },
+    {
+      "difficulty": "Easy",
+      "titleSlug": "find-the-middle-index-in-array",
+      "title": "Find the Middle Index in Array",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    }
+  ],
+  "status": null,
+  "title": "Maximum Sum Score of Array",
+  "topicTags": [
+    {
+      "name": "Array",
+      "id": "VG9waWNUYWdOb2RlOjU=",
+      "slug": "array"
+    },
+    {
+      "name": "Prefix Sum",
+      "id": "VG9waWNUYWdOb2RlOjYxMDY4",
+      "slug": "prefix-sum"
+    }
+  ]
+}

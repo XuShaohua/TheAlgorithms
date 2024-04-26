@@ -1,0 +1,30 @@
+{
+  "titleSlug": "fixed-point",
+  "acRate": 64.14922121131819,
+  "content": null,
+  "difficulty": "Easy",
+  "freqBar": null,
+  "frontendQuestionId": "1064",
+  "hasSolution": true,
+  "hasVideoSolution": false,
+  "hints": [
+    "Loop over the array and check the first index i such A[i] == i"
+  ],
+  "isFavor": false,
+  "paidOnly": true,
+  "similarQuestionList": [],
+  "status": null,
+  "title": "Fixed Point",
+  "topicTags": [
+    {
+      "name": "Array",
+      "id": "VG9waWNUYWdOb2RlOjU=",
+      "slug": "array"
+    },
+    {
+      "name": "Binary Search",
+      "id": "VG9waWNUYWdOb2RlOjEx",
+      "slug": "binary-search"
+    }
+  ]
+}

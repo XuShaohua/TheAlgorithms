@@ -1,0 +1,85 @@
+{
+  "titleSlug": "minimum-number-of-lines-to-cover-points",
+  "acRate": 44.90504863362668,
+  "content": null,
+  "difficulty": "Medium",
+  "freqBar": null,
+  "frontendQuestionId": "2152",
+  "hasSolution": false,
+  "hasVideoSolution": false,
+  "hints": [
+    "What is the highest possible answer for a set of n points?",
+    "The highest possible answer is n / 2 (rounded up). This is because you can cover at least two points with a line, and if n is odd, you need to add one extra line to cover the last point.",
+    "Suppose you have a line covering two points, how can you quickly check if a third point is also covered by that line?",
+    "Calculate the slope from the first point to the second point. If the slope from the first point to the third point is the same, then it is also covered by that line."
+  ],
+  "isFavor": false,
+  "paidOnly": true,
+  "similarQuestionList": [
+    {
+      "difficulty": "Hard",
+      "titleSlug": "max-points-on-a-line",
+      "title": "Max Points on a Line",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    },
+    {
+      "difficulty": "Medium",
+      "titleSlug": "min-cost-to-connect-all-points",
+      "title": "Min Cost to Connect All Points",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    },
+    {
+      "difficulty": "Medium",
+      "titleSlug": "minimum-lines-to-represent-a-line-chart",
+      "title": "Minimum Lines to Represent a Line Chart",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    }
+  ],
+  "status": null,
+  "title": "Minimum Number of Lines to Cover Points",
+  "topicTags": [
+    {
+      "name": "Array",
+      "id": "VG9waWNUYWdOb2RlOjU=",
+      "slug": "array"
+    },
+    {
+      "name": "Hash Table",
+      "id": "VG9waWNUYWdOb2RlOjY=",
+      "slug": "hash-table"
+    },
+    {
+      "name": "Math",
+      "id": "VG9waWNUYWdOb2RlOjg=",
+      "slug": "math"
+    },
+    {
+      "name": "Dynamic Programming",
+      "id": "VG9waWNUYWdOb2RlOjEz",
+      "slug": "dynamic-programming"
+    },
+    {
+      "name": "Backtracking",
+      "id": "VG9waWNUYWdOb2RlOjE0",
+      "slug": "backtracking"
+    },
+    {
+      "name": "Bit Manipulation",
+      "id": "VG9waWNUYWdOb2RlOjE5",
+      "slug": "bit-manipulation"
+    },
+    {
+      "name": "Geometry",
+      "id": "VG9waWNUYWdOb2RlOjM4",
+      "slug": "geometry"
+    },
+    {
+      "name": "Bitmask",
+      "id": "VG9waWNUYWdOb2RlOjYxMDc4",
+      "slug": "bitmask"
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "titleSlug": "form-largest-integer-with-digits-that-add-up-to-target",
+  "acRate": 48.02539965465382,
+  "content": "<p>Given an array of integers <code>cost</code> and an integer <code>target</code>, return <em>the <strong>maximum</strong> integer you can paint under the following rules</em>:</p>\n\n<ul>\n\t<li>The cost of painting a digit <code>(i + 1)</code> is given by <code>cost[i]</code> (<strong>0-indexed</strong>).</li>\n\t<li>The total cost used must be equal to <code>target</code>.</li>\n\t<li>The integer does not have <code>0</code> digits.</li>\n</ul>\n\n<p>Since the answer may be very large, return it as a string. If there is no way to paint any integer given the condition, return <code>&quot;0&quot;</code>.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> cost = [4,3,2,5,6,7,2,5,5], target = 9\n<strong>Output:</strong> &quot;7772&quot;\n<strong>Explanation:</strong> The cost to paint the digit &#39;7&#39; is 2, and the digit &#39;2&#39; is 3. Then cost(&quot;7772&quot;) = 2*3+ 3*1 = 9. You could also paint &quot;977&quot;, but &quot;7772&quot; is the largest number.\n<strong>Digit    cost</strong>\n  1  -&gt;   4\n  2  -&gt;   3\n  3  -&gt;   2\n  4  -&gt;   5\n  5  -&gt;   6\n  6  -&gt;   7\n  7  -&gt;   2\n  8  -&gt;   5\n  9  -&gt;   5\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> cost = [7,6,5,5,5,6,8,7,8], target = 12\n<strong>Output:</strong> &quot;85&quot;\n<strong>Explanation:</strong> The cost to paint the digit &#39;8&#39; is 7, and the digit &#39;5&#39; is 5. Then cost(&quot;85&quot;) = 7 + 5 = 12.\n</pre>\n\n<p><strong class=\"example\">Example 3:</strong></p>\n\n<pre>\n<strong>Input:</strong> cost = [2,4,6,2,4,6,4,4,4], target = 5\n<strong>Output:</strong> &quot;0&quot;\n<strong>Explanation:</strong> It is impossible to paint any integer with total cost equal to target.\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>cost.length == 9</code></li>\n\t<li><code>1 &lt;= cost[i], target &lt;= 5000</code></li>\n</ul>\n",
+  "difficulty": "Hard",
+  "freqBar": null,
+  "frontendQuestionId": "1449",
+  "hasSolution": false,
+  "hasVideoSolution": false,
+  "hints": [
+    "Use dynamic programming to find the maximum digits to paint given a total cost.",
+    "Build the largest number possible using this DP table."
+  ],
+  "isFavor": false,
+  "paidOnly": false,
+  "similarQuestionList": [],
+  "status": null,
+  "title": "Form Largest Integer With Digits That Add up to Target",
+  "topicTags": [
+    {
+      "name": "Array",
+      "id": "VG9waWNUYWdOb2RlOjU=",
+      "slug": "array"
+    },
+    {
+      "name": "Dynamic Programming",
+      "id": "VG9waWNUYWdOb2RlOjEz",
+      "slug": "dynamic-programming"
+    }
+  ]
+}

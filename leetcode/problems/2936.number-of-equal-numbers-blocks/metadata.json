@@ -1,0 +1,42 @@
+{
+  "titleSlug": "number-of-equal-numbers-blocks",
+  "acRate": 70.51039697542532,
+  "content": null,
+  "difficulty": "Medium",
+  "freqBar": null,
+  "frontendQuestionId": "2936",
+  "hasSolution": false,
+  "hasVideoSolution": false,
+  "hints": [
+    "Start from the beginning of the array <code>nums.at(0)</code>.",
+    "Do a binary search on the last index <code>last</code> such that <code>nums.at(0) == nums.at(last)</code>.",
+    "Continue this process until you get to the end of the array (<code>nums.size()</code>)."
+  ],
+  "isFavor": false,
+  "paidOnly": true,
+  "similarQuestionList": [],
+  "status": null,
+  "title": "Number of Equal Numbers Blocks",
+  "topicTags": [
+    {
+      "name": "Array",
+      "id": "VG9waWNUYWdOb2RlOjU=",
+      "slug": "array"
+    },
+    {
+      "name": "Binary Search",
+      "id": "VG9waWNUYWdOb2RlOjEx",
+      "slug": "binary-search"
+    },
+    {
+      "name": "Divide and Conquer",
+      "id": "VG9waWNUYWdOb2RlOjEy",
+      "slug": "divide-and-conquer"
+    },
+    {
+      "name": "Interactive",
+      "id": "VG9waWNUYWdOb2RlOjYxMDU5",
+      "slug": "interactive"
+    }
+  ]
+}

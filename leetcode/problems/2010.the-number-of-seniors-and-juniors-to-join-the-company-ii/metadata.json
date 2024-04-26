@@ -1,0 +1,38 @@
+{
+  "titleSlug": "the-number-of-seniors-and-juniors-to-join-the-company-ii",
+  "acRate": 61.51308036766439,
+  "content": null,
+  "difficulty": "Hard",
+  "freqBar": null,
+  "frontendQuestionId": "2010",
+  "hasSolution": false,
+  "hasVideoSolution": false,
+  "hints": [],
+  "isFavor": false,
+  "paidOnly": true,
+  "similarQuestionList": [
+    {
+      "difficulty": "Medium",
+      "titleSlug": "last-person-to-fit-in-the-bus",
+      "title": "Last Person to Fit in the Bus",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    },
+    {
+      "difficulty": "Hard",
+      "titleSlug": "the-number-of-seniors-and-juniors-to-join-the-company",
+      "title": "The Number of Seniors and Juniors to Join the Company",
+      "translatedTitle": null,
+      "isPaidOnly": true
+    }
+  ],
+  "status": null,
+  "title": "The Number of Seniors and Juniors to Join the Company II",
+  "topicTags": [
+    {
+      "name": "Database",
+      "id": "VG9waWNUYWdOb2RlOjYxMDQz",
+      "slug": "database"
+    }
+  ]
+}

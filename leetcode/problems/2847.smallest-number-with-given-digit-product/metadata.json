@@ -1,0 +1,34 @@
+{
+  "titleSlug": "smallest-number-with-given-digit-product",
+  "acRate": 43.80069524913094,
+  "content": null,
+  "difficulty": "Medium",
+  "freqBar": null,
+  "frontendQuestionId": "2847",
+  "hasSolution": false,
+  "hasVideoSolution": false,
+  "hints": [
+    "Find the prime factors of <code>n</code>.",
+    "If there is a prime factor <code>p</code> such that <code>p >= 11</code>, the answer is <code>-1</code>. Since there are no digits whose products equal <code>p</code>.",
+    "Factors <code>5</code> and <code>7</code> should be included in the answer since their product with any number bigger than <code>1</code> is a 2-digit number.",
+    "For factors <code>2</code> and <code>3</code>, we group every three <code>2</code> into an <code>8</code> and every two <code>3</code> into a <code>9</code>.",
+    "For any leftover <code>2</code> or <code>3</code>, check all the possible combinations."
+  ],
+  "isFavor": false,
+  "paidOnly": true,
+  "similarQuestionList": [],
+  "status": null,
+  "title": "Smallest Number With Given Digit Product",
+  "topicTags": [
+    {
+      "name": "Math",
+      "id": "VG9waWNUYWdOb2RlOjg=",
+      "slug": "math"
+    },
+    {
+      "name": "Greedy",
+      "id": "VG9waWNUYWdOb2RlOjE3",
+      "slug": "greedy"
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "titleSlug": "alien-dictionary",
+  "acRate": 35.68972361316365,
+  "content": null,
+  "difficulty": "Hard",
+  "freqBar": null,
+  "frontendQuestionId": "269",
+  "hasSolution": true,
+  "hasVideoSolution": false,
+  "hints": [],
+  "isFavor": false,
+  "paidOnly": true,
+  "similarQuestionList": [
+    {
+      "difficulty": "Medium",
+      "titleSlug": "course-schedule-ii",
+      "title": "Course Schedule II",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    }
+  ],
+  "status": null,
+  "title": "Alien Dictionary",
+  "topicTags": [
+    {
+      "name": "Array",
+      "id": "VG9waWNUYWdOb2RlOjU=",
+      "slug": "array"
+    },
+    {
+      "name": "String",
+      "id": "VG9waWNUYWdOb2RlOjEw",
+      "slug": "string"
+    },
+    {
+      "name": "Depth-First Search",
+      "id": "VG9waWNUYWdOb2RlOjIx",
+      "slug": "depth-first-search"
+    },
+    {
+      "name": "Breadth-First Search",
+      "id": "VG9waWNUYWdOb2RlOjIy",
+      "slug": "breadth-first-search"
+    },
+    {
+      "name": "Graph",
+      "id": "VG9waWNUYWdOb2RlOjI0",
+      "slug": "graph"
+    },
+    {
+      "name": "Topological Sort",
+      "id": "VG9waWNUYWdOb2RlOjI2",
+      "slug": "topological-sort"
+    }
+  ]
+}

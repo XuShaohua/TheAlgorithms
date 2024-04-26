@@ -1,0 +1,40 @@
+{
+  "titleSlug": "find-the-sum-of-the-power-of-all-subsequences",
+  "acRate": 35.78921078921079,
+  "content": "<p>You are given an integer array <code>nums</code> of length <code>n</code> and a <strong>positive</strong> integer <code>k</code>.</p>\n\n<p>The <strong>power</strong> of an array of integers is defined as the number of <span data-keyword=\"subsequence-array\">subsequences</span> with their sum <strong>equal</strong> to <code>k</code>.</p>\n\n<p>Return <em>the <strong>sum</strong> of <strong>power</strong> of all subsequences of</em> <code>nums</code><em>.</em></p>\n\n<p>Since the answer may be very large, return it <strong>modulo</strong> <code>10<sup>9</sup> + 7</code>.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<div class=\"example-block\" style=\"border-color: var(--border-tertiary); border-left-width: 2px; color: var(--text-secondary); font-size: .875rem; margin-bottom: 1rem; margin-top: 1rem; overflow: visible; padding-left: 1rem;\">\n<p><strong>Input: </strong> <span class=\"example-io\" style=\"font-family: Menlo,sans-serif; font-size: 0.85rem;\"> nums = [1,2,3], k = 3 </span></p>\n\n<p><strong>Output: </strong> <span class=\"example-io\" style=\"font-family: Menlo,sans-serif; font-size: 0.85rem;\"> 6 </span></p>\n\n<p><strong>Explanation:</strong></p>\n\n<p>There are <code>5</code> subsequences of nums with non-zero power:</p>\n\n<ul>\n\t<li>The subsequence <code>[<u><strong>1</strong></u>,<u><strong>2</strong></u>,<u><strong>3</strong></u>]</code> has <code>2</code> subsequences with <code>sum == 3</code>: <code>[1,2,<u>3</u>]</code> and <code>[<u>1</u>,<u>2</u>,3]</code>.</li>\n\t<li>The subsequence <code>[<u><strong>1</strong></u>,2,<u><strong>3</strong></u>]</code> has <code>1</code> subsequence with <code>sum == 3</code>: <code>[1,2,<u>3</u>]</code>.</li>\n\t<li>The subsequence <code>[1,<u><strong>2</strong></u>,<u><strong>3</strong></u>]</code> has <code>1</code> subsequence with <code>sum == 3</code>: <code>[1,2,<u>3</u>]</code>.</li>\n\t<li>The subsequence <code>[<u><strong>1</strong></u>,<u><strong>2</strong></u>,3]</code> has <code>1</code> subsequence with <code>sum == 3</code>: <code>[<u>1</u>,<u>2</u>,3]</code>.</li>\n\t<li>The subsequence <code>[1,2,<u><strong>3</strong></u>]</code> has <code>1</code> subsequence with <code>sum == 3</code>: <code>[1,2,<u>3</u>]</code>.</li>\n</ul>\n\n<p>Hence the answer is <code>2 + 1 + 1 + 1 + 1 = 6</code>.</p>\n</div>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<div class=\"example-block\" style=\"border-color: var(--border-tertiary); border-left-width: 2px; color: var(--text-secondary); font-size: .875rem; margin-bottom: 1rem; margin-top: 1rem; overflow: visible; padding-left: 1rem;\">\n<p><strong>Input: </strong> <span class=\"example-io\" style=\"font-family: Menlo,sans-serif; font-size: 0.85rem;\"> nums = [2,3,3], k = 5 </span></p>\n\n<p><strong>Output: </strong> <span class=\"example-io\" style=\"font-family: Menlo,sans-serif; font-size: 0.85rem;\"> 4 </span></p>\n\n<p><strong>Explanation:</strong></p>\n\n<p>There are <code>3</code> subsequences of nums with non-zero power:</p>\n\n<ul>\n\t<li>The subsequence <code>[<u><strong>2</strong></u>,<u><strong>3</strong></u>,<u><strong>3</strong></u>]</code> has 2 subsequences with <code>sum == 5</code>: <code>[<u>2</u>,3,<u>3</u>]</code> and <code>[<u>2</u>,<u>3</u>,3]</code>.</li>\n\t<li>The subsequence <code>[<u><strong>2</strong></u>,3,<u><strong>3</strong></u>]</code> has 1 subsequence with <code>sum == 5</code>: <code>[<u>2</u>,3,<u>3</u>]</code>.</li>\n\t<li>The subsequence <code>[<u><strong>2</strong></u>,<u><strong>3</strong></u>,3]</code> has 1 subsequence with <code>sum == 5</code>: <code>[<u>2</u>,<u>3</u>,3]</code>.</li>\n</ul>\n\n<p>Hence the answer is <code>2 + 1 + 1 = 4</code>.</p>\n</div>\n\n<p><strong class=\"example\">Example 3:</strong></p>\n\n<div class=\"example-block\" style=\"border-color: var(--border-tertiary); border-left-width: 2px; color: var(--text-secondary); font-size: .875rem; margin-bottom: 1rem; margin-top: 1rem; overflow: visible; padding-left: 1rem;\">\n<p><strong>Input: </strong> <span class=\"example-io\" style=\"font-family: Menlo,sans-serif; font-size: 0.85rem;\"> nums = [1,2,3], k = 7 </span></p>\n\n<p><strong>Output: </strong> <span class=\"example-io\" style=\"font-family: Menlo,sans-serif; font-size: 0.85rem;\"> 0 </span></p>\n\n<p><strong>Explanation:&nbsp;</strong>There exists no subsequence with sum <code>7</code>. Hence all subsequences of nums have <code>power = 0</code>.</p>\n</div>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= n &lt;= 100</code></li>\n\t<li><code>1 &lt;= nums[i] &lt;= 10<sup>4</sup></code></li>\n\t<li><code>1 &lt;= k &lt;= 100</code></li>\n</ul>\n",
+  "difficulty": "Hard",
+  "freqBar": null,
+  "frontendQuestionId": "3082",
+  "hasSolution": false,
+  "hasVideoSolution": false,
+  "hints": [
+    "If there is a subsequence of length <code>j</code> with the sum of elements <code>k</code>, it contributes <code>2<sup>n - j</sup></code> to the answer.",
+    "Let <code>dp[i][j]</code> represent the number of subsequences in the subarray <code>nums[0..i]</code> which have a sum of <code>j</code>.",
+    "We can find the <code>dp[i][k]</code> for all <code>0 <= i <= n-1</code> and multiply them with <code>2<sup>n - j</sup></code> to get final answer."
+  ],
+  "isFavor": false,
+  "paidOnly": false,
+  "similarQuestionList": [
+    {
+      "difficulty": "Medium",
+      "titleSlug": "number-of-subsequences-that-satisfy-the-given-sum-condition",
+      "title": "Number of Subsequences That Satisfy the Given Sum Condition",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    }
+  ],
+  "status": null,
+  "title": "Find the Sum of the Power of All Subsequences",
+  "topicTags": [
+    {
+      "name": "Array",
+      "id": "VG9waWNUYWdOb2RlOjU=",
+      "slug": "array"
+    },
+    {
+      "name": "Dynamic Programming",
+      "id": "VG9waWNUYWdOb2RlOjEz",
+      "slug": "dynamic-programming"
+    }
+  ]
+}

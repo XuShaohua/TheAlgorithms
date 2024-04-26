@@ -1,0 +1,31 @@
+{
+  "titleSlug": "array-transformation",
+  "acRate": 51.97151155850873,
+  "content": null,
+  "difficulty": "Easy",
+  "freqBar": null,
+  "frontendQuestionId": "1243",
+  "hasSolution": false,
+  "hasVideoSolution": false,
+  "hints": [
+    "Try to simulate the process.",
+    "For every iteration, find the new array using the old one and the given rules."
+  ],
+  "isFavor": false,
+  "paidOnly": true,
+  "similarQuestionList": [],
+  "status": null,
+  "title": "Array Transformation",
+  "topicTags": [
+    {
+      "name": "Array",
+      "id": "VG9waWNUYWdOb2RlOjU=",
+      "slug": "array"
+    },
+    {
+      "name": "Simulation",
+      "id": "VG9waWNUYWdOb2RlOjYxMDU1",
+      "slug": "simulation"
+    }
+  ]
+}

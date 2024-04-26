@@ -1,0 +1,51 @@
+{
+  "titleSlug": "time-needed-to-rearrange-a-binary-string",
+  "acRate": 49.64310829817159,
+  "content": "<p>You are given a binary string <code>s</code>. In one second, <strong>all</strong> occurrences of <code>&quot;01&quot;</code> are <strong>simultaneously</strong> replaced with <code>&quot;10&quot;</code>. This process <strong>repeats</strong> until no occurrences of <code>&quot;01&quot;</code> exist.</p>\n\n<p>Return<em> the number of seconds needed to complete this process.</em></p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> s = &quot;0110101&quot;\n<strong>Output:</strong> 4\n<strong>Explanation:</strong> \nAfter one second, s becomes &quot;1011010&quot;.\nAfter another second, s becomes &quot;1101100&quot;.\nAfter the third second, s becomes &quot;1110100&quot;.\nAfter the fourth second, s becomes &quot;1111000&quot;.\nNo occurrence of &quot;01&quot; exists any longer, and the process needed 4 seconds to complete,\nso we return 4.\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> s = &quot;11100&quot;\n<strong>Output:</strong> 0\n<strong>Explanation:</strong>\nNo occurrence of &quot;01&quot; exists in s, and the processes needed 0 seconds to complete,\nso we return 0.\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= s.length &lt;= 1000</code></li>\n\t<li><code>s[i]</code> is either <code>&#39;0&#39;</code> or <code>&#39;1&#39;</code>.</li>\n</ul>\n\n<p>&nbsp;</p>\n<p><strong>Follow up:</strong></p>\n\n<p>Can you solve this problem in O(n) time complexity?</p>\n",
+  "difficulty": "Medium",
+  "freqBar": null,
+  "frontendQuestionId": "2380",
+  "hasSolution": false,
+  "hasVideoSolution": false,
+  "hints": [
+    "Try replicating the steps from the problem statement.",
+    "Perform the replacements simultaneously, and return the number of times the process repeats."
+  ],
+  "isFavor": false,
+  "paidOnly": false,
+  "similarQuestionList": [
+    {
+      "difficulty": "Medium",
+      "titleSlug": "minimum-swaps-to-group-all-1s-together",
+      "title": "Minimum Swaps to Group All 1's Together",
+      "translatedTitle": null,
+      "isPaidOnly": true
+    },
+    {
+      "difficulty": "Medium",
+      "titleSlug": "minimum-swaps-to-group-all-1s-together-ii",
+      "title": "Minimum Swaps to Group All 1's Together II",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    }
+  ],
+  "status": null,
+  "title": "Time Needed to Rearrange a Binary String",
+  "topicTags": [
+    {
+      "name": "String",
+      "id": "VG9waWNUYWdOb2RlOjEw",
+      "slug": "string"
+    },
+    {
+      "name": "Dynamic Programming",
+      "id": "VG9waWNUYWdOb2RlOjEz",
+      "slug": "dynamic-programming"
+    },
+    {
+      "name": "Simulation",
+      "id": "VG9waWNUYWdOb2RlOjYxMDU1",
+      "slug": "simulation"
+    }
+  ]
+}

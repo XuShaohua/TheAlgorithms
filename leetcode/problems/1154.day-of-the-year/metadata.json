@@ -1,0 +1,30 @@
+{
+  "titleSlug": "day-of-the-year",
+  "acRate": 48.68688259388015,
+  "content": "<p>Given a string <code>date</code> representing a <a href=\"https://en.wikipedia.org/wiki/Gregorian_calendar\" target=\"_blank\">Gregorian calendar</a> date formatted as <code>YYYY-MM-DD</code>, return <em>the day number of the year</em>.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> date = &quot;2019-01-09&quot;\n<strong>Output:</strong> 9\n<strong>Explanation:</strong> Given date is the 9th day of the year in 2019.\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> date = &quot;2019-02-10&quot;\n<strong>Output:</strong> 41\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>date.length == 10</code></li>\n\t<li><code>date[4] == date[7] == &#39;-&#39;</code>, and all other <code>date[i]</code>&#39;s are digits</li>\n\t<li><code>date</code> represents a calendar date between Jan 1<sup>st</sup>, 1900 and Dec 31<sup>th</sup>, 2019.</li>\n</ul>\n",
+  "difficulty": "Easy",
+  "freqBar": null,
+  "frontendQuestionId": "1154",
+  "hasSolution": false,
+  "hasVideoSolution": false,
+  "hints": [
+    "Have a integer array of how many days there are per month.  February gets one extra day if its a leap year.  Then, we can manually count the ordinal as day + (number of days in months before this one)."
+  ],
+  "isFavor": false,
+  "paidOnly": false,
+  "similarQuestionList": [],
+  "status": null,
+  "title": "Day of the Year",
+  "topicTags": [
+    {
+      "name": "Math",
+      "id": "VG9waWNUYWdOb2RlOjg=",
+      "slug": "math"
+    },
+    {
+      "name": "String",
+      "id": "VG9waWNUYWdOb2RlOjEw",
+      "slug": "string"
+    }
+  ]
+}

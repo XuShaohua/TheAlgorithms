@@ -1,0 +1,32 @@
+{
+  "titleSlug": "reverse-substrings-between-each-pair-of-parentheses",
+  "acRate": 66.193211000607,
+  "content": "<p>You are given a string <code>s</code> that consists of lower case English letters and brackets.</p>\n\n<p>Reverse the strings in each pair of matching parentheses, starting from the innermost one.</p>\n\n<p>Your result should <strong>not</strong> contain any brackets.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> s = &quot;(abcd)&quot;\n<strong>Output:</strong> &quot;dcba&quot;\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> s = &quot;(u(love)i)&quot;\n<strong>Output:</strong> &quot;iloveu&quot;\n<strong>Explanation:</strong> The substring &quot;love&quot; is reversed first, then the whole string is reversed.\n</pre>\n\n<p><strong class=\"example\">Example 3:</strong></p>\n\n<pre>\n<strong>Input:</strong> s = &quot;(ed(et(oc))el)&quot;\n<strong>Output:</strong> &quot;leetcode&quot;\n<strong>Explanation:</strong> First, we reverse the substring &quot;oc&quot;, then &quot;etco&quot;, and finally, the whole string.\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= s.length &lt;= 2000</code></li>\n\t<li><code>s</code> only contains lower case English characters and parentheses.</li>\n\t<li>It is guaranteed that all parentheses are balanced.</li>\n</ul>\n",
+  "difficulty": "Medium",
+  "freqBar": null,
+  "frontendQuestionId": "1190",
+  "hasSolution": false,
+  "hasVideoSolution": false,
+  "hints": [
+    "Find all brackets in the string.",
+    "Does the order of the reverse matter ?",
+    "The order does not matter."
+  ],
+  "isFavor": false,
+  "paidOnly": false,
+  "similarQuestionList": [],
+  "status": null,
+  "title": "Reverse Substrings Between Each Pair of Parentheses",
+  "topicTags": [
+    {
+      "name": "String",
+      "id": "VG9waWNUYWdOb2RlOjEw",
+      "slug": "string"
+    },
+    {
+      "name": "Stack",
+      "id": "VG9waWNUYWdOb2RlOjE1",
+      "slug": "stack"
+    }
+  ]
+}

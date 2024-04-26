@@ -1,0 +1,64 @@
+{
+  "titleSlug": "minimum-adjacent-swaps-for-k-consecutive-ones",
+  "acRate": 42.39838403825542,
+  "content": "<p>You are given an integer array, <code>nums</code>, and an integer <code>k</code>. <code>nums</code> comprises of only <code>0</code>&#39;s and <code>1</code>&#39;s. In one move, you can choose two <strong>adjacent</strong> indices and swap their values.</p>\n\n<p>Return <em>the <strong>minimum</strong> number of moves required so that </em><code>nums</code><em> has </em><code>k</code><em> <strong>consecutive</strong> </em><code>1</code><em>&#39;s</em>.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [1,0,0,1,0,1], k = 2\n<strong>Output:</strong> 1\n<strong>Explanation:</strong> In 1 move, nums could be [1,0,0,0,<u>1</u>,<u>1</u>] and have 2 consecutive 1&#39;s.\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [1,0,0,0,0,0,1,1], k = 3\n<strong>Output:</strong> 5\n<strong>Explanation:</strong> In 5 moves, the leftmost 1 can be shifted right until nums = [0,0,0,0,0,<u>1</u>,<u>1</u>,<u>1</u>].\n</pre>\n\n<p><strong class=\"example\">Example 3:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [1,1,0,1], k = 2\n<strong>Output:</strong> 0\n<strong>Explanation:</strong> nums already has 2 consecutive 1&#39;s.\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= nums.length &lt;= 10<sup>5</sup></code></li>\n\t<li><code>nums[i]</code> is <code>0</code> or <code>1</code>.</li>\n\t<li><code>1 &lt;= k &lt;= sum(nums)</code></li>\n</ul>\n",
+  "difficulty": "Hard",
+  "freqBar": null,
+  "frontendQuestionId": "1703",
+  "hasSolution": false,
+  "hasVideoSolution": false,
+  "hints": [
+    "Choose k 1s and determine how many steps are required to move them into 1 group.",
+    "Maintain a sliding window of k 1s, and maintain the steps required to group them.",
+    "When you slide the window across, should you move the group to the right? Once you move the group to the right, it will never need to slide to the left again."
+  ],
+  "isFavor": false,
+  "paidOnly": false,
+  "similarQuestionList": [
+    {
+      "difficulty": "Medium",
+      "titleSlug": "minimum-swaps-to-group-all-1s-together",
+      "title": "Minimum Swaps to Group All 1's Together",
+      "translatedTitle": null,
+      "isPaidOnly": true
+    },
+    {
+      "difficulty": "Hard",
+      "titleSlug": "minimum-number-of-operations-to-make-array-continuous",
+      "title": "Minimum Number of Operations to Make Array Continuous",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    },
+    {
+      "difficulty": "Medium",
+      "titleSlug": "minimum-adjacent-swaps-to-make-a-valid-array",
+      "title": "Minimum Adjacent Swaps to Make a Valid Array",
+      "translatedTitle": null,
+      "isPaidOnly": true
+    }
+  ],
+  "status": null,
+  "title": "Minimum Adjacent Swaps for K Consecutive Ones",
+  "topicTags": [
+    {
+      "name": "Array",
+      "id": "VG9waWNUYWdOb2RlOjU=",
+      "slug": "array"
+    },
+    {
+      "name": "Greedy",
+      "id": "VG9waWNUYWdOb2RlOjE3",
+      "slug": "greedy"
+    },
+    {
+      "name": "Sliding Window",
+      "id": "VG9waWNUYWdOb2RlOjU1ODIx",
+      "slug": "sliding-window"
+    },
+    {
+      "name": "Prefix Sum",
+      "id": "VG9waWNUYWdOb2RlOjYxMDY4",
+      "slug": "prefix-sum"
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "titleSlug": "fill-missing-data",
+  "acRate": 71.42058000883263,
+  "content": "<pre>\nDataFrame <code>products</code>\n+-------------+--------+\n| Column Name | Type   |\n+-------------+--------+\n| name        | object |\n| quantity    | int    |\n| price       | int    |\n+-------------+--------+\n</pre>\n\n<p>Write a solution to fill in the missing value as <code><strong>0</strong></code> in the <code>quantity</code> column.</p>\n\n<p>The result format is in the following example.</p>\n\n<p>&nbsp;</p>\n<pre>\n<strong class=\"example\">Example 1:</strong>\n<strong>Input:</strong>+-----------------+----------+-------+\n| name            | quantity | price |\n+-----------------+----------+-------+\n| Wristwatch      | None     | 135   |\n| WirelessEarbuds | None     | 821   |\n| GolfClubs       | 779      | 9319  |\n| Printer         | 849      | 3051  |\n+-----------------+----------+-------+\n<strong>Output:\n</strong>+-----------------+----------+-------+\n| name            | quantity | price |\n+-----------------+----------+-------+\n| Wristwatch      | 0        | 135   |\n| WirelessEarbuds | 0        | 821   |\n| GolfClubs       | 779      | 9319  |\n| Printer         | 849      | 3051  |\n+-----------------+----------+-------+\n<strong>Explanation:</strong> \nThe quantity for Wristwatch and WirelessEarbuds are filled by 0.</pre>\n",
+  "difficulty": "Easy",
+  "freqBar": null,
+  "frontendQuestionId": "2887",
+  "hasSolution": true,
+  "hasVideoSolution": false,
+  "hints": [
+    "Consider using a build-in function in pandas library to fill the missing values of specified columns."
+  ],
+  "isFavor": false,
+  "paidOnly": false,
+  "similarQuestionList": [],
+  "status": null,
+  "title": "Fill Missing Data",
+  "topicTags": []
+}

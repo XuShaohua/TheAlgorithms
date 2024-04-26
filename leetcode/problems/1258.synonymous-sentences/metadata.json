@@ -1,0 +1,47 @@
+{
+  "titleSlug": "synonymous-sentences",
+  "acRate": 56.200876760654715,
+  "content": null,
+  "difficulty": "Medium",
+  "freqBar": null,
+  "frontendQuestionId": "1258",
+  "hasSolution": false,
+  "hasVideoSolution": false,
+  "hints": [
+    "Find all synonymous groups of words.",
+    "Use union-find data structure.",
+    "By backtracking, generate all possible statements."
+  ],
+  "isFavor": false,
+  "paidOnly": true,
+  "similarQuestionList": [],
+  "status": null,
+  "title": "Synonymous Sentences",
+  "topicTags": [
+    {
+      "name": "Array",
+      "id": "VG9waWNUYWdOb2RlOjU=",
+      "slug": "array"
+    },
+    {
+      "name": "Hash Table",
+      "id": "VG9waWNUYWdOb2RlOjY=",
+      "slug": "hash-table"
+    },
+    {
+      "name": "String",
+      "id": "VG9waWNUYWdOb2RlOjEw",
+      "slug": "string"
+    },
+    {
+      "name": "Backtracking",
+      "id": "VG9waWNUYWdOb2RlOjE0",
+      "slug": "backtracking"
+    },
+    {
+      "name": "Union Find",
+      "id": "VG9waWNUYWdOb2RlOjIz",
+      "slug": "union-find"
+    }
+  ]
+}

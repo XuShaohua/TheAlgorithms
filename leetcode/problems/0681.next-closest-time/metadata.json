@@ -1,0 +1,28 @@
+{
+  "titleSlug": "next-closest-time",
+  "acRate": 46.54396959739207,
+  "content": null,
+  "difficulty": "Medium",
+  "freqBar": null,
+  "frontendQuestionId": "681",
+  "hasSolution": true,
+  "hasVideoSolution": false,
+  "hints": [],
+  "isFavor": false,
+  "paidOnly": true,
+  "similarQuestionList": [],
+  "status": null,
+  "title": "Next Closest Time",
+  "topicTags": [
+    {
+      "name": "String",
+      "id": "VG9waWNUYWdOb2RlOjEw",
+      "slug": "string"
+    },
+    {
+      "name": "Enumeration",
+      "id": "VG9waWNUYWdOb2RlOjYxMDY2",
+      "slug": "enumeration"
+    }
+  ]
+}

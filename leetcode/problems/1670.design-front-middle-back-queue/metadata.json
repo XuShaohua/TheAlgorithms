@@ -1,0 +1,61 @@
+{
+  "titleSlug": "design-front-middle-back-queue",
+  "acRate": 56.351371672860864,
+  "content": "<p>Design a queue that supports <code>push</code> and <code>pop</code> operations in the front, middle, and back.</p>\n\n<p>Implement the <code>FrontMiddleBack</code> class:</p>\n\n<ul>\n\t<li><code>FrontMiddleBack()</code> Initializes the queue.</li>\n\t<li><code>void pushFront(int val)</code> Adds <code>val</code> to the <strong>front</strong> of the queue.</li>\n\t<li><code>void pushMiddle(int val)</code> Adds <code>val</code> to the <strong>middle</strong> of the queue.</li>\n\t<li><code>void pushBack(int val)</code> Adds <code>val</code> to the <strong>back</strong> of the queue.</li>\n\t<li><code>int popFront()</code> Removes the <strong>front</strong> element of the queue and returns it. If the queue is empty, return <code>-1</code>.</li>\n\t<li><code>int popMiddle()</code> Removes the <strong>middle</strong> element of the queue and returns it. If the queue is empty, return <code>-1</code>.</li>\n\t<li><code>int popBack()</code> Removes the <strong>back</strong> element of the queue and returns it. If the queue is empty, return <code>-1</code>.</li>\n</ul>\n\n<p><strong>Notice</strong> that when there are <b>two</b> middle position choices, the operation is performed on the <strong>frontmost</strong> middle position choice. For example:</p>\n\n<ul>\n\t<li>Pushing <code>6</code> into the middle of <code>[1, 2, 3, 4, 5]</code> results in <code>[1, 2, <u>6</u>, 3, 4, 5]</code>.</li>\n\t<li>Popping the middle from <code>[1, 2, <u>3</u>, 4, 5, 6]</code> returns <code>3</code> and results in <code>[1, 2, 4, 5, 6]</code>.</li>\n</ul>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong>\n[&quot;FrontMiddleBackQueue&quot;, &quot;pushFront&quot;, &quot;pushBack&quot;, &quot;pushMiddle&quot;, &quot;pushMiddle&quot;, &quot;popFront&quot;, &quot;popMiddle&quot;, &quot;popMiddle&quot;, &quot;popBack&quot;, &quot;popFront&quot;]\n[[], [1], [2], [3], [4], [], [], [], [], []]\n<strong>Output:</strong>\n[null, null, null, null, null, 1, 3, 4, 2, -1]\n\n<strong>Explanation:</strong>\nFrontMiddleBackQueue q = new FrontMiddleBackQueue();\nq.pushFront(1);   // [<u>1</u>]\nq.pushBack(2);    // [1, <u>2</u>]\nq.pushMiddle(3);  // [1, <u>3</u>, 2]\nq.pushMiddle(4);  // [1, <u>4</u>, 3, 2]\nq.popFront();     // return 1 -&gt; [4, 3, 2]\nq.popMiddle();    // return 3 -&gt; [4, 2]\nq.popMiddle();    // return 4 -&gt; [2]\nq.popBack();      // return 2 -&gt; []\nq.popFront();     // return -1 -&gt; [] (The queue is empty)\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= val &lt;= 10<sup>9</sup></code></li>\n\t<li>At most&nbsp;<code>1000</code>&nbsp;calls will be made to&nbsp;<code>pushFront</code>,&nbsp;<code>pushMiddle</code>,&nbsp;<code>pushBack</code>, <code>popFront</code>, <code>popMiddle</code>, and <code>popBack</code>.</li>\n</ul>\n",
+  "difficulty": "Medium",
+  "freqBar": null,
+  "frontendQuestionId": "1670",
+  "hasSolution": false,
+  "hasVideoSolution": false,
+  "hints": [
+    "The constraints are low enough for a brute force, single array approach.",
+    "For an O(1) per method approach, use 2 double-ended queues: one for the first half and one for the second half."
+  ],
+  "isFavor": false,
+  "paidOnly": false,
+  "similarQuestionList": [
+    {
+      "difficulty": "Medium",
+      "titleSlug": "design-circular-deque",
+      "title": "Design Circular Deque",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    },
+    {
+      "difficulty": "Medium",
+      "titleSlug": "design-circular-queue",
+      "title": "Design Circular Queue",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    }
+  ],
+  "status": null,
+  "title": "Design Front Middle Back Queue",
+  "topicTags": [
+    {
+      "name": "Array",
+      "id": "VG9waWNUYWdOb2RlOjU=",
+      "slug": "array"
+    },
+    {
+      "name": "Linked List",
+      "id": "VG9waWNUYWdOb2RlOjc=",
+      "slug": "linked-list"
+    },
+    {
+      "name": "Design",
+      "id": "VG9waWNUYWdOb2RlOjI1",
+      "slug": "design"
+    },
+    {
+      "name": "Queue",
+      "id": "VG9waWNUYWdOb2RlOjM0",
+      "slug": "queue"
+    },
+    {
+      "name": "Data Stream",
+      "id": "VG9waWNUYWdOb2RlOjYxMDYz",
+      "slug": "data-stream"
+    }
+  ]
+}

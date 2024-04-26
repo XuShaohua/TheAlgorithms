@@ -1,0 +1,76 @@
+{
+  "titleSlug": "longest-substring-with-at-most-k-distinct-characters",
+  "acRate": 48.55611686124783,
+  "content": null,
+  "difficulty": "Medium",
+  "freqBar": null,
+  "frontendQuestionId": "340",
+  "hasSolution": true,
+  "hasVideoSolution": true,
+  "hints": [],
+  "isFavor": false,
+  "paidOnly": true,
+  "similarQuestionList": [
+    {
+      "difficulty": "Medium",
+      "titleSlug": "longest-substring-without-repeating-characters",
+      "title": "Longest Substring Without Repeating Characters",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    },
+    {
+      "difficulty": "Medium",
+      "titleSlug": "longest-substring-with-at-most-two-distinct-characters",
+      "title": "Longest Substring with At Most Two Distinct Characters",
+      "translatedTitle": null,
+      "isPaidOnly": true
+    },
+    {
+      "difficulty": "Medium",
+      "titleSlug": "longest-repeating-character-replacement",
+      "title": "Longest Repeating Character Replacement",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    },
+    {
+      "difficulty": "Hard",
+      "titleSlug": "subarrays-with-k-different-integers",
+      "title": "Subarrays with K Different Integers",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    },
+    {
+      "difficulty": "Medium",
+      "titleSlug": "max-consecutive-ones-iii",
+      "title": "Max Consecutive Ones III",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    },
+    {
+      "difficulty": "Medium",
+      "titleSlug": "maximize-the-confusion-of-an-exam",
+      "title": "Maximize the Confusion of an Exam",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    }
+  ],
+  "status": null,
+  "title": "Longest Substring with At Most K Distinct Characters",
+  "topicTags": [
+    {
+      "name": "Hash Table",
+      "id": "VG9waWNUYWdOb2RlOjY=",
+      "slug": "hash-table"
+    },
+    {
+      "name": "String",
+      "id": "VG9waWNUYWdOb2RlOjEw",
+      "slug": "string"
+    },
+    {
+      "name": "Sliding Window",
+      "id": "VG9waWNUYWdOb2RlOjU1ODIx",
+      "slug": "sliding-window"
+    }
+  ]
+}

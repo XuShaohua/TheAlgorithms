@@ -1,0 +1,41 @@
+{
+  "titleSlug": "sequence-reconstruction",
+  "acRate": 28.024596464258263,
+  "content": null,
+  "difficulty": "Medium",
+  "freqBar": null,
+  "frontendQuestionId": "444",
+  "hasSolution": false,
+  "hasVideoSolution": false,
+  "hints": [],
+  "isFavor": false,
+  "paidOnly": true,
+  "similarQuestionList": [
+    {
+      "difficulty": "Medium",
+      "titleSlug": "course-schedule-ii",
+      "title": "Course Schedule II",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    }
+  ],
+  "status": null,
+  "title": "Sequence Reconstruction",
+  "topicTags": [
+    {
+      "name": "Array",
+      "id": "VG9waWNUYWdOb2RlOjU=",
+      "slug": "array"
+    },
+    {
+      "name": "Graph",
+      "id": "VG9waWNUYWdOb2RlOjI0",
+      "slug": "graph"
+    },
+    {
+      "name": "Topological Sort",
+      "id": "VG9waWNUYWdOb2RlOjI2",
+      "slug": "topological-sort"
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "titleSlug": "maximum-number-of-accepted-invitations",
+  "acRate": 49.07377049180328,
+  "content": null,
+  "difficulty": "Medium",
+  "freqBar": null,
+  "frontendQuestionId": "1820",
+  "hasSolution": false,
+  "hasVideoSolution": false,
+  "hints": [
+    "We can see that the problem can be represented as a directed graph with an edge from each boy to the girl he invited.",
+    "We need to choose a set of edges such that no to source points in the graph (i.e., boys) have an edge with the same endpoint (i.e., the same girl).",
+    "The problem is maximum bipartite matching in the graph."
+  ],
+  "isFavor": false,
+  "paidOnly": true,
+  "similarQuestionList": [],
+  "status": null,
+  "title": "Maximum Number of Accepted Invitations",
+  "topicTags": [
+    {
+      "name": "Array",
+      "id": "VG9waWNUYWdOb2RlOjU=",
+      "slug": "array"
+    },
+    {
+      "name": "Backtracking",
+      "id": "VG9waWNUYWdOb2RlOjE0",
+      "slug": "backtracking"
+    },
+    {
+      "name": "Matrix",
+      "id": "VG9waWNUYWdOb2RlOjYxMDUz",
+      "slug": "matrix"
+    }
+  ]
+}

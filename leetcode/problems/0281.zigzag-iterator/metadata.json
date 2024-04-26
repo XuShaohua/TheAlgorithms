@@ -1,0 +1,74 @@
+{
+  "titleSlug": "zigzag-iterator",
+  "acRate": 63.6895500093359,
+  "content": null,
+  "difficulty": "Medium",
+  "freqBar": null,
+  "frontendQuestionId": "281",
+  "hasSolution": true,
+  "hasVideoSolution": false,
+  "hints": [],
+  "isFavor": false,
+  "paidOnly": true,
+  "similarQuestionList": [
+    {
+      "difficulty": "Medium",
+      "titleSlug": "binary-search-tree-iterator",
+      "title": "Binary Search Tree Iterator",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    },
+    {
+      "difficulty": "Medium",
+      "titleSlug": "flatten-2d-vector",
+      "title": "Flatten 2D Vector",
+      "translatedTitle": null,
+      "isPaidOnly": true
+    },
+    {
+      "difficulty": "Medium",
+      "titleSlug": "peeking-iterator",
+      "title": "Peeking Iterator",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    },
+    {
+      "difficulty": "Medium",
+      "titleSlug": "flatten-nested-list-iterator",
+      "title": "Flatten Nested List Iterator",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    },
+    {
+      "difficulty": "Easy",
+      "titleSlug": "merge-strings-alternately",
+      "title": "Merge Strings Alternately",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    }
+  ],
+  "status": null,
+  "title": "Zigzag Iterator",
+  "topicTags": [
+    {
+      "name": "Array",
+      "id": "VG9waWNUYWdOb2RlOjU=",
+      "slug": "array"
+    },
+    {
+      "name": "Design",
+      "id": "VG9waWNUYWdOb2RlOjI1",
+      "slug": "design"
+    },
+    {
+      "name": "Queue",
+      "id": "VG9waWNUYWdOb2RlOjM0",
+      "slug": "queue"
+    },
+    {
+      "name": "Iterator",
+      "id": "VG9waWNUYWdOb2RlOjYxMDY0",
+      "slug": "iterator"
+    }
+  ]
+}

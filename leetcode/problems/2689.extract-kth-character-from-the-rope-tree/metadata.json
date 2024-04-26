@@ -1,0 +1,37 @@
+{
+  "titleSlug": "extract-kth-character-from-the-rope-tree",
+  "acRate": 74.42261289210617,
+  "content": null,
+  "difficulty": "Easy",
+  "freqBar": null,
+  "frontendQuestionId": "2689",
+  "hasSolution": false,
+  "hasVideoSolution": false,
+  "hints": [
+    "Think of recursive methods.",
+    "Write a recursive function that gives a node of the tree and returns S[node].",
+    "Call the function above on the root of the tree and get k-th character of it."
+  ],
+  "isFavor": false,
+  "paidOnly": true,
+  "similarQuestionList": [],
+  "status": null,
+  "title": "Extract Kth Character From The Rope Tree",
+  "topicTags": [
+    {
+      "name": "Tree",
+      "id": "VG9waWNUYWdOb2RlOjIw",
+      "slug": "tree"
+    },
+    {
+      "name": "Depth-First Search",
+      "id": "VG9waWNUYWdOb2RlOjIx",
+      "slug": "depth-first-search"
+    },
+    {
+      "name": "Binary Tree",
+      "id": "VG9waWNUYWdOb2RlOjYxMDU3",
+      "slug": "binary-tree"
+    }
+  ]
+}

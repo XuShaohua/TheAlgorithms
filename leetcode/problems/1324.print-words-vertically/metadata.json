@@ -1,0 +1,35 @@
+{
+  "titleSlug": "print-words-vertically",
+  "acRate": 63.392523516319265,
+  "content": "<p>Given a string <code>s</code>.&nbsp;Return&nbsp;all the words vertically in the same order in which they appear in <code>s</code>.<br />\r\nWords are returned as a list of strings, complete with&nbsp;spaces when is necessary. (Trailing spaces are not allowed).<br />\r\nEach word would be put on only one column and that in one column there will be only one word.</p>\r\n\r\n<p>&nbsp;</p>\r\n<p><strong class=\"example\">Example 1:</strong></p>\r\n\r\n<pre>\r\n<strong>Input:</strong> s = &quot;HOW ARE YOU&quot;\r\n<strong>Output:</strong> [&quot;HAY&quot;,&quot;ORO&quot;,&quot;WEU&quot;]\r\n<strong>Explanation: </strong>Each word is printed vertically. \r\n &quot;HAY&quot;\r\n&nbsp;&quot;ORO&quot;\r\n&nbsp;&quot;WEU&quot;\r\n</pre>\r\n\r\n<p><strong class=\"example\">Example 2:</strong></p>\r\n\r\n<pre>\r\n<strong>Input:</strong> s = &quot;TO BE OR NOT TO BE&quot;\r\n<strong>Output:</strong> [&quot;TBONTB&quot;,&quot;OEROOE&quot;,&quot;   T&quot;]\r\n<strong>Explanation: </strong>Trailing spaces is not allowed. \r\n&quot;TBONTB&quot;\r\n&quot;OEROOE&quot;\r\n&quot;   T&quot;\r\n</pre>\r\n\r\n<p><strong class=\"example\">Example 3:</strong></p>\r\n\r\n<pre>\r\n<strong>Input:</strong> s = &quot;CONTEST IS COMING&quot;\r\n<strong>Output:</strong> [&quot;CIC&quot;,&quot;OSO&quot;,&quot;N M&quot;,&quot;T I&quot;,&quot;E N&quot;,&quot;S G&quot;,&quot;T&quot;]\r\n</pre>\r\n\r\n<p>&nbsp;</p>\r\n<p><strong>Constraints:</strong></p>\r\n\r\n<ul>\r\n\t<li><code>1 &lt;= s.length &lt;= 200</code></li>\r\n\t<li><code>s</code>&nbsp;contains only upper case English letters.</li>\r\n\t<li>It&#39;s guaranteed that there is only one&nbsp;space between 2 words.</li>\r\n</ul>",
+  "difficulty": "Medium",
+  "freqBar": null,
+  "frontendQuestionId": "1324",
+  "hasSolution": false,
+  "hasVideoSolution": false,
+  "hints": [
+    "Use the maximum length of words to determine the length of the returned answer. However, don't forget to remove trailing spaces."
+  ],
+  "isFavor": false,
+  "paidOnly": false,
+  "similarQuestionList": [],
+  "status": null,
+  "title": "Print Words Vertically",
+  "topicTags": [
+    {
+      "name": "Array",
+      "id": "VG9waWNUYWdOb2RlOjU=",
+      "slug": "array"
+    },
+    {
+      "name": "String",
+      "id": "VG9waWNUYWdOb2RlOjEw",
+      "slug": "string"
+    },
+    {
+      "name": "Simulation",
+      "id": "VG9waWNUYWdOb2RlOjYxMDU1",
+      "slug": "simulation"
+    }
+  ]
+}

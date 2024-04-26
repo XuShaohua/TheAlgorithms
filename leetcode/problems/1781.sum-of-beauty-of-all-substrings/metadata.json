@@ -1,0 +1,44 @@
+{
+  "titleSlug": "sum-of-beauty-of-all-substrings",
+  "acRate": 64.54198357625526,
+  "content": "<p>The <strong>beauty</strong> of a string is the difference in frequencies between the most frequent and least frequent characters.</p>\n\n<ul>\n\t<li>For example, the beauty of <code>&quot;abaacc&quot;</code> is <code>3 - 1 = 2</code>.</li>\n</ul>\n\n<p>Given a string <code>s</code>, return <em>the sum of <strong>beauty</strong> of all of its substrings.</em></p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> s = &quot;aabcb&quot;\n<strong>Output:</strong> 5\n<strong>Explanation: </strong>The substrings with non-zero beauty are [&quot;aab&quot;,&quot;aabc&quot;,&quot;aabcb&quot;,&quot;abcb&quot;,&quot;bcb&quot;], each with beauty equal to 1.</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> s = &quot;aabcbaa&quot;\n<strong>Output:</strong> 17\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= s.length &lt;=<sup> </sup>500</code></li>\n\t<li><code>s</code> consists of only lowercase English letters.</li>\n</ul>\n",
+  "difficulty": "Medium",
+  "freqBar": null,
+  "frontendQuestionId": "1781",
+  "hasSolution": false,
+  "hasVideoSolution": false,
+  "hints": [
+    "Maintain a prefix sum for the frequencies of characters.",
+    "You can iterate over all substring then iterate over the alphabet and find which character appears most and which appears least using the prefix sum array"
+  ],
+  "isFavor": false,
+  "paidOnly": false,
+  "similarQuestionList": [
+    {
+      "difficulty": "Medium",
+      "titleSlug": "substrings-that-begin-and-end-with-the-same-letter",
+      "title": "Substrings That Begin and End With the Same Letter",
+      "translatedTitle": null,
+      "isPaidOnly": true
+    }
+  ],
+  "status": null,
+  "title": "Sum of Beauty of All Substrings",
+  "topicTags": [
+    {
+      "name": "Hash Table",
+      "id": "VG9waWNUYWdOb2RlOjY=",
+      "slug": "hash-table"
+    },
+    {
+      "name": "String",
+      "id": "VG9waWNUYWdOb2RlOjEw",
+      "slug": "string"
+    },
+    {
+      "name": "Counting",
+      "id": "VG9waWNUYWdOb2RlOjYxMDYy",
+      "slug": "counting"
+    }
+  ]
+}

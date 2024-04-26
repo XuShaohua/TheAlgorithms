@@ -1,0 +1,36 @@
+{
+  "titleSlug": "number-of-paths-with-max-score",
+  "acRate": 39.23376976807475,
+  "content": "<p>You are given a square <code>board</code>&nbsp;of characters. You can move on the board starting at the bottom right square marked with the character&nbsp;<code>&#39;S&#39;</code>.</p>\r\n\r\n<p>You need&nbsp;to reach the top left square marked with the character <code>&#39;E&#39;</code>. The rest of the squares are labeled either with a numeric character&nbsp;<code>1, 2, ..., 9</code> or with an obstacle <code>&#39;X&#39;</code>. In one move you can go up, left or up-left (diagonally) only if there is no obstacle there.</p>\r\n\r\n<p>Return a list of two integers: the first integer is the maximum sum of numeric characters you can collect, and the second is the number of such paths that you can take to get that maximum sum, <strong>taken modulo <code>10^9 + 7</code></strong>.</p>\r\n\r\n<p>In case there is no path, return&nbsp;<code>[0, 0]</code>.</p>\r\n\r\n<p>&nbsp;</p>\r\n<p><strong class=\"example\">Example 1:</strong></p>\r\n<pre><strong>Input:</strong> board = [\"E23\",\"2X2\",\"12S\"]\r\n<strong>Output:</strong> [7,1]\r\n</pre><p><strong class=\"example\">Example 2:</strong></p>\r\n<pre><strong>Input:</strong> board = [\"E12\",\"1X1\",\"21S\"]\r\n<strong>Output:</strong> [4,2]\r\n</pre><p><strong class=\"example\">Example 3:</strong></p>\r\n<pre><strong>Input:</strong> board = [\"E11\",\"XXX\",\"11S\"]\r\n<strong>Output:</strong> [0,0]\r\n</pre>\r\n<p>&nbsp;</p>\r\n<p><strong>Constraints:</strong></p>\r\n\r\n<ul>\r\n\t<li><code>2 &lt;= board.length == board[i].length &lt;= 100</code></li>\r\n</ul>",
+  "difficulty": "Hard",
+  "freqBar": null,
+  "frontendQuestionId": "1301",
+  "hasSolution": false,
+  "hasVideoSolution": false,
+  "hints": [
+    "Use dynamic programming to find the path with the max score.",
+    "Use another dynamic programming array to count the number of paths with max score."
+  ],
+  "isFavor": false,
+  "paidOnly": false,
+  "similarQuestionList": [],
+  "status": null,
+  "title": "Number of Paths with Max Score",
+  "topicTags": [
+    {
+      "name": "Array",
+      "id": "VG9waWNUYWdOb2RlOjU=",
+      "slug": "array"
+    },
+    {
+      "name": "Dynamic Programming",
+      "id": "VG9waWNUYWdOb2RlOjEz",
+      "slug": "dynamic-programming"
+    },
+    {
+      "name": "Matrix",
+      "id": "VG9waWNUYWdOb2RlOjYxMDUz",
+      "slug": "matrix"
+    }
+  ]
+}

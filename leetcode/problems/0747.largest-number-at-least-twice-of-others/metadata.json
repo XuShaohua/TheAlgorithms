@@ -1,0 +1,45 @@
+{
+  "titleSlug": "largest-number-at-least-twice-of-others",
+  "acRate": 48.58931799842701,
+  "content": "<p>You are given an integer array <code>nums</code> where the largest integer is <strong>unique</strong>.</p>\n\n<p>Determine whether the largest element in the array is <strong>at least twice</strong> as much as every other number in the array. If it is, return <em>the <strong>index</strong> of the largest element, or return </em><code>-1</code><em> otherwise</em>.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [3,6,1,0]\n<strong>Output:</strong> 1\n<strong>Explanation:</strong> 6 is the largest integer.\nFor every other number in the array x, 6 is at least twice as big as x.\nThe index of value 6 is 1, so we return 1.\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [1,2,3,4]\n<strong>Output:</strong> -1\n<strong>Explanation:</strong> 4 is less than twice the value of 3, so we return -1.\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>2 &lt;= nums.length &lt;= 50</code></li>\n\t<li><code>0 &lt;= nums[i] &lt;= 100</code></li>\n\t<li>The largest element in <code>nums</code> is unique.</li>\n</ul>\n",
+  "difficulty": "Easy",
+  "freqBar": null,
+  "frontendQuestionId": "747",
+  "hasSolution": false,
+  "hasVideoSolution": false,
+  "hints": [
+    "Scan through the array to find the unique largest element `m`, keeping track of it's index `maxIndex`.\r\n\r\nScan through the array again.  If we find some `x != m` with `m < 2*x`, we should return `-1`.\r\n\r\nOtherwise, we should return `maxIndex`."
+  ],
+  "isFavor": false,
+  "paidOnly": false,
+  "similarQuestionList": [
+    {
+      "difficulty": "Easy",
+      "titleSlug": "keep-multiplying-found-values-by-two",
+      "title": "Keep Multiplying Found Values by Two",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    },
+    {
+      "difficulty": "Easy",
+      "titleSlug": "largest-number-after-digit-swaps-by-parity",
+      "title": "Largest Number After Digit Swaps by Parity",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    }
+  ],
+  "status": null,
+  "title": "Largest Number At Least Twice of Others",
+  "topicTags": [
+    {
+      "name": "Array",
+      "id": "VG9waWNUYWdOb2RlOjU=",
+      "slug": "array"
+    },
+    {
+      "name": "Sorting",
+      "id": "VG9waWNUYWdOb2RlOjYxMDQ5",
+      "slug": "sorting"
+    }
+  ]
+}

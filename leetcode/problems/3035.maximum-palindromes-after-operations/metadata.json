@@ -1,0 +1,63 @@
+{
+  "titleSlug": "maximum-palindromes-after-operations",
+  "acRate": 41.65355363231052,
+  "content": "<p>You are given a <strong>0-indexed</strong> string array <code>words</code> having length <code>n</code> and containing <strong>0-indexed</strong> strings.</p>\n\n<p>You are allowed to perform the following operation <strong>any</strong> number of times (<strong>including</strong> <strong>zero</strong>):</p>\n\n<ul>\n\t<li>Choose integers <code>i</code>, <code>j</code>, <code>x</code>, and <code>y</code> such that <code>0 &lt;= i, j &lt; n</code>, <code>0 &lt;= x &lt; words[i].length</code>, <code>0 &lt;= y &lt; words[j].length</code>, and <strong>swap</strong> the characters <code>words[i][x]</code> and <code>words[j][y]</code>.</li>\n</ul>\n\n<p>Return <em>an integer denoting the <strong>maximum</strong> number of <span data-keyword=\"palindrome-string\">palindromes</span> </em><code>words</code><em> can contain, after performing some operations.</em></p>\n\n<p><strong>Note:</strong> <code>i</code> and <code>j</code> may be equal during an operation.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> words = [&quot;abbb&quot;,&quot;ba&quot;,&quot;aa&quot;]\n<strong>Output:</strong> 3\n<strong>Explanation:</strong> In this example, one way to get the maximum number of palindromes is:\nChoose i = 0, j = 1, x = 0, y = 0, so we swap words[0][0] and words[1][0]. words becomes [&quot;bbbb&quot;,&quot;aa&quot;,&quot;aa&quot;].\nAll strings in words are now palindromes.\nHence, the maximum number of palindromes achievable is 3.</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> words = [&quot;abc&quot;,&quot;ab&quot;]\n<strong>Output:</strong> 2\n<strong>Explanation: </strong>In this example, one way to get the maximum number of palindromes is: \nChoose i = 0, j = 1, x = 1, y = 0, so we swap words[0][1] and words[1][0]. words becomes [&quot;aac&quot;,&quot;bb&quot;].\nChoose i = 0, j = 0, x = 1, y = 2, so we swap words[0][1] and words[0][2]. words becomes [&quot;aca&quot;,&quot;bb&quot;].\nBoth strings are now palindromes.\nHence, the maximum number of palindromes achievable is 2.\n</pre>\n\n<p><strong class=\"example\">Example 3:</strong></p>\n\n<pre>\n<strong>Input:</strong> words = [&quot;cd&quot;,&quot;ef&quot;,&quot;a&quot;]\n<strong>Output:</strong> 1\n<strong>Explanation:</strong> In this example, there is no need to perform any operation.\nThere is one palindrome in words &quot;a&quot;.\nIt can be shown that it is not possible to get more than one palindrome after any number of operations.\nHence, the answer is 1.</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= words.length &lt;= 1000</code></li>\n\t<li><code>1 &lt;= words[i].length &lt;= 100</code></li>\n\t<li><code>words[i]</code> consists only of lowercase English letters.</li>\n</ul>\n",
+  "difficulty": "Medium",
+  "freqBar": null,
+  "frontendQuestionId": "3035",
+  "hasSolution": false,
+  "hasVideoSolution": false,
+  "hints": [
+    "We can redistribute all the letters freely among the words.",
+    "Calculate the frequency of each letter and total the number of matching letter pairs that can be formed from the letters, i.e., <code>total = sum(freq[ch] / 2)</code> for all <code>'a' <= ch <= 'z'</code>.",
+    "We can greedily try making palindromes from <code>words[i]</code> with the smallest length to <code>words[i]</code> with the longest length.",
+    "For the current index, <code>i</code>, we try to make <code>words[i]</code> a palindrome. We need <code>len(words[i]) / 2</code> matching character pairs, and the letter in the middle (if it exists) can be freely chosen afterward.",
+    "We can check if we have enough pairs for index <code>i</code>; if we do, we increase the number of palindromes we can make and decrease the number of pairs we have. Otherwise, we end the loop at this index.",
+    "The answer is the number of palindromes we were able to make in the end."
+  ],
+  "isFavor": false,
+  "paidOnly": false,
+  "similarQuestionList": [
+    {
+      "difficulty": "Easy",
+      "titleSlug": "valid-palindrome",
+      "title": "Valid Palindrome",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    }
+  ],
+  "status": null,
+  "title": "Maximum Palindromes After Operations",
+  "topicTags": [
+    {
+      "name": "Array",
+      "id": "VG9waWNUYWdOb2RlOjU=",
+      "slug": "array"
+    },
+    {
+      "name": "Hash Table",
+      "id": "VG9waWNUYWdOb2RlOjY=",
+      "slug": "hash-table"
+    },
+    {
+      "name": "String",
+      "id": "VG9waWNUYWdOb2RlOjEw",
+      "slug": "string"
+    },
+    {
+      "name": "Greedy",
+      "id": "VG9waWNUYWdOb2RlOjE3",
+      "slug": "greedy"
+    },
+    {
+      "name": "Sorting",
+      "id": "VG9waWNUYWdOb2RlOjYxMDQ5",
+      "slug": "sorting"
+    },
+    {
+      "name": "Counting",
+      "id": "VG9waWNUYWdOb2RlOjYxMDYy",
+      "slug": "counting"
+    }
+  ]
+}

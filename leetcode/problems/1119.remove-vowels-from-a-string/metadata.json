@@ -1,0 +1,41 @@
+{
+  "titleSlug": "remove-vowels-from-a-string",
+  "acRate": 90.8070796460177,
+  "content": null,
+  "difficulty": "Easy",
+  "freqBar": null,
+  "frontendQuestionId": "1119",
+  "hasSolution": true,
+  "hasVideoSolution": false,
+  "hints": [
+    "How to erase vowels in a string?",
+    "Loop over the string and check every character, if it is a vowel ignore it otherwise add it to the answer."
+  ],
+  "isFavor": false,
+  "paidOnly": true,
+  "similarQuestionList": [
+    {
+      "difficulty": "Easy",
+      "titleSlug": "reverse-vowels-of-a-string",
+      "title": "Reverse Vowels of a String",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    },
+    {
+      "difficulty": "Easy",
+      "titleSlug": "remove-digit-from-number-to-maximize-result",
+      "title": "Remove Digit From Number to Maximize Result",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    }
+  ],
+  "status": null,
+  "title": "Remove Vowels from a String",
+  "topicTags": [
+    {
+      "name": "String",
+      "id": "VG9waWNUYWdOb2RlOjEw",
+      "slug": "string"
+    }
+  ]
+}

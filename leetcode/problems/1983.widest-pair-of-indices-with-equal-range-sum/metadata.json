@@ -1,0 +1,38 @@
+{
+  "titleSlug": "widest-pair-of-indices-with-equal-range-sum",
+  "acRate": 53.451327433628315,
+  "content": null,
+  "difficulty": "Medium",
+  "freqBar": null,
+  "frontendQuestionId": "1983",
+  "hasSolution": false,
+  "hasVideoSolution": false,
+  "hints": [
+    "Keep prefix sums of both arrays.",
+    "Can the difference between the prefix sums at an index help us?",
+    "What happens if the difference between the two prefix sums at an index a is x, and x again at a different index b?",
+    "This means that the sum of nums1 from index a + 1 to index b is equal to the sum of nums2 from index a + 1 to index b."
+  ],
+  "isFavor": false,
+  "paidOnly": true,
+  "similarQuestionList": [],
+  "status": null,
+  "title": "Widest Pair of Indices With Equal Range Sum",
+  "topicTags": [
+    {
+      "name": "Array",
+      "id": "VG9waWNUYWdOb2RlOjU=",
+      "slug": "array"
+    },
+    {
+      "name": "Hash Table",
+      "id": "VG9waWNUYWdOb2RlOjY=",
+      "slug": "hash-table"
+    },
+    {
+      "name": "Prefix Sum",
+      "id": "VG9waWNUYWdOb2RlOjYxMDY4",
+      "slug": "prefix-sum"
+    }
+  ]
+}

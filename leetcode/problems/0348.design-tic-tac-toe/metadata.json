@@ -1,0 +1,54 @@
+{
+  "titleSlug": "design-tic-tac-toe",
+  "acRate": 57.88064362954587,
+  "content": null,
+  "difficulty": "Medium",
+  "freqBar": null,
+  "frontendQuestionId": "348",
+  "hasSolution": true,
+  "hasVideoSolution": false,
+  "hints": [
+    "Could you trade extra space such that <code>move()</code> operation can be done in O(1)?",
+    "You need two arrays: int rows[n], int cols[n], plus two variables: diagonal, anti_diagonal."
+  ],
+  "isFavor": false,
+  "paidOnly": true,
+  "similarQuestionList": [
+    {
+      "difficulty": "Medium",
+      "titleSlug": "valid-tic-tac-toe-state",
+      "title": "Valid Tic-Tac-Toe State",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    }
+  ],
+  "status": null,
+  "title": "Design Tic-Tac-Toe",
+  "topicTags": [
+    {
+      "name": "Array",
+      "id": "VG9waWNUYWdOb2RlOjU=",
+      "slug": "array"
+    },
+    {
+      "name": "Hash Table",
+      "id": "VG9waWNUYWdOb2RlOjY=",
+      "slug": "hash-table"
+    },
+    {
+      "name": "Design",
+      "id": "VG9waWNUYWdOb2RlOjI1",
+      "slug": "design"
+    },
+    {
+      "name": "Matrix",
+      "id": "VG9waWNUYWdOb2RlOjYxMDUz",
+      "slug": "matrix"
+    },
+    {
+      "name": "Simulation",
+      "id": "VG9waWNUYWdOb2RlOjYxMDU1",
+      "slug": "simulation"
+    }
+  ]
+}

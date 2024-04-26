@@ -1,0 +1,43 @@
+{
+  "titleSlug": "number-of-islands-ii",
+  "acRate": 39.57920024136783,
+  "content": null,
+  "difficulty": "Hard",
+  "freqBar": null,
+  "frontendQuestionId": "305",
+  "hasSolution": true,
+  "hasVideoSolution": false,
+  "hints": [],
+  "isFavor": false,
+  "paidOnly": true,
+  "similarQuestionList": [
+    {
+      "difficulty": "Medium",
+      "titleSlug": "number-of-islands",
+      "title": "Number of Islands",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    },
+    {
+      "difficulty": "Hard",
+      "titleSlug": "process-restricted-friend-requests",
+      "title": "Process Restricted Friend Requests",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    }
+  ],
+  "status": null,
+  "title": "Number of Islands II",
+  "topicTags": [
+    {
+      "name": "Array",
+      "id": "VG9waWNUYWdOb2RlOjU=",
+      "slug": "array"
+    },
+    {
+      "name": "Union Find",
+      "id": "VG9waWNUYWdOb2RlOjIz",
+      "slug": "union-find"
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "titleSlug": "maximum-subtree-of-the-same-color",
+  "acRate": 66.02316602316603,
+  "content": null,
+  "difficulty": "Medium",
+  "freqBar": null,
+  "frontendQuestionId": "3004",
+  "hasSolution": false,
+  "hasVideoSolution": false,
+  "hints": [
+    "For each node, define a <code>flag[v]</code> indicating that the subtree of this node contains only one color or not.",
+    "In the DFS process, when you call <code>dfs(u)</code> from node <code>v</code>, after that DFS of <code>u</code> has finished, check if <code>flag[u] == false</code>, then <code>flag[v]</code> is also <code>false</code>.",
+    "Also if <code>color[v] != color[u]</code>, <code>flag[v]</code> becomes <code>false</code>."
+  ],
+  "isFavor": false,
+  "paidOnly": true,
+  "similarQuestionList": [],
+  "status": null,
+  "title": "Maximum Subtree of the Same Color",
+  "topicTags": [
+    {
+      "name": "Array",
+      "id": "VG9waWNUYWdOb2RlOjU=",
+      "slug": "array"
+    },
+    {
+      "name": "Dynamic Programming",
+      "id": "VG9waWNUYWdOb2RlOjEz",
+      "slug": "dynamic-programming"
+    },
+    {
+      "name": "Tree",
+      "id": "VG9waWNUYWdOb2RlOjIw",
+      "slug": "tree"
+    },
+    {
+      "name": "Depth-First Search",
+      "id": "VG9waWNUYWdOb2RlOjIx",
+      "slug": "depth-first-search"
+    }
+  ]
+}

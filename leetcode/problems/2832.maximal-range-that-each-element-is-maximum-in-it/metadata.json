@@ -1,0 +1,40 @@
+{
+  "titleSlug": "maximal-range-that-each-element-is-maximum-in-it",
+  "acRate": 73.67205542725173,
+  "content": null,
+  "difficulty": "Medium",
+  "freqBar": null,
+  "frontendQuestionId": "2832",
+  "hasSolution": false,
+  "hasVideoSolution": false,
+  "hints": [
+    "For each index, we must find the nearest bigger element on both its left and right sides.",
+    "First, find the nearest bigger element on the left side of each element. To do that, use a stack of pairs <code>(value, index)</code>.",
+    "Start iterating from the beginning of the array.",
+    "Whenever we reach an element <code>nums[index]</code>, while the top of the stack is smaller than <code>nums[index]</code>, we pop from the stack.",
+    "If there is an element left in the stack, <code>top.index + 1</code> would be the answer. Otherwise, <code>0</code> is the answer.",
+    "After that, we push <code>(nums[index], index)</code> to the stack and go for the next element."
+  ],
+  "isFavor": false,
+  "paidOnly": true,
+  "similarQuestionList": [],
+  "status": null,
+  "title": "Maximal Range That Each Element Is Maximum in It",
+  "topicTags": [
+    {
+      "name": "Array",
+      "id": "VG9waWNUYWdOb2RlOjU=",
+      "slug": "array"
+    },
+    {
+      "name": "Stack",
+      "id": "VG9waWNUYWdOb2RlOjE1",
+      "slug": "stack"
+    },
+    {
+      "name": "Monotonic Stack",
+      "id": "VG9waWNUYWdOb2RlOjYxMDU0",
+      "slug": "monotonic-stack"
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "titleSlug": "maximum-gap",
+  "acRate": 45.612595437009325,
+  "content": "<p>Given an integer array <code>nums</code>, return <em>the maximum difference between two successive elements in its sorted form</em>. If the array contains less than two elements, return <code>0</code>.</p>\n\n<p>You must write an algorithm that runs in linear time and uses linear extra space.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [3,6,9,1]\n<strong>Output:</strong> 3\n<strong>Explanation:</strong> The sorted form of the array is [1,3,6,9], either (3,6) or (6,9) has the maximum difference 3.\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [10]\n<strong>Output:</strong> 0\n<strong>Explanation:</strong> The array contains less than 2 elements, therefore return 0.\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= nums.length &lt;= 10<sup>5</sup></code></li>\n\t<li><code>0 &lt;= nums[i] &lt;= 10<sup>9</sup></code></li>\n</ul>\n",
+  "difficulty": "Medium",
+  "freqBar": null,
+  "frontendQuestionId": "164",
+  "hasSolution": true,
+  "hasVideoSolution": false,
+  "hints": [],
+  "isFavor": false,
+  "paidOnly": false,
+  "similarQuestionList": [
+    {
+      "difficulty": "Medium",
+      "titleSlug": "maximum-consecutive-floors-without-special-floors",
+      "title": "Maximum Consecutive Floors Without Special Floors",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    }
+  ],
+  "status": null,
+  "title": "Maximum Gap",
+  "topicTags": [
+    {
+      "name": "Array",
+      "id": "VG9waWNUYWdOb2RlOjU=",
+      "slug": "array"
+    },
+    {
+      "name": "Sorting",
+      "id": "VG9waWNUYWdOb2RlOjYxMDQ5",
+      "slug": "sorting"
+    },
+    {
+      "name": "Bucket Sort",
+      "id": "VG9waWNUYWdOb2RlOjYxMDYw",
+      "slug": "bucket-sort"
+    },
+    {
+      "name": "Radix Sort",
+      "id": "VG9waWNUYWdOb2RlOjYxMDYx",
+      "slug": "radix-sort"
+    }
+  ]
+}

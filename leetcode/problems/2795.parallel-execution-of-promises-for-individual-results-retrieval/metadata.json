@@ -1,0 +1,17 @@
+{
+  "titleSlug": "parallel-execution-of-promises-for-individual-results-retrieval",
+  "acRate": 87.88461538461539,
+  "content": null,
+  "difficulty": "Medium",
+  "freqBar": null,
+  "frontendQuestionId": "2795",
+  "hasSolution": true,
+  "hasVideoSolution": false,
+  "hints": [],
+  "isFavor": false,
+  "paidOnly": true,
+  "similarQuestionList": [],
+  "status": null,
+  "title": "Parallel Execution of Promises for Individual Results Retrieval",
+  "topicTags": []
+}

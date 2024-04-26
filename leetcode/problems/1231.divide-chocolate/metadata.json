@@ -1,0 +1,47 @@
+{
+  "titleSlug": "divide-chocolate",
+  "acRate": 58.351171792681974,
+  "content": null,
+  "difficulty": "Hard",
+  "freqBar": null,
+  "frontendQuestionId": "1231",
+  "hasSolution": true,
+  "hasVideoSolution": false,
+  "hints": [
+    "After dividing the array into K+1 sub-arrays, you will pick the sub-array with the minimum sum.",
+    "Divide the sub-array into K+1 sub-arrays such that the minimum sub-array sum is as maximum as possible.",
+    "Use binary search with greedy check."
+  ],
+  "isFavor": false,
+  "paidOnly": true,
+  "similarQuestionList": [
+    {
+      "difficulty": "Hard",
+      "titleSlug": "split-array-largest-sum",
+      "title": "Split Array Largest Sum",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    },
+    {
+      "difficulty": "Medium",
+      "titleSlug": "capacity-to-ship-packages-within-d-days",
+      "title": "Capacity To Ship Packages Within D Days",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    }
+  ],
+  "status": null,
+  "title": "Divide Chocolate",
+  "topicTags": [
+    {
+      "name": "Array",
+      "id": "VG9waWNUYWdOb2RlOjU=",
+      "slug": "array"
+    },
+    {
+      "name": "Binary Search",
+      "id": "VG9waWNUYWdOb2RlOjEx",
+      "slug": "binary-search"
+    }
+  ]
+}

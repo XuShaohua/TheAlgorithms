@@ -1,0 +1,43 @@
+{
+  "titleSlug": "throttle",
+  "acRate": 82.5683640931491,
+  "content": null,
+  "difficulty": "Medium",
+  "freqBar": null,
+  "frontendQuestionId": "2676",
+  "hasSolution": true,
+  "hasVideoSolution": false,
+  "hints": [
+    "Store a variable for currArguments.",
+    "If no timeout is in progress, immediately execute the function and create a timeout. If a timeout is in progress, set the currArguments to the new arguments.",
+    "When the timeout is done: if currArguments is null, do nothing. Otherwise, execute the function with currArguments and create another timeout."
+  ],
+  "isFavor": false,
+  "paidOnly": true,
+  "similarQuestionList": [
+    {
+      "difficulty": "Medium",
+      "titleSlug": "debounce",
+      "title": "Debounce",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    },
+    {
+      "difficulty": "Medium",
+      "titleSlug": "promise-time-limit",
+      "title": "Promise Time Limit",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    },
+    {
+      "difficulty": "Medium",
+      "titleSlug": "promise-pool",
+      "title": "Promise Pool",
+      "translatedTitle": null,
+      "isPaidOnly": true
+    }
+  ],
+  "status": null,
+  "title": "Throttle",
+  "topicTags": []
+}

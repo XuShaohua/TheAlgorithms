@@ -1,0 +1,42 @@
+{
+  "titleSlug": "count-the-digits-that-divide-a-number",
+  "acRate": 84.01915512228493,
+  "content": "<p>Given an integer <code>num</code>, return <em>the number of digits in <code>num</code> that divide </em><code>num</code>.</p>\n\n<p>An integer <code>val</code> divides <code>nums</code> if <code>nums % val == 0</code>.</p>\n\n<p>&nbsp;</p>\n<p><strong>Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> num = 7\n<strong>Output:</strong> 1\n<strong>Explanation:</strong> 7 divides itself, hence the answer is 1.\n</pre>\n\n<p><strong>Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> num = 121\n<strong>Output:</strong> 2\n<strong>Explanation:</strong> 121 is divisible by 1, but not 2. Since 1 occurs twice as a digit, we return 2.\n</pre>\n\n<p><strong>Example 3:</strong></p>\n\n<pre>\n<strong>Input:</strong> num = 1248\n<strong>Output:</strong> 4\n<strong>Explanation:</strong> 1248 is divisible by all of its digits, hence the answer is 4.\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= num &lt;= 10<sup>9</sup></code></li>\n\t<li><code>num</code> does not contain <code>0</code> as one of its digits.</li>\n</ul>\n",
+  "difficulty": "Easy",
+  "freqBar": null,
+  "frontendQuestionId": "2520",
+  "hasSolution": false,
+  "hasVideoSolution": false,
+  "hints": [
+    "Use mod by 10 to retrieve the least significant digit of the number",
+    "Divide the number by 10, then round it down so that the second least significant digit becomes the least significant digit of the number",
+    "Use your language’s mod operator to see if a number is a divisor of another."
+  ],
+  "isFavor": false,
+  "paidOnly": false,
+  "similarQuestionList": [
+    {
+      "difficulty": "Easy",
+      "titleSlug": "happy-number",
+      "title": "Happy Number",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    },
+    {
+      "difficulty": "Easy",
+      "titleSlug": "self-dividing-numbers",
+      "title": "Self Dividing Numbers",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    }
+  ],
+  "status": null,
+  "title": "Count the Digits That Divide a Number",
+  "topicTags": [
+    {
+      "name": "Math",
+      "id": "VG9waWNUYWdOb2RlOjg=",
+      "slug": "math"
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "titleSlug": "minimum-time-to-eat-all-grains",
+  "acRate": 43.43955014058107,
+  "content": null,
+  "difficulty": "Hard",
+  "freqBar": null,
+  "frontendQuestionId": "2604",
+  "hasSolution": false,
+  "hasVideoSolution": false,
+  "hints": [
+    "Binary search the answer.",
+    "To check if an answer is possible, for the ith hen check how far right it can go after ensuring that it eats the leftmost uneaten grain.",
+    "If the last grain is eaten in this process, the answer is possible."
+  ],
+  "isFavor": false,
+  "paidOnly": true,
+  "similarQuestionList": [
+    {
+      "difficulty": "Hard",
+      "titleSlug": "kth-smallest-number-in-multiplication-table",
+      "title": "Kth Smallest Number in Multiplication Table",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    }
+  ],
+  "status": null,
+  "title": "Minimum Time to Eat All Grains",
+  "topicTags": [
+    {
+      "name": "Array",
+      "id": "VG9waWNUYWdOb2RlOjU=",
+      "slug": "array"
+    },
+    {
+      "name": "Binary Search",
+      "id": "VG9waWNUYWdOb2RlOjEx",
+      "slug": "binary-search"
+    },
+    {
+      "name": "Sorting",
+      "id": "VG9waWNUYWdOb2RlOjYxMDQ5",
+      "slug": "sorting"
+    }
+  ]
+}

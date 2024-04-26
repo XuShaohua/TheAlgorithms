@@ -1,0 +1,46 @@
+{
+  "titleSlug": "moving-average-from-data-stream",
+  "acRate": 78.15521463110046,
+  "content": null,
+  "difficulty": "Easy",
+  "freqBar": null,
+  "frontendQuestionId": "346",
+  "hasSolution": true,
+  "hasVideoSolution": true,
+  "hints": [],
+  "isFavor": false,
+  "paidOnly": true,
+  "similarQuestionList": [
+    {
+      "difficulty": "Medium",
+      "titleSlug": "k-radius-subarray-averages",
+      "title": "K Radius Subarray Averages",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    }
+  ],
+  "status": null,
+  "title": "Moving Average from Data Stream",
+  "topicTags": [
+    {
+      "name": "Array",
+      "id": "VG9waWNUYWdOb2RlOjU=",
+      "slug": "array"
+    },
+    {
+      "name": "Design",
+      "id": "VG9waWNUYWdOb2RlOjI1",
+      "slug": "design"
+    },
+    {
+      "name": "Queue",
+      "id": "VG9waWNUYWdOb2RlOjM0",
+      "slug": "queue"
+    },
+    {
+      "name": "Data Stream",
+      "id": "VG9waWNUYWdOb2RlOjYxMDYz",
+      "slug": "data-stream"
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "titleSlug": "minimum-health-to-beat-game",
+  "acRate": 57.750474401487416,
+  "content": null,
+  "difficulty": "Medium",
+  "freqBar": null,
+  "frontendQuestionId": "2214",
+  "hasSolution": true,
+  "hasVideoSolution": false,
+  "hints": [
+    "When should you use your armor ability?",
+    "It is always optimal to use your armor ability on the level where you take the most amount of damage."
+  ],
+  "isFavor": false,
+  "paidOnly": true,
+  "similarQuestionList": [
+    {
+      "difficulty": "Hard",
+      "titleSlug": "dungeon-game",
+      "title": "Dungeon Game",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    },
+    {
+      "difficulty": "Medium",
+      "titleSlug": "eliminate-maximum-number-of-monsters",
+      "title": "Eliminate Maximum Number of Monsters",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    }
+  ],
+  "status": null,
+  "title": "Minimum Health to Beat Game",
+  "topicTags": [
+    {
+      "name": "Array",
+      "id": "VG9waWNUYWdOb2RlOjU=",
+      "slug": "array"
+    },
+    {
+      "name": "Greedy",
+      "id": "VG9waWNUYWdOb2RlOjE3",
+      "slug": "greedy"
+    }
+  ]
+}

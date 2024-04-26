@@ -1,0 +1,109 @@
+{
+  "titleSlug": "jump-game-viii",
+  "acRate": 46.768152712335386,
+  "content": null,
+  "difficulty": "Medium",
+  "freqBar": null,
+  "frontendQuestionId": "2297",
+  "hasSolution": false,
+  "hasVideoSolution": false,
+  "hints": [
+    "For each index, find the indexes that you can jump to.",
+    "We can do this by using a monotonic stack and iterating through the array backwards.",
+    "Create another integer array of length n called dp where dp[i] is the minimum cost of getting to index i."
+  ],
+  "isFavor": false,
+  "paidOnly": true,
+  "similarQuestionList": [
+    {
+      "difficulty": "Medium",
+      "titleSlug": "jump-game-ii",
+      "title": "Jump Game II",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    },
+    {
+      "difficulty": "Medium",
+      "titleSlug": "jump-game",
+      "title": "Jump Game",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    },
+    {
+      "difficulty": "Medium",
+      "titleSlug": "jump-game-iii",
+      "title": "Jump Game III",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    },
+    {
+      "difficulty": "Hard",
+      "titleSlug": "jump-game-iv",
+      "title": "Jump Game IV",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    },
+    {
+      "difficulty": "Hard",
+      "titleSlug": "jump-game-v",
+      "title": "Jump Game V",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    },
+    {
+      "difficulty": "Medium",
+      "titleSlug": "jump-game-vi",
+      "title": "Jump Game VI",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    },
+    {
+      "difficulty": "Medium",
+      "titleSlug": "jump-game-vii",
+      "title": "Jump Game VII",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    },
+    {
+      "difficulty": "Medium",
+      "titleSlug": "jump-game-viii",
+      "title": "Jump Game VIII",
+      "translatedTitle": null,
+      "isPaidOnly": true
+    }
+  ],
+  "status": null,
+  "title": "Jump Game VIII",
+  "topicTags": [
+    {
+      "name": "Array",
+      "id": "VG9waWNUYWdOb2RlOjU=",
+      "slug": "array"
+    },
+    {
+      "name": "Dynamic Programming",
+      "id": "VG9waWNUYWdOb2RlOjEz",
+      "slug": "dynamic-programming"
+    },
+    {
+      "name": "Stack",
+      "id": "VG9waWNUYWdOb2RlOjE1",
+      "slug": "stack"
+    },
+    {
+      "name": "Graph",
+      "id": "VG9waWNUYWdOb2RlOjI0",
+      "slug": "graph"
+    },
+    {
+      "name": "Monotonic Stack",
+      "id": "VG9waWNUYWdOb2RlOjYxMDU0",
+      "slug": "monotonic-stack"
+    },
+    {
+      "name": "Shortest Path",
+      "id": "VG9waWNUYWdOb2RlOjYxMDc2",
+      "slug": "shortest-path"
+    }
+  ]
+}

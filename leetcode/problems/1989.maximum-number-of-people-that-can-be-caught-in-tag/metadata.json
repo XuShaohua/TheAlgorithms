@@ -1,0 +1,42 @@
+{
+  "titleSlug": "maximum-number-of-people-that-can-be-caught-in-tag",
+  "acRate": 51.622718052738335,
+  "content": null,
+  "difficulty": "Medium",
+  "freqBar": null,
+  "frontendQuestionId": "1989",
+  "hasSolution": false,
+  "hasVideoSolution": false,
+  "hints": [
+    "Try to use as much of the range of a person who is \"it\" as possible.",
+    "Find the leftmost person who is \"it\" that has not caught anyone yet, and the leftmost person who is not \"it\" that has not been caught yet.",
+    "If the person who is not \"it\" can be caught, pair them together and repeat the process.",
+    "If the person who is not \"it\" cannot be caught, and the person who is not \"it\" is on the left of the person who is \"it\", find the next leftmost person who is not \"it\".",
+    "If the person who is not \"it\" cannot be caught, and the person who is \"it\" is on the left of the person who is not \"it\", find the next leftmost person who is \"it\"."
+  ],
+  "isFavor": false,
+  "paidOnly": true,
+  "similarQuestionList": [
+    {
+      "difficulty": "Medium",
+      "titleSlug": "minimum-number-of-food-buckets-to-feed-the-hamsters",
+      "title": "Minimum Number of Food Buckets to Feed the Hamsters",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    }
+  ],
+  "status": null,
+  "title": "Maximum Number of People That Can Be Caught in Tag",
+  "topicTags": [
+    {
+      "name": "Array",
+      "id": "VG9waWNUYWdOb2RlOjU=",
+      "slug": "array"
+    },
+    {
+      "name": "Greedy",
+      "id": "VG9waWNUYWdOb2RlOjE3",
+      "slug": "greedy"
+    }
+  ]
+}

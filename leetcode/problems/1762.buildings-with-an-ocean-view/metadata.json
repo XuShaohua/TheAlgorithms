@@ -1,0 +1,51 @@
+{
+  "titleSlug": "buildings-with-an-ocean-view",
+  "acRate": 79.47095406417392,
+  "content": null,
+  "difficulty": "Medium",
+  "freqBar": null,
+  "frontendQuestionId": "1762",
+  "hasSolution": true,
+  "hasVideoSolution": false,
+  "hints": [
+    "You can traverse the buildings from the nearest to the ocean to the furthest.",
+    "Keep with you the maximum to the right while traversing to determine if you can see the ocean or not."
+  ],
+  "isFavor": false,
+  "paidOnly": true,
+  "similarQuestionList": [
+    {
+      "difficulty": "Hard",
+      "titleSlug": "number-of-visible-people-in-a-queue",
+      "title": "Number of Visible People in a Queue",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    },
+    {
+      "difficulty": "Medium",
+      "titleSlug": "finding-the-number-of-visible-mountains",
+      "title": "Finding the Number of Visible Mountains",
+      "translatedTitle": null,
+      "isPaidOnly": true
+    }
+  ],
+  "status": null,
+  "title": "Buildings With an Ocean View",
+  "topicTags": [
+    {
+      "name": "Array",
+      "id": "VG9waWNUYWdOb2RlOjU=",
+      "slug": "array"
+    },
+    {
+      "name": "Stack",
+      "id": "VG9waWNUYWdOb2RlOjE1",
+      "slug": "stack"
+    },
+    {
+      "name": "Monotonic Stack",
+      "id": "VG9waWNUYWdOb2RlOjYxMDU0",
+      "slug": "monotonic-stack"
+    }
+  ]
+}

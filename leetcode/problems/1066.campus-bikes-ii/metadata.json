@@ -1,0 +1,53 @@
+{
+  "titleSlug": "campus-bikes-ii",
+  "acRate": 55.18858197210614,
+  "content": null,
+  "difficulty": "Medium",
+  "freqBar": null,
+  "frontendQuestionId": "1066",
+  "hasSolution": true,
+  "hasVideoSolution": false,
+  "hints": [
+    "Model the problem with a dp(pos, mask) where pos represents the current bike to be assigned and mask the set of available workers."
+  ],
+  "isFavor": false,
+  "paidOnly": true,
+  "similarQuestionList": [
+    {
+      "difficulty": "Medium",
+      "titleSlug": "campus-bikes",
+      "title": "Campus Bikes",
+      "translatedTitle": null,
+      "isPaidOnly": true
+    }
+  ],
+  "status": null,
+  "title": "Campus Bikes II",
+  "topicTags": [
+    {
+      "name": "Array",
+      "id": "VG9waWNUYWdOb2RlOjU=",
+      "slug": "array"
+    },
+    {
+      "name": "Dynamic Programming",
+      "id": "VG9waWNUYWdOb2RlOjEz",
+      "slug": "dynamic-programming"
+    },
+    {
+      "name": "Backtracking",
+      "id": "VG9waWNUYWdOb2RlOjE0",
+      "slug": "backtracking"
+    },
+    {
+      "name": "Bit Manipulation",
+      "id": "VG9waWNUYWdOb2RlOjE5",
+      "slug": "bit-manipulation"
+    },
+    {
+      "name": "Bitmask",
+      "id": "VG9waWNUYWdOb2RlOjYxMDc4",
+      "slug": "bitmask"
+    }
+  ]
+}

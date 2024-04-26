@@ -1,0 +1,46 @@
+{
+  "titleSlug": "next-palindrome-using-same-digits",
+  "acRate": 53.3074684772066,
+  "content": null,
+  "difficulty": "Hard",
+  "freqBar": null,
+  "frontendQuestionId": "1842",
+  "hasSolution": false,
+  "hasVideoSolution": false,
+  "hints": [
+    "Is it possible to swap one character in the first half of the palindrome to make the next one?",
+    "Are there different cases for when the length is odd and even?"
+  ],
+  "isFavor": false,
+  "paidOnly": true,
+  "similarQuestionList": [
+    {
+      "difficulty": "Medium",
+      "titleSlug": "next-greater-element-iii",
+      "title": "Next Greater Element III",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    },
+    {
+      "difficulty": "Hard",
+      "titleSlug": "find-the-closest-palindrome",
+      "title": "Find the Closest Palindrome",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    }
+  ],
+  "status": null,
+  "title": "Next Palindrome Using Same Digits",
+  "topicTags": [
+    {
+      "name": "Two Pointers",
+      "id": "VG9waWNUYWdOb2RlOjk=",
+      "slug": "two-pointers"
+    },
+    {
+      "name": "String",
+      "id": "VG9waWNUYWdOb2RlOjEw",
+      "slug": "string"
+    }
+  ]
+}

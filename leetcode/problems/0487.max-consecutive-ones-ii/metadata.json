@@ -1,0 +1,55 @@
+{
+  "titleSlug": "max-consecutive-ones-ii",
+  "acRate": 50.28183693871908,
+  "content": null,
+  "difficulty": "Medium",
+  "freqBar": null,
+  "frontendQuestionId": "487",
+  "hasSolution": true,
+  "hasVideoSolution": false,
+  "hints": [],
+  "isFavor": false,
+  "paidOnly": true,
+  "similarQuestionList": [
+    {
+      "difficulty": "Easy",
+      "titleSlug": "max-consecutive-ones",
+      "title": "Max Consecutive Ones",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    },
+    {
+      "difficulty": "Medium",
+      "titleSlug": "max-consecutive-ones-iii",
+      "title": "Max Consecutive Ones III",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    },
+    {
+      "difficulty": "Medium",
+      "titleSlug": "all-divisions-with-the-highest-score-of-a-binary-array",
+      "title": "All Divisions With the Highest Score of a Binary Array",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    }
+  ],
+  "status": null,
+  "title": "Max Consecutive Ones II",
+  "topicTags": [
+    {
+      "name": "Array",
+      "id": "VG9waWNUYWdOb2RlOjU=",
+      "slug": "array"
+    },
+    {
+      "name": "Dynamic Programming",
+      "id": "VG9waWNUYWdOb2RlOjEz",
+      "slug": "dynamic-programming"
+    },
+    {
+      "name": "Sliding Window",
+      "id": "VG9waWNUYWdOb2RlOjU1ODIx",
+      "slug": "sliding-window"
+    }
+  ]
+}

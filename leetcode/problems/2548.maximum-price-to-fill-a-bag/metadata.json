@@ -1,0 +1,37 @@
+{
+  "titleSlug": "maximum-price-to-fill-a-bag",
+  "acRate": 65.44035674470457,
+  "content": null,
+  "difficulty": "Medium",
+  "freqBar": null,
+  "frontendQuestionId": "2548",
+  "hasSolution": false,
+  "hasVideoSolution": false,
+  "hints": [
+    "If the total weight of the items is less than the capacity, then it is impossible to fill a bag.",
+    "The intended solution greedily chooses items to fill a bag.",
+    "Sort items in decreasing order of price/weight and greedily fill a bag. The main intuition behind the greedy strategy is that we try to take the highest possible price for 1 unit of weight."
+  ],
+  "isFavor": false,
+  "paidOnly": true,
+  "similarQuestionList": [],
+  "status": null,
+  "title": "Maximum Price to Fill a Bag",
+  "topicTags": [
+    {
+      "name": "Array",
+      "id": "VG9waWNUYWdOb2RlOjU=",
+      "slug": "array"
+    },
+    {
+      "name": "Greedy",
+      "id": "VG9waWNUYWdOb2RlOjE3",
+      "slug": "greedy"
+    },
+    {
+      "name": "Sorting",
+      "id": "VG9waWNUYWdOb2RlOjYxMDQ5",
+      "slug": "sorting"
+    }
+  ]
+}

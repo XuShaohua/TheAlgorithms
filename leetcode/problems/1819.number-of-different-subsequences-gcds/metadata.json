@@ -1,0 +1,51 @@
+{
+  "titleSlug": "number-of-different-subsequences-gcds",
+  "acRate": 40.370694822260134,
+  "content": "<p>You are given an array <code>nums</code> that consists of positive integers.</p>\n\n<p>The <strong>GCD</strong> of a sequence of numbers is defined as the greatest integer that divides <strong>all</strong> the numbers in the sequence evenly.</p>\n\n<ul>\n\t<li>For example, the GCD of the sequence <code>[4,6,16]</code> is <code>2</code>.</li>\n</ul>\n\n<p>A <strong>subsequence</strong> of an array is a sequence that can be formed by removing some elements (possibly none) of the array.</p>\n\n<ul>\n\t<li>For example, <code>[2,5,10]</code> is a subsequence of <code>[1,2,1,<strong><u>2</u></strong>,4,1,<u><strong>5</strong></u>,<u><strong>10</strong></u>]</code>.</li>\n</ul>\n\n<p>Return <em>the <strong>number</strong> of <strong>different</strong> GCDs among all <strong>non-empty</strong> subsequences of</em> <code>nums</code>.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n<img alt=\"\" src=\"https://assets.leetcode.com/uploads/2021/03/17/image-1.png\" style=\"width: 149px; height: 309px;\" />\n<pre>\n<strong>Input:</strong> nums = [6,10,3]\n<strong>Output:</strong> 5\n<strong>Explanation:</strong> The figure shows all the non-empty subsequences and their GCDs.\nThe different GCDs are 6, 10, 3, 2, and 1.\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [5,15,40,5,6]\n<strong>Output:</strong> 7\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= nums.length &lt;= 10<sup>5</sup></code></li>\n\t<li><code>1 &lt;= nums[i] &lt;= 2 * 10<sup>5</sup></code></li>\n</ul>\n",
+  "difficulty": "Hard",
+  "freqBar": null,
+  "frontendQuestionId": "1819",
+  "hasSolution": false,
+  "hasVideoSolution": false,
+  "hints": [
+    "Think of how to check if a number x is a gcd of a subsequence.",
+    "If there is such subsequence, then all of it will be divisible by x. Moreover, if you divide each number in the subsequence by x , then the gcd of the resulting numbers will be 1.",
+    "Adding a number to a subsequence cannot increase its gcd. So, if there is a valid subsequence for x , then the subsequence that contains all multiples of x is a valid one too.",
+    "Iterate on all possiblex from 1 to 10^5, and check if there is a valid subsequence for x."
+  ],
+  "isFavor": false,
+  "paidOnly": false,
+  "similarQuestionList": [
+    {
+      "difficulty": "Easy",
+      "titleSlug": "find-greatest-common-divisor-of-array",
+      "title": "Find Greatest Common Divisor of Array",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    }
+  ],
+  "status": null,
+  "title": "Number of Different Subsequences GCDs",
+  "topicTags": [
+    {
+      "name": "Array",
+      "id": "VG9waWNUYWdOb2RlOjU=",
+      "slug": "array"
+    },
+    {
+      "name": "Math",
+      "id": "VG9waWNUYWdOb2RlOjg=",
+      "slug": "math"
+    },
+    {
+      "name": "Counting",
+      "id": "VG9waWNUYWdOb2RlOjYxMDYy",
+      "slug": "counting"
+    },
+    {
+      "name": "Number Theory",
+      "id": "VG9waWNUYWdOb2RlOjYxMDY3",
+      "slug": "number-theory"
+    }
+  ]
+}

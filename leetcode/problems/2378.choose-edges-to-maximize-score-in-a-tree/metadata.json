@@ -1,0 +1,53 @@
+{
+  "titleSlug": "choose-edges-to-maximize-score-in-a-tree",
+  "acRate": 58.96614821591949,
+  "content": null,
+  "difficulty": "Medium",
+  "freqBar": null,
+  "frontendQuestionId": "2378",
+  "hasSolution": false,
+  "hasVideoSolution": false,
+  "hints": [
+    "Use dynamic programming to recursively solve the problem for smaller subtrees.",
+    "You can ignore the edges with negative weights.",
+    "The states of the dp are the following: the root of the subtree you are at, and a boolean variable that will tell you if you have chosen the edge that connects that node and its parent.",
+    "What are the transitions of this dp?"
+  ],
+  "isFavor": false,
+  "paidOnly": true,
+  "similarQuestionList": [
+    {
+      "difficulty": "Hard",
+      "titleSlug": "binary-tree-cameras",
+      "title": "Binary Tree Cameras",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    },
+    {
+      "difficulty": "Hard",
+      "titleSlug": "longest-path-with-different-adjacent-characters",
+      "title": "Longest Path With Different Adjacent Characters",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    }
+  ],
+  "status": null,
+  "title": "Choose Edges to Maximize Score in a Tree",
+  "topicTags": [
+    {
+      "name": "Dynamic Programming",
+      "id": "VG9waWNUYWdOb2RlOjEz",
+      "slug": "dynamic-programming"
+    },
+    {
+      "name": "Tree",
+      "id": "VG9waWNUYWdOb2RlOjIw",
+      "slug": "tree"
+    },
+    {
+      "name": "Depth-First Search",
+      "id": "VG9waWNUYWdOb2RlOjIx",
+      "slug": "depth-first-search"
+    }
+  ]
+}

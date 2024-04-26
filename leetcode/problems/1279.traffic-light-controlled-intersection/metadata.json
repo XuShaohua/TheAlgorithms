@@ -1,0 +1,23 @@
+{
+  "titleSlug": "traffic-light-controlled-intersection",
+  "acRate": 73.21528009800646,
+  "content": null,
+  "difficulty": "Easy",
+  "freqBar": null,
+  "frontendQuestionId": "1279",
+  "hasSolution": false,
+  "hasVideoSolution": false,
+  "hints": [],
+  "isFavor": false,
+  "paidOnly": true,
+  "similarQuestionList": [],
+  "status": null,
+  "title": "Traffic Light Controlled Intersection",
+  "topicTags": [
+    {
+      "name": "Concurrency",
+      "id": "VG9waWNUYWdOb2RlOjYxMDQ1",
+      "slug": "concurrency"
+    }
+  ]
+}

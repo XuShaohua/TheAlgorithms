@@ -1,0 +1,70 @@
+{
+  "titleSlug": "find-subsequence-of-length-k-with-the-largest-sum",
+  "acRate": 43.403949994940625,
+  "content": "<p>You are given an integer array <code>nums</code> and an integer <code>k</code>. You want to find a <strong>subsequence </strong>of <code>nums</code> of length <code>k</code> that has the <strong>largest</strong> sum.</p>\n\n<p>Return<em> </em><em><strong>any</strong> such subsequence as an integer array of length </em><code>k</code>.</p>\n\n<p>A <strong>subsequence</strong> is an array that can be derived from another array by deleting some or no elements without changing the order of the remaining elements.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [2,1,3,3], k = 2\n<strong>Output:</strong> [3,3]\n<strong>Explanation:</strong>\nThe subsequence has the largest sum of 3 + 3 = 6.</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [-1,-2,3,4], k = 3\n<strong>Output:</strong> [-1,3,4]\n<strong>Explanation:</strong> \nThe subsequence has the largest sum of -1 + 3 + 4 = 6.\n</pre>\n\n<p><strong class=\"example\">Example 3:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [3,4,3,3], k = 2\n<strong>Output:</strong> [3,4]\n<strong>Explanation:</strong>\nThe subsequence has the largest sum of 3 + 4 = 7. \nAnother possible subsequence is [4, 3].\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= nums.length &lt;= 1000</code></li>\n\t<li><code>-10<sup>5</sup>&nbsp;&lt;= nums[i] &lt;= 10<sup>5</sup></code></li>\n\t<li><code>1 &lt;= k &lt;= nums.length</code></li>\n</ul>\n",
+  "difficulty": "Easy",
+  "freqBar": null,
+  "frontendQuestionId": "2099",
+  "hasSolution": false,
+  "hasVideoSolution": false,
+  "hints": [
+    "From a greedy perspective, what k elements should you pick?",
+    "Could you sort the array while maintaining the index?"
+  ],
+  "isFavor": false,
+  "paidOnly": false,
+  "similarQuestionList": [
+    {
+      "difficulty": "Medium",
+      "titleSlug": "kth-largest-element-in-an-array",
+      "title": "Kth Largest Element in an Array",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    },
+    {
+      "difficulty": "Easy",
+      "titleSlug": "maximize-sum-of-array-after-k-negations",
+      "title": "Maximize Sum Of Array After K Negations",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    },
+    {
+      "difficulty": "Easy",
+      "titleSlug": "sort-integers-by-the-number-of-1-bits",
+      "title": "Sort Integers by The Number of 1 Bits",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    },
+    {
+      "difficulty": "Hard",
+      "titleSlug": "minimum-difference-in-sums-after-removal-of-elements",
+      "title": "Minimum Difference in Sums After Removal of Elements",
+      "translatedTitle": null,
+      "isPaidOnly": false
+    }
+  ],
+  "status": null,
+  "title": "Find Subsequence of Length K With the Largest Sum",
+  "topicTags": [
+    {
+      "name": "Array",
+      "id": "VG9waWNUYWdOb2RlOjU=",
+      "slug": "array"
+    },
+    {
+      "name": "Hash Table",
+      "id": "VG9waWNUYWdOb2RlOjY=",
+      "slug": "hash-table"
+    },
+    {
+      "name": "Sorting",
+      "id": "VG9waWNUYWdOb2RlOjYxMDQ5",
+      "slug": "sorting"
+    },
+    {
+      "name": "Heap (Priority Queue)",
+      "id": "VG9waWNUYWdOb2RlOjYxMDUw",
+      "slug": "heap-priority-queue"
+    }
+  ]
+}
