@@ -2,6 +2,8 @@
 
 ## 容易
 
+- [0338. 比特位计数 Counting Bits](../0338.counting-bits/index.md)
+
 - [53.最大子序和](https://leetcode.com/problems/maximum-subarray)
 - [70. 爬楼梯](https://leetcode.com/problems/climbing-stairs)
 - [121. 买卖股票的最佳时机](https://leetcode.com/problems/best-time-to-buy-and-sell-stock)

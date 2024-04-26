@@ -14,8 +14,10 @@ pub fn count_bits2(n: i32) -> Vec<i32> {
     let mut vec = vec![0; n as usize + 1];
     for i in 0..=n {
         let i_usize = i as usize;
-        vec[i_usize] = vec[i_usize >> 1] + (i & 1);
+        // f(n) = f(n/2) + lsb
+        // 下面两行的写法是等效的:
         //vec[i_usize] = vec[i_usize / 2] + i % 2;
+        vec[i_usize] = vec[i_usize >> 1] + (i & 1);
     }
     vec
 }
