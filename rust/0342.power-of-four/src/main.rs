@@ -32,7 +32,7 @@ pub fn is_power_of_four2(n: i32) -> bool {
     is_power_of_four2(n / 4)
 }
 
-// 迭代的写法
+// 把递归法改写为迭代的形式
 pub fn is_power_of_four3(n: i32) -> bool {
     if n == 0 {
         return false;

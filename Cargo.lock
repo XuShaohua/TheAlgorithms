@@ -135,6 +135,10 @@ name = "lc-0268-missing-number"
 version = "0.1.0"
 
 [[package]]
+name = "lc-0326-power-of-three"
+version = "0.1.0"
+
+[[package]]
 name = "lc-0338-counting-bits"
 version = "0.1.0"
 
