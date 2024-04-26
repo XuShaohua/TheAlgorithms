@@ -15,4 +15,5 @@
 - [0338. 比特位计数 Counting Bits](0338.counting-bits/content.html)
 - [0342. 4的幂 Power of Four](0342.power-of-four/content.html)
 - [1518. 换水问题 Water Bottles](1518.water-bottles/content.html)
+- [1780. 判断一个数字是否可以表示成三的幂的和 Check if Number is a Sum of Powers of Three](1780.check-if-number-is-a-sum-of-powers-of-three/content.html)
 - [2119. 反转两次的数字 A Number After a Double Reversal](2119.a-number-after-a-double-reversal/content.html)
