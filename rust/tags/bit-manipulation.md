@@ -8,6 +8,7 @@
 - [0191. 位1的个数 Number of 1 Bits](../0191.number-of-1-bits/index.md)
 - [0231. 2 的幂 Power of Two](../0231.power-of-two/index.md)
 - [0338. 比特位计数 Counting Bits](../0338.counting-bits/index.md)
+- [0342. 4的幂 Power of Four](../0342.power-of-four/index.md)
 
 - [2859. Sum of Values at Indices With K Set Bits](https://leetcode.com/problems/sum-of-values-at-indices-with-k-set-bits)
 - [2917. Find the K-or of an Array](https://leetcode.com/problems/find-the-k-or-of-an-array)

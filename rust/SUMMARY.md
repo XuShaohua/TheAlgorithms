@@ -29,6 +29,7 @@
     - [0219. 存在重复元素II Contains Duplicate II](0219.contains-duplicate-ii/index.md)
     - [0231. 2 的幂 Power of Two](0231.power-of-two/index.md)
     - [0338. 比特位计数 Counting Bits](0338.counting-bits/index.md)
+    - [0342. 4的幂 Power of Four](0342.power-of-four/index.md)
     - [1518. 换水问题 Water Bottles](1518.water-bottles/index.md)
     - [2119. 反转两次的数字 A Number After a Double Reversal](2119.a-number-after-a-double-reversal/index.md)
 - [第三部分: 所有问题](problems/index.md)

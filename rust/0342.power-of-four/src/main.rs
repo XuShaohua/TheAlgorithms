@@ -21,8 +21,35 @@ pub fn is_power_of_four1(n: i32) -> bool {
     false
 }
 
-// 整数为 4^x 的特性
+// 递归法
 pub fn is_power_of_four2(n: i32) -> bool {
+    if n == 1 {
+        return true;
+    }
+    if n <= 0 || n % 4 != 0 {
+        return false;
+    }
+    is_power_of_four2(n / 4)
+}
+
+// 迭代的写法
+pub fn is_power_of_four3(n: i32) -> bool {
+    if n == 0 {
+        return false;
+    }
+    if n == 1 {
+        return true;
+    }
+
+    let mut n = n;
+    while n % 4 == 0 {
+        n /= 4;
+    }
+    n == 1
+}
+
+// 整数为 4^x 的特性
+pub fn is_power_of_four4(n: i32) -> bool {
     if n <= 0 {
         return false;
     }
@@ -54,11 +81,15 @@ fn main() {
 
     check_solution(is_power_of_four1);
     check_solution(is_power_of_four2);
+    check_solution(is_power_of_four3);
+    check_solution(is_power_of_four4);
 }
 
 #[cfg(test)]
 mod tests {
-    use super::{check_solution, is_power_of_four1, is_power_of_four2};
+    use super::{
+        check_solution, is_power_of_four1, is_power_of_four2, is_power_of_four3, is_power_of_four4,
+    };
 
     #[test]
     fn test_is_power_of_four1() {
@@ -68,5 +99,15 @@ mod tests {
     #[test]
     fn test_is_power_of_four2() {
         check_solution(is_power_of_four2);
+    }
+
+    #[test]
+    fn test_is_power_of_four3() {
+        check_solution(is_power_of_four3);
+    }
+
+    #[test]
+    fn test_is_power_of_four4() {
+        check_solution(is_power_of_four4);
     }
 }
