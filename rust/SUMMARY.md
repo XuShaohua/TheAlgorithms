@@ -27,4 +27,5 @@
     - [0191. 位1的个数 Number of 1 Bits](0191.number-of-1-bits/index.md)
     - [0217. 存在重复元素 Contains Duplicate](0217.contains-duplicate/index.md)
     - [0219. 存在重复元素II Contains Duplicate II](0219.contains-duplicate-ii/index.md)
+    - [2119. 反转两次的数字 A Number After a Double Reversal](2119.a-number-after-a-double-reversal/index.md)
 - [第三部分: 所有问题](problems/index.md)
