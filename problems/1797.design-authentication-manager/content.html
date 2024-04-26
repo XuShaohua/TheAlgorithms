@@ -1,4 +1,13 @@
-<p>There is an authentication system that works with authentication tokens. For each session, the user will receive a new authentication token that will expire <code>timeToLive</code> seconds after the <code>currentTime</code>. If the token is renewed, the expiry time will be <b>extended</b> to expire <code>timeToLive</code> seconds after the (potentially different) <code>currentTime</code>.</p>
+<!doctype html>
+<html lang="en_US">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>1797. Design Authentication Manager</title>
+</head>
+<body>
+  <h1>1797. Design Authentication Manager</h1>
+  <p>There is an authentication system that works with authentication tokens. For each session, the user will receive a new authentication token that will expire <code>timeToLive</code> seconds after the <code>currentTime</code>. If the token is renewed, the expiry time will be <b>extended</b> to expire <code>timeToLive</code> seconds after the (potentially different) <code>currentTime</code>.</p>
 
 <p>Implement the <code>AuthenticationManager</code> class:</p>
 
@@ -44,3 +53,6 @@ authenticationManager.<code>countUnexpiredTokens</code>(15); // The token with t
 	<li>The values of <code>currentTime</code> across all the function calls will be <strong>strictly increasing</strong>.</li>
 	<li>At most <code>2000</code> calls will be made to all functions combined.</li>
 </ul>
+
+</body>
+</html>
