@@ -1,5 +1,5 @@
 [package]
-name = "queue"
+name = "lc-0015-3sum"
 version = "0.1.0"
 edition = "2021"
 publish = false

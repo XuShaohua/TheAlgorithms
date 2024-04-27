@@ -1,5 +1,5 @@
 [package]
-name = "deques"
+name = "lc-0001-two-sum"
 version = "0.1.0"
 edition = "2021"
 publish = false
