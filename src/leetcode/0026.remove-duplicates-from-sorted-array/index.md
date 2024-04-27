@@ -6,12 +6,12 @@
 
 ## 方法1, 快慢型双指针法
 
-快慢型双指针法的详细说明, 可以参考[这里](../).
+快慢型双指针法的详细说明, 可以参考[这里](../../two-pointers/fast-slow.md).
 
-![two-pointers](assets/two-pointers.svg)
+![two-pointers](../../two-pointers/assets/fast-slow.svg)
 
 ```rust
-{{#include src/main.rs:40:44 }}
+{{#include src/main.rs:24:38 }}
 ```
 
 ## 方法2, 使用 Vec 自带的去重方法

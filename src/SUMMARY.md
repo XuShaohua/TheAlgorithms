@@ -62,6 +62,7 @@
     - [任意精度算术运算](math/arbitrary-precision-arithmetic/index.md)
     - [数学相关的问题列表](leetcode/tags/math.md)
 - [双指针](two-pointers/index.md)
+    - [快慢型双指针](two-pointers/fast-slow.md)
     - [双指针相关的问题列表](leetcode/tags/two-pointers.md)
 - [滑动窗口 Sliding Window](sliding-window/index.md)
     - [滑动窗口相关的问题列表](leetcode/tags/sliding-window.md)
