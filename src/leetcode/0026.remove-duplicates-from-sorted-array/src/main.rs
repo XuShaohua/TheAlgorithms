@@ -2,7 +2,7 @@
 // Use of this source is governed by General Public License that can be
 // found in the LICENSE file.
 
-// 朴树的双指针法, 手动跳过所有重复的元素
+// 朴树的双指针法, 根据题目中的要求, 手动跳过所有重复的元素
 #[allow(clippy::ptr_arg)]
 pub fn remove_duplicates1(nums: &mut Vec<i32>) -> i32 {
     let mut slow = 0;
@@ -21,20 +21,20 @@ pub fn remove_duplicates1(nums: &mut Vec<i32>) -> i32 {
     slow as i32
 }
 
-// 双指针 Two pointers
+// 快慢型双指针 Two pointers
 #[allow(clippy::ptr_arg)]
 pub fn remove_duplicates2(nums: &mut Vec<i32>) -> i32 {
     assert!(!nums.is_empty());
     // 第一个指针, 用于记录当前不重复的位置
-    let mut idx = 1;
+    let mut slow_idx = 1;
     // 第二个指针, 用于遍历数组
-    for i in 1..nums.len() {
-        if nums[i - 1] != nums[i] {
-            nums[idx] = nums[i];
-            idx += 1;
+    for fast_idx in 1..nums.len() {
+        if nums[fast_idx - 1] != nums[fast_idx] {
+            nums[slow_idx] = nums[fast_idx];
+            slow_idx += 1;
         }
     }
-    idx as i32
+    slow_idx as i32
 }
 
 // Vec 的去重函数, 支持已排序的
