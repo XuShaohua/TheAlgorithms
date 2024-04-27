@@ -15,6 +15,7 @@ create-missing = false
 
 [output.html]
 git-repository-url = "https://github.com/xushaohua/TheAlgorithms"
+mathjax-support = true
 
 [output.html.playground]
 copy-js = true

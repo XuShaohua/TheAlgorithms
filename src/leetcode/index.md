@@ -1,23 +1,5 @@
-# SUMMARY
+# leetcode 问题列表
 
-[关于](README.md)
-
-- [第一部分: 问题分类与标签](tags/index.md)
-- [数组 Array](tags/array.md)
-- [回溯算法 Backtracking](tags/backtracking.md)
-- [二分查找 Binary Search](tags/binary-search.md)
-- [位操作 Bit Manipulation](tags/bit-manipulation.md)
-- [深度优先搜寻与广度优先搜索](tags/dfs-bfs.md)
-- [动态规划 Dynamic Programming](tags/dynamic-programming.md)
-- [贪心算法 Greedy Algorithms](tags/greedy-algs.md)
-- [哈稀表 Hash Table](tags/hash-table.md)
-- [链表 List](tags/linked-list.md)
-- [数学 Math](tags/math.md)
-- [滑动窗口 Sliding Window](tags/sliding-window.md)
-- [栈 Stack](tags/stack.md)
-- [字符串 String](tags/string.md)
-- [树 Tree](tags/tree.md)
-- [双指针 Two Pointers](tags/two-pointers.md)
 - [第二部分: 所有问题的答案](solutions.md)
     - [0001. 两数之和 Two Sum](0001.two-sum/index.md)
     - [0007. 整数反转 Reverse Integer](0007.reverse-integer/index.md)
@@ -35,4 +17,3 @@
     - [1518. 换水问题 Water Bottles](1518.water-bottles/index.md)
     - [1780. 判断一个数字是否可以表示成三的幂的和 Check if Number is a Sum of Powers of Three](1780.check-if-number-is-a-sum-of-powers-of-three/index.md)
     - [2119. 反转两次的数字 A Number After a Double Reversal](2119.a-number-after-a-double-reversal/index.md)
-- [第三部分: 所有问题](problems/index.md)

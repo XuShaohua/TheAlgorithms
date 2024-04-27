@@ -1,4 +1,4 @@
-# 动态规划 Dynamic Programming
+# 动态规划相关的问题列表
 
 ## 容易
 

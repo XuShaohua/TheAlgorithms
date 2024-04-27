@@ -1,8 +1,4 @@
 
-# About
+# 关于
 
-<<<<<<< HEAD:README.md
-All data structures and algorithms in Rust.
-=======
-Leetcode problems and solutions
->>>>>>> leetcode/main:leetcode/README.md
+leetcode 问题及解法 - Rust 实现
