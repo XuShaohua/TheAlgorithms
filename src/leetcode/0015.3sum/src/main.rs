@@ -155,7 +155,6 @@ pub fn three_sum4(nums: Vec<i32>) -> Vec<Vec<i32>> {
                     .entry(num)
                     .and_modify(|count| *count += 1)
                     .or_insert(1);
-                ()
             }
             Ordering::Equal => zeros += 1,
             Ordering::Greater => {
@@ -163,7 +162,6 @@ pub fn three_sum4(nums: Vec<i32>) -> Vec<Vec<i32>> {
                     .entry(num)
                     .and_modify(|count| *count += 1)
                     .or_insert(1);
-                ()
             }
         }
     }
@@ -191,26 +189,30 @@ pub fn three_sum4(nums: Vec<i32>) -> Vec<Vec<i32>> {
     for &negative in negatives.keys() {
         for &positive in positives.keys() {
             let expected_num = -(positive + negative);
-            if expected_num < 0 {
-                if let Some(&count) = negatives.get(&expected_num) {
-                    if ((count > 1) && (negative == expected_num)) || (negative != expected_num) {
-                        if negative < expected_num {
-                            set.insert(vec![negative, expected_num, positive]);
-                        } else {
-                            set.insert(vec![expected_num, negative, positive]);
+            match expected_num.cmp(&0) {
+                Ordering::Less => {
+                    if let Some(&count) = negatives.get(&expected_num) {
+                        if (count > 1) || negative != expected_num {
+                            if negative < expected_num {
+                                set.insert(vec![negative, expected_num, positive]);
+                            } else {
+                                set.insert(vec![expected_num, negative, positive]);
+                            }
                         }
                     }
                 }
-            } else if expected_num > 0 {
-                if let Some(&count) = positives.get(&expected_num) {
-                    if ((count > 1) && (positive == expected_num)) || (positive != expected_num) {
-                        if positive < expected_num {
-                            set.insert(vec![negative, positive, expected_num]);
-                        } else {
-                            set.insert(vec![negative, expected_num, positive]);
+                Ordering::Greater => {
+                    if let Some(&count) = positives.get(&expected_num) {
+                        if (count > 1) || positive != expected_num {
+                            if positive < expected_num {
+                                set.insert(vec![negative, positive, expected_num]);
+                            } else {
+                                set.insert(vec![negative, expected_num, positive]);
+                            }
                         }
                     }
                 }
+                Ordering::Equal => (),
             }
         }
     }

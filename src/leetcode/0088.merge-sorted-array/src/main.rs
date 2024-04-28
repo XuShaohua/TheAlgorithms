@@ -4,23 +4,19 @@
 
 // Brute force
 // 直接调用数组的方法
+#[allow(clippy::ptr_arg)]
 pub fn merge1(nums1: &mut Vec<i32>, m: i32, nums2: &mut Vec<i32>, n: i32) {
     let m = m as usize;
     let n = n as usize;
     assert_eq!(nums2.len(), n);
-    for i in 0..n {
-        nums1[m + i] = nums2[i];
-    }
+    nums1[m..m + n].copy_from_slice(nums2);
     // 合并两个数组, 然后排序
     nums1.sort();
 }
 
 // 并行双指针
-#[allow(unused_comparisons)]
+#[allow(clippy::ptr_arg)]
 pub fn merge2(nums1: &mut Vec<i32>, m: i32, nums2: &mut Vec<i32>, n: i32) {
-    let m = m as usize;
-    let n = n as usize;
-
     // 两个指针分别指向两个数组的尾部元素.
     let mut index1 = m - 1;
     let mut index2 = n - 1;
@@ -29,28 +25,22 @@ pub fn merge2(nums1: &mut Vec<i32>, m: i32, nums2: &mut Vec<i32>, n: i32) {
 
     // 从数组的尾部向头部合并, 即从高位开始, 直到有一个数组合并完成中止.
     while index1 >= 0 && index2 >= 0 {
-        if nums1[index1] > nums2[index2] {
-            nums1[new_index] = nums1[index1];
-            if index1 > 0 {
-                index1 -= 1;
-            }
+        let index1_usize = index1 as usize;
+        let index2_usize = index2 as usize;
+        let new_index_usize = new_index as usize;
+        if nums1[index1_usize] > nums2[index2_usize] {
+            nums1[new_index_usize] = nums1[index1_usize];
+            index1 -= 1;
         } else {
-            nums1[new_index] = nums2[index2];
-            if index2 > 0 {
-                index2 -= 1;
-            }
+            nums1[new_index_usize] = nums2[index2_usize];
+            index2 -= 1;
         }
-        if new_index > 0 {
-            new_index -= 1;
-        }
+        new_index -= 1;
     }
 
     // 如果 nums2 还没有合并完, 就把剩下的元素都合并过来
     while index2 >= 0 {
-        nums1[new_index] = nums2[index2];
-        if index2 == 0 {
-            break;
-        }
+        nums1[new_index as usize] = nums2[index2 as usize];
         index2 -= 1;
         new_index -= 1;
     }
