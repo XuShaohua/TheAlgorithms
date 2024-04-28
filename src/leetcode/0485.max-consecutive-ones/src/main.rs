@@ -2,18 +2,19 @@
 // Use of this source is governed by General Public License that can be found
 // in the LICENSE file.
 
+// Sliding window
 pub fn find_max_consecutive_ones1(nums: Vec<i32>) -> i32 {
     let mut max_count = 0;
-    let mut count_of_1 = 0;
-    for num in &nums {
-        if *num == 1 {
-            count_of_1 += 1;
+    let mut count = 0;
+    for &num in &nums {
+        if num != 1 {
+            max_count = max_count.max(count);
+            count = 0;
         } else {
-            max_count = max_count.max(count_of_1);
-            count_of_1 = 0;
+            count += 1;
         }
     }
-    max_count.max(count_of_1)
+    max_count.max(count)
 }
 
 pub type SolutionFn = fn(Vec<i32>) -> i32;
