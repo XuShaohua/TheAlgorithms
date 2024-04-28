@@ -6,6 +6,7 @@
 - [0217. 存在重复元素 Contains Duplicate](../0217.contains-duplicate/index.md)
 - [0219. 存在重复元素II Contains Duplicate II](../0219.contains-duplicate-ii/index.md)
 - [0349. 两个数组的交集 Intersection of Two Arrays](../0349.intersection-of-two-arrays/index.md)
+- [0350. 两个数组的交集 II Intersection of Two Arrays II](../0350.intersection-of-two-arrays-ii/index.md)
 
 - [202.快乐数](https://leetcode.com/problems/happy-number)
 - [204. 计数质数](https://leetcode.com/problems/count-primes)

@@ -13,6 +13,8 @@
 
 在使用双指针之前, 要先对数组进行排序, 让重复的元素挨在一起.
 
+这种方法也合适输出结果包含重复元素的问题, 只要不去重即可.
+
 ```rust
 {{#include src/main.rs:8:45 }}
 ```
@@ -23,6 +25,8 @@ Rust 语言的 `HashSet` 实现了集合操作, 我们可以先把数组成转 `
 求出交集, 最后再把交集转换回数组即可.
 
 整个方法代码量很少, 很简洁, 但性能不是最好的.
+
+这种方法只合适输出结果不包含重复元素的问题, 如果要包含重复元素的话, 可以将 `HashSet` 换成 `HashMap`.
 
 ```rust
 {{#include src/main.rs:47:52 }}
@@ -47,6 +51,12 @@ C++ 这样的语言在标准库里自带了 BitSet, 但在 Rust 标准库里却�
 
 ![bitset](assets/bitset.svg)
 
+这种方法只适合输出结果中不包含重复元素的问题.
+
 ```rust
 {{#include src/main.rs:145:162 }}
 ```
+
+## 相关问题
+
+- [0350. 两个数组的交集 II Intersection of Two Arrays II](../0350.intersection-of-two-arrays-ii/index.md)

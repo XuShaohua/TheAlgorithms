@@ -13,3 +13,4 @@
 ## 相关问题
 
 - [0349. 两个数组的交集 Intersection of Two Arrays](../leetcode/0349.intersection-of-two-arrays/index.md)
+- [0350. 两个数组的交集 II Intersection of Two Arrays II](../leetcode/0350.intersection-of-two-arrays-ii/index.md)
