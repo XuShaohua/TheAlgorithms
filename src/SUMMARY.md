@@ -127,6 +127,7 @@
     - [0701-0800](leetcode/orders/0701-0800.md)
     - [0801-0900](leetcode/orders/0801-0900.md)
     - [0901-1000](leetcode/orders/0901-1000.md)
+        - [0925. 长按键入 Long Pressed Name](leetcode/0925.long-pressed-name/index.md)
         - [0977. 有序数组的平方 Squares of a Sorted Array](leetcode/0977.squares-of-a-sorted-array/index.md)
     - [1001-1100](leetcode/orders/1001-1100.md)
     - [1101-1200](leetcode/orders/1101-1200.md)

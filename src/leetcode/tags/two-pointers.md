@@ -9,14 +9,14 @@
 5. [0350. 两个数组的交集 II Intersection of Two Arrays II](../0350.intersection-of-two-arrays-ii/index.md)
 6. [0485. 最大连续1的个数 Max Consecutive Ones](../0485.max-consecutive-ones/index.md)
 7. [0680. 验证回文串 II Valid Palindrome II](../0680.valid-palindrome-ii/index.md)
-8. [0977. 有序数组的平方 Squares of a Sorted Array](../0977.squares-of-a-sorted-array/index.md)
-9. [2108. 找出数组中的第一个回文字符串 Find First Palindromic String in the Array](../2108.find-first-palindromic-string-in-the-array/index.md)
+8. [0925. 长按键入 Long Pressed Name](../0925.long-pressed-name/index.md)
+9. [0977. 有序数组的平方 Squares of a Sorted Array](../0977.squares-of-a-sorted-array/index.md)
+10. [2108. 找出数组中的第一个回文字符串 Find First Palindromic String in the Array](../2108.find-first-palindromic-string-in-the-array/index.md)
 
 TODO:
 
 1. [160. 相交链表](https://leetcode.com/problems/intersection-of-two-linked-lists)
 2. [234. 回文链表](https://leetcode.com/problems/palindrome-linked-list)
-4. [925.长按键入](https://leetcode.com/problems/long-pressed-name)
 
 ## 中等
 
