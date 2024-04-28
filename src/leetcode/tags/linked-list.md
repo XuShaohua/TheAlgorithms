@@ -10,8 +10,11 @@
 
 ## 中等
 
+- [2. Add Two Numbers](https://leetcode.com/problems/add-two-numbers)
+- [445. Add Two Numbers II](https://leetcode.com/problems/add-two-numbers-ii/description/)
 - [面试题 02.05. 链表求和](https://leetcode.cn/problems/sum-lists-lcci)
 
 ## 困难
 
+- [23. Merge k Sorted Lists](https://leetcode.com/problems/merge-k-sorted-lists/description/)
 - [25. K 个一组翻转链表](https://leetcode.com/problems/reverse-nodes-in-k-group)
