@@ -57,6 +57,22 @@ C++ 这样的语言在标准库里自带了 BitSet, 但在 Rust 标准库里却�
 {{#include src/main.rs:145:162 }}
 ```
 
+## 二分查找法 Binary Search
+
+上面提到了交集的两个特点:
+
+- 交集, 元素要在 `nums1` 和 `nums2` 中都存在
+- 输出的结果不允许有重复的元素
+
+除了使用 HashSet 和 BitSet 之外, 我们也可以在原地给数组排序并去除重复元素.
+然后遍历 `nums1`, 并用二分查找法检查这个元素在 `nums2` 中是否同样存在.
+
+这种方法只适合输出结果中不包含重复元素的问题.
+
+```rust
+{{#include src/main.rs:164:185 }}
+```
+
 ## 相关问题
 
 - [0350. 两个数组的交集 II Intersection of Two Arrays II](../0350.intersection-of-two-arrays-ii/index.md)

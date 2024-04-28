@@ -110,8 +110,8 @@ impl BitSet {
 
 impl FromIterator<usize> for BitSet {
     fn from_iter<T>(iter: T) -> Self
-        where
-            T: IntoIterator<Item=usize>,
+    where
+        T: IntoIterator<Item = usize>,
     {
         let iterator = iter.into_iter();
         let capacity = match iterator.size_hint() {
@@ -161,6 +161,29 @@ pub fn intersection4(nums1: Vec<i32>, nums2: Vec<i32>) -> Vec<i32> {
     out
 }
 
+// 二分查找法
+pub fn intersection5(nums1: Vec<i32>, nums2: Vec<i32>) -> Vec<i32> {
+    let mut nums1 = nums1;
+    let mut nums2 = nums2;
+    // 先给数组排序
+    nums1.sort();
+    nums2.sort();
+    // 去掉重复元素
+    nums1.dedup();
+    nums2.dedup();
+
+    let mut out = Vec::new();
+
+    // 遍历 nums1, 并使用二分查找法检查该元素在 nums2 中是否也存在.
+    for num in &nums1 {
+        if nums2.binary_search(num).is_ok() {
+            out.push(*num);
+        }
+    }
+
+    out
+}
+
 pub type SolutionFn = fn(Vec<i32>, Vec<i32>) -> Vec<i32>;
 
 fn check_solution(func: SolutionFn) {
@@ -183,6 +206,7 @@ fn main() {
     check_solution(intersection2);
     check_solution(intersection3);
     check_solution(intersection4);
+    check_solution(intersection5);
 }
 
 #[cfg(test)]
