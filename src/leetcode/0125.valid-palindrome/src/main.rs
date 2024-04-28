@@ -4,6 +4,7 @@
 
 // 靠拢型双指针
 pub fn is_palindrome1(s: String) -> bool {
+    // 根据题目要求, 过滤一下字符串
     let s: String = s
         .chars()
         .filter(char::is_ascii_alphanumeric)
@@ -13,6 +14,7 @@ pub fn is_palindrome1(s: String) -> bool {
         return true;
     }
 
+    // 使用双指针来判断
     let mut left = 0;
     let mut right = s.len() - 1;
     let bytes = s.as_bytes();
