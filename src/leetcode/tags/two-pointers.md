@@ -15,7 +15,7 @@
 
 - [0011. 盛最多水的容器 Container With Most Water](../0011.container-with-most-water/index.md)
 - [0015. 三数之和 3Sum](../0015.3sum/index.md)
-- [0167. Two Sum II - Input Array Is Sorted](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/description/)
+- [0167. 两数之和 II - 输入有序数组 Two Sum II - Input Array Is Sorted](../0167.two-sum-ii-input-array-is-sorted/index.md)
 
 - [31. 下一个排列](https://leetcode.com/problems/next-permutation)
 - [75. 颜色分类](https://leetcode.com/problems/sort-colors)

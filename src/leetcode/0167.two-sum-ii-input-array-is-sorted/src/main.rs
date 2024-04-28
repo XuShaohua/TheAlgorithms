@@ -12,6 +12,7 @@ pub fn two_sum1(numbers: Vec<i32>, target: i32) -> Vec<i32> {
     let mut right = numbers.len() - 1;
 
     while left < right {
+        // 判定条件就其和为0
         let sum = numbers[left] + numbers[right];
         match sum.cmp(&target) {
             Ordering::Less => left += 1,
@@ -28,8 +29,9 @@ pub fn two_sum1(numbers: Vec<i32>, target: i32) -> Vec<i32> {
 // 二分查找法
 pub fn two_sum2(numbers: Vec<i32>, target: i32) -> Vec<i32> {
     for (index, &num) in numbers.iter().enumerate() {
-        // 从下个元素使用二分查找搜索
+        // 从下个元素开始使用二分查找法, 搜索对应的元素.
         if let Ok(slice_index) = numbers[index + 1..].binary_search(&(target - num)) {
+            // 更新索引值.
             let next_index = slice_index + index + 1;
             return vec![index as i32 + 1, next_index as i32 + 1];
         }
