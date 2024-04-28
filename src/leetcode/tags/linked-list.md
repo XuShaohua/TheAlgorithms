@@ -2,6 +2,8 @@
 
 ## 容易
 
+- [0234. 回文链表 Palindrome Linked List](../0234.palindrome-linked-list/index.md)
+
 - [21.合并两个有序链表](https://leetcode.com/problems/merge-two-sorted-lists)
 - [206.反转链表](https://leetcode.com/problems/reverse-linked-list)
 - [237.删除链表中的节点](https://leetcode.com/problems/delete-node-in-a-linked-list)
