@@ -114,6 +114,7 @@
         - [0326. 3的幂 Power of Three](leetcode/0326.power-of-three/index.md)
         - [0338. 比特位计数 Counting Bits](leetcode/0338.counting-bits/index.md)
         - [0342. 4的幂 Power of Four](leetcode/0342.power-of-four/index.md)
+        - [0349. 两个数组的交集 Intersection of Two Arrays](leetcode/0349.intersection-of-two-arrays/index.md)
     - [0401-0500](leetcode/orders/0401-0500.md)
     - [0501-0600](leetcode/orders/0501-0600.md)
     - [0601-0700](leetcode/orders/0601-0700.md)

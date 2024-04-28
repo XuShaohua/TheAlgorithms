@@ -28,6 +28,7 @@ pub fn intersection1(nums1: Vec<i32>, nums2: Vec<i32>) -> Vec<i32> {
             Ordering::Equal => {
                 let val = nums1[index1];
                 out.push(val);
+                // 跳过重复的元素
                 while index1 < len1 && nums1[index1] == val {
                     index1 += 1;
                 }
@@ -43,13 +44,14 @@ pub fn intersection1(nums1: Vec<i32>, nums2: Vec<i32>) -> Vec<i32> {
     out
 }
 
-// 使用集合操作
+// 使用 HashSet 集合操作
 pub fn intersection2(nums1: Vec<i32>, nums2: Vec<i32>) -> Vec<i32> {
     let set1: HashSet<i32> = nums1.into_iter().collect();
     let set2: HashSet<i32> = nums2.into_iter().collect();
     set1.intersection(&set2).copied().collect()
 }
 
+#[derive(Debug, Default, Clone, Eq, PartialEq)]
 pub struct BitSet {
     bits: Vec<bool>,
 }
@@ -94,7 +96,9 @@ impl BitSet {
         }
     }
 
+    #[inline]
     pub fn to_vec(&self) -> Vec<usize> {
+        // TODO(shaohua): Impl Iterator and IntoIter traits
         self.bits
             .iter()
             .enumerate()
@@ -106,8 +110,8 @@ impl BitSet {
 
 impl FromIterator<usize> for BitSet {
     fn from_iter<T>(iter: T) -> Self
-    where
-        T: IntoIterator<Item = usize>,
+        where
+            T: IntoIterator<Item=usize>,
     {
         let iterator = iter.into_iter();
         let capacity = match iterator.size_hint() {
@@ -122,7 +126,7 @@ impl FromIterator<usize> for BitSet {
     }
 }
 
-// 使用 bitset
+// 使用 BitSet
 pub fn intersection3(nums1: Vec<i32>, nums2: Vec<i32>) -> Vec<i32> {
     let set1: BitSet = nums1.iter().map(|&val| val as usize).collect();
     let mut set2 = BitSet::with_capacity(nums2.len());
@@ -134,6 +138,25 @@ pub fn intersection3(nums1: Vec<i32>, nums2: Vec<i32>) -> Vec<i32> {
             out.push(num);
         }
         set2.set(num_usize);
+    }
+    out
+}
+
+// 优化上面的方法, 只使用一个 bitset
+pub fn intersection4(nums1: Vec<i32>, nums2: Vec<i32>) -> Vec<i32> {
+    // 将 nums1 转换为 bitset.
+    let mut set1: BitSet = nums1.iter().map(|&val| val as usize).collect();
+    let mut out = Vec::new();
+
+    // 遍历 nums2
+    for &num in &nums2 {
+        let num_usize = num as usize;
+        // num 在 set1 中也存在
+        if set1.is_set(num_usize) {
+            out.push(num);
+            // 重置 set1 中的值, 因为它已经被插入到了结果中, 不能再重复使用.
+            set1.unset(num_usize);
+        }
     }
     out
 }
@@ -159,11 +182,12 @@ fn main() {
     check_solution(intersection1);
     check_solution(intersection2);
     check_solution(intersection3);
+    check_solution(intersection4);
 }
 
 #[cfg(test)]
 mod tests {
-    use super::{check_solution, intersection1, intersection2};
+    use super::{check_solution, intersection1, intersection2, intersection3, intersection4};
 
     #[test]
     fn test_intersection1() {
@@ -173,5 +197,15 @@ mod tests {
     #[test]
     fn test_intersection2() {
         check_solution(intersection2);
+    }
+
+    #[test]
+    fn test_intersection3() {
+        check_solution(intersection3);
+    }
+
+    #[test]
+    fn test_intersection4() {
+        check_solution(intersection4);
     }
 }
