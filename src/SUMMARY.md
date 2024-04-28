@@ -101,6 +101,7 @@
         - [0015. 三数之和 3Sum](leetcode/0015.3sum/index.md)
         - [0026. 删除有序数组中的重复项 Remove Duplicates from Sorted Array](leetcode/0026.remove-duplicates-from-sorted-array/index.md)
         - [0067. 二进制求和 Add Binary](leetcode/0067.add-binary/index.md)
+        - [0080. 删除排序数组中的重复项 II Remove Duplicates from Sorted Array II](leetcode/0080.remove-duplicates-from-sorted-array-ii/index.md)
         - [0088. 合并两个有序数组 Merge Sorted Array](leetcode/0088.merge-sorted-array/index.md)
     - [0101-0200](leetcode/orders/0101-0200.md)
         - [0125. 验证回文串 Valid Palindrome](leetcode/0125.valid-palindrome/index.md)
