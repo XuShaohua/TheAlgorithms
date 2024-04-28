@@ -31,18 +31,32 @@ pub fn valid_palindrome1(s: String) -> bool {
 // 计算超时, 无效
 pub fn valid_palindrome2(s: String) -> bool {
     fn is_palindrome_slice(s: &[u8]) -> bool {
-        s.iter().rev().copied().collect::<Vec<u8>>() == s
+        let mut left = 0;
+        let mut right = s.len() - 1;
+        while left < right {
+            if s[left] != s[right] {
+                return false;
+            }
+            left += 1;
+            right -= 1;
+        }
+        true
     }
 
     let bytes = s.as_bytes();
+    // 检查不跳过某一元素时的情况
     if is_palindrome_slice(bytes) {
         return true;
     }
 
+    let mut new_bytes = bytes.to_vec();
+
     for i in 0..bytes.len() {
-        let mut new_bytes = Vec::new();
+        // 跳过某一元素, 构造新的数组
+        new_bytes.clear();
         new_bytes.extend_from_slice(&bytes[..i]);
         new_bytes.extend_from_slice(&bytes[i + 1..]);
+        // 检查新构造出的数组
         if is_palindrome_slice(&new_bytes) {
             return true;
         }
@@ -106,6 +120,7 @@ pub fn valid_palindrome4(s: String) -> bool {
     let bytes = s.as_bytes();
 
     // 外层双指针, 用于遍历数组
+    // 这里每次遍历, 就会减少子数组的长度, 这对于巨大的数组来说很关键.
     let mut left = 0;
     let mut right = bytes.len() - 1;
     while left < right {
@@ -126,6 +141,7 @@ fn check_solution(func: SolutionFn) {
         ("abca", true),
         ("abc", false),
         ("deeee", true),
+        ("abcadecba", false),
     ];
     for record in RECORDS {
         assert_eq!(func(record.0.to_owned()), record.1);
