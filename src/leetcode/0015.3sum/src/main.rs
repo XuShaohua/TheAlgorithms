@@ -140,11 +140,14 @@ pub fn three_sum3(nums: Vec<i32>) -> Vec<Vec<i32>> {
     set.into_iter().collect()
 }
 
-// 使用3个字典分别存储大于0, 等于0, 以及小于0的元素
+// 哈稀表
 pub fn three_sum4(nums: Vec<i32>) -> Vec<Vec<i32>> {
+    // 0出现的次数.
     let mut zeros = 0;
+    // 使用两个字典分别存储大于0, 以及小于0的元素
     let mut negatives = HashMap::new();
     let mut positives = HashMap::new();
+
     for &num in &nums {
         match num.cmp(&0) {
             Ordering::Less => {
@@ -165,6 +168,7 @@ pub fn three_sum4(nums: Vec<i32>) -> Vec<Vec<i32>> {
         }
     }
 
+    // 使用集合来过滤到重复的结果.
     let mut set = HashSet::new();
 
     // 首先如果0存在, 就用它作为正负数的分隔.
