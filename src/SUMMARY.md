@@ -134,5 +134,6 @@
     - [1801-1900](leetcode/orders/1801-1900.md)
     - [1901-2000](leetcode/orders/1901-2000.md)
     - [2101-2200](leetcode/orders/2101-2200.md)
+        - [2108. 找出数组中的第一个回文字符串 Find First Palindromic String in the Array](leetcode/2108.find-first-palindromic-string-in-the-array/index.md)
         - [2119. 反转两次的数字 A Number After a Double Reversal](leetcode/2119.a-number-after-a-double-reversal/index.md)
 - [参考资料](refs.md)
