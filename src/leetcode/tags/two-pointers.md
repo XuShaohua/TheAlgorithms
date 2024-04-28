@@ -3,13 +3,14 @@
 ## 容易
 
 - [0026. 删除有序数组中的重复项 Remove Duplicates from Sorted Array](../0026.remove-duplicates-from-sorted-array/index.md)
+- [0088. 合并两个有序数组 Merge Sorted Array](../0088.merge-sorted-array/index.md)
 - [0125. 验证回文串 Valid Palindrome](../0125.valid-palindrome/index.md)
 - [0349. 两个数组的交集 Intersection of Two Arrays](../0349.intersection-of-two-arrays/index.md)
 - [0350. 两个数组的交集 II Intersection of Two Arrays II](../0350.intersection-of-two-arrays-ii/index.md)
 - [0680. 验证回文串 II Valid Palindrome II](../0680.valid-palindrome-ii/index.md)
+- [0977. 有序数组的平方 Squares of a Sorted Array](../0977.squares-of-a-sorted-array/index.md)
 - [2108. 找出数组中的第一个回文字符串 Find First Palindromic String in the Array](../2108.find-first-palindromic-string-in-the-array/index.md)
 
-- [88. 合并两个有序数组](https://leetcode.com/problems/merge-sorted-array)
 - [160. 相交链表](https://leetcode.com/problems/intersection-of-two-linked-lists)
 - [234. 回文链表](https://leetcode.com/problems/palindrome-linked-list)
 - [925.长按键入](https://leetcode.com/problems/long-pressed-name)
