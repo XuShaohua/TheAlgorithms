@@ -101,7 +101,7 @@
         - [0026. 删除有序数组中的重复项 Remove Duplicates from Sorted Array](leetcode/0026.remove-duplicates-from-sorted-array/index.md)
         - [0067. 二进制求和 Add Binary](leetcode/0067.add-binary/index.md)
     - [0101-0200](leetcode/orders/0101-0200.md)
-        - [0125. 验证回文串 Valid Palindrome]leetcode/0125.valid-palindrome/index.md)
+        - [0125. 验证回文串 Valid Palindrome](leetcode/0125.valid-palindrome/index.md)
         - [0136. 只出现一次的数字 Single Number](leetcode/0136.single-number/index.md)
         - [0137. 只出现一次的数字II Single Number II](leetcode/0137.single-number-ii/index.md)
         - [0191. 位1的个数 Number of 1 Bits](leetcode/0191.number-of-1-bits/index.md)
