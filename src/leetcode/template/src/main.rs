@@ -2,8 +2,26 @@
 // Use of this source is governed by General Public License that can be found
 // in the LICENSE file.
 
-fn check_solution() {}
+pub fn solution1() {
+    todo!();
+}
+
+pub type SolutionFn = fn();
+
+fn check_solution(_func: SolutionFn) {
+    todo!();
+}
 
 fn main() {
-    check_solution();
+    check_solution(solution1);
+}
+
+#[cfg(test)]
+mod tests {
+    use super::{check_solution, solution1};
+
+    #[test]
+    fn test_solution1() {
+        check_solution(solution1);
+    }
 }
