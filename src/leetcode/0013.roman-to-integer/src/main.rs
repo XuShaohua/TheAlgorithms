@@ -8,6 +8,7 @@ use std::collections::HashMap;
 pub fn roman_to_int1(s: String) -> i32 {
     assert!(!s.is_empty());
 
+    // 使用哈稀表处理罗马数字到阿拉伯数字的映射.
     let map = HashMap::<u8, i32>::from([
         (b'I', 1),
         (b'V', 5),
@@ -48,6 +49,7 @@ pub fn roman_to_int1(s: String) -> i32 {
 // 模式匹配
 // 比哈稀表快, 没有分配堆内存
 pub fn roman_to_int2(s: String) -> i32 {
+    // 辅助函数, 处理罗马数字到阿拉伯数字的映射.
     #[must_use]
     #[inline]
     const fn get_roman_number(symbol: char) -> i32 {
@@ -67,6 +69,7 @@ pub fn roman_to_int2(s: String) -> i32 {
     let mut sum = 0;
     let mut curr_val = 0;
     let mut prev_val = 0;
+
     for symbol in s.chars() {
         // 获取当前元素的数值
         curr_val = get_roman_number(symbol);
@@ -81,7 +84,10 @@ pub fn roman_to_int2(s: String) -> i32 {
         }
         prev_val = curr_val;
     }
+
+    // 别忘了加上最后一个数值.
     sum += curr_val;
+
     sum
 }
 
