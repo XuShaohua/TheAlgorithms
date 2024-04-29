@@ -21,3 +21,7 @@
 ```rust
 {{#include src/main.rs:40:44 }}
 ```
+
+## 相关问题
+
+- [0080. 删除排序数组中的重复项 II Remove Duplicates from Sorted Array II](../0080.remove-duplicates-from-sorted-array-ii/index.md)

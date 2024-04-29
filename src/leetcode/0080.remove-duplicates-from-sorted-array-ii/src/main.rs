@@ -2,6 +2,8 @@
 // Use of this source is governed by General Public License that can be found
 // in the LICENSE file.
 
+#![allow(clippy::ptr_arg)]
+
 // 快慢型双指针
 pub fn remove_duplicates1(nums: &mut Vec<i32>) -> i32 {
     assert!(!nums.is_empty());
