@@ -2,7 +2,7 @@
 
 [问题描述](../problems/0349.intersection-of-two-arrays/content.html)
 
-这个问题的解法就比较多了.
+这是一个搜索问题, 这个问题的解法就比较多了.
 
 ## 并行双指针
 

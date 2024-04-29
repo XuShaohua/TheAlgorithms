@@ -2,6 +2,10 @@
 
 ## 容易
 
+1. [0349. 两个数组的交集 Intersection of Two Arrays](../0349.intersection-of-two-arrays/index.md)
+
+TODO:
+
 - [69. x 的平方根](https://leetcode.com/problems/sqrtx)
 - [167. 两数之和 II - 输入有序数组](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted)
 - [278. 第一个错误的版本](https://leetcode.com/problems/first-bad-version)
@@ -15,6 +19,11 @@
 - [744. 寻找比目标字母大的最小字母](https://leetcode.com/problems/find-smallest-letter-greater-than-target)
 
 ## 中等
+
+1. [0167. 两数之和 II - 输入有序数组 Two Sum II - Input Array Is Sorted](../0167.two-sum-ii-input-array-is-sorted/index.md)
+2. [0532.数组中的数对 K-diff Pairs in an Array](../0532.k-diff-pairs-in-an-array/index.md)
+
+TODO:
 
 - [29. 两数相除](https://leetcode.com/problems/divide-two-integers)
 - [33. Search in Rotated Sorted Array](https://leetcode.com/problems/search-in-rotated-sorted-array/description/)

@@ -123,6 +123,7 @@
     - [0401-0500](leetcode/orders/0401-0500.md)
         - [0485. 最大连续1的个数 Max Consecutive Ones](leetcode/0485.max-consecutive-ones/index.md)
     - [0501-0600](leetcode/orders/0501-0600.md)
+        - [0532.数组中的数对 K-diff Pairs in an Array](leetcode/0532.k-diff-pairs-in-an-array/index.md)
     - [0601-0700](leetcode/orders/0601-0700.md)
         - [0680. 验证回文串 II Valid Palindrome II](leetcode/0680.valid-palindrome-ii/index.md)
     - [0701-0800](leetcode/orders/0701-0800.md)

@@ -24,6 +24,7 @@ TODO:
 2. [0015. 三数之和 3Sum](../0015.3sum/index.md)
 3. [0080. 删除排序数组中的重复项 II Remove Duplicates from Sorted Array II](../0080.remove-duplicates-from-sorted-array-ii/index.md)
 4. [0167. 两数之和 II - 输入有序数组 Two Sum II - Input Array Is Sorted](../0167.two-sum-ii-input-array-is-sorted/index.md)
+5. [0532.数组中的数对 K-diff Pairs in an Array](../0532.k-diff-pairs-in-an-array/index.md)
 
 TODO:
 
@@ -32,6 +33,5 @@ TODO:
 3. [142. 环形链表 II](https://leetcode.com/problems/linked-list-cycle-ii)
 4. [443. 压缩字符串](https://leetcode.com/problems/string-compression)
 5. [524. 通过删除字母匹配到字典里最长单词](https://leetcode.com/problems/longest-word-in-dictionary-through-deleting)
-6. [532.数组中的数对](https://leetcode.com/problems/k-diff-pairs-in-an-array)
-7. [986. 区间列表的交集](https://leetcode.com/problems/interval-list-intersections)
-8. [1498. 满足条件的子序列数目](https://leetcode.com/problems/number-of-subsequences-that-satisfy-the-given-sum-condition)
+6. [986. 区间列表的交集](https://leetcode.com/problems/interval-list-intersections)
+7. [1498. 满足条件的子序列数目](https://leetcode.com/problems/number-of-subsequences-that-satisfy-the-given-sum-condition)
