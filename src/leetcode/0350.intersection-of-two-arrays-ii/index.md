@@ -24,7 +24,7 @@
 在 [0349. 两个数组的交集 Intersection of Two Arrays](../0349.intersection-of-two-arrays/index.md) 有提到过,
 `HashSet` 可以用来处理不包含重复元素的集合, 而 `HashMap` 可以用来处理包含有重复元素的集合.
 
-![hash-table](assets/hash-table.svg)
+![hash-table](../0001.two-sum/assets/hash-table.svg)
 
 ```rust
 {{#include src/main.rs:41:70 }}

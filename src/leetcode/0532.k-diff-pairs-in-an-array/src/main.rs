@@ -5,7 +5,7 @@
 use std::cmp::Ordering;
 use std::collections::{HashMap, HashSet};
 
-// 哈稀表
+// 哈稀表来计数
 pub fn find_pairs1(nums: Vec<i32>, k: i32) -> i32 {
     assert!(!nums.is_empty());
 
@@ -14,6 +14,7 @@ pub fn find_pairs1(nums: Vec<i32>, k: i32) -> i32 {
         map.entry(num).and_modify(|count| *count += 1).or_insert(1);
     }
 
+    // 使用集合来去重.
     let mut set = HashSet::new();
     for &num in &nums {
         // k = diff - num;
@@ -40,8 +41,33 @@ pub fn find_pairs1(nums: Vec<i32>, k: i32) -> i32 {
     set.len() as i32
 }
 
-// 给数组排序后二分查找, 使用集合来去掉重复的 pair.
+// 哈稀表来计数, 对数组排序
 pub fn find_pairs2(nums: Vec<i32>, k: i32) -> i32 {
+    assert!(!nums.is_empty());
+    let mut nums = nums;
+    nums.sort();
+
+    let mut map = HashMap::new();
+    for num in &nums {
+        map.entry(num).and_modify(|count| *count += 1).or_insert(1);
+    }
+
+    // 使用集合来去重.
+    let mut set = HashSet::new();
+    for &num in &nums {
+        let expected = num + k;
+        if let Some(count) = map.get(&expected) {
+            if (expected > num) || ((expected == num) && (*count > 1)) {
+                set.insert(vec![num, expected]);
+            }
+        }
+    }
+
+    set.len() as i32
+}
+
+// 给数组排序后二分查找, 使用集合来去掉重复的 pair.
+pub fn find_pairs3(nums: Vec<i32>, k: i32) -> i32 {
     assert!(!nums.is_empty());
 
     // 先排序
@@ -60,7 +86,7 @@ pub fn find_pairs2(nums: Vec<i32>, k: i32) -> i32 {
 }
 
 // 排序后二分查找, 不使用额外内存.
-pub fn find_pairs3(nums: Vec<i32>, k: i32) -> i32 {
+pub fn find_pairs4(nums: Vec<i32>, k: i32) -> i32 {
     assert!(!nums.is_empty());
 
     // 先排序
@@ -105,7 +131,7 @@ pub fn find_pairs3(nums: Vec<i32>, k: i32) -> i32 {
 }
 
 // 排序后二分查找, 不使用额外内存. 根据 k == 0 做优化
-pub fn find_pairs4(nums: Vec<i32>, k: i32) -> i32 {
+pub fn find_pairs5(nums: Vec<i32>, k: i32) -> i32 {
     assert!(!nums.is_empty());
 
     // 先排序
@@ -154,8 +180,8 @@ pub fn find_pairs4(nums: Vec<i32>, k: i32) -> i32 {
     count
 }
 
-// 快慢型二分查找
-pub fn find_pairs5(nums: Vec<i32>, k: i32) -> i32 {
+// 快慢型双指针
+pub fn find_pairs6(nums: Vec<i32>, k: i32) -> i32 {
     let len = nums.len();
     if len <= 1 {
         return 0;
@@ -171,7 +197,7 @@ pub fn find_pairs5(nums: Vec<i32>, k: i32) -> i32 {
     let mut count = 0;
 
     // 遍历整个数组.
-    while slow < len && fast < len {
+    while fast < len {
         // 两个指针不能重复, 因为题目要求: `i != j`.
         if fast == slow {
             fast += 1;
@@ -193,9 +219,11 @@ pub fn find_pairs5(nums: Vec<i32>, k: i32) -> i32 {
                 }
             }
             Ordering::Less => {
+                // 两个元素间的差值太小了, 移动 fast 指针
                 fast += 1;
             }
             Ordering::Greater => {
+                // 两个元素间的差值太大了, 移动 slow 指针
                 slow += 1;
             }
         }
@@ -226,11 +254,15 @@ fn main() {
     check_solution(find_pairs3);
     check_solution(find_pairs4);
     check_solution(find_pairs5);
+    check_solution(find_pairs6);
 }
 
 #[cfg(test)]
 mod tests {
-    use super::{check_solution, find_pairs1, find_pairs2, find_pairs3, find_pairs4, find_pairs5};
+    use super::{
+        check_solution, find_pairs1, find_pairs2, find_pairs3, find_pairs4, find_pairs5,
+        find_pairs6,
+    };
 
     #[test]
     fn test_find_pairs1() {
@@ -255,5 +287,10 @@ mod tests {
     #[test]
     fn test_find_pairs5() {
         check_solution(find_pairs5);
+    }
+
+    #[test]
+    fn test_find_pairs6() {
+        check_solution(find_pairs6);
     }
 }
