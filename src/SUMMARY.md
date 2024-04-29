@@ -104,6 +104,7 @@
         - [0001. 两数之和 Two Sum](leetcode/0001.two-sum/index.md)
         - [0007. 整数反转 Reverse Integer](leetcode/0007.reverse-integer/index.md)
         - [0011. 盛最多水的容器 Container With Most Water](leetcode/0011.container-with-most-water/index.md)
+        - [0012. 整数转罗马数字 Integer to Roman](leetcode/0012.integer-to-roman/index.md)
         - [0013. 罗马数字转整数 Roman to Integer](leetcode/0013.roman-to-integer/index.md)
         - [0015. 三数之和 3Sum](leetcode/0015.3sum/index.md)
         - [0026. 删除有序数组中的重复项 Remove Duplicates from Sorted Array](leetcode/0026.remove-duplicates-from-sorted-array/index.md)

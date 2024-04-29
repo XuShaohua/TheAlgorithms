@@ -33,13 +33,13 @@ TODO:
 
 ## 中等
 
-1. [0167. 两数之和 II - 输入有序数组 Two Sum II - Input Array Is Sorted](../0167.two-sum-ii-input-array-is-sorted/index.md)
-2. [0532.数组中的数对 K-diff Pairs in an Array](../0532.k-diff-pairs-in-an-array/index.md)
+1. [0012. 整数转罗马数字 Integer to Roman](../0012.integer-to-roman/index.md)
+2. [0167. 两数之和 II - 输入有序数组 Two Sum II - Input Array Is Sorted](../0167.two-sum-ii-input-array-is-sorted/index.md)
+3. [0532.数组中的数对 K-diff Pairs in an Array](../0532.k-diff-pairs-in-an-array/index.md)
 
 TODO:
 
 - [3.无重复字符的最长子串](https://leetcode.com/problems/longest-substring-without-repeating-characters)
-- [12. Integer to Roman](https://leetcode.com/problems/integer-to-roman/description/)
 - [49. Group Anagrams](https://leetcode.com/problems/group-anagrams/description/)
 - [215. 数组中的第K个最大元素](https://leetcode.com/problems/kth-largest-element-in-an-array)
 - [347. 前 K 个高频元素](https://leetcode.com/problems/top-k-frequent-elements)
