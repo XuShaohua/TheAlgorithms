@@ -163,6 +163,23 @@ pub fn int_to_roman2(num: i32) -> String {
     out
 }
 
+// 单独分开各个进位的值
+pub fn int_to_roman3(num: i32) -> String {
+    const ONES: &[&str] = &["", "I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX"];
+    const TENS: &[&str] = &["", "X", "XX", "XXX", "XL", "L", "LX", "LXX", "LXXX", "XC"];
+    const HUNDREDS: &[&str] = &["", "C", "CC", "CCC", "CD", "D", "DC", "DCC", "DCCC", "CM"];
+    const THOUSANDS: &[&str] = &["", "M", "MM", "MMM"];
+
+    let num = num as usize;
+    let parts = [
+        THOUSANDS[num / 1000],
+        HUNDREDS[(num % 1000) / 100],
+        TENS[(num % 100) / 10],
+        ONES[num % 10],
+    ];
+    parts.join("").to_owned()
+}
+
 pub type SolutionFn = fn(i32) -> String;
 
 fn check_solution(func: SolutionFn) {
@@ -175,6 +192,7 @@ fn check_solution(func: SolutionFn) {
 fn main() {
     check_solution(int_to_roman1);
     check_solution(int_to_roman2);
+    check_solution(int_to_roman3);
 }
 
 #[cfg(test)]
