@@ -10,6 +10,7 @@ import sys
 def dump_content(html_file, metadata):
     title = "{0}. {1}".format(metadata["frontendQuestionId"], metadata["title"])
     content = metadata["content"]
+    leetcode_link = "https://leetcode.com/problems/{}/description/".format(metadata["titleSlug"])
     print(F"title: {title}")
     with open(html_file, "w") as fd:
         fd.write(F"""<!doctype html>
@@ -21,6 +22,7 @@ def dump_content(html_file, metadata):
 </head>
 <body>
   <h1>{title}</h1>
+  <div><a href="{leetcode_link}" target="_blank">Leetcode {title} </a></div>
   {content}
 </body>
 </html>
@@ -28,7 +30,7 @@ def dump_content(html_file, metadata):
 
 
 def main():
-    root_dir = "problems"
+    root_dir = "."
     for entry in os.listdir(root_dir):
         problem_dir = os.path.join(root_dir, entry)
         if not os.path.isdir(problem_dir):
