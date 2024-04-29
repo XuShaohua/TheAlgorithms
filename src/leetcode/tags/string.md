@@ -10,6 +10,8 @@
 - [859. 亲密字符串](https://leetcode.com/problems/buddy-strings)
 - [686. 重复叠加字符串匹配](https://leetcode.com/problems/repeated-string-match)
 - [680. 验证回文字符串 Ⅱ](https://leetcode.com/problems/valid-palindrome-ii)
+- [944. Delete Columns to Make Sorted](https://leetcode.com/problems/delete-columns-to-make-sorted/description/)
+- [1869. Longer Contiguous Segments of Ones than Zeros](https://leetcode.com/problems/longer-contiguous-segments-of-ones-than-zeros/description/)
 
 ## 中级
 
@@ -17,3 +19,4 @@
 - [8. 字符串转换整数(atoi)](https://leetcode.com/problems/string-to-integer-atoi)
 - [17.电话号码的字母组合](https://leetcode.com/problems/letter-combinations-of-a-phone-number)
 - [165.比较版本号](https://leetcode.com/problems/compare-version-numbers)
+- [2414. Length of the Longest Alphabetical Continuous Substring](https://leetcode.com/problems/length-of-the-longest-alphabetical-continuous-substring/description/)

@@ -36,3 +36,5 @@ TODO:
 - [436. 寻找右区间](https://leetcode.com/problems/find-right-interval)
 - [454. 四数相加 II](https://leetcode.com/problems/4sum-ii)
 - [792. 匹配子序列的单词数](https://leetcode.com/problems/number-of-matching-subsequences)
+- [1004. Max Consecutive Ones III](https://leetcode.com/problems/max-consecutive-ones-iii/description/)
+- [2817. Minimum Absolute Difference Between Elements With Constraint](https://leetcode.com/problems/minimum-absolute-difference-between-elements-with-constraint/description/)
