@@ -1,12 +1,18 @@
-# 回溯法相关的问题列表
+# 回溯法相关的问题列表 Backtracking
 
 ## 中等
 
-- [39.组合总和](https://leetcode.com/problems/combination-sum)
-- [40. 组合总和 II](https://leetcode.com/problems/combination-sum-ii)
-- [46. 全排列](https://leetcode.com/problems/permutations)
-- [47. 全排列 II](https://leetcode.com/problems/permutations-ii)
-- [78. 子集](https://leetcode.com/problems/subsets)
-- [90. 子集 II](https://leetcode.com/problems/subsets-ii)
-- [679. 24 点游戏](https://leetcode.com/problems/24-game)
+1. [0039.组合总和 Combination Sum](../0039.combination-sum/index.md)
+2. [0040. 组合总和 II Combination Sum II](../0040.combination-sum-ii/index.md)
+3. [0046. 全排列 Permutations](../0046.permutations/index.md)
+4. [0047. 全排列 II Permutations II](../0047.permutations-ii/index.md)
+5. [0078. 子集 Subsets](../0078.subsets/index.md)
+6. [0090. 子集 II Subsets II](../0090.subsets-ii/index.md)
+
+TODO:
+
 - [面试题08.08.有重复字符串的排列组合](https://leetcode.cn/problems/permutation-ii-lcci)
+
+## 困难
+
+1. [0679. 24 点游戏 24 Game](../0679.24-game/index.md)

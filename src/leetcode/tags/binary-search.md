@@ -22,6 +22,7 @@ TODO:
 
 1. [0167. 两数之和 II - 输入有序数组 Two Sum II - Input Array Is Sorted](../0167.two-sum-ii-input-array-is-sorted/index.md)
 2. [0532.数组中的数对 K-diff Pairs in an Array](../0532.k-diff-pairs-in-an-array/index.md)
+3. [1498. 满足条件的子序列数目 Number of Subsequences That Satisfy the Given Sum Condition](../1498.number-of-subsequences-that-satisfy-the-given-sum-condition/index.md)
 
 TODO:
 
