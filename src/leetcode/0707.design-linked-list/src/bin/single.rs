@@ -82,17 +82,17 @@ impl MyLinkedList {
     /// Append a node of value val as the last element of the linked list.
     pub fn add_at_tail(&mut self, val: i32) {
         // Add to head.
-        if self.len == 0 {
+        if self.head.is_none() {
             self.add_at_head(val);
             return;
         }
 
-        let new_node = Box::new(ListNode { val, next: None });
-        let mut node_ref = &mut self.head;
-        for _i in 0..(self.len - 1) {
-            node_ref = &mut node_ref.as_mut().unwrap().next;
+        let mut node_ref = self.head.as_mut().unwrap();
+        while node_ref.next.is_some() {
+            node_ref = node_ref.next.as_mut().unwrap();
         }
-        node_ref.as_mut().unwrap().next.replace(new_node);
+        let new_node = Some(Box::new(ListNode { val, next: None }));
+        node_ref.next = new_node;
         self.len += 1;
     }
 

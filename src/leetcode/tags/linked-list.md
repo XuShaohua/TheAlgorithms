@@ -12,10 +12,11 @@ TODO:
 
 ## 中等
 
+1. [0707. 设计链表 Design Linked List](../0707.design-linked-list/index.md)
+
 TODO:
 
 - [2. Add Two Numbers](https://leetcode.com/problems/add-two-numbers)
-- [0707. 设计链表 Design Linked List](https://leetcode.com/problems/design-linked-list/description/)
 - [445. Add Two Numbers II](https://leetcode.com/problems/add-two-numbers-ii/description/)
 - [面试题 02.05. 链表求和](https://leetcode.cn/problems/sum-lists-lcci)
 
@@ -25,6 +26,7 @@ TODO:
 
 - [23. Merge k Sorted Lists](https://leetcode.com/problems/merge-k-sorted-lists/description/)
 - [25. K 个一组翻转链表](https://leetcode.com/problems/reverse-nodes-in-k-group)
+- [1206. Design Skiplist](https://leetcode.com/problems/design-skiplist/description/)
 
 ## 参考
 
