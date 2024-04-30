@@ -118,6 +118,7 @@
         - [0075. 颜色分类 Sort Colors](leetcode/0075.sort-colors/index.md)
         - [0078. 子集 Subsets](leetcode/0078.subsets/index.md)
         - [0080. 删除排序数组中的重复项 II Remove Duplicates from Sorted Array II](leetcode/0080.remove-duplicates-from-sorted-array-ii/index.md)
+        - [0082. 删除排序链表中的重复元素 II Remove Duplicates from Sorted List II](leetcode/0082.remove-duplicates-from-sorted-list-ii/index.md)
         - [0083. 删除排序链表中的重复元素 Remove Duplicates from Sorted List](leetcode/0083.remove-duplicates-from-sorted-list/index.md)
         - [0088. 合并两个有序数组 Merge Sorted Array](leetcode/0088.merge-sorted-array/index.md)
         - [0090. 子集 II Subsets II](leetcode/0090.subsets-ii/index.md)
