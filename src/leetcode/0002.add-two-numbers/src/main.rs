@@ -65,6 +65,35 @@ fn add_two_numbers1(l1: NodeLink, l2: NodeLink) -> NodeLink {
     l3
 }
 
+fn add_two_numbers2(l1: NodeLink, l2: NodeLink) -> NodeLink {
+    let mut l1 = l1;
+    let mut l2 = l2;
+    let mut head: NodeLink = Some(Box::new(ListNode::new(0)));
+    let mut ref1 = &mut l1;
+    let mut ref2 = &mut l2;
+    let mut tail_boxed = head.as_mut()?;
+    let mut carry = 0;
+
+    while carry != 0 || ref1.is_some() || ref2.is_some() {
+        let mut sum = carry;
+        if ref1.is_some() {
+            sum += ref1.as_ref()?.val;
+            ref1 = &mut ref1.as_mut()?.next;
+        }
+        if ref2.is_some() {
+            sum += ref2.as_ref()?.val;
+            ref2 = &mut ref2.as_mut()?.next;
+        }
+
+        carry = sum / 10;
+        tail_boxed.val = sum % 10;
+        tail_boxed.next = Some(Box::new(ListNode::new(carry)));
+        tail_boxed = tail_boxed.next.as_mut()?;
+    }
+
+    head
+}
+
 pub type SolutionFn = fn(NodeLink, NodeLink) -> NodeLink;
 
 fn check_solution(func: SolutionFn) {
@@ -86,6 +115,7 @@ fn check_solution(func: SolutionFn) {
 
 fn main() {
     check_solution(add_two_numbers1);
+    check_solution(add_two_numbers2);
 }
 
 #[cfg(test)]

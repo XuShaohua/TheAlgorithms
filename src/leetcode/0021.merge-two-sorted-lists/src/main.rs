@@ -33,7 +33,7 @@ impl ListNode {
         root
     }
 
-    fn debug_print(link: &ListNodeLink) -> Option<()> {
+    pub fn debug_print(link: &ListNodeLink) -> Option<()> {
         let mut curr = link;
         while curr.is_some() {
             print!("{}, ", curr.as_ref()?.val);
@@ -53,6 +53,7 @@ pub fn merge_two_lists1(list1: ListNodeLink, list2: ListNodeLink) -> ListNodeLin
         if ref1.is_none() || list2.as_ref()?.val < ref1.as_ref()?.val {
             mem::swap(ref1, &mut list2);
         }
+        //ListNode::debug_print(ref1);
         ref1 = &mut ref1.as_mut()?.next;
     }
 
@@ -88,7 +89,7 @@ pub fn merge_two_lists2(list1: ListNodeLink, list2: ListNodeLink) -> ListNodeLin
         },
     );
 
-    ListNode::debug_print(&head);
+    //ListNode::debug_print(&head);
 
     head
 }
