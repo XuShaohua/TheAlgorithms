@@ -53,11 +53,11 @@ pub fn merge_two_lists1(list1: ListNodeLink, list2: ListNodeLink) -> ListNodeLin
         if ref1.is_none() || list2.as_ref()?.val < ref1.as_ref()?.val {
             mem::swap(ref1, &mut list2);
         }
-        //ListNode::debug_print(ref1);
+        ListNode::debug_print(ref1);
         ref1 = &mut ref1.as_mut()?.next;
     }
 
-    //ListNode::debug_print(&list1);
+    ListNode::debug_print(&list1);
     list1
 }
 pub fn merge_two_lists2(list1: ListNodeLink, list2: ListNodeLink) -> ListNodeLink {

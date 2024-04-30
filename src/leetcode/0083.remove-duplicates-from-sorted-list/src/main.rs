@@ -20,61 +20,94 @@ impl ListNode {
     pub fn from_slice(slice: &[i32]) -> Option<Box<Self>> {
         let mut list = None;
         for item in slice.iter().rev() {
-            list = Self::cons(list, *item);
+            list = Some(Box::new(Self {
+                val: *item,
+                next: list,
+            }));
         }
         list
     }
 
-    pub fn cons(list: Option<Box<Self>>, val: i32) -> Option<Box<Self>> {
-        Some(Box::new(Self { val, next: list }))
-    }
-}
-
-fn solution1(head: Option<Box<ListNode>>) -> Option<Box<ListNode>> {
-    if let Some(head) = head {
-        let val = head.val;
-        if let Some(next) = head.next {
-            if next.val == val {
-                ListNode::cons(solution1(next.next), val)
-            } else {
-                ListNode::cons(solution1(Some(next)), val)
-            }
-        } else {
-            Some(head)
+    fn debug_print(head: &Option<Box<ListNode>>) -> Option<()> {
+        let mut node_ref = head;
+        print!("Head: [");
+        while node_ref.is_some() {
+            print!("{}, ", node_ref.as_ref()?.val);
+            node_ref = &node_ref.as_ref()?.next;
         }
-    } else {
-        None
+        println!("]");
+
+        Some(())
     }
 }
 
-fn main() {
+fn delete_duplicates1(head: Option<Box<ListNode>>) -> Option<Box<ListNode>> {
+    let mut head = head;
+    let mut node_ref = &mut head;
+    while node_ref.is_some() {
+        let next_node_ref = &node_ref.as_ref()?.next;
+        if next_node_ref.is_some() && next_node_ref.as_ref()?.val == node_ref.as_ref()?.val {
+            let next_node = node_ref.as_mut()?.next.take();
+            node_ref.as_mut()?.next = next_node?.next;
+        } else {
+            node_ref = &mut node_ref.as_mut()?.next;
+        }
+    }
+    head
+}
+
+fn delete_duplicates2(head: Option<Box<ListNode>>) -> Option<Box<ListNode>> {
+    let mut head = head;
+
+    if head.is_none() {
+        return head;
+    }
+    let mut current_ref: &mut ListNode = head.as_mut()?;
+    while let Some(next_ref) = current_ref.next.as_mut() {
+        if current_ref.val == next_ref.val {
+            current_ref.next = next_ref.next.take();
+        } else {
+            current_ref = current_ref.next.as_mut()?;
+        }
+    }
+
+    head
+}
+
+type SolutionFn = fn(Option<Box<ListNode>>) -> Option<Box<ListNode>>;
+
+fn check_solution(func: SolutionFn) {
     let list = ListNode::from_slice(&[1, 1, 2]);
-    let result = solution1(list);
-    println!("result: {result:?}");
+    let result = func(list);
+    //println!("result: {result:?}");
+    ListNode::debug_print(&result);
     let expected_result = ListNode::from_slice(&[1, 2]);
     assert_eq!(result, expected_result);
 
     let list = ListNode::from_slice(&[1, 1, 2, 3, 3]);
-    let result = solution1(list);
-    println!("result: {result:?}");
+    let result = func(list);
+    //println!("result: {result:?}");
+    ListNode::debug_print(&result);
     let expected_result = ListNode::from_slice(&[1, 2, 3]);
     assert_eq!(result, expected_result);
 }
 
+fn main() {
+    check_solution(delete_duplicates1);
+    check_solution(delete_duplicates2);
+}
+
 #[cfg(test)]
 mod tests {
-    use super::{solution1, ListNode};
+    use super::{check_solution, delete_duplicates1, delete_duplicates2};
 
     #[test]
     fn test_solution1() {
-        let list = ListNode::from_slice(&[1, 1, 2]);
-        let result = solution1(list);
-        let expected_result = ListNode::from_slice(&[1, 2]);
-        assert_eq!(result, expected_result);
+        check_solution(delete_duplicates1);
+    }
 
-        let list = ListNode::from_slice(&[1, 1, 2, 3, 3]);
-        let result = solution1(list);
-        let expected_result = ListNode::from_slice(&[1, 2, 3]);
-        assert_eq!(result, expected_result);
+    #[test]
+    fn test_solution2() {
+        check_solution(delete_duplicates2);
     }
 }

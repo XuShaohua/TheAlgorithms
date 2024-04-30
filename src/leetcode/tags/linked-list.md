@@ -4,6 +4,7 @@
 
 1. [0234. 回文链表 Palindrome Linked List](../0234.palindrome-linked-list/index.md)
 2. [0021.合并两个有序链表 Merge Two Sorted Lists](../0021.merge-two-sorted-lists/index.md)
+3. [0083. 删除排序链表中的重复元素 Remove Duplicates from Sorted List](../0083.remove-duplicates-from-sorted-list/index.md)
 
 TODO:
 
