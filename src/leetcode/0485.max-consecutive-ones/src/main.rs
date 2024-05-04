@@ -17,6 +17,20 @@ pub fn find_max_consecutive_ones1(nums: Vec<i32>) -> i32 {
     max_count.max(count)
 }
 
+pub fn find_max_consecutive_ones2(nums: Vec<i32>) -> i32 {
+    let mut max_count = 0;
+    let mut count = 0;
+    for num in nums {
+        if num == 1 {
+            count += 1;
+            max_count = max_count.max(count);
+        } else {
+            count = 0;
+        }
+    }
+    max_count
+}
+
 pub type SolutionFn = fn(Vec<i32>) -> i32;
 
 fn check_solution(func: SolutionFn) {
@@ -28,14 +42,20 @@ fn check_solution(func: SolutionFn) {
 
 fn main() {
     check_solution(find_max_consecutive_ones1);
+    check_solution(find_max_consecutive_ones2);
 }
 
 #[cfg(test)]
 mod tests {
-    use super::{check_solution, find_max_consecutive_ones1};
+    use super::{check_solution, find_max_consecutive_ones1, find_max_consecutive_ones2};
 
     #[test]
     fn test_find_max_consecutive_ones1() {
         check_solution(find_max_consecutive_ones1);
+    }
+
+    #[test]
+    fn test_find_max_consecutive_ones2() {
+        check_solution(find_max_consecutive_ones2);
     }
 }
