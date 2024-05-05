@@ -36,6 +36,12 @@ impl<T> Node<T> {
     }
 }
 
+impl<T> Default for DoublyLinkedList<T> {
+    fn default() -> Self {
+        Self::new()
+    }
+}
+
 impl<T> DoublyLinkedList<T> {
     #[must_use]
     pub const fn new() -> Self {

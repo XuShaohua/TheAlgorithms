@@ -3,6 +3,7 @@
 // found in the LICENSE file.
 
 #![allow(dead_code)]
+#![allow(clippy::ptr_arg)]
 
 #[derive(Debug, Clone, PartialEq, Eq)]
 pub struct ListNode {
@@ -67,38 +68,34 @@ pub fn delete_duplicates1(head: Option<Box<ListNode>>) -> Option<Box<ListNode>> 
     // 这样为了方便移除后面的节点.
     let mut current: &mut ListNode = dummy_head.as_mut()?;
 
-    loop {
-        if let Some(next_ref) = current.next.as_mut() {
-            // current->next.val == current->next->next.val
-            if let Some(next_next_ref) = next_ref.next.as_mut() {
-                if next_ref.val == next_next_ref.val {
-                    // 移除所有重复节点
-                    let mut temp: Option<Box<ListNode>> = current.next.take();
-                    // temp.val == temp->next.val
-                    while temp.is_some()
-                        && temp.as_ref()?.next.is_some()
-                        && temp.as_ref()?.val == temp.as_ref()?.next.as_ref()?.val
-                    {
-                        // 这里 temp 指向的当前节点就被 drop 了.
-                        // temp = temp->next;
-                        temp = temp.as_mut()?.next.take();
-                    }
-                    // 将 current 的下一个节点指向 temp 的下一个节点,
-                    // 在下个循环时, 将开始检查它的值.
-                    // current->next = temp->next;
-                    current.next = temp.as_mut()?.next.take();
-                } else {
-                    // 跳到下一个节点
-                    // current = current->next;
-                    current = current.next.as_mut()?;
+    // 当 current->next 为 None 是, 说明遍历完成.
+    while let Some(next_ref) = current.next.as_mut() {
+        // current->next.val == current->next->next.val
+        if let Some(next_next_ref) = next_ref.next.as_mut() {
+            if next_ref.val == next_next_ref.val {
+                // 移除所有重复节点
+                let mut temp: Option<Box<ListNode>> = current.next.take();
+                // temp.val == temp->next.val
+                while temp.is_some()
+                    && temp.as_ref()?.next.is_some()
+                    && temp.as_ref()?.val == temp.as_ref()?.next.as_ref()?.val
+                {
+                    // 这里 temp 指向的当前节点就被 drop 了.
+                    // temp = temp->next;
+                    temp = temp.as_mut()?.next.take();
                 }
+                // 将 current 的下一个节点指向 temp 的下一个节点,
+                // 在下个循环时, 将开始检查它的值.
+                // current->next = temp->next;
+                current.next = temp.as_mut()?.next.take();
             } else {
-                // 当 current->next->next 为 None 是, 说明 current->next.val 不重复,
-                // 遍历也完成了.
-                break;
+                // 跳到下一个节点
+                // current = current->next;
+                current = current.next.as_mut()?;
             }
         } else {
-            // 当 current->next 为 None 是, 说明遍历完成.
+            // 当 current->next->next 为 None 是, 说明 current->next.val 不重复,
+            // 遍历也完成了.
             break;
         }
     }

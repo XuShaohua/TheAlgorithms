@@ -49,8 +49,17 @@ impl<T> ListNode<T> {
     }
 }
 
+impl<T> Default for LinkedListV2<T> {
+    #[must_use]
+    #[inline]
+    fn default() -> Self {
+        Self::new()
+    }
+}
+
 impl<T> LinkedListV2<T> {
     #[must_use]
+    #[inline]
     pub const fn new() -> Self {
         Self {
             length: 0,
