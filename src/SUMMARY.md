@@ -62,6 +62,7 @@
     - [递归相关的问题列表](leetcode/tags/recursion.md)
 - [数学 Math](math/index.md)
     - [排列与组合](math/permutation/index.md)
+    - [矩阵 Matrix](math/matrix/index.md)
     - [质数](math/prime/index.md)
     - [数独](math/sodoku/index.md)
     - [任意精度算术运算](math/arbitrary-precision-arithmetic/index.md)

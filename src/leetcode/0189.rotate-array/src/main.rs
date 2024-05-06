@@ -102,10 +102,20 @@ fn main() {
 
 #[cfg(test)]
 mod tests {
-    use super::{check_solution, rotate1};
+    use super::{check_solution, rotate1, rotate2, rotate3};
 
     #[test]
     fn test_rotate1() {
         check_solution(rotate1);
+    }
+
+    #[test]
+    fn test_rotate2() {
+        check_solution(rotate2);
+    }
+
+    #[test]
+    fn test_rotate3() {
+        check_solution(rotate3);
     }
 }
