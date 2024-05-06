@@ -2,21 +2,23 @@
 // Use of this source is governed by General Public License that can be found
 // in the LICENSE file.
 
-pub type SolutionFn = fn(i32) -> i32;
+use std::cmp::Ordering;
 
-pub fn my_sqrt(x: i32) -> i32 {
+// Binary Search
+pub fn my_sqrt1(x: i32) -> i32 {
+    assert!(x >= 0);
+
     if x == 0 || x == 1 {
         return x;
     }
 
-    let mut left = 0;
-    let mut right = x;
-    let mut middle: i32;
-    let mut ans = 0;
+    let mut left: i32 = 0;
+    let mut right: i32 = x;
+    let mut ans: i32 = 0;
     let x1 = x as i64;
 
     while left <= right {
-        middle = left + (right - left) / 2;
+        let middle: i32 = left + (right - left) / 2;
         let square = (middle as i64) * (middle as i64);
         if square > x1 {
             right = middle - 1;
@@ -46,10 +48,14 @@ pub fn my_sqrt2(x: i32) -> i32 {
 }
 
 pub fn my_sqrt3(x: i32) -> i32 {
-    use std::cmp::Ordering;
+    assert!(x >= 0);
 
-    let mut left = 1;
-    let mut right = x;
+    if x == 0 || x == 1 {
+        return x;
+    }
+
+    let mut left: i32 = 0;
+    let mut right: i32 = x;
 
     while left <= right {
         let middle = left + (right - left) / 2;
@@ -61,6 +67,8 @@ pub fn my_sqrt3(x: i32) -> i32 {
     }
     right
 }
+
+pub type SolutionFn = fn(i32) -> i32;
 
 fn check_solution(func: SolutionFn) {
     assert_eq!(func(36), 6);
@@ -76,8 +84,27 @@ fn check_solution(func: SolutionFn) {
 }
 
 fn main() {
-    check_solution(my_sqrt);
+    check_solution(my_sqrt1);
     check_solution(my_sqrt2);
     check_solution(my_sqrt3);
-    println!("END");
+}
+
+#[cfg(test)]
+mod tests {
+    use super::{check_solution, my_sqrt1, my_sqrt2, my_sqrt3};
+
+    #[test]
+    fn test_my_sqrt1() {
+        check_solution(my_sqrt1);
+    }
+
+    #[test]
+    fn test_my_sqrt2() {
+        check_solution(my_sqrt2);
+    }
+
+    #[test]
+    fn test_my_sqrt3() {
+        check_solution(my_sqrt3);
+    }
 }

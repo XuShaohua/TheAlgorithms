@@ -2,20 +2,18 @@
 // Use of this source is governed by General Public License that can be
 // found in the LICENSE file.
 
+use std::collections::HashMap;
+
 // map, brute force
+// 使用字典来统计数值出现的次数
 pub fn single_number1(nums: Vec<i32>) -> i32 {
-    use std::collections::HashMap;
-    // 使用字典来统计数值出现的次数
-    let mut count = HashMap::<i32, i32>::new();
-    for num in &nums {
-        count
-            .entry(*num)
-            .and_modify(|value| *value += 1)
-            .or_insert(1);
+    let mut map: HashMap<i32, usize> = HashMap::new();
+    for &num in &nums {
+        map.entry(num).and_modify(|count| *count += 1).or_insert(1);
     }
-    for (key, value) in count {
-        if value == 1 {
-            return key;
+    for (num, count) in map {
+        if count == 1 {
+            return num;
         }
     }
     -1
@@ -37,6 +35,7 @@ pub fn single_number2(nums: Vec<i32>) -> i32 {
     ans
 }
 
+// Bit Manipulation
 pub fn single_number3(nums: Vec<i32>) -> i32 {
     let mut ones = 0;
     let mut twos = 0;
