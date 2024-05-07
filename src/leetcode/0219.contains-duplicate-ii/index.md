@@ -1,6 +1,6 @@
 # 0219. 存在重复元素II Contains Duplicate II
 
-[问题描述](../problems/0219.contains-duplicate-ii/content.html)
+[问题描述](https://leetcode.com/problems/contains-duplicate-ii)
 
 这个问题与 [0001. 两数之和 Two Sum](../0001.two-sum/index.md) 很相似,
 而且其解法也都是一样的.

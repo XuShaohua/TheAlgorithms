@@ -1,6 +1,6 @@
 # 0026. 删除有序数组中的重复项 Remove Duplicates from Sorted Array
 
-[问题描述](../problems/0026.remove-duplicates-from-sorted-array/content.html)
+[问题描述](https://leetcode.com/problems/remove-duplicates-from-sorted-array)
 
 要注意的一点是, 这个数组已经是有序的了.
 

@@ -1,6 +1,6 @@
 # 0007. 整数反转 Reverse Integer
 
-[问题描述](../problems/0007.reverse-integer/content.html)
+[问题描述](https://leetcode.com/problems/reverse-integer)
 
 这是一个数学问题. 它考察的知识有这几个方面:
 

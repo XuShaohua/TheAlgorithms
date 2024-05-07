@@ -1,6 +1,6 @@
 # 0680. 验证回文串 II Valid Palindrome II
 
-[问题描述](../problems/0680.valid-palindrome-ii/content.html)
+[问题描述](https://leetcode.com/problems/valid-palindrome-ii)
 
 在Rust中处理字符串, 远不如处理 `Vec<u8>` 或者 slice 简单, 所以这里我们在有必要时, 先把字符串
 转换成数组: `let bytes = s.as_bytes();`

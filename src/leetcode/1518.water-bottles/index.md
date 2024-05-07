@@ -1,6 +1,6 @@
 # 1518. 换水问题 Water Bottles
 
-[问题描述](../problems/1518.water-bottles/content.html)
+[问题描述](https://leetcode.com/problems/water-bottles)
 
 所谓的兑换空瓶子, 问题就是 **商与余数(DivMod)** 的问题.
 

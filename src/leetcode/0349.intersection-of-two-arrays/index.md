@@ -1,6 +1,6 @@
 # 0349. 两个数组的交集 Intersection of Two Arrays
 
-[问题描述](../problems/0349.intersection-of-two-arrays/content.html)
+[问题描述](https://leetcode.com/problems/intersection-of-two-arrays)
 
 这是一个搜索问题, 这个问题的解法就比较多了.
 

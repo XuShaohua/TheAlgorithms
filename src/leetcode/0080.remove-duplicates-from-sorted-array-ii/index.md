@@ -1,6 +1,6 @@
 # 0080. 删除排序数组中的重复项 II Remove Duplicates from Sorted Array II
 
-[问题描述](../problems/0080.remove-duplicates-from-sorted-array-ii/content.html)
+[问题描述](https://leetcode.com/problems/remove-duplicates-from-sorted-array-ii)
 
 先分析这个题的条件:
 

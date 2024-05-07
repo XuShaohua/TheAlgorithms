@@ -1,6 +1,6 @@
 # 0338. 比特位计数 Counting Bits
 
-[问题描述](../problems/0338.counting-bits/content.html)
+[问题描述](https://leetcode.com/problems/counting-bits)
 
 ## 方法1, Brute Force
 

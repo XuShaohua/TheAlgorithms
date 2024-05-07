@@ -1,6 +1,6 @@
 # 0217. 存在重复元素 Contains Duplicate
 
-[问题描述](../problems/0217.contains-duplicate/content.html)
+[问题描述](https://leetcode.com/problems/contains-duplicate)
 
 ## 方法1, Brute Force
 

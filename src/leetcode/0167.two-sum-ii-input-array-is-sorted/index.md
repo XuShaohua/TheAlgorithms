@@ -1,6 +1,6 @@
 # 0167. 两数之和 II - 输入有序数组 Two Sum II - Input Array Is Sorted
 
-[问题描述](../problems/0167.two-sum-ii-input-array-is-sorted/content.html)
+[问题描述](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted)
 
 ## 靠拢型双指针
 

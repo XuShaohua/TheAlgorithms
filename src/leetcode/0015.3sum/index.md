@@ -1,6 +1,6 @@
 # 0015. 三数之和 3Sum
 
-[问题描述](../problems/0015.3sum/content.html)
+[问题描述](https://leetcode.com/problems/3sum)
 
 ## 暴力法
 

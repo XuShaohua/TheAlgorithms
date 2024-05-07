@@ -1,6 +1,6 @@
 # 0532.数组中的数对 K-diff Pairs in an Array
 
-[问题描述](../problems/0532.k-diff-pairs-in-an-array/content.html)
+[问题描述](https://leetcode.com/problems/k-diff-pairs-in-an-array)
 
 这是一个查找问题, 先思考一下处理查找问题的常用手段:
 

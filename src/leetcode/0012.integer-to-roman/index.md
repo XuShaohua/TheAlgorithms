@@ -1,6 +1,6 @@
 # 0012. 整数转罗马数字 Integer to Roman
 
-[问题描述](../problems/0012.integer-to-roman/content.html)
+[问题描述](https://leetcode.com/problems/integer-to-roman)
 
 这也是字典映射问题, 目前实现了三种解法
 

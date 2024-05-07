@@ -1,6 +1,6 @@
 # 0067. 二进制求和 Add Binary
 
-[问题描述](../problems/0067.add-binary/content.html)
+[问题描述](https://leetcode.com/problems/add-binary)
 
 这个问题考察两个方面的知识:
 

@@ -1,6 +1,6 @@
 # 0326. 3的幂 Power of Three
 
-[问题描述](../problems/0326.power-of-three/content.html)
+[问题描述](https://leetcode.com/problems/power-of-three)
 
 可以看一下下面列出的相关问题, 这三个问题有相同的解法, 也有不同的解法.
 

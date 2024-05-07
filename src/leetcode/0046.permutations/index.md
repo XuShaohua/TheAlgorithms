@@ -1,3 +1,5 @@
 # 0046. 全排列 Permutations
 
-[问题描述](../problems/0046.permutations/content.html)
+[问题描述](https://leetcode.com/problems/permutations)
+
+TODO(Shaohua):

@@ -1,6 +1,6 @@
 # 0137. Single Number II
 
-[问题描述](../problems/0137.single-number-ii/content.html)
+[问题描述](https://leetcode.com/problems/single-number-ii)
 
 ## 第一种思路, 使用字典来计数
 

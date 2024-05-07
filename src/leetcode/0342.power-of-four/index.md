@@ -1,6 +1,6 @@
 # 0342. 4的幂 Power of Four
 
-[问题描述](../problems/0342.power-of-four/content.html)
+[问题描述](https://leetcode.com/problems/power-of-four)
 
 这个问题与 [0231. 2 的幂 Power of Two](../0231.power-of-two/index.md) 很相似,
 可以参考下它的解法.

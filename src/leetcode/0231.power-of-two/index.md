@@ -1,6 +1,6 @@
 # 0231. 2的幂 Power of Two
 
-[问题描述](../problems/0231.power-of-two/content.html)
+[问题描述](https://leetcode.com/problems/power-of-two)
 
 所有小于1的整数, 都不是2的次幂, 这样就可以过滤到一半的整数了.
 

@@ -1,6 +1,6 @@
 # 0001. 两数之和 Two Sum
 
-[问题描述](../problems/0001.two-sum/content.html)
+[问题描述](https://leetcode.com/problems/two-sum)
 
 ## 方法1, Brute Force
 

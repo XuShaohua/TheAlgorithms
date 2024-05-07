@@ -1,6 +1,6 @@
 # 0136. Single Number
 
-[问题描述](../problems/0136.single-number/content.html)
+[问题描述](https://leetcode.com/problems/single-number)
 
 这个问题考察的是比特位异或操作中的一个重要特性: `A XOR A == 0`.
 

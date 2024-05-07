@@ -1,6 +1,6 @@
 # 0011. 盛最多水的容器 Container With Most Water
 
-[问题描述](../problems/0011.container-with-most-water/content.html)
+[问题描述](https://leetcode.com/problems/container-with-most-water)
 
 这是一个典型的[靠拢型双指针问题](../../two-pointers/close-up.md).
 

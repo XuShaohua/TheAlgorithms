@@ -1,6 +1,6 @@
 # 0075. 颜色分类 Sort Colors
 
-[问题描述](../problems/0075.sort-colors/content.html)
+[问题描述](https://leetcode.com/problems/sort-colors)
 
 ## 靠拢型双指针
 

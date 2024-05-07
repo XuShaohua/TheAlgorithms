@@ -1,6 +1,6 @@
 # 2119. 反转两次的数字 A Number After a Double Reversal
 
-[问题描述](../problems/2119.a-number-after-a-double-reversal/content.html)
+[问题描述](https://leetcode.com/problems/a-number-after-a-double-reversal)
 
 仔细分析这个问题, 可以发现一个细节: 只要在反转时不丢弃任何一个数字, 才能保证两次反转后的整数值不变.
 

@@ -1,6 +1,6 @@
 # 0925. 长按键入 Long Pressed Name
 
-[问题描述](../problems/0925.long-pressed-name/content.html)
+[问题描述](https://leetcode.com/problems/long-pressed-name)
 
 ## 并行双指针
 

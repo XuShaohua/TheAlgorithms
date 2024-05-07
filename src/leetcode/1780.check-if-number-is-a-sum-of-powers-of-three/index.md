@@ -1,6 +1,6 @@
 # 1780. 判断一个数字是否可以表示成三的幂的和 Check if Number is a Sum of Powers of Three
 
-[问题描述](../problems/1780.check-if-number-is-a-sum-of-powers-of-three/content.html)
+[问题描述](https://leetcode.com/problems/check-if-number-is-a-sum-of-powers-of-three)
 
 这个题目比较费脑子, 要反复仔细考虑题目里的细节, 这算是个数学问题.
 
