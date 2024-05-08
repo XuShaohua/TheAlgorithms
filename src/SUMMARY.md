@@ -15,6 +15,7 @@
     - [跳跃表 SkipList](list/skiplist/index.md)
     - [链表相关的问题列表](leetcode/tags/linked-list.md)
 - [栈 Stack](stack/index.md)
+    - [单调栈 Monotonic Stack](stack/monotonic-stack.md)
     - [栈相关的问题列表](leetcode/tags/stack.md)
 - [队列 Queue](queue/index.md)
 - [优先级队列 Priority Queue](priority-queue/index.md)
