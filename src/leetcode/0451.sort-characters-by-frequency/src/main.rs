@@ -2,8 +2,8 @@
 // Use of this source is governed by General Public License that can be found
 // in the LICENSE file.
 
-use std::cmp::Ordering;
-use std::collections::HashMap;
+use std::cmp::{self, Ordering};
+use std::collections::{BinaryHeap, HashMap};
 
 // HashTable
 // 字典计数 + 有序数组
@@ -42,7 +42,55 @@ pub fn frequency_sort1(s: String) -> String {
     out
 }
 
-// TODO(Shaohua): Priority Queue
+// HashTable + Priority Queue
+// 字典计数 + 有序队列
+pub fn frequency_sort2(s: String) -> String {
+    assert!(!s.is_empty());
+
+    // 计数
+    let mut map: HashMap<char, usize> = HashMap::new();
+    for chr in s.chars() {
+        //map.entry(chr).and_modify(|count| *count += 1).or_insert(1);
+        *map.entry(chr).or_default() += 1;
+    }
+
+    // 自定义结构体, 重写它的排序方法.
+    #[derive(Debug, Clone, Copy, Eq, PartialEq)]
+    pub struct Entry(usize, char);
+
+    impl cmp::PartialOrd for Entry {
+        fn partial_cmp(&self, other: &Self) -> Option<Ordering> {
+            Some(self.cmp(other))
+        }
+    }
+
+    impl cmp::Ord for Entry {
+        fn cmp(&self, other: &Self) -> Ordering {
+            // 根据 count 降序排列.
+            // 次级排序, 按字符升序排.
+            match self.0.cmp(&other.0) {
+                Ordering::Equal => other.1.cmp(&self.1),
+                order => order,
+            }
+        }
+    }
+
+    // 构造优先级队列.
+    let mut queue: BinaryHeap<Entry> = BinaryHeap::with_capacity(map.len());
+    for (chr, count) in map {
+        queue.push(Entry(count, chr));
+    }
+
+    // 重新拼装字符串
+    let mut out = String::with_capacity(s.len());
+    while let Some(Entry(count, chr)) = queue.pop() {
+        for _i in 0..count {
+            out.push(chr);
+        }
+    }
+
+    out
+}
 
 pub type SolutionFn = fn(String) -> String;
 
@@ -59,6 +107,7 @@ fn check_solution(func: SolutionFn) {
 
 fn main() {
     check_solution(frequency_sort1);
+    check_solution(frequency_sort2);
 }
 
 #[cfg(test)]

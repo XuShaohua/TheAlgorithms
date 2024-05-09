@@ -46,7 +46,7 @@ pub fn find_kth_largest3(nums: Vec<i32>, k: i32) -> i32 {
 
         // 把 pivot 移到最终位置.
         arr.swap(store_index, right);
-        return left;
+        left
     }
 
     fn kth_smallest(arr: &mut [i32], left: usize, right: usize, k: usize) -> i32 {
@@ -72,9 +72,9 @@ pub fn find_kth_largest3(nums: Vec<i32>, k: i32) -> i32 {
         //        }
 
         if k < pivot_index {
-            return kth_smallest(arr, left, pivot_index - 1, k);
+            kth_smallest(arr, left, pivot_index - 1, k)
         } else {
-            return kth_smallest(arr, pivot_index + 1, right, k);
+            kth_smallest(arr, pivot_index + 1, right, k)
         }
     }
 
@@ -82,8 +82,7 @@ pub fn find_kth_largest3(nums: Vec<i32>, k: i32) -> i32 {
     let len = nums.len();
     let k = k as usize;
     let k = len - k + 1;
-    let ans = kth_smallest(&mut nums, 0, len - 1, k);
-    ans
+    kth_smallest(&mut nums, 0, len - 1, k)
 }
 
 // TODO(Shaohua): Devide and conquer
