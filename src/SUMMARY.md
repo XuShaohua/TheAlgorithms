@@ -52,6 +52,7 @@
 - [第二部分: 算法](algs/index.md)
 - [分析算法](algs-analysis/index.md)
 - [排序 Sorting](sorting/index.md)
+    - [快速选择 Quickselect](sorting/quick-select.md)
     - [排序相关的问题列表](leetcode/tags/sorting.md)
 - [查找](searching/index.md)
     - [二分查找 Binary Search](searching/binary-search/index.md)
