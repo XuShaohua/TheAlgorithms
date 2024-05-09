@@ -42,13 +42,19 @@ pub fn k_closest1(points: Vec<Vec<i32>>, k: i32) -> Vec<Vec<i32>> {
         }
     }
 
-    let mut out = Vec::with_capacity(k);
-    while let Some(top_entry) = heap.pop() {
-        out.push(top_entry.point);
-    }
-    // 再次排序.
-    out.reverse();
-    out
+    //    let mut out = Vec::with_capacity(k);
+    //    while let Some(top_entry) = heap.pop() {
+    //        out.push(top_entry.point);
+    //    }
+    //    // 再次排序.
+    //    out.reverse();
+    //    out
+
+    // 导出有序数组.
+    heap.into_sorted_vec()
+        .into_iter()
+        .map(|entry| entry.point)
+        .collect()
 }
 
 // 有序数组

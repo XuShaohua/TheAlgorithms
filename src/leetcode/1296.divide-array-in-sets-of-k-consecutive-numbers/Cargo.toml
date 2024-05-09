@@ -1,0 +1,7 @@
+[package]
+name = "lc-1296-divide-array-in-sets-of-k-consecutive-numbers"
+version = "0.1.0"
+edition = "2021"
+publish = false
+
+[dependencies]
