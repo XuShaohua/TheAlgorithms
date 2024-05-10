@@ -1,7 +1,9 @@
 # 目录
 
 - [简介](introduction/index.md)
-- [第一部分: 数据结构](ds/index.md)
+
+# 第一部分: 数据结构 Data Structures
+
 - [数组 Arrays](array/index.md)
     - [数组相关的问题列表](leetcode/tags/array.md)
     - [前缀和数组 Prefix Sum Array](array/prefix-sum-array.md)
@@ -9,7 +11,7 @@
     - [后缀数组 Suffix Array](array/suffix-array.md)
 - [动态数组 Vector](vector/index.md)
 - [双端队列 Deque](deque/index.md)
-- [链表](list/index.md)
+- [链表 List](list/index.md)
     - [单链表](list/single.md)
     - [双链表](list/double.md)
     - [跳跃表 SkipList](list/skiplist/index.md)
@@ -49,12 +51,14 @@
     - [VecDeque](rust-containers/vec-deque.md)
     - [BTreeMap 与 BTreeSet](rust-containers/btree-map.md)
     - [HashMap 与 HashSet](rust-containers/hash-map.md)
-- [第二部分: 算法](algs/index.md)
-- [分析算法](algs-analysis/index.md)
+
+# 第二部分: 算法
+
+- [算法分析 Analysis](algs-analysis/index.md)
 - [排序 Sorting](sorting/index.md)
     - [快速选择 Quickselect](sorting/quick-select.md)
     - [排序相关的问题列表](leetcode/tags/sorting.md)
-- [查找](searching/index.md)
+- [查找 Searching](searching/index.md)
     - [二分查找 Binary Search](searching/binary-search/index.md)
         - [二分查找相关的问题列表](leetcode/tags/binary-search.md)
 - [位运算 Bit Manipulation](bit-manipulation/index.md)
@@ -69,7 +73,7 @@
     - [数独](math/sodoku/index.md)
     - [任意精度算术运算](math/arbitrary-precision-arithmetic/index.md)
     - [数学相关的问题列表](leetcode/tags/math.md)
-- [双指针](two-pointers/index.md)
+- [双指针 Two Pointers](two-pointers/index.md)
     - [快慢型双指针](two-pointers/fast-slow.md)
     - [靠拢型双指针](two-pointers/close-up.md)
     - [并行双指针](two-pointers/parallel.md)
@@ -85,8 +89,10 @@
 - [贪心算法 Greedy](greedy/index.md)
     - [贪心算法相关的问题列表](leetcode/tags/greedy.md)
 - [图算法 Graph](graph/index.md)
-- [第三部分: 扩展主题](extras/index.md)
-    - [内存](extras/memory/index.md)
+
+# 第三部分: 扩展主题
+
+- [内存 Memory](memory/index.md)
 - [leetcode 问题列表](leetcode/index.md)
     - [数组 Array](leetcode/tags/array.md)
     - [二分查找 Binary Search](leetcode/tags/binary-search.md)
