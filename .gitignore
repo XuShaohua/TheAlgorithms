@@ -1,4 +1,5 @@
 /book
+/book-pandoc
 /dataset
 /target
 /Cargo.lock
