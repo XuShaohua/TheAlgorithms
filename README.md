@@ -1,4 +1,4 @@
 
-# About
+# 数据结构与算法 - Rust 语言实现
 
-All data structures and algorithms in Rust.
+使用 Rust 语言实现所有的数据结构与算法.

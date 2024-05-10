@@ -1,6 +1,6 @@
 # 目录
 
-- [简介](introduction/index.md)
+- [数据结构与算法 - Rust 语言实现](README.md)
 
 # 第一部分: 数据结构 Data Structures
 
@@ -52,7 +52,7 @@
     - [BTreeMap 与 BTreeSet](rust-containers/btree-map.md)
     - [HashMap 与 HashSet](rust-containers/hash-map.md)
 
-# 第二部分: 算法
+# 第二部分: 算法 Algorithms
 
 - [算法分析 Analysis](algs-analysis/index.md)
 - [排序 Sorting](sorting/index.md)
@@ -90,7 +90,7 @@
     - [贪心算法相关的问题列表](leetcode/tags/greedy.md)
 - [图算法 Graph](graph/index.md)
 
-# 第三部分: 扩展主题
+# 第三部分: 扩展主题 Extras
 
 - [内存 Memory](memory/index.md)
 - [leetcode 问题列表](leetcode/index.md)
