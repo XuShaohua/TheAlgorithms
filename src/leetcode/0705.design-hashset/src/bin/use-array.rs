@@ -7,7 +7,7 @@ const MAX_KEY: i32 = 10_i32.pow(6);
 
 #[derive(Debug, Clone)]
 pub struct MyHashSet {
-    set: [bool; BUCKET_LEN],
+    bucket: [bool; BUCKET_LEN],
 }
 
 impl Default for MyHashSet {
@@ -21,27 +21,27 @@ impl MyHashSet {
     #[inline]
     pub const fn new() -> Self {
         Self {
-            set: [false; BUCKET_LEN],
+            bucket: [false; BUCKET_LEN],
         }
     }
 
     /// Inserts the value key into the HashSet.
     pub fn add(&mut self, key: i32) {
         assert!((0..=MAX_KEY).contains(&key));
-        self.set[key as usize] = true;
+        self.bucket[key as usize] = true;
     }
 
     /// Removes the value key in the HashSet. If key does not exist in the HashSet, do nothing.
     pub fn remove(&mut self, key: i32) {
         assert!((0..=MAX_KEY).contains(&key));
-        self.set[key as usize] = false;
+        self.bucket[key as usize] = false;
     }
 
     /// Returns whether the value key exists in the HashSet or not.
     #[must_use]
     pub fn contains(&self, key: i32) -> bool {
         assert!((0..=MAX_KEY).contains(&key));
-        self.set[key as usize]
+        self.bucket[key as usize]
     }
 }
 
