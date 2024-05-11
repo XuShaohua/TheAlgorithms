@@ -18,8 +18,11 @@
 
 ![The Dutch national flag](assets/Flag_of_the_Netherlands.svg)
 
-访问 [wikipedia](https://en.wikipedia.org/wiki/Dutch_national_flag_problem) 查看对应的介绍.
+TODO(Shaohua): Add more description
 
 ## 相关问题
 
 - [0011. 盛最多水的容器 Container With Most Water](../../leetcode/0011.container-with-most-water/index.md)
+
+## 参考
+- [Dutch national flag problem](https://en.wikipedia.org/wiki/Dutch_national_flag_problem)

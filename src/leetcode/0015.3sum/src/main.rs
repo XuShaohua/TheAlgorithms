@@ -91,15 +91,15 @@ pub fn three_sum2(nums: Vec<i32>) -> Vec<Vec<i32>> {
 // 靠拢型双指针, 并使用 HashSet 去掉重复的结果
 // 这个方法时间复杂度为 O(n^2), 空间复杂度为 O(n)
 pub fn three_sum3(nums: Vec<i32>) -> Vec<Vec<i32>> {
-    let mut nums = nums;
-    // 先排序
-    nums.sort();
-
-    let mut set = HashSet::new();
     let len = nums.len();
     if len < 3 {
         return vec![];
     }
+
+    let mut nums = nums;
+    // 先排序
+    nums.sort();
+    let mut set = HashSet::new();
 
     // 遍历数组
     for i in 0..(len - 2) {

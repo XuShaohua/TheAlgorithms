@@ -6,6 +6,8 @@
 
 靠拢型双指针是一种常用方法, 这个解法是它的变体, 叫[DNF](../../two-pointers/close-up.md).
 
+TODO(Shaohua): Add more description.
+
 ```rust
 {{#include src/main.rs:7:40 }}
 ```
