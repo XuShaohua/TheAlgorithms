@@ -8,7 +8,7 @@ pub fn solution1() {
 
 pub type SolutionFn = fn();
 
-fn check_solution(_func: SolutionFn) {
+fn check_solution(func: SolutionFn) {
     todo!();
 }
 
