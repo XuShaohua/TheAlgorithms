@@ -2,13 +2,15 @@
 // Use of this source is governed by General Public License that can be found
 // in the LICENSE file.
 
-const MAX_KEY: i32 = 1000_000;
-const BUCKET_LEN: usize = 1000_000 + 1;
+const MAX_KEY: i32 = 1_000_000;
+const BUCKET_LEN: usize = 1_000_000 + 1;
 const DEFAULT_VALUE: i32 = -1;
 
 #[derive(Debug, Clone)]
 pub struct MyHashMap {
-    bucket: [i32; BUCKET_LEN],
+    // NOTE(Shaohua): Replace array with Vec<i32> to bypass stack overflow in unittest.
+    //bucket: [i32],
+    bucket: Vec<i32>,
 }
 
 impl Default for MyHashMap {
@@ -21,9 +23,9 @@ impl MyHashMap {
     /// Initializes the object with an empty map.
     #[must_use]
     #[inline]
-    pub const fn new() -> Self {
+    pub fn new() -> Self {
         Self {
-            bucket: [DEFAULT_VALUE; BUCKET_LEN],
+            bucket: vec![DEFAULT_VALUE; BUCKET_LEN],
         }
     }
 

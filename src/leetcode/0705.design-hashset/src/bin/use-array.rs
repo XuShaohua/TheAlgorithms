@@ -2,8 +2,8 @@
 // Use of this source is governed by General Public License that can be found
 // in the LICENSE file.
 
-const BUCKET_LEN: usize = 10_usize.pow(6) + 1;
-const MAX_KEY: i32 = 10_i32.pow(6);
+const BUCKET_LEN: usize = 1_000_000 + 1;
+const MAX_KEY: i32 = 1_000_000;
 
 #[derive(Debug, Clone)]
 pub struct MyHashSet {
