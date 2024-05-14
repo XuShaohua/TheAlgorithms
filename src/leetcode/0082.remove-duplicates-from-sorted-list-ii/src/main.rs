@@ -2,7 +2,6 @@
 // Use of this source is governed by General Public License that can be
 // found in the LICENSE file.
 
-#![allow(dead_code)]
 #![allow(clippy::ptr_arg)]
 
 #[derive(Debug, Clone, PartialEq, Eq)]
@@ -51,6 +50,7 @@ impl ListNode {
     }
 }
 
+// 双指针
 pub fn delete_duplicates1(head: Option<Box<ListNode>>) -> Option<Box<ListNode>> {
     if head.is_none() {
         return head;
