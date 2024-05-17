@@ -30,6 +30,7 @@ pub fn find_kth_largest2(nums: Vec<i32>, k: i32) -> i32 {
 }
 
 // Quick select
+// TIDO(Shaohua): Implement quick select
 pub fn find_kth_largest3(nums: Vec<i32>, k: i32) -> i32 {
     // 与 Quicksort 类似的分区过程.
     // 选择最后一个元素为 pivot, 比它小的都放左边, 比它大的都放右边.
@@ -87,6 +88,13 @@ pub fn find_kth_largest3(nums: Vec<i32>, k: i32) -> i32 {
 
 // TODO(Shaohua): Devide and conquer
 
+// 使用 slice::select_nth_unstable()
+pub fn find_kth_largest4(nums: Vec<i32>, k: i32) -> i32 {
+    let mut nums = nums;
+    let k_small: usize = nums.len() - k as usize;
+    *nums.select_nth_unstable(k_small).1
+}
+
 pub type SolutionFn = fn(Vec<i32>, i32) -> i32;
 
 fn check_solution(func: SolutionFn) {
@@ -106,6 +114,7 @@ fn check_solution(func: SolutionFn) {
 fn main() {
     check_solution(find_kth_largest1);
     check_solution(find_kth_largest2);
+    check_solution(find_kth_largest4);
 }
 
 #[cfg(test)]
