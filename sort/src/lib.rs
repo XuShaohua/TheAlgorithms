@@ -12,6 +12,7 @@
 #![allow(clippy::module_name_repetitions)]
 
 mod bubble_sort;
+mod bucket_sort;
 mod counting_sort;
 mod double_sort;
 mod gnome_sort;
@@ -25,6 +26,7 @@ mod shell_sort;
 pub mod util;
 
 pub use bubble_sort::bubble_sort;
+pub use bucket_sort::bucket_sort;
 pub use counting_sort::{counting_sort, counting_sort_generic};
 pub use double_sort::double_sort;
 pub use gnome_sort::gnome_sort;
