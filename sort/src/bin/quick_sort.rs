@@ -53,6 +53,7 @@ fn quick_sort_partition<T: Clone + PartialOrd>(nums: &mut [T], low: usize, high:
 }
 
 fn main() {
+    // TODO(Shaohua): Remove quick_sort()
     let mut list = read_ints();
     println!("[QuickSort] LIST:");
     show_brief(&list);
