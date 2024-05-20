@@ -15,7 +15,9 @@ pub fn quick_sort<T>(vec: &mut [T])
 where
     T: Clone + PartialOrd,
 {
-    quick_sort_helper(vec, 0, vec.len() - 1);
+    if !vec.is_empty() {
+        quick_sort_helper(vec, 0, vec.len() - 1);
+    }
 }
 
 fn quick_sort_helper<T>(vec: &mut [T], low: usize, high: usize)
@@ -36,15 +38,17 @@ where
     T: Clone + PartialOrd,
 {
     let pivot = vec[low].clone();
-    let mut i = high + 1;
+    let mut i: usize = low;
     let mut j: usize = high;
-    while j > low {
-        if vec[j] > pivot {
-            i -= 1;
-            vec.swap(i, j);
+    while i < j {
+        while i < j && vec[i] <= pivot {
+            i += 1;
         }
-        j -= 1;
+        while i < j && vec[j] >= pivot {
+            j -= 1;
+        }
+        vec.swap(i, j);
     }
-    vec.swap(i - 1, low);
-    i - 1
+    vec.swap(i, low);
+    i
 }
