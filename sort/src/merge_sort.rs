@@ -30,7 +30,6 @@ fn sort<T>(arr: &mut [T], low: usize, high: usize)
 where
     T: PartialOrd + Copy,
 {
-    println!("low: {low}, high: {high}");
     if low >= high {
         return;
     }
@@ -62,7 +61,6 @@ fn merge<T>(arr: &mut [T], low: usize, middle: usize, high: usize)
 where
     T: PartialOrd + Copy,
 {
-    println!("merge: low: {low}, middle: {middle}, high: {high}");
     let aux = arr[0..=high].to_vec();
 
     // Merge back to arr.

@@ -23,7 +23,6 @@ mod quick_sort;
 mod selection_sort;
 mod shaker_sort;
 mod shell_sort;
-pub mod util;
 
 pub use bubble_sort::bubble_sort;
 pub use bucket_sort::bucket_sort;
@@ -37,3 +36,5 @@ pub use quick_sort::quick_sort;
 pub use selection_sort::selection_sort;
 pub use shaker_sort::shaker_sort;
 pub use shell_sort::shell_sort;
+
+pub mod util;

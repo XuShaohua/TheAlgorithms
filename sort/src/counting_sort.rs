@@ -88,3 +88,32 @@ pub fn counting_sort(nums: &mut [i32]) {
         //counts[index] -= 1;
     }
 }
+
+#[cfg(test)]
+mod tests {
+    use super::counting_sort;
+
+    #[test]
+    fn test_counting_sort() {
+        let mut list = [0, 5, 3, 2, 2];
+        counting_sort(&mut list);
+        assert_eq!(list, [0, 2, 2, 3, 5]);
+
+        let mut list = [-2, -5, -45];
+        counting_sort(&mut list);
+        assert_eq!(list, [-45, -5, -2]);
+
+        let mut list = [
+            -998_166, -996_360, -995_703, -995_238, -995_066, -994_740, -992_987, -983_833,
+            -987_905, -980_069, -977_640,
+        ];
+        counting_sort(&mut list);
+        assert_eq!(
+            list,
+            [
+                -998_166, -996_360, -995_703, -995_238, -995_066, -994_740, -992_987, -987_905,
+                -983_833, -980_069, -977_640,
+            ]
+        );
+    }
+}
