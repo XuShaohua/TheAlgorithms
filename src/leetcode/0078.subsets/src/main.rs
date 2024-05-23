@@ -2,52 +2,39 @@
 // Use of this source is governed by General Public License that can be
 // found in the LICENSE file.
 
-pub fn get_all<T: Copy>(out: &mut Vec<Vec<T>>, data: &[T], chunk_len: usize) {
-    if chunk_len == 0 {
-        out.push(Vec::new());
-        return;
-    }
-    if chunk_len == data.len() {
-        out.push(data.to_vec());
-        return;
-    }
+// Backtracking
+pub fn subsets1(nums: Vec<i32>) -> Vec<Vec<i32>> {
+    fn backtracking(nums: &[i32], index: usize, path: &mut Vec<i32>, res: &mut Vec<Vec<i32>>) {
+        // 先将当前的集合存到结果中.
+        res.push(path.clone());
 
-    let len = data.len();
-    let min = 2_usize.pow(chunk_len as u32) - 1;
-    let mut mask = 2_usize.pow(len as u32) - 2_usize.pow((len - chunk_len) as u32);
+        // 终止条件, 就是访问了数组中的所有元素.
+        if index >= nums.len() {
+            return;
+        }
 
-    fn get_chunk<T: Copy>(mask: usize, data: &[T]) -> Vec<T> {
-        let b = format!("{:01$b}", mask, data.len());
-        b.chars()
-            .enumerate()
-            .filter(|&(_, e)| e == '1')
-            .map(|(i, _)| data[i])
-            .collect()
-    }
-
-    while mask >= min {
-        if mask.count_ones() as usize == chunk_len {
-            let res = get_chunk(mask, data);
-            mask -= 1;
-            out.push(res);
-        } else {
-            mask -= 1;
+        for i in index..nums.len() {
+            // 选择元素
+            path.push(nums[i]);
+            // 递归搜索
+            backtracking(nums, i + 1, path, res);
+            // 撤销选择的元素
+            path.pop();
         }
     }
+    // 记录所有结果
+    let mut res: Vec<Vec<i32>> = Vec::new();
+    // 记录当前的路径
+    let mut path: Vec<i32> = Vec::new();
+    backtracking(&nums, 0, &mut path, &mut res);
+    res
 }
 
-// Combinations
-pub fn subsets(nums: Vec<i32>) -> Vec<Vec<i32>> {
-    let mut out = vec![];
-    for i in 0..=nums.len() {
-        get_all(&mut out, &nums, i);
-    }
-    out
-}
+pub type SolutionFn = fn(Vec<i32>) -> Vec<Vec<i32>>;
 
-fn main() {
+fn check_solution(func: SolutionFn) {
     let nums = vec![1, 2, 3];
-    let expected_out = vec![
+    let mut expected = vec![
         vec![],
         vec![1],
         vec![2],
@@ -57,9 +44,26 @@ fn main() {
         vec![2, 3],
         vec![1, 2, 3],
     ];
-    assert_eq!(subsets(nums), expected_out);
+    let mut out = func(nums);
+    out.sort();
+    expected.sort();
+    assert_eq!(out, expected);
 
     let nums = vec![0];
-    let expected_out = vec![vec![], vec![0]];
-    assert_eq!(subsets(nums), expected_out);
+    let expected = vec![vec![], vec![0]];
+    assert_eq!(func(nums), expected);
+}
+
+fn main() {
+    check_solution(subsets1);
+}
+
+#[cfg(test)]
+mod tests {
+    use super::{check_solution, subsets1};
+
+    #[test]
+    fn test_subsets1() {
+        check_solution(subsets1);
+    }
 }
