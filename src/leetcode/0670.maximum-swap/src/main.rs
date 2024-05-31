@@ -68,7 +68,7 @@ pub fn maximum_swap1(num: i32) -> i32 {
 
 pub type SolutionFn = fn(i32) -> i32;
 
-fn check_maximum_swap(func: SolutionFn) {
+fn check_solution(func: SolutionFn) {
     assert_eq!(func(2736), 7236);
     assert_eq!(func(9973), 9973);
     assert_eq!(func(98368), 98863);
@@ -76,15 +76,15 @@ fn check_maximum_swap(func: SolutionFn) {
 }
 
 fn main() {
-    check_maximum_swap(maximum_swap1);
+    check_solution(maximum_swap1);
 }
 
 #[cfg(test)]
 mod tests {
-    use super::{check_maximum_swap, maximum_swap1};
+    use super::{check_solution, maximum_swap1};
 
     #[test]
     fn test_maximum_swap1() {
-        check_maximum_swap(maximum_swap1);
+        check_solution(maximum_swap1);
     }
 }

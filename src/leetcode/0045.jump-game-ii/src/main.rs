@@ -35,7 +35,7 @@ pub fn jump1(nums: Vec<i32>) -> i32 {
 
 pub type SolutionFn = fn(Vec<i32>) -> i32;
 
-fn check_jump(func: SolutionFn) {
+fn check_solution(func: SolutionFn) {
     let nums = vec![2, 3, 1, 1, 4];
     assert_eq!(func(nums), 2);
 
@@ -50,15 +50,15 @@ fn check_jump(func: SolutionFn) {
 }
 
 fn main() {
-    check_jump(jump1);
+    check_solution(jump1);
 }
 
 #[cfg(test)]
 mod tests {
-    use super::{check_jump, jump1};
+    use super::{check_solution, jump1};
 
     #[test]
     fn test_jump1() {
-        check_jump(jump1);
+        check_solution(jump1);
     }
 }

@@ -53,7 +53,7 @@ pub fn can_jump2(nums: Vec<i32>) -> bool {
 
 pub type SolutionFn = fn(Vec<i32>) -> bool;
 
-fn check_can_jump(func: SolutionFn) {
+fn check_solution(func: SolutionFn) {
     let nums = vec![2, 3, 1, 1, 4];
     assert!(func(nums));
 
@@ -62,21 +62,21 @@ fn check_can_jump(func: SolutionFn) {
 }
 
 fn main() {
-    check_can_jump(can_jump1);
-    check_can_jump(can_jump2);
+    check_solution(can_jump1);
+    check_solution(can_jump2);
 }
 
 #[cfg(test)]
 mod tests {
-    use super::{can_jump1, can_jump2, check_can_jump};
+    use super::{can_jump1, can_jump2, check_solution};
 
     #[test]
     fn test_can_jump1() {
-        check_can_jump(can_jump1);
+        check_solution(can_jump1);
     }
 
     #[test]
     fn test_can_jump2() {
-        check_can_jump(can_jump2);
+        check_solution(can_jump2);
     }
 }
