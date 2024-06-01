@@ -1,5 +1,5 @@
 [package]
-name = "lc-0175-combine-two-tables"
+name = "lc-0182-duplicate-emails"
 version = "0.1.0"
 edition = "2021"
 publish = false
