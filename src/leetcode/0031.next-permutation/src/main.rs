@@ -2,13 +2,13 @@
 // Use of this source is governed by General Public License that can be found
 // in the LICENSE file.
 
-pub fn next_permutation1(nums: &mut Vec<i32>) {
+pub fn next_permutation1() {
     todo!()
 }
 
-pub type SolutionFn = fn(&mut Vec<i32>);
+pub type SolutionFn = fn();
 
-fn check_solution(func: SolutionFn) {
+fn check_solution(_func: SolutionFn) {
     todo!()
 }
 
