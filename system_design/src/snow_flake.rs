@@ -33,7 +33,6 @@ impl SnowFlake {
         })
     }
 
-    #[must_use]
     fn timestamp_millis(twitter_epoch: Duration) -> Result<u64, SystemTimeError> {
         let now = SystemTime::now();
         let duration = now
@@ -42,7 +41,6 @@ impl SnowFlake {
         Ok(duration.as_millis() as u64)
     }
 
-    #[must_use]
     pub fn generate_id(&mut self) -> Result<u64, SystemTimeError> {
         let now = Self::timestamp_millis(self.twitter_epoch)?;
         debug_assert!(now >= self.now);
@@ -67,7 +65,7 @@ impl SnowFlake {
         self.now << (64 - 41)
             | (self.data_center_id >> 3 << 17)
             | (self.machine_id >> 3 << 12)
-            | (self.next_seq_no >> 4)
+            | (self.next_seq_no & 0b111_111_111_111)
     }
 }
 
