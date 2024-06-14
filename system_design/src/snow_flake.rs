@@ -6,6 +6,7 @@ use std::ops::Sub;
 use std::time::{Duration, SystemTime, SystemTimeError};
 
 const TWITTER_EPOCH: u64 = 1_288_834_974_657;
+const MAX_SEQUENCE_NUM: u64 = 4096;
 
 /// Generate global uuid based on SnowFlake algorithm from twitter.
 #[derive(Debug, Clone)]
@@ -45,14 +46,18 @@ impl SnowFlake {
         let now = Self::timestamp_millis(self.twitter_epoch)?;
         debug_assert!(now >= self.now);
 
-        if now == self.now {
-            self.next_seq_no += 1;
-            let id = self.next_id();
-            Ok(id)
-        } else {
+        if now > self.now {
             self.now = now;
             self.next_seq_no = 0;
             Ok(self.next_id())
+        } else {
+            self.next_seq_no += 1;
+            if self.next_seq_no >= MAX_SEQUENCE_NUM {
+                self.now += 1;
+                self.next_seq_no = 0;
+            }
+            let id = self.next_id();
+            Ok(id)
         }
     }
 
