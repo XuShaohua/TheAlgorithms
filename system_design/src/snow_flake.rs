@@ -6,16 +6,16 @@ use std::ops::Sub;
 use std::time::{Duration, SystemTime, SystemTimeError};
 
 const TWITTER_EPOCH: u64 = 1_288_834_974_657;
-const MAX_SEQUENCE_NUM: u64 = 4096;
+const MAX_SEQUENCE_NUM: u16 = 4096;
 
 /// Generate global uuid based on SnowFlake algorithm from twitter.
 #[derive(Debug, Clone)]
 pub struct SnowFlake {
     twitter_epoch: Duration,
     now: u64,
-    next_seq_no: u64,
-    data_center_id: u64,
-    machine_id: u64,
+    next_seq_no: u16,
+    data_center_id: u8,
+    machine_id: u8,
 }
 
 impl SnowFlake {
@@ -29,8 +29,8 @@ impl SnowFlake {
             twitter_epoch,
             now,
             next_seq_no: 0,
-            data_center_id: data_center_id as u64,
-            machine_id: machine_id as u64,
+            data_center_id,
+            machine_id,
         })
     }
 
@@ -66,19 +66,27 @@ impl SnowFlake {
     #[must_use]
     #[inline]
     fn next_id(&self) -> u64 {
-        println!("now: {}, seq no: {}", self.now, self.next_seq_no);
-        self.now << (64 - 41)
-            | (self.data_center_id >> 3 << 17)
-            | (self.machine_id >> 3 << 12)
-            | (self.next_seq_no & 0b111_111_111_111)
+        // TODO(Shaohua): Set sign bit to 0
+        (self.now << (64 - 41))
+            | (((self.data_center_id & 0b00_011_111) as u64) << 17)
+            | (((self.machine_id & 0b00_011_111) as u64) << 12)
+            | ((self.next_seq_no & 0b111_111_111_111) as u64)
     }
 }
 
 #[cfg(test)]
 mod tests {
     use std::collections::HashSet;
+    use std::mem::size_of;
+    use std::time::Duration;
 
     use super::SnowFlake;
+
+    #[test]
+    fn test_size() {
+        assert_eq!(size_of::<Duration>(), 16);
+        assert_eq!(size_of::<SnowFlake>(), 32);
+    }
 
     #[test]
     fn test_generate_id() {
