@@ -18,9 +18,12 @@ members = [
   "src/leetcode/2*.*",
   "stack",
   "string",
-  "system_design",
   "tree",
   "vector",
+]
+
+exclude = [
+  "system_design",
 ]
 
 [profile.release]
