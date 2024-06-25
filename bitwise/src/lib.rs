@@ -3,11 +3,11 @@
 // in the LICENSE file.
 
 #![deny(
-warnings,
-clippy::all,
-clippy::cargo,
-clippy::nursery,
-clippy::pedantic
+    warnings,
+    clippy::all,
+    clippy::cargo,
+    clippy::nursery,
+    clippy::pedantic
 )]
 
 pub mod binary_count_trailing_zeros;
