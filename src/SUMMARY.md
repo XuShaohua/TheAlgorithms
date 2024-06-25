@@ -10,6 +10,7 @@
     - [后缀数组 Suffix Array](array/suffix-array.md)
     - [数组相关的问题列表](leetcode/tags/array.md)
 - [动态数组 Vector](vector/index.md)
+    - [BitSet](vector/bitset/index.md)
 - [双端队列 Deque](deque/index.md)
 - [链表 List](list/index.md)
     - [单链表](list/single.md)
@@ -59,6 +60,7 @@
 # 第二部分: 算法 Algorithms
 
 - [算法分析 Analysis](algs-analysis/index.md)
+- [测试用的数据集](dataset/index.md)
 - [排序 Sorting](sorting/index.md)
     - [快速选择 Quickselect](sorting/quick-select.md)
     - [排序相关的问题列表](leetcode/tags/sorting.md)
