@@ -5,6 +5,11 @@
 # 第一部分: 数据结构 Data Structures
 
 - [数组 Arrays](array/index.md)
+    - [数组的基本操作](array/ops.md)
+    - [反转数组](array/reverse.md)
+    - [旋转数组](array/rotate.md)
+    - [排序](array/sorting.md)
+    - [查找](array/search.md)
     - [前缀和数组 Prefix Sum Array](array/prefix-sum-array.md)
     - [前缀和相关的问题列表](leetcode/tags/prefix-sum.md)
     - [后缀数组 Suffix Array](array/suffix-array.md)
