@@ -2,6 +2,12 @@
 // Use of this source is governed by General Public License that can be found
 // in the LICENSE file.
 
+use std::ops::Index;
+
+const BITS_PER_ELEM: usize = 8;
+const TRUE: bool = true;
+const FALSE: bool = false;
+
 #[derive(Debug, Clone)]
 pub struct BitSet {
     bits: Vec<u8>,
@@ -12,8 +18,6 @@ impl Default for BitSet {
         Self::new()
     }
 }
-
-const BITS_PER_ELEM: usize = 8;
 
 impl BitSet {
     #[must_use]
@@ -173,6 +177,18 @@ macro_rules! from_number_impl {
 }
 
 from_number_impl! {i8 i16 i32 i64 i128 isize u8 u16 u32 u64 u128 usize}
+
+impl Index<usize> for BitSet {
+    type Output = bool;
+
+    fn index(&self, index: usize) -> &Self::Output {
+        if self.get(index).expect("index out of range") {
+            &TRUE
+        } else {
+            &FALSE
+        }
+    }
+}
 
 #[cfg(test)]
 mod tests {
