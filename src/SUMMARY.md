@@ -46,11 +46,13 @@
     - [最短路径](graph/shortest-path.md)
     - [最小生成树](graph/minimum-spanning-tree.md)
     - [图相关的问题列表](leetcode/tags/graph.md)
-- [Rust 标准库里的容器类](rust-containers/index.md)
-    - [Vec](rust-containers/vec.md)
-    - [VecDeque](rust-containers/vec-deque.md)
-    - [BTreeMap 与 BTreeSet](rust-containers/btree-map.md)
-    - [HashMap 与 HashSet](rust-containers/hash-map.md)
+- [标准库中的容器类](std-collections/index.md)
+    - [Vec](std-collections/vec.md)
+    - [List](std-collections/list.md)
+    - [VecDeque](std-collections/vec-deque.md)
+    - [BTreeMap 与 BTreeSet](std-collections/btree-map.md)
+    - [HashMap 与 HashSet](std-collections/hash-map.md)
+    - [Binary Heap](std-collections/binary-heap.md)
 
 # 第二部分: 算法 Algorithms
 
