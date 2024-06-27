@@ -11,3 +11,4 @@
 )]
 
 pub mod reverse;
+pub mod rotate;
