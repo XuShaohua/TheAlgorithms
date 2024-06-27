@@ -155,6 +155,7 @@
         - [0136. 只出现一次的数字 Single Number](leetcode/0136.single-number/index.md)
         - [0137. 只出现一次的数字II Single Number II](leetcode/0137.single-number-ii/index.md)
         - [0167. 两数之和 II - 输入有序数组 Two Sum II - Input Array Is Sorted](leetcode/0167.two-sum-ii-input-array-is-sorted/index.md)
+        - [0189. 旋转数组 Rotate Array](leetcode/0189.rotate-array/index.md)
         - [0191. 位1的个数 Number of 1 Bits](leetcode/0191.number-of-1-bits/index.md)
     - [0201-0300](leetcode/by-id/0201-0300.md)
         - [0217. 存在重复元素 Contains Duplicate](leetcode/0217.contains-duplicate/index.md)

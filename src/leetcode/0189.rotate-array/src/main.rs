@@ -28,7 +28,7 @@ pub fn rotate1(nums: &mut Vec<i32>, k: i32) {
     }
 }
 
-// 三次翻转.
+// 三次反转法
 pub fn rotate2(nums: &mut Vec<i32>, k: i32) {
     // 检查边界条件
     if nums.is_empty() || k <= 0 {
@@ -40,44 +40,12 @@ pub fn rotate2(nums: &mut Vec<i32>, k: i32) {
         return;
     }
 
-    // 第一步, 把所有元素做翻转.
+    // 第一步, 把所有元素做反转.
     nums.reverse();
-
-    // 第二步, 找到右移的分界线 k, 把 [0..k] 做翻转; 把 [k..len] 做翻转
+    // 第二步, 找到右移的分界线 k, 把 [0..k] 做反转.
     nums[0..k].reverse();
+    // 第三步, 把 [k..len] 做反转
     nums[k..].reverse();
-}
-
-// 三次翻转, 但使用靠拢型双指针实现反转函数.
-pub fn rotate3(nums: &mut Vec<i32>, k: i32) {
-    fn reverse_array(nums: &mut [i32], mut start: usize, mut end: usize) {
-        let mut temp;
-        while start < end {
-            // nums.swap(start, end);
-            temp = nums[start];
-            nums[start] = nums[end];
-            nums[end] = temp;
-            start += 1;
-            end -= 1;
-        }
-    }
-
-    // 检查边界条件
-    if nums.is_empty() || k <= 0 {
-        return;
-    }
-    let len: usize = nums.len();
-    let k: usize = (k as usize) % len;
-    if k == 0 {
-        return;
-    }
-
-    // 第一步, 把所有元素做翻转.
-    reverse_array(nums, 0, len - 1);
-
-    // 第二步, 找到右移的分界线 k, 把 [0..k] 做翻转; 把 [k..len] 做翻转
-    reverse_array(nums, 0, k - 1);
-    reverse_array(nums, k, len - 1);
 }
 
 pub type SolutionFn = fn(&mut Vec<i32>, i32);
@@ -97,12 +65,11 @@ fn check_solution(func: SolutionFn) {
 fn main() {
     check_solution(rotate1);
     check_solution(rotate2);
-    check_solution(rotate3);
 }
 
 #[cfg(test)]
 mod tests {
-    use super::{check_solution, rotate1, rotate2, rotate3};
+    use super::{check_solution, rotate1, rotate2};
 
     #[test]
     fn test_rotate1() {
@@ -112,10 +79,5 @@ mod tests {
     #[test]
     fn test_rotate2() {
         check_solution(rotate2);
-    }
-
-    #[test]
-    fn test_rotate3() {
-        check_solution(rotate3);
     }
 }
