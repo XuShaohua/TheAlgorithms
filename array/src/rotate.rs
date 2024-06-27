@@ -34,6 +34,21 @@ pub fn rotate_left_1(slice: &mut [i32], k: usize) {
     }
 }
 
+/// 支持向右旋转
+#[allow(clippy::cast_possible_wrap)]
+#[allow(clippy::cast_sign_loss)]
+pub fn rotate_array_1(slice: &mut [i32], k: isize) {
+    let len = slice.len() as isize;
+    if len == 0 {
+        return;
+    }
+    let quot: isize = k / len;
+    let k = if k < 0 { (1 - quot) * len + k } else { k };
+
+    let k = k as usize;
+    rotate_left_1(slice, k);
+}
+
 /// 原地反转数组
 pub fn rotate_left_2(slice: &mut [i32], k: usize) {
     if slice.is_empty() {
@@ -52,9 +67,24 @@ pub fn rotate_left_2(slice: &mut [i32], k: usize) {
     slice.reverse();
 }
 
+/// 支持向右旋转
+#[allow(clippy::cast_possible_wrap)]
+#[allow(clippy::cast_sign_loss)]
+pub fn rotate_array_2(slice: &mut [i32], k: isize) {
+    let len = slice.len() as isize;
+    if len == 0 {
+        return;
+    }
+    let quot: isize = k / len;
+    let k = if k < 0 { (1 - quot) * len + k } else { k };
+
+    let k = k as usize;
+    rotate_left_2(slice, k);
+}
+
 #[cfg(test)]
 mod tests {
-    use super::{rotate_left_1, rotate_left_2};
+    use super::{rotate_array_1, rotate_array_2, rotate_left_1, rotate_left_2};
 
     #[test]
     fn test_rotate_left_1() {
@@ -75,6 +105,28 @@ mod tests {
 
         let mut arr = [1, 2, 3, 4];
         rotate_left_2(&mut arr, 1);
+        assert_eq!(arr, [2, 3, 4, 1]);
+    }
+
+    #[test]
+    fn test_rotate_array_1() {
+        let mut arr = [1, 2, 3, 4];
+        rotate_array_1(&mut arr, -6);
+        assert_eq!(arr, [3, 4, 1, 2]);
+
+        let mut arr = [1, 2, 3, 4];
+        rotate_array_1(&mut arr, -3);
+        assert_eq!(arr, [2, 3, 4, 1]);
+    }
+
+    #[test]
+    fn test_rotate_array_2() {
+        let mut arr = [1, 2, 3, 4];
+        rotate_array_2(&mut arr, -6);
+        assert_eq!(arr, [3, 4, 1, 2]);
+
+        let mut arr = [1, 2, 3, 4];
+        rotate_array_2(&mut arr, -3);
         assert_eq!(arr, [2, 3, 4, 1]);
     }
 }
