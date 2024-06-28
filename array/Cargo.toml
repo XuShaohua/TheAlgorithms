@@ -5,3 +5,14 @@ edition = "2021"
 publish = false
 
 [dependencies]
+
+[dev-dependencies]
+criterion = "0.5.1"
+
+[[bench]]
+name = "reverse"
+harness = false
+
+[[bench]]
+name = "rotate"
+harness = false
