@@ -3,7 +3,8 @@
 // in the LICENSE file.
 
 use std::fmt;
-use std::io::{self, BufRead, BufReader};
+use std::fs::File;
+use std::io::{self, BufRead, BufReader, Read};
 
 pub fn is_sorted<T>(list: &[T]) -> bool
 where
@@ -73,4 +74,35 @@ pub fn read_strings() -> Vec<String> {
         }
     }
     v
+}
+
+/// Generate random integers.
+///
+/// # Errors
+/// Returns error if failed to rand system random file.
+pub fn random_ints(len: usize) -> Result<Vec<i32>, io::Error> {
+    let mut file = File::open("/dev/urandom")?;
+    let mut buf = vec![0; len * 4];
+    file.read_exact(&mut buf)?;
+
+    let mut nums = Vec::with_capacity(len);
+    for i in 0..len {
+        let array: [u8; 4] = [buf[4 * i], buf[4 * i + 1], buf[4 * i + 2], buf[4 * i + 3]];
+        // let mut array: [u8; 4] = [0; 4];
+        // array.swap_with_slice(&mut buf[(i * 4)..(i * 4 + 4)]);
+        nums.push(i32::from_le_bytes(array));
+    }
+    Ok(nums)
+}
+
+#[cfg(test)]
+mod tests {
+    use crate::util::random_ints;
+
+    #[test]
+    fn test_random_ints() {
+        let len = 100;
+        let nums: Vec<i32> = random_ints(len).unwrap();
+        assert_eq!(nums.len(), len);
+    }
 }
