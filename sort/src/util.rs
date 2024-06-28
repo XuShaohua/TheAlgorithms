@@ -85,12 +85,10 @@ pub fn random_ints(len: usize) -> Result<Vec<i32>, io::Error> {
     let mut buf = vec![0; len * 4];
     file.read_exact(&mut buf)?;
 
-    let mut nums = Vec::with_capacity(len);
+    let mut nums = vec![0; len];
     for i in 0..len {
         let array: [u8; 4] = [buf[4 * i], buf[4 * i + 1], buf[4 * i + 2], buf[4 * i + 3]];
-        // let mut array: [u8; 4] = [0; 4];
-        // array.swap_with_slice(&mut buf[(i * 4)..(i * 4 + 4)]);
-        nums.push(i32::from_le_bytes(array));
+        nums[i] = i32::from_le_bytes(array);
     }
     Ok(nums)
 }
