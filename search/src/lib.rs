@@ -12,3 +12,4 @@
 #![allow(clippy::module_name_repetitions)]
 
 pub mod binary_search;
+pub mod linear_search;
