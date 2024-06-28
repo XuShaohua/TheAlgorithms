@@ -8,7 +8,6 @@ const CUTOFF: usize = 24;
 
 /// Devide-and-conquer recurrence, `O(NlogN)`.
 /// Its prime disadvantage is that it uses extra space.
-///
 pub fn merge_sort<T>(arr: &mut [T])
 where
     T: PartialOrd + Copy,
