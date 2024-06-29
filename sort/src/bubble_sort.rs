@@ -2,15 +2,6 @@
 // Use of this source is governed by General Public License that can be
 // found in the LICENSE file.
 
-/// Like insertion sort, but moves through the right part of the array.
-///
-/// On the first pass, the minimum element is exchanged with each of elements
-/// to its left, eventually putting it into the left end of the array.
-/// On the second pass, the second smallest element will be put into position.
-/// And so forth.
-///
-/// Inadaptive sort.
-///
 /// 如果传入的数据是增序排好的, 那么只需要 N-1 次的比较, 以及 0 次的交换;
 /// 平珓情况以及最坏情况下, 使用 N^2/2 次比较以及 N^2/2 次交换.
 pub fn bubble_sort<T>(list: &mut [T])
@@ -20,13 +11,15 @@ where
     let len = list.len();
     for i in 0..len {
         let mut swapped = false;
-        for j in (i + 1..len).rev() {
-            if list[j - 1] > list[j] {
+        // 以 (len - i - 1) 为分隔点, 左侧部分是无序的, 右侧部分是有序的
+        for j in 0..(len - i - 1) {
+            if list[j] > list[j + 1] {
                 swapped = true;
-                list.swap(j - 1, j);
+                list.swap(j, j + 1);
             }
         }
-        // Stop iteration if the collection is sorted.
+
+        // 如果没有元素需要交换, 说明左侧部分也是有序的
         if !swapped {
             break;
         }

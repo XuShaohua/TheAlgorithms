@@ -11,21 +11,6 @@
 )]
 #![allow(clippy::module_name_repetitions)]
 
-mod bubble_sort;
-mod bucket_sort;
-mod counting_sort;
-mod double_sort;
-mod gnome_sort;
-mod heap_sort;
-mod insertion_sort;
-mod merge_sort;
-mod odd_even_sort;
-mod quick_sort;
-mod radix_sort;
-mod selection_sort;
-mod shaker_sort;
-mod shell_sort;
-
 pub use bubble_sort::bubble_sort;
 pub use bucket_sort::bucket_sort;
 pub use counting_sort::{counting_sort, counting_sort_generic};
@@ -40,5 +25,20 @@ pub use radix_sort::radix_sort;
 pub use selection_sort::selection_sort;
 pub use shaker_sort::shaker_sort;
 pub use shell_sort::shell_sort;
+
+mod bubble_sort;
+mod bucket_sort;
+mod counting_sort;
+mod double_sort;
+mod gnome_sort;
+mod heap_sort;
+mod insertion_sort;
+mod merge_sort;
+mod odd_even_sort;
+mod quick_sort;
+mod radix_sort;
+mod selection_sort;
+mod shaker_sort;
+mod shell_sort;
 
 pub mod util;
