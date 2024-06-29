@@ -9,10 +9,24 @@
 3. 重复步骤1-2, 找到第二大的元素, 并放在数组右侧第二个位置
 4. 直到没有元素需要被交换, 整个数组变得有序
 
+下面以 `arr = [9, 4, 1, 7]; `为例来进行演示.
+
+第一阶段, 从左到右遍历数组, 找到最大的元素 `9`, 并将它放在数组最右侧.
+
+![bubble sort stage 1](assets/bubble-sort-pass1.svg)
+
+第一阶段, 从左到右遍历数组, 找到最大的元素 `7`, 并将它放在数组右侧第二个位置.
+
+![bubble sort stage 2](assets/bubble-sort-pass2.svg)
+
+第一阶段, 从左到右遍历数组, 发现数组已排序完成.
+
+![bubble sort stage 3](assets/bubble-sort-pass3.svg)
+
 ## 冒泡算法的实现
 
 ```rust
-{{#include assets/bubble_sort.rs:5:20}}
+{{#include assets/bubble_sort.rs:5:27}}
 ```
 
 ## 冒泡排序的特点
