@@ -13,3 +13,7 @@ criterion = "0.5.1"
 [[bench]]
 name = "bubble_sort"
 harness = false
+
+[[bench]]
+name = "selection_sort"
+harness = false
