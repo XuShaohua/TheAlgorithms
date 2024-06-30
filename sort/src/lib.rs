@@ -22,7 +22,7 @@ pub use merge_sort::merge_sort;
 pub use odd_even_sort::odd_even_sort;
 pub use quick_sort::quick_sort;
 pub use radix_sort::radix_sort;
-pub use selection_sort::selection_sort;
+pub use selection_sort::{selection_sort, selection_sort_recursive};
 pub use shaker_sort::shaker_sort;
 pub use shell_sort::shell_sort;
 

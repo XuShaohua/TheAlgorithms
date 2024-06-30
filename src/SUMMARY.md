@@ -13,6 +13,7 @@
         - [插入排序 Insertion Sort](array/sort/insertion-sort.md)
         - [选择排序 Selection Sort](array/sort/selection-sort.md)
         - [地精排序 Gnome Sort](array/sort/gnome-sort.md)
+        - [Dual Pivot Quick Sort](array/sort/dual-pivot-quick-sort.md)
         - [快速选择 Quick Select](array/sort/quick-select.md)
         - [排序相关的问题列表](leetcode/tags/sort.md)
         - [标准库中排序算法的实现](array/sort/sort-in-std.md)
