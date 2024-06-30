@@ -89,19 +89,27 @@ where
             }
         }
 
-        println!("start: {start}, end: {end}, min: {min_index}, max: {max_index}");
-        println!("start value: {:?}, end: {:?}, min: {:?}, max: {:?}",
-                 list[start], list[end], list[min_index], list[max_index]);
-        if min_index == 497 {
-            println!("list slice: {list:?}");
-        }
-
+        // 交换最小元素
         if start != min_index {
             list.swap(start, min_index);
         }
 
-        if end != max_index && !(start == max_index && end == min_index) {
-            list.swap(end, max_index);
+        // 交换最大元素
+        if end != max_index {
+            if start == min_index {
+                // 如果没有交换最小元素, 说明数组中的元素还没有移动过, 可以直接交换
+                list.swap(end, max_index);
+            } else {
+                // 这时, 最小元素已经移到了最左侧, 我们需要判断这个移位操作给最大值带来的影响.
+                if max_index == start {
+                    // 此时, 最大值已经被移到了 `list[min_index]`.
+                    if end != min_index {
+                        list.swap(end, min_index);
+                    }
+                } else {
+                    list.swap(end, max_index);
+                }
+            }
         }
 
         start += 1;
@@ -109,7 +117,6 @@ where
             end -= 1;
         }
     }
-    println!("END of sort");
 }
 
 #[cfg(test)]
