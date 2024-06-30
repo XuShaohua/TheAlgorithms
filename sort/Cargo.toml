@@ -15,5 +15,9 @@ name = "bubble_sort"
 harness = false
 
 [[bench]]
+name = "insertion_sort"
+harness = false
+
+[[bench]]
 name = "selection_sort"
 harness = false

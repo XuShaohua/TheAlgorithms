@@ -10,10 +10,6 @@
 ///
 /// 其思路是, 先将前 i 个元素调整为增序的, 随着 i 从 0 增大到 n, 整个序列
 /// 就变得是增序了.
-///
-/// 如果传入的数据是增序排好的, 那么只需要 N-1 次的比较, 以及 0 次的交换;
-/// 如果传入的数据是降序排好的, 那么需要 N^2/2 次的比较, 以及 N^2/2 次的交换;
-/// 如果是乱序的, 大概需要 N^2/4 次的比较, 以及 N^2/4 次的交换.
 pub fn insertion_sort<T>(list: &mut [T])
 where
     T: PartialOrd,
@@ -31,8 +27,6 @@ where
 }
 
 /// Insertion sort, no optimization.
-///
-/// Nonadaptive sort.
 pub fn insertion_sort_vanilla<T>(list: &mut [T])
 where
     T: PartialOrd,

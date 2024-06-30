@@ -15,7 +15,7 @@
 ## 线性查找的实现
 
 ```rust
-{{#include assets/linear-search.rs:5:13:}}
+{{#include assets/linear_search.rs:5:13:}}
 ```
 
 ## 线性查找算法的特性
