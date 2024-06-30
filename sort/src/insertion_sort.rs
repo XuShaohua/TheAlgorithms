@@ -2,14 +2,7 @@
 // Use of this source is governed by General Public License that can be
 // found in the LICENSE file.
 
-/// Place one element at a time, inserting each into its proper place.
-///
-/// The elements to the left of the current index are in sorted order during
-/// the sort, but they are not in their final positions, as they may have to
-/// be moved to make room for smaller elements later.
-///
-/// 其思路是, 先将前 i 个元素调整为增序的, 随着 i 从 0 增大到 n, 整个序列
-/// 就变得是增序了.
+/// 其思路是, 先将前 i 个元素调整为增序的, 随着 i 从 0 增大到 n, 整个序列就变得是增序了.
 pub fn insertion_sort<T>(list: &mut [T])
 where
     T: PartialOrd,

@@ -11,7 +11,7 @@ fn criterion_benchmark(c: &mut Criterion) {
     for exp in 1..5 {
         let len: usize = 2 * 10_usize.pow(exp);
         let arr = random_ints(len).expect("Failed to generate random integers");
-        let title1 = format!("std_sort {len}");
+        let title1 = format!("std_sort_for_bubble_sort {len}");
         let title2 = format!("bubble_sort {len}");
         let title3 = format!("bubble_sort_recursive {len}");
         let mut arr_sorted = arr.clone();

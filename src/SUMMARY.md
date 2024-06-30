@@ -38,6 +38,7 @@
     - [双链表](list/double.md)
     - [链表排序 Sort](list/sort/index.md)
         - [冒泡排序 Bubble Sort](list/sort/bubble-sort.md)
+        - [插入排序 Insertion Sort](list/sort/insertion-sort.md)
         - [选择排序 Selection Sort](list/sort/selection-sort.md)
     - [标准库中 List 的实现](list/impl-oflist.md)
     - [跳跃表 SkipList](list/skiplist/index.md)

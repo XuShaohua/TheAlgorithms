@@ -11,7 +11,7 @@ fn criterion_benchmark(c: &mut Criterion) {
     for exp in 1..5 {
         let len: usize = 2 * 10_usize.pow(exp);
         let arr = random_ints(len).expect("Failed to generate random integers");
-        let title1 = format!("std_sort {len}");
+        let title1 = format!("std_sort_for_insertion_sort {len}");
         let title2 = format!("insertion_sort {len}");
 
         c.bench_function(&title1, |b| b.iter(|| {
