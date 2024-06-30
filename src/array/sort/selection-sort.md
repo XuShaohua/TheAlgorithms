@@ -47,7 +47,7 @@
 每次循环时, 我们可以同时找到最大的元素, 然后把它放在数组的右侧部分. 这样的话, 每个循环就可以同时找到最小和最大的元素.
 
 ```rust
-{{#include assets/selection_sort.rs:65:103 }}
+{{#include assets/selection_sort.rs:65:120 }}
 ```
 
 ## 选择排序的特点

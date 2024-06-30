@@ -26,9 +26,37 @@ where
     }
 }
 
+/// 递归形式的冒泡排序算法.
+///
+/// 与迭代形式的算法相比, 递归形式实现的算法, 并没有性能上的优势.
+pub fn bubble_sort_recursive<T>(list: &mut [T])
+where
+    T: PartialOrd,
+{
+    let len = list.len();
+    if len < 2 {
+        return;
+    }
+
+    let mut swapped = false;
+    for j in 0..(len - 1) {
+        if list[j] > list[j + 1] {
+            swapped = true;
+            list.swap(j, j + 1);
+        }
+    }
+
+    // 如果没有元素需要交换, 说明数组有序的
+    if !swapped {
+        return;
+    }
+
+    bubble_sort_recursive(&mut list[..(len - 1)]);
+}
+
 #[cfg(test)]
 mod tests {
-    use super::bubble_sort;
+    use super::{bubble_sort, bubble_sort_recursive};
 
     #[test]
     fn test_bubble_sort() {
@@ -55,6 +83,37 @@ mod tests {
 
         let mut list = "EASYQUESTION".chars().collect::<Vec<_>>();
         bubble_sort(&mut list);
+        assert_eq!(
+            list,
+            ['A', 'E', 'E', 'I', 'N', 'O', 'Q', 'S', 'S', 'T', 'U', 'Y']
+        );
+    }
+
+    #[test]
+    fn test_bubble_sort_recursive() {
+        let mut list = [0, 5, 3, 2, 2];
+        bubble_sort_recursive(&mut list);
+        assert_eq!(list, [0, 2, 2, 3, 5]);
+
+        let mut list = [-2, -5, -45];
+        bubble_sort_recursive(&mut list);
+        assert_eq!(list, [-45, -5, -2]);
+
+        let mut list = [
+            -998_166, -996_360, -995_703, -995_238, -995_066, -994_740, -992_987, -983_833,
+            -987_905, -980_069, -977_640,
+        ];
+        bubble_sort_recursive(&mut list);
+        assert_eq!(
+            list,
+            [
+                -998_166, -996_360, -995_703, -995_238, -995_066, -994_740, -992_987, -987_905,
+                -983_833, -980_069, -977_640,
+            ]
+        );
+
+        let mut list = "EASYQUESTION".chars().collect::<Vec<_>>();
+        bubble_sort_recursive(&mut list);
         assert_eq!(
             list,
             ['A', 'E', 'E', 'I', 'N', 'O', 'Q', 'S', 'S', 'T', 'U', 'Y']

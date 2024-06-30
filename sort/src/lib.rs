@@ -11,7 +11,7 @@
 )]
 #![allow(clippy::module_name_repetitions)]
 
-pub use bubble_sort::bubble_sort;
+pub use bubble_sort::{bubble_sort, bubble_sort_recursive};
 pub use bucket_sort::bucket_sort;
 pub use counting_sort::{counting_sort, counting_sort_generic};
 pub use double_sort::double_sort;

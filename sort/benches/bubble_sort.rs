@@ -13,14 +13,24 @@ fn criterion_benchmark(c: &mut Criterion) {
         let arr = random_ints(len).expect("Failed to generate random integers");
         let title1 = format!("std_sort {len}");
         let title2 = format!("bubble_sort {len}");
+        let title3 = format!("bubble_sort_recursive {len}");
+        let mut arr_sorted = arr.clone();
+        arr_sorted.sort();
 
         c.bench_function(&title1, |b| b.iter(|| {
             let mut arr1 = arr.clone();
             arr1.sort();
+            assert_eq!(arr1, arr_sorted);
         }));
         c.bench_function(&title2, |b| b.iter(|| {
             let mut arr2 = arr.clone();
             bubble_sort(&mut arr2);
+            assert_eq!(arr2, arr_sorted);
+        }));
+        c.bench_function(&title3, |b| b.iter(|| {
+            let mut arr3 = arr.clone();
+            bubble_sort(&mut arr3);
+            assert_eq!(arr3, arr_sorted);
         }));
     }
 }
