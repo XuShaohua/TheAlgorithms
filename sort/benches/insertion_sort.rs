@@ -4,7 +4,7 @@
 
 use criterion::{Criterion, criterion_group, criterion_main};
 
-use sort::{insertion_sort, insertion_sort_recursive};
+use sort::insertion_sort::{binary_insertion_sort, insertion_sort, insertion_sort_recursive};
 use sort::util::random_ints;
 
 fn criterion_benchmark(c: &mut Criterion) {
@@ -14,6 +14,7 @@ fn criterion_benchmark(c: &mut Criterion) {
         let title1 = format!("std_sort_for_insertion_sort {len}");
         let title2 = format!("insertion_sort {len}");
         let title3 = format!("insertion_sort_recursive {len}");
+        let title4 = format!("binary_insertion_sort {len}");
         let mut arr_sorted = arr.clone();
         arr_sorted.sort();
 
@@ -31,6 +32,11 @@ fn criterion_benchmark(c: &mut Criterion) {
             let mut arr3 = arr.clone();
             insertion_sort_recursive(&mut arr3);
             assert_eq!(arr3, arr_sorted);
+        }));
+        c.bench_function(&title4, |b| b.iter(|| {
+            let mut arr4 = arr.clone();
+            binary_insertion_sort(&mut arr4);
+            assert_eq!(arr4, arr_sorted);
         }));
     }
 }
