@@ -2,11 +2,11 @@
 // Use of this source is governed by General Public License that can be
 // found in the LICENSE file.
 
-use crate::insertion_sort;
+use crate::insertion_sort::insertion_sort;
 
 const CUTOFF: usize = 24;
 
-/// Devide-and-conquer recurrence, `O(NlogN)`.
+/// Divide-and-conquer recurrence, `O(NlogN)`.
 /// Its prime disadvantage is that it uses extra space.
 pub fn merge_sort<T>(arr: &mut [T])
 where
@@ -32,7 +32,7 @@ where
     if low >= high {
         return;
     }
-    // Use insertion sort for small subarrays.
+    // Use insertion sort for small sub-arrays.
     if high < low + CUTOFF {
         insertion_sort(&mut arr[low..=high]);
         return;

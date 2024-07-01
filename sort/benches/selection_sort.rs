@@ -4,7 +4,7 @@
 
 use criterion::{Criterion, criterion_group, criterion_main};
 
-use sort::{selection_sort, selection_sort_min_max, selection_sort_recursive};
+use sort::selection_sort::{selection_sort, selection_sort_min_max, selection_sort_recursive};
 use sort::util::random_ints;
 
 fn criterion_benchmark(c: &mut Criterion) {

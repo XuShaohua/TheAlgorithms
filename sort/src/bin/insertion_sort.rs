@@ -2,7 +2,7 @@
 // Use of this source is governed by General Public License that can be found
 // in the LICENSE file.
 
-use sort::insertion_sort;
+use sort::insertion_sort::insertion_sort;
 use sort::util::{is_sorted, read_ints, show_brief};
 
 fn main() {

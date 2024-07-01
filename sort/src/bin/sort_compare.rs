@@ -2,8 +2,13 @@
 // Use of this source is governed by General Public License that can be found
 // in the LICENSE file.
 
-use rand::Rng;
 use std::time::Instant;
+
+use rand::Rng;
+
+use sort::insertion_sort::insertion_sort;
+use sort::selection_sort::selection_sort;
+use sort::shell_sort::shell_sort;
 
 #[derive(Debug, Clone, Copy, PartialEq, Eq)]
 enum SortVariant {
@@ -15,9 +20,9 @@ enum SortVariant {
 fn time_sort(array: &mut [f64], variant: SortVariant) -> u128 {
     let instance = Instant::now();
     match variant {
-        SortVariant::Insertion => sort::insertion_sort(array),
-        SortVariant::Selection => sort::selection_sort(array),
-        SortVariant::Shell => sort::shell_sort(array),
+        SortVariant::Insertion => insertion_sort(array),
+        SortVariant::Selection => selection_sort(array),
+        SortVariant::Shell => shell_sort(array),
     }
     instance.elapsed().as_nanos()
 }
