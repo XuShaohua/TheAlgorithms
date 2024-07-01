@@ -17,7 +17,7 @@ pub use counting_sort::{counting_sort, counting_sort_generic};
 pub use double_sort::double_sort;
 pub use gnome_sort::gnome_sort;
 pub use heap_sort::heap_sort;
-pub use insertion_sort::{insertion_sort, insertion_sort_vanilla};
+pub use insertion_sort::{insertion_sort, insertion_sort_recursive};
 pub use merge_sort::merge_sort;
 pub use odd_even_sort::odd_even_sort;
 pub use quick_sort::quick_sort;
