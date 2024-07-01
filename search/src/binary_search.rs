@@ -2,7 +2,7 @@
 // Use of this source is governed by General Public License that can be
 // found in the LICENSE file.
 
-//#[allow(clippy::comparison_chain)]
+#[allow(clippy::comparison_chain)]
 #[must_use]
 pub fn binary_search<T: PartialOrd>(nums: &[T], target: &T) -> Option<usize> {
     let mut low = 0;

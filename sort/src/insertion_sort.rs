@@ -2,8 +2,6 @@
 // Use of this source is governed by General Public License that can be
 // found in the LICENSE file.
 
-use std::cmp::Ordering;
-
 /// 其思路是, 先将前 i 个元素调整为增序的, 随着 i 从 0 增大到 n, 整个序列就变得是增序了.
 pub fn insertion_sort<T>(list: &mut [T])
 where
@@ -44,28 +42,52 @@ where
     }
 }
 
-fn binary_search<T>(list: &[T], source_index: usize) -> usize
+#[allow(dead_code)]
+fn binary_search_fake<T>(list: &[T], target: &T) -> usize
 where
-    T: Ord,
+    T: PartialOrd,
 {
-    let mut low: usize = 0;
-    let mut high = source_index;
-
-    while low < high {
-        let middle = low / 2 + (high - low) / 2;
-        match list[middle].cmp(&list[source_index]) {
-            Ordering::Less => low = middle + 1,
-            Ordering::Equal => return middle + 1,
-            Ordering::Greater => high = middle - 1,
+    for i in (0..list.len()).rev() {
+        if list[i] < *target {
+            return i + 1;
         }
     }
-    low
+    0
 }
+
+fn binary_search<T>(list: &[T], target: &T) -> usize
+where
+    T: PartialOrd,
+{
+    let mut left = 0;
+    let mut right = list.len() - 1;
+    while left < right {
+        let middle = left + (right - left) / 2;
+        // 找到了相等的元素, 就返回该位置的下一个位置
+        if list[middle] == *target {
+            return middle + 1;
+        } else if list[middle] < *target {
+            left = middle + 1;
+        } else {
+            right = middle;
+        }
+    }
+
+    // 没有找到相等的元素, 就返回期望的位置.
+    if list[list.len() - 1] < *target {
+        return list.len();
+    }
+    if list[0] > *target {
+        return 0;
+    }
+    left
+}
+
 
 /// 二分插入排序法 binary insertion sort
 pub fn binary_insertion_sort<T>(list: &mut [T])
 where
-    T: Ord,
+    T: PartialOrd + std::fmt::Debug,
 {
     let len = list.len();
     if len < 2 {
@@ -73,8 +95,7 @@ where
     }
 
     for i in 1..len {
-        let target_pos = binary_search(list, i);
-        debug_assert!(target_pos <= i);
+        let target_pos = binary_search(&list[..i], &list[i]);
         for j in (target_pos..i).rev() {
             list.swap(j, j + 1);
         }
@@ -83,7 +104,7 @@ where
 
 #[cfg(test)]
 mod tests {
-    use super::{binary_insertion_sort, insertion_sort, insertion_sort_recursive};
+    use super::{binary_insertion_sort, binary_search, binary_search_fake, insertion_sort, insertion_sort_recursive};
 
     #[test]
     fn test_insertion_sort() {
@@ -145,6 +166,44 @@ mod tests {
             list,
             ['A', 'E', 'E', 'I', 'N', 'O', 'Q', 'S', 'S', 'T', 'U', 'Y']
         );
+    }
+
+    #[test]
+    fn test_binary_search_fake() {
+        let list = [0, 5, 3, 2, 2];
+        let pos = binary_search_fake(&list[0..1], &5);
+        assert_eq!(pos, 1);
+
+        let list = [0, 5, 3, 2, 2];
+        let pos = binary_search_fake(&list[0..2], &3);
+        assert_eq!(pos, 1);
+
+        let list = [-5, -2, -45];
+        let pos = binary_search_fake(&list[0..1], &(-2));
+        assert_eq!(pos, 1);
+
+        let list = [-5, -2, -45];
+        let pos = binary_search_fake(&list[0..2], &(-45));
+        assert_eq!(pos, 0);
+    }
+
+    #[test]
+    fn test_binary_search() {
+        let list = [0, 5, 3, 2, 2];
+        let pos = binary_search(&list[0..1], &5);
+        assert_eq!(pos, 1);
+
+        let list = [0, 5, 3, 2, 2];
+        let pos = binary_search(&list[0..2], &3);
+        assert_eq!(pos, 1);
+
+        let list = [-5, -2, -45];
+        let pos = binary_search(&list[0..1], &(-2));
+        assert_eq!(pos, 1);
+
+        let list = [-5, -2, -45];
+        let pos = binary_search(&list[0..2], &(-45));
+        assert_eq!(pos, 0);
     }
 
     #[test]
