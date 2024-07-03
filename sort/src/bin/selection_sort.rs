@@ -7,6 +7,8 @@ use sort::util::{is_sorted, read_ints, show_brief};
 
 fn main() {
     let mut list = read_ints();
+    println!("[SelectionSort] LIST:");
+    show_brief(&list);
     selection_sort(&mut list);
     assert!(is_sorted(&list));
     println!("RESULT:");

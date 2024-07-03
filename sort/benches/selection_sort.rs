@@ -4,7 +4,7 @@
 
 use criterion::{Criterion, criterion_group, criterion_main};
 
-use sort::selection_sort::{selection_sort, selection_sort_min_max, selection_sort_recursive};
+use sort::selection_sort::{selection_sort, selection_sort_min_max, selection_sort_recursive, stable_selection_sort};
 use sort::util::random_ints;
 
 fn criterion_benchmark(c: &mut Criterion) {
@@ -15,6 +15,7 @@ fn criterion_benchmark(c: &mut Criterion) {
         let title2 = format!("selection_sort {len}");
         let title3 = format!("selection_sort_recursive {len}");
         let title4 = format!("selection_sort_min_max {len}");
+        let title5 = format!("stable_selection_sort {len}");
         let mut arr_sorted = arr.clone();
         arr_sorted.sort();
 
@@ -37,6 +38,11 @@ fn criterion_benchmark(c: &mut Criterion) {
             let mut arr4 = arr.clone();
             selection_sort_min_max(&mut arr4);
             assert_eq!(arr4, arr_sorted);
+        }));
+        c.bench_function(&title5, |b| b.iter(|| {
+            let mut arr5 = arr.clone();
+            stable_selection_sort(&mut arr5);
+            assert_eq!(arr5, arr_sorted);
         }));
     }
 }
