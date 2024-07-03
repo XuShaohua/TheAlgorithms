@@ -25,3 +25,7 @@ harness = false
 [[bench]]
 name = "selection_sort"
 harness = false
+
+[[bench]]
+name = "shell_sort"
+harness = false
