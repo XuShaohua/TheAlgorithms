@@ -12,8 +12,8 @@ where
     topdown_merge_sort(arr);
 }
 
-/// 对于元素个数为 `N` 的数组, 自顶向下的归并排序 (top-down merge sort) 最多使用 `N log(N)` 次比较
-/// 以及 `6N log(N)` 次元素访问操作.
+/// 对于元素个数为 `N` 的数组, 自顶向下的归并排序 (top-down merge sort)
+/// 最多使用 `N log(N)` 次比较以及 `6N log(N)` 次元素访问操作.
 pub fn topdown_merge_sort<T>(arr: &mut [T])
 where
     T: PartialOrd + Clone,
@@ -52,7 +52,7 @@ where
     T: PartialOrd + Clone,
 {
     // 辅助数组, 先将数组复制一份.
-    let aux = arr[..=high].to_vec();
+    let aux = arr[low..=high].to_vec();
 
     // 再合并回原数组.
     let mut i = low;
@@ -60,16 +60,16 @@ where
 
     for k in low..=high {
         if i > middle {
-            arr[k] = aux[j].clone();
+            arr[k] = aux[j - low].clone();
             j += 1;
         } else if j > high {
-            arr[k] = aux[i].clone();
+            arr[k] = aux[i - low].clone();
             i += 1;
-        } else if aux[j] < aux[i] {
-            arr[k] = aux[j].clone();
+        } else if aux[j - low] < aux[i - low] {
+            arr[k] = aux[j - low].clone();
             j += 1;
         } else {
-            arr[k] = aux[i].clone();
+            arr[k] = aux[i - low].clone();
             i += 1;
         }
     }
@@ -86,8 +86,13 @@ where
 }
 
 /// 排序 `arr[low..=high]` 部分, 如果元数较少, 就使用插入排序.
-fn sort_cutoff_with_insertion<T>(arr: &mut [T], low: usize, high: usize, cutoff: usize, aux: &mut Vec<T>)
-where
+fn sort_cutoff_with_insertion<T>(
+    arr: &mut [T],
+    low: usize,
+    high: usize,
+    cutoff: usize,
+    aux: &mut Vec<T>,
+) where
     T: PartialOrd + Clone,
 {
     if low >= high {
@@ -122,7 +127,7 @@ where
 {
     // 辅助数组, 先将数组复制一份.
     aux.clear();
-    for item in &arr[..=high] {
+    for item in &arr[low..=high] {
         aux.push(item.clone());
     }
 
@@ -132,16 +137,16 @@ where
 
     for k in low..=high {
         if i > middle {
-            arr[k] = aux[j].clone();
+            arr[k] = aux[j - low].clone();
             j += 1;
         } else if j > high {
-            arr[k] = aux[i].clone();
+            arr[k] = aux[i - low].clone();
             i += 1;
-        } else if aux[j] < aux[i] {
-            arr[k] = aux[j].clone();
+        } else if aux[j - low] < aux[i - low] {
+            arr[k] = aux[j - low].clone();
             j += 1;
         } else {
-            arr[k] = aux[i].clone();
+            arr[k] = aux[i - low].clone();
             i += 1;
         }
     }
@@ -152,14 +157,19 @@ pub fn shell_merge_sort<T>(arr: &mut [T])
 where
     T: PartialOrd + Clone,
 {
-    const CUTOFF: usize = 48;
+    const CUTOFF: usize = 78;
     let mut aux = arr.to_vec();
     sort_cutoff_with_shell(arr, 0, arr.len() - 1, CUTOFF, &mut aux);
 }
 
 /// 排序 `arr[low..=high]` 部分, 如果元数较少, 就使用希尔排序.
-fn sort_cutoff_with_shell<T>(arr: &mut [T], low: usize, high: usize, cutoff: usize, aux: &mut Vec<T>)
-where
+fn sort_cutoff_with_shell<T>(
+    arr: &mut [T],
+    low: usize,
+    high: usize,
+    cutoff: usize,
+    aux: &mut Vec<T>,
+) where
     T: PartialOrd + Clone,
 {
     if low >= high {
