@@ -3,34 +3,25 @@
 // found in the LICENSE file.
 
 /// Shell sort is a simple extension to insertion sort that allows exchanging
-/// elements that far apart. It produces partially sorted array (h-sorted array).
+/// elements that far apart.
 ///
-/// Shell sort is useful even for large arrays. It also performs well on arrays
-/// that are in arbitrary order.
-///
-/// 拆解成由 h 个元素隔开的序列, 依次降低h间隔的值, 直到其为1.
-/// 主要是为了减少元素交换的次数.
-/// 最差情况下 O(N^(3/2))
-///
-/// 这里的 h 值是由大到小变化的, 就是说, 每次移动的步长是h, 就是为了减少元素被
-/// 移动的次数, 当 h = 1 时, 整个序列就完成排序了.
+/// It produces partially sorted array (h-sorted array).
 pub fn shell_sort<T>(arr: &mut [T])
 where
     T: PartialOrd,
 {
+    const FACTOR: usize = 3;
     let len = arr.len();
 
-    // Calculate the first h value, roughly len/3.
+    // 计算第一个 gap 的值, 大概是 len/3
     let mut h = 1;
-    while h < len / 3 {
-        h = 3 * h + 1;
+    while h < len / FACTOR {
+        h = FACTOR * h + 1;
     }
 
     while h >= 1 {
-        // h-sort the array
+        // 使用插入排序, 将 `arr[0..h]` 排序好
         for i in h..len {
-            // for (j = i; j >= h; j -= h)
-            // for j in (h..=i).rev().step_by(h)
             let mut j = i;
             while j >= h && arr[j - h] > arr[j] {
                 arr.swap(j - h, j);
@@ -38,7 +29,7 @@ where
             }
         }
 
-        h /= 3;
+        h /= FACTOR;
     }
 }
 

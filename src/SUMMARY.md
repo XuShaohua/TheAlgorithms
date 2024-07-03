@@ -18,6 +18,7 @@
         - [堆排序 Heap Sort](array/sort/heap-sort.md)
         - [基数排序 Radix Sort](array/sort/radix-sort.md)
         - [计数排序 Counting Sort](array/sort/counting-sort.md)
+        - [希尔排序 Shell Sort](array/sort/shell-sort.md)
         - [侏儒排序 Gnome Sort](array/sort/gnome-sort.md)
         - [快速选择 Quick Select](array/sort/quick-select.md)
         - [排序相关的问题列表](leetcode/tags/sort.md)
