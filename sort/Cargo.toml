@@ -23,6 +23,10 @@ name = "insertion_sort"
 harness = false
 
 [[bench]]
+name = "merge_sort"
+harness = false
+
+[[bench]]
 name = "selection_sort"
 harness = false
 
