@@ -157,7 +157,7 @@ pub fn shell_merge_sort<T>(arr: &mut [T])
 where
     T: PartialOrd + Clone,
 {
-    const CUTOFF: usize = 78;
+    const CUTOFF: usize = 72;
     let mut aux = arr.to_vec();
     sort_cutoff_with_shell(arr, 0, arr.len() - 1, CUTOFF, &mut aux);
 }
