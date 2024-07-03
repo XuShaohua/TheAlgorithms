@@ -2,8 +2,8 @@
 // Use of this source is governed by General Public License that can be found
 // in the LICENSE file.
 
-pub fn heap_sort<T: PartialOrd>(list: &mut [T]) {
-    let max_heap = list;
+pub fn heap_sort<T: PartialOrd>(arr: &mut [T]) {
+    let max_heap = arr;
 
     // 建立初始堆.
     // 从最后一个非叶节点开始, 进行下移操作.

@@ -9,14 +9,14 @@
 /// 不是stable sort.
 ///
 /// 优化:
-/// 1. 当 subarray 元素小于 10 时, 可以使用 insertion sort
+/// 1. 当 sub-array 元素小于 10 时, 可以使用 insertion sort
 /// 2. 在分区时选择 median 作为 pivot, median-of-3 random items.
-pub fn quick_sort<T>(vec: &mut [T])
+pub fn quick_sort<T>(arr: &mut [T])
 where
     T: Clone + PartialOrd,
 {
-    if !vec.is_empty() {
-        quick_sort_helper(vec, 0, vec.len() - 1);
+    if !arr.is_empty() {
+        quick_sort_helper(arr, 0, arr.len() - 1);
     }
 }
 

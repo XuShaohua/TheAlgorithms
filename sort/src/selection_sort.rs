@@ -2,12 +2,12 @@
 // Use of this source is governed by General Public License that can be
 // found in the LICENSE file.
 
-pub fn selection_sort<T>(list: &mut [T])
+pub fn selection_sort<T>(arr: &mut [T])
 where
     T: PartialOrd,
 {
-    let len = list.len();
-    if list.len() < 2 {
+    let len = arr.len();
+    if arr.len() < 2 {
         return;
     }
     for i in 0..(len - 1) {
@@ -15,20 +15,20 @@ where
         // 找到最小元素的索引
         let mut min_index = i;
         for j in (i + 1)..len {
-            if list[j] < list[min_index] {
+            if arr[j] < arr[min_index] {
                 min_index = j;
             }
         }
 
         // 如果最小元素不是 `list[i]`, 就交换两个元素
         if i != min_index {
-            list.swap(i, min_index);
+            arr.swap(i, min_index);
         }
     }
 }
 
 /// 递归实现选择排序
-pub fn selection_sort_recursive<T>(list: &mut [T])
+pub fn selection_sort_recursive<T>(arr: &mut [T])
 where
     T: PartialOrd,
 {
@@ -47,30 +47,30 @@ where
         }
     }
 
-    let len = list.len();
-    if list.len() < 2 {
+    let len = arr.len();
+    if arr.len() < 2 {
         return;
     }
 
-    let min_index = get_min_index(list, 0, len);
+    let min_index = get_min_index(arr, 0, len);
     // 将最小的元素交换到最左侧
     if min_index != 0 {
-        list.swap(0, min_index);
+        arr.swap(0, min_index);
     }
 
     // 递归排序剩下的元素
-    selection_sort_recursive(&mut list[1..]);
+    selection_sort_recursive(&mut arr[1..]);
 }
 
 /// 选择排序的一个小优化.
 ///
 /// 将最小的元素放在左侧的同时, 将最大的元素放在右侧.
-pub fn selection_sort_min_max<T>(list: &mut [T])
+pub fn selection_sort_min_max<T>(arr: &mut [T])
 where
     T: PartialOrd + std::fmt::Debug,
 {
-    let len = list.len();
-    if list.len() < 2 {
+    let len = arr.len();
+    if arr.len() < 2 {
         return;
     }
 
@@ -81,33 +81,33 @@ where
         let mut min_index = start;
         let mut max_index = start;
         for i in start..=end {
-            if list[i] < list[min_index] {
+            if arr[i] < arr[min_index] {
                 min_index = i;
             }
-            if list[i] > list[max_index] {
+            if arr[i] > arr[max_index] {
                 max_index = i;
             }
         }
 
         // 交换最小元素
         if start != min_index {
-            list.swap(start, min_index);
+            arr.swap(start, min_index);
         }
 
         // 交换最大元素
         if end != max_index {
             if start == min_index {
                 // 如果没有交换最小元素, 说明数组中的元素还没有移动过, 可以直接交换
-                list.swap(end, max_index);
+                arr.swap(end, max_index);
             } else {
                 // 这时, 最小元素已经移到了最左侧, 我们需要判断这个移位操作给最大值带来的影响.
                 if max_index == start {
                     // 此时, 最大值已经被移到了 `list[min_index]`.
                     if end != min_index {
-                        list.swap(end, min_index);
+                        arr.swap(end, min_index);
                     }
                 } else {
-                    list.swap(end, max_index);
+                    arr.swap(end, max_index);
                 }
             }
         }

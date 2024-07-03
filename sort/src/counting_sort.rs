@@ -4,22 +4,22 @@
 
 use std::ops::Sub;
 
-pub fn counting_sort_generic<T>(nums: &mut [T])
+pub fn counting_sort_generic<T>(arr: &mut [T])
 where
     T: Copy + Default + Ord + Sub<Output = T> + Into<usize>,
 {
-    if nums.is_empty() {
+    if arr.is_empty() {
         return;
     }
-    let min_num: T = nums.iter().min().copied().unwrap_or_default();
-    let max_num: T = nums.iter().max().copied().unwrap_or_default();
+    let min_num: T = arr.iter().min().copied().unwrap_or_default();
+    let max_num: T = arr.iter().max().copied().unwrap_or_default();
     let range: T = max_num - min_num;
     let size: usize = range.into();
     // 构造计数数组
     let mut counts = vec![0_usize; size];
 
     // 遍历数组, 更新计数数组
-    for num in nums.iter() {
+    for num in arr.iter() {
         let delta: T = *num - min_num;
         let index: usize = delta.into();
         counts[index] += 1;
@@ -31,16 +31,16 @@ where
     }
 
     // 反向填充目标数组
-    let len = nums.len();
+    let len = arr.len();
     let mut mirror: Vec<T> = Vec::new();
-    mirror.extend_from_slice(nums);
+    mirror.extend_from_slice(arr);
 
     for i in (0..len).rev() {
         let num: T = mirror[i];
         let diff: T = num - min_num;
         let index: usize = counts[diff.into()];
         // 把 num 放在对应的位置
-        nums[index - 1] = num;
+        arr[index - 1] = num;
 
         // 同时更新 counts
         counts[index] -= 1;

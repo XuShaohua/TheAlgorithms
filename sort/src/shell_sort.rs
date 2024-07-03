@@ -14,13 +14,13 @@
 ///
 /// 这里的 h 值是由大到小变化的, 就是说, 每次移动的步长是h, 就是为了减少元素被
 /// 移动的次数, 当 h = 1 时, 整个序列就完成排序了.
-pub fn shell_sort<T>(list: &mut [T])
+pub fn shell_sort<T>(arr: &mut [T])
 where
     T: PartialOrd,
 {
-    let len = list.len();
+    let len = arr.len();
 
-    // Calculate the first h value, roughtly len/3.
+    // Calculate the first h value, roughly len/3.
     let mut h = 1;
     while h < len / 3 {
         h = 3 * h + 1;
@@ -32,8 +32,8 @@ where
             // for (j = i; j >= h; j -= h)
             // for j in (h..=i).rev().step_by(h)
             let mut j = i;
-            while j >= h && list[j - h] > list[j] {
-                list.swap(j - h, j);
+            while j >= h && arr[j - h] > arr[j] {
+                arr.swap(j - h, j);
                 j -= h;
             }
         }

@@ -3,7 +3,7 @@
 // in the LICENSE file.
 
 #[allow(clippy::cast_possible_truncation)]
-pub fn radix_sort(nums: &mut [u32]) {
+pub fn radix_sort(arr: &mut [u32]) {
     const fn num_digits(mut num: u32) -> usize {
         let mut count: usize = 0;
         while num != 0 {
@@ -13,11 +13,11 @@ pub fn radix_sort(nums: &mut [u32]) {
         count
     }
 
-    if nums.is_empty() {
+    if arr.is_empty() {
         return;
     }
     // 获取最大的位数
-    let max_digits: usize = nums
+    let max_digits: usize = arr
         .iter()
         .map(|num| num_digits(*num))
         .max()
@@ -27,7 +27,7 @@ pub fn radix_sort(nums: &mut [u32]) {
         // bucket 长度为10, 代表了数字 0~9.
         let mut buckets = vec![vec![]; 10];
 
-        for num in nums.iter() {
+        for num in arr.iter() {
             // 这个 index 是关键, 它是每个元素在当前位上的数字
             let index: u32 = *num / 10_u32.pow(i as u32) % 10;
             buckets[index as usize].push(*num);
@@ -37,7 +37,7 @@ pub fn radix_sort(nums: &mut [u32]) {
         for bucket in buckets {
             for num in bucket {
                 // 取出对应的元素, 更新到原始数组中
-                nums[index] = num;
+                arr[index] = num;
                 index += 1;
             }
         }

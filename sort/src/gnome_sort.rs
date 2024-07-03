@@ -10,10 +10,8 @@ pub fn gnome_sort<T>(arr: &mut [T])
 where
     T: PartialOrd,
 {
-    let n = arr.len();
-
     let mut index = 0;
-    while index < n {
+    while index < arr.len() {
         if index == 0 || arr[index] >= arr[index - 1] {
             index += 1;
         } else {

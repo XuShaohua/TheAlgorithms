@@ -6,22 +6,22 @@
 /// but does it both from left to right and right to left.
 ///
 /// Hence, it's called "Double sort"
-pub fn double_sort<T>(list: &mut [T])
+pub fn double_sort<T>(arr: &mut [T])
 where
     T: PartialOrd,
 {
-    let len = list.len();
+    let len = arr.len();
 
     for _ in 0..=(len - 1) / 2 {
         // No need to traverse to end of list
         for i in 0..(len - 1) {
-            if list[i + 1] < list[i] {
+            if arr[i + 1] < arr[i] {
                 // Apply bubble sort from left to right (forward)
-                list.swap(i + 1, i);
+                arr.swap(i + 1, i);
             }
-            if list[len - 1 - i] < list[len - 2 - i] {
+            if arr[len - 1 - i] < arr[len - 2 - i] {
                 // Apply bubble sort from right to left (backward)
-                list.swap(len - 1 - i, len - 2 - i);
+                arr.swap(len - 1 - i, len - 2 - i);
             }
         }
     }

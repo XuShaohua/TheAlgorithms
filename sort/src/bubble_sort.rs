@@ -4,18 +4,18 @@
 
 /// 如果传入的数据是增序排好的, 那么只需要 N-1 次的比较, 以及 0 次的交换;
 /// 平珓情况以及最坏情况下, 使用 N^2/2 次比较以及 N^2/2 次交换.
-pub fn bubble_sort<T>(list: &mut [T])
+pub fn bubble_sort<T>(arr: &mut [T])
 where
     T: PartialOrd,
 {
-    let len = list.len();
+    let len = arr.len();
     for i in 0..len {
         let mut swapped = false;
         // 以 (len - i - 1) 为分隔点, 左侧部分是无序的, 右侧部分是有序的
         for j in 0..(len - i - 1) {
-            if list[j] > list[j + 1] {
+            if arr[j] > arr[j + 1] {
                 swapped = true;
-                list.swap(j, j + 1);
+                arr.swap(j, j + 1);
             }
         }
 

@@ -4,11 +4,11 @@
 
 /// Shaker sort, or Cocktail sort, is an extension to bubble sort, by operating
 /// in two directions.
-pub fn shaker_sort<T>(list: &mut [T])
+pub fn shaker_sort<T>(arr: &mut [T])
 where
     T: PartialOrd,
 {
-    let len = list.len();
+    let len = arr.len();
     let mut start = 0;
     let mut end = len - 1;
     let mut swapped = true;
@@ -18,8 +18,8 @@ where
         swapped = false;
 
         for i in start..end {
-            if list[i] > list[i + 1] {
-                list.swap(i, i + 1);
+            if arr[i] > arr[i + 1] {
+                arr.swap(i, i + 1);
                 swapped = true;
             }
         }
@@ -33,8 +33,8 @@ where
 
         // From right to left, doing the same comparison.
         for i in (start..end).rev() {
-            if list[i] > list[i + 1] {
-                list.swap(i, i + 1);
+            if arr[i] > arr[i + 1] {
+                arr.swap(i, i + 1);
                 swapped = true;
             }
         }
