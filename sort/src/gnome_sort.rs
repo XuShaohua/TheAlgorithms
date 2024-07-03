@@ -12,9 +12,11 @@ where
 {
     let mut index = 0;
     while index < arr.len() {
+        // 当前元素比左侧元素大, 是有序的
         if index == 0 || arr[index] >= arr[index - 1] {
             index += 1;
         } else {
+            // 当前元素比左侧元素小, 交换它们
             arr.swap(index, index - 1);
             index -= 1;
         }
