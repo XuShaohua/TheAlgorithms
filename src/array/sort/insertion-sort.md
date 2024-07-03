@@ -54,7 +54,7 @@
 算法的实现如下所示:
 
 ```rust
-{{#include assets/insertion_sort.rs:47:82}}
+{{#include assets/insertion_sort.rs:58:102}}
 ```
 
 ## 插入排序的特点

@@ -83,7 +83,6 @@ where
     left
 }
 
-
 /// 二分插入排序法 binary insertion sort
 pub fn binary_insertion_sort<T>(list: &mut [T])
 where
