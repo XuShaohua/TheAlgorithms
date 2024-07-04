@@ -367,9 +367,67 @@ fn three_way_merge<T>(
     }
 }
 
+/// 原地归并排序
+///
+/// 尽管它不需要辅助数组, 但它的性能差得多, 时间复杂度是 `O(N^ Log(N))`, 而默认实现的归并排序的
+/// 时间复杂度是 `O(N Log(N))`.
+pub fn in_place_merge_sort<T>(arr: &mut [T])
+where
+    T: PartialOrd,
+{
+    if arr.is_empty() {
+        return;
+    }
+    sort_in_place(arr, 0, arr.len() - 1);
+}
+
+/// 原地排序 `arr[low..=high]`
+fn sort_in_place<T>(arr: &mut [T], low: usize, high: usize)
+where
+    T: PartialOrd,
+{
+    if low >= high {
+        return;
+    }
+
+    let middle = low + (high - low) / 2;
+    sort_in_place(arr, low, middle);
+    sort_in_place(arr, middle + 1, high);
+
+    if arr[middle] > arr[middle + 1] {
+        merge_in_place(arr, low, middle, high);
+    }
+}
+
+/// 原地合并 `arr[low..=middle]` 以及 `arr[middle+1..=high]` 两个子数组.
+#[allow(clippy::needless_range_loop)]
+fn merge_in_place<T>(arr: &mut [T], mut low: usize, mut middle: usize, high: usize)
+where
+    T: PartialOrd,
+{
+    let mut low2 = middle + 1;
+    debug_assert!(arr[middle] > arr[low2]);
+
+    while low <= middle && low2 <= high {
+        if arr[low] <= arr[low2] {
+            low += 1;
+        } else {
+            // 将所有元素右移, 并将 arr[low2] 插入到 arr[low] 所在位置. 这一步很慢.
+            for index in (low..low2).rev() {
+                arr.swap(index, index + 1);
+            }
+
+            // 更新所有的索引
+            low += 1;
+            middle += 1;
+            low2 += 1;
+        }
+    }
+}
+
 #[cfg(test)]
 mod tests {
-    use super::{bottom_up_merge_sort, insertion_merge_sort, shell_merge_sort, three_way_merge_sort, topdown_merge_sort};
+    use super::{bottom_up_merge_sort, in_place_merge_sort, insertion_merge_sort, shell_merge_sort, three_way_merge_sort, topdown_merge_sort};
 
     #[test]
     fn test_topdown_merge_sort() {
@@ -520,6 +578,37 @@ mod tests {
 
         let mut list = "EASYQUESTION".chars().collect::<Vec<_>>();
         three_way_merge_sort(&mut list);
+        assert_eq!(
+            list,
+            ['A', 'E', 'E', 'I', 'N', 'O', 'Q', 'S', 'S', 'T', 'U', 'Y']
+        );
+    }
+
+    #[test]
+    fn test_in_place_merge_sort() {
+        let mut list = [0, 5, 3, 2, 2];
+        in_place_merge_sort(&mut list);
+        assert_eq!(list, [0, 2, 2, 3, 5]);
+
+        let mut list = [-2, -5, -45];
+        in_place_merge_sort(&mut list);
+        assert_eq!(list, [-45, -5, -2]);
+
+        let mut list = [
+            -998_166, -996_360, -995_703, -995_238, -995_066, -994_740, -992_987, -983_833,
+            -987_905, -980_069, -977_640,
+        ];
+        in_place_merge_sort(&mut list);
+        assert_eq!(
+            list,
+            [
+                -998_166, -996_360, -995_703, -995_238, -995_066, -994_740, -992_987, -987_905,
+                -983_833, -980_069, -977_640,
+            ]
+        );
+
+        let mut list = "EASYQUESTION".chars().collect::<Vec<_>>();
+        in_place_merge_sort(&mut list);
         assert_eq!(
             list,
             ['A', 'E', 'E', 'I', 'N', 'O', 'Q', 'S', 'S', 'T', 'U', 'Y']
