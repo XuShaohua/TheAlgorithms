@@ -2,15 +2,15 @@
 // Use of this source is governed by General Public License that can be found
 // in the LICENSE file.
 
-use sort::insertion_sort::insertion_sort_recursive;
+use sort::selection_sort::two_way_selection_sort;
 use sort::util::{is_sorted, read_ints, show_brief};
 
 fn main() {
     let mut list = read_ints();
-    println!("[InsertionSort Recursive] LIST:");
+    println!("[TwoWaySelectionSort] LIST:");
     show_brief(&list);
-    insertion_sort_recursive(&mut list);
-    println!("RESULT:");
+    two_way_selection_sort(&mut list);
     assert!(is_sorted(&list));
+    println!("RESULT:");
     show_brief(&list);
 }

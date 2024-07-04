@@ -4,7 +4,7 @@
 
 use criterion::{Criterion, criterion_group, criterion_main};
 
-use sort::bubble_sort::{bubble_sort, bubble_sort_recursive};
+use sort::bubble_sort::{bubble_sort, recursive_bubble_sort};
 use sort::util::random_ints;
 
 fn criterion_benchmark(c: &mut Criterion) {
@@ -13,7 +13,7 @@ fn criterion_benchmark(c: &mut Criterion) {
         let arr = random_ints(len).expect("Failed to generate random integers");
         let title1 = format!("std_sort_for_bubble_sort {len}");
         let title2 = format!("bubble_sort {len}");
-        let title3 = format!("bubble_sort_recursive {len}");
+        let title3 = format!("recursive_bubble_sort {len}");
         let mut arr_sorted = arr.clone();
         arr_sorted.sort();
 
@@ -29,7 +29,7 @@ fn criterion_benchmark(c: &mut Criterion) {
         }));
         c.bench_function(&title3, |b| b.iter(|| {
             let mut arr3 = arr.clone();
-            bubble_sort_recursive(&mut arr3);
+            recursive_bubble_sort(&mut arr3);
             assert_eq!(arr3, arr_sorted);
         }));
     }

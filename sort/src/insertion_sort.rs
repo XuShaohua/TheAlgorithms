@@ -20,7 +20,7 @@ where
 }
 
 /// 递归风格的插入排序算法
-pub fn insertion_sort_recursive<T>(arr: &mut [T])
+pub fn recursive_insertion_sort<T>(arr: &mut [T])
 where
     T: PartialOrd,
 {
@@ -30,7 +30,7 @@ where
     }
 
     // 先将 list[..(len-1)] 中的元素排序.
-    insertion_sort_recursive(&mut arr[..len - 1]);
+    recursive_insertion_sort(&mut arr[..len - 1]);
 
     // 然后将最后一个元素插入到合适的位置.
     for i in (1..len).rev() {
@@ -103,7 +103,7 @@ where
 
 #[cfg(test)]
 mod tests {
-    use super::{binary_insertion_sort, binary_search, binary_search_fake, insertion_sort, insertion_sort_recursive};
+    use super::{binary_insertion_sort, binary_search, binary_search_fake, insertion_sort, recursive_insertion_sort};
 
     #[test]
     fn test_insertion_sort() {
@@ -137,20 +137,20 @@ mod tests {
     }
 
     #[test]
-    fn test_insertion_sort_recursive() {
+    fn test_recursive_insertion_sort() {
         let mut list = [0, 5, 3, 2, 2];
-        insertion_sort_recursive(&mut list);
+        recursive_insertion_sort(&mut list);
         assert_eq!(list, [0, 2, 2, 3, 5]);
 
         let mut list = [-2, -5, -45];
-        insertion_sort_recursive(&mut list);
+        recursive_insertion_sort(&mut list);
         assert_eq!(list, [-45, -5, -2]);
 
         let mut list = [
             -998_166, -996_360, -995_703, -995_238, -995_066, -994_740, -992_987, -983_833,
             -987_905, -980_069, -977_640,
         ];
-        insertion_sort_recursive(&mut list);
+        recursive_insertion_sort(&mut list);
         assert_eq!(
             list,
             [
@@ -160,7 +160,7 @@ mod tests {
         );
 
         let mut list = "EASYQUESTION".chars().collect::<Vec<_>>();
-        insertion_sort_recursive(&mut list);
+        recursive_insertion_sort(&mut list);
         assert_eq!(
             list,
             ['A', 'E', 'E', 'I', 'N', 'O', 'Q', 'S', 'S', 'T', 'U', 'Y']

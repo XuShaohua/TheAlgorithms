@@ -4,7 +4,7 @@
 
 use criterion::{Criterion, criterion_group, criterion_main};
 
-use sort::selection_sort::{selection_sort, selection_sort_min_max, selection_sort_recursive, stable_selection_sort};
+use sort::selection_sort::{recursive_selection_sort, selection_sort, stable_selection_sort, two_way_selection_sort};
 use sort::util::random_ints;
 
 fn criterion_benchmark(c: &mut Criterion) {
@@ -13,8 +13,8 @@ fn criterion_benchmark(c: &mut Criterion) {
         let arr = random_ints(len).expect("Failed to generate random integers");
         let title1 = format!("std_sort_for_selection_sort {len}");
         let title2 = format!("selection_sort {len}");
-        let title3 = format!("selection_sort_recursive {len}");
-        let title4 = format!("selection_sort_min_max {len}");
+        let title3 = format!("recursive_selection_sort {len}");
+        let title4 = format!("two_way_selection_sort {len}");
         let title5 = format!("stable_selection_sort {len}");
         let mut arr_sorted = arr.clone();
         arr_sorted.sort();
@@ -31,12 +31,12 @@ fn criterion_benchmark(c: &mut Criterion) {
         }));
         c.bench_function(&title3, |b| b.iter(|| {
             let mut arr3 = arr.clone();
-            selection_sort_recursive(&mut arr3);
+            recursive_selection_sort(&mut arr3);
             assert_eq!(arr3, arr_sorted);
         }));
         c.bench_function(&title4, |b| b.iter(|| {
             let mut arr4 = arr.clone();
-            selection_sort_min_max(&mut arr4);
+            two_way_selection_sort(&mut arr4);
             assert_eq!(arr4, arr_sorted);
         }));
         c.bench_function(&title5, |b| b.iter(|| {

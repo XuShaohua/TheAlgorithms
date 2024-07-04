@@ -28,7 +28,7 @@ where
 }
 
 /// 递归实现选择排序
-pub fn selection_sort_recursive<T>(arr: &mut [T])
+pub fn recursive_selection_sort<T>(arr: &mut [T])
 where
     T: PartialOrd,
 {
@@ -59,13 +59,13 @@ where
     }
 
     // 递归排序剩下的元素
-    selection_sort_recursive(&mut arr[1..]);
+    recursive_selection_sort(&mut arr[1..]);
 }
 
 /// 选择排序的一个小优化.
 ///
 /// 将最小的元素放在左侧的同时, 将最大的元素放在右侧.
-pub fn selection_sort_min_max<T>(arr: &mut [T])
+pub fn two_way_selection_sort<T>(arr: &mut [T])
 where
     T: PartialOrd + std::fmt::Debug,
 {
@@ -147,7 +147,7 @@ where
 
 #[cfg(test)]
 mod tests {
-    use super::{selection_sort, selection_sort_min_max, selection_sort_recursive, stable_selection_sort};
+    use super::{recursive_selection_sort, selection_sort, stable_selection_sort, two_way_selection_sort};
 
     #[test]
     fn test_selection_sort() {
@@ -174,20 +174,20 @@ mod tests {
     }
 
     #[test]
-    fn test_selection_sort_recursive() {
+    fn test_recursive_selection_sort() {
         let mut list = [0, 5, 3, 2, 2];
-        selection_sort_recursive(&mut list);
+        recursive_selection_sort(&mut list);
         assert_eq!(list, [0, 2, 2, 3, 5]);
 
         let mut list = [-2, -5, -45];
-        selection_sort_recursive(&mut list);
+        recursive_selection_sort(&mut list);
         assert_eq!(list, [-45, -5, -2]);
 
         let mut list = [
             -998_166, -996_360, -995_703, -995_238, -995_066, -994_740, -992_987, -983_833,
             -987_905, -980_069, -977_640,
         ];
-        selection_sort_recursive(&mut list);
+        recursive_selection_sort(&mut list);
         assert_eq!(
             list,
             [
@@ -198,20 +198,20 @@ mod tests {
     }
 
     #[test]
-    fn test_selection_sort_min_max() {
+    fn test_two_way_selection_sort() {
         let mut list = [0, 5, 3, 2, 2];
-        selection_sort_min_max(&mut list);
+        two_way_selection_sort(&mut list);
         assert_eq!(list, [0, 2, 2, 3, 5]);
 
         let mut list = [-2, -5, -45];
-        selection_sort_min_max(&mut list);
+        two_way_selection_sort(&mut list);
         assert_eq!(list, [-45, -5, -2]);
 
         let mut list = [
             -998_166, -996_360, -995_703, -995_238, -995_066, -994_740, -992_987, -983_833,
             -987_905, -980_069, -977_640,
         ];
-        selection_sort_min_max(&mut list);
+        two_way_selection_sort(&mut list);
         assert_eq!(
             list,
             [
@@ -223,7 +223,7 @@ mod tests {
         let mut list = [
             28894, 30024, 31175, 29332, 36942
         ];
-        selection_sort_min_max(&mut list);
+        two_way_selection_sort(&mut list);
         assert_eq!(
             list,
             [
@@ -235,7 +235,7 @@ mod tests {
             3713, 13249, 19224, 13962, -3804, -10101, 19000, 13820, 13993, 799, 14012
             , 3752, -12288,
         ];
-        selection_sort_min_max(&mut list);
+        two_way_selection_sort(&mut list);
         assert_eq!(
             list,
             [
