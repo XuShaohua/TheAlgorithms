@@ -100,7 +100,19 @@
 
 原地归并排序的特点:
 
-- 时间复杂度度是 `O(N^ Log(N))`, 空间复杂度是 `O(1)`
+- 时间复杂度度是 `O(N^2 Log(N))`, 空间复杂度是 `O(1)`
+- c++ 的标准库里有实现类似的算法, 参考 [inplace_merge](https://en.cppreference.com/w/cpp/algorithm/inplace_merge)
+
+## 优化原地归并排序
+
+上面的原地归并排序, 每次只移动一个元素间隔. 类似于希尔排序, 我们可以增大移动元素的间隔 (gap), 来减少
+移动元素的次数.
+
+```rust
+{{#include assets/merge_sort.rs:427:476}}
+```
+
+- 时间复杂度度是 `O(N Log(N) Log(N))`, 空间复杂度是 `O(1)`
 
 ## 归并排序的特点
 

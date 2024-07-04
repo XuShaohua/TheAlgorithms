@@ -369,7 +369,7 @@ fn three_way_merge<T>(
 
 /// 原地归并排序
 ///
-/// 尽管它不需要辅助数组, 但它的性能差得多, 时间复杂度是 `O(N^ Log(N))`, 而默认实现的归并排序的
+/// 尽管它不需要辅助数组, 但它的性能差得多, 时间复杂度是 `O(N^2 Log(N))`, 而默认实现的归并排序的
 /// 时间复杂度是 `O(N Log(N))`.
 pub fn in_place_merge_sort<T>(arr: &mut [T])
 where
@@ -424,9 +424,69 @@ where
     }
 }
 
+/// 对原地归并排序的优化
+///
+/// 它不需要辅助数组, 它参考了希尔排序, 通过调整元素间隔 gap 减少元素移动次数.
+pub fn in_place_shell_merge_sort<T>(arr: &mut [T])
+where
+    T: PartialOrd,
+{
+    if arr.is_empty() {
+        return;
+    }
+    sort_in_place_with_shell(arr, 0, arr.len() - 1);
+}
+
+/// 原地排序 `arr[low..=high]`
+fn sort_in_place_with_shell<T>(arr: &mut [T], low: usize, high: usize)
+where
+    T: PartialOrd,
+{
+    if low >= high {
+        return;
+    }
+
+    let middle = low + (high - low) / 2;
+    sort_in_place_with_shell(arr, low, middle);
+    sort_in_place_with_shell(arr, middle + 1, high);
+
+    merge_in_place_with_shell(arr, low, high);
+}
+
+/// 使用希尔排序的方式原地合并 `arr[low..=middle]` 以及 `arr[middle+1..=high]` 两个子数组.
+///
+/// 时间复杂度 `O(N Log(N))`, 空间复杂度 `O(1)`
+fn merge_in_place_with_shell<T>(arr: &mut [T], low: usize, high: usize)
+where
+    T: PartialOrd,
+{
+    #[must_use]
+    #[inline]
+    const fn next_gap(gap: usize) -> usize {
+        const FACTOR: usize = 2;
+        if gap == 1 {
+            0
+        } else {
+            gap.div_ceil(FACTOR)
+        }
+    }
+    let len = high - low + 1;
+    let mut gap = next_gap(len);
+
+    while gap > 0 {
+        for i in low..=(high - gap) {
+            let j = i + gap;
+            if arr[i] > arr[j] {
+                arr.swap(i, j);
+            }
+        }
+        gap = next_gap(gap);
+    }
+}
+
 #[cfg(test)]
 mod tests {
-    use super::{bottom_up_merge_sort, in_place_merge_sort, insertion_merge_sort, shell_merge_sort, three_way_merge_sort, topdown_merge_sort};
+    use super::{bottom_up_merge_sort, in_place_merge_sort, in_place_shell_merge_sort, insertion_merge_sort, shell_merge_sort, three_way_merge_sort, topdown_merge_sort};
 
     fn run_test(sort_func: fn(arr: &mut [i32])) {
         let mut list = [0, 5, 3, 2, 2];
@@ -484,6 +544,22 @@ mod tests {
             9, 4, 1, 7
         ];
         in_place_merge_sort(&mut list);
+        assert_eq!(
+            list,
+            [
+                1, 4, 7, 9
+            ]
+        );
+    }
+
+    #[test]
+    fn test_in_place_shell_merge_sort() {
+        run_test(in_place_shell_merge_sort);
+
+        let mut list = [
+            9, 4, 1, 7
+        ];
+        in_place_shell_merge_sort(&mut list);
         assert_eq!(
             list,
             [
