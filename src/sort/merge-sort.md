@@ -87,15 +87,20 @@
 
 ## 原地归并排序
 
+原地归并排序, 是替代了辅助数组, 它使用类似插入排序的方式, 将后面较大的元素交换到前面合适的位置.
+尽管省去了辅助数组, 但是因为移动元素的次数显著境多了, 其性能表现并不好.
+
+下面的流程图展示了一个原地归并排序的示例:
+
+![in place merge sort merge pass](assets/in-place-merge-sort-merge.svg)
+
 ```rust
 {{#include assets/merge_sort.rs:370:426}}
 ```
 
-TODO(Shaohua):
-
 原地归并排序的特点:
 
-- 时间复杂度
+- 时间复杂度度是 `O(N^ Log(N))`, 空间复杂度是 `O(1)`
 
 ## 归并排序的特点
 

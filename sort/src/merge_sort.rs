@@ -400,7 +400,6 @@ where
 }
 
 /// 原地合并 `arr[low..=middle]` 以及 `arr[middle+1..=high]` 两个子数组.
-#[allow(clippy::needless_range_loop)]
 fn merge_in_place<T>(arr: &mut [T], mut low: usize, mut middle: usize, high: usize)
 where
     T: PartialOrd,
@@ -480,5 +479,16 @@ mod tests {
     #[test]
     fn test_in_place_merge_sort() {
         run_test(in_place_merge_sort);
+
+        let mut list = [
+            9, 4, 1, 7
+        ];
+        in_place_merge_sort(&mut list);
+        assert_eq!(
+            list,
+            [
+                1, 4, 7, 9
+            ]
+        );
     }
 }
