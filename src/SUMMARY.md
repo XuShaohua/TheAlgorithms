@@ -69,6 +69,7 @@
     - [插入排序 Insertion Sort](sort/insertion-sort.md)
     - [选择排序 Selection Sort](sort/selection-sort.md)
     - [归并排序 Merge Sort](sort/merge-sort.md)
+    - [Timsort](sort/timsort.md)
     - [Dual Pivot Quick Sort](sort/dual-pivot-quick-sort.md)
     - [桶排序 Bucket Sort](sort/bucket-sort.md)
     - [堆排序 Heap Sort](sort/heap-sort.md)

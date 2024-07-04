@@ -2,8 +2,8 @@
 // Use of this source is governed by General Public License that can be
 // found in the LICENSE file.
 
-/// 如果传入的数据是增序排好的, 那么只需要 N-1 次的比较, 以及 0 次的交换;
-/// 平珓情况以及最坏情况下, 使用 N^2/2 次比较以及 N^2/2 次交换.
+/// 如果传入的数据是增序排好的, 那么只需要 `n-1` 次的比较, 以及 0 次的交换;
+/// 平珓情况以及最坏情况下, 使用 `n^2 / 2` 次比较以及 `n^2 / 2` 次交换.
 pub fn bubble_sort<T>(arr: &mut [T])
 where
     T: PartialOrd,

@@ -86,7 +86,7 @@ where
 /// 二分插入排序法 binary insertion sort
 pub fn binary_insertion_sort<T>(arr: &mut [T])
 where
-    T: PartialOrd + std::fmt::Debug,
+    T: PartialOrd,
 {
     let len = arr.len();
     if len < 2 {

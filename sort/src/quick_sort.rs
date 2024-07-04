@@ -2,9 +2,9 @@
 // Use of this source is governed by General Public License that can be found
 // in the LICENSE file.
 
-/// 最好情况: O(NlgN)
-/// 最差情况: 1/2 * N^2
-/// 平均情况: 1.39NlgN
+/// 最好情况: `O(n log(n))`
+/// 最差情况: `O(n^2 / 2)`
+/// 平均情况: `O(1.39 n log(n))`
 /// 比 merge sort 要快, 因为不需要一个额外的数组, 减少了数据移动操作.
 /// 不是stable sort.
 ///
