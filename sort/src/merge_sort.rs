@@ -129,14 +129,13 @@ fn sort_cutoff_with_insertion<T>(
 ///
 /// 它不是原地合并.
 #[allow(clippy::needless_range_loop)]
-fn merge_with_aux<T>(arr: &mut [T], low: usize, middle: usize, high: usize, aux: &mut Vec<T>)
+fn merge_with_aux<T>(arr: &mut [T], low: usize, middle: usize, high: usize, aux: &mut [T])
 where
     T: PartialOrd + Clone,
 {
     // 辅助数组, 先将数组复制一份.
-    aux.clear();
-    for item in &arr[low..=high] {
-        aux.push(item.clone());
+    for index in low..=high {
+        aux[index].clone_from(&arr[index]);
     }
 
     // 再合并回原数组.
@@ -145,16 +144,16 @@ where
 
     for k in low..=high {
         if i > middle {
-            arr[k] = aux[j - low].clone();
+            arr[k] = aux[j].clone();
             j += 1;
         } else if j > high {
-            arr[k] = aux[i - low].clone();
+            arr[k] = aux[i].clone();
             i += 1;
-        } else if aux[j - low] < aux[i - low] {
-            arr[k] = aux[j - low].clone();
+        } else if aux[j] < aux[i] {
+            arr[k] = aux[j].clone();
             j += 1;
         } else {
-            arr[k] = aux[i - low].clone();
+            arr[k] = aux[i].clone();
             i += 1;
         }
     }
