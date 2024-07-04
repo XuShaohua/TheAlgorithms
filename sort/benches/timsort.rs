@@ -4,15 +4,15 @@
 
 use criterion::{criterion_group, criterion_main, Criterion};
 
-use sort::shell_sort::shell_sort;
+use sort::timsort::timsort;
 use sort::util::random_ints;
 
 fn criterion_benchmark(c: &mut Criterion) {
     for exp in 1..5 {
         let len: usize = 2 * 10_usize.pow(exp);
         let arr = random_ints(len).expect("Failed to generate random integers");
-        let title1 = format!("std_sort_for_shell_sort {len}");
-        let title2 = format!("shell_sort {len}");
+        let title1 = format!("std_sort_for_timsort {len}");
+        let title2 = format!("timsort {len}");
         let mut arr_sorted = arr.clone();
         arr_sorted.sort();
 
@@ -26,7 +26,7 @@ fn criterion_benchmark(c: &mut Criterion) {
         c.bench_function(&title2, |b| {
             b.iter(|| {
                 let mut arr2 = arr.clone();
-                shell_sort(&mut arr2);
+                timsort(&mut arr2);
                 assert_eq!(arr2, arr_sorted);
             })
         });
