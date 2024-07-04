@@ -21,7 +21,19 @@ Timsort 是对归并排序(merge sort)的优化.
 ## Timsort 的实现
 
 ```rust
-{{#include assets/timsort.rs:5:81}}
+{{#include assets/timsort.rs:5:84}}
+
+{{#include assets/insertion_sort.rs:5:20}}
+```
+
+## 使用希尔排序代替插入排序
+
+上面提到了, 可以用希尔排序来代替插入排序, 可以将子数组的间隔设置得更大些, 我们选取 `RUN = 64;`
+
+```rust
+{{#include assets/timsort.rs:86:170}}
+
+{{#include assets/shell_sort.rs:5:34}}
 ```
 
 ## Timsort 的特点
