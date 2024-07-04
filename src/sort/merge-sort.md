@@ -5,6 +5,8 @@
 
 ## 归并排序的步骤
 
+默认实现的递归排序是自顶向下(top-down merge sort)的, 即将整个数组递归分隔.
+
 1. 分隔 divide: 将数组递归分成两部分子数组, 直到每部分只剩下一个元素为止
 2. 攻克 conquer: 使用分治算法排序每个子数组
 3. 合并 merge: 将排序好的子数组有序合并在一起
@@ -47,6 +49,27 @@
 {{#include assets/merge_sort.rs:115:148}}
 
 {{#include assets/shell_sort.rs:5:34}}
+```
+
+## 迭代形式实现的归并排序
+
+迭代形式的归并排序, 又称为自下而上的归并排序 (bottom-up merge sort).
+它的步骤如下:
+
+- 将连续的 2 个元素比较并合并在一起
+- 将连续的 4 个元素比较并合并在一起
+- 重复以上过程, 直到所有元素合并在一起
+
+下面的流程图展示了一个简单的操作示例:
+
+![bottom-up merge sort](assets/bottom-up-merge-sort.svg)
+
+对应的代码实现如下:
+
+```rust
+{{#include assets/merge_sort.rs:197:232}}
+
+{{#include assets/merge_sort.rs:120:153}}
 ```
 
 ## 归并排序的特点

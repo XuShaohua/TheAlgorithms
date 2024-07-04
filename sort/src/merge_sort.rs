@@ -194,9 +194,46 @@ fn sort_cutoff_with_shell<T>(
     }
 }
 
+/// 迭代形式的归并排序, 自底向上 bottom-up merge sort
+pub fn bottom_up_merge_sort<T>(arr: &mut [T])
+where
+    T: PartialOrd + Clone,
+{
+    let len = arr.len();
+    if len < 2 {
+        return;
+    }
+
+    let mut aux = arr.to_vec();
+
+    // 开始排序的数组大小, 从 1 到 len / 2
+    // current_size 的取值是 1, 2, 4, 8, ...
+    let mut current_size = 1;
+
+    while current_size < len {
+        // 归并排序的数组左侧索引
+        let mut left_start = 0;
+
+        // 子数组的起始点不同, 这样就可以遍历整个数组.
+        // left_start 的取值是 0, 2 * current_size, 4 * current_size, ...
+        // right_end 的取值是 2 * current_size, 4 * current_size, 6 * current_size, ...
+        while left_start < len - 1 {
+            let middle = (left_start + current_size - 1).min(len - 1);
+            let right_end = (left_start + 2 * current_size - 1).min(len - 1);
+
+            // 合并左右两侧部分数组
+            merge_with_aux(arr, left_start, middle, right_end, &mut aux);
+
+            left_start += 2 * current_size;
+        }
+
+        current_size *= 2;
+    }
+}
+
 #[cfg(test)]
 mod tests {
-    use super::{insertion_merge_sort, shell_merge_sort, topdown_merge_sort};
+    use super::{bottom_up_merge_sort, insertion_merge_sort, shell_merge_sort, topdown_merge_sort};
 
     #[test]
     fn test_topdown_merge_sort() {
@@ -285,6 +322,37 @@ mod tests {
 
         let mut list = "EASYQUESTION".chars().collect::<Vec<_>>();
         shell_merge_sort(&mut list);
+        assert_eq!(
+            list,
+            ['A', 'E', 'E', 'I', 'N', 'O', 'Q', 'S', 'S', 'T', 'U', 'Y']
+        );
+    }
+
+    #[test]
+    fn test_bottom_up_merge_sort() {
+        let mut list = [0, 5, 3, 2, 2];
+        bottom_up_merge_sort(&mut list);
+        assert_eq!(list, [0, 2, 2, 3, 5]);
+
+        let mut list = [-2, -5, -45];
+        bottom_up_merge_sort(&mut list);
+        assert_eq!(list, [-45, -5, -2]);
+
+        let mut list = [
+            -998_166, -996_360, -995_703, -995_238, -995_066, -994_740, -992_987, -983_833,
+            -987_905, -980_069, -977_640,
+        ];
+        bottom_up_merge_sort(&mut list);
+        assert_eq!(
+            list,
+            [
+                -998_166, -996_360, -995_703, -995_238, -995_066, -994_740, -992_987, -987_905,
+                -983_833, -980_069, -977_640,
+            ]
+        );
+
+        let mut list = "EASYQUESTION".chars().collect::<Vec<_>>();
+        bottom_up_merge_sort(&mut list);
         assert_eq!(
             list,
             ['A', 'E', 'E', 'I', 'N', 'O', 'Q', 'S', 'S', 'T', 'U', 'Y']

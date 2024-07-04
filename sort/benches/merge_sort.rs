@@ -6,7 +6,9 @@ use std::time::Duration;
 
 use criterion::{Criterion, criterion_group, criterion_main};
 
-use sort::merge_sort::{insertion_merge_sort, merge_sort, shell_merge_sort};
+use sort::merge_sort::{
+    bottom_up_merge_sort, insertion_merge_sort, shell_merge_sort, topdown_merge_sort,
+};
 use sort::util::random_ints;
 
 fn criterion_benchmark(c: &mut Criterion) {
@@ -14,9 +16,10 @@ fn criterion_benchmark(c: &mut Criterion) {
         let len: usize = 2 * 10_usize.pow(exp);
         let arr = random_ints(len).expect("Failed to generate random integers");
         let title1 = format!("std_sort_for_merge_sort {len}");
-        let title2 = format!("merge_sort {len}");
+        let title2 = format!("topdown_merge_sort {len}");
         let title3 = format!("insertion_merge_sort {len}");
         let title4 = format!("shell_merge_sort {len}");
+        let title5 = format!("bottom_up_merge_sort {len}");
         let mut arr_sorted = arr.clone();
         arr_sorted.sort();
 
@@ -30,7 +33,7 @@ fn criterion_benchmark(c: &mut Criterion) {
         c.bench_function(&title2, |b| {
             b.iter(|| {
                 let mut arr2 = arr.clone();
-                merge_sort(&mut arr2);
+                topdown_merge_sort(&mut arr2);
                 assert_eq!(arr2, arr_sorted);
             })
         });
@@ -46,6 +49,13 @@ fn criterion_benchmark(c: &mut Criterion) {
                 let mut arr4 = arr.clone();
                 shell_merge_sort(&mut arr4);
                 assert_eq!(arr4, arr_sorted);
+            })
+        });
+        c.bench_function(&title5, |b| {
+            b.iter(|| {
+                let mut arr5 = arr.clone();
+                bottom_up_merge_sort(&mut arr5);
+                assert_eq!(arr5, arr_sorted);
             })
         });
     }
