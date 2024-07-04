@@ -9,6 +9,8 @@ pub fn timsort<T>(arr: &mut [T])
 where
     T: PartialOrd + Clone,
 {
+    const RUN: usize = 32;
+    
     let len = arr.len();
     if len < 2 {
         return;
@@ -16,7 +18,6 @@ where
 
     // 先将数组分隔成大小相同的子数组, 并利用插入排序进行排序.
     // 插入排序比较善于处理已基本有序的较小的数组.
-    const RUN: usize = 32;
     for i in (0..len).step_by(RUN) {
         let end = (i + RUN).min(len);
         insertion_sort(&mut arr[i..end]);
@@ -31,6 +32,7 @@ where
             // 两个子数组分别是 `arr[left..=middle]` 和 `arr[middle+1..=right]`.
             let middle = left + size - 1;
             let right = (left + 2 * size - 1).min(len - 1);
+
             if middle < right {
                 merge(arr, left, middle, right);
             }
@@ -48,8 +50,8 @@ where
     // 先创建辅助数组
     let aux_left = arr[left..=middle].to_vec();
     let aux_right = arr[middle + 1..=right].to_vec();
-    let len_left = middle - left + 1;
-    let len_right = right - middle;
+    let len_left = aux_left.len();
+    let len_right = aux_right.len();
 
     // 合并子数组
     let mut i = 0;
@@ -60,7 +62,7 @@ where
             arr[k].clone_from(&aux_left[i]);
             i += 1;
         } else {
-            arr[k].clone_from(&aux_left[j]);
+            arr[k].clone_from(&aux_right[j]);
             j += 1;
         }
         k += 1;
@@ -74,7 +76,7 @@ where
     }
 
     while j < len_right {
-        arr[k].clone_from(&aux_left[j]);
+        arr[k].clone_from(&aux_right[j]);
         j += 1;
         k += 1;
     }
