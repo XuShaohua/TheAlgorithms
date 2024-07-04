@@ -10,7 +10,7 @@ where
     T: PartialOrd + Clone,
 {
     const RUN: usize = 32;
-    
+
     let len = arr.len();
     if len < 2 {
         return;
@@ -50,14 +50,12 @@ where
     // 先创建辅助数组
     let aux_left = arr[left..=middle].to_vec();
     let aux_right = arr[middle + 1..=right].to_vec();
-    let len_left = aux_left.len();
-    let len_right = aux_right.len();
 
     // 合并子数组
     let mut i = 0;
     let mut j = 0;
     let mut k = left;
-    while i < len_left && j < len_right {
+    while i < aux_left.len() && j < aux_right.len() {
         if aux_left[i] < aux_right[j] {
             arr[k].clone_from(&aux_left[i]);
             i += 1;
@@ -69,13 +67,13 @@ where
     }
 
     // 最后复制剩下的元素
-    while i < len_left {
+    while i < aux_left.len() {
         arr[k].clone_from(&aux_left[i]);
         i += 1;
         k += 1;
     }
 
-    while j < len_right {
+    while j < aux_right.len() {
         arr[k].clone_from(&aux_right[j]);
         j += 1;
         k += 1;
