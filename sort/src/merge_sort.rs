@@ -429,21 +429,20 @@ where
 mod tests {
     use super::{bottom_up_merge_sort, in_place_merge_sort, insertion_merge_sort, shell_merge_sort, three_way_merge_sort, topdown_merge_sort};
 
-    #[test]
-    fn test_topdown_merge_sort() {
+    fn run_test(sort_func: fn(arr: &mut [i32])) {
         let mut list = [0, 5, 3, 2, 2];
-        topdown_merge_sort(&mut list);
+        sort_func(&mut list);
         assert_eq!(list, [0, 2, 2, 3, 5]);
 
         let mut list = [-2, -5, -45];
-        topdown_merge_sort(&mut list);
+        sort_func(&mut list);
         assert_eq!(list, [-45, -5, -2]);
 
         let mut list = [
             -998_166, -996_360, -995_703, -995_238, -995_066, -994_740, -992_987, -983_833,
             -987_905, -980_069, -977_640,
         ];
-        topdown_merge_sort(&mut list);
+        sort_func(&mut list);
         assert_eq!(
             list,
             [
@@ -451,167 +450,35 @@ mod tests {
                 -983_833, -980_069, -977_640,
             ]
         );
+    }
 
-        let mut list = "EASYQUESTION".chars().collect::<Vec<_>>();
-        topdown_merge_sort(&mut list);
-        assert_eq!(
-            list,
-            ['A', 'E', 'E', 'I', 'N', 'O', 'Q', 'S', 'S', 'T', 'U', 'Y']
-        );
+    #[test]
+    fn test_topdown_merge_sort() {
+        run_test(topdown_merge_sort);
     }
 
     #[test]
     fn test_insertion_merge_sort() {
-        let mut list = [0, 5, 3, 2, 2];
-        insertion_merge_sort(&mut list);
-        assert_eq!(list, [0, 2, 2, 3, 5]);
-
-        let mut list = [-2, -5, -45];
-        insertion_merge_sort(&mut list);
-        assert_eq!(list, [-45, -5, -2]);
-
-        let mut list = [
-            -998_166, -996_360, -995_703, -995_238, -995_066, -994_740, -992_987, -983_833,
-            -987_905, -980_069, -977_640,
-        ];
-        insertion_merge_sort(&mut list);
-        assert_eq!(
-            list,
-            [
-                -998_166, -996_360, -995_703, -995_238, -995_066, -994_740, -992_987, -987_905,
-                -983_833, -980_069, -977_640,
-            ]
-        );
-
-        let mut list = "EASYQUESTION".chars().collect::<Vec<_>>();
-        insertion_merge_sort(&mut list);
-        assert_eq!(
-            list,
-            ['A', 'E', 'E', 'I', 'N', 'O', 'Q', 'S', 'S', 'T', 'U', 'Y']
-        );
+        run_test(insertion_merge_sort);
     }
 
     #[test]
     fn test_shell_merge_sort() {
-        let mut list = [0, 5, 3, 2, 2];
-        shell_merge_sort(&mut list);
-        assert_eq!(list, [0, 2, 2, 3, 5]);
-
-        let mut list = [-2, -5, -45];
-        shell_merge_sort(&mut list);
-        assert_eq!(list, [-45, -5, -2]);
-
-        let mut list = [
-            -998_166, -996_360, -995_703, -995_238, -995_066, -994_740, -992_987, -983_833,
-            -987_905, -980_069, -977_640,
-        ];
-        shell_merge_sort(&mut list);
-        assert_eq!(
-            list,
-            [
-                -998_166, -996_360, -995_703, -995_238, -995_066, -994_740, -992_987, -987_905,
-                -983_833, -980_069, -977_640,
-            ]
-        );
-
-        let mut list = "EASYQUESTION".chars().collect::<Vec<_>>();
-        shell_merge_sort(&mut list);
-        assert_eq!(
-            list,
-            ['A', 'E', 'E', 'I', 'N', 'O', 'Q', 'S', 'S', 'T', 'U', 'Y']
-        );
+        run_test(shell_merge_sort);
     }
 
     #[test]
     fn test_bottom_up_merge_sort() {
-        let mut list = [0, 5, 3, 2, 2];
-        bottom_up_merge_sort(&mut list);
-        assert_eq!(list, [0, 2, 2, 3, 5]);
-
-        let mut list = [-2, -5, -45];
-        bottom_up_merge_sort(&mut list);
-        assert_eq!(list, [-45, -5, -2]);
-
-        let mut list = [
-            -998_166, -996_360, -995_703, -995_238, -995_066, -994_740, -992_987, -983_833,
-            -987_905, -980_069, -977_640,
-        ];
-        bottom_up_merge_sort(&mut list);
-        assert_eq!(
-            list,
-            [
-                -998_166, -996_360, -995_703, -995_238, -995_066, -994_740, -992_987, -987_905,
-                -983_833, -980_069, -977_640,
-            ]
-        );
-
-        let mut list = "EASYQUESTION".chars().collect::<Vec<_>>();
-        bottom_up_merge_sort(&mut list);
-        assert_eq!(
-            list,
-            ['A', 'E', 'E', 'I', 'N', 'O', 'Q', 'S', 'S', 'T', 'U', 'Y']
-        );
+        run_test(bottom_up_merge_sort);
     }
 
     #[test]
     fn test_three_way_merge_sort() {
-        let mut list = [0, 5, 3, 2, 2];
-        three_way_merge_sort(&mut list);
-        assert_eq!(list, [0, 2, 2, 3, 5]);
-
-        let mut list = [-2, -5, -45];
-        three_way_merge_sort(&mut list);
-        assert_eq!(list, [-45, -5, -2]);
-
-        let mut list = [
-            -998_166, -996_360, -995_703, -995_238, -995_066, -994_740, -992_987, -983_833,
-            -987_905, -980_069, -977_640,
-        ];
-        three_way_merge_sort(&mut list);
-        assert_eq!(
-            list,
-            [
-                -998_166, -996_360, -995_703, -995_238, -995_066, -994_740, -992_987, -987_905,
-                -983_833, -980_069, -977_640,
-            ]
-        );
-
-        let mut list = "EASYQUESTION".chars().collect::<Vec<_>>();
-        three_way_merge_sort(&mut list);
-        assert_eq!(
-            list,
-            ['A', 'E', 'E', 'I', 'N', 'O', 'Q', 'S', 'S', 'T', 'U', 'Y']
-        );
+        run_test(three_way_merge_sort);
     }
 
     #[test]
     fn test_in_place_merge_sort() {
-        let mut list = [0, 5, 3, 2, 2];
-        in_place_merge_sort(&mut list);
-        assert_eq!(list, [0, 2, 2, 3, 5]);
-
-        let mut list = [-2, -5, -45];
-        in_place_merge_sort(&mut list);
-        assert_eq!(list, [-45, -5, -2]);
-
-        let mut list = [
-            -998_166, -996_360, -995_703, -995_238, -995_066, -994_740, -992_987, -983_833,
-            -987_905, -980_069, -977_640,
-        ];
-        in_place_merge_sort(&mut list);
-        assert_eq!(
-            list,
-            [
-                -998_166, -996_360, -995_703, -995_238, -995_066, -994_740, -992_987, -987_905,
-                -983_833, -980_069, -977_640,
-            ]
-        );
-
-        let mut list = "EASYQUESTION".chars().collect::<Vec<_>>();
-        in_place_merge_sort(&mut list);
-        assert_eq!(
-            list,
-            ['A', 'E', 'E', 'I', 'N', 'O', 'Q', 'S', 'S', 'T', 'U', 'Y']
-        );
+        run_test(in_place_merge_sort);
     }
 }
