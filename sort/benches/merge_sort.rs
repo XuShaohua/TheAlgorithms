@@ -4,12 +4,9 @@
 
 use std::time::Duration;
 
-use criterion::{criterion_group, criterion_main, Criterion};
+use criterion::{Criterion, criterion_group, criterion_main};
 
-use sort::merge_sort::{
-    bottom_up_merge_sort, in_place_merge_sort, insertion_merge_sort, shell_merge_sort,
-    three_way_merge_sort, topdown_merge_sort,
-};
+use sort::merge_sort::{bottom_up_merge_sort, in_place_merge_sort, in_place_shell_merge_sort, insertion_merge_sort, shell_merge_sort, three_way_merge_sort, topdown_merge_sort};
 use sort::util::random_ints;
 
 fn criterion_benchmark(c: &mut Criterion) {
@@ -23,6 +20,7 @@ fn criterion_benchmark(c: &mut Criterion) {
         let title5 = format!("bottom_up_merge_sort {len}");
         let title6 = format!("three_way_merge_sort {len}");
         let title7 = format!("in_place_merge_sort {len}");
+        let title8 = format!("in_place_shell_merge_sort {len}");
         let mut arr_sorted = arr.clone();
         arr_sorted.sort();
 
@@ -73,6 +71,13 @@ fn criterion_benchmark(c: &mut Criterion) {
                 let mut arr7 = arr.clone();
                 in_place_merge_sort(&mut arr7);
                 assert_eq!(arr7, arr_sorted);
+            })
+        });
+        c.bench_function(&title8, |b| {
+            b.iter(|| {
+                let mut arr8 = arr.clone();
+                in_place_shell_merge_sort(&mut arr8);
+                assert_eq!(arr8, arr_sorted);
             })
         });
     }

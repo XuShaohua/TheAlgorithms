@@ -476,6 +476,7 @@ where
     while gap > 0 {
         for i in low..=(high - gap) {
             let j = i + gap;
+            // 每次间隔多个元素进行比较和交换.
             if arr[i] > arr[j] {
                 arr.swap(i, j);
             }
