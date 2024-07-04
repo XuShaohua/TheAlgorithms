@@ -247,34 +247,37 @@ pub fn three_way_merge_sort<T>(arr: &mut [T])
 where
     T: PartialOrd + Clone,
 {
+    if arr.is_empty() {
+        return;
+    }
     let mut aux = arr.to_vec();
-    three_way_sort(arr, 0, arr.len(), &mut aux);
+    three_way_sort(arr, 0, arr.len() - 1, &mut aux);
 }
 
-/// 三路排序 `arr[low..high]`
+/// 三路排序 `arr[low..=high]`
 fn three_way_sort<T>(arr: &mut [T], low: usize, high: usize, aux: &mut Vec<T>)
 where
     T: PartialOrd + Clone,
 {
-    if low + 2 >= high {
+    // 如果数组长度小于2, 就返回.
+    if low + 1 > high {
         return;
     }
 
     // 将数组分成三部分
     let middle1 = low + (high - low) / 3;
-    let middle2 = low + 2 * (high - low) / 3 + 1;
-    println!("low: {low}, middle1: {middle1}, middle2: {middle2}, high: {high}");
+    let middle2 = low + 2 * ((high - low) / 3);
 
     // 递归排序各部分数组
     three_way_sort(arr, low, middle1, aux);
-    three_way_sort(arr, middle1, middle2, aux);
-    three_way_sort(arr, middle2, high, aux);
+    three_way_sort(arr, middle1 + 1, middle2, aux);
+    three_way_sort(arr, middle2 + 1, high, aux);
 
     // 合并三部分数组
     three_way_merge(arr, low, middle1, middle2, high, aux);
 }
 
-/// 合并 `arr[low..middle1]`, `arr[middle1..middle2]` 以及 `arr[middle2..high]` 三个子数组.
+/// 合并 `arr[low..=middle1]`, `arr[middle1+1..=middle2]` 以及 `arr[middle2+1..=high]` 三个子数组.
 ///
 /// 它不是原地合并.
 #[allow(clippy::needless_range_loop)]
@@ -289,16 +292,18 @@ fn three_way_merge<T>(
     T: PartialOrd + Clone,
 {
     // 辅助数组, 先将数组复制一份.
-    aux.clone_from_slice(&arr[low..high]);
+    for index in low..=high {
+        aux[index].clone_from(&arr[index]);
+    }
 
     // 再合并回原数组.
     let mut i = low;
-    let mut j = middle1;
-    let mut k = middle2;
+    let mut j = middle1 + 1;
+    let mut k = middle2 + 1;
     let mut l = low;
 
     // 首先合并较小的子数组
-    while i < middle1 && j < middle2 && k < high {
+    while i <= middle1 && j <= middle2 && k <= high {
         let curr_index = if aux[i] < aux[j] && aux[i] < aux[k] {
             &mut i
         } else if aux[j] < aux[k] {
@@ -312,7 +317,7 @@ fn three_way_merge<T>(
     }
 
     // 然后合并剩余部分的子数组
-    while i < middle1 && j < middle2 {
+    while i <= middle1 && j <= middle2 {
         let curr_index = if aux[i] < aux[j] {
             &mut i
         } else {
@@ -323,7 +328,7 @@ fn three_way_merge<T>(
         l += 1;
     }
 
-    while j < middle2 && k < high {
+    while j <= middle2 && k <= high {
         let curr_index = if aux[j] < aux[k] {
             &mut j
         } else {
@@ -334,7 +339,7 @@ fn three_way_merge<T>(
         l += 1;
     }
 
-    while i < middle1 && k < high {
+    while i <= middle1 && k <= high {
         let curr_index = if aux[i] < aux[k] {
             &mut i
         } else {
@@ -345,17 +350,17 @@ fn three_way_merge<T>(
         l += 1;
     }
 
-    while i < middle1 {
+    while i <= middle1 {
         arr[l].clone_from(&aux[i]);
         i += 1;
         l += 1;
     }
-    while j < middle1 {
+    while j <= middle2 {
         arr[l].clone_from(&aux[j]);
         j += 1;
         l += 1;
     }
-    while k < middle1 {
+    while k <= high {
         arr[l].clone_from(&aux[k]);
         k += 1;
         l += 1;
