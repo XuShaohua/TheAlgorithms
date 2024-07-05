@@ -185,16 +185,57 @@ fn insertion_quicksort_helper<T: PartialOrd>(arr: &mut [T], low: usize, high: us
     let pivot_index = partition_pivot_at_right(arr, low, high);
     // 对左右两个子数组分别执行快速排序
     if pivot_index > low + 1 {
-        tail_quicksort_helper(arr, low, pivot_index - 1);
+        insertion_quicksort_helper(arr, low, pivot_index - 1);
     }
     if pivot_index + 1 < high {
-        tail_quicksort_helper(arr, pivot_index + 1, high);
+        insertion_quicksort_helper(arr, pivot_index + 1, high);
+    }
+}
+
+/// 迭代形式的快速排序
+///
+/// 空间复杂度是 `O(n)`
+#[inline]
+pub fn iterative_quicksort<T: PartialOrd>(arr: &mut [T]) {
+    if arr.len() < 2 {
+        return;
+    }
+    iterative_quicksort_helper(arr, 0, arr.len() - 1);
+}
+
+fn iterative_quicksort_helper<T: PartialOrd>(arr: &mut [T], low: usize, high: usize) {
+    if low >= high {
+        return;
+    }
+
+    let len = high - low + 1;
+    let mut stack = vec![0; len];
+
+    // 入栈顺序是 (low, high)
+    stack.push(low);
+    stack.push(high);
+
+    // 出栈顺序是 (high, low)
+    while let (Some(high), Some(low)) = (stack.pop(), stack.pop()) {
+        // 按照基数的位置, 将数组划分成左右两个子数组.
+        let pivot_index = partition_pivot_at_right(arr, low, high);
+        // 对左右两个子数组分别执行快速排序
+        // 如果左侧子数组还有元素, 就入栈
+        if pivot_index > low + 1 {
+            stack.push(low);
+            stack.push(pivot_index - 1);
+        }
+        // 如果 pivot 的右侧还有元素, 就入栈
+        if pivot_index + 1 < high {
+            stack.push(pivot_index + 1);
+            stack.push(high);
+        }
     }
 }
 
 #[cfg(test)]
 mod tests {
-    use crate::quicksort::{head_quicksort, insertion_quicksort, quicksort, two_pointer_quicksort};
+    use crate::quicksort::{head_quicksort, insertion_quicksort, iterative_quicksort, quicksort, two_pointer_quicksort};
 
     fn run_test(sort_func: fn(arr: &mut [i32])) {
         let mut list = [1, 8, 3, 9, 4];
@@ -241,5 +282,10 @@ mod tests {
     #[test]
     fn test_insertion_quicksort() {
         run_test(insertion_quicksort);
+    }
+
+    #[test]
+    fn test_iterative_quicksort() {
+        run_test(iterative_quicksort);
     }
 }

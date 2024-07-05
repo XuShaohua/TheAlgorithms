@@ -48,7 +48,7 @@
 默认使用最后一个元素作为基准值 pivot. 如果是已排序好的数组, 这种算法是最差情况, 时间复杂度是 `O(n^2)`.
 
 ```rust
-{{#include assets/quicksort.rs:7:56}}
+{{#include assets/quicksort.rs:9:56}}
 ```
 
 ## 快速排序的特点
@@ -90,6 +90,10 @@
 
 ```rust
 {{#include assets/quicksort.rs:162:193}}
+
+{{#include assets/quicksort.rs:36:56}}
+
+{{#include assets/insertion_sort.rs:5:20}}
 ```
 
 ## 迭代形式的快速排序
@@ -98,7 +102,11 @@
 我们也可以显式地使用一个栈结构来手动保存它们, 就可以将快速排序改写成迭代形式:
 
 ```rust
-{{#include assets/quicksort.rs:162:193}}
+{{#include assets/quicksort.rs:195:234}}
+
+{{#include assets/quicksort.rs:36:56}}
+
+{{#include assets/insertion_sort.rs:5:20}}
 ```
 
 ## 随机选择一个元素作为基准值 pivot

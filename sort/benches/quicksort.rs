@@ -6,7 +6,7 @@ use std::time::Duration;
 
 use criterion::{Criterion, criterion_group, criterion_main};
 
-use sort::quicksort::{head_quicksort, insertion_quicksort, quicksort, two_pointer_quicksort};
+use sort::quicksort::{head_quicksort, insertion_quicksort, iterative_quicksort, quicksort, two_pointer_quicksort};
 use sort::util::random_ints;
 
 fn criterion_benchmark(c: &mut Criterion) {
@@ -18,6 +18,7 @@ fn criterion_benchmark(c: &mut Criterion) {
         let title3 = format!("head_quicksort {len}");
         let title4 = format!("two_pointer_quicksort {len}");
         let title5 = format!("insertion_quicksort {len}");
+        let title6 = format!("iterative_quicksort {len}");
         let mut arr_sorted = arr.clone();
         arr_sorted.sort();
 
@@ -54,6 +55,13 @@ fn criterion_benchmark(c: &mut Criterion) {
                 let mut arr5 = arr.clone();
                 insertion_quicksort(&mut arr5);
                 assert_eq!(arr5, arr_sorted);
+            })
+        });
+        c.bench_function(&title6, |b| {
+            b.iter(|| {
+                let mut arr6 = arr.clone();
+                iterative_quicksort(&mut arr6);
+                assert_eq!(arr6, arr_sorted);
             })
         });
     }
