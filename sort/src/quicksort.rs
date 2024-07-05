@@ -4,6 +4,11 @@
 
 #![allow(dead_code)]
 
+use crate::insertion_sort::insertion_sort;
+
+/// 使用最后一个元素作为基准值 pivot
+///
+/// 如果是已排序好的数组, 这种算法是最差情况
 #[inline]
 pub fn quicksort<T: PartialOrd>(arr: &mut [T]) {
     if arr.len() < 2 {
@@ -51,6 +56,8 @@ fn partition_pivot_at_right<T: PartialOrd>(arr: &mut [T], low: usize, high: usiz
 }
 
 /// 总是选择第一个元素作为基准值
+///
+/// 果数组已经是逆序排序的, 这种算法是最差情况, 时间复杂度是 `O(n^2)`
 #[inline]
 pub fn head_quicksort<T: PartialOrd>(arr: &mut [T]) {
     if arr.len() < 2 {
@@ -152,9 +159,42 @@ fn partition_with_two_pointers<T: PartialOrd>(arr: &mut [T], low: usize, high: u
     left
 }
 
+/// 如果元素较少, 就使用插入排序
+#[inline]
+pub fn insertion_quicksort<T: PartialOrd>(arr: &mut [T]) {
+    if arr.len() < 2 {
+        return;
+    }
+    insertion_quicksort_helper(arr, 0, arr.len() - 1);
+}
+
+fn insertion_quicksort_helper<T: PartialOrd>(arr: &mut [T], low: usize, high: usize) {
+    const CUTOFF: usize = 24;
+
+    if low >= high {
+        return;
+    }
+
+    // 数组中的元数个数低于一个阈值时, 使用插入排序
+    if high - low + 1 < CUTOFF {
+        insertion_sort(&mut arr[low..=high]);
+        return;
+    }
+
+    // 按照基数的位置, 将数组划分成左右两个子数组.
+    let pivot_index = partition_pivot_at_right(arr, low, high);
+    // 对左右两个子数组分别执行快速排序
+    if pivot_index > low + 1 {
+        tail_quicksort_helper(arr, low, pivot_index - 1);
+    }
+    if pivot_index + 1 < high {
+        tail_quicksort_helper(arr, pivot_index + 1, high);
+    }
+}
+
 #[cfg(test)]
 mod tests {
-    use crate::quicksort::{head_quicksort, quicksort, two_pointer_quicksort};
+    use crate::quicksort::{head_quicksort, insertion_quicksort, quicksort, two_pointer_quicksort};
 
     fn run_test(sort_func: fn(arr: &mut [i32])) {
         let mut list = [1, 8, 3, 9, 4];
@@ -196,5 +236,10 @@ mod tests {
     #[test]
     fn test_two_pointer_quicksort() {
         run_test(two_pointer_quicksort);
+    }
+
+    #[test]
+    fn test_insertion_quicksort() {
+        run_test(insertion_quicksort);
     }
 }

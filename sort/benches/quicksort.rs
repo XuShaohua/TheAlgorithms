@@ -6,7 +6,7 @@ use std::time::Duration;
 
 use criterion::{Criterion, criterion_group, criterion_main};
 
-use sort::quicksort::quicksort;
+use sort::quicksort::{head_quicksort, insertion_quicksort, quicksort, two_pointer_quicksort};
 use sort::util::random_ints;
 
 fn criterion_benchmark(c: &mut Criterion) {
@@ -17,6 +17,7 @@ fn criterion_benchmark(c: &mut Criterion) {
         let title2 = format!("quicksort {len}");
         let title3 = format!("head_quicksort {len}");
         let title4 = format!("two_pointer_quicksort {len}");
+        let title5 = format!("insertion_quicksort {len}");
         let mut arr_sorted = arr.clone();
         arr_sorted.sort();
 
@@ -37,15 +38,22 @@ fn criterion_benchmark(c: &mut Criterion) {
         c.bench_function(&title3, |b| {
             b.iter(|| {
                 let mut arr3 = arr.clone();
-                quicksort(&mut arr3);
+                head_quicksort(&mut arr3);
                 assert_eq!(arr3, arr_sorted);
             })
         });
         c.bench_function(&title4, |b| {
             b.iter(|| {
                 let mut arr4 = arr.clone();
-                quicksort(&mut arr4);
+                two_pointer_quicksort(&mut arr4);
                 assert_eq!(arr4, arr_sorted);
+            })
+        });
+        c.bench_function(&title5, |b| {
+            b.iter(|| {
+                let mut arr5 = arr.clone();
+                insertion_quicksort(&mut arr5);
+                assert_eq!(arr5, arr_sorted);
             })
         });
     }
@@ -53,7 +61,7 @@ fn criterion_benchmark(c: &mut Criterion) {
 
 criterion_group!(
     name = benches;
-    config = Criterion::default().measurement_time(Duration::from_secs(10));
+    config = Criterion::default().measurement_time(Duration::from_secs(30));
     targets = criterion_benchmark
 );
 criterion_main!(benches);
