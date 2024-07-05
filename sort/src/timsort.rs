@@ -130,39 +130,32 @@ fn merge_with_aux<T>(arr: &mut [T], left: usize, middle: usize, right: usize, au
 where
     T: PartialOrd + Clone,
 {
-    // 先创建辅助数组
-    for i in left..=middle {
+    // 先初始化辅助数组
+    for i in left..=right {
         aux[i].clone_from(&arr[i]);
     }
-    for i in (middle + 1)..=right {
-        aux[i].clone_from(&arr[i]);
-    }
-    let left_len = middle - left + 1;
-    let right_len = right - middle;
 
     // 合并子数组
-    let mut i = 0;
-    let mut j = 0;
+    let mut i = left;
+    let mut j = middle + 1;
     let mut k = left;
-    while i < left_len && j < right_len {
-        let index = if aux[i] < aux[j] {
-            &mut i
+    while i <= middle && j <= right {
+        if aux[i] < aux[j] {
+            arr[k].clone_from(&aux[i]);
+            i += 1;
         } else {
-            &mut j
-        };
-        arr[k].clone_from(&aux[*index]);
-        *index += 1;
+            arr[k].clone_from(&aux[j]);
+            j += 1;
+        }
         k += 1;
     }
 
-    // 最后复制剩下的元素
-    while i < right_len {
+    while i <= middle {
         arr[k].clone_from(&aux[i]);
         i += 1;
         k += 1;
     }
-
-    while j < right_len {
+    while j <= right {
         arr[k].clone_from(&aux[j]);
         j += 1;
         k += 1;
