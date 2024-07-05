@@ -27,6 +27,10 @@ name = "merge_sort"
 harness = false
 
 [[bench]]
+name = "quicksort"
+harness = false
+
+[[bench]]
 name = "selection_sort"
 harness = false
 
