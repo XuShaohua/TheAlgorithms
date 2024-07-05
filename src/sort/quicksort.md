@@ -111,7 +111,13 @@
 
 ## 随机选择一个元素作为基准值 pivot
 
-## 原地分隔数组 (in-place partition)
+## 尾递归优化 Tail call optimization
+
+## 稳定快速排序 Stable Quicksort
+
+## 双轴快速排序 Dual pivot Quicksort
+
+## 三路快速排序 3-way Quicksort
 
 ## 参考
 
