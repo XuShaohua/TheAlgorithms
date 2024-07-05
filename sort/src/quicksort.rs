@@ -2,6 +2,8 @@
 // Use of this source is governed by General Public License that can be found
 // in the LICENSE file.
 
+#![allow(dead_code)]
+
 #[inline]
 pub fn quicksort<T: PartialOrd>(arr: &mut [T]) {
     if arr.len() < 2 {
@@ -16,7 +18,7 @@ fn quicksort_helper<T: PartialOrd>(arr: &mut [T], low: usize, high: usize) {
     }
 
     // 按照基数的位置, 将数组划分成左右两个子数组.
-    let pivot_index = partition_pivot_at_left(arr, low, high);
+    let pivot_index = partition_pivot_at_right(arr, low, high);
     // 对左右两个子数组分别执行快速排序
     if pivot_index > low + 1 {
         quicksort_helper(arr, low, pivot_index - 1);
@@ -26,9 +28,52 @@ fn quicksort_helper<T: PartialOrd>(arr: &mut [T], low: usize, high: usize) {
     }
 }
 
-#[allow(dead_code)]
+// 选择最右侧的元素作为基准值
+fn partition_pivot_at_right<T: PartialOrd>(arr: &mut [T], low: usize, high: usize) -> usize {
+    let pivot_index = high;
+
+    // 以 pivot 为基准, 把数组划分成三部分: 小于 pivot, pivot, 大于等于 pivot
+    // i 用于标记比 pivot 大的元素
+    let mut i = low;
+    // j 用于遍历整个数组
+    for j in low..high {
+        if arr[j] < arr[pivot_index] {
+            arr.swap(i, j);
+            i += 1;
+        }
+    }
+
+    // 最后把基准值 pivot 移到合适的位置.
+    // 此时, 数组中元素的顺序满足以下条件: 小于 pivot, pivot, 大于等于 pivot
+    arr.swap(i, pivot_index);
+    // 返回的是 pivot 所在的位置
+    i
+}
+
+/// 选择最左侧的元素作为基准值
 fn partition_pivot_at_left<T: PartialOrd>(arr: &mut [T], low: usize, high: usize) -> usize {
-    // 选择最左侧的元素作为基准值
+    let pivot_index = low;
+
+    // 以 pivot 为基准, 把数组划分成三部分: 小于等于 pivot, pivot, 大于 pivot
+    // i 用于标记比 pivot 大的元素
+    let mut i = high;
+    // j 用于遍历整个数组
+    for j in ((low + 1)..=high).rev() {
+        if arr[j] > arr[pivot_index] {
+            arr.swap(i, j);
+            i -= 1;
+        }
+    }
+
+    // 最后把基准值 pivot 移到合适的位置.
+    // 此时, 数组中元素的顺序满足以下条件: 小于等于 pivot, pivot, 大于 pivot
+    arr.swap(i, pivot_index);
+    // 返回的是 pivot 所在的位置
+    i
+}
+
+/// 使用双指针法选择最左侧的元素作为基准值
+fn partition_with_two_pointers<T: PartialOrd>(arr: &mut [T], low: usize, high: usize) -> usize {
     let pivot_index = low;
 
     // 使用双指针法遍历数组, 以 pivot 为基准, 把数组划分成三部分:
@@ -55,29 +100,6 @@ fn partition_pivot_at_left<T: PartialOrd>(arr: &mut [T], low: usize, high: usize
     arr.swap(left, pivot_index);
     // 返回的是 pivot 所在的位置
     left
-}
-
-#[allow(dead_code)]
-fn partition_pivot_at_right<T: PartialOrd>(arr: &mut [T], low: usize, high: usize) -> usize {
-    // 选择最左侧的元素作为基准值
-    let pivot_index = high;
-
-    // 以 pivot 为基准, 把数组划分成三部分: 小于等于 pivot, pivot, 大于等于 pivot
-    // i 用于标记比 pivot 大的元素
-    let mut i = low;
-    // j 用于遍历整个数组
-    for j in low..high {
-        if arr[j] < arr[pivot_index] {
-            arr.swap(i, j);
-            i += 1;
-        }
-    }
-
-    // 最后把基准值 pivot 移到合适的位置.
-    // 此时, 数组中元素的顺序满足以下条件: 小于等于 pivot, pivot, 大于等于 pivot
-    arr.swap(i, pivot_index);
-    // 返回的是 pivot 所在的位置
-    i
 }
 
 #[cfg(test)]
