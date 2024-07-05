@@ -1,4 +1,4 @@
-# 归并排序 Merge Sort
+# 归并排序 Merge sort
 
 归并排序是 [分治算法](../divide-and-conquer/index.md) 的经典实现.
 它将数组分成较小的数组并排序, 然后再将它们合并在一起, 得到的数组就是有序的了.

@@ -1,4 +1,4 @@
-# 选择排序 Selection Sort
+# 选择排序 Selection sort
 
 选择排序的逻辑很简单, 将数组分成两部分:
 

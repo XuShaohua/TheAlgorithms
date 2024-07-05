@@ -20,7 +20,7 @@ pub mod heap_sort;
 pub mod insertion_sort;
 pub mod merge_sort;
 pub mod odd_even_sort;
-pub mod quick_sort;
+pub mod quicksort;
 pub mod radix_sort;
 pub mod selection_sort;
 pub mod shaker_sort;
