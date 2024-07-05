@@ -8,7 +8,6 @@ use sort::quicksort::quicksort;
 use sort::util::{is_sorted, read_ints, show_brief};
 
 fn main() {
-    // TODO(Shaohua): Remove quick_sort()
     let mut list = read_ints();
     println!("[Quicksort] LIST:");
     show_brief(&list);
