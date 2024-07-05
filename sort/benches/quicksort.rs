@@ -15,6 +15,8 @@ fn criterion_benchmark(c: &mut Criterion) {
         let arr = random_ints(len).expect("Failed to generate random integers");
         let title1 = format!("std_sort_for_quicksort {len}");
         let title2 = format!("quicksort {len}");
+        let title3 = format!("head_quicksort {len}");
+        let title4 = format!("two_pointer_quicksort {len}");
         let mut arr_sorted = arr.clone();
         arr_sorted.sort();
 
@@ -30,6 +32,20 @@ fn criterion_benchmark(c: &mut Criterion) {
                 let mut arr2 = arr.clone();
                 quicksort(&mut arr2);
                 assert_eq!(arr2, arr_sorted);
+            })
+        });
+        c.bench_function(&title3, |b| {
+            b.iter(|| {
+                let mut arr3 = arr.clone();
+                quicksort(&mut arr3);
+                assert_eq!(arr3, arr_sorted);
+            })
+        });
+        c.bench_function(&title4, |b| {
+            b.iter(|| {
+                let mut arr4 = arr.clone();
+                quicksort(&mut arr4);
+                assert_eq!(arr4, arr_sorted);
             })
         });
     }

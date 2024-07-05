@@ -156,25 +156,24 @@ fn partition_with_two_pointers<T: PartialOrd>(arr: &mut [T], low: usize, high: u
 mod tests {
     use crate::quicksort::{head_quicksort, quicksort, two_pointer_quicksort};
 
-    #[test]
-    fn test_quicksort() {
+    fn run_test(sort_func: fn(arr: &mut [i32])) {
         let mut list = [1, 8, 3, 9, 4];
-        quicksort(&mut list);
+        sort_func(&mut list);
         assert_eq!(list, [1, 3, 4, 8, 9]);
 
         let mut list = [0, 5, 3, 2, 2];
-        quicksort(&mut list);
+        sort_func(&mut list);
         assert_eq!(list, [0, 2, 2, 3, 5]);
 
         let mut list = [-2, -5, -45];
-        quicksort(&mut list);
+        sort_func(&mut list);
         assert_eq!(list, [-45, -5, -2]);
 
         let mut list = [
             -998_166, -996_360, -995_703, -995_238, -995_066, -994_740, -992_987, -983_833,
             -987_905, -980_069, -977_640,
         ];
-        quicksort(&mut list);
+        sort_func(&mut list);
         assert_eq!(
             list,
             [
@@ -182,82 +181,20 @@ mod tests {
                 -983_833, -980_069, -977_640,
             ]
         );
+    }
 
-        let mut list = "EASYQUESTION".chars().collect::<Vec<_>>();
-        quicksort(&mut list);
-        assert_eq!(
-            list,
-            ['A', 'E', 'E', 'I', 'N', 'O', 'Q', 'S', 'S', 'T', 'U', 'Y']
-        );
+    #[test]
+    fn test_quicksort() {
+        run_test(quicksort);
     }
 
     #[test]
     fn test_head_quicksort() {
-        let mut list = [1, 8, 3, 9, 4];
-        head_quicksort(&mut list);
-        assert_eq!(list, [1, 3, 4, 8, 9]);
-
-        let mut list = [0, 5, 3, 2, 2];
-        head_quicksort(&mut list);
-        assert_eq!(list, [0, 2, 2, 3, 5]);
-
-        let mut list = [-2, -5, -45];
-        head_quicksort(&mut list);
-        assert_eq!(list, [-45, -5, -2]);
-
-        let mut list = [
-            -998_166, -996_360, -995_703, -995_238, -995_066, -994_740, -992_987, -983_833,
-            -987_905, -980_069, -977_640,
-        ];
-        head_quicksort(&mut list);
-        assert_eq!(
-            list,
-            [
-                -998_166, -996_360, -995_703, -995_238, -995_066, -994_740, -992_987, -987_905,
-                -983_833, -980_069, -977_640,
-            ]
-        );
-
-        let mut list = "EASYQUESTION".chars().collect::<Vec<_>>();
-        head_quicksort(&mut list);
-        assert_eq!(
-            list,
-            ['A', 'E', 'E', 'I', 'N', 'O', 'Q', 'S', 'S', 'T', 'U', 'Y']
-        );
+        run_test(head_quicksort);
     }
 
     #[test]
     fn test_two_pointer_quicksort() {
-        let mut list = [1, 8, 3, 9, 4];
-        two_pointer_quicksort(&mut list);
-        assert_eq!(list, [1, 3, 4, 8, 9]);
-
-        let mut list = [0, 5, 3, 2, 2];
-        two_pointer_quicksort(&mut list);
-        assert_eq!(list, [0, 2, 2, 3, 5]);
-
-        let mut list = [-2, -5, -45];
-        two_pointer_quicksort(&mut list);
-        assert_eq!(list, [-45, -5, -2]);
-
-        let mut list = [
-            -998_166, -996_360, -995_703, -995_238, -995_066, -994_740, -992_987, -983_833,
-            -987_905, -980_069, -977_640,
-        ];
-        two_pointer_quicksort(&mut list);
-        assert_eq!(
-            list,
-            [
-                -998_166, -996_360, -995_703, -995_238, -995_066, -994_740, -992_987, -987_905,
-                -983_833, -980_069, -977_640,
-            ]
-        );
-
-        let mut list = "EASYQUESTION".chars().collect::<Vec<_>>();
-        two_pointer_quicksort(&mut list);
-        assert_eq!(
-            list,
-            ['A', 'E', 'E', 'I', 'N', 'O', 'Q', 'S', 'S', 'T', 'U', 'Y']
-        );
+        run_test(two_pointer_quicksort);
     }
 }
