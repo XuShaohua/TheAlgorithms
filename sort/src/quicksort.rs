@@ -9,10 +9,10 @@ pub fn quicksort<T: PartialOrd>(arr: &mut [T]) {
     if arr.len() < 2 {
         return;
     }
-    quicksort_helper(arr, 0, arr.len() - 1);
+    tail_quicksort_helper(arr, 0, arr.len() - 1);
 }
 
-fn quicksort_helper<T: PartialOrd>(arr: &mut [T], low: usize, high: usize) {
+fn tail_quicksort_helper<T: PartialOrd>(arr: &mut [T], low: usize, high: usize) {
     if low >= high {
         return;
     }
@@ -21,10 +21,10 @@ fn quicksort_helper<T: PartialOrd>(arr: &mut [T], low: usize, high: usize) {
     let pivot_index = partition_pivot_at_right(arr, low, high);
     // 对左右两个子数组分别执行快速排序
     if pivot_index > low + 1 {
-        quicksort_helper(arr, low, pivot_index - 1);
+        tail_quicksort_helper(arr, low, pivot_index - 1);
     }
     if pivot_index + 1 < high {
-        quicksort_helper(arr, pivot_index + 1, high);
+        tail_quicksort_helper(arr, pivot_index + 1, high);
     }
 }
 
@@ -50,6 +50,31 @@ fn partition_pivot_at_right<T: PartialOrd>(arr: &mut [T], low: usize, high: usiz
     i
 }
 
+/// 总是选择第一个元素作为基准值
+#[inline]
+pub fn head_quicksort<T: PartialOrd>(arr: &mut [T]) {
+    if arr.len() < 2 {
+        return;
+    }
+    head_quicksort_helper(arr, 0, arr.len() - 1);
+}
+
+fn head_quicksort_helper<T: PartialOrd>(arr: &mut [T], low: usize, high: usize) {
+    if low >= high {
+        return;
+    }
+
+    // 按照基数的位置, 将数组划分成左右两个子数组.
+    let pivot_index = partition_pivot_at_left(arr, low, high);
+    // 对左右两个子数组分别执行快速排序
+    if pivot_index > low + 1 {
+        head_quicksort_helper(arr, low, pivot_index - 1);
+    }
+    if pivot_index + 1 < high {
+        head_quicksort_helper(arr, pivot_index + 1, high);
+    }
+}
+
 /// 选择最左侧的元素作为基准值
 fn partition_pivot_at_left<T: PartialOrd>(arr: &mut [T], low: usize, high: usize) -> usize {
     let pivot_index = low;
@@ -70,6 +95,31 @@ fn partition_pivot_at_left<T: PartialOrd>(arr: &mut [T], low: usize, high: usize
     arr.swap(i, pivot_index);
     // 返回的是 pivot 所在的位置
     i
+}
+
+/// 总是选择第一个元素作为基准值, 并使用双指针法进行数组分区.
+#[inline]
+pub fn two_pointer_quicksort<T: PartialOrd>(arr: &mut [T]) {
+    if arr.len() < 2 {
+        return;
+    }
+    two_pointer_quicksort_helper(arr, 0, arr.len() - 1);
+}
+
+fn two_pointer_quicksort_helper<T: PartialOrd>(arr: &mut [T], low: usize, high: usize) {
+    if low >= high {
+        return;
+    }
+
+    // 按照基数的位置, 将数组划分成左右两个子数组.
+    let pivot_index = partition_with_two_pointers(arr, low, high);
+    // 对左右两个子数组分别执行快速排序
+    if pivot_index > low + 1 {
+        two_pointer_quicksort_helper(arr, low, pivot_index - 1);
+    }
+    if pivot_index + 1 < high {
+        two_pointer_quicksort_helper(arr, pivot_index + 1, high);
+    }
 }
 
 /// 使用双指针法选择最左侧的元素作为基准值
@@ -104,7 +154,7 @@ fn partition_with_two_pointers<T: PartialOrd>(arr: &mut [T], low: usize, high: u
 
 #[cfg(test)]
 mod tests {
-    use crate::quicksort::quicksort;
+    use crate::quicksort::{head_quicksort, quicksort, two_pointer_quicksort};
 
     #[test]
     fn test_quicksort() {
@@ -135,6 +185,76 @@ mod tests {
 
         let mut list = "EASYQUESTION".chars().collect::<Vec<_>>();
         quicksort(&mut list);
+        assert_eq!(
+            list,
+            ['A', 'E', 'E', 'I', 'N', 'O', 'Q', 'S', 'S', 'T', 'U', 'Y']
+        );
+    }
+
+    #[test]
+    fn test_head_quicksort() {
+        let mut list = [1, 8, 3, 9, 4];
+        head_quicksort(&mut list);
+        assert_eq!(list, [1, 3, 4, 8, 9]);
+
+        let mut list = [0, 5, 3, 2, 2];
+        head_quicksort(&mut list);
+        assert_eq!(list, [0, 2, 2, 3, 5]);
+
+        let mut list = [-2, -5, -45];
+        head_quicksort(&mut list);
+        assert_eq!(list, [-45, -5, -2]);
+
+        let mut list = [
+            -998_166, -996_360, -995_703, -995_238, -995_066, -994_740, -992_987, -983_833,
+            -987_905, -980_069, -977_640,
+        ];
+        head_quicksort(&mut list);
+        assert_eq!(
+            list,
+            [
+                -998_166, -996_360, -995_703, -995_238, -995_066, -994_740, -992_987, -987_905,
+                -983_833, -980_069, -977_640,
+            ]
+        );
+
+        let mut list = "EASYQUESTION".chars().collect::<Vec<_>>();
+        head_quicksort(&mut list);
+        assert_eq!(
+            list,
+            ['A', 'E', 'E', 'I', 'N', 'O', 'Q', 'S', 'S', 'T', 'U', 'Y']
+        );
+    }
+
+    #[test]
+    fn test_two_pointer_quicksort() {
+        let mut list = [1, 8, 3, 9, 4];
+        two_pointer_quicksort(&mut list);
+        assert_eq!(list, [1, 3, 4, 8, 9]);
+
+        let mut list = [0, 5, 3, 2, 2];
+        two_pointer_quicksort(&mut list);
+        assert_eq!(list, [0, 2, 2, 3, 5]);
+
+        let mut list = [-2, -5, -45];
+        two_pointer_quicksort(&mut list);
+        assert_eq!(list, [-45, -5, -2]);
+
+        let mut list = [
+            -998_166, -996_360, -995_703, -995_238, -995_066, -994_740, -992_987, -983_833,
+            -987_905, -980_069, -977_640,
+        ];
+        two_pointer_quicksort(&mut list);
+        assert_eq!(
+            list,
+            [
+                -998_166, -996_360, -995_703, -995_238, -995_066, -994_740, -992_987, -987_905,
+                -983_833, -980_069, -977_640,
+            ]
+        );
+
+        let mut list = "EASYQUESTION".chars().collect::<Vec<_>>();
+        two_pointer_quicksort(&mut list);
         assert_eq!(
             list,
             ['A', 'E', 'E', 'I', 'N', 'O', 'Q', 'S', 'S', 'T', 'U', 'Y']
