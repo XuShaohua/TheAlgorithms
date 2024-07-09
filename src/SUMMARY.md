@@ -23,6 +23,7 @@
 - [栈 Stack](stack/index.md)
     - [栈的基本操作](stack/basic-ops.md)
     - [栈的实现](stack/impl-of-stack.md)
+    - [栈的应用](stack/applications.md)
     - [单调栈 Monotonic stack](stack/monotonic-stack.md)
 - [队列 Queue](queue/index.md)
     - [单调队列 Monotonic queue](queue/monotonic-queue.md)
