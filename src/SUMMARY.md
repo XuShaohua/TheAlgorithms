@@ -55,7 +55,7 @@
 # 第二部分: 算法 Algorithms
 
 - [算法分析 Analysis](algs-analysis/index.md)
-- [测试用的数据集](dataset/index.md)
+    - [测试用的数据集](algs-analysis/dataset.md)
 - [排序 Sorting](sort/index.md)
     - [冒泡排序 Bubble sort](sort/bubble-sort.md)
     - [插入排序 Insertion sort](sort/insertion-sort.md)
@@ -88,36 +88,37 @@
     - [标准库中二分查找法的实现](search/binary-search-in-std.md)
 - [位运算 Bit Manipulation](bit-manipulation/index.md)
     - [对自己异或操作结果为0](bit-manipulation/self-xor.md)
-    - [位运算相关的问题列表](leetcode/tags/bit-manipulation.md)
 - [递归 Recursion](recursion/index.md)
-    - [递归相关的问题列表](leetcode/tags/recursion.md)
 - [数学 Math](math/index.md)
     - [排列与组合](math/permutation/index.md)
     - [矩阵 Matrix](math/matrix/index.md)
     - [质数](math/prime/index.md)
     - [数独](math/sodoku/index.md)
     - [任意精度算术运算](math/arbitrary-precision-arithmetic/index.md)
-    - [数学相关的问题列表](leetcode/tags/math.md)
 - [双指针 Two Pointers](two-pointers/index.md)
     - [快慢型双指针](two-pointers/fast-slow.md)
     - [靠拢型双指针](two-pointers/close-up.md)
     - [并行双指针](two-pointers/parallel.md)
-    - [双指针相关的问题列表](leetcode/tags/two-pointers.md)
 - [滑动窗口 Sliding Window](sliding-window/index.md)
-    - [滑动窗口相关的问题列表](leetcode/tags/sliding-window.md)
 - [回溯法 Backtracking](backtracking/index.md)
-    - [回溯法相关的问题列表](leetcode/tags/backtracking.md)
 - [分治法 Divide and Conquer](divide-and-conquer/index.md)
-    - [分治法相关的问题列表](leetcode/tags/divide-and-conquer.md)
 - [动态规划 Dynamic Programming](dynamic-programming/index.md)
-    - [动态规划相关的问题列表](leetcode/tags/dynamic-programming.md)
 - [贪心算法 Greedy](greedy/index.md)
-    - [贪心算法相关的问题列表](leetcode/tags/greedy.md)
 - [图算法 Graph](graph/index.md)
 
-# 第三部分: 专题 Extras
+# 第三部分: 专题 Special
 
 - [内存 Memory](memory/index.md)
+- [缓存过期算法 Cache Management](cache/index.md)
+    - [倒计时 TTL](cache/ttl.md)
+    - [最近最少使用 LRU](cache/lru.md)
+    - [最近最不频繁使用 LFU](cache/lfu.md)
+- [限流算法 Rate limiter](rate-limiter/index.md)
+    - [令牌桶 Token bucket](rate-limiter/token-bucket.md)
+    - [漏桶算法 Leaking bucket](rate-limiter/leaking-bucket.md)
+    - [固定窗口计数 Fixed window counter](rate-limiter/fixed-window-counter.md)
+    - [滑动窗口日志 Sliding window log](rate-limiter/sliding-window-log.md)
+    - [滑动窗口计数 Sliding window counter](rate-limiter/sliding-window-counter.md)
 
 # 第四部分: leetcode 题解
 
