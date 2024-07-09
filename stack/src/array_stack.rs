@@ -8,7 +8,6 @@ use std::error::Error;
 use std::fmt::{Display, Formatter};
 
 pub struct ArrayStack<T: Sized> {
-    capacity: usize,
     top: usize,
     buf: Box<[Option<T>]>,
 }
@@ -38,7 +37,6 @@ impl<T> ArrayStack<T> {
         let values: Vec<Option<T>> = (0..capacity).map(|_| None).collect();
 
         Self {
-            capacity,
             top: 0,
             buf: values.into_boxed_slice(),
         }
@@ -49,7 +47,7 @@ impl<T> ArrayStack<T> {
     /// # Errors
     /// 当栈已满时再将元素入栈, 就会返回 `StackFull` 错误.
     pub fn push(&mut self, value: T) -> Result<(), StackError> {
-        if self.top >= self.capacity {
+        if self.top >= self.buf.len() {
             return Err(StackError::StackFull);
         }
         self.buf[self.top] = Some(value);
@@ -96,13 +94,20 @@ impl<T> ArrayStack<T> {
     /// 检查栈是否已满
     #[must_use]
     pub const fn is_full(&self) -> bool {
-        self.top == self.capacity
+        self.top == self.buf.len()
     }
 }
 
 #[cfg(test)]
 mod tests {
+    use std::mem::size_of;
+
     use crate::array_stack::{ArrayStack, StackError};
+
+    #[test]
+    fn test_size_of_stack() {
+        assert_eq!(size_of::<ArrayStack<i32>>(), 24);
+    }
 
     #[test]
     fn test_array_stack() {
