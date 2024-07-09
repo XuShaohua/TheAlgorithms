@@ -1,11 +1,11 @@
-
 # 数据结构与算法 - Rust 语言实现
 
 使用 Rust 语言实现所有的数据结构与算法.
 
-[在线浏览](https://algs.biofan.org), 或者[下载 pdf 文件](https://share.biofan.org/algs.pdf).
+[在线浏览](https://algs.biofan.org)
 
 本文档包括了以下几个部分的内容:
+
 1. 第一部分: 数据结构
 2. 第二部分: 算法及其实现
 3. 第三部分: 专题

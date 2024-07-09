@@ -23,16 +23,13 @@ impl BitSet {
     #[must_use]
     #[inline]
     pub const fn new() -> Self {
-        Self {
-            bits: Vec::new(),
-        }
+        Self { bits: Vec::new() }
     }
 
     #[must_use]
     #[inline]
     pub fn with_len(len: usize) -> Self {
         let bits_len = len.div_ceil(BITS_PER_ELEM);
-        println!("bits len: {bits_len}");
         Self {
             bits: vec![0; bits_len],
         }
@@ -42,7 +39,7 @@ impl BitSet {
     #[inline]
     pub fn from_bytes(bytes: &[u8]) -> Self {
         Self {
-            bits: bytes.to_vec()
+            bits: bytes.to_vec(),
         }
     }
 
@@ -95,25 +92,39 @@ impl BitSet {
     #[must_use]
     pub fn get(&self, index: usize) -> Option<bool> {
         let word = index / BITS_PER_ELEM;
+        if word >= self.bits.len() {
+            return None;
+        }
         let bit = index % BITS_PER_ELEM;
         let flag = 1 << bit;
-        if word >= self.bits.len() {
-            None
-        } else {
-            Some((self.bits[word] & flag) == flag)
-        }
+        Some((self.bits[word] & flag) == flag)
     }
 
     /// Returns the number of bits set to `true`.
     #[must_use]
     pub fn count_ones(&self) -> usize {
-        self.bits.iter().map(|byte| byte.count_ones() as usize).sum()
+        self.bits
+            .iter()
+            .map(|byte| byte.count_ones() as usize)
+            .sum()
     }
 
     /// Returns the number of bits set to `false`.
     #[must_use]
     pub fn count_zeros(&self) -> usize {
-        self.bits.iter().map(|byte| byte.count_zeros() as usize).sum()
+        self.bits
+            .iter()
+            .map(|byte| byte.count_zeros() as usize)
+            .sum()
+    }
+
+    #[must_use]
+    #[inline]
+    pub const fn iter(&self) -> BitSetIter {
+        BitSetIter {
+            bit_set: self,
+            index: 0,
+        }
     }
 
     /// # Panics
@@ -121,10 +132,13 @@ impl BitSet {
     #[must_use]
     pub fn union(&self, other: &Self) -> Self {
         assert_eq!(self.bits.len(), other.bits.len());
-        let bits = self.bits.iter().zip(other.bits.iter()).map(|(a, b)| a | b).collect();
-        Self {
-            bits
-        }
+        let bits = self
+            .bits
+            .iter()
+            .zip(other.bits.iter())
+            .map(|(a, b)| a | b)
+            .collect();
+        Self { bits }
     }
 
     /// # Panics
@@ -132,10 +146,13 @@ impl BitSet {
     #[must_use]
     pub fn intersect(&self, other: &Self) -> Self {
         assert_eq!(self.bits.len(), other.bits.len());
-        let bits = self.bits.iter().zip(other.bits.iter()).map(|(a, b)| a & b).collect();
-        Self {
-            bits
-        }
+        let bits = self
+            .bits
+            .iter()
+            .zip(other.bits.iter())
+            .map(|(a, b)| a & b)
+            .collect();
+        Self { bits }
     }
 
     /// # Panics
@@ -143,10 +160,13 @@ impl BitSet {
     #[must_use]
     pub fn difference(&self, other: &Self) -> Self {
         assert_eq!(self.bits.len(), other.bits.len());
-        let bits = self.bits.iter().zip(other.bits.iter()).map(|(a, b)| a & !b).collect();
-        Self {
-            bits
-        }
+        let bits = self
+            .bits
+            .iter()
+            .zip(other.bits.iter())
+            .map(|(a, b)| a & !b)
+            .collect();
+        Self { bits }
     }
 }
 
@@ -187,6 +207,31 @@ impl Index<usize> for BitSet {
         } else {
             &FALSE
         }
+    }
+}
+
+pub struct BitSetIter<'a> {
+    bit_set: &'a BitSet,
+    index: usize,
+}
+
+impl<'a> Iterator for BitSetIter<'a> {
+    type Item = bool;
+
+    fn next(&mut self) -> Option<Self::Item> {
+        let is_set = self.bit_set.get(self.index);
+        if is_set.is_some() {
+            self.index += 1;
+        }
+        is_set
+    }
+}
+
+impl<'a> IntoIterator for &'a BitSet {
+    type IntoIter = BitSetIter<'a>;
+    type Item = bool;
+    fn into_iter(self) -> Self::IntoIter {
+        self.iter()
     }
 }
 

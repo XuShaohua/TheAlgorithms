@@ -13,7 +13,7 @@
 - [动态数组 Vector](vector/index.md)
     - [动态数组的常用操作](vector/ops.md)
     - [标准库中 Vec 的实现](vector/impl-of-vec.md)
-    - [位图 BitSet](vector/bitset/index.md)
+    - [位图 BitSet](vector/bitset.md)
 - [链表 List](list/index.md)
     - [单链表](list/single.md)
     - [双链表](list/double.md)
