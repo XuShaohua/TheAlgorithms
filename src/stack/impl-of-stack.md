@@ -11,7 +11,7 @@
 ![array stack](assets/array-stack.svg)
 
 ```rust
-{{#include assets/array_stack.rs:5:101}}
+{{#include assets/array_stack.rs:5:99}}
 ```
 
 ## 使用动态数组 Vec 实现
