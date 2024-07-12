@@ -18,8 +18,8 @@
     - [布隆过滤器 Bloom filter](vector/bloom-filter.md)
     - [Hashed Array Tree](vector/hat.md)
 - [链表 List](list/index.md)
-    - [单链表](list/single.md)
-    - [双链表](list/double.md)
+    - [单链表 Singly Linked List](list/single.md)
+    - [双链表 Doubly Linked List](list/double.md)
     - [标准库中 List 的实现](list/impl-oflist.md)
     - [Unrolled Linked List](list/unrolled-linked-list.md)
     - [跳跃表 Skip List](list/skiplist/index.md)
@@ -83,10 +83,12 @@
     - [广度优先搜索 BFS](graph/bfs.md)
     - [最短路径](graph/shortest-path.md)
     - [最小生成树](graph/minimum-spanning-tree.md)
-- [分布式数据结构 Distributed Data Structures](dds/index.md)
-    - [Concurrent Hash Map](dds/concurrent-hash-map.md)
-    - [Concurrent Linked List](dds/concurrent-linked-list.md)
-    - [Skip Graph](dds/skip-graph.md)
+- [并发数据结构 Concurrent Data Structures](concurrency/index.md)
+    - [Concurrent Hash Map](concurrency/concurrent-hash-map.md)
+    - [Concurrent List](concurrency/concurrent-list.md)
+    - [Concurrent Ring Buffer](concurrency/concurrent-ring-buffer.md)
+    - [Concurrent Queue](concurrency/concurrent-queue.md)
+    - [Skip Graph](concurrency/skip-graph.md)
 
 # 第二部分: 算法 Algorithms
 
