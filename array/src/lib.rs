@@ -11,4 +11,5 @@
 )]
 
 pub mod reverse;
+pub mod ring_buffer;
 pub mod rotate;
