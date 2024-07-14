@@ -10,7 +10,7 @@
     - [旋转数组](array/rotate.md)
     - [前缀和数组 Prefix Sum Array](array/prefix-sum-array.md)
     - [后缀数组 Suffix Array](array/suffix-array.md)
-    - [环形缓冲区 Ring Buffer](array/ring-buffer.md)
+    - [环形缓冲区 Circular Buffer](array/circular-buffer.md)
 - [动态数组 Vector](vector/index.md)
     - [动态数组的常用操作](vector/ops.md)
     - [标准库中 Vec 的实现](vector/impl-of-vec.md)

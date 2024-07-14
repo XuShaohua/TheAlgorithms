@@ -10,6 +10,6 @@
     clippy::pedantic
 )]
 
+pub mod circular_buffer;
 pub mod reverse;
-pub mod ring_buffer;
 pub mod rotate;

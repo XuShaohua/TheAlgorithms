@@ -1,21 +1,23 @@
-# 环形缓冲区 Ring Buffer
+# 环形缓冲区 Circular Buffer
 
-环形缓冲区 Ring buffer 又称为 Circular buffer.
+环形缓冲区 Circular Buffer 又称为 Ring Buffer.
 
 环形缓冲区是线性数据结构, 通常由数组来实现, 如下图所示:
 
-![ring buffer linear](assets/ring-buffer-linear.svg)
+![circular buffer linear](assets/circular-buffer-linear.svg)
 
 将尾部与头部相连, 组成一个环形索引, 逻辑上的关系如下图所示.:
 
-![ring buffer circular](assets/ring-buffer-circular.svg)
+![circular buffer circular](assets/circular-buffer-circular.svg)
 
 所以才称为环形缓冲区.
 
 环形缓冲区实现的是单生产者-单消费者模式 (single-producer, single-consumer),
-生产者将元素加到尾部, 然后消费者从头部读取元素.
+生产者将元素加到尾部, 然后消费者从头部读取元素, FIFO (first in first out).
 
-## Ring Buffer 的基本操作
+与链表相比, 这种数据结构更加紧凑, 空间利用率高, 对CPU的缓存友好, 常用作 I/O buffering.
+
+## 环形缓冲区的基本操作
 
 ### 初始化缓冲区
 
@@ -41,17 +43,17 @@
 
 如果缓冲区已经空了, 就返回 `None`
 
-## Ring Buffer 的实现
+## 环形缓冲区的实现
 
-考虑到性能, 下面的 RingBuffer 实现使用了几个 `unsafe` 接口, 要特别留意指针的操作.
+考虑到性能, 下面的 `CircularBuffer` 使用了几个 `unsafe` 接口, 要特别留意指针的操作.
 
 ```rust
-{{#include assets/ring_buffer.rs:5:178}}
+{{#include assets/circular_buffer.rs:5:178}}
 ```
 
-## Ring Buffer 的应用
+## 环形缓冲区的应用
 
-有不少软件有使用 RingBuffer 来管理缓冲区, 下面就列举几个.
+有不少软件有使用它来管理缓冲区, 下面就列举几个.
 
 - [linux kernel](https://github.com/torvalds/linux/blob/master/include/linux/circ_buf.h)
 - [cpp boost](https://www.boost.org/doc/libs/1_85_0/doc/html/circular_buffer.html)

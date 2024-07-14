@@ -2,12 +2,12 @@
 // Use of this source is governed by General Public License that can be found
 // in the LICENSE file.
 
-use std::{mem, ops, ptr, slice};
 use std::alloc::{alloc, dealloc, Layout};
 use std::marker::PhantomData;
 use std::ptr::NonNull;
+use std::{mem, ops, ptr, slice};
 
-pub struct RingBuffer<T: Sized> {
+pub struct CircularBuffer<T: Sized> {
     start: usize,
     len: usize,
     cap: usize,
@@ -15,7 +15,7 @@ pub struct RingBuffer<T: Sized> {
     _marker: PhantomData<T>,
 }
 
-impl<T: Sized> RingBuffer<T> {
+impl<T: Sized> CircularBuffer<T> {
     /// # Panics
     ///
     /// 分配内存失败时直接返回 panic
@@ -133,7 +133,7 @@ impl<T: Sized> RingBuffer<T> {
 }
 
 /// 释放堆内存
-impl<T> Drop for RingBuffer<T> {
+impl<T> Drop for CircularBuffer<T> {
     fn drop(&mut self) {
         let (ptr, layout) = self.current_memory();
         unsafe { dealloc(ptr.as_ptr(), layout) }
@@ -141,7 +141,7 @@ impl<T> Drop for RingBuffer<T> {
 }
 
 /// 实现 `Deref` 和 `DerefMut` traits.
-impl<T> ops::Deref for RingBuffer<T> {
+impl<T> ops::Deref for CircularBuffer<T> {
     type Target = [T];
 
     #[inline]
@@ -150,7 +150,7 @@ impl<T> ops::Deref for RingBuffer<T> {
     }
 }
 
-impl<T> ops::DerefMut for RingBuffer<T> {
+impl<T> ops::DerefMut for CircularBuffer<T> {
     #[inline]
     fn deref_mut(&mut self) -> &mut [T] {
         unsafe { slice::from_raw_parts_mut(self.as_mut_ptr(), self.len) }
@@ -158,8 +158,8 @@ impl<T> ops::DerefMut for RingBuffer<T> {
 }
 
 /// 支持从迭代器初始化.
-impl<T> FromIterator<T> for RingBuffer<T> {
-    fn from_iter<I: IntoIterator<Item=T>>(iter: I) -> Self {
+impl<T> FromIterator<T> for CircularBuffer<T> {
+    fn from_iter<I: IntoIterator<Item = T>>(iter: I) -> Self {
         // 为了实现简单, 我们重用了 vec 的 `FromIterator` 实现.
         let vec: Vec<T> = iter.into_iter().collect();
         let len = vec.len();
@@ -181,37 +181,37 @@ impl<T> FromIterator<T> for RingBuffer<T> {
 mod tests {
     use std::mem::size_of;
 
-    use super::RingBuffer;
+    use super::CircularBuffer;
 
     #[test]
     fn test_size() {
-        assert_eq!(size_of::<RingBuffer<i32>>(), 32);
+        assert_eq!(size_of::<CircularBuffer<i32>>(), 32);
         assert_eq!(size_of::<Vec<i32>>(), 24);
     }
 
     #[test]
-    fn test_ring_buffer() {
-        let mut ring = RingBuffer::<i32>::new(3);
-        let ret = ring.push(1);
+    fn test_circular_buffer() {
+        let mut cb = CircularBuffer::<i32>::new(3);
+        let ret = cb.push(1);
         assert_eq!(ret, Ok(()));
-        assert_eq!(ring.len(), 1);
-        let ret = ring.push(2);
+        assert_eq!(cb.len(), 1);
+        let ret = cb.push(2);
         assert_eq!(ret, Ok(()));
-        assert_eq!(ring.len(), 2);
-        let ret = ring.push(3);
+        assert_eq!(cb.len(), 2);
+        let ret = cb.push(3);
         assert_eq!(ret, Ok(()));
-        assert_eq!(ring.len(), 3);
+        assert_eq!(cb.len(), 3);
 
-        let ret = ring.push(4);
+        let ret = cb.push(4);
         assert_eq!(ret, Err(4));
-        assert!(ring.is_full());
+        assert!(cb.is_full());
 
-        let ret = ring.pop();
+        let ret = cb.pop();
         assert_eq!(ret, Some(1));
-        let ret = ring.pop();
+        let ret = cb.pop();
         assert_eq!(ret, Some(2));
-        let ret = ring.pop();
+        let ret = cb.pop();
         assert_eq!(ret, Some(3));
-        assert!(ring.is_empty());
+        assert!(cb.is_empty());
     }
 }
