@@ -18,14 +18,14 @@ pub struct RingBuffer<T: Sized> {
 impl<T: Sized> RingBuffer<T> {
     /// # Panics
     ///
-    /// Raise panic if failed to alloc memory.
+    /// 分配内存失败时直接返回 panic
     #[must_use]
     #[inline]
     pub fn new(capacity: usize) -> Self {
+        // 为了方便处理, 我们强制要求 capacity 是正数, 并且目前还没有考虑 ZST (zero sized type).
         assert!(capacity > 0);
 
         let layout = Layout::array::<T>(capacity).expect("Layout error");
-
         let ptr = unsafe { alloc(layout) };
         let ptr = NonNull::new(ptr).expect("Failed to alloc");
 
@@ -63,12 +63,14 @@ impl<T: Sized> RingBuffer<T> {
     }
 
     /// # Errors
-    /// Returns error if buffer is full.
+    ///
+    /// 当缓冲区已满时返回 `Err(value)`
     pub fn push(&mut self, value: T) -> Result<(), T> {
         if self.is_full() {
             Err(value)
         } else {
             unsafe {
+                // 计算新元素的指针位置
                 let end = (self.start + self.len) % self.cap;
                 let end_ptr = self.as_mut_ptr().add(end);
                 self.len += 1;
@@ -78,12 +80,13 @@ impl<T: Sized> RingBuffer<T> {
         }
     }
 
+    /// 从缓冲区消费元素, 如果缓冲区已空, 就返回 `None`
     pub fn pop(&mut self) -> Option<T> {
         if self.is_empty() {
             None
         } else {
             unsafe {
-                println!("start: {}", self.start);
+                // 计算起始元素的地址
                 let start_ptr = self.as_ptr().add(self.start);
                 self.start = (self.start + 1) % self.cap;
                 self.len -= 1;
@@ -92,6 +95,7 @@ impl<T: Sized> RingBuffer<T> {
         }
     }
 
+    /// 返回当前缓冲区中的元素个数
     #[must_use]
     #[inline]
     pub const fn len(&self) -> usize {
@@ -116,6 +120,7 @@ impl<T: Sized> RingBuffer<T> {
         self.len() == self.cap
     }
 
+    // 计算当前的内存结构
     fn current_memory(&self) -> (NonNull<u8>, Layout) {
         assert_eq!(mem::size_of::<T>() % mem::align_of::<T>(), 0);
         unsafe {
@@ -127,14 +132,15 @@ impl<T: Sized> RingBuffer<T> {
     }
 }
 
+/// 释放堆内存
 impl<T> Drop for RingBuffer<T> {
     fn drop(&mut self) {
-        // Frees the memory owned by the `RawVec` *without* trying to drop its contents.
         let (ptr, layout) = self.current_memory();
         unsafe { dealloc(ptr.as_ptr(), layout) }
     }
 }
 
+/// 实现 `Deref` 和 `DerefMut` traits.
 impl<T> ops::Deref for RingBuffer<T> {
     type Target = [T];
 
@@ -151,9 +157,10 @@ impl<T> ops::DerefMut for RingBuffer<T> {
     }
 }
 
-
+/// 支持从迭代器初始化.
 impl<T> FromIterator<T> for RingBuffer<T> {
     fn from_iter<I: IntoIterator<Item=T>>(iter: I) -> Self {
+        // 为了实现简单, 我们重用了 vec 的 `FromIterator` 实现.
         let vec: Vec<T> = iter.into_iter().collect();
         let len = vec.len();
         let cap = vec.capacity();
