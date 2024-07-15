@@ -15,6 +15,10 @@ name = "bubble_sort"
 harness = false
 
 [[bench]]
+name = "counting_sort"
+harness = false
+
+[[bench]]
 name = "gnome_sort"
 harness = false
 
