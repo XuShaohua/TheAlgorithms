@@ -6,7 +6,7 @@ use std::ops::Sub;
 
 pub fn counting_sort_generic<T>(arr: &mut [T])
 where
-    T: Copy + Default + Ord + Sub<Output = T> + Into<usize>,
+    T: Copy + Default + Ord + Sub<Output=T> + Into<usize>,
 {
     if arr.is_empty() {
         return;
@@ -48,44 +48,47 @@ where
 }
 
 #[allow(clippy::cast_sign_loss)]
-pub fn counting_sort(nums: &mut [i32]) {
-    if nums.is_empty() {
+pub fn counting_sort(arr: &mut [i32]) {
+    if arr.is_empty() {
         return;
     }
-    let min_num: i32 = nums.iter().min().copied().unwrap_or_default();
-    let max_num: i32 = nums.iter().max().copied().unwrap_or_default();
+    let min_num: i32 = arr.iter().min().copied().unwrap_or_default();
+    let max_num: i32 = arr.iter().max().copied().unwrap_or_default();
     let range: i32 = max_num - min_num;
     let size: usize = range as usize + 1;
+
     // 构造计数数组
-    let mut counts = vec![0_usize; size];
+    let mut count_arr = vec![0_usize; size];
 
-    // 遍历数组, 更新计数数组
-    for num in nums.iter() {
-        let delta: i32 = *num - min_num;
+    // 遍历输入数组, 更新计数数组
+    for &num in arr.iter() {
+        let delta: i32 = num - min_num;
         let index: usize = delta as usize;
-        counts[index] += 1;
+        count_arr[index] += 1;
     }
 
-    // 生成累积数组
+    // 生成累积数组, prefix sum array
     for i in 1..size {
-        counts[i] += counts[i - 1];
+        count_arr[i] += count_arr[i - 1];
     }
 
-    // 反向填充目标数组
-    let len = nums.len();
-    let mut mirror: Vec<i32> = Vec::new();
-    mirror.extend_from_slice(nums);
+    // 构造输入数组, 只读的
+    let input_arr: Vec<i32> = arr.to_vec();
+    let len = arr.len();
 
+    // 从输入数组的右侧向左侧遍历, 这样实现的是稳定排序.
     for i in (0..len).rev() {
-        let num: i32 = mirror[i];
-        let diff: i32 = num - min_num;
-        let index: usize = counts[diff as usize];
+        let num: i32 = input_arr[i];
+        // 计算当前值与最小值的差.
+        let delta: i32 = num - min_num;
+        let delta_index = delta as usize;
+        // 从 count_arr 里取出该数值的相对位置
+        let num_index: usize = count_arr[delta_index];
         // 把 num 放在对应的位置
-        nums[index - 1] = num;
+        arr[num_index - 1] = num;
 
-        // 同时更新 counts
-        // FIXME(Shaohua): subtract overflow
-        //counts[index] -= 1;
+        // 同时更新 count_arr, 使之计数减1, 这样的话下一个相同数值的元素的索引值就被左移了一位.
+        count_arr[delta_index] -= 1;
     }
 }
 

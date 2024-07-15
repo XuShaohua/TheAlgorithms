@@ -84,12 +84,14 @@
     - [最短路径](graph/shortest-path.md)
     - [最小生成树](graph/minimum-spanning-tree.md)
 - [并发数据结构 Concurrent Data Structures](concurrency/index.md)
+    - [Concurrent Ring Buffer](concurrency/concurrent-ring-buffer.md)
     - [Concurrent Hash Map](concurrency/concurrent-hash-map.md)
     - [Concurrent Linked List](concurrency/concurrent-linked-list.md)
-    - [Concurrent Ring Buffer](concurrency/concurrent-ring-buffer.md)
+    - [Concurrent Deque](concurrency/concurrent-deque.md)
     - [Concurrent Queue](concurrency/concurrent-queue.md)
     - [Concurrent SkipList Map](concurrency/concurrent-skip-list-map.md)
     - [Concurrent SkipList Set](concurrency/concurrent-skip-list-set.md)
+    - [Concurrent Radix Tree](concurrency/concurrent-radix-tree.md)
     - [Skip Graph](concurrency/skip-graph.md)
 
 # 第二部分: 算法 Algorithms
