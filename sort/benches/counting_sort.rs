@@ -6,7 +6,7 @@ use std::time::Duration;
 
 use criterion::{Criterion, criterion_group, criterion_main};
 
-use sort::counting_sort::counting_sort;
+use sort::counting_sort::{counting_sort, counting_sort_with_map};
 use sort::util::random_ints_in_range;
 
 fn criterion_benchmark(c: &mut Criterion) {
@@ -16,6 +16,7 @@ fn criterion_benchmark(c: &mut Criterion) {
         let arr = random_ints_in_range(len, 0, max).expect("Failed to generate random integers");
         let title1 = format!("std_sort_for_counting_sort {len}");
         let title2 = format!("counting_sort {len}");
+        let title3 = format!("counting_sort_with_map {len}");
         let mut arr_sorted = arr.clone();
         arr_sorted.sort();
 
@@ -31,6 +32,13 @@ fn criterion_benchmark(c: &mut Criterion) {
                 let mut arr2 = arr.clone();
                 counting_sort(&mut arr2);
                 assert_eq!(arr2, arr_sorted);
+            })
+        });
+        c.bench_function(&title3, |b| {
+            b.iter(|| {
+                let mut arr3 = arr.clone();
+                counting_sort_with_map(&mut arr3);
+                assert_eq!(arr3, arr_sorted);
             })
         });
     }
