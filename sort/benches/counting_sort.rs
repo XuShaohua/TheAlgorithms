@@ -2,15 +2,18 @@
 // Use of this source is governed by General Public License that can be found
 // in the LICENSE file.
 
+use std::time::Duration;
+
 use criterion::{Criterion, criterion_group, criterion_main};
 
 use sort::counting_sort::counting_sort;
-use sort::util::random_ints;
+use sort::util::random_ints_in_range;
 
 fn criterion_benchmark(c: &mut Criterion) {
     for exp in 1..7 {
         let len: usize = 2 * 10_usize.pow(exp);
-        let arr = random_ints(len).expect("Failed to generate random integers");
+        let max = (len as i32) * 2;
+        let arr = random_ints_in_range(len, 0, max).expect("Failed to generate random integers");
         let title1 = format!("std_sort_for_counting_sort {len}");
         let title2 = format!("counting_sort {len}");
         let mut arr_sorted = arr.clone();
@@ -33,5 +36,9 @@ fn criterion_benchmark(c: &mut Criterion) {
     }
 }
 
-criterion_group!(benches, criterion_benchmark);
+criterion_group!(
+    name = benches;
+    config = Criterion::default().measurement_time(Duration::from_secs(10));
+    targets = criterion_benchmark
+);
 criterion_main!(benches);

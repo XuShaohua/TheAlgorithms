@@ -54,6 +54,7 @@ pub fn counting_sort(arr: &mut [i32]) {
     }
     let min_num: i32 = arr.iter().min().copied().unwrap_or_default();
     let max_num: i32 = arr.iter().max().copied().unwrap_or_default();
+    // 计算数值范围.
     let range: i32 = max_num - min_num;
     let size: usize = range as usize + 1;
 
@@ -74,11 +75,9 @@ pub fn counting_sort(arr: &mut [i32]) {
 
     // 构造输入数组, 只读的
     let input_arr: Vec<i32> = arr.to_vec();
-    let len = arr.len();
 
     // 从输入数组的右侧向左侧遍历, 这样实现的是稳定排序.
-    for i in (0..len).rev() {
-        let num: i32 = input_arr[i];
+    for &num in input_arr.iter().rev() {
         // 计算当前值与最小值的差.
         let delta: i32 = num - min_num;
         let delta_index = delta as usize;

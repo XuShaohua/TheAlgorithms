@@ -93,6 +93,20 @@ pub fn random_ints(len: usize) -> Result<Vec<i32>, io::Error> {
     Ok(nums)
 }
 
+
+/// Generate random integers in specific range.
+///
+/// # Errors
+/// Returns error if failed to rand system random file.
+pub fn random_ints_in_range(len: usize, min: i32, max: i32) -> Result<Vec<i32>, io::Error> {
+    let mut arr = random_ints(len)?;
+    for num in &mut arr {
+        *num = (*num).max(min).min(max);
+    }
+
+    Ok(arr)
+}
+
 #[cfg(test)]
 mod tests {
     use crate::util::random_ints;
