@@ -1,1 +1,1 @@
-../../../bitwise/src/swap_number.rs
+../../../bit_manipulation/src/swap_number.rs

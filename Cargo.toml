@@ -4,12 +4,13 @@ resolver = "2"
 
 members = [
   "array",
-  "bitwise",
+  "bit_manipulation",
   "conversions",
   "deque",
   "graph",
   "hash_table",
   "list",
+  "math",
   "priority_queue",
   "queue",
   "search",
