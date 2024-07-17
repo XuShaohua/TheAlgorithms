@@ -23,10 +23,6 @@ members = [
   "vector",
 ]
 
-exclude = [
-  "system_design",
-]
-
 [profile.release]
 debug = true
 lto = true
