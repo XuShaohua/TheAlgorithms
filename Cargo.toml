@@ -4,9 +4,12 @@ resolver = "2"
 
 members = [
   "array",
+  "backtracking",
   "bit_manipulation",
+  "ciphers",
   "conversions",
   "deque",
+  "dynamic_programming",
   "graph",
   "hash_table",
   "list",
