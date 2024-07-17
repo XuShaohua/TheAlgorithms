@@ -1,0 +1,18 @@
+[package]
+name = "math"
+version = "0.1.0"
+edition = "2021"
+publish = false
+
+[dependencies]
+
+[dev-dependencies]
+criterion = "0.5.1"
+
+[[bench]]
+name = "fibonacci"
+harness = false
+
+[[bench]]
+name = "num_of_digits"
+harness = false
