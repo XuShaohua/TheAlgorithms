@@ -10,4 +10,5 @@
     clippy::pedantic
 )]
 
+pub mod base16;
 pub mod rot13;
