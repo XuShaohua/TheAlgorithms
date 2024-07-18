@@ -17,26 +17,21 @@
 
 ## 搭建本地环境
 
-想在本地搭建本文档的环境也是很容易的.
+想在本地搭建本文档的环境也是很容易的, 这些文档记录以 markdown 文件为主,
+用 [mdbook](https://github.com/rust-lang/mdBook) 生成网页:
 
-这些文档记录以 markdown 文件为主, 用 [mdbook](https://github.com/rust-lang/mdBook) 生成网页.
-
-用cargo来安装它: `cargo install mdbook mdbook-linkcheck`
-
-运行 `mdbook build` 命令, 会在`book/`目录里生成完整的电子书的网页版本.
-
-在编写文档的同时, mdbook 工具可以检查文件变更, 按需自动更新.
-使用 `mdbook serve` 命令启动一个本地的 web 服务器, 在浏览器中打开 [http://localhost:3000](http://localhost:3000).
+1. 用cargo来安装它: `cargo install mdbook mdbook-linkcheck`
+2. 运行 `mdbook build` 命令, 会在`book/`目录里生成完整的电子书的网页版本.
+3. 使用 `mdbook serve` 命令监控文件变更, 并启动一个本地的 web 服务器,
+   在浏览器中打开 [http://localhost:3000](http://localhost:3000)
 
 ### 生成 PDF
 
-如果想生成 pdf, 需要安装 [mdbook-pandoc](https://github.com/max-heller/mdbook-pandoc),
-用命令: `cargo install mdbook-pandoc`
+如果想生成 pdf, 需要安装 [mdbook-pandoc](https://github.com/max-heller/mdbook-pandoc):
 
-并且安装 latex 相应的包:
+- 运行 `./tools/install-pdf-deps.sh` 脚本安装相应的依赖包
+- 运行 `./tools/generate-pdf.sh` 脚本, 就会生成 `book-pandoc/pdf/TheAlgorithms.pdf`
 
-```bash
-sudo apt install pandoc librsvg2-bin texlive-latex-recommended latex-cjk-all texlive-xetex
-```
+## 版权
 
-安装好依赖之后, 运行 `./tools/generate-pdf.sh` 命令, 就会生成 `book-pandoc/intro-to-rust.pdf`.
+本文档中附带的源代码文件依照 [GPL 3.0](LICENSE) 协议发布.

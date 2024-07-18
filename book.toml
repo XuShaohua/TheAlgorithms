@@ -2,7 +2,7 @@
 [book]
 title = "数据结构与算法 - Rust 语言实现"
 description = ""
-authors = ["Shaohua <shaohua@biofan.org>"]
+authors = ["Xu Shaohua <shaohua@biofan.org>"]
 src = "src"
 language = "zh-CN"
 
