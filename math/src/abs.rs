@@ -55,9 +55,9 @@ mod tests {
 
     #[test]
     fn test_abs_val() {
-        assert_eq!(abs_val(-5.1), 5.1);
-        assert_eq!(abs_val(5.0), 5.0);
-        assert_eq!(abs_val(0.0), 0.0);
+        assert!((abs_val(-5.1) - 5.1).abs() < f64::EPSILON);
+        assert!((abs_val(5.0) - 5.0).abs() < f64::EPSILON);
+        assert!((abs_val(0.0) - 0.0).abs() < f64::EPSILON);
     }
 
     #[test]

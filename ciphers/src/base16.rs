@@ -2,6 +2,8 @@
 // Use of this source is governed by General Public License that can be found
 // in the LICENSE file.
 
+#![allow(clippy::module_name_repetitions)]
+
 use std::fmt::{self, Write};
 
 /// Encodes the given bytes into base16.
@@ -37,6 +39,10 @@ impl fmt::Display for DecodeError {
 impl std::error::Error for DecodeError {}
 
 /// Decodes the given base16 encoded data into bytes.
+///
+/// # Errors
+///
+/// Returns error if str contains invalid hex digit chars.
 pub fn base16_decode(s: &str) -> Result<Vec<u8>, DecodeError> {
     // Check data validity, following RFC3548
     // https://www.ietf.org/rfc/rfc3548.txt

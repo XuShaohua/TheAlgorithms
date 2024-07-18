@@ -18,6 +18,7 @@ mod tests {
     use super::get_radian;
 
     #[test]
+    #[allow(clippy::approx_constant)]
     fn test_get_radian() {
         const PAIRS: &[(f64, f64)] = &[
             (180.0, 3.141_592_653_589_793),
@@ -26,8 +27,9 @@ mod tests {
             (109.82, 1.916_720_584_540_172_5),
         ];
 
-        for (degree, radian) in PAIRS {
-            assert_eq!(get_radian(*degree), *radian);
+        for (degree, expected) in PAIRS.iter().copied() {
+            let radian = get_radian(degree);
+            assert!((radian - expected).abs() < f64::EPSILON);
         }
     }
 }
