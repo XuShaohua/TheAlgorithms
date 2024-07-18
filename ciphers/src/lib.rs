@@ -12,4 +12,5 @@
 
 pub mod a1z26;
 pub mod base16;
+pub mod morse_code;
 pub mod rot13;
