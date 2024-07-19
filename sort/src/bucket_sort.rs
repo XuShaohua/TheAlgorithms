@@ -2,6 +2,8 @@
 // Use of this source is governed by General Public License that can be found
 // in the LICENSE file.
 
+use std::ops::Sub;
+
 use crate::insertion_sort::insertion_sort;
 use crate::shell_sort::shell_sort;
 
@@ -73,9 +75,38 @@ pub fn shell_bucket_sort(arr: &mut [i32]) {
     }
 }
 
+#[allow(clippy::cast_sign_loss)]
+pub fn generic_bucket_sort<T>(arr: &mut [T])
+where
+    T: Copy + Ord + Default + Sub<T, Output=T> + TryInto<usize>,
+{
+    if arr.is_empty() {
+        return;
+    }
+
+    let bucket_elements: usize = 72;
+    let min_num: T = arr.iter().min().copied().unwrap_or_default();
+    let max_num: T = arr.iter().max().copied().unwrap_or_default();
+    let range: T = max_num - min_num;
+    let bucket_count: usize = range.try_into().unwrap_or_default() / bucket_elements + 1;
+    let mut buckets: Vec<Vec<T>> = vec![vec![]; bucket_count];
+
+    for &num in arr.iter() {
+        let bucket_index: usize = (num - min_num).try_into().unwrap_or_default() / bucket_elements;
+        buckets[bucket_index].push(num);
+    }
+
+    let mut index: usize = 0;
+    for mut bucket in buckets {
+        insertion_sort(&mut bucket);
+        arr[index..(index + bucket.len())].copy_from_slice(&bucket);
+        index += bucket.len();
+    }
+}
+
 #[cfg(test)]
 mod tests {
-    use super::{bucket_sort, shell_bucket_sort};
+    use super::{bucket_sort, generic_bucket_sort, shell_bucket_sort};
 
     #[test]
     fn test_bucket_sort() {
@@ -116,6 +147,30 @@ mod tests {
             -987_905, -980_069, -977_640,
         ];
         shell_bucket_sort(&mut list);
+        assert_eq!(
+            list,
+            [
+                -998_166, -996_360, -995_703, -995_238, -995_066, -994_740, -992_987, -987_905,
+                -983_833, -980_069, -977_640,
+            ]
+        );
+    }
+
+    #[test]
+    fn test_generic_bucket() {
+        let mut list = [0, 5, 3, 2, 2];
+        generic_bucket_sort(&mut list);
+        assert_eq!(list, [0, 2, 2, 3, 5]);
+
+        let mut list = [-2, -5, -45];
+        generic_bucket_sort(&mut list);
+        assert_eq!(list, [-45, -5, -2]);
+
+        let mut list = [
+            -998_166, -996_360, -995_703, -995_238, -995_066, -994_740, -992_987, -983_833,
+            -987_905, -980_069, -977_640,
+        ];
+        generic_bucket_sort(&mut list);
         assert_eq!(
             list,
             [
