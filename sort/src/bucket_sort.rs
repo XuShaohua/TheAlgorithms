@@ -53,7 +53,7 @@ pub fn shell_bucket_sort(arr: &mut [i32]) {
     }
 
     // 对于希尔排序来说, 元素的个数在这个范围内的效率比较高.
-    let bucket_elements: usize = 72 * 3;
+    let bucket_elements: usize = 72 * 2;
 
     let min_num: i32 = arr.iter().min().copied().unwrap_or_default();
     let max_num: i32 = arr.iter().max().copied().unwrap_or_default();
