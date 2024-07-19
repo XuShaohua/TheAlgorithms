@@ -6,7 +6,7 @@ use std::env::args;
 use std::process;
 
 use sort::bubble_sort::{bubble_sort, recursive_bubble_sort};
-use sort::bucket_sort::bucket_sort;
+use sort::bucket_sort::{bucket_sort, shell_bucket_sort};
 use sort::counting_sort::{counting_sort, counting_sort_with_map};
 use sort::gnome_sort::gnome_sort;
 use sort::heap_sort::heap_sort;
@@ -23,7 +23,7 @@ use sort::shell_sort::shell_sort;
 use sort::timsort::{shell_timsort, timsort};
 use sort::util::{is_sorted, read_ints, show_brief};
 
-const SORTING_METHODS: [&str; 28] = [
+const SORTING_METHODS: [&str; 29] = [
     "binary-insertion-sort",
     "bottom-up-merge-sort",
     "bubble-sort",
@@ -46,6 +46,7 @@ const SORTING_METHODS: [&str; 28] = [
     "recursive-insertion-sort",
     "recursive-selection-sort",
     "selection-sort",
+    "shell-bucket-sort",
     "shell-merge-sort",
     "shell-sort",
     "shell-timsort",
@@ -79,6 +80,7 @@ fn sort_list(sort_method: &str, list: &mut [i32]) {
         "recursive-insertion-sort" => recursive_insertion_sort(list),
         "recursive-selection-sort" => recursive_selection_sort(list),
         "selection-sort" => selection_sort(list),
+        "shell-bucket-sort" => shell_bucket_sort(list),
         "shell-merge-sort" => shell_merge_sort(list),
         "shell-sort" => shell_sort(list),
         "shell-timsort" => shell_timsort(list),
