@@ -9,6 +9,8 @@
 3. 使用插入排序等算法对每个桶排序
 4. 按照桶的顺序, 将每个桶中的元素依次存储到原数组
 
+![bucket sort](assets/bucket-sort.svg)
+
 ## 桶排序的实现
 
 ```rust
