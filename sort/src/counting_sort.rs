@@ -93,7 +93,6 @@ pub fn counting_sort(arr: &mut [i32]) {
     }
 }
 
-
 #[allow(clippy::cast_sign_loss)]
 pub fn counting_sort_with_map(arr: &mut [i32]) {
     if arr.is_empty() {

@@ -2,44 +2,46 @@
 // Use of this source is governed by General Public License that can be found
 // in the LICENSE file.
 
+use crate::insertion_sort::insertion_sort;
+
 pub fn bucket_sort(arr: &mut [i32]) {
-    if !arr.is_empty() {
-        let bucket_size = arr.len().ilog2() as usize;
-        bucket_sort_with_bucket(arr, bucket_size);
+    if arr.is_empty() {
+        return;
     }
-}
 
-fn insertion_sort(arr: &mut [i32]) {
-    let len = arr.len();
-
-    for i in 1..len {
-        for j in (1..=i).rev() {
-            if arr[j] < arr[j - 1] {
-                arr.swap(j, j - 1);
-            }
-        }
-    }
+    // 对于插入排序来说, 元素的个数在这个范围内的效率比较高.
+    let bucket_elements: usize = 72;
+    bucket_sort_with_bucket(arr, bucket_elements);
 }
 
 #[allow(clippy::cast_sign_loss)]
-fn bucket_sort_with_bucket(arr: &mut [i32], bucket_size: usize) {
+fn bucket_sort_with_bucket(arr: &mut [i32], bucket_elements: usize) {
     let min_num: i32 = arr.iter().min().copied().unwrap();
     let max_num: i32 = arr.iter().max().copied().unwrap();
+    // 计算数值范围.
     let range: i32 = max_num - min_num;
-    let bucket_count: usize = range as usize / bucket_size + 1;
+    // 计算桶的个数, 我们假设元素的数值是均匀分布的.
+    // 这样的话就可以确定每个桶要存储的数值范围.
+    // 尽可能把数值相近的元素放在一起.
+    let bucket_count: usize = range as usize / bucket_elements + 1;
+    // 创建一系列的桶.
     let mut buckets: Vec<Vec<i32>> = vec![vec![]; bucket_count];
 
-    // 遍历数组, 将元素分配到每个桶中
+    // 遍历数组, 将元素分配到每个桶中.
+    // 这里是按数组的原有顺序插入到桶中的, 有相同数值的元素也会依照原先的顺序放置到同一个桶.
     for &num in arr.iter() {
-        let range: i32 = num - min_num;
-        let bucket_index: usize = range as usize / bucket_size;
+        // 计算这个元素值处于哪个数值段, 并确定该放到哪个桶.
+        let bucket_index: usize = (num - min_num) as usize / bucket_elements;
         buckets[bucket_index].push(num);
     }
 
-    // 对每一个桶单独排序
+    // 对每一个桶单独排序, 按照假设, 每个桶中的元素个数都比较少,
+    // 使用插入排序可以发挥它的优势.
+    // 并且插入排序是稳定排序, 所以该桶排序算法也是稳定排序.
     let mut index: usize = 0;
     for mut bucket in buckets {
         insertion_sort(&mut bucket);
+        // 将这个桶中的元素合并到原先的数组中.
         arr[index..(index + bucket.len())].copy_from_slice(&bucket);
         index += bucket.len();
     }
