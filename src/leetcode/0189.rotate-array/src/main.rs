@@ -6,7 +6,7 @@
 
 use std::mem;
 
-// Brute force
+/// Brute force
 #[allow(clippy::needless_range_loop)]
 pub fn rotate1(nums: &mut Vec<i32>, k: i32) {
     // 检查边界条件
@@ -28,7 +28,7 @@ pub fn rotate1(nums: &mut Vec<i32>, k: i32) {
     }
 }
 
-// 三次反转法
+/// 三次反转法
 pub fn rotate2(nums: &mut Vec<i32>, k: i32) {
     // 检查边界条件
     if nums.is_empty() || k <= 0 {
@@ -48,6 +48,23 @@ pub fn rotate2(nums: &mut Vec<i32>, k: i32) {
     nums[k..].reverse();
 }
 
+/// 使用临时数组
+pub fn rotate3(nums: &mut Vec<i32>, k: i32) {
+    if nums.is_empty() || k <= 0 {
+        return;
+    }
+    let len = nums.len();
+    let k = len - (k as usize) % len;
+    if k == 0 {
+        return;
+    }
+
+    let mut aux = Vec::with_capacity(len);
+    aux.extend_from_slice(&nums[k..]);
+    aux.extend_from_slice(&nums[..k]);
+    mem::swap(nums, &mut aux);
+}
+
 pub type SolutionFn = fn(&mut Vec<i32>, i32);
 
 fn check_solution(func: SolutionFn) {
@@ -65,11 +82,12 @@ fn check_solution(func: SolutionFn) {
 fn main() {
     check_solution(rotate1);
     check_solution(rotate2);
+    check_solution(rotate3);
 }
 
 #[cfg(test)]
 mod tests {
-    use super::{check_solution, rotate1, rotate2};
+    use super::{check_solution, rotate1, rotate2, rotate3};
 
     #[test]
     fn test_rotate1() {
@@ -79,5 +97,10 @@ mod tests {
     #[test]
     fn test_rotate2() {
         check_solution(rotate2);
+    }
+
+    #[test]
+    fn test_rotate3() {
+        check_solution(rotate3);
     }
 }
