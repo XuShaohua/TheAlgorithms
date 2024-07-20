@@ -2,6 +2,7 @@
 
 ## 容易
 
+- [66. 加一 Plus One](../0066.plus-one)
 - [414. 第三大的数](https://leetcode.com/problems/third-maximum-number)
 - [581. 最短无序连续子数组](https://leetcode.com/problems/shortest-unsorted-continuous-subarray)
 - [605. 种花问题](https://leetcode.com/problems/can-place-flowers)
