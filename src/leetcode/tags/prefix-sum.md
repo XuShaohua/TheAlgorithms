@@ -2,6 +2,11 @@
 
 ## 简单
 
+- [724. 寻找数组的中心索引](../0724.find-pivot-index/index.md)
+- [1991. 找到数组的中间位置 Find the Middle Index in Array](../1991.find-the-middle-index-in-array/index.md)
+
 ## 中等
+
+- [238. 除自身以外数组的乘积 Product of Array Except Self](../0238.product-of-array-except-self/index.md)
 
 ## 困难

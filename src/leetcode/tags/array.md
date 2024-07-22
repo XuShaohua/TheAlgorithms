@@ -13,7 +13,6 @@
 - [674. 最长连续递增序列](https://leetcode.com/problems/longest-continuous-increasing-subsequence)
 - [697. 数组的度](https://leetcode.com/problems/degree-of-an-array)
 - [717. 1比特与2比特字符](https://leetcode.com/problems/1-bit-and-2-bit-characters)
-- [724. 寻找数组的中心索引](../0724.find-pivot-index/index.md)
 - [747. 至少是其他数字两倍的最大数](https://leetcode.com/problems/largest-number-at-least-twice-of-others)
 - [830. 较大分组的位置](https://leetcode.com/problems/positions-of-large-groups)
 - [840. 矩阵中的幻方](https://leetcode.com/problems/magic-squares-in-grid)
@@ -27,6 +26,5 @@
 
 ## 中级
 
-- [238. 除自身以外数组的乘积 Product of Array Except Self](../0238.product-of-array-except-self/index.md)
 - [1423. 可获得的最大点数](https://leetcode.com/problems/maximum-points-you-can-obtain-from-cards)
 - [1497.检查数组对是否可以被 k 整除](https://leetcode.com/problems/check-if-array-pairs-are-divisible-by-k)

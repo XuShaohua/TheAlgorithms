@@ -36,7 +36,9 @@
 - 时间复杂度是 `O(n)`
 - 空间复杂度是 `O(1)`
 
-## 直接计算 prefix sum 和 suffix sum
+## 前缀和 Prefix Sum
+
+直接计算 prefix sum 和 suffix sum.
 
 这个方法跟上面的类似, 但是更好理解一些, 它不需要最开始说的公式转换:
 
@@ -48,7 +50,7 @@
 算法实现如下所示:
 
 ```rust
-{{#include src/main.rs:23:39}}
+{{#include src/main.rs:23:40}}
 ```
 
 这种算法的特点是:

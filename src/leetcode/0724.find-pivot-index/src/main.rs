@@ -20,6 +20,7 @@ pub fn pivot_index1(nums: Vec<i32>) -> i32 {
     -1
 }
 
+// Prefix Sum
 // 直接计算 prefix sum 和 suffix sum
 pub fn pivot_index2(nums: Vec<i32>) -> i32 {
     // 第一步: 计算数组中所有元素的和, 并作为 suffix sum
