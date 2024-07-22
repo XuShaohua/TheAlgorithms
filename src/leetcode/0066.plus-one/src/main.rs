@@ -5,10 +5,11 @@
 pub fn plus_one1(digits: Vec<i32>) -> Vec<i32> {
     let mut digits = digits;
     let mut carry = 1;
+    // 从右向左依次遍历数组中的每个进位的值.
     for digit in digits.iter_mut().rev() {
-        *digit += carry;
-        carry = *digit / 10;
-        *digit %= 10;
+        let sum = *digit + carry;
+        carry = sum / 10;
+        *digit = sum % 10;
     }
     if carry == 1 {
         digits.insert(0, carry);

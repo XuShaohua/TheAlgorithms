@@ -209,6 +209,7 @@
         - [0040. 组合总和 II Combination Sum II](leetcode/0040.combination-sum-ii/index.md)
         - [0046. 全排列 Permutations](leetcode/0046.permutations/index.md)
         - [0047. 全排列 II Permutations II](leetcode/0047.permutations-ii/index.md)
+        - [0066. 加一 Plus One](leetcode/0066.plus-one/index.md)
         - [0067. 二进制求和 Add Binary](leetcode/0067.add-binary/index.md)
         - [0075. 颜色分类 Sort Colors](leetcode/0075.sort-colors/index.md)
         - [0078. 子集 Subsets](leetcode/0078.subsets/index.md)
