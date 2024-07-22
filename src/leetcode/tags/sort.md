@@ -9,6 +9,6 @@
 
 TODO:
 
-- [56. Merge Intervals](https://leetcode.com/problems/merge-intervals/description/)
+- [0056. Merge Intervals](https://leetcode.com/problems/merge-intervals/description/)
 
 ## 困难

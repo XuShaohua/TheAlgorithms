@@ -2,9 +2,12 @@
 
 ## 容易
 
-- [66. 加一 Plus One](../0066.plus-one/index.md)
+1. [66. 加一 Plus One](../0066.plus-one/index.md)
+2. [485. 最大连续 1 的个数 Max Consecutive Ones](../0485.max-consecutive-ones/index.md)
+
+TODO:
+
 - [414. 第三大的数](https://leetcode.com/problems/third-maximum-number)
-- [485. 最大连续 1 的个数 Max Consecutive Ones](../0485.max-consecutive-ones/index.md)
 - [581. 最短无序连续子数组](https://leetcode.com/problems/shortest-unsorted-continuous-subarray)
 - [605. 种花问题](https://leetcode.com/problems/can-place-flowers)
 - [628. 三个数的最大乘积](https://leetcode.com/problems/maximum-product-of-three-numbers)
@@ -25,6 +28,8 @@
 - [1128. 等价多米诺骨牌对的数量](https://leetcode.com/problems/number-of-equivalent-domino-pairs)
 
 ## 中级
+
+TODO:
 
 - [1423. 可获得的最大点数](https://leetcode.com/problems/maximum-points-you-can-obtain-from-cards)
 - [1497.检查数组对是否可以被 k 整除](https://leetcode.com/problems/check-if-array-pairs-are-divisible-by-k)
