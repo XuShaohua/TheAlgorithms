@@ -1,4 +1,4 @@
-# 寻找数组的中心下标 Find Pivot Index
+# [寻找数组的中心下标 Find Pivot Index]()
 
 [问题描述](https://leetcode.com/problems/find-pivot-index)
 
