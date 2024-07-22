@@ -12,7 +12,7 @@
 - [674. 最长连续递增序列](https://leetcode.com/problems/longest-continuous-increasing-subsequence)
 - [697. 数组的度](https://leetcode.com/problems/degree-of-an-array)
 - [717. 1比特与2比特字符](https://leetcode.com/problems/1-bit-and-2-bit-characters)
-- [724. 寻找数组的中心索引](https://leetcode.com/problems/find-pivot-index)
+- [724. 寻找数组的中心索引](../0724.find-pivot-index/index.md)
 - [747. 至少是其他数字两倍的最大数](https://leetcode.com/problems/largest-number-at-least-twice-of-others)
 - [830. 较大分组的位置](https://leetcode.com/problems/positions-of-large-groups)
 - [840. 矩阵中的幻方](https://leetcode.com/problems/magic-squares-in-grid)

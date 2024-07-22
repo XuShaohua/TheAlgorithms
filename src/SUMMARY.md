@@ -245,6 +245,7 @@
         - [0680. 验证回文串 II Valid Palindrome II](leetcode/0680.valid-palindrome-ii/index.md)
     - [0701-0800](leetcode/by-id/0701-0800.md)
         - [0707. 设计链表 Design Linked List](leetcode/0707.design-linked-list/index.md)
+        - [0724. 寻找数组的中心下标 Find Pivot Index](leetcode/0724.find-pivot-index/index.md)
     - [0801-0900](leetcode/by-id/0801-0900.md)
     - [0901-1000](leetcode/by-id/0901-1000.md)
         - [0925. 长按键入 Long Pressed Name](leetcode/0925.long-pressed-name/index.md)
