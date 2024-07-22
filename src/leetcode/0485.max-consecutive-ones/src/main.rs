@@ -17,18 +17,15 @@ pub fn find_max_consecutive_ones1(nums: Vec<i32>) -> i32 {
     max_count.max(count)
 }
 
+// 函数式风格
 pub fn find_max_consecutive_ones2(nums: Vec<i32>) -> i32 {
-    let mut max_count = 0;
-    let mut count = 0;
-    for num in nums {
-        if num == 1 {
-            count += 1;
-            max_count = max_count.max(count);
-        } else {
-            count = 0;
-        }
-    }
-    max_count
+    nums.iter()
+        .fold((0, 0), |(accum, result), num| {
+            let accum = accum * num + num;
+            let result = result.max(accum);
+            (accum, result)
+        })
+        .1
 }
 
 pub type SolutionFn = fn(Vec<i32>) -> i32;

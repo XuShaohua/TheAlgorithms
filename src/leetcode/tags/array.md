@@ -4,6 +4,7 @@
 
 - [66. 加一 Plus One](../0066.plus-one/index.md)
 - [414. 第三大的数](https://leetcode.com/problems/third-maximum-number)
+- [485. 最大连续 1 的个数 Max Consecutive Ones](../0485.max-consecutive-ones/index.md)
 - [581. 最短无序连续子数组](https://leetcode.com/problems/shortest-unsorted-continuous-subarray)
 - [605. 种花问题](https://leetcode.com/problems/can-place-flowers)
 - [628. 三个数的最大乘积](https://leetcode.com/problems/maximum-product-of-three-numbers)
