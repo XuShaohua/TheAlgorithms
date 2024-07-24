@@ -5,7 +5,7 @@
 use std::collections::{HashMap, HashSet};
 
 // 使用哈稀表计数器
-// 时间复杂度: O(n logn)
+// 时间复杂度: O(n)
 // 空间复杂度: O(n)
 pub fn find_duplicate1(nums: Vec<i32>) -> i32 {
     let len: i32 = nums.len() as i32;
@@ -126,7 +126,7 @@ pub fn find_duplicate4(nums: Vec<i32>) -> i32 {
 }
 
 // 先对数组排序, 然后遍历它, 找到重复元素
-// 时间复杂度: O(nlogn)
+// 时间复杂度: O(n log(n))
 // 空间复杂度: O(n)
 // 但是会修改原数组.
 pub fn find_duplicate5(nums: Vec<i32>) -> i32 {
@@ -142,11 +142,11 @@ pub fn find_duplicate5(nums: Vec<i32>) -> i32 {
     -1
 }
 
-// Bit Manipulation
+// TODO: Bit Manipulation
 // 遍历每个整数的每个比特位, 然后使用
 
 // Binary Search
-// 时间复杂度: O(n logn)
+// 时间复杂度: O(n log(n))
 // 空间复杂度: O(1)
 pub fn find_duplicate6(nums: Vec<i32>) -> i32 {
     assert!(nums.len() >= 2);

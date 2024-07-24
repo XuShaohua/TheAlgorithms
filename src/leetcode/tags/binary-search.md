@@ -22,8 +22,9 @@ TODO:
 
 1. [0034. 在排序数组中查找元素的第一个和最后一个位置 Find First and Last Position of Element in Sorted Array](../0034.find-first-and-last-position-of-element-in-sorted-array/index.md)
 2. [0167. 两数之和 II - 输入有序数组 Two Sum II - Input Array Is Sorted](../0167.two-sum-ii-input-array-is-sorted/index.md)
-3. [0532.数组中的数对 K-diff Pairs in an Array](../0532.k-diff-pairs-in-an-array/index.md)
-4. [1498. 满足条件的子序列数目 Number of Subsequences That Satisfy the Given Sum Condition](../1498.number-of-subsequences-that-satisfy-the-given-sum-condition/index.md)
+3. [0287. 寻找重复数 Find the Duplicate Number](../0287.find-the-duplicate-number/index.md)
+4. [0532.数组中的数对 K-diff Pairs in an Array](../0532.k-diff-pairs-in-an-array/index.md)
+5. [1498. 满足条件的子序列数目 Number of Subsequences That Satisfy the Given Sum Condition](../1498.number-of-subsequences-that-satisfy-the-given-sum-condition/index.md)
 
 TODO:
 
@@ -31,10 +32,13 @@ TODO:
 - [33. Search in Rotated Sorted Array](https://leetcode.com/problems/search-in-rotated-sorted-array/description/)
 - [153. 寻找旋转排序数组中的最小值](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array)
 - [162. 寻找峰值](https://leetcode.com/problems/find-peak-element)
-- [287. 寻找重复数](https://leetcode.com/problems/find-the-duplicate-number)
 - [378. 有序矩阵中第K小的元素](https://leetcode.com/problems/kth-smallest-element-in-a-sorted-matrix)
 - [436. 寻找右区间](https://leetcode.com/problems/find-right-interval)
 - [454. 四数相加 II](https://leetcode.com/problems/4sum-ii)
 - [792. 匹配子序列的单词数](https://leetcode.com/problems/number-of-matching-subsequences)
 - [1004. Max Consecutive Ones III](https://leetcode.com/problems/max-consecutive-ones-iii/description/)
 - [2817. Minimum Absolute Difference Between Elements With Constraint](https://leetcode.com/problems/minimum-absolute-difference-between-elements-with-constraint/description/)
+
+## 困难
+
+- [0004. 寻找两个正序数组的中位数 Median of Two Sorted Arrays](https://leetcode.com/problems/median-of-two-sorted-arrays)
