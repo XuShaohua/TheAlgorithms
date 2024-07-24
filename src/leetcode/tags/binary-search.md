@@ -3,6 +3,7 @@
 ## 容易
 
 1. [0349. 两个数组的交集 Intersection of Two Arrays](../0349.intersection-of-two-arrays/index.md)
+2. [0704. 二分查找 Binary Search](../0704.binary-search/index.md)
 
 TODO:
 
@@ -15,7 +16,6 @@ TODO:
 - [392. 判断子序列](https://leetcode.com/problems/is-subsequence)
 - [441. 排列硬币](https://leetcode.com/problems/arranging-coins)
 - [475. 供暖器](https://leetcode.com/problems/heaters)
-- [704. 二分查找](https://leetcode.com/problems/binary-search)
 - [744. 寻找比目标字母大的最小字母](https://leetcode.com/problems/find-smallest-letter-greater-than-target)
 
 ## 中等

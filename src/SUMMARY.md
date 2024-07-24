@@ -257,6 +257,7 @@
         - [0679. 24 点游戏 24 Game](leetcode/0679.24-game/index.md)
         - [0680. 验证回文串 II Valid Palindrome II](leetcode/0680.valid-palindrome-ii/index.md)
     - [0701-0800](leetcode/by-id/0701-0800.md)
+        - [0704. 二分查找 Binary Search](leetcode/0704.binary-search/index.md)
         - [0707. 设计链表 Design Linked List](leetcode/0707.design-linked-list/index.md)
         - [0724. 寻找数组的中心下标 Find Pivot Index](leetcode/0724.find-pivot-index/index.md)
     - [0801-0900](leetcode/by-id/0801-0900.md)

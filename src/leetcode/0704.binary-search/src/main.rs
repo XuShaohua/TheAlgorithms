@@ -7,6 +7,7 @@ use std::cmp::Ordering;
 // Binary Search
 // 直接法, 找到元素后就直接返回.
 pub fn search1(nums: Vec<i32>, target: i32) -> i32 {
+    // 先处理极端情况.
     if nums.is_empty() || nums[0] > target || nums[nums.len() - 1] < target {
         return -1;
     }
@@ -66,6 +67,15 @@ pub fn search2(nums: Vec<i32>, target: i32) -> i32 {
     }
 }
 
+// Binary Search
+// 使用标准库中自带的方法
+pub fn search3(nums: Vec<i32>, target: i32) -> i32 {
+    match nums.binary_search(&target) {
+        Ok(index) => index as i32,
+        Err(_) => -1,
+    }
+}
+
 pub type SolutionFn = fn(Vec<i32>, i32) -> i32;
 
 fn check_solution(func: SolutionFn) {
@@ -93,11 +103,12 @@ fn check_solution(func: SolutionFn) {
 fn main() {
     check_solution(search1);
     check_solution(search2);
+    check_solution(search3);
 }
 
 #[cfg(test)]
 mod tests {
-    use super::{check_solution, search1, search2};
+    use super::{check_solution, search1, search2, search3};
 
     #[test]
     fn test_search1() {
@@ -107,5 +118,10 @@ mod tests {
     #[test]
     fn test_search2() {
         check_solution(search2);
+    }
+
+    #[test]
+    fn test_search3() {
+        check_solution(search3);
     }
 }
