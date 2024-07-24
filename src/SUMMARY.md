@@ -225,6 +225,7 @@
         - [0047. 全排列 II Permutations II](leetcode/0047.permutations-ii/index.md)
         - [0066. 加一 Plus One](leetcode/0066.plus-one/index.md)
         - [0067. 二进制求和 Add Binary](leetcode/0067.add-binary/index.md)
+        - [0069. x 的平方根 Sqrt(x)](leetcode/0069.sqrtx/index.md)
         - [0075. 颜色分类 Sort Colors](leetcode/0075.sort-colors/index.md)
         - [0078. 子集 Subsets](leetcode/0078.subsets/index.md)
         - [0080. 删除排序数组中的重复项 II Remove Duplicates from Sorted Array II](leetcode/0080.remove-duplicates-from-sorted-array-ii/index.md)

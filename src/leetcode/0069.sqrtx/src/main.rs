@@ -15,36 +15,38 @@ pub fn my_sqrt1(x: i32) -> i32 {
     let mut left: i32 = 0;
     let mut right: i32 = x;
     let mut ans: i32 = 0;
-    let x1 = x as i64;
 
     while left <= right {
         let middle: i32 = left + (right - left) / 2;
-        let square = (middle as i64) * (middle as i64);
-        if square > x1 {
+        let square = middle.saturating_mul(middle);
+        if square > x {
+            // 值太大了, 右侧的值向左移
             right = middle - 1;
         } else {
             ans = middle;
+            // 有些小, 左侧的值向右移
             left = middle + 1;
         }
     }
     ans
 }
 
+// Binary Search
 pub fn my_sqrt2(x: i32) -> i32 {
-    let x1 = x as i64;
     let mut left = 0;
-    let mut right = x1;
+    let mut right = x;
 
     while left < right {
         let middle = left + (right - left + 1) / 2;
-        let square = middle * middle;
-        if square > x1 {
+        let square = middle.saturating_mul(middle);
+        if square > x {
             right = middle - 1;
         } else {
+            // 注意这里的边界情况.
             left = middle;
         }
     }
-    left as i32
+    left
 }
 
 pub fn my_sqrt3(x: i32) -> i32 {
