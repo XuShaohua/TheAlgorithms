@@ -76,6 +76,75 @@ pub fn search_range2(nums: Vec<i32>, target: i32) -> Vec<i32> {
     result
 }
 
+// 两次二查找法
+// 如果 `target` 在数组中的个数比较多, 这种算法效率很高, `O(log n)`
+pub fn search_range3(nums: Vec<i32>, target: i32) -> Vec<i32> {
+    fn search_left(nums: &[i32], target: i32) -> i32 {
+        let len = nums.len();
+        // 极端情况
+        if len == 0 || nums[0] > target || nums[len - 1] < target {
+            return -1;
+        }
+
+        // 极端情况
+        if nums[0] == target {
+            return 0;
+        }
+
+        let mut left = 1;
+        let mut right = len - 1;
+        let mut low: i32 = -1;
+        while left <= right {
+            let middle = left + (right - left) / 2;
+            match nums[middle].cmp(&target) {
+                Ordering::Less => left = middle + 1,
+                Ordering::Equal => {
+                    low = middle as i32;
+                    // 即使当前元素等于 target, 也要调整右侧的索引向左移动
+                    right = middle - 1;
+                }
+                // 这里不需使用 saturating_sub() 防止右侧索引 underflow,
+                // 因为 middle >= left >= 1
+                Ordering::Greater => right = middle - 1,
+            }
+        }
+        low
+    }
+
+    fn search_right(nums: &[i32], target: i32) -> i32 {
+        let len = nums.len();
+        // 极端情况
+        if len == 0 || nums[0] > target || nums[len - 1] < target {
+            return -1;
+        }
+
+        // 极端情况
+        if nums[len - 1] == target {
+            return len as i32 - 1;
+        }
+
+        let mut left = 0;
+        let mut right = len - 2;
+        let mut high: i32 = -1;
+        while left <= right {
+            let middle = left + (right - left) / 2;
+            match nums[middle].cmp(&target) {
+                Ordering::Less => left = middle + 1,
+                Ordering::Equal => {
+                    high = middle as i32;
+                    // 即使当前元素等于 target, 也要调整左侧索引向右移动
+                    left = middle + 1;
+                }
+                // 这里使用 saturating_sub() 防止右侧索引 underflow
+                Ordering::Greater => right = middle.saturating_sub(1),
+            }
+        }
+        high
+    }
+
+    vec![search_left(&nums, target), search_right(&nums, target)]
+}
+
 pub type SolutionFn = fn(Vec<i32>, i32) -> Vec<i32>;
 
 fn check_solution(func: SolutionFn) {
@@ -107,11 +176,12 @@ fn check_solution(func: SolutionFn) {
 fn main() {
     check_solution(search_range1);
     check_solution(search_range2);
+    check_solution(search_range3);
 }
 
 #[cfg(test)]
 mod tests {
-    use super::{check_solution, search_range1, search_range2};
+    use super::{check_solution, search_range1, search_range2, search_range3};
 
     #[test]
     fn test_search_range1() {
@@ -121,5 +191,10 @@ mod tests {
     #[test]
     fn test_search_range2() {
         check_solution(search_range2);
+    }
+
+    #[test]
+    fn test_search_range3() {
+        check_solution(search_range3);
     }
 }
