@@ -2,10 +2,11 @@
 
 ## 容易
 
-1. [0069. x 的平方根 Sqrt(x)](../0069.sqrtx/index.md)
-2. [0349. 两个数组的交集 Intersection of Two Arrays](../0349.intersection-of-two-arrays/index.md)
-3. [0374. 猜数字大小 Guess Number Higher or Lower](../0374.guess-number-higher-or-lower/index.md)
-4. [0704. 二分查找 Binary Search](../0704.binary-search/index.md)
+1. [0035. 搜索插入位置 Search Insert Position](../0035.search-insert-position/index.md)
+2. [0069. x 的平方根 Sqrt(x)](../0069.sqrtx/index.md)
+3. [0349. 两个数组的交集 Intersection of Two Arrays](../0349.intersection-of-two-arrays/index.md)
+4. [0374. 猜数字大小 Guess Number Higher or Lower](../0374.guess-number-higher-or-lower/index.md)
+5. [0704. 二分查找 Binary Search](../0704.binary-search/index.md)
 
 TODO:
 

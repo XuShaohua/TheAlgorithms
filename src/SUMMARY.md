@@ -219,6 +219,7 @@
         - [0026. 删除有序数组中的重复项 Remove Duplicates from Sorted Array](leetcode/0026.remove-duplicates-from-sorted-array/index.md)
         - [0031. 下一个排列 Next Permutation](leetcode/0031.next-permutation/index.md)
         - [0034. 在排序数组中查找元素的第一个和最后一个位置 Find First and Last Position of Element in Sorted Array](leetcode/0034.find-first-and-last-position-of-element-in-sorted-array/index.md)
+        - [0035. 搜索插入位置 Search Insert Position](leetcode/0035.search-insert-position/index.md)
         - [0039.组合总和 Combination Sum](leetcode/0039.combination-sum/index.md)
         - [0040. 组合总和 II Combination Sum II](leetcode/0040.combination-sum-ii/index.md)
         - [0046. 全排列 Permutations](leetcode/0046.permutations/index.md)
