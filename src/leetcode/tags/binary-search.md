@@ -4,15 +4,14 @@
 
 1. [0069. x 的平方根 Sqrt(x)](../0069.sqrtx/index.md)
 2. [0349. 两个数组的交集 Intersection of Two Arrays](../0349.intersection-of-two-arrays/index.md)
-3. [0704. 二分查找 Binary Search](../0704.binary-search/index.md)
+3. [0374. 猜数字大小 Guess Number Higher or Lower](../0374.guess-number-higher-or-lower/index.md)
+4. [0704. 二分查找 Binary Search](../0704.binary-search/index.md)
 
 TODO:
 
-- [167. 两数之和 II - 输入有序数组](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted)
 - [278. 第一个错误的版本](https://leetcode.com/problems/first-bad-version)
 - [350. 两个数组的交集 II](https://leetcode.com/problems/intersection-of-two-arrays-ii)
 - [367. 有效的完全平方数](https://leetcode.com/problems/valid-perfect-square)
-- [374. 猜数字大小](https://leetcode.com/problems/guess-number-higher-or-lower)
 - [392. 判断子序列](https://leetcode.com/problems/is-subsequence)
 - [441. 排列硬币](https://leetcode.com/problems/arranging-coins)
 - [475. 供暖器](https://leetcode.com/problems/heaters)

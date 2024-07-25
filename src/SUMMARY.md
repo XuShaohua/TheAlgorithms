@@ -253,6 +253,7 @@
         - [0342. 4的幂 Power of Four](leetcode/0342.power-of-four/index.md)
         - [0349. 两个数组的交集 Intersection of Two Arrays](leetcode/0349.intersection-of-two-arrays/index.md)
         - [0350. 两个数组的交集 II Intersection of Two Arrays II](leetcode/0350.intersection-of-two-arrays-ii/index.md)
+        - [0374. 猜数字大小 Guess Number Higher or Lower](leetcode/0374.guess-number-higher-or-lower/index.md)
     - [0401-0500](leetcode/by-id/0401-0500.md)
         - [0485. 最大连续1的个数 Max Consecutive Ones](leetcode/0485.max-consecutive-ones/index.md)
     - [0501-0600](leetcode/by-id/0501-0600.md)

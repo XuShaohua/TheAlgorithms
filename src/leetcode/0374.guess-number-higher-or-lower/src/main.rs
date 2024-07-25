@@ -25,7 +25,7 @@ unsafe fn guess_number(n: i32) -> i32 {
         let mid = left + (right - left) / 2;
         let pick = unsafe { guess(mid) };
         if pick == -1 {
-            right = mid - 1;
+            right = mid.saturating_sub(1);
         } else if pick == 1 {
             left = mid + 1;
         } else {

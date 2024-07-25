@@ -1,4 +1,4 @@
-# 0167. 两数之和 II - 输入有序数组 Two Sum II - Input Array Is Sorted
+# 两数之和 II - 输入有序数组 Two Sum II - Input Array Is Sorted
 
 [问题描述](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted)
 
