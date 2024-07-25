@@ -2,7 +2,7 @@
 // Use of this source is governed by General Public License that can be found
 // in the LICENSE file.
 
-// Binary Serach
+// Binary Search
 pub fn find_min1(nums: Vec<i32>) -> i32 {
     assert!(!nums.is_empty());
 
