@@ -42,4 +42,8 @@ TODO:
 
 ## 困难
 
+1. [0154. 寻找旋转排序数组中的最小值 II Find Minimum in Rotated Sorted Array II](../0154.find-minimum-in-rotated-sorted-array-ii/index.md)
+
+TODO:
+
 - [0004. 寻找两个正序数组的中位数 Median of Two Sorted Arrays](https://leetcode.com/problems/median-of-two-sorted-arrays)
