@@ -22,16 +22,16 @@ TODO:
 
 1. [0034. 在排序数组中查找元素的第一个和最后一个位置 Find First and Last Position of Element in Sorted Array](../0034.find-first-and-last-position-of-element-in-sorted-array/index.md)
 2. [0153. 寻找旋转排序数组中的最小值 Find Minimum in Rotated Sorted Array](../0153.find-minimum-in-rotated-sorted-array/index.md)
-3. [0167. 两数之和 II - 输入有序数组 Two Sum II - Input Array Is Sorted](../0167.two-sum-ii-input-array-is-sorted/index.md)
-4. [0287. 寻找重复数 Find the Duplicate Number](../0287.find-the-duplicate-number/index.md)
-5. [0532.数组中的数对 K-diff Pairs in an Array](../0532.k-diff-pairs-in-an-array/index.md)
-6. [1498. 满足条件的子序列数目 Number of Subsequences That Satisfy the Given Sum Condition](../1498.number-of-subsequences-that-satisfy-the-given-sum-condition/index.md)
+3. [0162. 寻找峰值 Find Peak Element](../0162.find-peak-element/index.md)
+4. [0167. 两数之和 II - 输入有序数组 Two Sum II - Input Array Is Sorted](../0167.two-sum-ii-input-array-is-sorted/index.md)
+5. [0287. 寻找重复数 Find the Duplicate Number](../0287.find-the-duplicate-number/index.md)
+6. [0532.数组中的数对 K-diff Pairs in an Array](../0532.k-diff-pairs-in-an-array/index.md)
+7. [1498. 满足条件的子序列数目 Number of Subsequences That Satisfy the Given Sum Condition](../1498.number-of-subsequences-that-satisfy-the-given-sum-condition/index.md)
 
 TODO:
 
 - [29. 两数相除](https://leetcode.com/problems/divide-two-integers)
 - [33. 搜索旋转排序数组 Search in Rotated Sorted Array](https://leetcode.com/problems/search-in-rotated-sorted-array/description/)
-- [162. 寻找峰值](https://leetcode.com/problems/find-peak-element)
 - [240. Search a 2D Matrix II](https://leetcode.com/problems/search-a-2d-matrix-ii)
 - [378. 有序矩阵中第K小的元素](https://leetcode.com/problems/kth-smallest-element-in-a-sorted-matrix)
 - [436. 寻找右区间](https://leetcode.com/problems/find-right-interval)

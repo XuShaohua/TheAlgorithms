@@ -18,6 +18,7 @@ pub fn find_peak_element1(nums: Vec<i32>) -> i32 {
         return last as i32;
     }
 
+    // 检查剩下的元素.
     for i in 1..last {
         if nums[i - 1] < nums[i] && nums[i] > nums[i + 1] {
             return i as i32;

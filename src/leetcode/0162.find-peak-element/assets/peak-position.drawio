@@ -1,0 +1,73 @@
+<mxfile host="Electron" modified="2024-07-26T02:54:17.690Z" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.2.5 Chrome/120.0.6099.109 Electron/28.1.0 Safari/537.36" etag="BqcEHfoLPvUPxNqUIdju" version="24.2.5" type="device">
+  <diagram name="Page-1" id="G1rTu0k6ItEiGWNB6e6v">
+    <mxGraphModel dx="1420" dy="828" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="LS9hl0-vpEe8ApnCXNFo-1" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;rounded=1;shadow=0;strokeColor=#6c8ebf;strokeWidth=1;fontFamily=Ubuntu;fontSize=16;fontStyle=0;fillColor=#dae8fc;" vertex="1" parent="1">
+          <mxGeometry x="270" y="270" width="20" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="LS9hl0-vpEe8ApnCXNFo-4" value="" style="group" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="235" y="300" width="90" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="LS9hl0-vpEe8ApnCXNFo-2" value="" style="endArrow=classic;html=1;rounded=1;shadow=0;strokeColor=#6c8ebf;strokeWidth=1;fontFamily=Ubuntu;fontSize=14;fontStyle=0;fillColor=#dae8fc;" edge="1" parent="LS9hl0-vpEe8ApnCXNFo-4">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint y="50" as="sourcePoint" />
+            <mxPoint x="50" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="LS9hl0-vpEe8ApnCXNFo-3" value="" style="endArrow=classic;html=1;rounded=1;shadow=0;strokeColor=#6c8ebf;strokeWidth=1;fontFamily=Ubuntu;fontSize=14;fontStyle=0;fillColor=#dae8fc;" edge="1" parent="LS9hl0-vpEe8ApnCXNFo-4">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="50" as="sourcePoint" />
+            <mxPoint x="90" y="50" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="LS9hl0-vpEe8ApnCXNFo-5" value="" style="group" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="400" y="300" width="90" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="LS9hl0-vpEe8ApnCXNFo-6" value="" style="endArrow=classic;html=1;rounded=1;shadow=0;strokeColor=#6c8ebf;strokeWidth=1;fontFamily=Ubuntu;fontSize=14;fontStyle=0;fillColor=#dae8fc;" edge="1" parent="LS9hl0-vpEe8ApnCXNFo-5">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint y="50" as="sourcePoint" />
+            <mxPoint x="50" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="LS9hl0-vpEe8ApnCXNFo-7" value="" style="endArrow=classic;html=1;rounded=1;shadow=0;strokeColor=#6c8ebf;strokeWidth=1;fontFamily=Ubuntu;fontSize=14;fontStyle=0;fillColor=#dae8fc;" edge="1" parent="LS9hl0-vpEe8ApnCXNFo-5">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="50" as="sourcePoint" />
+            <mxPoint x="90" y="50" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="LS9hl0-vpEe8ApnCXNFo-11" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;rounded=1;shadow=0;strokeColor=#6c8ebf;strokeWidth=1;fontFamily=Ubuntu;fontSize=16;fontStyle=0;fillColor=#dae8fc;" vertex="1" parent="1">
+          <mxGeometry x="461" y="270" width="20" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="LS9hl0-vpEe8ApnCXNFo-12" value="" style="group" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="560" y="300" width="90" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="LS9hl0-vpEe8ApnCXNFo-13" value="" style="endArrow=classic;html=1;rounded=1;shadow=0;strokeColor=#6c8ebf;strokeWidth=1;fontFamily=Ubuntu;fontSize=14;fontStyle=0;fillColor=#dae8fc;" edge="1" parent="LS9hl0-vpEe8ApnCXNFo-12">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint y="50" as="sourcePoint" />
+            <mxPoint x="50" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="LS9hl0-vpEe8ApnCXNFo-14" value="" style="endArrow=classic;html=1;rounded=1;shadow=0;strokeColor=#6c8ebf;strokeWidth=1;fontFamily=Ubuntu;fontSize=14;fontStyle=0;fillColor=#dae8fc;" edge="1" parent="LS9hl0-vpEe8ApnCXNFo-12">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="50" as="sourcePoint" />
+            <mxPoint x="90" y="50" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="LS9hl0-vpEe8ApnCXNFo-15" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;rounded=1;shadow=0;strokeColor=#6c8ebf;strokeWidth=1;fontFamily=Ubuntu;fontSize=16;fontStyle=0;fillColor=#dae8fc;" vertex="1" parent="1">
+          <mxGeometry x="565" y="270" width="20" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="LS9hl0-vpEe8ApnCXNFo-16" value="middle 处就是峰值" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Ubuntu;fontSize=16;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry x="240" y="360" width="80" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="LS9hl0-vpEe8ApnCXNFo-17" value="峰值位于 middle 右侧" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Ubuntu;fontSize=16;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry x="400" y="360" width="95" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="LS9hl0-vpEe8ApnCXNFo-18" value="峰值位于 middle 左侧" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Ubuntu;fontSize=16;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry x="560" y="360" width="90" height="40" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
