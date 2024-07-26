@@ -270,6 +270,7 @@
         - [0704. 二分查找 Binary Search](leetcode/0704.binary-search/index.md)
         - [0707. 设计链表 Design Linked List](leetcode/0707.design-linked-list/index.md)
         - [0724. 寻找数组的中心下标 Find Pivot Index](leetcode/0724.find-pivot-index/index.md)
+        - [0744. 寻找比目标字母大的最小字母 Find Smallest Letter Greater Than Target](leetcode/0744.find-smallest-letter-greater-than-target/index.md)
     - [0801-0900](leetcode/by-id/0801-0900.md)
         - [0852. 山脉数组的峰顶索引 Peak Index in a Mountain Array](leetcode/0852.peak-index-in-a-mountain-array/index.md)
     - [0901-1000](leetcode/by-id/0901-1000.md)

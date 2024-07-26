@@ -8,6 +8,7 @@
 4. [0349. 两个数组的交集 Intersection of Two Arrays](../0349.intersection-of-two-arrays/index.md)
 5. [0374. 猜数字大小 Guess Number Higher or Lower](../0374.guess-number-higher-or-lower/index.md)
 6. [0704. 二分查找 Binary Search](../0704.binary-search/index.md)
+7. [0744. 寻找比目标字母大的最小字母 Find Smallest Letter Greater Than Target](../0744.find-smallest-letter-greater-than-target/index.md)
 
 TODO:
 
@@ -16,7 +17,6 @@ TODO:
 - [392. 判断子序列](https://leetcode.com/problems/is-subsequence)
 - [441. 排列硬币](https://leetcode.com/problems/arranging-coins)
 - [475. 供暖器](https://leetcode.com/problems/heaters)
-- [744. 寻找比目标字母大的最小字母](https://leetcode.com/problems/find-smallest-letter-greater-than-target)
 
 ## 中等
 
