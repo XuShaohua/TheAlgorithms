@@ -4,13 +4,13 @@
 
 1. [0035. 搜索插入位置 Search Insert Position](../0035.search-insert-position/index.md)
 2. [0069. x 的平方根 Sqrt(x)](../0069.sqrtx/index.md)
-3. [0349. 两个数组的交集 Intersection of Two Arrays](../0349.intersection-of-two-arrays/index.md)
-4. [0374. 猜数字大小 Guess Number Higher or Lower](../0374.guess-number-higher-or-lower/index.md)
-5. [0704. 二分查找 Binary Search](../0704.binary-search/index.md)
+3. [0278. 第一个错误的版本](../0278.first-bad-version/index.md)
+4. [0349. 两个数组的交集 Intersection of Two Arrays](../0349.intersection-of-two-arrays/index.md)
+5. [0374. 猜数字大小 Guess Number Higher or Lower](../0374.guess-number-higher-or-lower/index.md)
+6. [0704. 二分查找 Binary Search](../0704.binary-search/index.md)
 
 TODO:
 
-- [278. 第一个错误的版本](https://leetcode.com/problems/first-bad-version)
 - [350. 两个数组的交集 II](https://leetcode.com/problems/intersection-of-two-arrays-ii)
 - [367. 有效的完全平方数](https://leetcode.com/problems/valid-perfect-square)
 - [392. 判断子序列](https://leetcode.com/problems/is-subsequence)

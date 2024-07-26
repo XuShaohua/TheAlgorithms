@@ -25,8 +25,8 @@ impl Solution {
         while left <= right {
             let middle = left + (right - left) / 2;
             if self.isBadVersion(middle) {
-                // [middle..right] 区间都是有问题的版本
-                right = middle - 1;
+                // [middle..right] 区间都是有问题的版本, 但是 middle - 1 则不确定是不是坏了的.
+                right = middle;
             } else {
                 // [left..middle] 区间都是没有问题的版本
                 left = middle + 1;

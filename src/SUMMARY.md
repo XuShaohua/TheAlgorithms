@@ -249,6 +249,7 @@
         - [0231. 2的幂 Power of Two](leetcode/0231.power-of-two/index.md)
         - [0234. 回文链表 Palindrome Linked List](leetcode/0234.palindrome-linked-list/index.md)
         - [0238. 除自身以外数组的乘积 Product of Array Except Self](leetcode/0238.product-of-array-except-self/index.md)
+        - [0278. 第一个错误的版本](leetcode/0278.first-bad-version/index.md)
         - [0287. 寻找重复数 Find the Duplicate Number](leetcode/0287.find-the-duplicate-number/index.md)
     - [0301-0400](leetcode/by-id/0301-0400.md)
         - [0326. 3的幂 Power of Three](leetcode/0326.power-of-three/index.md)
