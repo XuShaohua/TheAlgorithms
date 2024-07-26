@@ -46,7 +46,7 @@ pub fn peak_index_in_mountain_array3(arr: Vec<i32>) -> i32 {
     let mut left = 0;
     let mut right = arr.len() - 1;
 
-    // 简化二分查找的条件
+    // 简化二分查找的条件, 最终 left 位置就是峰值.
     while left < right {
         let middle = left + (right - left) / 2;
         if arr[middle] < arr[middle + 1] {

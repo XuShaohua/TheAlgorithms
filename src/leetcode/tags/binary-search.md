@@ -25,8 +25,9 @@ TODO:
 3. [0162. 寻找峰值 Find Peak Element](../0162.find-peak-element/index.md)
 4. [0167. 两数之和 II - 输入有序数组 Two Sum II - Input Array Is Sorted](../0167.two-sum-ii-input-array-is-sorted/index.md)
 5. [0287. 寻找重复数 Find the Duplicate Number](../0287.find-the-duplicate-number/index.md)
-6. [0532.数组中的数对 K-diff Pairs in an Array](../0532.k-diff-pairs-in-an-array/index.md)
-7. [1498. 满足条件的子序列数目 Number of Subsequences That Satisfy the Given Sum Condition](../1498.number-of-subsequences-that-satisfy-the-given-sum-condition/index.md)
+6. [0532. 数组中的数对 K-diff Pairs in an Array](../0532.k-diff-pairs-in-an-array/index.md)
+7. [0852. 山脉数组的峰顶索引 Peak Index in a Mountain Array](../0852.peak-index-in-a-mountain-array/index.md)
+8. [1498. 满足条件的子序列数目 Number of Subsequences That Satisfy the Given Sum Condition](../1498.number-of-subsequences-that-satisfy-the-given-sum-condition/index.md)
 
 TODO:
 
