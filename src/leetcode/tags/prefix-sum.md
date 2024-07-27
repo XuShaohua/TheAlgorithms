@@ -4,7 +4,8 @@
 
 1. [0303. 区域和检索 - 数组不可变 Range Sum Query - Immutable](../0303.range-sum-query-immutable/index.md)
 2. [0724. 寻找数组的中心索引](../0724.find-pivot-index/index.md)
-3. [1991. 找到数组的中间位置 Find the Middle Index in Array](../1991.find-the-middle-index-in-array/index.md)
+3. [1422. 分割字符串的最大得分 Maximum Score After Splitting a String](../1422.maximum-score-after-splitting-a-string/index.md)
+4. [1991. 找到数组的中间位置 Find the Middle Index in Array](../1991.find-the-middle-index-in-array/index.md)
 
 ## 中等
 

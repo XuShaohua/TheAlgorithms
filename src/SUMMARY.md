@@ -284,6 +284,7 @@
     - [1201-1300](leetcode/by-id/1201-1300.md)
     - [1301-1400](leetcode/by-id/1301-1400.md)
     - [1401-1500](leetcode/by-id/1401-1500.md)
+        - [1422. 分割字符串的最大得分 Maximum Score After Splitting a String](leetcode/1422.maximum-score-after-splitting-a-string/index.md)
         - [1498. 满足条件的子序列数目 Number of Subsequences That Satisfy the Given Sum Condition](leetcode/1498.number-of-subsequences-that-satisfy-the-given-sum-condition/index.md)
     - [1501-1600](leetcode/by-id/1501-1600.md)
         - [1518. 换水问题 Water Bottles](leetcode/1518.water-bottles/index.md)
