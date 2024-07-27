@@ -4,8 +4,19 @@
 
 use std::cmp::Ordering;
 
-// Binary Search
+// Brute force
 pub fn search_matrix1(matrix: Vec<Vec<i32>>, target: i32) -> bool {
+    let items = matrix.len() * matrix[0].len();
+    let mut nums = Vec::with_capacity(items);
+    for row in matrix {
+        nums.extend(row);
+    }
+
+    nums.binary_search(&target).is_ok()
+}
+
+// Binary Search
+pub fn search_matrix2(matrix: Vec<Vec<i32>>, target: i32) -> bool {
     // 两次二分查找:
     // 1. 确定 target 应该属于哪个行
     // 2. 确定 target 是否在当前行
@@ -67,14 +78,20 @@ fn check_solution(func: SolutionFn) {
 
 fn main() {
     check_solution(search_matrix1);
+    check_solution(search_matrix2);
 }
 
 #[cfg(test)]
 mod tests {
-    use super::{check_solution, search_matrix1};
+    use super::{check_solution, search_matrix1, search_matrix2};
 
     #[test]
     fn test_search_matrix1() {
         check_solution(search_matrix1);
+    }
+
+    #[test]
+    fn test_search_matrix2() {
+        check_solution(search_matrix2);
     }
 }
