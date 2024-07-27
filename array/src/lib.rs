@@ -11,5 +11,6 @@
 )]
 
 pub mod circular_buffer;
+pub mod prefix_sum;
 pub mod reverse;
 pub mod rotate;
