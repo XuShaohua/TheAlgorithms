@@ -255,6 +255,7 @@
         - [0278. 第一个错误的版本](leetcode/0278.first-bad-version/index.md)
         - [0287. 寻找重复数 Find the Duplicate Number](leetcode/0287.find-the-duplicate-number/index.md)
     - [0301-0400](leetcode/by-id/0301-0400.md)
+        - [0303. 区域和检索 - 数组不可变 Range Sum Query - Immutable](leetcode/0303.range-sum-query-immutable/index.md)
         - [0326. 3的幂 Power of Three](leetcode/0326.power-of-three/index.md)
         - [0338. 比特位计数 Counting Bits](leetcode/0338.counting-bits/index.md)
         - [0342. 4的幂 Power of Four](leetcode/0342.power-of-four/index.md)
