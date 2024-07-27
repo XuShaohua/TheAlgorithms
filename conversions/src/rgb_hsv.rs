@@ -10,6 +10,7 @@
 
 #![allow(clippy::cast_possible_truncation)]
 #![allow(clippy::cast_sign_loss)]
+#![allow(dead_code)]
 
 #[derive(Debug, Clone, Copy, PartialEq)]
 pub struct Hsv(f64, f64, f64);

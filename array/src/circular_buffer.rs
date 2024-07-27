@@ -40,7 +40,7 @@ impl<T: Sized> CircularBuffer<T> {
 
     #[must_use]
     #[inline]
-    pub fn as_mut_ptr(&mut self) -> *mut T {
+    pub const fn as_mut_ptr(&self) -> *mut T {
         self.ptr.as_ptr()
     }
 
