@@ -2,8 +2,10 @@
 // Use of this source is governed by General Public License that can be found
 // in the LICENSE file.
 
-use core::marker::PhantomData;
-use core::ptr::NonNull;
+use std::cmp::Ordering;
+use std::marker::PhantomData;
+use std::mem;
+use std::ptr::NonNull;
 
 pub struct LinkedList<T> {
     head: Option<NonNull<Node<T>>>,
@@ -99,8 +101,9 @@ impl<T> LinkedList<T> {
     /// Erases all elements from the list.
     /// After calling this function, size of list is zero.
     pub fn clear(&mut self) {
-        self.len = 0;
-        todo!()
+        let mut other = Self::new();
+        mem::swap(self, &mut other);
+        drop(other);
     }
 
     pub fn insert(&mut self) {}
@@ -127,6 +130,31 @@ impl<T> LinkedList<T> {
     /// Remove the last element in the list.
     pub fn pop_back(&mut self) -> Option<T> {
         self.pop_back_node().map(Node::into_inner)
+    }
+
+    /// Change number of elements stored.
+    ///
+    /// If the current size is greater than `new_size`, extra elements will
+    /// be removed.
+    /// If current size is less than `new_size`, more elements with default
+    /// value are appended.
+    fn resize(&mut self, new_size: usize)
+    where
+        T: Default,
+    {
+        match self.len.cmp(&new_size) {
+            Ordering::Equal => (),
+            Ordering::Less => {
+                for _ in 0..(new_size - self.len) {
+                    self.push_back(T::default());
+                }
+            }
+            Ordering::Greater => {
+                for _ in 0..(self.len - new_size) {
+                    let _node = self.pop_back_node();
+                }
+            }
+        }
     }
 
     /// Swap the contents.
@@ -241,6 +269,14 @@ impl<T> LinkedList<T> {
             self.len -= 1;
             old_tail
         })
+    }
+}
+
+impl<T> Drop for LinkedList<T> {
+    fn drop(&mut self) {
+        while let Some(_node) = self.pop_front_node() {
+            // Do nothing
+        }
     }
 }
 
