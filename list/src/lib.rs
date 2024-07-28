@@ -3,5 +3,6 @@
 // found in the LICENSE file.
 
 pub mod double_v1;
+pub mod double_v2;
 pub mod single_v1;
 pub mod single_v2;
