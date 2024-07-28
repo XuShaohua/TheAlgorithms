@@ -2,6 +2,7 @@
 // Use of this source is governed by General Public License that can be found
 // in the LICENSE file.
 
+// Prefix sum
 pub fn largest_altitude1(gain: Vec<i32>) -> i32 {
     debug_assert!(!gain.is_empty());
     let mut last_altitude = 0;

@@ -291,6 +291,7 @@
         - [1518. 换水问题 Water Bottles](leetcode/1518.water-bottles/index.md)
     - [1601-1700](leetcode/by-id/1601-1700.md)
     - [1701-1800](leetcode/by-id/1701-1800.md)
+        - [1732. 找到最高海拔 Find the Highest Altitude](leetcode/1732.find-the-highest-altitude/index.md)
         - [1780. 判断一个数字是否可以表示成三的幂的和 Check if Number is a Sum of Powers of Three](leetcode/1780.check-if-number-is-a-sum-of-powers-of-three/index.md)
     - [1801-1900](leetcode/by-id/1801-1900.md)
     - [1901-2000](leetcode/by-id/1901-2000.md)
