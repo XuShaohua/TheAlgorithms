@@ -6,7 +6,7 @@
 
 type ListNodePtr<T> = Option<Box<ListNode<T>>>;
 
-pub struct LinkedListV1<T> {
+pub struct LinkedList<T> {
     length: usize,
     head: ListNodePtr<T>,
 }
@@ -16,7 +16,7 @@ struct ListNode<T> {
     next: ListNodePtr<T>,
 }
 
-pub struct IntoIter<T>(LinkedListV1<T>);
+pub struct IntoIter<T>(LinkedList<T>);
 
 pub struct Iter<'a, T> {
     next: Option<&'a ListNode<T>>,
@@ -46,13 +46,13 @@ impl<T> ListNode<T> {
     }
 }
 
-impl<T> Default for LinkedListV1<T> {
+impl<T> Default for LinkedList<T> {
     fn default() -> Self {
         Self::new()
     }
 }
 
-impl<T> LinkedListV1<T> {
+impl<T> LinkedList<T> {
     #[must_use]
     #[inline]
     pub const fn new() -> Self {
@@ -130,7 +130,7 @@ impl<T> LinkedListV1<T> {
     }
 }
 
-impl<T> Drop for LinkedListV1<T> {
+impl<T> Drop for LinkedList<T> {
     fn drop(&mut self) {
         let mut node = self.head.take();
         while let Some(mut boxed_node) = node {
@@ -142,7 +142,7 @@ impl<T> Drop for LinkedListV1<T> {
 }
 
 // Or use move
-//impl<T> Drop for LinkedListV1<T> {
+//impl<T> Drop for LinkedList<T> {
 //    fn drop(&mut self) {
 //        let mut node = self.head.take();
 //        while let Some(boxed_node) = node {
@@ -152,7 +152,7 @@ impl<T> Drop for LinkedListV1<T> {
 //    }
 //}
 
-impl<T> LinkedListV1<T>
+impl<T> LinkedList<T>
 where
     T: PartialEq,
 {
@@ -169,7 +169,7 @@ where
     }
 }
 
-impl<T> IntoIterator for LinkedListV1<T> {
+impl<T> IntoIterator for LinkedList<T> {
     type Item = T;
     type IntoIter = IntoIter<T>;
 
@@ -186,7 +186,7 @@ impl<T> Iterator for IntoIter<T> {
     }
 }
 
-impl<'a, T> IntoIterator for &'a LinkedListV1<T> {
+impl<'a, T> IntoIterator for &'a LinkedList<T> {
     type Item = &'a T;
     type IntoIter = Iter<'a, T>;
 
@@ -195,7 +195,7 @@ impl<'a, T> IntoIterator for &'a LinkedListV1<T> {
     }
 }
 
-impl<'a, T> IntoIterator for &'a mut LinkedListV1<T> {
+impl<'a, T> IntoIterator for &'a mut LinkedList<T> {
     type Item = &'a mut T;
     type IntoIter = IterMut<'a, T>;
 
@@ -228,17 +228,17 @@ impl<'a, T> Iterator for IterMut<'a, T> {
 
 #[cfg(test)]
 mod tests {
-    use super::LinkedListV1;
+    use super::LinkedList;
 
     #[test]
     fn test_new() {
-        let list = LinkedListV1::<i32>::new();
+        let list = LinkedList::<i32>::new();
         assert!(list.is_empty());
     }
 
     #[test]
     fn test_push() {
-        let mut list = LinkedListV1::new();
+        let mut list = LinkedList::new();
         list.push(2);
         list.push(3);
         list.push(5);
@@ -249,7 +249,7 @@ mod tests {
 
     #[test]
     fn test_pop() {
-        let mut list = LinkedListV1::new();
+        let mut list = LinkedList::new();
         list.push(5);
         list.push(7);
         assert_eq!(list.pop(), Some(7));
@@ -262,7 +262,7 @@ mod tests {
     fn test_drop() {
         // The default recursive limit rustc-v1.74 is 128.
         // See https://doc.rust-lang.org/reference/attributes/limits.html
-        let mut list = LinkedListV1::new();
+        let mut list = LinkedList::new();
         for i in 0..(128 * 200) {
             list.push(i);
         }
@@ -271,7 +271,7 @@ mod tests {
 
     #[test]
     fn test_head() {
-        let mut list = LinkedListV1::new();
+        let mut list = LinkedList::new();
         list.push(5);
         list.push(7);
         assert_eq!(list.head(), Some(&7));
@@ -279,7 +279,7 @@ mod tests {
 
     #[test]
     fn test_head_mut() {
-        let mut list = LinkedListV1::new();
+        let mut list = LinkedList::new();
         list.push(5);
         list.push(7);
         if let Some(value) = list.head_mut() {
@@ -292,7 +292,7 @@ mod tests {
 
     #[test]
     fn test_into_iter() {
-        let mut list = LinkedListV1::new();
+        let mut list = LinkedList::new();
         list.push(2);
         list.push(3);
         list.push(5);
@@ -307,7 +307,7 @@ mod tests {
 
     #[test]
     fn test_iter() {
-        let mut list = LinkedListV1::new();
+        let mut list = LinkedList::new();
         list.push(2);
         list.push(3);
         list.push(5);
@@ -320,7 +320,7 @@ mod tests {
 
     #[test]
     fn test_iter_mut() {
-        let mut list = LinkedListV1::new();
+        let mut list = LinkedList::new();
         list.push(2);
         list.push(3);
         list.push(5);

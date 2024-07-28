@@ -9,7 +9,7 @@ use std::rc::Rc;
 
 type ListNodePtr<T> = Option<Rc<RefCell<ListNode<T>>>>;
 
-pub struct LinkedListV2<T> {
+pub struct LinkedList<T> {
     length: usize,
     head: ListNodePtr<T>,
     tail: ListNodePtr<T>,
@@ -49,7 +49,7 @@ impl<T> ListNode<T> {
     }
 }
 
-impl<T> Default for LinkedListV2<T> {
+impl<T> Default for LinkedList<T> {
     #[must_use]
     #[inline]
     fn default() -> Self {
@@ -57,7 +57,7 @@ impl<T> Default for LinkedListV2<T> {
     }
 }
 
-impl<T> LinkedListV2<T> {
+impl<T> LinkedList<T> {
     #[must_use]
     #[inline]
     pub const fn new() -> Self {
@@ -190,7 +190,7 @@ impl<T> LinkedListV2<T> {
     //    }
 }
 
-impl<T> FromIterator<T> for LinkedListV2<T> {
+impl<T> FromIterator<T> for LinkedList<T> {
     fn from_iter<I: IntoIterator<Item = T>>(iter: I) -> Self {
         let iter = iter.into_iter();
         let mut list = Self::new();
@@ -201,7 +201,7 @@ impl<T> FromIterator<T> for LinkedListV2<T> {
     }
 }
 
-impl<T> Drop for LinkedListV2<T> {
+impl<T> Drop for LinkedList<T> {
     fn drop(&mut self) {
         // Reset tail first.
         self.tail.take();
@@ -217,17 +217,17 @@ impl<T> Drop for LinkedListV2<T> {
 
 #[cfg(test)]
 mod tests {
-    use super::LinkedListV2;
+    use super::LinkedList;
 
     #[test]
     fn test_new() {
-        let list = LinkedListV2::<i32>::new();
+        let list = LinkedList::<i32>::new();
         assert!(list.is_empty());
     }
 
     #[test]
     fn test_push() {
-        let mut list = LinkedListV2::new();
+        let mut list = LinkedList::new();
         list.push_front(2);
         list.push_front(3);
         list.push_front(5);
@@ -238,7 +238,7 @@ mod tests {
 
     #[test]
     fn test_pop() {
-        let mut list = LinkedListV2::new();
+        let mut list = LinkedList::new();
         list.push_front(3);
         list.push_front(5);
         list.push_front(7);
@@ -252,7 +252,7 @@ mod tests {
 
     #[test]
     fn test_drop() {
-        let mut list = LinkedListV2::new();
+        let mut list = LinkedList::new();
         for i in 0..(128 * 200) {
             list.push_front(i);
         }
