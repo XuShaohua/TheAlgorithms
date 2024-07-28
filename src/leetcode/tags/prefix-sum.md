@@ -8,6 +8,7 @@
 4. [1480. 一维数组的动态和 Running Sum of 1d Array](../1480.running-sum-of-1d-array/index.md)
 5. [1732. 找到最高海拔 Find the Highest Altitude](../1732.find-the-highest-altitude/index.md)
 6. [1991. 找到数组的中间位置 Find the Middle Index in Array](../1991.find-the-middle-index-in-array/index.md)
+7. [3028. 边界上的蚂蚁 Ant on the Boundary](../3028.ant-on-the-boundary/index.md)
 
 ## 中等
 
