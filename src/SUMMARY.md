@@ -299,6 +299,8 @@
     - [2101-2200](leetcode/by-id/2101-2200.md)
         - [2108. 找出数组中的第一个回文字符串 Find First Palindromic String in the Array](leetcode/2108.find-first-palindromic-string-in-the-array/index.md)
         - [2119. 反转两次的数字 A Number After a Double Reversal](leetcode/2119.a-number-after-a-double-reversal/index.md)
+    - [2801-2900](leetcode/by-id/2801-2900.md)
+        - [2848. 与车相交的点 Points That Intersect With Cars](leetcode/2848.points-that-intersect-with-cars/index.md)
     - [3001-3100](leetcode/by-id/3001-3100.md)
         - [3028. 边界上的蚂蚁 Ant on the Boundary](leetcode/3028.ant-on-the-boundary/index.md)
 
