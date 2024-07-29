@@ -35,14 +35,14 @@ pub fn is_covered2(ranges: Vec<Vec<i32>>, left: i32, right: i32) -> bool {
     let mut end = 0;
     for range in ranges {
         if range[0] > end + 1 {
-            // 区间没有重叠
+            // 区间无法拼接在一起
             if start <= end {
                 intervals.push((start, end));
             }
             start = range[0];
             end = range[1];
         } else {
-            // 区间有重叠
+            // 区间可以拼接在一起
             end = end.max(range[1]);
         }
     }

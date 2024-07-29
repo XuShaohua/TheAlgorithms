@@ -7,11 +7,12 @@
 3. [1422. 分割字符串的最大得分 Maximum Score After Splitting a String](../1422.maximum-score-after-splitting-a-string/index.md)
 4. [1480. 一维数组的动态和 Running Sum of 1d Array](../1480.running-sum-of-1d-array/index.md)
 5. [1732. 找到最高海拔 Find the Highest Altitude](../1732.find-the-highest-altitude/index.md)
-6. [1991. 找到数组的中间位置 Find the Middle Index in Array](../1991.find-the-middle-index-in-array/index.md)
-7. [2485. 找出中枢整数 Find the Pivot Integer](../2485.find-the-pivot-integer/index.md)
-8. [2574. 左右元素和的差值 Left and Right Sum Differences](../2574.left-and-right-sum-differences/index.md)
-9. [2848. 与车相交的点 Points That Intersect With Cars](../2848.points-that-intersect-with-cars/index.md)
-10. [3028. 边界上的蚂蚁 Ant on the Boundary](../3028.ant-on-the-boundary/index.md)
+6. [1893. 检查是否区域内所有整数都被覆盖 Check if All the Integers in a Range Are Covered](../1893.check-if-all-the-integers-in-a-range-are-covered/index.md)
+7. [1991. 找到数组的中间位置 Find the Middle Index in Array](../1991.find-the-middle-index-in-array/index.md)
+8. [2485. 找出中枢整数 Find the Pivot Integer](../2485.find-the-pivot-integer/index.md)
+9. [2574. 左右元素和的差值 Left and Right Sum Differences](../2574.left-and-right-sum-differences/index.md)
+10. [2848. 与车相交的点 Points That Intersect With Cars](../2848.points-that-intersect-with-cars/index.md)
+11. [3028. 边界上的蚂蚁 Ant on the Boundary](../3028.ant-on-the-boundary/index.md)
 
 ## 中等
 

@@ -295,6 +295,7 @@
         - [1732. 找到最高海拔 Find the Highest Altitude](leetcode/1732.find-the-highest-altitude/index.md)
         - [1780. 判断一个数字是否可以表示成三的幂的和 Check if Number is a Sum of Powers of Three](leetcode/1780.check-if-number-is-a-sum-of-powers-of-three/index.md)
     - [1801-1900](leetcode/by-id/1801-1900.md)
+        - [1893. 检查是否区域内所有整数都被覆盖 Check if All the Integers in a Range Are Covered](leetcode/1893.check-if-all-the-integers-in-a-range-are-covered/index.md)
     - [1901-2000](leetcode/by-id/1901-2000.md)
         - [1991. 找到数组的中间位置 Find the Middle Index in Array](leetcode/1991.find-the-middle-index-in-array/index.md)
     - [2101-2200](leetcode/by-id/2101-2200.md)
