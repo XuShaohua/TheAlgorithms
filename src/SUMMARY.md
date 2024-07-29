@@ -300,6 +300,8 @@
     - [2101-2200](leetcode/by-id/2101-2200.md)
         - [2108. 找出数组中的第一个回文字符串 Find First Palindromic String in the Array](leetcode/2108.find-first-palindromic-string-in-the-array/index.md)
         - [2119. 反转两次的数字 A Number After a Double Reversal](leetcode/2119.a-number-after-a-double-reversal/index.md)
+    - [2401-2500](leetcode/by-id/2401-2500.md)
+        - [2485. 找出中枢整数 Find the Pivot Integer](leetcode/2485.find-the-pivot-integer/index.md)
     - [2501-2600](leetcode/by-id/2501-2600.md)
         - [2574. 左右元素和的差值 Left and Right Sum Differences](leetcode/2574.left-and-right-sum-differences/index.md)
     - [2801-2900](leetcode/by-id/2801-2900.md)

@@ -1,5 +1,5 @@
 [package]
-name = "lc-0000-name"
+name = "lc-2485-find-the-pivot-integer"
 version = "0.1.0"
 edition = "2021"
 publish = false

@@ -17,9 +17,9 @@ pub fn pivot_integer1(n: i32) -> i32 {
     let total_sum = prefix_sum[len - 1];
 
     // 遍历前缀和数组
-    for i in 0..len {
+    for (i, prefix) in prefix_sum.into_iter().enumerate() {
         // 满足左侧之和等于右侧之后
-        if prefix_sum[i] * 2 == total_sum + i as i32 {
+        if prefix * 2 == total_sum + i as i32 {
             return i as i32;
         }
     }
@@ -39,6 +39,9 @@ pub fn pivot_integer2(n: i32) -> i32 {
         }
         left_sum += i;
         right_sum -= i;
+        if left_sum > right_sum {
+            break;
+        }
     }
     -1
 }
