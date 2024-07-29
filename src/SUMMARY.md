@@ -224,6 +224,7 @@
         - [0040. 组合总和 II Combination Sum II](leetcode/0040.combination-sum-ii/index.md)
         - [0046. 全排列 Permutations](leetcode/0046.permutations/index.md)
         - [0047. 全排列 II Permutations II](leetcode/0047.permutations-ii/index.md)
+        - [0056. 合并区间 Merge Intervals](leetcode/0056.merge-intervals/index.md)
         - [0066. 加一 Plus One](leetcode/0066.plus-one/index.md)
         - [0067. 二进制求和 Add Binary](leetcode/0067.add-binary/index.md)
         - [0069. x 的平方根 Sqrt(x)](leetcode/0069.sqrtx/index.md)
