@@ -9,6 +9,7 @@ pub fn left_right_difference1(nums: Vec<i32>) -> Vec<i32> {
     let len = nums.len();
     let mut left_sum = vec![0; len];
     left_sum[0] = 0;
+    // 从左向右遍历
     for i in 0..(len - 1) {
         left_sum[i + 1] = left_sum[i] + nums[i];
     }
@@ -16,14 +17,15 @@ pub fn left_right_difference1(nums: Vec<i32>) -> Vec<i32> {
 
     let mut right_sum = vec![0; len];
     right_sum[0] = 0;
-    for i in 0..(len - 1) {
-        right_sum[i + 1] = right_sum[i] + nums[len - i - 1];
+    // 从右向左遍历
+    for i in (1..=(len - 1)).rev() {
+        right_sum[i - 1] = right_sum[i] + nums[i];
     }
     //println!("right sum: {right_sum:?}");
 
     left_sum
         .into_iter()
-        .zip(right_sum.into_iter().rev())
+        .zip(right_sum)
         .map(|(left, right)| (left - right).abs())
         .collect()
 }
