@@ -61,19 +61,19 @@ pub fn maximum_population3(logs: Vec<Vec<i32>>) -> i32 {
 
     // 构造数组, 用于记录每年增减的人数,
     // 为构造前缀和数组做准备
-    let mut arr = vec![0; no_years as usize];
+    let mut alive = vec![0; no_years as usize];
     for log in logs {
         let start_year_index = (log[0] - start_year) as usize;
         let end_year_index = (log[1] - start_year) as usize;
-        arr[start_year_index] += 1;
-        arr[end_year_index] -= 1;
+        alive[start_year_index] += 1;
+        alive[end_year_index] -= 1;
     }
 
     // 构造前缀和数组
-    let mut prefix_sum = vec![0; arr.len()];
-    prefix_sum[0] = arr[0];
-    for i in 1..arr.len() {
-        prefix_sum[i] = prefix_sum[i - 1] + arr[i];
+    let mut prefix_sum = vec![0; alive.len()];
+    prefix_sum[0] = alive[0];
+    for i in 1..alive.len() {
+        prefix_sum[i] = prefix_sum[i - 1] + alive[i];
     }
 
     // 遍历前缀和数组, 找到最多的人所在的年份
