@@ -2,38 +2,16 @@
 // Use of this source is governed by General Public License that can be found
 // in the LICENSE file.
 
-//! 使用数组实现栈结构
-
-use std::error::Error;
-use std::fmt::{Display, Formatter};
-
+/// 使用数组实现静态栈结构
 pub struct ArrayStack<T: Sized> {
     top: usize,
     buf: Box<[Option<T>]>,
 }
 
-#[derive(Debug, Clone, Copy, Eq, PartialEq)]
-pub enum StackError {
-    StackEmpty,
-    StackFull,
-}
-
-impl Display for StackError {
-    fn fmt(&self, f: &mut Formatter<'_>) -> std::fmt::Result {
-        let s = match self {
-            Self::StackEmpty => "Stack is empty",
-            Self::StackFull => "Stack is full",
-        };
-        write!(f, "{s}")
-    }
-}
-
-impl Error for StackError {}
-
 impl<T> ArrayStack<T> {
     /// 初始化栈, 指定栈的容量
     #[must_use]
-    pub fn with_capacity(capacity: usize) -> Self {
+    pub fn new(capacity: usize) -> Self {
         let values: Vec<Option<T>> = (0..capacity).map(|_| None).collect();
 
         Self {
@@ -45,10 +23,11 @@ impl<T> ArrayStack<T> {
     /// 将元素入栈
     ///
     /// # Errors
-    /// 当栈已满时再将元素入栈, 就会返回 `StackFull` 错误.
-    pub fn push(&mut self, value: T) -> Result<(), StackError> {
+    ///
+    /// 当栈已满时再将元素入栈, 就会返回错误, 以及原有的元素 `value`.
+    pub fn push(&mut self, value: T) -> Result<(), T> {
         if self.top >= self.buf.len() {
-            return Err(StackError::StackFull);
+            return Err(value);
         }
         self.buf[self.top] = Some(value);
         self.top += 1;
@@ -57,21 +36,19 @@ impl<T> ArrayStack<T> {
 
     /// 将栈顶元素出栈
     ///
-    /// # Errors
-    /// 当栈已经空时, 返回 `StackEmpty` 的错误
-    pub fn pop(&mut self) -> Result<T, StackError> {
+    /// 当栈已经空时, 返回 `None`
+    pub fn pop(&mut self) -> Option<T> {
         if self.top > 0 {
             self.top -= 1;
-            let value: T = self.buf[self.top].take().ok_or(StackError::StackEmpty)?;
-            Ok(value)
+            self.buf[self.top].take()
         } else {
-            Err(StackError::StackEmpty)
+            None
         }
     }
 
     /// 返回栈顶元素
     #[must_use]
-    pub const fn peek(&self) -> Option<&T> {
+    pub const fn top(&self) -> Option<&T> {
         if self.top > 0 {
             self.buf[self.top].as_ref()
         } else {
@@ -91,10 +68,10 @@ impl<T> ArrayStack<T> {
         self.top
     }
 
-    /// 检查栈是否已满
+    /// 返回栈的容量
     #[must_use]
-    pub const fn is_full(&self) -> bool {
-        self.top == self.buf.len()
+    pub const fn capacity(&self) -> usize {
+        self.buf.len()
     }
 }
 
@@ -102,7 +79,7 @@ impl<T> ArrayStack<T> {
 mod tests {
     use std::mem::size_of;
 
-    use crate::array_stack::{ArrayStack, StackError};
+    use crate::array_stack::ArrayStack;
 
     #[test]
     fn test_size_of_stack() {
@@ -111,7 +88,7 @@ mod tests {
 
     #[test]
     fn test_array_stack() {
-        let mut stack: ArrayStack<i32> = ArrayStack::with_capacity(4);
+        let mut stack: ArrayStack<i32> = ArrayStack::new(4);
         assert!(stack.is_empty());
         let ret = stack.push(10);
         assert!(ret.is_ok());
@@ -123,25 +100,23 @@ mod tests {
         assert!(ret.is_ok());
 
         let ret = stack.push(50);
-        assert_eq!(ret, Err(StackError::StackFull));
+        assert_eq!(ret, Err(50));
 
-        assert!(stack.is_full());
-        assert_eq!(stack.len(), 4);
+        assert_eq!(stack.capacity(), stack.len());
 
         let ret = stack.pop();
-        assert_eq!(ret, Ok(40));
-        assert!(!stack.is_full());
+        assert_eq!(ret, Some(40));
+        assert!(!stack.is_empty());
         let ret = stack.pop();
-        assert_eq!(ret, Ok(30));
+        assert_eq!(ret, Some(30));
         let ret = stack.pop();
-        assert_eq!(ret, Ok(20));
+        assert_eq!(ret, Some(20));
         let ret = stack.pop();
-        assert_eq!(ret, Ok(10));
+        assert_eq!(ret, Some(10));
 
-        assert!(!stack.is_full());
         assert!(stack.is_empty());
 
         let ret = stack.pop();
-        assert_eq!(ret, Err(StackError::StackEmpty));
+        assert_eq!(ret, None);
     }
 }
