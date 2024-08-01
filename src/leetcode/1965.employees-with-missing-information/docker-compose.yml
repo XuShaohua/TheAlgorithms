@@ -1,0 +1,13 @@
+version: "3.0"
+services:
+  leetcode_db:
+    image: postgres:15.3
+    restart: always
+    ports:
+      - 127.0.0.1:5432:5432
+    environment:
+      POSTGRES_PASSWORD: leetcode-password
+      POSTGRES_USER: leetcode
+      POSTGRES_DB: leetcode
+    volumes:
+      - ./db:/var/lib/postgresql
