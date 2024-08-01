@@ -3,6 +3,8 @@
 // in the LICENSE file.
 
 use std::cmp::Ordering;
+use std::fmt;
+use std::fmt::Formatter;
 use std::hash::{Hash, Hasher};
 
 /// 使用数组实现静态栈结构
@@ -114,6 +116,12 @@ impl<T> FromIterator<T> for ArrayStack<T> {
     }
 }
 
+impl<T: fmt::Debug> fmt::Debug for ArrayStack<T> {
+    fn fmt(&self, f: &mut Formatter<'_>) -> fmt::Result {
+        fmt::Debug::fmt(&self.buf, f)
+    }
+}
+
 #[cfg(test)]
 mod tests {
     use std::mem::size_of;
@@ -157,5 +165,23 @@ mod tests {
 
         let ret = stack.pop();
         assert_eq!(ret, None);
+    }
+
+    #[test]
+    fn test_iter() {
+        let numbers = [1, 1, 2, 3, 5, 8];
+        let mut stack = ArrayStack::from_iter(numbers);
+        assert_eq!(stack.len(), numbers.len());
+
+        let ret = stack.pop();
+        assert_eq!(ret, Some(8));
+    }
+
+    #[test]
+    fn test_eq() {
+        let numbers = [1, 1, 2, 3, 5, 8];
+        let stack1 = ArrayStack::from_iter(numbers);
+        let stack2 = ArrayStack::from_iter(numbers);
+        assert_eq!(stack1, stack2);
     }
 }
