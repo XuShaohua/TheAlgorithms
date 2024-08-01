@@ -11,7 +11,7 @@
 ![array stack](assets/array-stack.svg)
 
 ```rust
-{{#include assets/array_stack.rs:5:99}}
+{{#include assets/array_stack.rs:5:123}}
 ```
 
 ## 使用动态数组 Vec 实现动态栈
@@ -21,9 +21,14 @@
 这个比较简单, 因为 `Vec<T>` 本身就实现了基本的栈操作接口, 我们只需要再包装一下就行:
 
 ```rust
-{{#include assets/vec_stack.rs:5:70}}
+{{#include assets/vec_stack.rs:5:115}}
 ```
 
 ## 使用链表实现动态栈
 
-TODO(Shaohua):
+使用链表实现动态栈, 也是一个可行的方式, 为了简化代码, 我们使用了标准库中的双链表.
+但是在这里使用单链表就足够了.
+
+```rust
+{{#include assets/list_stack.rs:5:101}}
+```
