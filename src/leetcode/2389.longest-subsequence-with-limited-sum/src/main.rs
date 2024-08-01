@@ -2,13 +2,13 @@
 // Use of this source is governed by General Public License that can be found
 // in the LICENSE file.
 
-pub fn answer_queries1(nums: Vec<i32>, queries: Vec<i32>) -> Vec<i32> {
+pub fn answer_queries1(_nums: Vec<i32>, _queries: Vec<i32>) -> Vec<i32> {
     todo!();
 }
 
 pub type SolutionFn = fn(Vec<i32>, Vec<i32>) -> Vec<i32>;
 
-fn check_solution(func: SolutionFn) {
+fn check_solution(_func: SolutionFn) {
     todo!();
 }
 
