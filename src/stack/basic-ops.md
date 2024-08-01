@@ -10,6 +10,12 @@
 - `len() -> usize`: 返回当前栈中包含的元素个数
 - `capacity() -> usize`: 对于静态栈, 返回栈的最大容量
 
+要实现的 traits 有这些:
+
+- `FromIterator<T>`: 从迭代器构造栈, 如果是静态栈, 其容量大小就是迭代器中包含的元素个数
+- `PartialEq<T>, Eq<T>, PartialOrd<T>, Ord<T>`, 比较操作
+- `Hash<T>`: 支持哈稀函数
+
 ## 入栈 push()
 
 将一个元素入栈:

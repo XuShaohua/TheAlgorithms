@@ -2,6 +2,9 @@
 // Use of this source is governed by General Public License that can be found
 // in the LICENSE file.
 
+use std::cmp::Ordering;
+use std::hash::{Hash, Hasher};
+
 /// 使用数组实现静态栈结构
 pub struct ArrayStack<T: Sized> {
     top: usize,
@@ -72,6 +75,42 @@ impl<T> ArrayStack<T> {
     #[must_use]
     pub const fn capacity(&self) -> usize {
         self.buf.len()
+    }
+}
+
+impl<T: PartialEq> PartialEq for ArrayStack<T> {
+    fn eq(&self, other: &Self) -> bool {
+        self.top == other.top && PartialEq::eq(&self.buf, &other.buf)
+    }
+}
+
+impl<T: Eq> Eq for ArrayStack<T> {}
+
+impl<T: PartialOrd> PartialOrd for ArrayStack<T> {
+    fn partial_cmp(&self, other: &Self) -> Option<Ordering> {
+        PartialOrd::partial_cmp(&self.buf, &other.buf)
+    }
+}
+
+impl<T: Ord> Ord for ArrayStack<T> {
+    fn cmp(&self, other: &Self) -> Ordering {
+        Ord::cmp(&self.buf, &other.buf)
+    }
+}
+
+impl<T: Hash> Hash for ArrayStack<T> {
+    fn hash<H: Hasher>(&self, state: &mut H) {
+        Hash::hash(&self.buf, state);
+    }
+}
+
+impl<T> FromIterator<T> for ArrayStack<T> {
+    fn from_iter<U: IntoIterator<Item=T>>(iter: U) -> Self {
+        let vec: Vec<Option<T>> = iter.into_iter().map(|item| Some(item)).collect();
+        Self {
+            top: vec.len(),
+            buf: vec.into_boxed_slice(),
+        }
     }
 }
 
