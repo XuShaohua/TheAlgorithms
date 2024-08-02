@@ -2,13 +2,13 @@
 
 栈的基本操作 ADT, 包括:
 
-- `new(capacity) -> Stack`: 初始化栈, 指定栈的大小
-- `push(value: T) -> Result<(), T>`: 将一个元素加入到栈顶
-- `pop() -> Option<T>`: 从栈顶移出一个元素
-- `top() -> Option<&T>`: 返回栈顶的元素, 但并不移除它
-- `is_empty() -> bool`: 检查栈是否为空
-- `len() -> usize`: 返回当前栈中包含的元素个数
-- `capacity() -> usize`: 对于静态栈, 返回栈的最大容量
+- `fn new(capacity) -> Stack`: 初始化栈, 指定栈的大小
+- `fn push(value: T) -> Result<(), T>`: 将一个元素加入到栈顶
+- `fn pop() -> Option<T>`: 从栈顶移出一个元素
+- `fn top() -> Option<&T>`: 返回栈顶的元素, 但并不移除它
+- `fn is_empty() -> bool`: 检查栈是否为空
+- `fn len() -> usize`: 返回当前栈中包含的元素个数
+- `fn capacity() -> usize`: 对于静态栈, 返回栈的最大容量
 
 要实现的 traits 有这些:
 
