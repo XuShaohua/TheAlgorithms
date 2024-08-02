@@ -1,6 +1,6 @@
 # 环形缓冲区 Circular Buffer
 
-环形缓冲区 Circular Buffer 又称为 Ring Buffer.
+环形缓冲区 Circular Buffer 又称为 Ring Buffer, Cyclic Buffer 或者 Circular Queue.
 
 环形缓冲区是线性数据结构, 通常由数组来实现, 如下图所示:
 
