@@ -5,6 +5,7 @@
 - `fn new() -> Self`, 创建一个动态队列, 其容量不受限制
 - `fn new(capacity) -> Self`, 创建一个静态队列, 初始化时就指定队列的容量
 - `fn len() -> usize`, 返回当前队列中的元素个数
+- `fn capacity() -> usize`, 对于静态队列, 返回队列中的容量
 - `fn is_empty() -> bool`, 对于静态队列, 查看队列是否已满
 - `fn front() -> Option<&T>`, 返回队列头部元素的共享引用, 如果有的话
 - `fn front_mut() -> Option<&mut T>`, 返回队列头部元素的可变引用, 如果有的话

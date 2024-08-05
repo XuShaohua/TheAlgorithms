@@ -55,7 +55,7 @@ impl<T> ArrayStack<T> {
     #[must_use]
     pub const fn top(&self) -> Option<&T> {
         if self.top > 0 {
-            self.buf[self.top].as_ref()
+            self.buf[self.top - 1].as_ref()
         } else {
             None
         }
