@@ -11,5 +11,6 @@
 )]
 
 pub mod array_stack;
+pub mod array_stack2;
 pub mod vec_stack;
 pub mod list_stack;
