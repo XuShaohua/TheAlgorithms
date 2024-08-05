@@ -11,7 +11,16 @@
 ![array stack](assets/array-stack.svg)
 
 ```rust
-{{#include assets/array_stack.rs:5:123}}
+{{#include assets/array_stack.rs:5:125}}
+```
+
+## 使用数组实现 - 消除 Option<T>
+
+上面的实现过程中, 使用了 `Option<T>` 来向数组中存储元素, 这会额外占用一些内存, 操作效率有影响.
+我们可以手动操作内存, 来消除 `Option<T>`:
+
+```rust
+{{#include assets/array_stack2.rs:5:165}}
 ```
 
 ## 使用动态数组 Vec 实现动态栈
