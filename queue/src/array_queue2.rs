@@ -26,6 +26,10 @@ enum AllocError {
 }
 
 impl<T> ArrayQueue2<T> {
+    /// # Panics
+    ///
+    /// Raise panic if failed to allocate memory.
+    #[must_use]
     pub fn new(capacity: usize) -> Self {
         assert!(capacity > 0);
         let raw_vec = RawVec::<T>::try_allocate(capacity).expect("Failed to allocate buffer");

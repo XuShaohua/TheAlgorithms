@@ -12,6 +12,7 @@ pub struct ArrayQueue<T> {
 }
 
 impl<T> ArrayQueue<T> {
+    #[must_use]
     pub fn new(capacity: usize) -> Self {
         let values: Vec<Option<T>> = (0..capacity).map(|_| None).collect();
 

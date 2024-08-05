@@ -11,5 +11,6 @@
 )]
 
 pub mod circular_buffer;
-mod array_queue;
-mod array_queue2;
+pub mod array_queue;
+pub mod array_queue2;
+pub mod list_queue;
