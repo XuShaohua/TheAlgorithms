@@ -2,22 +2,37 @@
 // Use of this source is governed by General Public License that can be found
 // in the LICENSE file.
 
+use std::{fmt, ptr};
+use std::alloc::{alloc, Layout};
 use std::cmp::Ordering;
-use std::fmt;
 use std::hash::{Hash, Hasher};
+use std::mem::ManuallyDrop;
+use std::ptr::NonNull;
 
-pub struct ArrayQueue<T> {
+pub struct ArrayQueue2<T> {
     len: usize,
-    buf: Box<[Option<T>]>,
+    buf: Box<[T]>,
 }
 
-impl<T> ArrayQueue<T> {
-    pub fn new(capacity: usize) -> Self {
-        let values: Vec<Option<T>> = (0..capacity).map(|_| None).collect();
+struct RawVec<T> {
+    ptr: NonNull<T>,
+    cap: usize,
+}
 
+#[derive(Debug, Clone, Copy, Eq, PartialEq)]
+enum AllocError {
+    CapacityOverflow,
+    AllocateError,
+}
+
+impl<T> ArrayQueue2<T> {
+    pub fn new(capacity: usize) -> Self {
+        assert!(capacity > 0);
+        let raw_vec = RawVec::<T>::try_allocate(capacity).expect("Failed to allocate buffer");
+        let buf: Box<[T]> = unsafe { raw_vec.into_box() };
         Self {
             len: 0,
-            buf: values.into_boxed_slice(),
+            buf,
         }
     }
 
@@ -29,7 +44,7 @@ impl<T> ArrayQueue<T> {
             return Err(value);
         }
 
-        self.buf[self.len] = Some(value);
+        self.buf[self.len] = value;
         self.len += 1;
 
         Ok(())
@@ -37,9 +52,13 @@ impl<T> ArrayQueue<T> {
 
     pub fn pop(&mut self) -> Option<T> {
         if self.len > 0 {
-            let front = self.buf[0].take();
-            for i in 1..self.len {
-                self.buf.swap(i - 1, i);
+            // Take the first value, without calling drop method.
+            let front = unsafe {
+                Some(ptr::read(self.buf.as_ptr()))
+            };
+            // Move memory.
+            unsafe {
+                ptr::copy(self.buf.as_ptr().wrapping_add(1), self.buf.as_mut_ptr(), self.len - 1);
             }
             self.len -= 1;
             front
@@ -70,7 +89,7 @@ impl<T> ArrayQueue<T> {
     #[inline]
     pub const fn front(&self) -> Option<&T> {
         if self.len > 0 {
-            self.buf[0].as_ref()
+            Some(&self.buf[0])
         } else {
             None
         }
@@ -80,7 +99,7 @@ impl<T> ArrayQueue<T> {
     #[inline]
     pub fn front_mut(&mut self) -> Option<&mut T> {
         if self.len > 0 {
-            self.buf[0].as_mut()
+            Some(&mut self.buf[0])
         } else {
             None
         }
@@ -90,7 +109,7 @@ impl<T> ArrayQueue<T> {
     #[inline]
     pub const fn back(&self) -> Option<&T> {
         if self.len > 0 {
-            self.buf[self.len - 1].as_ref()
+            Some(&self.buf[self.len - 1])
         } else {
             None
         }
@@ -100,42 +119,42 @@ impl<T> ArrayQueue<T> {
     #[inline]
     pub fn back_mut(&mut self) -> Option<&mut T> {
         if self.len > 0 {
-            self.buf[self.len - 1].as_mut()
+            Some(&mut self.buf[self.len - 1])
         } else {
             None
         }
     }
 }
 
-impl<T: PartialEq> PartialEq for ArrayQueue<T> {
+impl<T: PartialEq> PartialEq for ArrayQueue2<T> {
     fn eq(&self, other: &Self) -> bool {
         self.len == other.len && PartialEq::eq(&self.buf, &other.buf)
     }
 }
 
-impl<T: Eq> Eq for ArrayQueue<T> {}
+impl<T: Eq> Eq for ArrayQueue2<T> {}
 
-impl<T: PartialOrd> PartialOrd for ArrayQueue<T> {
+impl<T: PartialOrd> PartialOrd for ArrayQueue2<T> {
     fn partial_cmp(&self, other: &Self) -> Option<Ordering> {
         PartialOrd::partial_cmp(&self.buf, &other.buf)
     }
 }
 
-impl<T: Ord> Ord for ArrayQueue<T> {
+impl<T: Ord> Ord for ArrayQueue2<T> {
     fn cmp(&self, other: &Self) -> Ordering {
         Ord::cmp(&self.buf, &other.buf)
     }
 }
 
-impl<T: Hash> Hash for ArrayQueue<T> {
+impl<T: Hash> Hash for ArrayQueue2<T> {
     fn hash<H: Hasher>(&self, state: &mut H) {
         Hash::hash(&self.buf, state);
     }
 }
 
-impl<T> FromIterator<T> for ArrayQueue<T> {
+impl<T> FromIterator<T> for ArrayQueue2<T> {
     fn from_iter<U: IntoIterator<Item=T>>(iter: U) -> Self {
-        let vec: Vec<Option<T>> = iter.into_iter().map(|item| Some(item)).collect();
+        let vec: Vec<T> = iter.into_iter().collect();
         Self {
             len: vec.len(),
             buf: vec.into_boxed_slice(),
@@ -143,30 +162,59 @@ impl<T> FromIterator<T> for ArrayQueue<T> {
     }
 }
 
-impl<T: fmt::Debug> fmt::Debug for ArrayQueue<T> {
+impl<T: fmt::Debug> fmt::Debug for ArrayQueue2<T> {
     fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
         fmt::Debug::fmt(&self.buf, f)
     }
 }
 
+impl<T> RawVec<T> {
+    fn try_allocate(
+        capacity: usize,
+    ) -> Result<Self, AllocError> {
+        debug_assert!(capacity > 0);
+        let Ok(layout) = Layout::array::<T>(capacity) else {
+            return Err(AllocError::CapacityOverflow);
+        };
+
+        let ptr = unsafe { alloc(layout) };
+        if ptr.is_null() {
+            return Err(AllocError::AllocateError);
+        }
+        let ptr = unsafe {
+            NonNull::new_unchecked(ptr.cast::<T>())
+        };
+
+        Ok(Self { ptr, cap: capacity })
+    }
+
+    unsafe fn into_box(self) -> Box<[T]> {
+        let me = ManuallyDrop::new(self);
+        unsafe {
+            let slice = ptr::slice_from_raw_parts_mut(me.ptr.as_ptr(), me.cap);
+            Box::from_raw(slice)
+        }
+    }
+}
+
 #[cfg(test)]
 mod tests {
-    use crate::array_queue::ArrayQueue;
+    use super::ArrayQueue2;
 
     #[test]
     fn test_size() {
-        assert_eq!(size_of::<ArrayQueue::<i32>>(), 24);
+        assert_eq!(size_of::<ArrayQueue2::<i32>>(), 24);
     }
 
     #[test]
     fn test_new() {
-        let queue = ArrayQueue::<i32>::new(5);
+        let queue = ArrayQueue2::<i32>::new(5);
         assert!(queue.is_empty());
     }
 
     #[test]
     fn test_push() {
-        let mut queue = ArrayQueue::new(3);
+        let mut queue = ArrayQueue2::new(3);
         let ret = queue.push(0);
         assert!(ret.is_ok());
         assert_eq!(queue.front().copied(), Some(0));
@@ -185,7 +233,7 @@ mod tests {
 
     #[test]
     fn test_pop() {
-        let mut queue = ArrayQueue::new(3);
+        let mut queue = ArrayQueue2::new(3);
         assert!(queue.push(0).is_ok());
         assert!(queue.push(1).is_ok());
         assert!(queue.push(2).is_ok());
