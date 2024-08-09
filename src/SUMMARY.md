@@ -22,6 +22,7 @@
     - [字符串编码](string/encoding.md)
     - [字符串的常用操作](string/adt.md)
 - [链表 List](list/index.md)
+    - [链表的类型](list/types.md)
     - [链表的基本操作](list/adt.md)
     - [单链表的实现](list/impl-singly-linked-list.md)
     - [双链表的实现](list/impl-doubly-linked-list.md)
