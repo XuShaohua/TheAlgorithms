@@ -44,36 +44,35 @@ impl<T> DoublyLinkedList<T> {
     #[must_use]
     #[inline]
     pub fn front(&self) -> Option<&T> {
-        unsafe {
-            self.head.as_ref().map(|node| &node.as_ref().value)
-        }
+        unsafe { self.head.as_ref().map(|node| &node.as_ref().value) }
     }
 
     /// Access the first node exclusively.
     #[must_use]
     #[inline]
     pub fn front_mut(&mut self) -> Option<&mut T> {
-        unsafe {
-            self.head.as_mut().map(|node| &mut node.as_mut().value)
-        }
+        unsafe { self.head.as_mut().map(|node| &mut node.as_mut().value) }
     }
 
     /// Access the last node.
     #[must_use]
     #[inline]
     pub fn back(&self) -> Option<&T> {
-        unsafe {
-            self.tail.as_ref().map(|node| &node.as_ref().value)
-        }
+        unsafe { self.tail.as_ref().map(|node| &node.as_ref().value) }
     }
 
     /// Access the last node exclusively.
     #[must_use]
     #[inline]
     pub fn back_mut(&mut self) -> Option<&mut T> {
-        unsafe {
-            self.tail.as_mut().map(|node| &mut node.as_mut().value)
-        }
+        unsafe { self.tail.as_mut().map(|node| &mut node.as_mut().value) }
+    }
+
+    pub fn contains(&self, _value: &T) -> bool
+    where
+        T: PartialEq<T>,
+    {
+        todo!()
     }
 
     // Capacity operations
@@ -97,7 +96,6 @@ impl<T> DoublyLinkedList<T> {
     //pub fn into_iter(self) ->
     //pub fn iter_mut(&mut self) ->
 
-
     // Modifiers
 
     /// Clear the contents.
@@ -110,7 +108,19 @@ impl<T> DoublyLinkedList<T> {
         drop(other);
     }
 
-    pub fn insert(&mut self, value: T) {
+    pub fn insert(&mut self, _pos: usize, _value: T) {
+        todo!()
+    }
+
+    pub fn insert_range(&mut self, _pos: usize) {
+        todo!()
+    }
+
+    pub fn erase(&mut self, _pos: usize) -> bool {
+        todo!()
+    }
+
+    pub fn erase_range(&mut self, _start: usize, _end: usize) -> usize {
         todo!()
     }
 
@@ -121,6 +131,11 @@ impl<T> DoublyLinkedList<T> {
         self.push_back_node(node_ptr);
     }
 
+    /// Remove the first node in the list.
+    pub fn pop_front(&mut self) -> Option<T> {
+        self.pop_front_node().map(Node::into_inner)
+    }
+
     /// Add an element to the end of list.
     pub fn push_back(&mut self, value: T) {
         let node = Box::new(Node::new(value));
@@ -128,14 +143,18 @@ impl<T> DoublyLinkedList<T> {
         self.push_back_node(node_ptr);
     }
 
-    /// Remove the first element in the list.
-    pub fn pop_front(&mut self) -> Option<T> {
-        self.pop_front_node().map(Node::into_inner)
-    }
-
-    /// Remove the last element in the list.
+    /// Remove the last node in the list.
     pub fn pop_back(&mut self) -> Option<T> {
         self.pop_back_node().map(Node::into_inner)
+    }
+
+    /// Append all elements in the iterator to self.
+    pub fn append<I: IntoIterator<Item=T>>(&mut self, iter: I) {
+        iter.into_iter().for_each(|value| self.push_back(value));
+    }
+
+    pub fn prepend<I: IntoIterator<Item=T>>(&mut self, iter: I) {
+        iter.into_iter().for_each(|value| self.push_front(value));
     }
 
     /// Change number of elements stored.
@@ -144,7 +163,7 @@ impl<T> DoublyLinkedList<T> {
     /// be removed.
     /// If current size is less than `new_size`, more elements with default
     /// value are appended.
-    fn resize(&mut self, new_size: usize)
+    pub fn resize(&mut self, new_size: usize)
     where
         T: Default,
     {
@@ -163,28 +182,53 @@ impl<T> DoublyLinkedList<T> {
         }
     }
 
+    /// Change number of elements stored.
+    pub fn resize_with(&mut self, new_size: usize, value: T)
+    where
+        T: Clone,
+    {
+        match self.len.cmp(&new_size) {
+            Ordering::Equal => (),
+            Ordering::Less => {
+                for _ in 0..(new_size - self.len) {
+                    self.push_back(value.clone());
+                }
+            }
+            Ordering::Greater => {
+                for _ in 0..(self.len - new_size) {
+                    let _node = self.pop_back_node();
+                }
+            }
+        }
+    }
+
     /// Swap the contents.
     pub fn swap(&mut self) {}
 
     // Operations
 
     /// Merges two sorted lists.
-    pub fn merge(&mut self, other: &mut Self) {
+    pub fn merge(&mut self, other: &mut Self)
+    where
+        T: PartialOrd<T>,
+    {
         todo!()
     }
 
-    /// Append all elements in other list to self.
-    pub fn appnend(&mut self, other: &mut Self) {
-        todo!()
-    }
+    // pub fn merge_by(&mut self, other: &mut Self, predict: P)
+    // where
+    //     P: PartialOrd<T>,
+    // {
+    //     todo!()
+    // }
 
     /// Move elements from another list.
-    pub fn splice(&mut self, other: &mut Self) {
+    pub fn splice(&mut self, _other: &mut Self) {
         todo!()
     }
 
-    /// Removes elements satisfying specific condition.
-    pub fn remove(&mut self, value: &T)
+    /// Removes all elements equals specific value.
+    pub fn remove(&mut self, _value: &T)
     where
         T: PartialEq<T>,
     {
@@ -317,6 +361,14 @@ impl<T: Eq> Eq for DoublyLinkedList<T> {}
 impl<T: Hash> Hash for DoublyLinkedList<T> {
     fn hash<H: Hasher>(&self, state: &mut H) {
         todo!()
+    }
+}
+
+impl<T> FromIterator<T> for DoublyLinkedList<T> {
+    fn from_iter<I: IntoIterator<Item=T>>(iter: I) -> Self {
+        let mut list = Self::new();
+        list.append(iter);
+        list
     }
 }
 
