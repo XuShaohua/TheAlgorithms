@@ -162,3 +162,21 @@ struct person {
 ![list of list](assets/list-of-list.svg)
 
 ## Unrolled Linked List
+
+上面的链表中, 每个节点都只存储一个元素值, 我们也可以在一个节点中存储多个元素值.
+这种链表就是 Unrolled Linked List.
+
+特点:
+
+- CPU 缓存更友好, 提高缓存命中率
+- 访问相邻的元素的性能更好
+
+其结构图如下所示:
+
+![unrolled linked list](assets/unrolled-linked-list.svg)
+
+C语言中的结构体声明如下:
+
+```C
+{{#include assets/list-types.c:44:49}}
+```
