@@ -15,3 +15,21 @@ struct doubly_list_s {
   struct doubly_list_s* next;
 };
 
+// 环状链表
+struct circular_list_s {
+  int value;
+  struct circular_list_s* next;
+};
+
+// 环状双链表
+struct doubly_circular_list_s {
+  int value;
+  struct doubly_circular_list_s* previous;
+  struct doubly_circular_list_s* next;
+};
+
+// Header Linked List
+struct header_list_s {
+  int value;
+  struct header_list_s* next;
+};

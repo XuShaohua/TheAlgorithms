@@ -6,6 +6,8 @@
 - 双链表 doubly linked list
 - 环状链表 circular linked list
 - 环状双链表 doubly circular linked list
+- header linked list
+- unrolled linked list
 
 ## 单链表 Singly Linked List
 
@@ -81,3 +83,28 @@ C语言中对应的结构体声明如下:
 ```C
 {{#include assets/list-types.c:24:29}}
 ```
+
+## Header Linked List
+
+这种链表是对单链表的改进, 在实现的编码中, 如果链表指针指向链表中的第一个节点时, 有很多操作,
+比如删除节点或者交换节点的操作, 处理起来比较麻烦, 需要单独考虑第一个节点.
+
+为此, 我们可以在第一个节点之前再加一个 `header node`, 或者称为 `dummy node`, 链表的指针
+指向该节点, 然后该节点再指向链表的真正存放数据元素的第一个节点.
+
+特点:
+
+- 支持向后单向遍历节点
+- 更方便针对链表节点的操作
+
+该链表的结构如下图所示:
+
+![header linked list](assets/header-linked-list.svg)
+
+C语言中对应的结构体声明如下:
+
+```C
+{{#include assets/list-types.c:24:29}}
+```
+
+##  
