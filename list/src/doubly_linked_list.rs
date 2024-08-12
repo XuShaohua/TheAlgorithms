@@ -2,83 +2,81 @@
 // Use of this source is governed by General Public License that can be found
 // in the LICENSE file.
 
+use std::{fmt, mem};
 use std::cmp::Ordering;
+use std::fmt::Formatter;
+use std::hash::{Hash, Hasher};
 use std::marker::PhantomData;
-use std::mem;
 use std::ptr::NonNull;
 
-pub struct LinkedList<T> {
-    head: Option<NonNull<Node<T>>>,
-    tail: Option<NonNull<Node<T>>>,
+pub struct DoublyLinkedList<T> {
     len: usize,
+    head: NodePtr<T>,
+    tail: NodePtr<T>,
     _marker: PhantomData<Box<Node<T>>>,
 }
 
+type NodePtr<T> = Option<NonNull<Node<T>>>;
+
 struct Node<T> {
-    prev: Option<NonNull<Node<T>>>,
-    next: Option<NonNull<Node<T>>>,
+    prev: NodePtr<T>,
+    next: NodePtr<T>,
     value: T,
 }
 
-impl<T> Default for LinkedList<T> {
-    #[inline]
-    fn default() -> Self {
-        Self::new()
-    }
-}
-
 // Public functions for list.
-impl<T> LinkedList<T> {
-    // Construct
-
+impl<T> DoublyLinkedList<T> {
     /// Create an empty list.
     #[must_use]
     #[inline]
     pub const fn new() -> Self {
         Self {
+            len: 0,
             head: None,
             tail: None,
-            len: 0,
             _marker: PhantomData,
         }
     }
 
     // Element access
 
-    /// Access the first element.
+    /// Access the first node.
     #[must_use]
     #[inline]
-    pub fn front(&self) -> &T {
-        todo!()
+    pub fn front(&self) -> Option<&T> {
+        unsafe {
+            self.head.as_ref().map(|node| &node.as_ref().value)
+        }
     }
 
-    /// Access the first element exclusively.
+    /// Access the first node exclusively.
     #[must_use]
     #[inline]
-    pub fn front_mut(&mut self) -> &mut T {
-        todo!()
+    pub fn front_mut(&mut self) -> Option<&mut T> {
+        unsafe {
+            self.head.as_mut().map(|node| &mut node.as_mut().value)
+        }
     }
 
-    /// Access the last element.
+    /// Access the last node.
     #[must_use]
     #[inline]
-    pub fn back(&self) -> &T {
-        todo!()
+    pub fn back(&self) -> Option<&T> {
+        unsafe {
+            self.tail.as_ref().map(|node| &node.as_ref().value)
+        }
     }
 
-    /// Access the last element exclusively.
+    /// Access the last node exclusively.
     #[must_use]
     #[inline]
-    pub fn back_mut(&mut self) -> &mut T {
-        todo!()
+    pub fn back_mut(&mut self) -> Option<&mut T> {
+        unsafe {
+            self.tail.as_mut().map(|node| &mut node.as_mut().value)
+        }
     }
 
-    // Iterators
-    //pub fn iter(&self) ->
-    //pub fn into_iter(self) ->
-    //pub fn iter_mut(&mut self) ->
-
-    // Capacity opertations
+    // Capacity operations
 
     /// Returns the number of elements in list.
     #[must_use]
@@ -94,6 +92,12 @@ impl<T> LinkedList<T> {
         self.len == 0
     }
 
+    // Iterators
+    //pub fn iter(&self) ->
+    //pub fn into_iter(self) ->
+    //pub fn iter_mut(&mut self) ->
+
+
     // Modifiers
 
     /// Clear the contents.
@@ -106,7 +110,9 @@ impl<T> LinkedList<T> {
         drop(other);
     }
 
-    pub fn insert(&mut self) {}
+    pub fn insert(&mut self, value: T) {
+        todo!()
+    }
 
     /// Add an element to the beginning of list.
     pub fn push_front(&mut self, value: T) {
@@ -199,6 +205,7 @@ impl<T> LinkedList<T> {
     pub fn unique(&mut self) {
         todo!()
     }
+
     pub fn sort(&mut self) {
         todo!()
     }
@@ -208,7 +215,7 @@ impl<T> LinkedList<T> {
 }
 
 // Private or unsafe functions for list.
-impl<T> LinkedList<T> {
+impl<T> DoublyLinkedList<T> {
     fn push_front_node(&mut self, node_ptr: NonNull<Node<T>>) {
         unsafe {
             (*node_ptr.as_ptr()).next = self.head;
@@ -272,18 +279,51 @@ impl<T> LinkedList<T> {
     }
 }
 
-impl<T> Drop for LinkedList<T> {
+impl<T> Drop for DoublyLinkedList<T> {
     fn drop(&mut self) {
         while let Some(_node) = self.pop_front_node() {
-            // Do nothing
+            todo!()
         }
+    }
+}
+
+impl<T> Default for DoublyLinkedList<T> {
+    #[inline]
+    fn default() -> Self {
+        Self::new()
+    }
+}
+
+impl<T: fmt::Debug> fmt::Debug for DoublyLinkedList<T> {
+    fn fmt(&self, f: &mut Formatter<'_>) -> fmt::Result {
+        todo!()
+    }
+}
+
+impl<T: Clone> Clone for DoublyLinkedList<T> {
+    fn clone(&self) -> Self {
+        todo!()
+    }
+}
+
+impl<T: PartialEq> PartialEq for DoublyLinkedList<T> {
+    fn eq(&self, other: &Self) -> bool {
+        todo!()
+    }
+}
+
+impl<T: Eq> Eq for DoublyLinkedList<T> {}
+
+impl<T: Hash> Hash for DoublyLinkedList<T> {
+    fn hash<H: Hasher>(&self, state: &mut H) {
+        todo!()
     }
 }
 
 impl<T> Node<T> {
     #[must_use]
     #[inline]
-    fn new(value: T) -> Self {
+    const fn new(value: T) -> Self {
         Self {
             prev: None,
             next: None,
@@ -295,5 +335,16 @@ impl<T> Node<T> {
     #[inline]
     fn into_inner(self: Box<Self>) -> T {
         self.value
+    }
+}
+
+#[cfg(test)]
+mod tests {
+    use super::DoublyLinkedList;
+
+    #[test]
+    fn test_is_empty() {
+        let list = DoublyLinkedList::<i32>::new();
+        assert!(list.is_empty());
     }
 }
