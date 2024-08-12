@@ -147,11 +147,17 @@ struct person {
 | 2 | 20 | 0 | 10 |
 | 3 | 6  | 0 | 0  |
 
+使用以下数据结构:
+
+```C
+{{#include assets/sparse-matrix.c:5:}}
+```
+
 其结构图如下所示:
 
 ![sparse matrix](assets/sparse-matrix.svg)
 
-或者表示多层链表 Multi-level linked list, 或者称为 List of list:
+或者表示多层链表 Multi-level linked list, 或者称为 List of list, 如下图所示:
 
 ![list of list](assets/list-of-list.svg)
 
