@@ -33,3 +33,17 @@ struct header_list_s {
   int value;
   struct header_list_s* next;
 };
+
+// Multiply Linked List
+struct multi_list_s {
+    int value;
+    int len;
+    struct multi_list_s* pointers;
+};
+
+// Unrolled Linked List
+struct unrolled_list_s {
+  struct unrolled_list_s* next;
+  int len;
+  int elements[0];
+};

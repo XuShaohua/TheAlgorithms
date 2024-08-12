@@ -7,6 +7,7 @@
 - 环状链表 circular linked list
 - 环状双链表 doubly circular linked list
 - header linked list
+- multiply linked list
 - unrolled linked list
 
 ## 单链表 Singly Linked List
@@ -107,4 +108,51 @@ C语言中对应的结构体声明如下:
 {{#include assets/list-types.c:24:29}}
 ```
 
-##  
+## Multiply Linked List
+
+上面介绍的双链表, 每个节点有两个指针分别指向节点的前后相邻节点.
+
+如果一个节点中有多个指针指向别的节点呢? 这就是 Multiply Linked List, 或者称为 Multi-Linked List.
+
+特点:
+
+- 节点之间有多个连接
+- 遍历节点的方式有多种
+
+C语言中的结构体声明如下:
+
+```C
+{{#include assets/list-types.c:37:42}}
+```
+
+该类链表可以表示基于不同方式排序节点, 比如用于记录个人信息:
+
+```C
+struct person {
+  char* name;
+  int age;
+};
+```
+
+记录个人信息的列表, 可以基于人的姓名排序, 也可以基于年龄排序, 其结构图如下所示:
+
+![person linked list](assets/person-linked-list.svg)
+
+或者展示稀疏矩阵:
+
+| - | 0  | 1 | 2  |
+|---|----|---|----|
+| 0 | 0  | 5 | 0  |
+| 1 | 0  | 0 | 0  |
+| 2 | 20 | 0 | 10 |
+| 3 | 6  | 0 | 0  |
+
+其结构图如下所示:
+
+![sparse matrix](assets/sparse-matrix.svg)
+
+或者表示多层链表 Multi-level linked list, 或者称为 List of list:
+
+![list of list](assets/list-of-list.svg)
+
+## Unrolled Linked List
