@@ -22,10 +22,12 @@
 修改链表:
 
 - clear(), 移除链表中的所有节点, 移除之后, `len()` 函数返回 0
-- insert(pos, value), 在给定的特定位置插入新的节点
-- insert_range(pos, iter), 在给定的特定位置插入一系列的节点
-- erase(pos), 在给定的特定位置移除节点
-- erase_range(first, last), 移除特定范围内的所有节点
+- insert_at(pos, value), 在给定的特定位置插入新的节点
+- insert_iter(pos, iter), 在给定的特定位置插入一系列的节点
+- remove_at(pos), 在给定的特定位置移除节点
+- remove_range(first, last), 移除特定范围内的所有节点
+- remove(), 从链表中移除特定值相等的所有节点
+- remove_if(), 从链表中移除满足特定条件的所有节点
 - push_back(), 在链表尾部追加新的节点
 - pop_back(), 移除链表尾部的节点
 - push_front(), 在链表头部加入新的节点
@@ -39,8 +41,6 @@
 
 - merge(), 合并两个链表
 - splice(), 将节点从一个链表转移到另一个链表
-- remove(), 从链表中移除特定值相等的所有节点
-- remove_if(), 从链表中移除满足特定条件的所有节点
 - reverse(), 将链表中的节点反转
 - unique(), 从链表中移除有相同值的相邻的节点
 - sort(), 对链表中的节点进行排序, 排序相关的函数放在了后面排序算法章节

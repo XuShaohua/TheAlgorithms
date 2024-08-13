@@ -138,26 +138,91 @@ impl<T> DoublyLinkedList<T> {
         drop(other);
     }
 
-    pub fn insert(&mut self, _pos: usize, _value: T) {
+    /// Insert element at `pos`.
+    ///
+    /// # Panics
+    ///
+    /// Panic if `index > len`.
+    pub fn insert_at(&mut self, mut pos: usize, value: T) {
+        assert!(pos <= self.len);
+        if pos == 0 {
+            self.push_front(value);
+            return;
+        }
+        if pos == self.len {
+            self.push_back(value);
+            return;
+        }
+
+        let new_node_ptr = Node::new_ptr(value);
+        if let Some(mut node) = self.head {
+            while let Some(next_node) = unsafe { node.as_mut().next } {
+                if pos == 1 {
+                    break;
+                }
+                pos -= 1;
+                node = next_node;
+            }
+
+            unsafe { Self::insert_after(node, new_node_ptr); }
+        }
+
+        self.len += 1;
+    }
+
+    pub fn insert_iter<I: IntoIterator<Item=T>>(&mut self, mut pos: usize, iter: I) {
+        assert!(pos <= self.len);
+        let mut new_list = DoublyLinkedList::from_iter(iter);
+
+        if pos == 0 {
+            self.prepend(&mut new_list);
+            return;
+        }
+        if pos == self.len {
+            self.append(&mut new_list);
+            return;
+        }
+
+        if let Some(mut node) = self.head {
+            while let Some(next_node) = unsafe { node.as_mut().next } {
+                if pos == 1 {
+                    break;
+                }
+                pos -= 1;
+                node = next_node;
+            }
+
+            self.len += new_list.len();
+            unsafe {
+                Self::append_nodes(node, &mut new_list);
+            }
+        }
+    }
+
+    /// Removes all elements equals specific value.
+    pub fn remove(&mut self, _value: &T)
+    where
+        T: PartialEq<T>,
+    {}
+
+    /// Removes elements satisfying specific condition.
+    pub fn remove_if(&mut self) {
         todo!()
     }
 
-    pub fn insert_range(&mut self, _pos: usize) {
+    pub fn remove_at(&mut self, _pos: usize) -> bool {
         todo!()
     }
 
-    pub fn erase(&mut self, _pos: usize) -> bool {
-        todo!()
-    }
+    pub fn remove_range(&mut self, start: usize, end: usize) -> usize {
+        assert!(start <= end && end < self.len);
 
-    pub fn erase_range(&mut self, _start: usize, _end: usize) -> usize {
         todo!()
     }
 
     /// Add an element to the beginning of list.
     pub fn push_front(&mut self, value: T) {
-        let node = Box::new(Node::new(value));
-        let node_ptr = NonNull::from(Box::leak(node));
+        let node_ptr = Node::new_ptr(value);
         self.push_front_node(node_ptr);
     }
 
@@ -168,8 +233,7 @@ impl<T> DoublyLinkedList<T> {
 
     /// Add an element to the end of list.
     pub fn push_back(&mut self, value: T) {
-        let node = Box::new(Node::new(value));
-        let node_ptr = NonNull::from(Box::leak(node));
+        let node_ptr = Node::new_ptr(value);
         self.push_back_node(node_ptr);
     }
 
@@ -281,19 +345,6 @@ impl<T> DoublyLinkedList<T> {
         todo!()
     }
 
-    /// Removes all elements equals specific value.
-    pub fn remove(&mut self, _value: &T)
-    where
-        T: PartialEq<T>,
-    {
-        todo!()
-    }
-
-    /// Removes elements satisfying specific condition.
-    pub fn remove_if(&mut self) {
-        todo!()
-    }
-
     /// Reverses the order of the elements.
     pub fn reverse(&mut self) {
         todo!()
@@ -375,12 +426,40 @@ impl<T> DoublyLinkedList<T> {
             old_tail
         })
     }
+
+    unsafe fn insert_after(mut prev_node: NonNull<Node<T>>, mut new_node_ptr: NonNull<Node<T>>) {
+        if let Some(mut next_node) = prev_node.as_mut().next {
+            new_node_ptr.as_mut().next = Some(next_node);
+            next_node.as_mut().prev = Some(new_node_ptr);
+        }
+        new_node_ptr.as_mut().prev = Some(prev_node);
+        prev_node.as_mut().next = Some(new_node_ptr);
+    }
+
+    unsafe fn append_nodes(mut prev_node: NonNull<Node<T>>, other: &mut Self) {
+        if other.is_empty() {
+            return;
+        }
+
+        if let Some(mut next_node) = prev_node.as_mut().next {
+            if let Some(mut other_tail) = other.tail.take() {
+                other_tail.as_mut().next = Some(next_node);
+                next_node.as_mut().prev = Some(other_tail);
+            }
+        }
+        if let Some(mut other_head) = other.head.take() {
+            prev_node.as_mut().next = Some(other_head);
+            other_head.as_mut().prev = Some(prev_node);
+        }
+
+        other.len = 0;
+    }
 }
 
 impl<T> Drop for DoublyLinkedList<T> {
     fn drop(&mut self) {
-        while let Some(_node) = self.pop_front_node() {
-            // TODO(Shaohua):
+        while self.pop_front_node().is_some() {
+            // dropped
         }
     }
 }
@@ -410,10 +489,6 @@ impl<T: PartialEq> PartialEq for DoublyLinkedList<T> {
     fn eq(&self, other: &Self) -> bool {
         self.len == other.len && self.iter().eq(other.iter())
     }
-
-    fn ne(&self, other: &Self) -> bool {
-        self.len != other.len || self.iter().ne(other.iter())
-    }
 }
 
 impl<T: Eq> Eq for DoublyLinkedList<T> {}
@@ -432,11 +507,6 @@ impl<T> Extend<T> for DoublyLinkedList<T> {
     fn extend<I: IntoIterator<Item=T>>(&mut self, iter: I) {
         iter.into_iter().for_each(|value| self.push_back(value));
     }
-
-    // #[inline]
-    // fn extend_one(&mut self, item: T) {
-    //     self.push_back(item);
-    // }
 }
 
 impl<T> FromIterator<T> for DoublyLinkedList<T> {
@@ -481,6 +551,10 @@ impl<T> Iterator for IntoIter<T> {
     fn next(&mut self) -> Option<T> {
         self.0.pop_front()
     }
+
+    fn size_hint(&self) -> (usize, Option<usize>) {
+        (self.0.len, Some(self.0.len))
+    }
 }
 
 impl<T> DoubleEndedIterator for IntoIter<T> {
@@ -519,6 +593,8 @@ impl<'a, T> Iterator for Iter<'a, T> {
         self.next_back()
     }
 }
+
+impl<T> ExactSizeIterator for IntoIter<T> {}
 
 impl<'a, T> DoubleEndedIterator for Iter<'a, T> {
     fn next_back(&mut self) -> Option<Self::Item> {
@@ -598,6 +674,14 @@ impl<T> Node<T> {
 
     #[must_use]
     #[inline]
+    fn new_ptr(value: T) -> NonNull<Self> {
+        let node = Box::new(Self::new(value));
+        NonNull::from(Box::leak(node))
+    }
+
+    #[must_use]
+    #[inline]
+    #[allow(clippy::boxed_local)]
     fn into_inner(self: Box<Self>) -> T {
         self.value
     }
@@ -695,16 +779,47 @@ mod tests {
     }
 
     #[test]
-    fn test_append() {}
+    fn test_append() {
+        let numbers = [1, 2, 3];
+        let mut list1 = DoublyLinkedList::new();
+        let mut list2 = DoublyLinkedList::from_iter(numbers);
+        assert_eq!(list2.len(), numbers.len());
+        list1.append(&mut list2);
+        assert_eq!(list1.len(), numbers.len());
+        assert!(list2.is_empty());
+    }
 
     #[test]
-    fn test_prepend() {}
+    fn test_prepend() {
+        let numbers = [1, 2, 3];
+        let mut list1 = DoublyLinkedList::new();
+        list1.push_back(4);
+        let mut list2 = DoublyLinkedList::from_iter(numbers);
+        assert_eq!(list2.len(), numbers.len());
+        list1.prepend(&mut list2);
+        assert!(list2.is_empty());
+        assert_eq!(list1.len(), numbers.len() + 1);
+        assert_eq!(list1, DoublyLinkedList::from_iter([1, 2, 3, 4]));
+    }
 
     #[test]
     fn test_extend() {
         let mut list = DoublyLinkedList::new();
-        let numbers = [1, 2, 3, 4, 5];
-        list.extend(numbers.clone());
+        let numbers = [1, 2, 3];
+        list.extend(numbers);
         assert_eq!(list, DoublyLinkedList::from_iter(numbers));
     }
+
+    #[test]
+    fn test_insert() {
+        let mut list = DoublyLinkedList::new();
+        list.insert_at(0, 1);
+        list.insert_at(0, 0);
+        list.insert_at(2, 3);
+        list.insert_at(2, 2);
+        assert_eq!(list.into_iter().collect::<Vec<_>>(), [0, 1, 2, 3]);
+    }
+
+    #[test]
+    fn test_insert_range() {}
 }
