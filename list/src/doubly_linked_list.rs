@@ -84,11 +84,11 @@ impl<T> DoublyLinkedList<T> {
         unsafe { self.tail.as_mut().map(|node| &mut node.as_mut().value) }
     }
 
-    pub fn contains(&self, _value: &T) -> bool
+    pub fn contains(&self, value: &T) -> bool
     where
         T: PartialEq<T>,
     {
-        todo!()
+        self.iter().any(|item| item == value)
     }
 
     // Capacity operations
@@ -165,9 +165,8 @@ impl<T> DoublyLinkedList<T> {
             }
 
             unsafe { Self::insert_after(node, new_node_ptr); }
+            self.len += 1;
         }
-
-        self.len += 1;
     }
 
     pub fn insert_iter<I: IntoIterator<Item=T>>(&mut self, mut pos: usize, iter: I) {
@@ -199,25 +198,66 @@ impl<T> DoublyLinkedList<T> {
         }
     }
 
-    /// Removes all elements equals specific value.
-    pub fn remove(&mut self, _value: &T)
+    /// Removes the first element equals specific `value`.
+    pub fn pop(&mut self, value: &T) -> Option<T>
     where
         T: PartialEq<T>,
-    {}
-
-    /// Removes elements satisfying specific condition.
-    pub fn remove_if(&mut self) {
-        todo!()
+    {
+        for (index, item) in self.iter().enumerate() {
+            if item == value {
+                return self.pop_at(index);
+            }
+        }
+        None
     }
 
-    pub fn remove_at(&mut self, _pos: usize) -> bool {
-        todo!()
+    /// Removes the first element satisfying specific condition and returns that element.
+    pub fn pop_if<F>(&mut self, f: F) -> Option<T>
+    where
+        F: Fn(&T) -> bool,
+    {
+        let mut index: usize = 0;
+        for item in self.iter() {
+            if f(item) {
+                break;
+            }
+            index += 1;
+        }
+        self.pop_at(index)
     }
 
-    pub fn remove_range(&mut self, start: usize, end: usize) -> usize {
-        assert!(start <= end && end < self.len);
+    /// Remove element at `pos` and returns that element.
+    ///
+    /// # Panics
+    ///
+    /// Raise panic if `pos >= len`
+    pub fn pop_at(&mut self, mut pos: usize) -> Option<T> {
+        assert!(pos < self.len);
+        if pos == 0 {
+            return self.pop_front();
+        }
+        if pos == self.len - 1 {
+            return self.pop_back();
+        }
+        if let Some(mut node) = self.head {
+            while let Some(next_node) = unsafe { node.as_mut().next } {
+                if pos == 0 {
+                    break;
+                }
+                pos -= 1;
+                node = next_node;
+            }
 
-        todo!()
+            unsafe {
+                Self::pop_node(node)
+            }
+
+            self.len -= 1;
+            let boxed_node = unsafe { Box::from_raw(node.as_ptr()) };
+            Some(Node::into_inner(boxed_node))
+        } else {
+            None
+        }
     }
 
     /// Add an element to the beginning of list.
@@ -453,6 +493,16 @@ impl<T> DoublyLinkedList<T> {
         }
 
         other.len = 0;
+    }
+
+    unsafe fn pop_node(mut node: NonNull<Node<T>>) {
+        if let Some(mut prev_node) = node.as_mut().prev {
+            let mut next_node = node.as_mut().next.take();
+            if let Some(next_node) = next_node.as_mut() {
+                next_node.as_mut().prev = Some(prev_node);
+            }
+            prev_node.as_mut().next = next_node;
+        }
     }
 }
 
@@ -821,5 +871,46 @@ mod tests {
     }
 
     #[test]
-    fn test_insert_range() {}
+    fn test_insert_range() {
+        let mut list = DoublyLinkedList::new();
+        list.push_back(0);
+        list.push_back(3);
+        list.insert_iter(1, [1, 2]);
+        assert_eq!(list, DoublyLinkedList::from_iter([0, 1, 2, 3]));
+    }
+
+    #[test]
+    fn test_contains() {
+        let list = DoublyLinkedList::from_iter([1, 2, 3, 4, 5]);
+        assert!(list.contains(&3));
+        assert!(list.contains(&4));
+        assert!(!list.contains(&6));
+        assert!(!list.contains(&0));
+    }
+
+    #[test]
+    fn test_pop() {
+        let mut list = DoublyLinkedList::from_iter([1, 2, 3, 4]);
+        list.pop(&2);
+        assert_eq!(list.len(), 3);
+    }
+
+    #[test]
+    fn test_pop_at() {
+        let mut list = DoublyLinkedList::from_iter([1, 2, 3, 4]);
+        let ret = list.pop_at(1);
+        assert_eq!(ret, Some(2));
+        assert_eq!(list.len(), 3);
+    }
+
+    #[test]
+    fn test_pop_if() {
+        let mut list = DoublyLinkedList::from_iter([1, 2, 3, 4]);
+        let ret = list.pop_if(|value| value % 2 == 0);
+        assert_eq!(ret, Some(2));
+        assert_eq!(list.len(), 3);
+        let ret = list.pop_if(|value| value % 2 == 0);
+        assert_eq!(ret, Some(4));
+        assert_eq!(list.len(), 2);
+    }
 }
