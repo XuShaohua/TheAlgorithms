@@ -24,6 +24,8 @@ struct Node<T> {
     value: T,
 }
 
+pub struct IntoIter<T>(DoublyLinkedList<T>);
+
 // Public functions for list.
 impl<T> DoublyLinkedList<T> {
     /// Create an empty list.
@@ -92,9 +94,8 @@ impl<T> DoublyLinkedList<T> {
     }
 
     // Iterators
-    //pub fn iter(&self) ->
-    //pub fn into_iter(self) ->
-    //pub fn iter_mut(&mut self) ->
+    // pub fn iter(&self) ->
+    // pub fn iter_mut(&mut self) ->
 
     // Modifiers
 
@@ -128,7 +129,7 @@ impl<T> DoublyLinkedList<T> {
     pub fn push_front(&mut self, value: T) {
         let node = Box::new(Node::new(value));
         let node_ptr = NonNull::from(Box::leak(node));
-        self.push_back_node(node_ptr);
+        self.push_front_node(node_ptr);
     }
 
     /// Remove the first node in the list.
@@ -326,7 +327,7 @@ impl<T> DoublyLinkedList<T> {
 impl<T> Drop for DoublyLinkedList<T> {
     fn drop(&mut self) {
         while let Some(_node) = self.pop_front_node() {
-            todo!()
+            // TODO(Shaohua):
         }
     }
 }
@@ -372,6 +373,31 @@ impl<T> FromIterator<T> for DoublyLinkedList<T> {
     }
 }
 
+impl<T> IntoIterator for DoublyLinkedList<T> {
+    type Item = T;
+    type IntoIter = IntoIter<T>;
+
+    fn into_iter(self) -> Self::IntoIter {
+        IntoIter(self)
+    }
+}
+
+impl<T> Iterator for IntoIter<T> {
+    type Item = T;
+
+    #[inline]
+    fn next(&mut self) -> Option<T> {
+        self.0.pop_front()
+    }
+}
+
+impl<T> DoubleEndedIterator for IntoIter<T> {
+    #[inline]
+    fn next_back(&mut self) -> Option<Self::Item> {
+        self.0.pop_back()
+    }
+}
+
 impl<T> Node<T> {
     #[must_use]
     #[inline]
@@ -402,7 +428,7 @@ mod tests {
 
     #[test]
     fn test_push() {
-        let mut list = crate::double_v1::DoublyLinkedList::new();
+        let mut list = DoublyLinkedList::new();
         list.push_front(2);
         list.push_front(3);
         list.push_front(5);
@@ -413,7 +439,7 @@ mod tests {
 
     #[test]
     fn test_pop_front() {
-        let mut list = crate::double_v1::DoublyLinkedList::new();
+        let mut list = DoublyLinkedList::new();
         list.push_front(3);
         list.push_front(5);
         list.push_front(7);
@@ -426,7 +452,7 @@ mod tests {
 
     #[test]
     fn test_pop_back() {
-        let mut list = crate::double_v1::DoublyLinkedList::new();
+        let mut list = DoublyLinkedList::new();
         list.push_back(3);
         list.push_back(5);
         list.push_back(7);
@@ -439,7 +465,7 @@ mod tests {
 
     #[test]
     fn test_back() {
-        let mut list = crate::double_v1::DoublyLinkedList::new();
+        let mut list = DoublyLinkedList::new();
         list.push_back(5);
         list.push_back(7);
         assert_eq!(list.back(), Some(&7));
@@ -448,7 +474,7 @@ mod tests {
 
     #[test]
     fn test_back_mut() {
-        let mut list = crate::double_v1::DoublyLinkedList::new();
+        let mut list = DoublyLinkedList::new();
         list.push_back(5);
         list.push_back(7);
         if let Some(mut value) = list.back_mut() {
@@ -459,7 +485,7 @@ mod tests {
 
     #[test]
     fn test_drop() {
-        let mut list = crate::double_v1::DoublyLinkedList::new();
+        let mut list = DoublyLinkedList::new();
         for i in 0..(128 * 200) {
             list.push_front(i);
         }
@@ -468,7 +494,7 @@ mod tests {
 
     #[test]
     fn test_into_iter() {
-        let mut list = crate::double_v1::DoublyLinkedList::new();
+        let mut list = DoublyLinkedList::new();
         list.push_front(2);
         list.push_front(3);
         list.push_front(5);
