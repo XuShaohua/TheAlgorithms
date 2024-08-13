@@ -32,8 +32,8 @@
 - pop_front(), 移除链表头部的节点
 - resize(new_size), 调整链表中节点的个数, 如果需要追加新的节点, 就使用默认值
 - resize_with(new_size, new_value), 调整链表中节点的个数, 如果需要追加新的节点, 就使用 `new_value`
-- append(iter), 在链表尾部追加一系列的节点
-- prepend(iter), 在链表头部加入一系列的节点
+- append(list), 在链表尾部追加一系列的节点
+- prepend(list), 在链表头部加入一系列的节点
 
 链表操作:
 
@@ -56,6 +56,7 @@
 - Hash
 - Drop
 - FromIterator
+- Extend
 
 迭代器:
 
