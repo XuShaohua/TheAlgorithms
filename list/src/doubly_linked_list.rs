@@ -241,20 +241,15 @@ impl<T> DoublyLinkedList<T> {
         }
         if let Some(mut node) = self.head {
             while let Some(next_node) = unsafe { node.as_mut().next } {
-                if pos == 0 {
+                if pos == 1 {
                     break;
                 }
                 pos -= 1;
                 node = next_node;
             }
 
-            unsafe {
-                Self::pop_node(node)
-            }
-
             self.len -= 1;
-            let boxed_node = unsafe { Box::from_raw(node.as_ptr()) };
-            Some(Node::into_inner(boxed_node))
+            unsafe { Self::remove_after(node).map(Node::into_inner) }
         } else {
             None
         }
@@ -391,8 +386,27 @@ impl<T> DoublyLinkedList<T> {
     }
 
     /// Removes consecutive duplicate elements.
-    pub fn unique(&mut self) {
-        todo!()
+    ///
+    /// Returns number of elements removed.
+    pub fn unique(&mut self) -> usize
+    where
+        T: PartialEq<T>,
+    {
+        let mut count = 0;
+        if let Some(mut node) = self.head {
+            while let Some(next_node) = unsafe { node.as_mut().next } {
+                unsafe {
+                    if node.as_ref().value == next_node.as_ref().value {
+                        Self::remove_after(node);
+                        count += 1;
+                    } else {
+                        node = next_node;
+                    }
+                }
+            }
+        }
+
+        count
     }
 
     pub fn sort(&mut self) {
@@ -439,7 +453,7 @@ impl<T> DoublyLinkedList<T> {
 
     fn pop_front_node(&mut self) -> Option<Box<Node<T>>> {
         self.head.map(|old_head| {
-            let old_head = unsafe { Box::from_raw(old_head.as_ptr()) };
+            let old_head = unsafe { Node::from_ptr(old_head) };
             self.head = old_head.next;
 
             match self.head {
@@ -454,7 +468,7 @@ impl<T> DoublyLinkedList<T> {
 
     fn pop_back_node(&mut self) -> Option<Box<Node<T>>> {
         self.tail.map(|old_tail| {
-            let old_tail = unsafe { Box::from_raw(old_tail.as_ptr()) };
+            let old_tail = unsafe { Node::from_ptr(old_tail) };
             self.tail = old_tail.prev;
 
             match self.tail {
@@ -495,13 +509,17 @@ impl<T> DoublyLinkedList<T> {
         other.len = 0;
     }
 
-    unsafe fn pop_node(mut node: NonNull<Node<T>>) {
-        if let Some(mut prev_node) = node.as_mut().prev {
-            let mut next_node = node.as_mut().next.take();
-            if let Some(next_node) = next_node.as_mut() {
-                next_node.as_mut().prev = Some(prev_node);
+    unsafe fn remove_after(mut node: NonNull<Node<T>>) -> Option<Box<Node<T>>> {
+        if let Some(mut next_node) = node.as_mut().next {
+            let mut next_next_node = next_node.as_mut().next.take();
+            if let Some(next_next_node) = next_next_node.as_mut() {
+                next_next_node.as_mut().prev = Some(node);
             }
-            prev_node.as_mut().next = next_node;
+            node.as_mut().next = next_next_node;
+
+            Some(Node::from_ptr(next_node))
+        } else {
+            None
         }
     }
 }
@@ -731,6 +749,12 @@ impl<T> Node<T> {
 
     #[must_use]
     #[inline]
+    unsafe fn from_ptr(ptr: NonNull<Self>) -> Box<Self> {
+        Box::from_raw(ptr.as_ptr())
+    }
+
+    #[must_use]
+    #[inline]
     #[allow(clippy::boxed_local)]
     fn into_inner(self: Box<Self>) -> T {
         self.value
@@ -912,5 +936,14 @@ mod tests {
         let ret = list.pop_if(|value| value % 2 == 0);
         assert_eq!(ret, Some(4));
         assert_eq!(list.len(), 2);
+    }
+
+    #[test]
+    fn test_unique() {
+        let mut list = DoublyLinkedList::from_iter([1, 1, 2, 2, 3, 1, 1, 2]);
+        let expected = [1, 2, 3, 1, 2];
+        let ret = list.unique();
+        assert_eq!(ret, 3);
+        assert_eq!(list.into_iter().collect::<Vec<_>>(), expected);
     }
 }
