@@ -14,6 +14,7 @@ members = [
     "hash_table",
     "list",
     "math",
+    "matrix",
     "priority_queue",
     "queue",
     "search",
