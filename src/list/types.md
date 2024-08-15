@@ -153,13 +153,19 @@ struct person {
 {{#include assets/sparse-matrix.c:5:}}
 ```
 
+这样的稀疏矩阵可以同时基于行号和列号进行线性查找, 比较方便.
 其结构图如下所示:
 
 ![sparse matrix](assets/sparse-matrix.svg)
 
-或者表示多层链表 Multi-level linked list, 或者称为 List of list, 如下图所示:
+或者表示多层链表 Multi-level linked list, 如下图所示:
 
-![list of list](assets/list-of-list.svg)
+![multi-level linked list](assets/multi-level-linked-list.svg)
+
+还有一种简化了的, 称为 List of lists (LIL), 这种的, 索引方式要简单些.
+如下图所示:
+
+![list of lists](assets/list-of-lists.svg)
 
 ## Unrolled Linked List
 
