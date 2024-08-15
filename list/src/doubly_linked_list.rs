@@ -632,6 +632,8 @@ impl<T> DoubleEndedIterator for IntoIter<T> {
     }
 }
 
+impl<T> ExactSizeIterator for IntoIter<T> {}
+
 impl<'a, T> Iterator for Iter<'a, T> {
     type Item = &'a T;
 
@@ -662,8 +664,6 @@ impl<'a, T> Iterator for Iter<'a, T> {
     }
 }
 
-impl<T> ExactSizeIterator for IntoIter<T> {}
-
 impl<'a, T> DoubleEndedIterator for Iter<'a, T> {
     fn next_back(&mut self) -> Option<Self::Item> {
         if self.len == 0 {
@@ -680,7 +680,6 @@ impl<'a, T> DoubleEndedIterator for Iter<'a, T> {
 }
 
 impl<'a, T> ExactSizeIterator for Iter<'a, T> {}
-
 
 impl<'a, T> Iterator for IterMut<'a, T> {
     type Item = &'a mut T;
