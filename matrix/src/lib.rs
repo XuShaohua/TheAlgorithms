@@ -13,3 +13,4 @@
 pub mod array_sparse_matrix;
 pub mod linked_list_sparse_matrix;
 pub mod traits;
+mod list_of_lists_sparse_matrix;

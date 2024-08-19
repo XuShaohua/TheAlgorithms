@@ -31,7 +31,6 @@
     - [链表的基本操作](list/adt.md)
     - [单链表的实现](list/impl-singly-linked-list.md)
     - [双链表的实现](list/impl-doubly-linked-list.md)
-    - [环状链表的实现](list/impl-circular-linked-list.md)
     - [环状双链表的实现](list/impl-doubly-circular-linked-list.md)
     - [Header Linked List 的实现](list/impl-header-linked-list.md)
     - [Unrolled Linked List 的实现](list/impl-unrolled-linked-list.md)
