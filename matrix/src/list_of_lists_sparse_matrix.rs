@@ -27,7 +27,7 @@ pub struct Row<T: fmt::Debug> {
 #[derive(Debug)]
 pub struct Column<T: fmt::Debug> {
     column: usize,
-    element: T,
+    value: T,
 }
 
 impl<T: IsZero + fmt::Debug> ListOfListsSparseMatrix<T> {
@@ -44,7 +44,7 @@ impl<T: IsZero + fmt::Debug> ListOfListsSparseMatrix<T> {
             let mut column_list = LinkedList::new();
             for (column, element) in rows.into_iter().enumerate() {
                 if element.is_not_zero() {
-                    column_list.push_back(Column { column, element });
+                    column_list.push_back(Column { column, value: element });
                 }
             }
             if !column_list.is_empty() {
@@ -74,7 +74,7 @@ impl<T: IsZero + fmt::Debug> ListOfListsSparseMatrix<T> {
             if row_list.row == row {
                 for column_element in &row_list.columns {
                     if column_element.column == column {
-                        return Some(column_element.element);
+                        return Some(column_element.value);
                     }
                 }
                 break;
@@ -90,7 +90,7 @@ impl<T: IsZero + fmt::Debug> ListOfListsSparseMatrix<T> {
             if row_list.row == row {
                 for column_element in &mut row_list.columns {
                     if column_element.column == column {
-                        return Some(&mut column_element.element);
+                        return Some(&mut column_element.value);
                     }
                 }
                 break;
@@ -124,7 +124,7 @@ impl<T: IsZero + fmt::Debug> ListOfListsSparseMatrix<T> {
             if row_list.row == row {
                 for column_element in &mut row_list.columns {
                     if column_element.column == column {
-                        value = Some(column_element.element);
+                        value = Some(column_element.value);
                         break;
                     }
                 }
