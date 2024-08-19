@@ -16,7 +16,7 @@
         - [数组](matrix/sparse-matrix/array.md)
         - [链表](matrix/sparse-matrix/linked-list.md)
         - [List of Lists](matrix/sparse-matrix/list-of-lists.md)
-        - [字典 Dictionary](matrix/sparse-matrix/dictionary.md)
+        - [BTree](matrix/sparse-matrix/btree.md)
 - [动态数组 Vector](vector/index.md)
     - [动态数组的常用操作](vector/adt.md)
     - [标准库中 Vec 的实现](vector/impl-of-vec.md)
