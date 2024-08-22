@@ -112,7 +112,7 @@ C语言中对应的结构体声明如下:
 
 上面介绍的双链表, 每个节点有两个指针分别指向节点的前后相邻节点.
 
-如果一个节点中有多个指针指向别的节点呢? 这就是 Multiply Linked List, 或者称为 Multi-Linked List.
+如果一个节点中有多个指针指向别的节点呢? 这就是 Multiply Linked List, 或者称为 Multi-level Linked List.
 
 特点:
 
@@ -153,7 +153,7 @@ struct person {
 {{#include assets/sparse-matrix.c:5:}}
 ```
 
-这样的稀疏矩阵可以同时基于行号和列号进行线性查找, 比较方便.
+这样的稀疏矩阵可以同时基于行号和列号进行线性查找, 比较方便. 这是十字链表法.
 其结构图如下所示:
 
 ![sparse matrix](assets/sparse-matrix.svg)
