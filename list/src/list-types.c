@@ -38,7 +38,8 @@ struct header_list_s {
 struct multi_list_s {
     int value;
     int len;
-    struct multi_list_s* pointers;
+    struct multi_list_s* right;
+    struct multi_list_s* bottom;
 };
 
 // Unrolled Linked List

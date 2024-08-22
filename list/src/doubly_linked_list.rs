@@ -2,12 +2,12 @@
 // Use of this source is governed by General Public License that can be found
 // in the LICENSE file.
 
-use std::{fmt, mem};
 use std::cmp::Ordering;
 use std::fmt::Formatter;
 use std::hash::{Hash, Hasher};
 use std::marker::PhantomData;
 use std::ptr::NonNull;
+use std::{fmt, mem};
 
 pub struct DoublyLinkedList<T> {
     head: NodePtr<T>,
@@ -379,10 +379,11 @@ impl<T> DoublyLinkedList<T> {
     pub fn splice(&mut self, _other: &mut Self) {
         todo!()
     }
-
+    
     /// Reverses the order of the elements.
     pub fn reverse(&mut self) {
-        todo!()
+        unsafe { Self::base_reverse(self.head) };
+        mem::swap(&mut self.head, &mut self.tail);
     }
 
     /// Removes consecutive duplicate elements.
@@ -520,6 +521,15 @@ impl<T> DoublyLinkedList<T> {
             Some(Node::from_ptr(next_node))
         } else {
             None
+        }
+    }
+
+    unsafe fn base_reverse(node: NodePtr<T>) {
+        let mut temp = node;
+        while let Some(mut temp_node) = temp {
+            mem::swap(&mut temp_node.as_mut().prev, &mut temp_node.as_mut().next);
+            // Old next node is now prev.
+            temp = temp_node.as_mut().prev;
         }
     }
 }
@@ -944,5 +954,13 @@ mod tests {
         let ret = list.unique();
         assert_eq!(ret, 3);
         assert_eq!(list.into_iter().collect::<Vec<_>>(), expected);
+    }
+
+    #[test]
+    fn test_reverse() {
+        let mut list = DoublyLinkedList::from_iter([1, 2, 3, 4]);
+        assert_eq!(list.iter().copied().collect::<Vec<_>>(), [1, 2, 3, 4]);
+        list.reverse();
+        assert_eq!(list.into_iter().collect::<Vec<_>>(), [4, 3, 2, 1]);
     }
 }

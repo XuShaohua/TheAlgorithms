@@ -2,6 +2,5 @@
 // Use of this source is governed by General Public License that can be
 // found in the LICENSE file.
 
-pub mod single_v1;
-pub mod single_v2;
 mod doubly_linked_list;
+mod singly_linked_list;
