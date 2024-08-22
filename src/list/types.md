@@ -153,12 +153,12 @@ struct person {
 {{#include assets/sparse-matrix.c:5:}}
 ```
 
-这样的稀疏矩阵可以同时基于行号和列号进行线性查找, 比较方便. 这是十字链表法.
+这样的稀疏矩阵可以同时基于行号和列号进行线性查找, 比较方便.
 其结构图如下所示:
 
 ![sparse matrix](assets/sparse-matrix.svg)
 
-或者表示多层链表 Multi-level linked list, 如下图所示:
+或者表示多层链表 Multi-level linked list, 又称十字链表法 Orthogonal linked list.如下图所示:
 
 ![multi-level linked list](assets/multi-level-linked-list.svg)
 
