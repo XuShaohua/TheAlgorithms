@@ -28,8 +28,36 @@ pub fn is_palindrome1(s: String) -> bool {
     true
 }
 
-// 使用回文字串的性质: 反转之后依然相同
+// 靠拢型双指针, 但不对字符串预处理
 pub fn is_palindrome2(s: String) -> bool {
+    let chars: Vec<char> = s.chars().collect();
+    if chars.is_empty() {
+        return true;
+    }
+
+    let mut left = 0;
+    let mut right = chars.len() - 1;
+    while left < right {
+        // 忽略非字符数字
+        while left < right && !chars[left].is_ascii_alphanumeric() {
+            left += 1;
+        }
+        // 忽略非字符数字
+        while left < right && !chars[right].is_ascii_alphanumeric() {
+            right -= 1;
+        }
+
+        if chars[left].to_ascii_lowercase() != chars[right].to_ascii_lowercase() {
+            return false;
+        }
+        left += 1;
+        right -= 1;
+    }
+    true
+}
+
+// 使用回文字串的性质: 反转之后依然相同
+pub fn is_palindrome3(s: String) -> bool {
     let s: String = s
         .chars()
         .filter(char::is_ascii_alphanumeric)
@@ -39,7 +67,7 @@ pub fn is_palindrome2(s: String) -> bool {
 }
 
 // 替换字符串过滤方法, 其实还要慢一些
-pub fn is_palindrome3(s: String) -> bool {
+pub fn is_palindrome4(s: String) -> bool {
     let s: String = s
         .replace(|c: char| !c.is_ascii_alphanumeric(), "")
         .to_ascii_lowercase();
@@ -64,11 +92,12 @@ fn main() {
     check_solution(is_palindrome1);
     check_solution(is_palindrome2);
     check_solution(is_palindrome3);
+    check_solution(is_palindrome4);
 }
 
 #[cfg(test)]
 mod tests {
-    use super::{check_solution, is_palindrome1, is_palindrome2, is_palindrome3};
+    use super::{check_solution, is_palindrome1, is_palindrome2, is_palindrome3, is_palindrome4};
 
     #[test]
     fn test_is_palindrome1() {
@@ -83,5 +112,10 @@ mod tests {
     #[test]
     fn test_is_palindrome3() {
         check_solution(is_palindrome3);
+    }
+
+    #[test]
+    fn test_is_palindrome4() {
+        check_solution(is_palindrome4);
     }
 }

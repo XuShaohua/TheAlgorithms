@@ -12,6 +12,12 @@
 {{#include src/main.rs:5:29 }}
 ```
 
+当然也可以不过滤字符, 直接应用双指针:
+
+```rust
+{{#include src/main.rs:31:57 }}
+```
+
 ## 利用回文的特性
 
 回文的特性就是, 把它反转过来, 会得到一样的结果.
@@ -21,7 +27,7 @@
 ![reverse-string](assets/reverse-string.svg)
 
 ```rust
-{{#include src/main.rs:31:39 }}
+{{#include src/main.rs:59:67 }}
 ```
 
 ## 相关问题
