@@ -49,6 +49,14 @@
 
 ## 题解
 
+### Python
+
+```python
+{{#include solution.py:5:}}
+```
+
+### Rust
+
 ```rust
 {{#include src/main.rs:5:}}
 ```
