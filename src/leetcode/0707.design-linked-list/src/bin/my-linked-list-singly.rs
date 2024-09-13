@@ -42,11 +42,7 @@ impl MyLinkedList {
     ///
     /// If the index is invalid, return -1.
     pub fn get(&self, index: i32) -> i32 {
-        if let Some(val) = self.get_detail(index) {
-            val
-        } else {
-            -1
-        }
+        self.get_detail(index).unwrap_or(-1)
     }
 
     #[must_use]
