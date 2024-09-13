@@ -3,5 +3,5 @@
 version = 3
 
 [[package]]
-name = "od-e200-vlan"
+name = "od-e100-vlan"
 version = "0.1.0"
