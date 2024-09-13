@@ -29,6 +29,10 @@ members = [
     "vector",
 ]
 
+exclude = [
+  "src/huawei-od"
+]
+
 [profile.release]
 debug = true
 lto = true

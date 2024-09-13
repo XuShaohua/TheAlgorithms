@@ -339,4 +339,11 @@
     - [3001-3100](leetcode/by-id/3001-3100.md)
         - [3028. 边界上的蚂蚁 Ant on the Boundary](leetcode/3028.ant-on-the-boundary/index.md)
 
+# 第五部分: 其它题解
+
+- [华为 OD 机试](huawei-od/index.md)
+    - [2024年E卷100分](huawei-od/2024e100/index.md)
+    - [2024年E卷200分](huawei-od/2024e200/index.md)
+        - [模拟目录管理](huawei-od/2024e200/filesystem/index.md)
+
 [参考资料](refs.md)
