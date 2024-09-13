@@ -1,0 +1,44 @@
+
+[book]
+title = "华为 OD 机试"
+description = ""
+authors = ["Xu Shaohua <shaohua@biofan.org>"]
+src = "src"
+language = "zh-CN"
+
+[rust]
+edition = "2021"
+
+[build]
+build-dir = "book"
+create-missing = false
+
+[output.html]
+git-repository-url = "https://github.com/xushaohua/huawei-od"
+mathjax-support = true
+
+[output.html.fold]
+enable = true
+level = 0
+
+[output.html.playground]
+editable = true          # allows editing the source code
+copyable = true          # include the copy button for copying code snippets
+copy-js = true           # includes the JavaScript for the code editor
+line-numbers = true      # displays line numbers for editable code
+runnable = true          # displays a run button for rust code
+
+[output.html.search]
+enable = true            # enables the search feature
+limit-results = 30       # maximum number of search results
+teaser-word-count = 30   # number of words used for a search result teaser
+use-boolean-and = true   # multiple search terms must all match
+boost-title = 2          # ranking boost factor for matches in headers
+boost-hierarchy = 1      # ranking boost factor for matches in page names
+boost-paragraph = 1      # ranking boost factor for matches in text
+expand = true            # partial words will match longer terms
+heading-split-level = 3  # link results to heading levels
+copy-js = true           # include Javascript code for search
+
+[preprocessor.links]
+
