@@ -30,7 +30,6 @@ members = [
 ]
 
 exclude = [
-  "src/huawei-od"
 ]
 
 [profile.release]
