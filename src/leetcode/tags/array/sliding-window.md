@@ -2,7 +2,7 @@
 
 ## 中等
 
-1. [0485. 最大连续1的个数 Max Consecutive Ones](../0485.max-consecutive-ones/index.md)
+1. [0485. 最大连续1的个数 Max Consecutive Ones](../../0485.max-consecutive-ones/index.md)
 
 TODO:
 

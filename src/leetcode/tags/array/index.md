@@ -2,8 +2,9 @@
 
 ## 容易
 
-1. [66. 加一 Plus One](../0066.plus-one/index.md)
-2. [485. 最大连续 1 的个数 Max Consecutive Ones](../0485.max-consecutive-ones/index.md)
+1. [0066. 加一 Plus One](../../0066.plus-one/index.md)
+2. [0485. 最大连续 1 的个数 Max Consecutive Ones](../../0485.max-consecutive-ones/index.md)
+3. [0724. 寻找数组的中心下标](../../0724.find-pivot-index/index.md)
 
 TODO:
 
@@ -28,6 +29,8 @@ TODO:
 - [1128. 等价多米诺骨牌对的数量](https://leetcode.com/problems/number-of-equivalent-domino-pairs)
 
 ## 中级
+
+- [0189. 轮转数组 Rotate Array](../../0189.rotate-array/index.md)
 
 TODO:
 

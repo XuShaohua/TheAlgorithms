@@ -2,9 +2,9 @@
 
 ## 容易
 
-1. [0234. 回文链表 Palindrome Linked List](../0234.palindrome-linked-list/index.md)
-2. [0021.合并两个有序链表 Merge Two Sorted Lists](../0021.merge-two-sorted-lists/index.md)
-3. [0083. 删除排序链表中的重复元素 Remove Duplicates from Sorted List](../0083.remove-duplicates-from-sorted-list/index.md)
+1. [0234. 回文链表 Palindrome Linked List](../../0234.palindrome-linked-list/index.md)
+2. [0021.合并两个有序链表 Merge Two Sorted Lists](../../0021.merge-two-sorted-lists/index.md)
+3. [0083. 删除排序链表中的重复元素 Remove Duplicates from Sorted List](../../0083.remove-duplicates-from-sorted-list/index.md)
 
 TODO:
 
@@ -13,8 +13,8 @@ TODO:
 
 ## 中等
 
-1. [0082. 删除排序链表中的重复元素 II Remove Duplicates from Sorted List II](../0082.remove-duplicates-from-sorted-list-ii/index.md)
-2. [0707. 设计链表 Design Linked List](../0707.design-linked-list/index.md)
+1. [0082. 删除排序链表中的重复元素 II Remove Duplicates from Sorted List II](../../0082.remove-duplicates-from-sorted-list-ii/index.md)
+2. [0707. 设计链表 Design Linked List](../../0707.design-linked-list/index.md)
 
 TODO:
 
