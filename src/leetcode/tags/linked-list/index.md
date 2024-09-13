@@ -13,12 +13,12 @@ TODO:
 
 ## 中等
 
-1. [0082. 删除排序链表中的重复元素 II Remove Duplicates from Sorted List II](../../0082.remove-duplicates-from-sorted-list-ii/index.md)
-2. [0707. 设计链表 Design Linked List](../../0707.design-linked-list/index.md)
+1. [0002. 两数相加 Add Two Numbers](../../0002.add-two-numbers/index.md)
+2. [0082. 删除排序链表中的重复元素 II Remove Duplicates from Sorted List II](../../0082.remove-duplicates-from-sorted-list-ii/index.md)
+3. [0707. 设计链表 Design Linked List](../../0707.design-linked-list/index.md)
 
 TODO:
 
-- [2. Add Two Numbers](https://leetcode.com/problems/add-two-numbers)
 - [445. Add Two Numbers II](https://leetcode.com/problems/add-two-numbers-ii/description/)
 - [面试题 02.05. 链表求和](https://leetcode.cn/problems/sum-lists-lcci)
 

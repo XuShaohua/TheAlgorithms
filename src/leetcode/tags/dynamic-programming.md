@@ -21,9 +21,12 @@
 
 ## 中等
 
+1. [0062. 不同路径 Unique Paths](../0062.unique-paths/index.md)
+
+TODO:
+
 - [5.最长回文子串](https://leetcode.com/problems/longest-palindromic-substring)
 - [53. 最大子数组和](https://leetcode.com/problems/maximum-subarray)
-- [62. 不同路径](https://leetcode.com/problems/unique-paths)
 - [63. 不同路径 II](https://leetcode.com/problems/unique-paths-ii)
 - [64. 最小路径和](https://leetcode.com/problems/minimum-path-sum)
 - [72. 编辑距离](https://leetcode.com/problems/edit-distance)
