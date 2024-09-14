@@ -3,6 +3,7 @@
 - [2024年E卷100分](2024e100/index.md)
     - [流浪地球](2024e100/wondering-earth/index.md)
     - [斗地主之顺子](2024e100/flash/index.md)
+    - [数大雁](2024e100/counting-goose/index.md)
     - [计算三叉搜索树的高度](2024e100/height-of-ternary-tree/index.md)
     - [单词接龙](2024e100/word-chain/index.md)
     - [喊7的次数重排](2024e100/say-7/index.md)
