@@ -1,0 +1,7 @@
+[package]
+name = "lc-0239-sliding-window-maximum"
+version = "0.1.0"
+edition = "2021"
+publish = false
+
+[dependencies]
