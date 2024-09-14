@@ -1,9 +1,7 @@
-
 [book]
 title = "数据结构与算法 - Rust 语言实现"
 description = ""
 authors = ["Xu Shaohua <shaohua@biofan.org>"]
-src = "src"
 language = "zh-CN"
 
 [rust]
@@ -14,6 +12,7 @@ build-dir = "book"
 create-missing = false
 
 [output.html]
+edit-url-template = "https://github.com/xushaohua/TheAlgorithms/edit/main/{path}"
 git-repository-url = "https://github.com/xushaohua/TheAlgorithms"
 mathjax-support = true
 
@@ -28,6 +27,10 @@ copy-js = true           # includes the JavaScript for the code editor
 line-numbers = true      # displays line numbers for editable code
 runnable = true          # displays a run button for rust code
 
+[output.html.print]
+enable = true    # include support for printable output
+page-break = true # insert page-break after each chapter
+
 [output.html.search]
 enable = true            # enables the search feature
 limit-results = 30       # maximum number of search results
@@ -41,4 +44,3 @@ heading-split-level = 3  # link results to heading levels
 copy-js = true           # include Javascript code for search
 
 [preprocessor.links]
-
