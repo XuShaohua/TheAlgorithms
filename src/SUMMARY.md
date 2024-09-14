@@ -2,6 +2,7 @@
 
 - [2024年E卷100分](2024e100/index.md)
     - [计算三叉搜索树的高度](2024e100/height-of-ternary-tree/index.md)
+    - [单词接龙](2024e100/word-chain/index.md)
     - [喊7的次数重排](2024e100/say-7/index.md)
     - [VLAN资源池](2024e100/vlan/index.md)
 - [2024年E卷200分](2024e200/index.md)

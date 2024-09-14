@@ -1,0 +1,8 @@
+4
+6
+word
+dd
+da
+dc
+dword
+d
