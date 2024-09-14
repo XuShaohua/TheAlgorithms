@@ -23,13 +23,13 @@ VLAN是一种对局域网设备进行逻辑划分的技术, 为了标识不同�
 输入:
 
 ```txt
-{{#include input1.txt}}
+{{#include assets/input1.txt}}
 ```
 
 输出:
 
 ```txt
-{{#include output1.txt}}
+{{#include assets/output1.txt}}
 ```
 
 说明:
@@ -40,13 +40,13 @@ VLAN是一种对局域网设备进行逻辑划分的技术, 为了标识不同�
 输入:
 
 ```txt
-{{#include input2.txt}}
+{{#include assets/input2.txt}}
 ```
 
 输出:
 
 ```txt
-{{#include output2.txt}}
+{{#include assets/output2.txt}}
 ```
 
 说明:
@@ -58,13 +58,13 @@ VLAN是一种对局域网设备进行逻辑划分的技术, 为了标识不同�
 输入:
 
 ```txt
-{{#include input3.txt}}
+{{#include assets/input3.txt}}
 ```
 
 输出:
 
 ```txt
-{{#include output3.txt}}
+{{#include assets/output3.txt}}
 ```
 
 ## 题解

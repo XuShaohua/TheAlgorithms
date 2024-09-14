@@ -36,13 +36,13 @@
 输入:
 
 ```text
-{{#include input1.txt}}
+{{#include assets/input1.txt}}
 ```
 
 输入:
 
 ```text
-{{#include output1.txt}}
+{{#include assets/output1.txt}}
 ```
 
 说明: 在根目录创建一个abc的目录并进入abc目录中查看当前目录路径, 输出当前路径 /abc/

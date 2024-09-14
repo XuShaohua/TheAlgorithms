@@ -29,13 +29,13 @@
 输入:
 
 ```text
-{{#include input1.txt}}
+{{#include assets/input1.txt}}
 ```
 
 输出:
 
 ```text
-{{#include output1.txt}}
+{{#include assets/output1.txt}}
 ```
 
 ### 示例2
@@ -43,13 +43,13 @@
 输入:
 
 ```text
-{{#include input2.txt}}
+{{#include assets/input2.txt}}
 ```
 
 输出:
 
 ```text
-{{#include output2.txt}}
+{{#include assets/output2.txt}}
 ```
 
 ### 示例3
@@ -57,13 +57,13 @@
 输入:
 
 ```text
-{{#include input3.txt}}
+{{#include assets/input3.txt}}
 ```
 
 输出:
 
 ```text
-{{#include output3.txt}}
+{{#include assets/output3.txt}}
 ```
 
 ## 题解

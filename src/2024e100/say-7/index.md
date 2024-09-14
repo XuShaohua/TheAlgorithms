@@ -25,13 +25,13 @@
 输入:
 
 ```text
-{{#include input1.txt}}
+{{#include assets/input1.txt}}
 ```
 
 输出:
 
 ```text
-{{#include output1.txt}}
+{{#include assets/output1.txt}}
 ```
 
 说明: 一共只有一次喊"过", 那只会发生在需要喊7时, 按顺序, 编号为1的人会遇到7, 故输出`1 0 0`.
@@ -41,13 +41,13 @@
 输入:
 
 ```text
-{{#include input2.txt}}
+{{#include assets/input2.txt}}
 ```
 
 输出:
 
 ```text
-{{#include output2.txt}}
+{{#include assets/output2.txt}}
 ```
 
 说明: 一共有三次喊"过", 发生在 `7 14 17`, 按顺序, 编号为2的人会遇到 `7 17`, 编号为4的人会遇到14, 故输出 `0 2 0 1 0`.
