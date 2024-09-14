@@ -38,6 +38,10 @@
 {{#include assets/output1.txt}}
 ```
 
+说明:
+
+![input1](assets/input1.svg)
+
 ### 示例2
 
 输入:
@@ -52,6 +56,10 @@
 {{#include assets/output2.txt}}
 ```
 
+说明:
+
+![input2](assets/input2.svg)
+
 ### 示例3
 
 输入:
@@ -65,6 +73,10 @@
 ```text
 {{#include assets/output3.txt}}
 ```
+
+说明:
+
+![input3](assets/input3.svg)
 
 ## 题解
 
