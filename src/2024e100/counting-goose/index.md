@@ -58,7 +58,7 @@
 输出:
 
 ```text
-{{#include assets/output3.}}
+{{#include assets/output3.txt}}
 ```
 
 ### 示例4

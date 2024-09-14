@@ -20,7 +20,7 @@ additional-css = ["theme/pagetoc.css"]
 additional-js  = ["theme/pagetoc.js"]
 edit-url-template = "https://github.com/xushaohua/huawei-od/edit/main/{path}"
 git-repository-url = "https://github.com/xushaohua/huawei-od"
-mathjax-support = true
+mathjax-support = false
 
 [output.html.fold]
 enable = true
