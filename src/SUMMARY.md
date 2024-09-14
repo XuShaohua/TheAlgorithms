@@ -6,6 +6,7 @@
     - [数大雁](2024e100/counting-goose/index.md)
     - [最大利润/贪心的商人](2024e100/greedy-merchant/index.md)
     - [boss的收入](2024e100/boss-income/index.md)
+    - [猜字谜 - 字符串](2024e100/charade/index.md)
     - [计算三叉搜索树的高度](2024e100/height-of-ternary-tree/index.md)
     - [单词接龙](2024e100/word-chain/index.md)
     - [喊7的次数重排](2024e100/say-7/index.md)
