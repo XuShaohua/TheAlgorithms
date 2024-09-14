@@ -1,6 +1,7 @@
 [华为 OD 机试](index.md)
 
 - [2024年E卷100分](2024e100/index.md)
+    - [流浪地球](2024e100/wondering-earth/index.md)
     - [斗地主之顺子](2024e100/flash/index.md)
     - [计算三叉搜索树的高度](2024e100/height-of-ternary-tree/index.md)
     - [单词接龙](2024e100/word-chain/index.md)

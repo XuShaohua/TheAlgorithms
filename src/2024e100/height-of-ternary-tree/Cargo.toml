@@ -1,5 +1,5 @@
 [package]
-name = "height-of-ternary-tree"
+name = "e100-height-of-ternary-tree"
 version = "0.1.0"
 edition = "2021"
 publish = false

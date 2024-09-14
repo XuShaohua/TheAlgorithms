@@ -1,7 +1,6 @@
 [package]
-name = "e100-vlan"
+name = "e100-wondering-earth"
 version = "0.1.0"
 edition = "2021"
-publish = false
 
 [dependencies]

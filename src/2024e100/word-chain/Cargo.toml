@@ -1,5 +1,5 @@
 [package]
-name = "word-chain"
+name = "e100-word-chain"
 version = "0.1.0"
 edition = "2021"
 publish = false

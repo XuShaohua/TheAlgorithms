@@ -1,5 +1,5 @@
 [package]
-name = "flash"
+name = "e100-flash"
 version = "0.1.0"
 edition = "2021"
 publish = false
