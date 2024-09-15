@@ -41,6 +41,10 @@
 {{#include assets/output1.txt}}
 ```
 
+说明:
+
+![draw1](assets/draw1.svg)
+
 ### 示例2
 
 输入:
@@ -54,6 +58,10 @@
 ```text
 {{#include assets/output2.txt}}
 ```
+
+说明:
+
+![draw2](assets/draw2.svg)
 
 ## 题解
 
