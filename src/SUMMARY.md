@@ -14,6 +14,7 @@
     - [报文响应时间 - 字符串](2024e100/response-time-of-message/index.md)
     - [连续字母长度 - 字符串](2024e100/length-of-continous-letters/index.md)
     - [最长连续子序列 - 滑动窗口](2024e100/longest-consecutive-sequence/index.md)
+    - [计算面积/绘图机器](2024e100/drawing-machine/index.md)
     - [计算三叉搜索树的高度 - 树](2024e100/height-of-ternary-tree/index.md)
     - [单词接龙](2024e100/word-chain/index.md)
     - [喊7的次数重排](2024e100/say-7/index.md)
