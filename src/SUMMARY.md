@@ -12,6 +12,7 @@
     - [最左侧冗余覆盖子串](2024e100/leftmost-redundant-overlay-substring/index.md)
     - [增强的strstr - 字符串](2024e100/advanced-strstr/index.md)
     - [报文响应时间](2024e100/response-time-of-message/index.md)
+    - [连续字母长度](2024e100/length-of-continous-letters/index.md)
     - [计算三叉搜索树的高度 - 树](2024e100/height-of-ternary-tree/index.md)
     - [单词接龙](2024e100/word-chain/index.md)
     - [喊7的次数重排](2024e100/say-7/index.md)
