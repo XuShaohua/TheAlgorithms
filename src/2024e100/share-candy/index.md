@@ -30,6 +30,20 @@
 {{#include assets/output1.txt}}
 ```
 
+### 示例2
+
+输入:
+
+```text
+{{#include assets/input2.txt}}
+```
+
+输出:
+
+```text
+{{#include assets/output2.txt}}
+```
+
 ## 题解
 
 ### Python
