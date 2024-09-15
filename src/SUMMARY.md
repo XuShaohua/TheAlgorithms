@@ -9,6 +9,7 @@
     - [猜字谜 - 字符串](2024e100/charade/index.md)
     - [猜数字](2024e100/bulls-and-cows/index.md)
     - [分糖果](2024e100/share-candy/index.md)
+    - [最左侧冗余覆盖子串](2024e100/leftmost-redundant-overlay-substring/index.md)
     - [增强的strstr - 字符串](2024e100/advanced-strstr/index.md)
     - [报文响应时间](2024e100/response-time-of-message/index.md)
     - [计算三叉搜索树的高度 - 树](2024e100/height-of-ternary-tree/index.md)
