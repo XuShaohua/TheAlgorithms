@@ -8,6 +8,7 @@
     - [boss的收入](2024e100/boss-income/index.md)
     - [猜字谜 - 字符串](2024e100/charade/index.md)
     - [猜数字](2024e100/bulls-and-cows/index.md)
+    - [增强的strstr](2024e100/advanced-strstr/index.md)
     - [计算三叉搜索树的高度](2024e100/height-of-ternary-tree/index.md)
     - [单词接龙](2024e100/word-chain/index.md)
     - [喊7的次数重排](2024e100/say-7/index.md)
