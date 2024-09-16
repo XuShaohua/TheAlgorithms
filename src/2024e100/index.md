@@ -6,8 +6,8 @@
 4. [最大利润/贪心的商人](greedy-merchant/index.md)
 5. [boss的收入](boss-income/index.md)
 6. [猜字谜 - 字符串](charade/index.md)
-7. [猜数字](bulls-and-cows/index.md
-8. [最大报酬](maximum-reward/index.md)
+7. [猜数字](bulls-and-cows/index.md)
+8. [最大报酬 - 动态规划](maximum-reward/index.md)
 9. [分糖果 - 位运算](share-candy/index.md)
 10. [最左侧冗余覆盖子串 - 滑动窗口](leftmost-redundant-overlay-substring/index.md)
 11. [增强的strstr - 字符串](advanced-strstr/index.md)

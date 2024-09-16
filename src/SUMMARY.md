@@ -8,7 +8,7 @@
     - [boss的收入](2024e100/boss-income/index.md)
     - [猜字谜 - 字符串](2024e100/charade/index.md)
     - [猜数字](2024e100/bulls-and-cows/index.md)
-    - [最大报酬](2024e100/maximum-reward/index.md)
+    - [最大报酬 - 动态规划](2024e100/maximum-reward/index.md)
     - [分糖果 - 位运算](2024e100/share-candy/index.md)
     - [最左侧冗余覆盖子串 - 滑动窗口](2024e100/leftmost-redundant-overlay-substring/index.md)
     - [增强的strstr - 字符串](2024e100/advanced-strstr/index.md)
@@ -23,3 +23,4 @@
 - [2024年E卷200分](2024e200/index.md)
     - [空栈压数](2024e200/push-numbers-into-stack/index.md)
     - [模拟目录管理](2024e200/filesystem/index.md)
+    - [机器人活动区域 - DFS](2024e200/moving-area-of-robot/index.md)
