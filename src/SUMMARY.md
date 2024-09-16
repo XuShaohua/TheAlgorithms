@@ -22,6 +22,7 @@
     - [分苹果 - 位运算](2024e100/sharing-apples/index.md)
     - [字符串变换最小字符串 - 贪心算法](2024e100/string-conversion/index.md)
     - [字符串分割转换 - 字符串](2024e100/string-split/index.md)
+    - [简单的自动曝光/平均像素值](2024e100/automatic-exposure/index.md)
     - [计算三叉搜索树的高度 - 树](2024e100/height-of-ternary-tree/index.md)
     - [单词接龙](2024e100/word-chain/index.md)
     - [喊7的次数重排](2024e100/say-7/index.md)
