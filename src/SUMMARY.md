@@ -20,6 +20,7 @@
     - [敏感字段加密 - 字符串](2024e100/string-encryption/index.md)
     - [出租车计费/靠谱的车 - 数学](2024e100/taxi-billing/index.md)
     - [分苹果 - 位运算](2024e100/sharing-apples/index.md)
+    - [字符串变换最小字符串 - 贪心算法](2024e100/string-conversion/index.md)
     - [计算三叉搜索树的高度 - 树](2024e100/height-of-ternary-tree/index.md)
     - [单词接龙](2024e100/word-chain/index.md)
     - [喊7的次数重排](2024e100/say-7/index.md)
