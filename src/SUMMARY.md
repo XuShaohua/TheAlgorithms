@@ -8,6 +8,7 @@
     - [boss的收入](2024e100/boss-income/index.md)
     - [猜字谜 - 字符串](2024e100/charade/index.md)
     - [猜数字](2024e100/bulls-and-cows/index.md)
+    - [最大报酬](2024e100/maximum-reward/index.md)
     - [分糖果 - 位运算](2024e100/share-candy/index.md)
     - [最左侧冗余覆盖子串 - 滑动窗口](2024e100/leftmost-redundant-overlay-substring/index.md)
     - [增强的strstr - 字符串](2024e100/advanced-strstr/index.md)
