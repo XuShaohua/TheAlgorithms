@@ -7,6 +7,14 @@ name = "e100-advanced-strstr"
 version = "0.1.0"
 
 [[package]]
+name = "e100-anti-addict-system"
+version = "0.1.0"
+
+[[package]]
+name = "e100-attendance"
+version = "0.1.0"
+
+[[package]]
 name = "e100-automatic-exposure"
 version = "0.1.0"
 
@@ -39,6 +47,14 @@ name = "e100-drawing-machine"
 version = "0.1.0"
 
 [[package]]
+name = "e100-financial-game"
+version = "0.1.0"
+
+[[package]]
+name = "e100-find-destination"
+version = "0.1.0"
+
+[[package]]
 name = "e100-flash"
 version = "0.1.0"
 
@@ -48,6 +64,18 @@ version = "0.1.0"
 
 [[package]]
 name = "e100-height-of-ternary-tree"
+version = "0.1.0"
+
+[[package]]
+name = "e100-hopscotch"
+version = "0.1.0"
+
+[[package]]
+name = "e100-input-method"
+version = "0.1.0"
+
+[[package]]
+name = "e100-kth-permutation"
 version = "0.1.0"
 
 [[package]]
@@ -67,6 +95,14 @@ name = "e100-maximum-reward"
 version = "0.1.0"
 
 [[package]]
+name = "e100-minimum-sum"
+version = "0.1.0"
+
+[[package]]
+name = "e100-number-of-squares"
+version = "0.1.0"
+
+[[package]]
 name = "e100-replant-populus"
 version = "0.1.0"
 
@@ -76,6 +112,10 @@ version = "0.1.0"
 
 [[package]]
 name = "e100-say-7"
+version = "0.1.0"
+
+[[package]]
+name = "e100-scores"
 version = "0.1.0"
 
 [[package]]
@@ -91,6 +131,10 @@ name = "e100-special-deque"
 version = "0.1.0"
 
 [[package]]
+name = "e100-splice-array"
+version = "0.1.0"
+
+[[package]]
 name = "e100-string-conversion"
 version = "0.1.0"
 
@@ -100,6 +144,10 @@ version = "0.1.0"
 
 [[package]]
 name = "e100-string-split"
+version = "0.1.0"
+
+[[package]]
+name = "e100-tall-and-short-line-up"
 version = "0.1.0"
 
 [[package]]
@@ -116,6 +164,10 @@ version = "0.1.0"
 
 [[package]]
 name = "e100-word-chain"
+version = "0.1.0"
+
+[[package]]
+name = "e200-monkey-eats-peach"
 version = "0.1.0"
 
 [[package]]
