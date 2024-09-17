@@ -28,6 +28,7 @@
     - [最小的调整次数/特异性双端队列](2024e100/special-deque/index.md)
     - [查找充电设备组合 - 动态规划](2024e100/charging-equipment/index.md)
     - [智能成绩表 - 排序](2024e100/scores/index.md)
+    - [虚拟理财游戏 - 栈](2024e100/financial-game/index.md)
     - [单词接龙](2024e100/word-chain/index.md)
     - [喊7的次数重排](2024e100/say-7/index.md)
     - [VLAN资源池](2024e100/vlan/index.md)
