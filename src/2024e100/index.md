@@ -39,4 +39,5 @@
 37. [考勤信息](attendance/index.md)
 38. [找终点](find-destination/index.md)
 39. [数组拼接 - 字符串](splice-array/index.md)
-40. [VLAN资源池](vlan/index.md)
+40. [整数对最小和](minimum-sum/index.md)
+41. [VLAN资源池](vlan/index.md)
