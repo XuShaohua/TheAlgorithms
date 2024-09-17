@@ -48,6 +48,7 @@
     - [最长连续方波信号 - 栈](2024e200/square-signal/index.md)
     - [计算疫情扩散时间 - 图](2024e200/spread-of-epidemic/index.md)
     - [字符串化繁为简 - 字符串](2024e200/simplify-string/index.md)
+    - [通过软盘拷贝文件 - 动态规划](2024e200/copy-files/index.md)
     - [模拟目录管理](2024e200/filesystem/index.md)
     - [猴子吃桃/爱吃蟠桃的孙悟空 - 二分查找](2024e200/monkey-eats-peach/index.md)
     - [机器人活动区域 - DFS](2024e200/moving-area-of-robot/index.md)
