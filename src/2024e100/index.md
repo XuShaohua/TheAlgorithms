@@ -35,4 +35,5 @@
 33. [第k个排列 - 排列组合](kth-permutation/index.md)
 34. [喊7的次数重排](say-7/index.md)
 35. [英文输入法 - 字符串](input-method/index.md)
-36. [VLAN资源池](vlan/index.md)
+36. [高矮个子排队 - 滑动窗口](tall-and-short-line-up/index.md)
+37. [VLAN资源池](vlan/index.md)
