@@ -37,4 +37,5 @@
 35. [英文输入法 - 字符串](input-method/index.md)
 36. [高矮个子排队 - 滑动窗口](tall-and-short-line-up/index.md)
 37. [考勤信息](attendance/index.md)
-38. [VLAN资源池](vlan/index.md)
+38. [找终点](find-destination/index.md)
+39. [VLAN资源池](vlan/index.md)

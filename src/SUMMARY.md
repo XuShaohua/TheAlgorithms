@@ -38,6 +38,7 @@
     - [英文输入法 - 字符串](2024e100/input-method/index.md)
     - [高矮个子排队 - 滑动窗口](2024e100/tall-and-short-line-up/index.md)
     - [考勤信息](2024e100/attendance/index.md)
+    - [找终点](2024e100/find-destination/index.md)
     - [VLAN资源池](2024e100/vlan/index.md)
 - [2024年E卷200分](2024e200/index.md)
     - [空栈压数](2024e200/push-numbers-into-stack/index.md)
