@@ -44,6 +44,7 @@
     - [VLAN资源池](2024e100/vlan/index.md)
 - [2024年E卷200分](2024e200/index.md)
     - [空栈压数](2024e200/push-numbers-into-stack/index.md)
+    - [工号不够用了怎么办 - 数学](2024e200/job-number/index.md)
     - [最长连续方波信号 - 栈](2024e200/square-signal/index.md)
     - [计算疫情扩散时间 - 图](2024e200/spread-of-epidemic/index.md)
     - [字符串化繁为简 - 字符串](2024e200/simplify-string/index.md)
