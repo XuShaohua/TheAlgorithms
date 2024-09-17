@@ -38,4 +38,5 @@
 36. [高矮个子排队 - 滑动窗口](tall-and-short-line-up/index.md)
 37. [考勤信息](attendance/index.md)
 38. [找终点](find-destination/index.md)
-39. [VLAN资源池](vlan/index.md)
+39. [数组拼接 - 字符串](splice-array/index.md)
+40. [VLAN资源池](vlan/index.md)
