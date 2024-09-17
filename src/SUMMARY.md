@@ -33,6 +33,7 @@
     - [构成正方形的数量](2024e100/number-of-squares/index.md)
     - [单词接龙 - 字符串](2024e100/word-chain/index.md)
     - [跳房子I](2024e100/hopscotch/index.md)
+    - [第k个排列 - 排列组合](2024e100/kth-permutation/index.md)
     - [喊7的次数重排](2024e100/say-7/index.md)
     - [VLAN资源池](2024e100/vlan/index.md)
 - [2024年E卷200分](2024e200/index.md)

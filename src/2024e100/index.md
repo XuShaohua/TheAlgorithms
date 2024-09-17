@@ -32,5 +32,6 @@
 30. [构成正方形的数量](number-of-squares/index.md)
 31. [单词接龙 - 字符串](word-chain/index.md)
 32. [跳房子I](hopscotch/index.md)
-33. [喊7的次数重排](say-7/index.md)
-34. [VLAN资源池](vlan/index.md)
+33. [第k个排列 - 排列组合](kth-permutation/index.md)
+34. [喊7的次数重排](say-7/index.md)
+35. [VLAN资源池](vlan/index.md)
