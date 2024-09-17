@@ -1,0 +1,11 @@
+5
+head add 1
+tail add 2
+remove
+head add 3
+tail add 4
+head add 5
+remove
+remove
+remove
+remove

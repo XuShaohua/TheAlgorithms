@@ -25,6 +25,7 @@
     - [简单的自动曝光/平均像素值](2024e100/automatic-exposure/index.md)
     - [计算三叉搜索树的高度 - 树](2024e100/height-of-ternary-tree/index.md)
     - [补种未成活胡杨 - 滑动窗口](2024e100/replant-populus/index.md)
+    - [最小的调整次数/特异性双端队列](2024e100/special-deque/index.md)
     - [单词接龙](2024e100/word-chain/index.md)
     - [喊7的次数重排](2024e100/say-7/index.md)
     - [VLAN资源池](2024e100/vlan/index.md)
