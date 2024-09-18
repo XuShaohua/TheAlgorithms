@@ -382,6 +382,7 @@
     - [找终点](od/2024e100/find-destination/index.md)
     - [数组拼接 - 字符串](od/2024e100/splice-array/index.md)
     - [整数对最小和](od/2024e100/minimum-sum/index.md)
+    - [环中最长子串/字符成环找偶数O - 字符串](od/2024e100/longest-substring/index.md)
     - [VLAN资源池](od/2024e100/vlan/index.md)
 - [OD 2024年E卷200分](od/2024e200/index.md)
     - [空栈压数](od/2024e200/push-numbers-into-stack/index.md)
