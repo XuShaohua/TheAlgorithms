@@ -62,7 +62,7 @@ impl FolderEntry {
             return None;
         }
         if self.children.contains(folder_name) {
-            let path = Self::to_path(&self.path, &folder_name);
+            let path = Self::to_path(&self.path, folder_name);
             Some(path)
         } else {
             None
@@ -92,7 +92,7 @@ fn solution() {
             Some("cd") => {
                 // 切换工作目录
                 if let Some(folder_name) = parts.next() {
-                    if !parts.next().is_none() {
+                    if parts.next().is_some() {
                         continue;
                     }
                     if let Some(cwd_entry) = map.get_mut(&cwd) {
@@ -105,7 +105,7 @@ fn solution() {
             Some("mkdir") => {
                 // 创建子目录
                 if let Some(folder_name) = parts.next() {
-                    if !parts.next().is_none() {
+                    if parts.next().is_some() {
                         continue;
                     }
                     if let Some(cwd_entry) = map.get_mut(&cwd) {

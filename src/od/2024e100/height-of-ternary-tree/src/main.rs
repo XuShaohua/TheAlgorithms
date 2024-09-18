@@ -91,7 +91,7 @@ fn main() {
     let ret = stdin().lock().read_line(&mut line);
     assert!(ret.is_ok());
     let num_nodes: usize = line.trim().parse().unwrap();
-    assert!(1 <= num_nodes && num_nodes <= 10000);
+    assert!((1..=10000).contains(&num_nodes));
 
     // 读取所有节点的值, 存放到数组
     line.clear();

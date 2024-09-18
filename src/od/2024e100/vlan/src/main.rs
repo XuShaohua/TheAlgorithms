@@ -21,12 +21,12 @@ fn solution() {
             let end_id: u32 = range_part.next().unwrap().parse().unwrap();
             assert!(range_part.next().is_none());
             for vlan_id in start_id..=end_id {
-                assert!(1 <= vlan_id && vlan_id <= 4094);
+                assert!((1..=4094).contains(&vlan_id));
                 id_set.insert(vlan_id);
             }
         } else {
             let vlan_id: u32 = part.parse().unwrap();
-            assert!(1 <= vlan_id && vlan_id <= 4094);
+            assert!((1..=4094).contains(&vlan_id));
             id_set.insert(vlan_id);
         }
     }
