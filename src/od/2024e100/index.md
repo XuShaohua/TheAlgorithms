@@ -41,4 +41,5 @@
 39. [数组拼接 - 字符串](splice-array/index.md)
 40. [整数对最小和](minimum-sum/index.md)
 41. [环中最长子串/字符成环找偶数O - 字符串](longest-substring/index.md)
-42. [VLAN资源池](vlan/index.md)
+42. [找数字/找等值元素](equal-numbers/index.md)
+43. [VLAN资源池](vlan/index.md)
