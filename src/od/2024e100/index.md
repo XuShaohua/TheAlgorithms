@@ -45,5 +45,6 @@
 43. [光伏场地建设规划 - 前缀和](construction-planning/index.md)
 44. [We Are A Team - 并查集](we-are-a-team/index.md)
 45. [生成哈夫曼树 - 树](build-haffman-tree/index.md)
-46. [内存资源分配](allocate-memory/index.md)
-47. [VLAN资源池](vlan/index.md)
+46. [内存资源分配 - 贪心](allocate-memory/index.md)
+47. [矩形相交的面积 - 数学](area-of-intersected-rectangles/index.md)
+48. [VLAN资源池](vlan/index.md)
