@@ -399,6 +399,7 @@
     - [最大相连男生数/学生方阵](od/2024e200/adjacent-schoolboys/index.md)
     - [数字游戏](od/2024e200/digit-game/index.md)
     - [寻找符合要求的最长子串 - 滑动窗口](od/2024e200/longest-substring/index.md)
+    - [跳格子3 - 动态规划](od/2024e200/hopscotch3/index.md)
     - [二叉树计算 - 树](od/2024e200/calculate-binary-tree/index.md)
     - [猴子吃桃/爱吃蟠桃的孙悟空 - 二分查找](od/2024e200/monkey-eats-peach/index.md)
     - [机器人活动区域 - DFS](od/2024e200/moving-area-of-robot/index.md)
