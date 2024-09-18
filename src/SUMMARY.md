@@ -405,5 +405,6 @@
     - [猴子吃桃/爱吃蟠桃的孙悟空 - 二分查找](od/2024e200/monkey-eats-peach/index.md)
     - [机器人活动区域 - DFS](od/2024e200/moving-area-of-robot/index.md)
     - [简易压缩算法/一种字符串压缩表示的解压 - 字符串](od/2024e200/compress-string/index.md)
+    - [智能驾驶 - 二分查找](od/2024e200/intelligent-driving/index.md)
 
 [参考资料](refs.md)
