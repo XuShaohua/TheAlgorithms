@@ -413,5 +413,6 @@
     - [周末爬山 - DFS](od/2024e200/climb-mountain/index.md)
     - [计算网络信号/信号强度 - BFS](od/2024e200/signal-intensity/index.md)
     - [九宫格按键输入](od/2024e200/speed-dial-input/index.md)
+    - [服务器广播/需要广播的服务器数量 - 并查集](od/2024e200/server-broadcast/index.md)
 
 [参考资料](refs.md)

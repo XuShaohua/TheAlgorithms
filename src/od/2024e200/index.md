@@ -29,3 +29,4 @@
 27. [周末爬山 - DFS](climb-mountain/index.md)
 28. [计算网络信号/信号强度 - BFS](signal-intensity/index.md)
 29. [九宫格按键输入](speed-dial-input/index.md)
+30. [服务器广播/需要广播的服务器数量 - 并查集](server-broadcast/index.md)
