@@ -24,3 +24,4 @@
 22. [智能驾驶 - 二分查找](intelligent-driving/index.md)
 23. [字符串拼接 - 字符串](merge-string/index.md)
 24. [项目排期 - DFS](project-scheduling/index.md)
+25. [文本统计分析](text-analysis/index.md)
