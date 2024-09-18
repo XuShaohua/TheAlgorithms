@@ -47,4 +47,5 @@
 45. [生成哈夫曼树 - 树](build-haffman-tree/index.md)
 46. [内存资源分配 - 贪心](allocate-memory/index.md)
 47. [矩形相交的面积 - 数学](area-of-intersected-rectangles/index.md)
-48. [VLAN资源池](vlan/index.md)
+48. [水仙花数I - 数学](number-of-daffodil/index.md)
+49. [VLAN资源池](vlan/index.md)

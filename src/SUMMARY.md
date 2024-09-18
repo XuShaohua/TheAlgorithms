@@ -389,6 +389,7 @@
     - [生成哈夫曼树 - 树](od/2024e100/build-haffman-tree/index.md)
     - [内存资源分配 - 贪心](od/2024e100/allocate-memory/index.md)
     - [矩形相交的面积 - 数学](od/2024e100/area-of-intersected-rectangles/index.md)
+    - [水仙花数I - 数学](od/2024e100/number-of-daffodil/index.md)
     - [VLAN资源池](od/2024e100/vlan/index.md)
 - [OD 2024年E卷200分](od/2024e200/index.md)
     - [空栈压数](od/2024e200/push-numbers-into-stack/index.md)
