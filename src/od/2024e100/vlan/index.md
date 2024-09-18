@@ -72,11 +72,17 @@ VLAN是一种对局域网设备进行逻辑划分的技术, 为了标识不同�
 ### Python
 
 ```python
-{{#include solution.py:5:}}
+{{#include solution.py:6:}}
 ```
 
 ### Rust
 
 ```rust
 {{#include src/main.rs:5:}}
+```
+
+### C++
+
+```C++
+{{#include solution.cpp:6:}}
 ```
