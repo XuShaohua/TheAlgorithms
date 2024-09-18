@@ -385,6 +385,7 @@
     - [环中最长子串/字符成环找偶数O - 字符串](od/2024e100/longest-substring/index.md)
     - [找数字/找等值元素](od/2024e100/equal-numbers/index.md)
     - [光伏场地建设规划 - 前缀和](od/2024e100/construction-planning/index.md)
+    - [We Are A Team - 并查集](od/2024e100/we-are-a-team/index.md)
     - [VLAN资源池](od/2024e100/vlan/index.md)
 - [OD 2024年E卷200分](od/2024e200/index.md)
     - [空栈压数](od/2024e200/push-numbers-into-stack/index.md)

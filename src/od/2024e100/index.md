@@ -43,4 +43,5 @@
 41. [环中最长子串/字符成环找偶数O - 字符串](longest-substring/index.md)
 42. [找数字/找等值元素](equal-numbers/index.md)
 43. [光伏场地建设规划 - 前缀和](construction-planning/index.md)
-44. [VLAN资源池](vlan/index.md)
+44. [We Are A Team - 并查集](we-are-a-team/index.md)
+45. [VLAN资源池](vlan/index.md)
