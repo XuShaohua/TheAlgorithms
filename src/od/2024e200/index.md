@@ -23,3 +23,4 @@
 21. [简易压缩算法/一种字符串压缩表示的解压 - 字符串](compress-string/index.md)
 22. [智能驾驶 - 二分查找](intelligent-driving/index.md)
 23. [字符串拼接 - 字符串](merge-string/index.md)
+24. [项目排期 - DFS](project-scheduling/index.md)
