@@ -1,0 +1,3 @@
+2
+present
+present absent present present leaveearly present absent
