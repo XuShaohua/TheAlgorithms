@@ -28,3 +28,4 @@
 26. [电脑病毒感染 - 图](computer-virus/index.md)
 27. [周末爬山 - DFS](climb-mountain/index.md)
 28. [计算网络信号/信号强度 - BFS](signal-intensity/index.md)
+29. [九宫格按键输入](speed-dial-input/index.md)

@@ -1,0 +1,7 @@
+[package]
+name = "e200-speed-dial-input"
+version = "0.1.0"
+edition = "2021"
+publish = false
+
+[dependencies]
