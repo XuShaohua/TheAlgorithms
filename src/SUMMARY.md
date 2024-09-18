@@ -58,5 +58,6 @@
     - [最大相连男生数/学生方阵](2024e200/adjacent-schoolboys/index.md)
     - [数字游戏](2024e200/digit-game/index.md)
     - [寻找符合要求的最长子串 - 滑动窗口](2024e200/longest-substring/index.md)
+    - [二叉树计算 - 树](2024e200/calculate-binary-tree/index.md)
     - [猴子吃桃/爱吃蟠桃的孙悟空 - 二分查找](2024e200/monkey-eats-peach/index.md)
     - [机器人活动区域 - DFS](2024e200/moving-area-of-robot/index.md)

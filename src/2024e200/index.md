@@ -15,5 +15,6 @@
 13. [最大相连男生数/学生方阵](adjacent-schoolboys/index.md)
 14. [数字游戏](digit-game/index.md)
 15. [寻找符合要求的最长子串 - 滑动窗口](longest-substring/index.md)
-16. [猴子吃桃/爱吃蟠桃的孙悟空 - 二分查找](monkey-eats-peach/index.md)
-17. [机器人活动区域 - DFS](moving-area-of-robot/index.md)
+16. [二叉树计算 - 树](calculate-binary-tree/index.md)
+17. [猴子吃桃/爱吃蟠桃的孙悟空 - 二分查找](monkey-eats-peach/index.md)
+18. [机器人活动区域 - DFS](moving-area-of-robot/index.md)
