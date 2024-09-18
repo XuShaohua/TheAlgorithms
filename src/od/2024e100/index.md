@@ -49,4 +49,5 @@
 47. [矩形相交的面积 - 数学](area-of-intersected-rectangles/index.md)
 48. [水仙花数I - 数学](number-of-daffodil/index.md)
 49. [不等式是否满足约束并输出最大差](constraint-of-inequality/index.md)
-50. [VLAN资源池](vlan/index.md)
+50. [字符统计及重排 - 字符串](rearrange-chars/index.md)
+51. [VLAN资源池](vlan/index.md)

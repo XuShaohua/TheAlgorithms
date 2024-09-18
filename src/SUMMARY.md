@@ -391,6 +391,7 @@
     - [矩形相交的面积 - 数学](od/2024e100/area-of-intersected-rectangles/index.md)
     - [水仙花数I - 数学](od/2024e100/number-of-daffodil/index.md)
     - [不等式是否满足约束并输出最大差](od/2024e100/constraint-of-inequality/index.md)
+    - [字符统计及重排 - 字符串](od/2024e100/rearrange-chars/index.md)
     - [VLAN资源池](od/2024e100/vlan/index.md)
 - [OD 2024年E卷200分](od/2024e200/index.md)
     - [空栈压数](od/2024e200/push-numbers-into-stack/index.md)
