@@ -49,3 +49,21 @@
 说明: b的出现个数比a多，故b排在a之前
 
 ## 题解
+
+### Python
+
+```python
+{{#include solution.py:6:}}
+```
+
+### Rust
+
+```rust
+{{#include src/main.rs:5:}}
+```
+
+### C++
+
+```C++
+{{#include solution.cpp:6:}}
+```
