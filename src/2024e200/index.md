@@ -18,3 +18,4 @@
 16. [二叉树计算 - 树](calculate-binary-tree/index.md)
 17. [猴子吃桃/爱吃蟠桃的孙悟空 - 二分查找](monkey-eats-peach/index.md)
 18. [机器人活动区域 - DFS](moving-area-of-robot/index.md)
+19. [简易压缩算法/一种字符串压缩表示的解压 - 字符串](compress-string/index.md)

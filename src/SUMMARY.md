@@ -61,3 +61,4 @@
     - [二叉树计算 - 树](2024e200/calculate-binary-tree/index.md)
     - [猴子吃桃/爱吃蟠桃的孙悟空 - 二分查找](2024e200/monkey-eats-peach/index.md)
     - [机器人活动区域 - DFS](2024e200/moving-area-of-robot/index.md)
+    - [简易压缩算法/一种字符串压缩表示的解压 - 字符串](2024e200/compress-string/index.md)
