@@ -54,6 +54,7 @@
     - [最大社交距离](2024e200/social-distance/index.md)
     - [模拟目录管理](2024e200/filesystem/index.md)
     - [找单词 - DFS](2024e200/find-word/index.md)
-    - [导师请吃火锅](2024e200/hot-pot/index.md)
+    - [导师请吃火锅 - DFS](2024e200/hot-pot/index.md)
+    - [最大相连男生数/学生方阵](2024e200/adjacent-schoolboys/index.md)
     - [猴子吃桃/爱吃蟠桃的孙悟空 - 二分查找](2024e200/monkey-eats-peach/index.md)
     - [机器人活动区域 - DFS](2024e200/moving-area-of-robot/index.md)
