@@ -56,5 +56,6 @@
     - [找单词 - DFS](2024e200/find-word/index.md)
     - [导师请吃火锅 - DFS](2024e200/hot-pot/index.md)
     - [最大相连男生数/学生方阵](2024e200/adjacent-schoolboys/index.md)
+    - [数字游戏](2024e200/digit-game/index.md)
     - [猴子吃桃/爱吃蟠桃的孙悟空 - 二分查找](2024e200/monkey-eats-peach/index.md)
     - [机器人活动区域 - DFS](2024e200/moving-area-of-robot/index.md)

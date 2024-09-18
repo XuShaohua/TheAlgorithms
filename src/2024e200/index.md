@@ -13,5 +13,6 @@
 11. [找单词 - DFS](find-word/index.md)
 12. [导师请吃火锅 - DFS](hot-pot/index.md)
 13. [最大相连男生数/学生方阵](adjacent-schoolboys/index.md)
-14. [猴子吃桃/爱吃蟠桃的孙悟空 - 二分查找](monkey-eats-peach/index.md)
-15. [机器人活动区域 - DFS](moving-area-of-robot/index.md)
+14. [数字游戏](digit-game/index.md)
+15. [猴子吃桃/爱吃蟠桃的孙悟空 - 二分查找](monkey-eats-peach/index.md)
+16. [机器人活动区域 - DFS](moving-area-of-robot/index.md)
