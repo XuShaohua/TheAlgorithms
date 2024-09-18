@@ -26,3 +26,4 @@
 24. [项目排期 - DFS](project-scheduling/index.md)
 25. [文本统计分析](text-analysis/index.md)
 26. [电脑病毒感染 - 图](computer-virus/index.md)
+27. [周末爬山 - DFS](climb-mountain/index.md)
