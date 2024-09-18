@@ -409,5 +409,6 @@
     - [字符串拼接 - 字符串](od/2024e200/merge-string/index.md)
     - [项目排期 - DFS](od/2024e200/project-scheduling/index.md)
     - [文本统计分析](od/2024e200/text-analysis/index.md)
+    - [电脑病毒感染 - 图](od/2024e200/computer-virus/index.md)
 
 [参考资料](refs.md)
