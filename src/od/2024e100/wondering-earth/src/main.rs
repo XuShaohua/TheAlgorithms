@@ -50,9 +50,9 @@ fn main() {
         let mut snapshot = engines.clone();
 
         // "关联启动"模式, 启动相邻的引擎
-        for index in 0..num_engines {
+        for (index, engine_started) in engines.iter().enumerate() {
             // 当前引擎已经被启动
-            if engines[index] {
+            if *engine_started {
                 println!("CHECK sibling: {index}");
                 let previous_index = (num_engines + index - 1) % num_engines;
                 let next_index = (index + 1) % num_engines;
