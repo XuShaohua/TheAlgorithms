@@ -76,8 +76,16 @@ HOST 发送响应报文的时间.
 
 ## 题解
 
+这个问题要搞明白如何进行位运算, 然后注意边界条件即可.
+
 ### Python
 
 ```python
 {{#include solution.py:6:}}
+```
+
+### C++
+
+```cpp
+{{#include solution.cpp:5:}}
 ```
