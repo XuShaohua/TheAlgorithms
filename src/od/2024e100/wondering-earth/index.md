@@ -60,8 +60,22 @@
 
 ## 题解
 
+对于离散型的问题, 我们可以使用快照的方式, 下个快照里的状态是基于当前状态的变化.
+
 ### Python
 
 ```python
 {{#include solution.py:6:}}
+```
+
+### C++
+
+```c++
+{{#include solution.cpp:5:}}
+```
+
+### Rust
+
+```rust
+{{#include src/main.rs:5:}}
 ```
