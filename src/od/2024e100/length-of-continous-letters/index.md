@@ -87,3 +87,9 @@
 ```python
 {{#include solution.py:6:}}
 ```
+
+### Rust
+
+```rust
+{{#include src/main.rs:5:}}
+```
