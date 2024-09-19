@@ -93,3 +93,9 @@
 ```rust
 {{#include src/main.rs:5:}}
 ```
+
+### C++
+
+```cpp
+{{#include solution.cpp:5:}}
+```
