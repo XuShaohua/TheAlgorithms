@@ -89,3 +89,9 @@ HOST 发送响应报文的时间.
 ```cpp
 {{#include solution.cpp:5:}}
 ```
+
+### Rust
+
+```rust
+{{#include src/main.rs:5:}}
+```
