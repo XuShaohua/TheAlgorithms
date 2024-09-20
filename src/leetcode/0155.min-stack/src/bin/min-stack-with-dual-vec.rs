@@ -3,7 +3,6 @@
 // in the LICENSE file.
 
 // 用两个栈来实现
-
 #[derive(Debug, Clone)]
 pub struct MinStack {
     // 正常的栈, 按入栈顺序存储.
@@ -31,8 +30,10 @@ impl MinStack {
     }
 
     pub fn push(&mut self, val: i32) {
+        // 将元素入栈
         self.stack.push(val);
         if let Some(top) = self.min_stack.last() {
+            // 保存当前位置最小的元素到 min_stack.
             self.min_stack.push(*top.min(&val));
         } else {
             self.min_stack.push(val);

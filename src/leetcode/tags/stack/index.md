@@ -6,7 +6,6 @@
 
 TODO:
 
-- [155.最小栈](https://leetcode.com/problems/min-stack)
 - [225.用队列实现栈](https://leetcode.com/problems/implement-stack-using-queues)
 - [682.棒球比赛](https://leetcode.com/problems/baseball-game)
 - [844.比较含退格的字符串](https://leetcode.com/problems/backspace-string-compare)
@@ -15,8 +14,9 @@ TODO:
 
 ## 中等
 
-1. [0071.简化路径 Simplify Path](../../0071.simplify-path/index.md)
-2. [0394. 字符串解码 Decode String](../../0394.decode-string/index.md)
+1. [0071. 简化路径 Simplify Path](../../0071.simplify-path/index.md)
+2. [0155. 最小栈 Min Stack](../../0155.min-stack/index.md)
+3. [0394. 字符串解码 Decode String](../../0394.decode-string/index.md)
 
 TODO:
 
