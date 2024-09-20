@@ -15,8 +15,11 @@ TODO:
 
 ## 中等
 
-- [71.简化路径](https://leetcode.com/problems/simplify-path)
-- [394. 字符串解码](https://leetcode.com/problems/decode-string)
+1. [0071.简化路径 Simplify Path](../../0071.simplify-path/index.md)
+2. [0394. 字符串解码 Decode String](../../0394.decode-string/index.md)
+
+TODO:
+
 - [636. 函数的独占时间](https://leetcode.com/problems/exclusive-time-of-functions)
 - [739. 每日温度](https://leetcode.com/problems/daily-temperatures)
 - [856. 括号的分数](https://leetcode.com/problems/score-of-parentheses)
