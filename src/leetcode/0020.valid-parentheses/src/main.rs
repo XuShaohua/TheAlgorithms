@@ -32,9 +32,11 @@ pub fn is_valid2(s: String) -> bool {
     let mut stack = Vec::<char>::new();
     for bracket in s.chars() {
         match bracket {
+            // 先匹配左侧的括号, 并把与之成对的右侧括号入栈.
             '(' => stack.push(')'),
             '[' => stack.push(']'),
             '{' => stack.push('}'),
+            // 如果遇到右侧括号, 就把它与栈顶元素比较, 看是否相同.
             // 使用 match-guard
             ')' | ']' | '}' if Some(bracket) != stack.pop() => return false,
             _ => (),

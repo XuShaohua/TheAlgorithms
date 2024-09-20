@@ -2,7 +2,10 @@
 
 ## 容易
 
-- [20. 有效的括号](https://leetcode.com/problems/valid-parentheses)
+1. [0020. 有效的括号 Valid Parentheses](../../0020.valid-parentheses/index.md)
+
+TODO:
+
 - [155.最小栈](https://leetcode.com/problems/min-stack)
 - [225.用队列实现栈](https://leetcode.com/problems/implement-stack-using-queues)
 - [682.棒球比赛](https://leetcode.com/problems/baseball-game)

@@ -242,6 +242,7 @@
         - [0012. 整数转罗马数字 Integer to Roman](leetcode/0012.integer-to-roman/index.md)
         - [0013. 罗马数字转整数 Roman to Integer](leetcode/0013.roman-to-integer/index.md)
         - [0015. 三数之和 3Sum](leetcode/0015.3sum/index.md)
+        - [0020. 有效的括号 Valid Parentheses](leetcode/0020.valid-parentheses/index.md)
         - [0021.合并两个有序链表 Merge Two Sorted Lists](leetcode/0021.merge-two-sorted-lists/index.md)
         - [0026. 删除有序数组中的重复项 Remove Duplicates from Sorted Array](leetcode/0026.remove-duplicates-from-sorted-array/index.md)
         - [0031. 下一个排列 Next Permutation](leetcode/0031.next-permutation/index.md)
