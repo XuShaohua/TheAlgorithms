@@ -2,6 +2,7 @@
 // Use of this source is governed by General Public License that can be found
 // in the LICENSE file.
 
+use std::cmp::Ordering;
 use std::io::{stdin, BufRead};
 
 fn solution() {
@@ -36,15 +37,19 @@ fn solution() {
         // 从栈顶开始求和
         for i in (0..stack.len()).rev() {
             top_sum += stack[i];
-            if top_sum > number {
-                // 不满足
-                break;
-            } else if top_sum == number {
-                // 满足规则2
-                stack.resize(i, 0);
-                stack.push(number * 2);
-                will_append = false;
-                break;
+            match top_sum.cmp(&number) {
+                Ordering::Greater => {
+                    // 不满足
+                    break;
+                }
+                Ordering::Equal => {
+                    // 满足规则2
+                    stack.resize(i, 0);
+                    stack.push(number * 2);
+                    will_append = false;
+                    break;
+                }
+                _ => (),
             }
         }
 

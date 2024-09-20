@@ -39,13 +39,12 @@ fn main() {
             // 将当前词更新为 last_word 的条件有:
             // - 当前词的长度比上个词长
             // - 或者当前词的字典序小于上个词
-            if word.starts_with(next_char) {
-                if word.len() > last_word.len()
-                    || (word.len() == last_word.len() && *word < last_word)
-                {
-                    last_word = word.to_string();
-                    last_word_index = index;
-                }
+            if word.starts_with(next_char)
+                && (word.len() > last_word.len()
+                    || (word.len() == last_word.len() && *word < last_word))
+            {
+                last_word = word.to_string();
+                last_word_index = index;
             }
         }
         // 没有找到合适的单词, 终止循环
