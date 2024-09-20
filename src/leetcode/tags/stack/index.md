@@ -15,8 +15,9 @@ TODO:
 ## 中等
 
 1. [0071. 简化路径 Simplify Path](../../0071.simplify-path/index.md)
-2. [0155. 最小栈 Min Stack](../../0155.min-stack/index.md)
-3. [0394. 字符串解码 Decode String](../../0394.decode-string/index.md)
+2. [0150. 逆波兰表达式求值 Evaluate Reverse Polish Notation](../../0150.evaluate-reverse-polish-notation/index.md)
+3. [0155. 最小栈 Min Stack](../../0155.min-stack/index.md)
+4. [0394. 字符串解码 Decode String](../../0394.decode-string/index.md)
 
 TODO:
 

@@ -270,6 +270,7 @@
         - [0125. 验证回文串 Valid Palindrome](leetcode/0125.valid-palindrome/index.md)
         - [0136. 只出现一次的数字 Single Number](leetcode/0136.single-number/index.md)
         - [0137. 只出现一次的数字II Single Number II](leetcode/0137.single-number-ii/index.md)
+        - [0150. 逆波兰表达式求值 Evaluate Reverse Polish Notation](leetcode/0150.evaluate-reverse-polish-notation/index.md)
         - [0153. 寻找旋转排序数组中的最小值 Find Minimum in Rotated Sorted Array](leetcode/0153.find-minimum-in-rotated-sorted-array/index.md)
         - [0154. 寻找旋转排序数组中的最小值 II Find Minimum in Rotated Sorted Array II](leetcode/0154.find-minimum-in-rotated-sorted-array-ii/index.md)
         - [0155. 最小栈 Min Stack](leetcode/0155.min-stack/index.md)
