@@ -35,3 +35,9 @@
 {{#include src/main.rs:5:6}}
 {{#include src/main.rs:40:70}}
 ```
+
+C++ 实现如下:
+
+```cpp
+{{#include main.cpp:5:}}
+```
