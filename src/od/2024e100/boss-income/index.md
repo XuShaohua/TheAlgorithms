@@ -91,3 +91,9 @@ boss的ID 总收入
 ```cpp
 {{#include solution.cpp:5:59}}
 ```
+
+### Rust
+
+```rust
+{{#include src/main.rs:5:58}}
+```
