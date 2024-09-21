@@ -76,8 +76,18 @@ boss的ID 总收入
 
 ## 题解
 
+可以使用递归的思想, 先找出 Boss 的ID, 然后计算他的收入; 计算其收入时, 又要先计算他手下人的收入.
+
+要注意的一个问题点是, 收入不足100时不被计算.
+
 ### Python
 
 ```python
 {{#include solution.py:5:}}
+```
+
+### C++
+
+```cpp
+{{#include solution.cpp:5:59}}
 ```

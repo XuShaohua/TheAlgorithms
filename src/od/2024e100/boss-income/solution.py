@@ -9,8 +9,8 @@ def solution():
     salary_tree = dict()
     hierachy_tree = dict()
 
+    # 读取输入
     first_line = input()
-    # TODO(Shaohua): Check lines
 
     for line in sys.stdin.readlines():
         parts = line.split()
@@ -24,13 +24,13 @@ def solution():
             hierachy_tree[parent_id] = sibling
         sibling.append(current_id)
 
-    # Get boss id
+    # 先得到 boss 的 ID
     boss_id = current_id
     while boss_id in salary_tree:
         boss_id = salary_tree[boss_id][0]
     print("boss id:", boss_id)
 
-    # Get boss salary
+    # 递归计算一个 ID 的收入 
     def get_salary_recursive(parent_id):
         if parent_id in hierachy_tree:
             children = hierachy_tree[parent_id]
@@ -41,7 +41,7 @@ def solution():
                 total_salary += (salary // 100) * 15
             return total_salary
         else:
-            # Get real salary for current user
+            # 得到当前用户的收入
             return salary_tree[parent_id][1]
     
     boss_salary = get_salary_recursive(boss_id)

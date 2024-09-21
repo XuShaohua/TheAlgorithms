@@ -4,7 +4,7 @@
 2. [斗地主之顺子 - 栈](flash/index.md)
 3. [数大雁](counting-goose/index.md)
 4. [最大利润/贪心的商人 - 贪心算法](greedy-merchant/index.md)
-5. [boss的收入](boss-income/index.md)
+5. [boss的收入 - 递归](boss-income/index.md)
 6. [猜字谜 - 字符串](charade/index.md)
 7. [猜数字](bulls-and-cows/index.md)
 8. [最大报酬 - 背包问题](maximum-reward/index.md)

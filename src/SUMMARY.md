@@ -354,7 +354,7 @@
     - [斗地主之顺子](od/2024e100/flash/index.md)
     - [数大雁](od/2024e100/counting-goose/index.md)
     - [最大利润/贪心的商人 - 贪心算法](od/2024e100/greedy-merchant/index.md)
-    - [boss的收入](od/2024e100/boss-income/index.md)
+    - [boss的收入 - 递归](od/2024e100/boss-income/index.md)
     - [猜字谜 - 字符串](od/2024e100/charade/index.md)
     - [猜数字](od/2024e100/bulls-and-cows/index.md)
     - [最大报酬 - 背包问题](od/2024e100/maximum-reward/index.md)
