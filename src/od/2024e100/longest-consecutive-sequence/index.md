@@ -64,3 +64,9 @@
 ```rust
 {{#include src/main.rs:5:54}}
 ```
+
+### C++
+
+```cpp
+{{#include solution.cpp:5:57}}
+```
