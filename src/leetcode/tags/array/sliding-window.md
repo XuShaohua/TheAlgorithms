@@ -1,13 +1,15 @@
 # 滑动窗口相关的问题列表
 
+## 简单
+1. [0485. 最大连续1的个数 Max Consecutive Ones](../../0485.max-consecutive-ones/index.md)
+
 ## 中等
 
-1. [0485. 最大连续1的个数 Max Consecutive Ones](../../0485.max-consecutive-ones/index.md)
+1. [1004. 最大连续1的个数 III Max Consecutive Ones III](../../1004.max-consecutive-ones-iii/index.md)
 
 TODO:
 
 - [424. 替换后的最长重复字符](https://leetcode.com/problems/longest-repeating-character-replacement)
-- [1004. 最大连续1的个数 III ](https://leetcode.com/problems/max-consecutive-ones-iii)
 
 ## 困难
 

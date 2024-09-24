@@ -320,6 +320,7 @@
         - [0925. 长按键入 Long Pressed Name](leetcode/0925.long-pressed-name/index.md)
         - [0977. 有序数组的平方 Squares of a Sorted Array](leetcode/0977.squares-of-a-sorted-array/index.md)
     - [1001-1100](leetcode/by-id/1001-1100.md)
+        - [1004. 最大连续1的个数 III Max Consecutive Ones III](leetcode/1004.max-consecutive-ones-iii/index.md)
     - [1101-1200](leetcode/by-id/1101-1200.md)
     - [1201-1300](leetcode/by-id/1201-1300.md)
     - [1301-1400](leetcode/by-id/1301-1400.md)
