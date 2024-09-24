@@ -11,37 +11,48 @@
 
 class Solution {
  public:
-  static
+  // 双指针法
   std::vector<std::vector<int>> threeSum(std::vector<int>& nums) {
+    // 先对整数数组排序
     std::sort(nums.begin(), nums.end());
     std::vector<std::vector<int>> result;
 
+    // 最外层, 遍历所有整数
     for (size_t i = 0; i < nums.size() - 2; ++i) {
+      // 如果最小的值都比0大了, 那就不用再检查后面的值
       if (nums[i] > 0) {
         break;
       }
+      // 可以跳过重复的元素
       if (i > 0 && nums[i] == nums[i-1]) {
         continue;
       }
 
+      // 初始化双指针
       int left = i + 1;
       int right = nums.size() - 1;
-      int first = -nums[i];
+      int first = nums[i];
 
       while (left < right) {
-        int sum = nums[left] + nums[right];
-        if (sum < first) {
+        int sum = first + nums[left] + nums[right];
+        if (sum < 0) {
+          // 大小了
           left += 1;
-        } else if (sum > first) {
+        } else if (sum > 0) {
+          // 太大了
           right -= 1;
         } else {
-          result.push_back({nums[i], nums[left], nums[right]});
+          // 等于0
+          result.push_back({first, nums[left], nums[right]});
+          // 路过左侧重复的元素
           while (left < right && nums[left] == nums[left + 1]) {
             left += 1;
           }
+          // 路过右侧重复的元素
           while (right > left && nums[right] == nums[right - 1]) {
             right -= 1;
           }
+          // 移动双指针, 向中间靠拢
           left += 1;
           right -= 1;
         }

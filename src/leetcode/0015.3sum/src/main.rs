@@ -33,15 +33,15 @@ pub fn three_sum1(nums: Vec<i32>) -> Vec<Vec<i32>> {
 // 靠拢型双指针
 // 这个方法时间复杂度为 O(n^2), 空间复杂度为 O(1)
 pub fn three_sum2(nums: Vec<i32>) -> Vec<Vec<i32>> {
-    let mut nums = nums;
-    // 先排序
-    nums.sort();
-
     let mut result = Vec::new();
     let len = nums.len();
     if len < 3 {
         return result;
     }
+
+    // 先排序
+    let mut nums = nums;
+    nums.sort_unstable();
 
     // 遍历数组
     for i in 0..(len - 2) {

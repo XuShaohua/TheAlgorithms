@@ -16,13 +16,24 @@
 
 相关的方法介绍可以看[这里](../../two-pointers/close-up.md).
 
-外层循环遍历整个数组, 然后在内层使靠拢型用双指针, 来快速找到元素.
-要注意去掉重复的元素.
+- 先对数组进行排序
+- 外层循环遍历整个数组, 然后在内层使靠拢型用双指针, 来快速找到元素组合
+- 可以跳过重复的元素
+
+该算法的时间复杂度是 `O(n^2)`, 空间复杂度是 `O(n)`.
 
 ![two-pointers-in-a-loop](assets/two-pointers-in-a-loop.svg)
 
+### Rust
+
 ```rust
-{{#include src/main.rs:33:89 }}
+{{#include src/main.rs:33:89}}
+```
+
+### C++
+
+```cpp
+{{#include main.cpp:5:64}}
 ```
 
 ## 哈稀表
