@@ -59,31 +59,37 @@ pub fn top_k_frequent2(nums: Vec<i32>, k: i32) -> Vec<i32> {
         .collect()
 }
 
-// HashMap + 数组
-// 字典计数
-// 优化数组
+// HashMap + Bucket
 pub fn top_k_frequent3(nums: Vec<i32>, k: i32) -> Vec<i32> {
     assert!(!nums.is_empty());
     assert!(k > 0);
 
     // 计数
-    let mut map: HashMap<i32, usize> = HashMap::new();
+    let mut count_map: HashMap<i32, usize> = HashMap::new();
     for &num in &nums {
-        *map.entry(num).or_insert(0) += 1;
+        *count_map.entry(num).or_insert(0) += 1;
     }
 
-    // 有序数组.
-    let k = k as usize;
-    let mut num_counts: Vec<(i32, usize)> = map.into_iter().collect();
-    // 降序排列
-    num_counts.sort_unstable_by(|a, b| b.1.cmp(&a.1));
+    // 将有相同频率的数值放在一个数组中.
+    let max_count: usize = count_map.values().max().copied().unwrap_or_default();
+    // 要注意数组的元素个数是 max_count + 1
+    let mut count_list = vec![Vec::new(); max_count + 1];
+    for (&num, &count) in &count_map {
+        count_list[count].push(num);
+    }
 
-    // 转换成整数数组.
-    num_counts
-        .into_iter()
-        .take(k)
-        .map(|(num, _count)| num)
-        .collect()
+    // 从最高频率开始, 依次收集整数值.
+    let k_usize = k as usize;
+    let mut out = Vec::new();
+    for array in count_list.into_iter().rev() {
+        if !array.is_empty() {
+            out.extend(&array);
+        }
+        if out.len() >= k_usize {
+            break;
+        }
+    }
+    out
 }
 
 pub type SolutionFn = fn(Vec<i32>, i32) -> Vec<i32>;
