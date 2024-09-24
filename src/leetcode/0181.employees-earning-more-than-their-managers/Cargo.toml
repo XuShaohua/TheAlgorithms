@@ -1,7 +1,0 @@
-[package]
-name = "lc-0181-employees-earning-more-than-their-managers"
-version = "0.1.0"
-edition = "2021"
-publish = false
-
-[dependencies]
