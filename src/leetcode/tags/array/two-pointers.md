@@ -25,11 +25,12 @@ TODO:
 
 1. [0011. 盛最多水的容器 Container With Most Water](../../0011.container-with-most-water/index.md)
 2. [0015. 三数之和 3Sum](../../0015.3sum/index.md)
-3. [0031. 下一个排列 Next Permutation](../../0031.next-permutation/index.md)
-4. [0075. 颜色分类 Sort Colors](../../0075.sort-colors/index.md)
-5. [0080. 删除排序数组中的重复项 II Remove Duplicates from Sorted Array II](../../0080.remove-duplicates-from-sorted-array-ii/index.md)
-6. [0167. 两数之和 II - 输入有序数组 Two Sum II - Input Array Is Sorted](../../0167.two-sum-ii-input-array-is-sorted/index.md)
-7. [0532.数组中的数对 K-diff Pairs in an Array](../../0532.k-diff-pairs-in-an-array/index.md)
+3. [0016. 最接近的三数之和 3Sum Closest](../../0016.3sum-closest/index.md)
+4. [0031. 下一个排列 Next Permutation](../../0031.next-permutation/index.md)
+5. [0075. 颜色分类 Sort Colors](../../0075.sort-colors/index.md)
+6. [0080. 删除排序数组中的重复项 II Remove Duplicates from Sorted Array II](../../0080.remove-duplicates-from-sorted-array-ii/index.md)
+7. [0167. 两数之和 II - 输入有序数组 Two Sum II - Input Array Is Sorted](../../0167.two-sum-ii-input-array-is-sorted/index.md)
+8. [0532.数组中的数对 K-diff Pairs in an Array](../../0532.k-diff-pairs-in-an-array/index.md)
 
 TODO:
 

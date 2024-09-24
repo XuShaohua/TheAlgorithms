@@ -31,10 +31,12 @@ pub fn three_sum_closest2(nums: Vec<i32>, target: i32) -> i32 {
     let mut nums = nums;
     nums.sort();
 
+    // 先处理特别情况.
     let mut closest: i32 = nums[0] + nums[1] + nums[2];
     if len == 3 || closest == target {
         return closest;
     }
+    let mut closest_diff: i32 = i32::MAX;
 
     // 遍历数组.
     for i in 0..(len - 2) {
@@ -45,15 +47,18 @@ pub fn three_sum_closest2(nums: Vec<i32>, target: i32) -> i32 {
             // 不需要检查整数溢出.
             let sum = nums[i] + nums[left] + nums[right];
             match sum.cmp(&target) {
+                // 如果找到了与 `target` 相同的结果, 就不需要再循环了, 直接返回.
                 Ordering::Equal => return sum,
                 // 移动指针
                 Ordering::Less => left += 1,
                 Ordering::Greater => right -= 1,
             }
 
-            if (sum - target).abs() < (closest - target).abs() {
+            let diff = (sum - target).abs();
+            if diff < closest_diff {
                 // 更新新的最接近值.
                 closest = sum;
+                closest_diff = diff;
             }
         }
     }

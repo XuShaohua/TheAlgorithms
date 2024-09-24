@@ -12,37 +12,45 @@ class Solution {
  public:
   static
   int threeSumClosest(std::vector<int>& nums, int target) {
+    // 先排序
     std::sort(nums.begin(), nums.end());
-    int min_diff = INT_MAX;
-    int result = 0;
+    assert(nums.size() >= 3);
 
+    int closest = nums[0] + nums[1] + nums[2];
+    int min_diff = INT_MAX;
+    if (nums.size() == 3 || closest == target) {
+      return closest;
+    }
+
+    // 遍历数组
     for (size_t i = 0; i < nums.size() - 2; ++i) {
+      // 初始化双指针
       int left = i + 1;
       int right = nums.size() - 1;
       int first = nums[i];
 
       while (left < right) {
         int sum = first + nums[left] + nums[right];
+        // 如果与 target 相等, 就直接返回.
         if (sum == target) {
           return sum;
-        }
-
-        int d = std::abs(sum - target);
-        if (d < min_diff) {
-          min_diff = d;
-          result = sum;
-        }
-        if (sum < target) {
+        } else if (sum < target) {
           left += 1;
         } else if (sum > target) {
           right -= 1;
         }
+
+        const int diff = std::abs(sum - target);
+        if (diff < min_diff) {
+          // 更新最小差值
+          min_diff = diff;
+          closest = sum;
+        }
       }
     }
 
-    return result;
+    return closest;
   }
-
 };
 
 void checkSolution(int* nums, int numsSize, int target, int expectedSum) {
