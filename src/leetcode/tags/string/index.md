@@ -15,8 +15,12 @@
 
 ## 中级
 
-- [6. Z 字形变换](https://leetcode.com/problems/zigzag-conversion)
-- [8. 字符串转换整数(atoi)](https://leetcode.com/problems/string-to-integer-atoi)
-- [17.电话号码的字母组合](https://leetcode.com/problems/letter-combinations-of-a-phone-number)
-- [165.比较版本号](https://leetcode.com/problems/compare-version-numbers)
+1. [0468. 验证IP地址 Validate IP Address](../../0468.validate-ip-address/index.md)
+
+TODO:
+
+- [0006. Z 字形变换](https://leetcode.com/problems/zigzag-conversion)
+- [0008. 字符串转换整数(atoi)](https://leetcode.com/problems/string-to-integer-atoi)
+- [0017.电话号码的字母组合](https://leetcode.com/problems/letter-combinations-of-a-phone-number)
+- [0165.比较版本号](https://leetcode.com/problems/compare-version-numbers)
 - [2414. Length of the Longest Alphabetical Continuous Substring](https://leetcode.com/problems/length-of-the-longest-alphabetical-continuous-substring/description/)
