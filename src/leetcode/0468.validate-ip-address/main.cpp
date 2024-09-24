@@ -7,6 +7,7 @@
 #include <iostream>
 #include <sstream>
 #include <string>
+#include <sstream>
 
 class Solution {
  public:
@@ -15,14 +16,13 @@ class Solution {
     // 并判断每个部分是有效的数值
     // 数值不带有前缀0
 
-    if (query[0] == '.' || query[query.size() - 1] == '.') {
+    if (query.empty() || query[0] == '.' || query[query.size() - 1] == '.') {
       return false;
     }
+    int part_count = 0;
     std::stringstream ss(query);
     std::string part;
-    int part_count = 0;
     while (std::getline(ss, part, '.')) {
-      part_count += 1;
       // 数值不带有前缀0
       if (part[0] == '0' && part.size() > 1) {
         return false;
@@ -37,15 +37,19 @@ class Solution {
         }
       }
 
-      const int val = std::stoi(part);
+      size_t pos = 0;
+      const int val = std::stoi(part, &pos);
       // 不是有效的整数
-      if (val == 0 && part != "0") {
-        return false;
+      if (pos != part.size()) {
+        //return false;
       }
+
       // 数值范围是 0..255
       if (val < 0 || val > 255) {
         return false;
       }
+
+      part_count += 1;
     }
 
     // 要有4个部分
@@ -58,13 +62,13 @@ class Solution {
     // 可以有0作为前缀
     // 不需要考虑缩写
 
-    if (query[0] == ':' || query[query.size() - 1] == ':') {
+    if (query.empty() || query[0] == ':' || query[query.size() - 1] == ':') {
       return false;
     }
 
+    int part_count = 0;
     std::stringstream ss(query);
     std::string part;
-    int part_count = 0;
     while (std::getline(ss, part, ':')) {
       // 1-4个字符
       if (part.size() < 1 || part.size() > 4) {
@@ -77,6 +81,7 @@ class Solution {
           return false;
         }
       }
+
       part_count += 1;
     }
 
@@ -95,6 +100,12 @@ class Solution {
 };
 
 void checkSolution() {
+  {
+    const std::string s1 = "172.16.254.1";
+    const std::string expected = "IPv4";
+    const std::string out = Solution::validIPAddress(s1);
+    assert(out == expected);
+  }
   {
     const std::string s1 = "2001:0db8:85a3:0:0:8A2E:0370:7334:";
     const std::string expected = "Neither";

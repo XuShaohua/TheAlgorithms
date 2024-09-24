@@ -13,7 +13,7 @@ fn is_ipv4(query: &str) -> bool {
     }
 
     for part in parts {
-        if part.len() < 1 || part.len() > 3 {
+        if part.is_empty() || part.len() > 3 {
             return false;
         }
 
@@ -31,7 +31,7 @@ fn is_ipv4(query: &str) -> bool {
 
         if let Ok(val) = part.parse::<i32>() {
             // 数值范围是 0..255
-            if val < 0 || val > 255 {
+            if !(0..=255).contains(&val) {
                 return false;
             }
         } else {
@@ -56,7 +56,7 @@ fn is_ipv6(query: &str) -> bool {
 
     for part in parts {
         // 1-4个字符
-        if part.len() < 1 || part.len() > 4 {
+        if part.is_empty() || part.len() > 4 {
             return false;
         }
 

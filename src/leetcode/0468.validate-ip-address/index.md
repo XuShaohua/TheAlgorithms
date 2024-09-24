@@ -29,3 +29,9 @@
 ```rust
 {{#include src/main.rs:5:82}}
 ```
+
+## C++
+
+```cpp
+{{#include main.cpp:5:100}}
+```
