@@ -293,6 +293,7 @@
         - [0326. 3的幂 Power of Three](leetcode/0326.power-of-three/index.md)
         - [0338. 比特位计数 Counting Bits](leetcode/0338.counting-bits/index.md)
         - [0342. 4的幂 Power of Four](leetcode/0342.power-of-four/index.md)
+        - [0347. 前 K 个高频元素 Top K Frequent Elements](leetcode/0347.top-k-frequent-elements/index.md)
         - [0349. 两个数组的交集 Intersection of Two Arrays](leetcode/0349.intersection-of-two-arrays/index.md)
         - [0350. 两个数组的交集 II Intersection of Two Arrays II](leetcode/0350.intersection-of-two-arrays-ii/index.md)
         - [0374. 猜数字大小 Guess Number Higher or Lower](leetcode/0374.guess-number-higher-or-lower/index.md)
