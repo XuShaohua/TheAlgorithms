@@ -56,3 +56,9 @@
 ```python
 {{#include solution.py:6:}}
 ```
+
+### C++
+
+```cpp
+{{#include solution.cpp:5:}}
+```
