@@ -23,7 +23,7 @@
 
 ![hash-table](assets/hash-table.svg)
 
-这个方法的时间复杂度是 `O(nlogn)`.
+这个方法的时间复杂度是 `O(n)`.
 
 ```rust
 {{#include src/main.rs:18:34 }}

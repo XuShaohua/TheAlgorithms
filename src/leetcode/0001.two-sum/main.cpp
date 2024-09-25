@@ -5,7 +5,7 @@
 #include <cassert>
 #include <cstdio>
 
-#include <map>
+#include <unordered_map>
 #include <vector>
 
 class Solution {
@@ -29,21 +29,28 @@ class Solution {
 
   static
   std::vector<int> twoSum2(std::vector<int>& nums, int target) {
+    // 检查边界条件
     if (nums.size() < 2) {
       return {};
     }
 
-    std::map<int, int> cache;
+    // 使用哈稀表来缓存遍历过的整数 num
+    // (num, index)
+    std::unordered_map<int, int> cache;
+    // 遍历数组
     for (int i = 0; i < nums.size(); ++i) {
       const int num = nums[i];
       const auto iter = cache.find(target - num);
+      // 找到了合适的两数, 它们的和等于 target
       if (iter != cache.cend()) {
         return {iter->second, i};
       } else {
+        // 缓存当前的整数
         cache.emplace(num, i);
       }
     }
 
+    // 遍历所有整数后还是没有找到
     return {};
   }
 };
