@@ -63,3 +63,15 @@
 ## 题解
 
 使用 广度优先搜索 BFS 求得最大的连接节点数.
+
+### Python
+
+```python
+{{#include solution.py:6:}}
+```
+
+### C++
+
+```cpp
+{{#include solution.cpp:5:}}
+```
