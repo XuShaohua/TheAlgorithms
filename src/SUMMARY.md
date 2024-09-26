@@ -237,6 +237,7 @@
         - [0001. 两数之和 Two Sum](leetcode/0001.two-sum/index.md)
         - [0002. 两数相加 Add Two Numbers](leetcode/0002.add-two-numbers/index.md)
         - [0004. 寻找两个正序数组的中位数 Median of Two Sorted Arrays](leetcode/0004.median-of-two-sorted-arrays/index.md)
+        - [0005. 最长回文子串 Longest Palindromic Substring](leetcode/0005.longest-palindromic-substring/index.md)
         - [0007. 整数反转 Reverse Integer](leetcode/0007.reverse-integer/index.md)
         - [0011. 盛最多水的容器 Container With Most Water](leetcode/0011.container-with-most-water/index.md)
         - [0012. 整数转罗马数字 Integer to Roman](leetcode/0012.integer-to-roman/index.md)

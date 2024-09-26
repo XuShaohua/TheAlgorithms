@@ -1,4 +1,7 @@
 #!/usr/bin/env python3
+# Copyright (c) 2024 Xu Shaohua <shaohua@biofan.org>. All rights reserved.
+# Use of this source is governed by General Public License that can be found
+# in the LICENSE file.
 
 def longestPalindrome(s: str) -> str:
     # 跟据回文字符串的特性
@@ -20,7 +23,7 @@ def longestPalindrome(s: str) -> str:
         right = middle
         while twoSidesEqual(s, left, right):
             length = right - left + 1
-            if longest_palindrome_len < length
+            if longest_palindrome_len < length:
                 longest_palindrome_len = length
                 longest_palindrome_start = left
             left -= 1
@@ -31,7 +34,7 @@ def longestPalindrome(s: str) -> str:
         right = middle + 1
         while twoSidesEqual(s, left, right):
             length = right - left + 1
-            if longest_palindrome_len < length
+            if longest_palindrome_len < length:
                 longest_palindrome_len = length
                 longest_palindrome_start = left
             left -= 1
