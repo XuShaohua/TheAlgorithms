@@ -5,7 +5,8 @@
 
 ## 中等
 
-1. [1004. 最大连续1的个数 III Max Consecutive Ones III](../../1004.max-consecutive-ones-iii/index.md)
+1. [0003. 无重复字符的最长子串 Longest Substring Without Repeating Characters](../../0003.longest-substring-without-repeating-characters/index.md)
+2. [1004. 最大连续1的个数 III Max Consecutive Ones III](../../1004.max-consecutive-ones-iii/index.md)
 
 TODO:
 
