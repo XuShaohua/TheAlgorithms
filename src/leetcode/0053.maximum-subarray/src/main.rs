@@ -8,8 +8,8 @@ fn max_sub_array1(nums: Vec<i32>) -> i32 {
     let mut max_sum = i32::MIN;
     for i in 0..nums.len() {
         let mut sum = 0;
-        for j in i..nums.len() {
-            sum += nums[j];
+        for &num in nums.iter().skip(i) {
+            sum += &num;
             max_sum = max_sum.max(sum);
         }
     }
