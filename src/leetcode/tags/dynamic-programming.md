@@ -4,6 +4,7 @@
 
 - [0338. 比特位计数 Counting Bits](../0338.counting-bits/index.md)
 
+TODO:
 - [53.最大子序和](https://leetcode.com/problems/maximum-subarray)
 - [70. 爬楼梯](https://leetcode.com/problems/climbing-stairs)
 - [121. 买卖股票的最佳时机](https://leetcode.com/problems/best-time-to-buy-and-sell-stock)
@@ -22,6 +23,7 @@
 ## 中等
 
 1. [0062. 不同路径 Unique Paths](../0062.unique-paths/index.md)
+2. [0322. 零钱兑换 Coin Change](../0322.coin-change/index.md)
 
 TODO:
 
@@ -40,7 +42,6 @@ TODO:
 - [263. 丑数](https://leetcode.com/problems/ugly-number)
 - [264. 丑数 II](https://leetcode.com/problems/ugly-number-ii)
 - [300. 最长上升子序列](https://leetcode.com/problems/longest-increasing-subsequence)
-- [322. 零钱兑换](https://leetcode.com/problems/coin-change)
 - [413. 等差数列划分](https://leetcode.com/problems/arithmetic-slices)
 - [516. 最长回文子序列](https://leetcode.com/problems/longest-palindromic-subsequence)
 - [518. 零钱兑换 II](https://leetcode.com/problems/coin-change-ii)
@@ -56,6 +57,8 @@ TODO:
 
 ## 困难
 
-- [10.正则表达式匹配](https://leetcode.com/problems/regular-expression-matching
+TODO:
+
+- [10.正则表达式匹配](https://leetcode.com/problems/regular-expression-matching)
 - [32.最长有效括号](https://leetcode.com/problems/longest-valid-parentheses)
 - [887.鸡蛋掉落](https://leetcode.com/problems/super-egg-drop)

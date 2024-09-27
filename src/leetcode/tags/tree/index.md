@@ -4,8 +4,11 @@
 
 - [28.对称的二叉树](https://leetcode.com/problems/find-the-index-of-the-first-occurrence-in-a-string)
 - [101. 对称二叉树](https://leetcode.com/problems/symmetric-tree)
+- [104.二叉树的最大深度](https://leetcode.com/problems/maximum-depth-of-binary-tree)
+- [111.二叉树的最小深度](https://leetcode.com/problems/minimum-depth-of-binary-tree)
 - [144. 二叉树的前序遍历](https://leetcode.com/problems/binary-tree-preorder-traversal)
 - [530. Minimum Absolute Difference in BST](https://leetcode.com/problems/minimum-absolute-difference-in-bst/description/)
+- [面试题 04.02.最小高度树](https://leetcode.cn/problems/minimum-height-tree-lcci/)
 
 ## 中等
 
