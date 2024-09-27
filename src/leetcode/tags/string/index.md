@@ -2,6 +2,7 @@
 
 ## 容易
 
+TODO:
 - [13.罗马数字转整数](https://leetcode.com/problems/roman-to-integer)
 - [14. 最长公共前缀](https://leetcode.com/problems/longest-common-prefix)
 - [67. 二进制求和](https://leetcode.com/problems/add-binary)
@@ -15,7 +16,8 @@
 
 ## 中级
 
-1. [0468. 验证IP地址 Validate IP Address](../../0468.validate-ip-address/index.md)
+1. [0003. 无重复字符的最长子串 Longest Substring Without Repeating Characters](../../0003.longest-substring-without-repeating-characters/index.md)
+2. [0468. 验证IP地址 Validate IP Address](../../0468.validate-ip-address/index.md)
 
 TODO:
 
