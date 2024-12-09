@@ -215,7 +215,7 @@ pub struct BitSetIter<'a> {
     index: usize,
 }
 
-impl<'a> Iterator for BitSetIter<'a> {
+impl Iterator for BitSetIter<'_> {
     type Item = bool;
 
     fn next(&mut self) -> Option<Self::Item> {

@@ -50,8 +50,8 @@ impl<T: IsZero> LinkedListSparseMatrix<T> {
     #[must_use]
     pub fn construct<I, I2>(sparse_matrix: I) -> Self
     where
-        I: IntoIterator<Item=I2>,
-        I2: IntoIterator<Item=T>,
+        I: IntoIterator<Item = I2>,
+        I2: IntoIterator<Item = T>,
     {
         let mut head: NodePtr<T> = None;
         let mut tail: NodePtr<T> = None;
@@ -179,7 +179,9 @@ impl<T: IsZero> LinkedListSparseMatrix<T> {
                 } else if index == len - 1 {
                     self.pop_back();
                 } else {
-                    unsafe { Self::remove_node(node); }
+                    unsafe {
+                        Self::remove_node(node);
+                    }
                     self.len -= 1;
                 }
                 return Some(value);
@@ -358,7 +360,7 @@ impl<'a, T: IsZero> Iterator for Iter<'a, T> {
     }
 }
 
-impl<'a, T: IsZero> ExactSizeIterator for Iter<'a, T> {}
+impl<T: IsZero> ExactSizeIterator for Iter<'_, T> {}
 
 impl<'a, T: IsZero> Iterator for IterMut<'a, T> {
     type Item = &'a mut Node<T>;
@@ -382,7 +384,7 @@ impl<'a, T: IsZero> Iterator for IterMut<'a, T> {
     }
 }
 
-impl<'a, T: IsZero> ExactSizeIterator for IterMut<'a, T> {}
+impl<T: IsZero> ExactSizeIterator for IterMut<'_, T> {}
 
 impl<T: IsZero> Node<T> {
     #[must_use]
@@ -440,7 +442,7 @@ mod tests {
             [0, 0, 3, 0, 4],
             [0, 0, 5, 7, 0],
             [0, 0, 0, 0, 0],
-            [0, 2, 6, 0, 0]
+            [0, 2, 6, 0, 0],
         ];
         let sm = LinkedListSparseMatrix::construct(MATRIX);
         println!("sm: {sm:?}");
@@ -479,7 +481,7 @@ mod tests {
             [0, 0, 3, 0, 4],
             [0, 0, 5, 7, 0],
             [0, 0, 0, 0, 0],
-            [0, 2, 6, 0, 0]
+            [0, 2, 6, 0, 0],
         ];
         let sm = LinkedListSparseMatrix::construct(MATRIX);
         assert_eq!(sm.value(0, 2), Some(3));
@@ -493,7 +495,7 @@ mod tests {
             [0, 0, 3, 0, 4],
             [0, 0, 5, 7, 0],
             [0, 0, 0, 0, 0],
-            [0, 2, 6, 0, 0]
+            [0, 2, 6, 0, 0],
         ];
         let mut sm = LinkedListSparseMatrix::construct(MATRIX);
         let ret = sm.value_mut(0, 2);
@@ -509,7 +511,7 @@ mod tests {
             [0, 0, 3, 0, 4],
             [0, 0, 5, 7, 0],
             [0, 0, 0, 0, 0],
-            [0, 2, 6, 0, 0]
+            [0, 2, 6, 0, 0],
         ];
         let mut sm = LinkedListSparseMatrix::construct(MATRIX);
         let ret = sm.add_element(1, 0, 1);
@@ -524,7 +526,7 @@ mod tests {
             [0, 0, 3, 0, 4],
             [0, 0, 5, 7, 0],
             [0, 0, 0, 0, 0],
-            [0, 2, 6, 0, 0]
+            [0, 2, 6, 0, 0],
         ];
         let mut sm = LinkedListSparseMatrix::construct(MATRIX);
         let ret = sm.remove_element(1, 0);

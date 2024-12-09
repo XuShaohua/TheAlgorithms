@@ -164,12 +164,14 @@ impl<T> DoublyLinkedList<T> {
                 node = next_node;
             }
 
-            unsafe { Self::insert_after(node, new_node_ptr); }
+            unsafe {
+                Self::insert_after(node, new_node_ptr);
+            }
             self.len += 1;
         }
     }
 
-    pub fn insert_iter<I: IntoIterator<Item=T>>(&mut self, mut pos: usize, iter: I) {
+    pub fn insert_iter<I: IntoIterator<Item = T>>(&mut self, mut pos: usize, iter: I) {
         assert!(pos <= self.len);
         let mut new_list = DoublyLinkedList::from_iter(iter);
 
@@ -379,7 +381,7 @@ impl<T> DoublyLinkedList<T> {
     pub fn splice(&mut self, _other: &mut Self) {
         todo!()
     }
-    
+
     /// Reverses the order of the elements.
     pub fn reverse(&mut self) {
         unsafe { Self::base_reverse(self.head) };
@@ -582,13 +584,13 @@ impl<T: Hash> Hash for DoublyLinkedList<T> {
 }
 
 impl<T> Extend<T> for DoublyLinkedList<T> {
-    fn extend<I: IntoIterator<Item=T>>(&mut self, iter: I) {
+    fn extend<I: IntoIterator<Item = T>>(&mut self, iter: I) {
         iter.into_iter().for_each(|value| self.push_back(value));
     }
 }
 
 impl<T> FromIterator<T> for DoublyLinkedList<T> {
-    fn from_iter<I: IntoIterator<Item=T>>(iter: I) -> Self {
+    fn from_iter<I: IntoIterator<Item = T>>(iter: I) -> Self {
         let mut list = Self::new();
         list.extend(iter);
         list
@@ -674,7 +676,7 @@ impl<'a, T> Iterator for Iter<'a, T> {
     }
 }
 
-impl<'a, T> DoubleEndedIterator for Iter<'a, T> {
+impl<T> DoubleEndedIterator for Iter<'_, T> {
     fn next_back(&mut self) -> Option<Self::Item> {
         if self.len == 0 {
             None
@@ -689,7 +691,7 @@ impl<'a, T> DoubleEndedIterator for Iter<'a, T> {
     }
 }
 
-impl<'a, T> ExactSizeIterator for Iter<'a, T> {}
+impl<T> ExactSizeIterator for Iter<'_, T> {}
 
 impl<'a, T> Iterator for IterMut<'a, T> {
     type Item = &'a mut T;
@@ -721,7 +723,7 @@ impl<'a, T> Iterator for IterMut<'a, T> {
     }
 }
 
-impl<'a, T> DoubleEndedIterator for IterMut<'a, T> {
+impl<T> DoubleEndedIterator for IterMut<'_, T> {
     fn next_back(&mut self) -> Option<Self::Item> {
         if self.len == 0 {
             None
@@ -736,7 +738,7 @@ impl<'a, T> DoubleEndedIterator for IterMut<'a, T> {
     }
 }
 
-impl<'a, T> ExactSizeIterator for IterMut<'a, T> {}
+impl<T> ExactSizeIterator for IterMut<'_, T> {}
 
 impl<T> Node<T> {
     #[must_use]
