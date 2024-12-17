@@ -19,13 +19,13 @@
 
 给定一个数组 `arr`, 计算 `arr[l]` 与 `arr[r]` 之间的所有元素之和.
 
-如果要频繁的计算部分数组之和的话, 每次计算都要从头算. 我们可以将前缀和数组缓存下来, 这样每次计算时
-可以立即得到结果.
+频繁的计算数组的部分连续项之和时, 每次计算都要从头算. 我们可以用前缀和数组, 
+这样每次计算时可以立即得到结果.
 
-因为有下面的公式:
+有下面的公式:
 
 ```text
-arr[left..=right].sum() = prefix_sum_array[right] - prefix_sum_array[left];
+arr[left..=right].sum() = prefix_sum_array[right] - prefix_sum_array[left - 1];
 ```
 
 算法实现如下:
