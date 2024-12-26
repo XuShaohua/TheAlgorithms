@@ -3,12 +3,12 @@
 ## 容易
 
 1. [0066. 加一 Plus One](../../0066.plus-one/index.md)
-2. [0485. 最大连续 1 的个数 Max Consecutive Ones](../../0485.max-consecutive-ones/index.md)
-3. [0724. 寻找数组的中心下标](../../0724.find-pivot-index/index.md)
+2. [0414. 第三大的数](../../0414.third-maximum-number/index.md)
+3. [0485. 最大连续 1 的个数 Max Consecutive Ones](../../0485.max-consecutive-ones/index.md)
+4. [0724. 寻找数组的中心下标](../../0724.find-pivot-index/index.md)
 
 TODO:
 
-- [414. 第三大的数](https://leetcode.com/problems/third-maximum-number)
 - [581. 最短无序连续子数组](https://leetcode.com/problems/shortest-unsorted-continuous-subarray)
 - [605. 种花问题](https://leetcode.com/problems/can-place-flowers)
 - [628. 三个数的最大乘积](https://leetcode.com/problems/maximum-product-of-three-numbers)
