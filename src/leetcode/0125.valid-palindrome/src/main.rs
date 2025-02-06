@@ -47,7 +47,7 @@ pub fn is_palindrome2(s: String) -> bool {
             right -= 1;
         }
 
-        if chars[left].to_ascii_lowercase() != chars[right].to_ascii_lowercase() {
+        if !chars[left].eq_ignore_ascii_case(&chars[right]) {
             return false;
         }
         left += 1;
