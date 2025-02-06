@@ -1,6 +1,0 @@
-3 2
-yuwen shuxue
-fangfang 95 90
-xiaohua 88 98
-minmin 100 82
-shuxue

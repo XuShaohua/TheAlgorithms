@@ -1,6 +1,0 @@
-4
-A,C,C,F
-C,D,E,D
-B,E,S,S
-F,E,C,A
-ACCESS

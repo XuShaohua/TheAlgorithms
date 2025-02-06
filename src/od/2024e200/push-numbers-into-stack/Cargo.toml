@@ -1,7 +1,0 @@
-[package]
-name = "od-e200-push-numbers-into-stack"
-version = "0.1.0"
-edition = "2021"
-publish = false
-
-[dependencies]

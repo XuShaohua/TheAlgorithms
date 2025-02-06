@@ -1,7 +1,0 @@
-[package]
-name = "e100-boss-income"
-version = "0.1.0"
-edition = "2021"
-publish = false
-
-[dependencies]

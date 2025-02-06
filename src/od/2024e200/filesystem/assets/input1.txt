@@ -1,3 +1,0 @@
-mkdir abc
-cd abc
-pwd
