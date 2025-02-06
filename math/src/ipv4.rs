@@ -15,7 +15,7 @@ pub fn is_ipv4_valid(s: &str) -> bool {
     }
     parts.all(|part| {
         part.parse::<i32>()
-            .map_or(false, |num| (0..=255).contains(&num))
+            .is_ok_and(|num| (0..=255).contains(&num))
     })
 }
 
