@@ -1,7 +1,0 @@
-[package]
-name = "lc-1941-check-if-all-characters-have-equal-number-of-occurrences"
-version = "0.1.0"
-edition = "2021"
-publish = false
-
-[dependencies]

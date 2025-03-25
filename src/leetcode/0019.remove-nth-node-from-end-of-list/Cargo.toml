@@ -1,7 +1,0 @@
-[package]
-name = "lc-0019-remove-nth-node-from-end-of-list"
-version = "0.1.0"
-edition = "2021"
-publish = false
-
-[dependencies]

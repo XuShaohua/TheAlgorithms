@@ -1,7 +1,0 @@
-[package]
-name = "lc-2108-find-first-palindromic-string-in-the-array"
-version = "0.1.0"
-edition = "2021"
-publish = false
-
-[dependencies]

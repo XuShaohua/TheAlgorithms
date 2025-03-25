@@ -13,16 +13,12 @@
 
 ## Dutch National Flag, DNF
 
-这是上面方法的一个变形, 可以查看问题 [0075. 颜色分类 Sort Colors](../leetcode/0075.sort-colors/index.md),
+这是上面方法的一个变形, 可以查看问题 [0075. 颜色分类 Sort Colors](https://leetcode.com/problems/sort-colors),
 这个方法用于实现三路分区 (three-way partition).
 
 ![The Dutch national flag](assets/Flag_of_the_Netherlands.svg)
 
 TODO(Shaohua): Add more description
-
-## 相关问题
-
-- [0011. 盛最多水的容器 Container With Most Water](../../leetcode/0011.container-with-most-water/index.md)
 
 ## 参考
 - [Dutch national flag problem](https://en.wikipedia.org/wiki/Dutch_national_flag_problem)

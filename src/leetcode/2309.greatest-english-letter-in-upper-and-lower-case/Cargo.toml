@@ -1,7 +1,0 @@
-[package]
-name = "lc-2309-greatest-english-letter-in-upper-and-lower-case"
-version = "0.1.0"
-edition = "2021"
-publish = false
-
-[dependencies]

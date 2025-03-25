@@ -1,7 +1,0 @@
-[package]
-name = "lc-0074-search-a-2d-matrix"
-version = "0.1.0"
-edition = "2021"
-publish = false
-
-[dependencies]

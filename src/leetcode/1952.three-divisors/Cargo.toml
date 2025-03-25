@@ -1,7 +1,0 @@
-[package]
-name = "lc-1952-three-divisors"
-version = "0.1.0"
-edition = "2021"
-publish = false
-
-[dependencies]

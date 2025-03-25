@@ -1,7 +1,0 @@
-[package]
-name = "lc-0021-merge-two-sorted-lists"
-version = "0.1.0"
-edition = "2021"
-publish = false
-
-[dependencies]

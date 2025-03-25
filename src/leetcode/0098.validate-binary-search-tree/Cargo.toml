@@ -1,7 +1,0 @@
-[package]
-name = "lc-0098-validate-binary-search-tree"
-version = "0.1.0"
-edition = "2021"
-publish = false
-
-[dependencies]

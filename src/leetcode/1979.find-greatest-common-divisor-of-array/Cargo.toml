@@ -1,7 +1,0 @@
-[package]
-name = "lc-1979-find-greatest-common-divisor-of-array"
-version = "0.1.0"
-edition = "2021"
-publish = false
-
-[dependencies]

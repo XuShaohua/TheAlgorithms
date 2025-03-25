@@ -1,7 +1,0 @@
-[package]
-name = "lc-0215-kth-largest-element-in-an-array"
-version = "0.1.0"
-edition = "2021"
-publish = false
-
-[dependencies]

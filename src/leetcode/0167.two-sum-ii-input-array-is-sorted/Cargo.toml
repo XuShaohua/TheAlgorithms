@@ -1,7 +1,0 @@
-[package]
-name = "lc-0167-two-sum-ii-input-array-is-sorted"
-version = "0.1.0"
-edition = "2021"
-publish = false
-
-[dependencies]

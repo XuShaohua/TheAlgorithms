@@ -19,18 +19,13 @@ members = [
     "queue",
     "search",
     "sort",
-    "src/leetcode/0*.*",
-    "src/leetcode/1*.*",
-    "src/leetcode/2*.*",
-    "src/leetcode/3*.*",
     "stack",
     "string",
     "tree",
     "vector",
 ]
 
-exclude = [
-]
+exclude = []
 
 [profile.release]
 debug = true

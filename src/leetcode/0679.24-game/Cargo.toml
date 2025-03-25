@@ -1,7 +1,0 @@
-[package]
-name = "lc-0679-24-game"
-version = "0.1.0"
-edition = "2021"
-publish = false
-
-[dependencies]

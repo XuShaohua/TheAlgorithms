@@ -1,7 +1,0 @@
-[package]
-name = "lc-1997-find-the-middle-index-in-array"
-version = "0.1.0"
-edition = "2021"
-publish = false
-
-[dependencies]

@@ -1,7 +1,0 @@
-[package]
-name = "lc-0082-remove-duplicates-from-sorted-list-ii"
-version = "0.1.0"
-edition = "2021"
-publish = false
-
-[dependencies]

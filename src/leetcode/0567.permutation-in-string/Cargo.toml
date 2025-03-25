@@ -1,7 +1,0 @@
-[package]
-name = "lc-0567-permutation-in-string"
-version = "0.1.0"
-edition = "2021"
-publish = false
-
-[dependencies]
