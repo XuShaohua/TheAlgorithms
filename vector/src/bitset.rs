@@ -46,7 +46,7 @@ impl BitSet {
     #[must_use]
     #[inline]
     pub fn as_bytes(&self) -> &[u8] {
-        &self.bits
+        self.bits.as_ref()
     }
 
     #[must_use]

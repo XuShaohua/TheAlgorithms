@@ -206,7 +206,7 @@ impl<T: IsZero> LinkedListSparseMatrix<T> {
 
     #[allow(clippy::needless_pass_by_ref_mut)]
     #[must_use]
-    pub fn iter_mut(&mut self) -> IterMut<'_, T> {
+    pub const fn iter_mut(&mut self) -> IterMut<'_, T> {
         IterMut {
             head: self.head,
             len: self.len,
@@ -217,7 +217,7 @@ impl<T: IsZero> LinkedListSparseMatrix<T> {
 
 impl<T: IsZero> LinkedListSparseMatrix<T> {
     /// Insert `new_node` before `current_node`.
-    unsafe fn insert_before(current_node_ref: &mut Node<T>, mut new_node: NonNull<Node<T>>) {
+    const unsafe fn insert_before(current_node_ref: &mut Node<T>, mut new_node: NonNull<Node<T>>) {
         if let Some(mut prev_node) = current_node_ref.prev {
             new_node.as_mut().prev = Some(prev_node);
             let current_node = prev_node.as_mut().next.take().unwrap();
@@ -229,7 +229,7 @@ impl<T: IsZero> LinkedListSparseMatrix<T> {
     }
 
     /// Insert `new_node` after `current_node`.
-    unsafe fn insert_after(mut current_node: NonNull<Node<T>>, mut new_node: NonNull<Node<T>>) {
+    const unsafe fn insert_after(mut current_node: NonNull<Node<T>>, mut new_node: NonNull<Node<T>>) {
         if let Some(mut next_node) = current_node.as_mut().next {
             new_node.as_mut().next = Some(next_node);
             next_node.as_mut().prev = Some(new_node);
@@ -241,7 +241,7 @@ impl<T: IsZero> LinkedListSparseMatrix<T> {
     /// Remove `node` from list.
     ///
     /// Both prev and next node are valid.
-    unsafe fn remove_node(node: &mut Node<T>) {
+    const unsafe fn remove_node(node: &mut Node<T>) {
         let mut prev_node = node.prev.unwrap();
         let mut next_node = node.next.unwrap();
         prev_node.as_mut().next = Some(next_node);

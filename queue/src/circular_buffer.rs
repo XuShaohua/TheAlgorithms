@@ -65,7 +65,7 @@ impl<T: Sized> CircularBuffer<T> {
     /// # Errors
     ///
     /// 当缓冲区已满时返回 `Err(value)`
-    pub fn push(&mut self, value: T) -> Result<(), T> {
+    pub const fn push(&mut self, value: T) -> Result<(), T> {
         if self.is_full() {
             Err(value)
         } else {
@@ -81,7 +81,7 @@ impl<T: Sized> CircularBuffer<T> {
     }
 
     /// 从缓冲区消费元素, 如果缓冲区已空, 就返回 `None`
-    pub fn pop(&mut self) -> Option<T> {
+    pub const fn pop(&mut self) -> Option<T> {
         if self.is_empty() {
             None
         } else {
