@@ -55,25 +55,24 @@ impl<T> VecStack<T> {
     /// 检查栈是否空
     #[must_use]
     #[inline]
-    pub fn is_empty(&self) -> bool {
+    pub const fn is_empty(&self) -> bool {
         self.0.is_empty()
     }
 
     /// 返回当前栈中的元素个数
     #[must_use]
     #[inline]
-    pub fn len(&self) -> usize {
+    pub const fn len(&self) -> usize {
         self.0.len()
     }
 
     /// 返回栈的容量
     #[must_use]
     #[inline]
-    pub fn capacity(&self) -> usize {
+    pub const fn capacity(&self) -> usize {
         self.0.capacity()
     }
 }
-
 
 impl<T: PartialEq> PartialEq for VecStack<T> {
     fn eq(&self, other: &Self) -> bool {
@@ -102,7 +101,7 @@ impl<T: Hash> Hash for VecStack<T> {
 }
 
 impl<T> FromIterator<T> for VecStack<T> {
-    fn from_iter<U: IntoIterator<Item=T>>(iter: U) -> Self {
+    fn from_iter<U: IntoIterator<Item = T>>(iter: U) -> Self {
         let vec: Vec<T> = iter.into_iter().collect();
         Self(vec)
     }

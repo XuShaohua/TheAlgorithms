@@ -2,8 +2,8 @@
 // Use of this source is governed by General Public License that can be found
 // in the LICENSE file.
 
-use std::{fmt, mem};
 use std::cmp::Ordering;
+use std::{fmt, mem};
 
 use crate::traits::IsZero;
 
@@ -26,8 +26,8 @@ impl<T: IsZero> ArraySparseMatrix<T> {
     #[must_use]
     pub fn construct<I, I2>(sparse_matrix: I) -> Self
     where
-        I: IntoIterator<Item=I2>,
-        I2: IntoIterator<Item=T>,
+        I: IntoIterator<Item = I2>,
+        I2: IntoIterator<Item = T>,
     {
         let mut vec = Vec::new();
 
@@ -48,22 +48,20 @@ impl<T: IsZero> ArraySparseMatrix<T> {
 
     #[must_use]
     #[inline]
-    pub fn len(&self) -> usize {
+    pub const fn len(&self) -> usize {
         self.vec.len()
     }
 
     #[must_use]
     #[inline]
-    pub fn is_empty(&self) -> bool {
+    pub const fn is_empty(&self) -> bool {
         self.vec.is_empty()
     }
 
     fn find_element(&self, row: usize, column: usize) -> Result<usize, usize> {
-        self.vec.binary_search_by(|node| {
-            match node.row.cmp(&row) {
-                Ordering::Equal => node.column.cmp(&column),
-                order => order
-            }
+        self.vec.binary_search_by(|node| match node.row.cmp(&row) {
+            Ordering::Equal => node.column.cmp(&column),
+            order => order,
         })
     }
 
@@ -90,11 +88,8 @@ impl<T: IsZero> ArraySparseMatrix<T> {
                 Some(value)
             }
             Err(expected_index) => {
-                self.vec.insert(expected_index, MatrixElement {
-                    row,
-                    column,
-                    value,
-                });
+                self.vec
+                    .insert(expected_index, MatrixElement { row, column, value });
                 None
             }
         }
@@ -133,7 +128,7 @@ mod tests {
             [0, 0, 3, 0, 4],
             [0, 0, 5, 7, 0],
             [0, 0, 0, 0, 0],
-            [0, 2, 6, 0, 0]
+            [0, 2, 6, 0, 0],
         ];
         let sm = ArraySparseMatrix::construct(MATRIX);
         println!("sm: {sm:?}");
@@ -172,7 +167,7 @@ mod tests {
             [0, 0, 3, 0, 4],
             [0, 0, 5, 7, 0],
             [0, 0, 0, 0, 0],
-            [0, 2, 6, 0, 0]
+            [0, 2, 6, 0, 0],
         ];
         let sm = ArraySparseMatrix::construct(MATRIX);
         assert_eq!(sm.value(0, 2), Some(3));
@@ -186,7 +181,7 @@ mod tests {
             [0, 0, 3, 0, 4],
             [0, 0, 5, 7, 0],
             [0, 0, 0, 0, 0],
-            [0, 2, 6, 0, 0]
+            [0, 2, 6, 0, 0],
         ];
         let mut sm = ArraySparseMatrix::construct(MATRIX);
         let ret = sm.value_mut(0, 2);
@@ -203,7 +198,7 @@ mod tests {
             [0, 0, 3, 0, 4],
             [0, 0, 5, 7, 0],
             [0, 0, 0, 0, 0],
-            [0, 2, 6, 0, 0]
+            [0, 2, 6, 0, 0],
         ];
         let mut sm = ArraySparseMatrix::construct(MATRIX);
         sm.add_element(1, 0, 1);
@@ -217,7 +212,7 @@ mod tests {
             [0, 0, 3, 0, 4],
             [0, 0, 5, 7, 0],
             [0, 0, 0, 0, 0],
-            [0, 2, 6, 0, 0]
+            [0, 2, 6, 0, 0],
         ];
         let mut sm = ArraySparseMatrix::construct(MATRIX);
         let ret = sm.remove_element(1, 0);
