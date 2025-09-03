@@ -120,7 +120,7 @@ impl BitSet {
 
     #[must_use]
     #[inline]
-    pub const fn iter(&self) -> BitSetIter {
+    pub const fn iter(&self) -> BitSetIter<'_> {
         BitSetIter {
             bit_set: self,
             index: 0,
