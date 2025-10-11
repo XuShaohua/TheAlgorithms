@@ -30,7 +30,7 @@ pub fn get_factors(mut n: u64) -> Counter {
         debug_assert!(n >= factor);
 
         let mut count = 0;
-        while n % factor == 0 {
+        while n.is_multiple_of(factor) {
             n /= factor;
             count += 1;
         }
@@ -50,13 +50,13 @@ pub fn get_prime_factors(mut num: u64) -> Vec<u64> {
     if num == 0 {
         return pf;
     }
-    while num % 2 == 0 {
+    while num.is_multiple_of(2) {
         pf.push(2);
         num /= 2;
     }
 
     for i in (3..=((num as f64).sqrt() as u64)).skip(2) {
-        while num % i == 0 {
+        while num.is_multiple_of(i) {
             pf.push(i);
             num /= i;
         }
@@ -76,7 +76,7 @@ pub fn get_prime_factors2(mut num: u64) -> Vec<u64> {
     }
     let mut i = 2;
     while i * i <= num {
-        if num % i == 0 {
+        if num.is_multiple_of(i) {
             num /= i;
             factors.push(i);
         } else {
@@ -104,7 +104,7 @@ pub fn get_factor_list(num: u64) -> Vec<u64> {
     factors.push(num);
     for i in 2..=((num as f64).sqrt() as u64) {
         // If i is a factor of num
-        if num % i == 0 {
+        if num.is_multiple_of(i) {
             factors.push(i);
 
             // num//i is the other factor of num

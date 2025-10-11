@@ -5,7 +5,7 @@
 #[must_use]
 #[inline]
 const fn is_even(n: usize) -> bool {
-    n % 2 == 0
+    n.is_multiple_of(2)
 }
 
 #[must_use]

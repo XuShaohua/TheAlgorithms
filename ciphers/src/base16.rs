@@ -46,7 +46,7 @@ impl std::error::Error for DecodeError {}
 pub fn base16_decode(s: &str) -> Result<Vec<u8>, DecodeError> {
     // Check data validity, following RFC3548
     // https://www.ietf.org/rfc/rfc3548.txt
-    if s.len() % 2 != 0 {
+    if s.len().is_multiple_of(2) {
         return Err(DecodeError::OddNumberOfDigits);
     }
 
